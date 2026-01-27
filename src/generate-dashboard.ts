@@ -319,7 +319,7 @@ function generateDrawdownsSection(): string {
   return `
     <!-- Drawdowns Summary Section -->
     <section class="comparison-section" style="margin-bottom: 24px;">
-      <div class="comparison-header">📉 LỊCH SỬ DRAWDOWNS (Giảm giá mạnh)</div>
+      <div class="comparison-header"><i data-lucide="trending-down"></i> LỊCH SỬ DRAWDOWNS (Giảm giá mạnh)</div>
       <table class="comparison-table">
         <thead>
           <tr>
@@ -355,6 +355,7 @@ const html = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
   <style>
     :root {
@@ -374,6 +375,13 @@ const html = `<!DOCTYPE html>
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    [data-lucide] {
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 6px;
     }
 
     body {
@@ -1070,7 +1078,7 @@ const html = `<!DOCTYPE html>
     <!-- 5-Year Historical Context -->
     <section class="historical-context">
       <div class="context-header">
-        <div class="context-title">📊 BỐI CẢNH LỊCH SỬ ${longHistory.years} NĂM</div>
+        <div class="context-title"><i data-lucide="bar-chart-3"></i> BỐI CẢNH LỊCH SỬ ${longHistory.years} NĂM</div>
         <div class="context-period">${longHistory.data[0]?.date} → ${longHistory.data.at(-1)?.date} (${longHistory.stats.dataPoints} điểm dữ liệu)</div>
       </div>
       <div class="context-grid">
@@ -1087,7 +1095,7 @@ const html = `<!DOCTYPE html>
             </div>
           </div>
           <div class="percentile-value">${longTermContext.percentile}%</div>
-          <div class="percentile-desc">${longTermContext.isAllTimeHigh ? '⚠️ GẦN ĐỈNH LỊCH SỬ' : longTermContext.isNearLow ? '✅ GẦN ĐÁY LỊCH SỬ' : 'Trong phạm vi bình thường'}</div>
+          <div class="percentile-desc">${longTermContext.isAllTimeHigh ? '<i data-lucide="alert-triangle"></i> GẦN ĐỈNH LỊCH SỬ' : longTermContext.isNearLow ? '<i data-lucide="check-circle"></i> GẦN ĐÁY LỊCH SỬ' : 'Trong phạm vi bình thường'}</div>
         </div>
 
         <div class="context-card">
@@ -1599,6 +1607,9 @@ const html = `<!DOCTYPE html>
         updateChart();
       });
     }
+
+    // Initialize Lucide icons
+    lucide.createIcons();
   </script>
 </body>
 </html>`
