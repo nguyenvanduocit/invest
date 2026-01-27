@@ -120,26 +120,41 @@ const longHistory: LongHistoryData | null = hasLongHistory ? await longHistoryFi
 const vietnamHistory: VietnamHistoryData | null = hasVietnamHistory ? await vietnamHistoryFile.json() : null
 const drawdownsData: DrawdownData | null = hasDrawdowns ? await drawdownsFile.json() : null
 
-// Calculate long-term context
+// Calculate long-term context (in VND)
 function calculateLongTermContext() {
   if (!longHistory) return null
 
-  const prices = longHistory.data.map(d => d.usdPerOunce).sort((a, b) => a - b)
-  const current = longHistory.stats.current
-  const percentileIndex = prices.findIndex(p => p >= current)
-  const percentile = Math.round((percentileIndex / prices.length) * 100)
+  const vndPrices = longHistory.data.map(d => d.vndPerTael).sort((a, b) => a - b)
+  const currentVnd = longHistory.data.at(-1)!.vndPerTael
+  const firstVnd = longHistory.data[0]!.vndPerTael
+  const minVnd = Math.min(...vndPrices)
+  const maxVnd = Math.max(...vndPrices)
+  const avgVnd = vndPrices.reduce((a, b) => a + b, 0) / vndPrices.length
 
-  const fromMin = ((current - longHistory.stats.min) / longHistory.stats.min) * 100
-  const fromMax = ((longHistory.stats.max - current) / current) * 100
+  const percentileIndex = vndPrices.findIndex(p => p >= currentVnd)
+  const percentile = Math.round((percentileIndex / vndPrices.length) * 100)
+
+  const fromMin = ((currentVnd - minVnd) / minVnd) * 100
+  const fromMax = ((maxVnd - currentVnd) / currentVnd) * 100
+
+  // Find dates for min/max
+  const minData = longHistory.data.find(d => d.vndPerTael === minVnd)!
+  const maxData = longHistory.data.find(d => d.vndPerTael === maxVnd)!
 
   return {
     percentile,
     fromMin,
     fromMax,
-    isAllTimeHigh: current >= longHistory.stats.max * 0.98,
-    isNearLow: current <= longHistory.stats.min * 1.1,
-    avgPrice: longHistory.stats.avg,
-    vsAvg: ((current - longHistory.stats.avg) / longHistory.stats.avg) * 100
+    isAllTimeHigh: currentVnd >= maxVnd * 0.98,
+    isNearLow: currentVnd <= minVnd * 1.1,
+    avgVnd,
+    minVnd,
+    maxVnd,
+    currentVnd,
+    firstVnd,
+    minDate: minData.date,
+    maxDate: maxData.date,
+    vsAvg: ((currentVnd - avgVnd) / avgVnd) * 100
   }
 }
 
@@ -281,10 +296,13 @@ function formatDuration(days: number): string {
 function generateDrawdownsSection(): string {
   if (!drawdownsData) return ''
 
-  const rows = drawdownsData.drawdowns.slice(0, 5).map(dd => `
+  const sortedDrawdowns = [...drawdownsData.drawdowns].sort((a, b) =>
+    new Date(b.peakDate).getTime() - new Date(a.peakDate).getTime()
+  )
+  const rows = sortedDrawdowns.slice(0, 5).map(dd => `
     <tr>
-      <td>${dd.peakDate}<br><span style="color: var(--gray); font-size: 11px;">$${dd.peakPrice.toFixed(0)}</span></td>
-      <td>${dd.troughDate}<br><span style="color: var(--gray); font-size: 11px;">$${dd.troughPrice.toFixed(0)}</span></td>
+      <td>${dd.peakDate}</td>
+      <td>${dd.troughDate}</td>
       <td><span class="premium-badge positive">-${dd.drawdownPct.toFixed(1)}%</span></td>
       <td>${formatDuration(dd.daysToTrough)}</td>
       <td>${dd.recoveryDate || '<span style="color: var(--red);">Chưa</span>'}</td>
@@ -1075,20 +1093,20 @@ const html = `<!DOCTYPE html>
         <div class="context-card">
           <div class="context-stat">
             <div class="context-stat-label">Đỉnh ${longHistory.years} năm</div>
-            <div class="context-stat-value red">$${fmt(longHistory.stats.max, 0)}</div>
-            <div class="context-stat-date">${longHistory.stats.maxDate}</div>
+            <div class="context-stat-value red">${fmt(longTermContext.maxVnd)}</div>
+            <div class="context-stat-date">${longTermContext.maxDate}</div>
           </div>
           <div class="context-stat">
             <div class="context-stat-label">Đáy ${longHistory.years} năm</div>
-            <div class="context-stat-value green">$${fmt(longHistory.stats.min, 0)}</div>
-            <div class="context-stat-date">${longHistory.stats.minDate}</div>
+            <div class="context-stat-value green">${fmt(longTermContext.minVnd)}</div>
+            <div class="context-stat-date">${longTermContext.minDate}</div>
           </div>
         </div>
 
         <div class="context-card">
           <div class="context-stat">
             <div class="context-stat-label">Trung bình ${longHistory.years} năm</div>
-            <div class="context-stat-value">$${fmt(longHistory.stats.avg, 0)}</div>
+            <div class="context-stat-value">${fmt(longTermContext.avgVnd)}</div>
             <div class="context-stat-sub ${longTermContext.vsAvg >= 0 ? 'red' : 'green'}">
               Hiện tại ${longTermContext.vsAvg >= 0 ? '+' : ''}${longTermContext.vsAvg.toFixed(0)}% so với TB
             </div>
@@ -1107,7 +1125,7 @@ const html = `<!DOCTYPE html>
               ${longHistory.stats.totalChange >= 0 ? '+' : ''}${longHistory.stats.totalChange.toFixed(0)}%
             </div>
             <div class="context-stat-sub">
-              $${fmt(longHistory.stats.first, 0)} → $${fmt(longHistory.stats.current, 0)}
+              ${fmt(longTermContext.firstVnd)} → ${fmt(longTermContext.currentVnd)}
             </div>
           </div>
         </div>
