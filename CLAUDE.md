@@ -26,8 +26,13 @@ bun run fetch:all
 bun run fetch:history
 bun run fetch:history 60    # custom days
 
-# Generate interactive chart
-bun run chart               # creates data/chart.html
+# Generate interactive dashboard
+bun run dashboard           # creates data/dashboard.html
+
+# Analyze drawdowns (price drops & recovery times)
+bun run analyze:drawdowns      # default 10% threshold
+bun run analyze:drawdowns 5    # 5% threshold (more drawdowns)
+bun run analyze:drawdowns 15   # 15% threshold (only major drops)
 
 # Fetch individual sources
 bun run fetch:vietnam          # Current prices
@@ -47,7 +52,8 @@ src/
 ├── fetch-all.ts                # Current prices (normalized to VND)
 ├── fetch-history.ts            # International historical data
 ├── fetch-long-history.ts       # Extended history (up to 19 years)
-├── generate-chart.ts           # HTML chart generator
+├── analyze-drawdowns.ts        # Drawdown & recovery analysis
+├── generate-dashboard.ts       # Interactive dashboard generator
 └── sources/
     ├── twelvedata/             # XAUUSD primary (TwelveData API)
     ├── international/          # XAUUSD with fallback chain
@@ -70,8 +76,9 @@ data/
 ├── history-Ny.json       # N-year history (TwelveData, up to 19y)
 ├── vietnam-history.json  # Daily collected Vietnam snapshots
 ├── vietnam-history-1y.json # 1 year SJC history (webgia.com)
+├── drawdowns.json        # Drawdown analysis results
 ├── history.csv           # CSV for external charting tools
-└── chart.html            # Interactive Chart.js visualization
+└── dashboard.html        # Interactive dashboard with annotations
 ```
 
 ## Key Conversions

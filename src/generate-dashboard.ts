@@ -4,6 +4,7 @@ const latestFile = Bun.file('data/latest.json')
 const historyFile = Bun.file('data/history.json')
 const longHistoryFile = Bun.file('data/history-5y.json')
 const vietnamHistoryFile = Bun.file('data/vietnam-history.json')
+const drawdownsFile = Bun.file('data/drawdowns.json')
 
 if (!await latestFile.exists() || !await historyFile.exists()) {
   console.error('Missing data files. Run:')
@@ -14,6 +15,7 @@ if (!await latestFile.exists() || !await historyFile.exists()) {
 
 const hasLongHistory = await longHistoryFile.exists()
 const hasVietnamHistory = await vietnamHistoryFile.exists()
+const hasDrawdowns = await drawdownsFile.exists()
 
 interface NormalizedPrice {
   source: string
@@ -88,10 +90,35 @@ interface VietnamHistoryData {
   }[]
 }
 
+interface DrawdownData {
+  analyzedAt: string
+  minDrawdownPct: number
+  summary: {
+    totalDrawdowns: number
+    recovered: number
+    notRecovered: number
+    worstDrawdownPct: number
+    longestRecoveryDays: number | null
+    avgRecoveryDays: number
+  }
+  drawdowns: {
+    peakDate: string
+    peakPrice: number
+    troughDate: string
+    troughPrice: number
+    drawdownPct: number
+    recoveryDate: string | null
+    daysToTrough: number
+    daysToRecovery: number | null
+    recovered: boolean
+  }[]
+}
+
 const latest: LatestData = await latestFile.json()
 const historyData: HistoryData = await historyFile.json()
 const longHistory: LongHistoryData | null = hasLongHistory ? await longHistoryFile.json() : null
 const vietnamHistory: VietnamHistoryData | null = hasVietnamHistory ? await vietnamHistoryFile.json() : null
+const drawdownsData: DrawdownData | null = hasDrawdowns ? await drawdownsFile.json() : null
 
 // Calculate long-term context
 function calculateLongTermContext() {
@@ -242,6 +269,64 @@ function fmt(n: number, decimals = 0): string {
   return n.toLocaleString('vi-VN', { maximumFractionDigits: decimals })
 }
 
+function formatDuration(days: number): string {
+  const y = Math.floor(days / 365)
+  const m = Math.floor((days % 365) / 30)
+  const d = days % 30
+  if (y > 0) return `${y}y ${m}m`
+  if (m > 0) return `${m}m ${d}d`
+  return `${d}d`
+}
+
+function generateDrawdownsSection(): string {
+  if (!drawdownsData) return ''
+
+  const rows = drawdownsData.drawdowns.slice(0, 5).map(dd => `
+    <tr>
+      <td>${dd.peakDate}<br><span style="color: var(--gray); font-size: 11px;">$${dd.peakPrice.toFixed(0)}</span></td>
+      <td>${dd.troughDate}<br><span style="color: var(--gray); font-size: 11px;">$${dd.troughPrice.toFixed(0)}</span></td>
+      <td><span class="premium-badge positive">-${dd.drawdownPct.toFixed(1)}%</span></td>
+      <td>${formatDuration(dd.daysToTrough)}</td>
+      <td>${dd.recoveryDate || '<span style="color: var(--red);">Chưa</span>'}</td>
+      <td>${dd.daysToRecovery ? formatDuration(dd.daysToRecovery) : '<span style="color: var(--red);">Đang chờ</span>'}</td>
+    </tr>
+  `).join('')
+
+  const longestRecovery = drawdownsData.summary.longestRecoveryDays
+    ? `${Math.round(drawdownsData.summary.longestRecoveryDays / 365)} năm ${Math.round((drawdownsData.summary.longestRecoveryDays % 365) / 30)} tháng`
+    : 'N/A'
+
+  const avgRecovery = `${Math.round(drawdownsData.summary.avgRecoveryDays / 365)}y ${Math.round((drawdownsData.summary.avgRecoveryDays % 365) / 30)}m`
+
+  return `
+    <!-- Drawdowns Summary Section -->
+    <section class="comparison-section" style="margin-bottom: 24px;">
+      <div class="comparison-header">📉 LỊCH SỬ DRAWDOWNS (Giảm giá mạnh)</div>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Đỉnh</th>
+            <th>Đáy</th>
+            <th>Mức giảm</th>
+            <th>Thời gian xuống</th>
+            <th>Phục hồi</th>
+            <th>Thời gian hồi</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows}
+        </tbody>
+      </table>
+      <div style="padding: 16px 20px; background: #f9f9f9; font-size: 12px; font-family: 'Space Mono', monospace;">
+        <strong>Tóm tắt:</strong>
+        Drawdown tệ nhất: <span style="color: var(--red);">-${drawdownsData.summary.worstDrawdownPct.toFixed(1)}%</span> |
+        Phục hồi lâu nhất: <strong>${longestRecovery}</strong> |
+        TB phục hồi: ${avgRecovery}
+      </div>
+    </section>
+  `
+}
+
 const html = `<!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -252,6 +337,7 @@ const html = `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
   <style>
     :root {
       --gold: #FFD700;
@@ -1074,6 +1160,12 @@ const html = `<!DOCTYPE html>
                 <div class="legend-dot" style="background: rgba(76, 175, 80, 0.3);"></div>
                 <span>BB</span>
               </div>
+              ${drawdownsData ? `
+              <div class="legend-item">
+                <div class="legend-dot" style="background: rgba(255, 59, 48, 0.15); border-color: rgba(255, 59, 48, 0.5);"></div>
+                <span>Drawdown</span>
+              </div>
+              ` : ''}
             </div>
           </div>
         </div>
@@ -1082,6 +1174,8 @@ const html = `<!DOCTYPE html>
         </div>
       </div>
     </section>
+
+    ${generateDrawdownsSection()}
 
     <!-- Comparison Table -->
     <section class="comparison-section">
@@ -1149,6 +1243,9 @@ const html = `<!DOCTYPE html>
 
     // Vietnam data (backfilled with international dates)
     const vietnamRawData = ${vietnamHistory ? JSON.stringify(vietnamHistory.snapshots) : 'null'};
+
+    // Drawdowns data for annotations
+    const drawdownsData = ${drawdownsData ? JSON.stringify(drawdownsData.drawdowns) : '[]'};
 
     // Convert Vietnam data to map: date -> sell price in VND per tael
     const vietnamDataMap = vietnamRawData
@@ -1227,12 +1324,92 @@ const html = `<!DOCTYPE html>
       return data.map(d => vietnamDataMap.get(d.date) || null);
     }
 
+    // Create drawdown annotations for current data range
+    function createDrawdownAnnotations(data, drawdowns) {
+      const annotations = {};
+      const dates = data.map(d => d.date);
+
+      drawdowns.forEach((dd, i) => {
+        const peakIdx = dates.indexOf(dd.peakDate);
+        const troughIdx = dates.indexOf(dd.troughDate);
+        const recoveryIdx = dd.recoveryDate ? dates.indexOf(dd.recoveryDate) : -1;
+
+        // Skip if drawdown is not visible in current range
+        if (peakIdx === -1 && troughIdx === -1) return;
+
+        // Drawdown zone (peak to trough) - red shading
+        if (peakIdx !== -1 || troughIdx !== -1) {
+          const startIdx = peakIdx !== -1 ? peakIdx : 0;
+          const endIdx = troughIdx !== -1 ? troughIdx : dates.length - 1;
+
+          annotations['drawdown_' + i] = {
+            type: 'box',
+            xMin: dates[startIdx],
+            xMax: dates[endIdx],
+            backgroundColor: 'rgba(255, 59, 48, 0.08)',
+            borderColor: 'rgba(255, 59, 48, 0.3)',
+            borderWidth: 1,
+            label: {
+              display: true,
+              content: '-' + dd.drawdownPct.toFixed(1) + '%',
+              position: { x: 'center', y: 'start' },
+              font: { family: 'Space Mono', size: 11, weight: 'bold' },
+              color: '#FF3B30',
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              padding: 4
+            }
+          };
+        }
+
+        // Recovery zone (trough to recovery) - green shading
+        if (troughIdx !== -1 && recoveryIdx !== -1) {
+          annotations['recovery_' + i] = {
+            type: 'box',
+            xMin: dates[troughIdx],
+            xMax: dates[recoveryIdx],
+            backgroundColor: 'rgba(52, 199, 89, 0.06)',
+            borderColor: 'rgba(52, 199, 89, 0.2)',
+            borderWidth: 1
+          };
+        }
+
+        // Peak marker - find actual price from data
+        if (peakIdx !== -1) {
+          annotations['peak_' + i] = {
+            type: 'point',
+            xValue: dd.peakDate,
+            yValue: data[peakIdx].vndPerTael,
+            backgroundColor: '#FF3B30',
+            borderColor: '#000',
+            borderWidth: 2,
+            radius: 6
+          };
+        }
+
+        // Trough marker - find actual price from data
+        if (troughIdx !== -1) {
+          annotations['trough_' + i] = {
+            type: 'point',
+            xValue: dd.troughDate,
+            yValue: data[troughIdx].vndPerTael,
+            backgroundColor: '#34C759',
+            borderColor: '#000',
+            borderWidth: 2,
+            radius: 6
+          };
+        }
+      });
+
+      return annotations;
+    }
+
     // Initialize chart
     const ctx = document.getElementById('mainChart').getContext('2d');
     let currentRange = 30;
     let filteredData = filterByDays(allData, currentRange);
     let useVietnamIndicator = indicatorBase === 'vietnam';
     let bands = calculateBollingerBands(filteredData, 20, 2, useVietnamIndicator);
+    let drawdownAnnotations = createDrawdownAnnotations(filteredData, drawdownsData);
 
     const chart = new Chart(ctx, {
       type: 'line',
@@ -1317,6 +1494,9 @@ const html = `<!DOCTYPE html>
           mode: 'index'
         },
         plugins: {
+          annotation: {
+            annotations: drawdownAnnotations
+          },
           legend: {
             display: false
           },
@@ -1369,6 +1549,7 @@ const html = `<!DOCTYPE html>
       filteredData = filterByDays(allData, currentRange);
       useVietnamIndicator = indicatorBase === 'vietnam';
       bands = calculateBollingerBands(filteredData, 20, 2, useVietnamIndicator);
+      drawdownAnnotations = createDrawdownAnnotations(filteredData, drawdownsData);
 
       chart.data.labels = filteredData.map(d => d.date);
       chart.data.datasets[0].data = bands.upper;
@@ -1378,6 +1559,7 @@ const html = `<!DOCTYPE html>
       chart.data.datasets[3].data = getVietnamPrices(filteredData);
       chart.data.datasets[4].data = calculateMA(filteredData, 7, useVietnamIndicator);
       chart.data.datasets[5].data = calculateMA(filteredData, 30, useVietnamIndicator);
+      chart.options.plugins.annotation.annotations = drawdownAnnotations;
       chart.update();
     }
 
