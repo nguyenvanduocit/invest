@@ -16,8 +16,13 @@ async function main() {
   await $`bun run src/collect-daily.ts`.quiet()
   console.log('   Done')
 
-  // 3. Generate dashboard
-  console.log('\n3. Generating dashboard...')
+  // 3. Analyze drawdowns
+  console.log('\n3. Analyzing drawdowns...')
+  await $`bun run src/analyze-drawdowns.ts`.quiet()
+  console.log('   Done')
+
+  // 4. Generate dashboard
+  console.log('\n4. Generating dashboard...')
   await $`bun run src/generate-dashboard.ts`.quiet()
   console.log('   Done')
 
