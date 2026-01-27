@@ -25,7 +25,7 @@ jobs:
         run: bun install
 
       - name: Build dashboard
-        run: bun run start
+        run: bun run build
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           VNAPPMOB_API_KEY: ${{ secrets.VNAPPMOB_API_KEY }}
