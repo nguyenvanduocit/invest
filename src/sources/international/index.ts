@@ -1,6 +1,8 @@
 import type { FetchResult, GoldPrice, GoldPriceHistory, HistoricalPrice, GoldSource } from '../../types'
+import { fetchCurrent as fetchTwelveData, fetchHistory as fetchTwelveDataHistory } from '../twelvedata/index'
+import { TROY_OUNCE_GRAMS } from '../../constants'
 
-// FreeGoldAPI endpoints
+// FreeGoldAPI endpoints (fallback)
 const FREEGOLD_JSON = 'https://freegoldapi.com/data/latest.json'
 
 interface FreeGoldRecord {
@@ -8,8 +10,6 @@ interface FreeGoldRecord {
   price: number
   source: string
 }
-
-const TROY_OUNCE_TO_GRAM = 31.1035
 
 async function fetchXAUUSD(): Promise<FetchResult<GoldPrice[]>> {
   try {
@@ -25,14 +25,14 @@ async function fetchXAUUSD(): Promise<FetchResult<GoldPrice[]>> {
       r.source.includes('kitco') ||
       r.source.includes('lbma')
     )
-    const latest = recentRecords.at(-1) || json.at(-1)
+    const latest = recentRecords.at(-1) ?? json.at(-1)
 
     if (!latest) {
       return { ok: false, error: 'No price data in response' }
     }
 
     const pricePerOunce = latest.price
-    const pricePerGram = pricePerOunce / TROY_OUNCE_TO_GRAM
+    const pricePerGram = pricePerOunce / TROY_OUNCE_GRAMS
 
     return {
       ok: true,
@@ -51,7 +51,7 @@ async function fetchXAUUSD(): Promise<FetchResult<GoldPrice[]>> {
   }
 }
 
-export async function fetchHistory(days: number): Promise<FetchResult<GoldPriceHistory>> {
+async function fetchHistoryFromFreeGold(days: number): Promise<FetchResult<GoldPriceHistory>> {
   try {
     const res = await fetch(FREEGOLD_JSON)
     if (!res.ok) {
@@ -72,7 +72,7 @@ export async function fetchHistory(days: number): Promise<FetchResult<GoldPriceH
       .map(r => ({
         date: r.date,
         pricePerOunce: r.price,
-        pricePerGram: r.price / TROY_OUNCE_TO_GRAM,
+        pricePerGram: r.price / TROY_OUNCE_GRAMS,
         currency: 'USD'
       }))
 
@@ -88,6 +88,15 @@ export async function fetchHistory(days: number): Promise<FetchResult<GoldPriceH
   } catch (e) {
     return { ok: false, error: String(e) }
   }
+}
+
+export async function fetchHistory(days: number): Promise<FetchResult<GoldPriceHistory>> {
+  // Try TwelveData first (primary)
+  const twelveResult = await fetchTwelveDataHistory(days)
+  if (twelveResult.ok) return twelveResult
+
+  // Fallback to FreeGoldAPI
+  return fetchHistoryFromFreeGold(days)
 }
 
 // GoldAPI.io backup source (requires API key)
@@ -117,7 +126,7 @@ async function fetchFromGoldAPI(): Promise<FetchResult<GoldPrice[]>> {
         country: 'International',
         currency: 'USD',
         pricePerOunce: json.price,
-        pricePerGram: json.price / TROY_OUNCE_TO_GRAM,
+        pricePerGram: json.price / TROY_OUNCE_GRAMS,
         timestamp: new Date(json.timestamp * 1000),
         raw: json
       }]
@@ -128,14 +137,22 @@ async function fetchFromGoldAPI(): Promise<FetchResult<GoldPrice[]>> {
 }
 
 export async function fetchAll(): Promise<FetchResult<GoldPrice[]>> {
-  const result = await fetchXAUUSD()
-  if (result.ok) return result
+  // Try TwelveData first (primary)
+  const twelveResult = await fetchTwelveData()
+  if (twelveResult.ok) return twelveResult
 
+  // Fallback to FreeGoldAPI
+  const freeResult = await fetchXAUUSD()
+  if (freeResult.ok) return freeResult
+
+  // Last resort: GoldAPI.io (if key available)
   if (GOLDAPI_KEY) {
-    return fetchFromGoldAPI()
+    const goldApiResult = await fetchFromGoldAPI()
+    if (goldApiResult.ok) return goldApiResult
   }
 
-  return result
+  // Return best available error
+  return freeResult
 }
 
 export const internationalSource: GoldSource = {
@@ -151,7 +168,7 @@ if (import.meta.main) {
   if (result.ok) {
     const p = result.data[0]
     console.log(`XAUUSD: $${p?.pricePerOunce?.toFixed(2)}/oz ($${p?.pricePerGram?.toFixed(2)}/g)`)
-  } else {
+  } else if (result.ok === false) {
     console.error('Error:', result.error)
   }
 
@@ -165,7 +182,7 @@ if (import.meta.main) {
       const change = ((latest.pricePerGram - oldest.pricePerGram) / oldest.pricePerGram * 100).toFixed(2)
       console.log(`30-day change: ${change}%`)
     }
-  } else {
+  } else if (history.ok === false) {
     console.error('Error:', history.error)
   }
 }

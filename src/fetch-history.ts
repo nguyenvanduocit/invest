@@ -25,21 +25,21 @@ async function fetchHistoricalData(days: number): Promise<FetchResult<Historical
 
   // Get exchange rate for conversion
   const ratesResult = await fetchAllRates()
-  if (!ratesResult.ok) {
+  if (ratesResult.ok === false) {
     return { ok: false, error: `Exchange rates: ${ratesResult.error}` }
   }
-  const vndRate = ratesResult.data['VND'] || 25000
+  const vndRate = ratesResult.data['VND'] ?? 25000
 
   // Fetch international history
   const intlResult = await fetchInternationalHistory(days)
-  if (!intlResult.ok) {
+  if (intlResult.ok === false) {
     return { ok: false, error: `International: ${intlResult.error}` }
   }
 
   // Normalize to VND
   const normalized: NormalizedHistoricalPrice[] = intlResult.data.data.map(p => ({
     date: p.date,
-    usdPerOunce: p.pricePerOunce || 0,
+    usdPerOunce: p.pricePerOunce ?? 0,
     usdPerGram: p.pricePerGram,
     vndPerGram: p.pricePerGram * vndRate,
     vndPerTael: p.pricePerGram * vndRate * TAEL_GRAMS
@@ -62,10 +62,10 @@ function formatNumber(n: number, decimals = 0): string {
 }
 
 async function main() {
-  const days = parseInt(process.argv[2] || '30')
+  const days = parseInt(process.argv[2] ?? '30')
 
   const result = await fetchHistoricalData(days)
-  if (!result.ok) {
+  if (result.ok === false) {
     console.error('Failed:', result.error)
     process.exit(1)
   }

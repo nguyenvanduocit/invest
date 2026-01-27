@@ -181,7 +181,7 @@ export async function fetchAll(): Promise<FetchResult<GoldPrice[]>> {
   for (const result of results) {
     if (result.ok) {
       all.push(...result.data)
-    } else {
+    } else if (result.ok === false) {
       errors.push(result.error)
     }
   }
@@ -207,7 +207,7 @@ if (import.meta.main) {
     for (const p of result.data) {
       console.log(`  ${p.source}: ₹${p.pricePerGram?.toFixed(2)}/g`)
     }
-  } else {
+  } else if (result.ok === false) {
     console.error('Error:', result.error)
   }
 }

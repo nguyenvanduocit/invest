@@ -75,7 +75,9 @@ export async function fetchMultiple(currencies: string[]): Promise<FetchResult<E
 // Fetch all rates needed for gold price conversion
 export async function fetchAllRates(): Promise<FetchResult<Record<string, number>>> {
   const result = await fetchMultiple(['VND', 'CNY', 'RUB', 'INR'])
-  if (!result.ok) return result
+  if (result.ok === false) {
+    return { ok: false, error: result.error }
+  }
 
   const rates: Record<string, number> = { USD: 1 }
   for (const r of result.data) {
@@ -92,7 +94,7 @@ if (import.meta.main) {
     for (const r of result.data) {
       console.log(`  ${r.to}: ${r.rate.toLocaleString()}`)
     }
-  } else {
+  } else if (result.ok === false) {
     console.error('Error:', result.error)
   }
 }

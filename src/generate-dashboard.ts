@@ -3,6 +3,7 @@
 const latestFile = Bun.file('data/latest.json')
 const historyFile = Bun.file('data/history.json')
 const longHistoryFile = Bun.file('data/history-5y.json')
+const vietnamHistoryFile = Bun.file('data/vietnam-history.json')
 
 if (!await latestFile.exists() || !await historyFile.exists()) {
   console.error('Missing data files. Run:')
@@ -12,6 +13,7 @@ if (!await latestFile.exists() || !await historyFile.exists()) {
 }
 
 const hasLongHistory = await longHistoryFile.exists()
+const hasVietnamHistory = await vietnamHistoryFile.exists()
 
 interface NormalizedPrice {
   source: string
@@ -69,9 +71,27 @@ interface LongHistoryData {
   }[]
 }
 
+interface VietnamHistoryData {
+  lastUpdated: string
+  snapshots: {
+    date: string
+    sjcMieng?: {
+      buy: number
+      sell: number
+    }
+    international: {
+      usdPerOunce: number
+      vndPerTael: number
+    }
+    exchangeRate: number
+    premium: number
+  }[]
+}
+
 const latest: LatestData = await latestFile.json()
 const historyData: HistoryData = await historyFile.json()
 const longHistory: LongHistoryData | null = hasLongHistory ? await longHistoryFile.json() : null
+const vietnamHistory: VietnamHistoryData | null = hasVietnamHistory ? await vietnamHistoryFile.json() : null
 
 // Calculate long-term context
 function calculateLongTermContext() {
@@ -220,13 +240,6 @@ const sjcMieng = vietnam.find(p => p.source.includes('Miếng'))
 
 function fmt(n: number, decimals = 0): string {
   return n.toLocaleString('vi-VN', { maximumFractionDigits: decimals })
-}
-
-function fmtCompact(n: number): string {
-  if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(1) + 'B'
-  if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + 'M'
-  if (n >= 1_000) return (n / 1_000).toFixed(1) + 'K'
-  return n.toString()
 }
 
 const html = `<!DOCTYPE html>
@@ -637,16 +650,7 @@ const html = `<!DOCTYPE html>
 
     /* Chart Section */
     .chart-section {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 24px;
       margin-bottom: 24px;
-    }
-
-    @media (max-width: 1024px) {
-      .chart-section {
-        grid-template-columns: 1fr;
-      }
     }
 
     .chart-container {
@@ -660,22 +664,24 @@ const html = `<!DOCTYPE html>
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       flex-wrap: wrap;
       gap: 12px;
     }
 
     .chart-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 800;
       text-transform: uppercase;
     }
 
     .chart-legend {
       display: flex;
-      gap: 16px;
-      font-size: 12px;
+      gap: 12px;
+      font-size: 11px;
       font-family: 'Space Mono', monospace;
+      padding-left: 12px;
+      border-left: 2px solid #ddd;
     }
 
     .legend-item {
@@ -692,87 +698,6 @@ const html = `<!DOCTYPE html>
 
     .chart-canvas {
       height: 350px;
-    }
-
-    /* Side Panel */
-    .side-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .insight-card {
-      background: var(--white);
-      border: var(--border);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    }
-
-    .insight-card.alert {
-      background: var(--gold);
-    }
-
-    .insight-title {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .insight-value {
-      font-family: 'Space Mono', monospace;
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .insight-desc {
-      font-size: 13px;
-      color: var(--gray);
-    }
-
-    .ma-indicator {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .ma-indicator:last-child {
-      border-bottom: none;
-    }
-
-    .ma-label {
-      font-size: 12px;
-      font-weight: 600;
-      width: 50px;
-    }
-
-    .ma-bar {
-      flex: 1;
-      height: 8px;
-      background: #eee;
-      position: relative;
-    }
-
-    .ma-bar-fill {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      background: var(--gold);
-    }
-
-    .ma-value {
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      width: 80px;
-      text-align: right;
     }
 
     /* Comparison Table */
@@ -908,6 +833,31 @@ const html = `<!DOCTYPE html>
     .time-range-btn.active {
       background: var(--black);
       color: var(--white);
+    }
+
+    /* Chart Toolbar */
+    .chart-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .chart-options {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-left: 12px;
+      border-left: 2px solid #ddd;
+    }
+
+    .chart-select {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      padding: 4px 6px;
+      border: 2px solid var(--black);
+      background: var(--white);
+      cursor: pointer;
     }
 
     /* Footer */
@@ -1083,8 +1033,8 @@ const html = `<!DOCTYPE html>
     <section class="chart-section">
       <div class="chart-container">
         <div class="chart-header">
-          <div>
-            <div class="chart-title">Biểu đồ giá vàng quốc tế</div>
+          <div class="chart-title">Biểu đồ giá vàng</div>
+          <div class="chart-toolbar">
             <div class="time-range-selector">
               <button class="time-range-btn" data-range="7">7D</button>
               <button class="time-range-btn active" data-range="30">30D</button>
@@ -1093,79 +1043,42 @@ const html = `<!DOCTYPE html>
               <button class="time-range-btn" data-range="365">1Y</button>
               ${longHistory ? '<button class="time-range-btn" data-range="all">ALL</button>' : ''}
             </div>
-          </div>
-          <div class="chart-legend">
-            <div class="legend-item">
-              <div class="legend-dot" style="background: #FFD700;"></div>
-              <span>Giá (VND)</span>
+            ${vietnamHistory ? `
+            <div class="chart-options">
+              <select id="indicatorBase" class="chart-select" title="MA/BB tính theo">
+                <option value="international">MA: Quốc tế</option>
+                <option value="vietnam">MA: Việt Nam</option>
+              </select>
             </div>
-            <div class="legend-item">
-              <div class="legend-dot" style="background: #333;"></div>
-              <span>MA7</span>
+            ` : ''}
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div class="legend-dot" style="background: #FFD700;"></div>
+                <span>Quốc tế</span>
+              </div>
+              ${vietnamHistory ? `
+              <div class="legend-item">
+                <div class="legend-dot" style="background: #e91e63;"></div>
+                <span>SJC</span>
+              </div>
+              ` : ''}
+              <div class="legend-item">
+                <div class="legend-dot" style="background: #333;"></div>
+                <span>MA7</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background: #ff6b6b;"></div>
+                <span>MA30</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot" style="background: rgba(76, 175, 80, 0.3);"></div>
+                <span>BB</span>
+              </div>
             </div>
           </div>
         </div>
         <div class="chart-canvas">
           <canvas id="mainChart"></canvas>
-        </div>
-      </div>
-
-      <div class="side-panel">
-        <div class="insight-card ${insights.premiumStatus === 'high' ? 'alert' : ''}">
-          <div class="insight-title">
-            ${insights.premiumStatus === 'high' ? '⚠️' : insights.premiumStatus === 'low' ? '✓' : '•'} Premium Status
-          </div>
-          <div class="insight-value">${insights.premium.toFixed(1)}%</div>
-          <div class="insight-desc">
-            ${insights.premiumStatus === 'high' ? 'Cao hơn mức trung bình 8%' : insights.premiumStatus === 'low' ? 'Thấp hơn mức trung bình 8%' : 'Trong phạm vi bình thường'}
-          </div>
-        </div>
-
-        <div class="insight-card">
-          <div class="insight-title">📊 Moving Averages</div>
-          <div class="ma-indicator">
-            <span class="ma-label">MA7</span>
-            <div class="ma-bar">
-              <div class="ma-bar-fill" style="width: ${Math.min(100, (insights.ma7 / insights.current.vndPerTael) * 100)}%;"></div>
-            </div>
-            <span class="ma-value">${fmtCompact(insights.ma7)}</span>
-          </div>
-          <div class="ma-indicator">
-            <span class="ma-label">MA30</span>
-            <div class="ma-bar">
-              <div class="ma-bar-fill" style="width: ${Math.min(100, (insights.ma30 / insights.current.vndPerTael) * 100)}%;"></div>
-            </div>
-            <span class="ma-value">${fmtCompact(insights.ma30)}</span>
-          </div>
-          <div class="ma-indicator">
-            <span class="ma-label">Hiện tại</span>
-            <div class="ma-bar">
-              <div class="ma-bar-fill" style="width: 100%; background: var(--green);"></div>
-            </div>
-            <span class="ma-value">${fmtCompact(insights.current.vndPerTael)}</span>
-          </div>
-          <div class="insight-desc" style="margin-top: 12px;">
-            ${insights.isAboveMa7 && insights.isAboveMa30 ? '↑ Trên cả MA7 & MA30 - Xu hướng tăng' : !insights.isAboveMa7 && !insights.isAboveMa30 ? '↓ Dưới cả MA7 & MA30 - Xu hướng giảm' : '→ Đang trong vùng dao động'}
-          </div>
-        </div>
-
-        <div class="insight-card">
-          <div class="insight-title">📈 Min/Max ${historyData.data.length} ngày</div>
-          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-            <div>
-              <div style="font-size: 11px; color: var(--gray);">Thấp nhất</div>
-              <div style="font-family: 'Space Mono'; font-weight: 700; color: var(--green);">${fmtCompact(insights.min.vndPerTael)}</div>
-              <div style="font-size: 10px; color: var(--gray);">${insights.min.date}</div>
-            </div>
-            <div style="text-align: right;">
-              <div style="font-size: 11px; color: var(--gray);">Cao nhất</div>
-              <div style="font-family: 'Space Mono'; font-weight: 700; color: var(--red);">${fmtCompact(insights.max.vndPerTael)}</div>
-              <div style="font-size: 10px; color: var(--gray);">${insights.max.date}</div>
-            </div>
-          </div>
-          <div class="insight-desc">
-            Biên độ: ${((insights.max.vndPerTael - insights.min.vndPerTael) / insights.min.vndPerTael * 100).toFixed(1)}%
-          </div>
         </div>
       </div>
     </section>
@@ -1184,7 +1097,7 @@ const html = `<!DOCTYPE html>
           </tr>
         </thead>
         <tbody>
-          ${sortedMarkets.map((m, i) => {
+          ${sortedMarkets.map(m => {
             const diff = ((m.vndPerGram - international.vndPerGram) / international.vndPerGram) * 100
             const maxPrice = sortedMarkets.at(-1)!.vndPerGram
             const barWidth = (m.vndPerGram / maxPrice) * 100
@@ -1234,16 +1147,65 @@ const html = `<!DOCTYPE html>
     // Long-term data (5 years) if available
     const longTermData = ${longHistory ? JSON.stringify(longHistory.data) : 'null'};
 
+    // Vietnam data (backfilled with international dates)
+    const vietnamRawData = ${vietnamHistory ? JSON.stringify(vietnamHistory.snapshots) : 'null'};
+
+    // Convert Vietnam data to map: date -> sell price in VND per tael
+    const vietnamDataMap = vietnamRawData
+      ? new Map(vietnamRawData.filter(d => d.sjcMieng?.sell).map(d => [d.date, d.sjcMieng.sell]))
+      : new Map();
+
     // Combine all data, preferring long-term if available
     const allData = longTermData || shortTermData;
 
-    // Calculate MA
-    function calculateMA(data, period) {
+    // State for controls
+    let indicatorBase = 'international'; // 'international' or 'vietnam'
+
+    // Get price from data point based on indicator base
+    // Uses exact date matching - gaps show where data doesn't align
+    function getPrice(dataPoint, useVietnam = false) {
+      if (useVietnam) {
+        return vietnamDataMap.get(dataPoint.date) || null;
+      }
+      return dataPoint.vndPerTael;
+    }
+
+    // Calculate MA with configurable price source
+    function calculateMA(data, period, useVietnam = false) {
       return data.map((_, i) => {
         if (i < period - 1) return null;
         const slice = data.slice(i - period + 1, i + 1);
-        return slice.reduce((sum, p) => sum + p.vndPerTael, 0) / period;
+        const prices = slice.map(p => getPrice(p, useVietnam)).filter(p => p !== null);
+        if (prices.length < period * 0.7) return null; // Need at least 70% data
+        return prices.reduce((sum, p) => sum + p, 0) / prices.length;
       });
+    }
+
+    // Calculate Bollinger Bands with configurable price source
+    function calculateBollingerBands(data, period = 20, multiplier = 2, useVietnam = false) {
+      const ma = calculateMA(data, period, useVietnam);
+      const upper = [];
+      const lower = [];
+
+      for (let i = 0; i < data.length; i++) {
+        if (i < period - 1) {
+          upper.push(null);
+          lower.push(null);
+          continue;
+        }
+        const slice = data.slice(i - period + 1, i + 1).map(p => getPrice(p, useVietnam)).filter(p => p !== null);
+        const mean = ma[i];
+        if (mean === null || slice.length < period * 0.7) {
+          upper.push(null);
+          lower.push(null);
+          continue;
+        }
+        const variance = slice.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / slice.length;
+        const stdDev = Math.sqrt(variance);
+        upper.push(mean + multiplier * stdDev);
+        lower.push(mean - multiplier * stdDev);
+      }
+      return { upper, lower, ma };
     }
 
     // Filter data by days
@@ -1260,10 +1222,17 @@ const html = `<!DOCTYPE html>
       return 4;
     }
 
+    // Get Vietnam prices for filtered data (exact date match only)
+    function getVietnamPrices(data) {
+      return data.map(d => vietnamDataMap.get(d.date) || null);
+    }
+
     // Initialize chart
     const ctx = document.getElementById('mainChart').getContext('2d');
     let currentRange = 30;
     let filteredData = filterByDays(allData, currentRange);
+    let useVietnamIndicator = indicatorBase === 'vietnam';
+    let bands = calculateBollingerBands(filteredData, 20, 2, useVietnamIndicator);
 
     const chart = new Chart(ctx, {
       type: 'line',
@@ -1271,27 +1240,72 @@ const html = `<!DOCTYPE html>
         labels: filteredData.map(d => d.date),
         datasets: [
           {
-            label: 'Giá Quốc Tế (VND/tael)',
+            label: 'BB Upper',
+            data: bands.upper,
+            borderColor: 'rgba(76, 175, 80, 0.5)',
+            borderWidth: 1,
+            fill: false,
+            tension: 0.2,
+            pointRadius: 0,
+            order: 3
+          },
+          {
+            label: 'BB Lower',
+            data: bands.lower,
+            borderColor: 'rgba(76, 175, 80, 0.5)',
+            backgroundColor: 'rgba(76, 175, 80, 0.08)',
+            borderWidth: 1,
+            fill: '-1',
+            tension: 0.2,
+            pointRadius: 0,
+            order: 3
+          },
+          {
+            label: 'Giá Quốc Tế',
             data: filteredData.map(d => d.vndPerTael),
             borderColor: '#FFD700',
             backgroundColor: 'rgba(255, 215, 0, 0.1)',
             borderWidth: 3,
-            fill: true,
+            fill: false,
             tension: 0.2,
             pointRadius: getPointRadius(filteredData.length),
             pointBackgroundColor: '#FFD700',
             pointBorderColor: '#000',
-            pointBorderWidth: 2
+            pointBorderWidth: 2,
+            order: 1
+          },
+          {
+            label: 'Việt Nam (SJC)',
+            data: getVietnamPrices(filteredData),
+            borderColor: '#e91e63',
+            backgroundColor: 'rgba(233, 30, 99, 0.1)',
+            borderWidth: 2,
+            fill: false,
+            tension: 0.2,
+            pointRadius: 0,
+            order: 1
           },
           {
             label: 'MA7',
-            data: calculateMA(filteredData, 7),
+            data: calculateMA(filteredData, 7, useVietnamIndicator),
             borderColor: '#333',
             borderWidth: 2,
             borderDash: [5, 5],
             fill: false,
             tension: 0.2,
-            pointRadius: 0
+            pointRadius: 0,
+            order: 2
+          },
+          {
+            label: 'MA30',
+            data: calculateMA(filteredData, 30, useVietnamIndicator),
+            borderColor: '#ff6b6b',
+            borderWidth: 2,
+            borderDash: [8, 4],
+            fill: false,
+            tension: 0.2,
+            pointRadius: 0,
+            order: 2
           }
         ]
       },
@@ -1349,30 +1363,42 @@ const html = `<!DOCTYPE html>
       }
     });
 
-    // Update chart with new range
+    // Update chart with new range and settings
     function updateChart(days) {
-      currentRange = days;
-      filteredData = filterByDays(allData, days);
+      if (days !== undefined) currentRange = days;
+      filteredData = filterByDays(allData, currentRange);
+      useVietnamIndicator = indicatorBase === 'vietnam';
+      bands = calculateBollingerBands(filteredData, 20, 2, useVietnamIndicator);
 
       chart.data.labels = filteredData.map(d => d.date);
-      chart.data.datasets[0].data = filteredData.map(d => d.vndPerTael);
-      chart.data.datasets[0].pointRadius = getPointRadius(filteredData.length);
-      chart.data.datasets[1].data = calculateMA(filteredData, 7);
+      chart.data.datasets[0].data = bands.upper;
+      chart.data.datasets[1].data = bands.lower;
+      chart.data.datasets[2].data = filteredData.map(d => d.vndPerTael);
+      chart.data.datasets[2].pointRadius = getPointRadius(filteredData.length);
+      chart.data.datasets[3].data = getVietnamPrices(filteredData);
+      chart.data.datasets[4].data = calculateMA(filteredData, 7, useVietnamIndicator);
+      chart.data.datasets[5].data = calculateMA(filteredData, 30, useVietnamIndicator);
       chart.update();
     }
 
     // Time range button handlers
     document.querySelectorAll('.time-range-btn').forEach(btn => {
       btn.addEventListener('click', function() {
-        // Update active state
         document.querySelectorAll('.time-range-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
-
-        // Update chart
         const range = this.dataset.range;
         updateChart(range === 'all' ? 'all' : parseInt(range));
       });
     });
+
+    // Indicator base select handler
+    const indicatorBaseSelect = document.getElementById('indicatorBase');
+    if (indicatorBaseSelect) {
+      indicatorBaseSelect.addEventListener('change', function() {
+        indicatorBase = this.value;
+        updateChart();
+      });
+    }
   </script>
 </body>
 </html>`

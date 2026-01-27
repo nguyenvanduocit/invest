@@ -126,7 +126,7 @@ if (import.meta.main) {
     for (const p of result.data) {
       console.log(`  ${p.source}: ${p.pricePerGram?.toLocaleString(undefined, { maximumFractionDigits: 2 })} CNY/g`)
     }
-  } else {
+  } else if (result.ok === false) {
     console.error('Error:', result.error)
   }
 }

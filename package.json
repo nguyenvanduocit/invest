@@ -6,16 +6,19 @@
     "type-check": "tsc --noEmit",
     "lint": "oxlint",
     "fetch:vietnam": "bun run src/sources/vietnam/index.ts",
+    "fetch:vietnam-history": "bun run src/sources/vietnam/history.ts",
     "fetch:world": "bun run src/sources/international/index.ts",
+    "fetch:twelvedata": "bun run src/sources/twelvedata/index.ts",
     "fetch:china": "bun run src/sources/china/index.ts",
     "fetch:russia": "bun run src/sources/russia/index.ts",
     "fetch:india": "bun run src/sources/india/index.ts",
     "fetch:all": "bun run src/fetch-all.ts",
     "fetch:history": "bun run src/fetch-history.ts",
-    "chart": "bun run src/generate-chart.ts",
     "dashboard": "bun run src/generate-dashboard.ts",
     "history:long": "bun run src/fetch-long-history.ts",
-    "collect": "bun run src/collect-daily.ts"
+    "collect": "bun run src/collect-daily.ts",
+    "backfill": "bun run src/backfill-vietnam.ts",
+    "update:vietnam": "bun run src/update-vietnam-daily.ts"
   },
   "dependencies": {
     "cheerio": "^1.0.0"

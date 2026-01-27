@@ -1,16 +1,8 @@
 // Fetch extended historical data (1 year, 5 years, etc.)
 
 import { fetchAllRates } from './sources/exchange-rate/index'
-
-const FREEGOLD_JSON = 'https://freegoldapi.com/data/latest.json'
-const TROY_OUNCE_TO_GRAM = 31.1035
-const TAEL_GRAMS = 37.5
-
-interface FreeGoldRecord {
-  date: string
-  price: number
-  source: string
-}
+import { fetchHistory as fetchTwelveDataHistory } from './sources/twelvedata/index'
+import { TAEL_GRAMS, TROY_OUNCE_GRAMS } from './constants'
 
 interface HistoricalPoint {
   date: string
@@ -18,6 +10,19 @@ interface HistoricalPoint {
   usdPerGram: number
   vndPerGram: number
   vndPerTael: number
+}
+
+interface Stats {
+  min: number
+  max: number
+  avg: number
+  current: number
+  first: number
+  minDate: string | undefined
+  maxDate: string | undefined
+  totalChange: number
+  annualizedVolatility: number
+  dataPoints: number
 }
 
 async function fetchLongHistory(years: number = 1): Promise<HistoricalPoint[]> {
@@ -28,45 +33,37 @@ async function fetchLongHistory(years: number = 1): Promise<HistoricalPoint[]> {
   const vndRate = ratesResult.ok ? ratesResult.data['VND'] : 25000
   console.log(`Exchange rate: 1 USD = ${vndRate.toLocaleString()} VND`)
 
-  // Fetch all data
-  const res = await fetch(FREEGOLD_JSON)
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  // Fetch from TwelveData (max 5000 points ≈ 19 years)
+  const days = Math.min(years * 365, 5000)
+  const result = await fetchTwelveDataHistory(days)
 
-  const allData = await res.json() as FreeGoldRecord[]
-  console.log(`Total records in API: ${allData.length}`)
+  if (result.ok === false) {
+    throw new Error(result.error)
+  }
 
-  // Filter to yahoo_finance source (reliable USD data from ~2000s)
-  const yahooData = allData.filter(r => r.source === 'yahoo_finance')
-  console.log(`Yahoo Finance records: ${yahooData.length}`)
+  console.log(`TwelveData records: ${result.data.data.length}`)
 
-  // Calculate cutoff date
-  const cutoffDate = new Date()
-  cutoffDate.setFullYear(cutoffDate.getFullYear() - years)
-  const cutoffStr = cutoffDate.toISOString().split('T')[0]
+  // Convert to our format with null-safe operator
+  const data: HistoricalPoint[] = result.data.data.map(r => ({
+    date: r.date,
+    usdPerOunce: r.pricePerOunce ?? (r.pricePerGram * TROY_OUNCE_GRAMS),
+    usdPerGram: r.pricePerGram,
+    vndPerGram: r.pricePerGram * vndRate,
+    vndPerTael: r.pricePerGram * vndRate * TAEL_GRAMS
+  }))
 
-  // Filter and convert
-  const filtered = yahooData
-    .filter(r => r.date >= cutoffStr)
-    .map(r => ({
-      date: r.date,
-      usdPerOunce: r.price,
-      usdPerGram: r.price / TROY_OUNCE_TO_GRAM,
-      vndPerGram: (r.price / TROY_OUNCE_TO_GRAM) * vndRate,
-      vndPerTael: (r.price / TROY_OUNCE_TO_GRAM) * vndRate * TAEL_GRAMS
-    }))
+  console.log(`Filtered records (${years}y): ${data.length}`)
 
-  console.log(`Filtered records (${years}y): ${filtered.length}`)
-
-  return filtered
+  return data
 }
 
-function calculateStats(data: HistoricalPoint[]) {
+function calculateStats(data: HistoricalPoint[]): Stats {
   const prices = data.map(d => d.usdPerOunce)
   const min = Math.min(...prices)
   const max = Math.max(...prices)
   const avg = prices.reduce((a, b) => a + b, 0) / prices.length
-  const current = prices.at(-1) || 0
-  const first = prices[0] || 0
+  const current = prices.at(-1) ?? 0
+  const first = prices[0] ?? 0
 
   // Find dates
   const minDate = data.find(d => d.usdPerOunce === min)?.date
@@ -82,14 +79,20 @@ function calculateStats(data: HistoricalPoint[]) {
   return {
     min, max, avg, current, first,
     minDate, maxDate,
-    totalChange: ((current - first) / first) * 100,
+    totalChange: first > 0 ? ((current - first) / first) * 100 : 0,
     annualizedVolatility: annualVol,
     dataPoints: data.length
   }
 }
 
-async function main() {
-  const years = parseInt(process.argv[2] || '1')
+async function main(): Promise<void> {
+  const years = parseInt(process.argv[2] ?? '1')
+
+  if (isNaN(years) || years < 1) {
+    console.error('Usage: bun run history:long [years]')
+    console.error('  years: 1-19 (default: 1)')
+    process.exit(1)
+  }
 
   const data = await fetchLongHistory(years)
   const stats = calculateStats(data)

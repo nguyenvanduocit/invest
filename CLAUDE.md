@@ -30,8 +30,10 @@ bun run fetch:history 60    # custom days
 bun run chart               # creates data/chart.html
 
 # Fetch individual sources
-bun run fetch:vietnam
-bun run fetch:world
+bun run fetch:vietnam          # Current prices
+bun run fetch:vietnam-history  # 1 year SJC history (webgia.com)
+bun run fetch:world            # Uses TwelveData -> FreeGoldAPI fallback
+bun run fetch:twelvedata       # Test TwelveData directly
 bun run fetch:china
 bun run fetch:russia
 bun run fetch:india
@@ -43,11 +45,15 @@ bun run fetch:india
 src/
 ├── types.ts                    # Shared types
 ├── fetch-all.ts                # Current prices (normalized to VND)
-├── fetch-history.ts            # Historical data
+├── fetch-history.ts            # International historical data
+├── fetch-long-history.ts       # Extended history (up to 19 years)
 ├── generate-chart.ts           # HTML chart generator
 └── sources/
-    ├── vietnam/                # SJC Miếng/Nhẫn (giavang.org)
-    ├── international/          # XAUUSD (FreeGoldAPI)
+    ├── twelvedata/             # XAUUSD primary (TwelveData API)
+    ├── international/          # XAUUSD with fallback chain
+    ├── vietnam/
+    │   ├── index.ts            # Current prices (giavang.org)
+    │   └── history.ts          # 1 year SJC history (webgia.com)
     ├── china/                  # CNY (goldprice.org API)
     ├── russia/                 # RUB (goldprice.org API)
     ├── india/                  # IBJA 24K (ibjarates.com)
@@ -59,10 +65,13 @@ src/
 
 ```
 data/
-├── latest.json     # Current prices (all markets, normalized)
-├── history.json    # Historical data with VND conversion
-├── history.csv     # CSV for external charting tools
-└── chart.html      # Interactive Chart.js visualization
+├── latest.json           # Current prices (all markets, normalized)
+├── history.json          # 30-day international history
+├── history-Ny.json       # N-year history (TwelveData, up to 19y)
+├── vietnam-history.json  # Daily collected Vietnam snapshots
+├── vietnam-history-1y.json # 1 year SJC history (webgia.com)
+├── history.csv           # CSV for external charting tools
+└── chart.html            # Interactive Chart.js visualization
 ```
 
 ## Key Conversions
@@ -72,16 +81,33 @@ data/
 - All prices normalized to VND using live exchange rates
 - Vietnam premium = (SJC - International) / International × 100%
 
+## Trading Days (Important)
+
+Vàng quốc tế (XAUUSD) chỉ giao dịch vào ngày làm việc:
+- **Không có giao dịch** vào thứ 7, chủ nhật, và ngày nghỉ lễ quốc tế
+- TwelveData cung cấp dữ liệu 7 ngày/tuần (carry forward giá từ ngày giao dịch trước)
+- FreeGoldAPI chỉ có dữ liệu trading days (~19-22 ngày trong 30 ngày lịch)
+- Khi so sánh dữ liệu lịch sử từ nhiều nguồn, chỉ so sánh các ngày có dữ liệu từ tất cả nguồn
+
 ## Data Sources
 
 | Market | Source | API/Scrape | Notes |
 |--------|--------|------------|-------|
-| XAUUSD | FreeGoldAPI | API | yahoo_finance feed, historical available |
-| Vietnam | giavang.org | Scrape | SJC Miếng (bars) & Nhẫn (rings) |
+| XAUUSD | TwelveData | API | Primary, 19 years history, requires API key |
+| XAUUSD | FreeGoldAPI | API | Fallback, yahoo_finance feed |
+| Vietnam | giavang.org | Scrape | Current SJC Miếng & Nhẫn prices |
+| Vietnam | webgia.com | Scrape | 1 year SJC historical data |
 | China | goldprice.org | API | CNY/gram |
 | Russia | goldprice.org | API | RUB/gram |
 | India | ibjarates.com | Scrape | IBJA 24K (per 10g, converted) |
 | Rates | exchangerate-api | API | USD/VND, CNY, RUB, INR |
+
+## Environment Variables
+
+```bash
+# .env (local) or GitHub Secrets (CI)
+TWELVEDATA_API_KEY=xxx   # Required for TwelveData source
+```
 
 ## Typical Output
 

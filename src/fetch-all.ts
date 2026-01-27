@@ -98,7 +98,7 @@ async function fetchAllPrices(): Promise<FetchResult<AllPrices>> {
 
   // Fetch exchange rates first
   const ratesResult = await fetchAllRates()
-  if (!ratesResult.ok) {
+  if (ratesResult.ok === false) {
     return { ok: false, error: `Exchange rates: ${ratesResult.error}` }
   }
   const rates = ratesResult.data
@@ -132,24 +132,24 @@ async function fetchAllPrices(): Promise<FetchResult<AllPrices>> {
       if (!unique.has(key)) unique.set(key, p)
     }
     raw.vietnam = Array.from(unique.values())
-  } else {
+  } else if (vietnamResult.ok === false) {
     errors.push(`Vietnam: ${vietnamResult.error}`)
   }
 
   if (internationalResult.ok) raw.international = internationalResult.data
-  else errors.push(`International: ${internationalResult.error}`)
+  else if (internationalResult.ok === false) errors.push(`International: ${internationalResult.error}`)
 
   if (chinaResult.ok) raw.china = dedupeBySource(chinaResult.data)
-  else errors.push(`China: ${chinaResult.error}`)
+  else if (chinaResult.ok === false) errors.push(`China: ${chinaResult.error}`)
 
   if (russiaResult.ok) raw.russia = dedupeBySource(russiaResult.data)
-  else errors.push(`Russia: ${russiaResult.error}`)
+  else if (russiaResult.ok === false) errors.push(`Russia: ${russiaResult.error}`)
 
   if (indiaResult.ok) {
     raw.india = indiaResult.data
       .filter(p => p.source.toLowerCase().includes('gold 999'))
       .slice(0, 1)
-  } else {
+  } else if (indiaResult.ok === false) {
     errors.push(`India: ${indiaResult.error}`)
   }
 
@@ -199,7 +199,7 @@ async function fetchAllPrices(): Promise<FetchResult<AllPrices>> {
 async function main() {
   const result = await fetchAllPrices()
 
-  if (!result.ok) {
+  if (result.ok === false) {
     console.error('Failed to fetch prices:', result.error)
     process.exit(1)
   }

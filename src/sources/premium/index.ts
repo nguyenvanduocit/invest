@@ -140,7 +140,7 @@ if (import.meta.main) {
     if (result.data.india) {
       console.log(`  India: ${result.data.india.premium > 0 ? '+' : ''}${result.data.india.premium.toFixed(2)}%`)
     }
-  } else {
+  } else if (result.ok === false) {
     console.error('Error:', result.error)
   }
 
