@@ -1123,8 +1123,8 @@ const html = `<!DOCTYPE html>
           <div class="chart-toolbar">
             <div class="time-range-selector">
               <button class="time-range-btn" data-range="7">7D</button>
-              <button class="time-range-btn active" data-range="30">30D</button>
-              <button class="time-range-btn" data-range="90">90D</button>
+              <button class="time-range-btn" data-range="30">30D</button>
+              <button class="time-range-btn active" data-range="90">90D</button>
               <button class="time-range-btn" data-range="180">6M</button>
               <button class="time-range-btn" data-range="365">1Y</button>
               ${longHistory ? '<button class="time-range-btn" data-range="all">ALL</button>' : ''}
@@ -1405,7 +1405,7 @@ const html = `<!DOCTYPE html>
 
     // Initialize chart
     const ctx = document.getElementById('mainChart').getContext('2d');
-    let currentRange = 30;
+    let currentRange = 90;
     let filteredData = filterByDays(allData, currentRange);
     let useVietnamIndicator = indicatorBase === 'vietnam';
     let bands = calculateBollingerBands(filteredData, 20, 2, useVietnamIndicator);
