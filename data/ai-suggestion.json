@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T17:23:08.904Z",
+  "generatedAt": "2026-02-11T19:24:21.052Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
@@ -7,42 +7,42 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở mức cao kỷ lục (percentile 100) với động lượng tăng mạnh (MA7 > MA30) và được hỗ trợ bởi đà tăng của giá thế giới (XAUUSD). Tuy nhiên, mức chênh lệch premium hiện tại (14.41%) đã cao hơn đáng kể so với trung bình chu kỳ 30 ngày (13.2%), cho thấy rủi ro điều chỉnh ngắn hạn khi thị trường nội địa chững lại. Nhà đầu tư nên chờ đợi nhịp điều chỉnh hoặc mức premium ổn định hơn trước khi giải ngân mới.",
+    "thesis": "Thị trường đang trong giai đoạn tăng giá mạnh (uptrend) với giá SJC đạt đỉnh 181 triệu/lượng và giá thế giới vượt mốc 5.000 USD/oz. Tuy nhiên, động lượng ngắn hạn đang chững lại khi giá SJC đi ngang trong 2 ngày gần nhất và premium đang có xu hướng thu hẹp nhẹ so với đỉnh 18.9% hồi đầu tháng. Nhà đầu tư nên chờ đợi một nhịp điều chỉnh kỹ thuật hoặc sự ổn định của chênh lệch giá trước khi giải ngân thêm.",
     "reasons": [
-      "Xu hướng giá nội địa tăng mạnh: MA7 (155.37 triệu/lượng) vượt xa MA30 (152.13 triệu/lượng), xác định xu hướng tăng ngắn hạn.",
-      "Động lượng giá thế giới tích cực: XAUUSD tăng 9.89% trong 20 ngày qua lên 5085 USD/oz, tạo nền tảng giá cao cho vàng trong nước.",
-      "Rủi ro kỹ thuật ngắn hạn: Premium hiện tại 14.41% đã cao hơn mức trung bình 30 ngày (13.2%), cho thấy áp lực chốt lời tiềm ẩn.",
-      "Mức giá cực đoan: Giá hiện tại 181 triệu/lượng nằm ở mức Percentile 5 năm (100%), rủi ro đảo chiều tăng cao."
+      "Giá SJC đạt 181 triệu/lượng, tăng 10.46% trong 30 ngày qua và vượt MA7 (155.4 triệu/lượng) cho thấy xu hướng tăng trung hạn rất mạnh.",
+      "Premium hiện ở mức 14.18%, cao hơn mức trung bình 30 ngày (khoảng 13.5%), nhưng đã giảm từ đỉnh 18.9% (ngày 05/02) cho thấy áp lực cầu ngắn hạn đang hạ nhiệt.",
+      "Giá thế giới (XAUUSD) đạt 5.093 USD/oz, tăng 10.05% trong 20 ngày qua được hỗ trợ bởi lợi suất thực 10 năm Mỹ (US Real Yield 10Y) giảm xuống 1.87%.",
+      "Độ biến động hàng ngày (Volatility Daily) ở mức 2.19%, cho thấy thị trường đang rung lắc mạnh sau đợt tăng giá nhanh."
     ],
     "risks": [
-      "Giá vàng thế giới điều chỉnh mạnh nếu dữ liệu kinh tế Mỹ (Fed Funds Rate 3.64%) hoặc USD Index (118.24) bất ngờ tăng trở lại.",
-      "Sự thiếu hụt dữ liệu sự kiện địa chính trị rõ ràng trong input khiến độ tin cậy của xu hướng dài hạn bị giảm thiểu (dữ liệu nhiễu).",
-      "Biến động cao (Volatility Daily 2.19%) có thể gây ra các đợt giảm điểm sốc (như ngày 30/01) trước khi tiếp tục tăng."
+      "Rủi ro chốt lời ngắn hạn cao khi giá SJC đi ngang (sideways) trong 2 ngày liên tiếp sau đợt tăng dốc.",
+      "Premium cao (14%) khiến biên độ an toàn thấp, nếu giá thế giới điều chỉnh, giá trong nước có thể giảm sâu hơn do hẹp premium.",
+      "Dữ liệu vĩ mô (Lạm phát kỳ vọng Breakeven 10Y giảm 1.28% trong ngày) có thể làm giảm nhu cầu trú ẩn an toàn nếu lạm phát hạ nhiệt nhanh chóng."
     ],
     "evidence": [
       {
-        "key": "sjc_vnd_per_tael",
+        "key": "sjc_price_latest",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
         "key": "premium_pct",
-        "value": 14.41,
+        "value": 14.18,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_spot",
-        "value": 5085.41,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "change_30d_pct",
+        "value": 10.46,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd_per_tael",
-        "value": 155371482,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "world_price_usd",
+        "value": 5093.65,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
         "key": "us_real_yield_10y",
@@ -51,23 +51,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
+        "key": "ma7_vnd_per_tael",
+        "value": 155418037,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.19,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T17:22:55.421Z",
+    "latestTimestamp": "2026-02-11T19:24:04.320Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158197096.72885555,
-    "premiumPct": 14.41,
-    "change7dPct": 2.87,
-    "change30dPct": 10.23,
+    "intlVndPerTael": 158522980.1678104,
+    "premiumPct": 14.18,
+    "change7dPct": 3.08,
+    "change30dPct": 10.46,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 155371482,
-    "ma30VndPerTael": 152129878,
+    "ma7VndPerTael": 155418037,
+    "ma30VndPerTael": 152140741,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-11T17:23:00.966Z",
+    "fetchedAt": "2026-02-11T19:24:15.117Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5085.41,
+        "value": 5092.36,
         "unit": "USD/oz",
         "date": "2026-02-11",
-        "change1dPct": 1.19,
-        "change5dPct": 2.43,
-        "change20dPct": 9.89,
+        "change1dPct": 1.33,
+        "change5dPct": 2.57,
+        "change20dPct": 10.05,
         "relationToGold": "context"
       },
       {
@@ -180,27 +186,21 @@
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-11 | kool1017.com | Jefferson Starship Extends 2026 Runaway Again World Tour",
-      "2026-02-11 | vogue.com | PVF 2026 Conversations • No Woman Land : Women , Power , and Survival",
-      "2026-02-11 | newstatesman.com | The dark side of the Enlightenment",
-      "2026-02-11 | accesswdun.com | The Latest : Bondi will face questions before Congress over Epstein files",
-      "2026-02-11 | rollingstone.com | Kota Youngblood Victims Speak Out About $12 Million Fraud",
-      "2026-02-11 | 97x.com | Jefferson Starship Extends 2026 Runaway Again World Tour"
+      "2026-02-11 | newsghana.com.gh | IEAG Raises Alarm Over  Conflict of Interest  in GoldBod Operations",
+      "2026-02-11 | newjerseytelegraph.com | Gemdale Gold Announces Commencement of Trading on the TSX Venture Exchange",
+      "2026-02-11 | nbcnewyork.com | French biathlete who stole from teammate wins Olympic gold – NBC New York"
     ],
     "countryActionHeadlines": [
-      "2026-02-11 | broomfieldenterprise.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
-      "2026-02-11 | allafrica.com | Nigeria : Hope for Lower Interest Rate , Inflation Drop As MPC Meets Next Week",
-      "2026-02-11 | livemint.com | Gold , silver rates today : Comex gold jumps $113 / oz ; silver gains $6 / oz after strong US jobs data",
-      "2026-02-11 | standardspeaker.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
-      "2026-02-11 | finance.yahoo.com | US job strength signals Fed may hold off on additional rate cuts",
-      "2026-02-11 | fortmorgantimes.com | Biathlete regrets tearful TV confession overshadowing teammate gold"
+      "2026-02-11 | bravenewcoin.com | Gold ( XAU / USD ) Price Prediction : Gold Tests $5 , 100 Triangle Resistance as SPDR Signals Strong Bullish Momentum Near Highs",
+      "2026-02-11 | investorschronicle.co.uk | What the new Federal Reserve chair means for markets",
+      "2026-02-11 | saratogian.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
+      "2026-02-11 | businessghana.com | Bank of Ghana rolls out structured auction system for dollar interventions",
+      "2026-02-11 | sentinelandenterprise.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
+      "2026-02-11 | markets.financialcontent.com | FinancialContent - The Data Drought Ends : January Jobs Report Arrives Amid Shutdown Shadows and Fed Pivot Hopes"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-11 | markets.financialcontent.com | FinancialContent - Deep Dive : Why Hilton ( HLT ) is the  Gold Standard  of Global Lodging Following 2025 Record Earnings",
-      "2026-02-11 | moneycontrol.com | Why Kerala may continue to see higher inflation even under the new CPI series",
-      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
-      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
-      "2026-02-11 | newsghana.com.gh | Gold Holds Above US$5 , 060 as Markets Weigh Economic Data"
+      "2026-02-11 | bravenewcoin.com | Gold ( XAU / USD ) Price Prediction : Gold Tests $5 , 100 Triangle Resistance as SPDR Signals Strong Bullish Momentum Near Highs",
+      "2026-02-11 | cointelegraph.com | Is China hoarding gold so yuan becomes global reserve instead of USD ?"
     ]
   }
 }
