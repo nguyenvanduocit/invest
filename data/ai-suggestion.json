@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T15:22:36.128Z",
+  "generatedAt": "2026-02-11T16:03:08.573Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi giá vượt xa MA30 đến 19%. Nhà đầu tư nên chờ đợi hồi phục về vùng hỗ trợ cận MA7 (~175-176 triệu/lượng) thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở mức cao kỷ lục (percentile 100) với động lượng tăng mạnh (MA7 > MA30) và chênh lệch premium cao (14.94%). Tuy nhiên, rủi ro điều chỉnh kỹ thuật đang gia tăng khi giá thế giới (XAUUSD) chạm vùng cản 5060 USD/oz và các chỉ báo vĩ mô (Lợi suất thực, USD Index) đang có dấu hiệu ổn định hoặc hồi phục nhẹ sau khi giảm mạnh. Nhà đầu tư nên chờ nhịp điều chỉnh hoặc breakout quyết định để tránh mua đỉnh ngắn hạn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang cách xa MA30 (152.1 triệu VND/lượng) tới 19%, tín hiệu quá mua kỹ thuật trong ngắn hạn.",
-      "Động lượng tăng 9.86%/30 ngày và 2.52%/7 ngày rất mạnh, nhưng biến động ngày 2.19% cảnh báo rủi ro dao động giá lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm 3.61%/5 ngày xuống 1.87%, hỗ trợ vàng tăng vọt, nhưng VIX tăng 11.33%/20 ngày cho thấy thị trường đang lo ngại.",
-      "Premium 14.8% nằm trong biên dao động 30 ngày (10.36%-18.9%), không có tín hiệu bất thường cực đoan so với lịch sử gần."
+      "Xu hướng tăng mạnh: Giá SJC (181 triệu/lượng) đang nằm trên MA7 (155.3 triệu/lượng) và MA30 (152.1 triệu/lượng), cho thấy xu hướng tăng ngắn hạn rất mạnh.",
+      "Momentum dương: Giá tăng 9.73% trong 30 ngày qua và 2.4% trong 7 ngày qua, cho phép lực mua vẫn đang chủ động.",
+      "Premium cao nhưng không cực đoan: Chênh lệch 14.94% cao hơn trung bình 30 ngày (khoảng 13-14%) nhưng thấp hơn đỉnh 18.9% ngày 05/02, cho thấy thị trường nội địa đang nóng nhưng chưa hoàn toàn mất kiểm soát.",
+      "Ngưỡng cản thế giới: Giá thế giới đang tiếp cận vùng 5060 USD/oz (ngưỡng tâm lý gần 5100), có thể gây áp lực chốt lời ngắn hạn."
     ],
     "risks": [
-      "Giá ở phân vị 100% trong 5 năm, rủi ro chốt lời ngắn hạn cao nếu dữ liệu lạm phát Mỹ bất ngờ.",
-      "Biến động 2.19%/ngày có thể gây sốc tài khoản nếu mua đu đỉnh without stop-loss.",
-      "Dữ liệu sự kiện vĩ mô chủ yếu về ECB/Anh, thiếu tin tức cụ thể về chính sách Fed/Địa chính trị cấp bách, độ tin cậy giảm."
+      "Rủi ro điều chỉnh kỹ thuật từ vùng quá mua (percentile 5 năm = 100%) và độ biến động ngày cao (2.19%).",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) ở mức 1.87% và có dấu hiệu giảm chậm lại (change5dPct -3.61%), nếu lợi suất này hồi phục sẽ gây áp lực lên giá vàng thế giới.",
+      "Dữ liệu sự kiện vĩ mô (Policy/Geopolitics) trong input chủ yếu là tin cũ hoặc không đủ tính cấp thiết mới (low signal noise), làm giảm độ tin cậy của dự báo sự kiện đột biến."
     ],
     "evidence": [
       {
-        "key": "sjc_price_latest",
+        "key": "sjcVndPerTael",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "price_vs_ma30_pct",
-        "value": 19,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "change_30d_pct",
-        "value": 9.86,
+        "key": "premiumPct",
+        "value": 14.94,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change5d",
-        "value": -3.61,
+        "key": "ma7VndPerTael",
+        "value": 155268267,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "ma30VndPerTael",
+        "value": 152105795,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "worldUsdPerOunce",
+        "value": 5059.96,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.87,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
-        "value": 11.33,
-        "unit": "%",
+        "key": "usd_index_trade_weighted",
+        "value": 118.2407,
+        "unit": "index",
         "source": "first_principles_context"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "phân vị",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 10.36,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.19,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T15:22:12.984Z",
+    "latestTimestamp": "2026-02-11T16:02:40.628Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157666386.4270577,
-    "premiumPct": 14.8,
-    "change7dPct": 2.52,
-    "change30dPct": 9.86,
+    "intlVndPerTael": 157474591.46593705,
+    "premiumPct": 14.94,
+    "change7dPct": 2.4,
+    "change30dPct": 9.73,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 155295666,
-    "ma30VndPerTael": 152112188,
+    "ma7VndPerTael": 155268267,
+    "ma30VndPerTael": 152105795,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-11T15:22:20.281Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-11T16:02:59.665Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5069.72,
+        "value": 5061.13,
         "unit": "USD/oz",
         "date": "2026-02-11",
-        "change1dPct": 0.88,
-        "change5dPct": 2.11,
-        "change20dPct": 9.56,
+        "change1dPct": 0.71,
+        "change5dPct": 1.94,
+        "change20dPct": 9.37,
         "relationToGold": "context"
       },
       {
@@ -196,19 +190,13 @@
       "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist"
     ],
     "countryActionHeadlines": [
+      "2026-02-11 | fortmorgantimes.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
       "2026-02-11 | qcostarica.com | Two Years of the Dollar Freeze : Who Wins and Loses in Nicaragua ?",
       "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
       "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
       "2026-02-11 | ghanamma.com | Kenya to Diversify Reserve Holdings",
-      "2026-02-11 | cnbc.com | Dollar under pressure ; yen and Aussie resurgent",
-      "2026-02-11 | newsghana.com.gh | Gold Holds Above US$5 , 060 as Markets Weigh Economic Data"
+      "2026-02-11 | cnbc.com | Dollar under pressure ; yen and Aussie resurgent"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
-      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
-      "2026-02-11 | newsghana.com.gh | Gold Holds Above US$5 , 060 as Markets Weigh Economic Data",
-      "2026-02-11 | domain-b.com | Silver jumps nearly Rs 7 , 000 / kg ; gold rises Rs 1 , 600 as weak US retail data boosts rate - cut bets",
-      "2026-02-11 | rttnews.com | Gold Prices Surge On Fed Rate Cut Expectations"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
