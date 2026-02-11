@@ -315,12 +315,6 @@ const displayedRecommendation = aiSuggestion?.suggestion
     }
   : insights.recommendation
 const recommendationColorClass = recommendationClass(displayedRecommendation.action)
-const recommendationSourceLabel = aiSuggestion
-  ? `AI (${aiSuggestion.model})`
-  : 'Rule-based'
-const heroRecommendationText = aiSuggestion
-  ? `${recommendationSourceLabel} đang hoạt động · Xem luận điểm chi tiết ở mục AI SUGGEST bên dưới.`
-  : `${recommendationSourceLabel} → ${displayedRecommendation.reason}`
 
 // Sort markets by VND price
 const sortedMarkets = [...latest.normalized].sort((a, b) => a.vndPerGram - b.vndPerGram)
@@ -396,7 +390,6 @@ function generateDrawdownsSection(): string {
 function generateAiSuggestionSection(): string {
   if (!aiSuggestion?.suggestion) return ''
 
-  const statusClass = recommendationClass(aiSuggestion.suggestion.status)
   const reasons = (aiSuggestion.suggestion.reasons || [])
     .map(reason => `<li>${escapeHtml(reason)}</li>`)
     .join('')
@@ -408,23 +401,41 @@ function generateAiSuggestionSection(): string {
   return `
     <section class="comparison-section ai-suggestion-section" style="margin-bottom: 24px;">
       <div class="comparison-header"><i data-lucide="bot"></i> AI SUGGEST (${escapeHtml(aiSuggestion.model)})</div>
-      <div class="ai-suggestion-grid">
-        <div class="ai-suggestion-main">
-          <div class="ai-suggestion-meta">
-            <span>Nguồn: ${aiSuggestion.source === 'ai' ? 'Z.AI model' : 'Heuristic fallback'}</span>
-            <span>Cập nhật: ${generatedAt}</span>
+      <div class="ai-suggestion-shell">
+        <div class="ai-suggestion-top">
+          <div class="ai-suggestion-main">
+            <div class="ai-suggestion-meta">
+              <span>Nguồn: ${aiSuggestion.source === 'ai' ? 'Z.AI model' : 'Heuristic fallback'}</span>
+              <span>Cập nhật: ${generatedAt}</span>
+            </div>
+            <div class="ai-suggestion-thesis">${escapeHtml(aiSuggestion.suggestion.thesis)}</div>
           </div>
-          <div class="ai-suggestion-thesis">${escapeHtml(aiSuggestion.suggestion.thesis)}</div>
-          <div class="ai-suggestion-status">
-            <span class="recommendation-badge ${statusClass}">${escapeHtml(aiSuggestion.suggestion.status)}</span>
-            <span class="ai-suggestion-confidence">Độ tin cậy: ${escapeHtml(aiSuggestion.suggestion.confidence)} · ${escapeHtml(aiSuggestion.suggestion.horizon)}</span>
+
+          <div class="ai-suggestion-context">
+            <div class="ai-context-item">
+              <div class="ai-context-label">Mô hình</div>
+              <div class="ai-context-value">${escapeHtml(aiSuggestion.model)}</div>
+            </div>
+            <div class="ai-context-item">
+              <div class="ai-context-label">Khung đánh giá</div>
+              <div class="ai-context-value">${escapeHtml(aiSuggestion.suggestion.horizon)}</div>
+            </div>
+            <div class="ai-context-item">
+              <div class="ai-context-label">Tín hiệu</div>
+              <div class="ai-context-value">${escapeHtml(aiSuggestion.source === 'ai' ? 'Mô hình AI' : 'Heuristic fallback')}</div>
+            </div>
           </div>
         </div>
-        <div class="ai-suggestion-side">
-          <div class="ai-suggestion-list-title">Luận điểm chính</div>
-          <ul class="ai-suggestion-list">${reasons || '<li>Không có luận điểm chi tiết.</li>'}</ul>
-          <div class="ai-suggestion-list-title">Rủi ro</div>
-          <ul class="ai-suggestion-list">${risks || '<li>Biến động thị trường và tỷ giá.</li>'}</ul>
+
+        <div class="ai-suggestion-bottom">
+          <div class="ai-suggestion-panel">
+            <div class="ai-suggestion-list-title">Luận điểm chính</div>
+            <ul class="ai-suggestion-list">${reasons || '<li>Không có luận điểm chi tiết.</li>'}</ul>
+          </div>
+          <div class="ai-suggestion-panel">
+            <div class="ai-suggestion-list-title">Rủi ro</div>
+            <ul class="ai-suggestion-list">${risks || '<li>Biến động thị trường và tỷ giá.</li>'}</ul>
+          </div>
         </div>
       </div>
     </section>
@@ -571,22 +582,6 @@ const html = `<!DOCTYPE html>
       margin-bottom: 8px;
     }
 
-    .recommendation-badge {
-      display: inline-block;
-      background: var(--black);
-      color: var(--white);
-      padding: 8px 20px;
-      font-family: 'Space Mono', monospace;
-      font-size: 14px;
-      font-weight: 700;
-      margin-top: 16px;
-      border: 2px solid var(--black);
-    }
-
-    .recommendation-badge.buy { background: var(--green); color: var(--black); }
-    .recommendation-badge.sell { background: var(--red); color: var(--white); }
-    .recommendation-badge.wait { background: var(--white); color: var(--black); }
-
     .hero-action {
       text-align: center;
       padding: 24px;
@@ -617,12 +612,17 @@ const html = `<!DOCTYPE html>
       color: var(--gray);
     }
 
-    .ai-suggestion-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 18px;
+    .ai-suggestion-shell {
       padding: 20px;
       background: var(--white);
+      display: grid;
+      gap: 16px;
+    }
+
+    .ai-suggestion-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+      gap: 16px;
     }
 
     .ai-suggestion-main {
@@ -646,26 +646,54 @@ const html = `<!DOCTYPE html>
       font-size: 20px;
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 14px;
     }
 
-    .ai-suggestion-status {
-      display: flex;
+    .ai-suggestion-context {
+      border: var(--border);
+      background: #f2f2f2;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display: grid;
       gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
+      align-content: start;
     }
 
-    .ai-suggestion-confidence {
+    .ai-context-item {
+      border-bottom: 2px dashed #cfcfcf;
+      padding-bottom: 10px;
+    }
+
+    .ai-context-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .ai-context-label {
       font-family: 'Space Mono', monospace;
-      font-size: 12px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       color: var(--gray);
+      margin-bottom: 4px;
     }
 
-    .ai-suggestion-side {
+    .ai-context-value {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .ai-suggestion-bottom {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .ai-suggestion-panel {
       border: var(--border);
       background: var(--white);
-      padding: 16px;
+      padding: 14px 16px;
       box-shadow: var(--shadow);
     }
 
@@ -686,7 +714,8 @@ const html = `<!DOCTYPE html>
     }
 
     @media (max-width: 960px) {
-      .ai-suggestion-grid {
+      .ai-suggestion-top,
+      .ai-suggestion-bottom {
         grid-template-columns: 1fr;
       }
     }
@@ -1258,9 +1287,6 @@ const html = `<!DOCTYPE html>
           <h1>Giá vàng ${insights.trendDirection === 'up' ? 'tăng mạnh' : 'giảm'}</h1>
           <p>Thay đổi ${insights.totalChange > 0 ? '+' : ''}${insights.totalChange.toFixed(1)}% trong ${historyData.data.length} ngày qua</p>
           <p>Premium Việt Nam: ${insights.premium.toFixed(1)}% ${insights.premiumStatus === 'high' ? '(Cao hơn bình thường)' : insights.premiumStatus === 'low' ? '(Thấp hơn bình thường)' : '(Bình thường)'}</p>
-          <div class="recommendation-badge ${recommendationColorClass}">
-            ${escapeHtml(heroRecommendationText)}
-          </div>
         </div>
         <div class="hero-action">
           <div class="hero-action-label">Khuyến nghị</div>
