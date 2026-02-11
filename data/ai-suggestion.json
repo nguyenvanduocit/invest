@@ -1,35 +1,85 @@
 {
-  "generatedAt": "2026-02-11T14:39:21.599Z",
+  "generatedAt": "2026-02-11T15:20:26.342Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
-    "horizon": "chuỗi ngắn",
-    "thesis": "Giá đang ở đỉnh lịch sử (percentile 100%) với động lượng tăng quá nóng trong 30 ngày (+9.81%), rủi ro điều chỉnh kỹ thuật cao hơn cơ hội tăng tiếp.",
+    "confidence": "Trung bình",
+    "horizon": "1-4 tuần",
+    "thesis": "Thị trường vàng đang trong giai đoạn tăng giá mạnh nhưng rủi ro điều chỉnh kỹ thuật cao do giá đã vượt xa trung bình động cơ và premium đang neo ở mức cao. Mặc dù động lượng tăng vẫn còn (MA7 > MA30), sự thiếu hụt dữ liệu vĩ mô quan trọng (Lạm phát kỳ vọng, Lãi suất Fed) khiến độ tin cậy của xu hướng hiện tại bị giảm sút. Nhà đầu tư nên chờ đợi nhịp điều chỉnh về vùng hỗ trợ gần (MA7) hoặc tín hiệu vĩ mô rõ ràng hơn trước khi giải ngân.",
     "reasons": [
-      "Đỉnh lịch sử 5 năm: Giá SJC ở mức cao nhất tuyệt đối, không còn vùng kháng cự kỹ thuật.",
-      "Động lượng quá mua: Tăng gần 10% trong 30 ngày với biến động cao (2.19%/ngày).",
-      "Phân kỳ tiêu cực: Giá thế giới ngày 11/2 thấp hơn đỉnh 28/1 nhưng giá SJC vẫn neo cao.",
-      "Premium giãn: Chênh lệch tăng từ 13.2% lên 14.9%, áp lực mua nội địa cản trở điều chỉnh."
+      "Giá SJC hiện tại 181 triệu VND/lượng đang cao hơn 16.6% so với MA30 (152.1 triệu VND/lượng), cho thấy rủi ro kỹ thuật ngắn hạn rất lớn.",
+      "Chênh lệch (Premium) 14.78% cao hơn đáng kể so với trung bình 30 ngày (khoảng 13.2%), phản ánh áp lực mua cục bộ nhưng cũng tiềm ẩn khả năng thu hẹp khi giá thế giới đi ngang.",
+      "Thiếu dữ liệu vĩ mô quan trọng (US Breakeven Inflation, Fed Funds Rate) để xác nhận xu hướng lạm phát và lãi suất hỗ trợ đà tăng dài hạn.",
+      "Động lượng tăng vẫn còn (MA7 là 155.3 triệu VND/lượng, cao hơn MA30), nhưng khoảng cách đang quá rộng cần được hẹp lại."
     ],
     "risks": [
-      "Điều chỉnh ngắn hạn: Khả năng hồi về vùng hỗ trợ 173-175 triệu/lượng.",
-      "Thanh khoản thấp ở đỉnh: Khó thoát hàng nhanh nếu thị trường đảo chiều.",
-      "Biến động giá thế giới: Giá vàng thế giới dao động mạnh quanh đỉnh 5000+ USD/oz."
+      "Dữ liệu vĩ mô bị thiếu (missingFactors) khiến việc phân tích First-principles không đầy đủ, rủi ro biến động ngẫu nhiên cao.",
+      "Giá vàng thế giới (XAUUSD) đang ở mức cao lịch sử (5065 USD/oz), bất kỳ tin tức tiêu cực nào về lạm phát hoặc Fed đều có thể gây ra phản ứng bán tháo mạnh.",
+      "Premium cao (14.78%) có thể giảm nhanh nếu Ngân hàng Nhà nước có chính sách can thiệp hoặc cung cầu nội địa thay đổi."
+    ],
+    "evidence": [
+      {
+        "key": "SJC Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium",
+        "value": 14.78,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 152113130,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 SJC",
+        "value": 155299706,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "World Gold Price",
+        "value": 5065.92,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Real Yield 10Y",
+        "value": 1.87,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Treasury 10Y",
+        "value": 4.22,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Change 30d",
+        "value": 9.88,
+        "unit": "%",
+        "source": "market_snapshot"
+      }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T14:39:09.571Z",
+    "latestTimestamp": "2026-02-11T15:19:54.333Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157588136.50792357,
-    "premiumPct": 14.86,
-    "change7dPct": 2.47,
-    "change30dPct": 9.81,
+    "intlVndPerTael": 157694664.228421,
+    "premiumPct": 14.78,
+    "change7dPct": 2.54,
+    "change30dPct": 9.88,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 155284488,
-    "ma30VndPerTael": 152109579,
+    "ma7VndPerTael": 155299706,
+    "ma30VndPerTael": 152113130,
     "percentile5y": 100,
     "drawdowns": {
       "total": 3,
@@ -38,5 +88,132 @@
       "worstPct": 41.26,
       "avgRecoveryDays": 1369
     }
+  },
+  "macroContext": {
+    "fetchedAt": "2026-02-11T15:20:16.790Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Breakeven Inflation 10Y",
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y",
+      "VIX Volatility Index"
+    ],
+    "factors": [
+      {
+        "id": "gold_spot_xauusd",
+        "name": "Gold Spot XAUUSD",
+        "value": 5065.92,
+        "unit": "USD/oz",
+        "date": "2026-02-11",
+        "change1dPct": 0.8,
+        "change5dPct": 2.03,
+        "change20dPct": 9.47,
+        "relationToGold": "context"
+      },
+      {
+        "id": "usd_index_trade_weighted",
+        "name": "US Dollar Trade Weighted Index",
+        "value": 118.2407,
+        "unit": "index",
+        "date": "2026-02-06",
+        "change1dPct": -0.22,
+        "change5dPct": 0.29,
+        "change20dPct": -1.54,
+        "relationToGold": "inverse"
+      },
+      {
+        "id": "us_real_yield_10y",
+        "name": "US Real Yield 10Y",
+        "value": 1.87,
+        "unit": "%",
+        "date": "2026-02-09",
+        "change1dPct": -0.53,
+        "change5dPct": -3.61,
+        "change20dPct": -1.58,
+        "relationToGold": "inverse"
+      },
+      {
+        "id": "us_breakeven_10y",
+        "name": "US Breakeven Inflation 10Y",
+        "value": null,
+        "unit": "%",
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
+        "relationToGold": "direct"
+      },
+      {
+        "id": "us_fed_funds_effective",
+        "name": "US Effective Fed Funds Rate",
+        "value": null,
+        "unit": "%",
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
+        "relationToGold": "inverse"
+      },
+      {
+        "id": "us_treasury_10y",
+        "name": "US Treasury Yield 10Y",
+        "value": 4.22,
+        "unit": "%",
+        "date": "2026-02-09",
+        "change1dPct": 0,
+        "change5dPct": -1.63,
+        "change20dPct": 0.96,
+        "relationToGold": "inverse"
+      },
+      {
+        "id": "us_treasury_2y",
+        "name": "US Treasury Yield 2Y",
+        "value": null,
+        "unit": "%",
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
+        "relationToGold": "inverse"
+      },
+      {
+        "id": "vix",
+        "name": "VIX Volatility Index",
+        "value": null,
+        "unit": "index",
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
+        "relationToGold": "direct"
+      }
+    ],
+    "policyHeadlines": [
+      "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026",
+      "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions",
+      "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026",
+      "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media",
+      "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report",
+      "2026-02-09 | ECB Press / Speeches | Statement from Christine Lagarde, President of the European Central Bank"
+    ],
+    "geopoliticalHeadlines": [
+      "2026-02-11 | actionforex.com | Blowout Payrolls Challenge Dovish Narrative , Dollar Rebounds With Uneven Momentum",
+      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-11 | qcostarica.com | Two Years of the Dollar Freeze : Who Wins and Loses in Nicaragua ?",
+      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
+      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
+      "2026-02-11 | ghanamma.com | Kenya to Diversify Reserve Holdings",
+      "2026-02-11 | cnbc.com | Dollar under pressure ; yen and Aussie resurgent",
+      "2026-02-11 | newsghana.com.gh | Gold Holds Above US$5 , 060 as Markets Weigh Economic Data"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
+      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
+      "2026-02-11 | newsghana.com.gh | Gold Holds Above US$5 , 060 as Markets Weigh Economic Data",
+      "2026-02-11 | domain-b.com | Silver jumps nearly Rs 7 , 000 / kg ; gold rises Rs 1 , 600 as weak US retail data boosts rate - cut bets",
+      "2026-02-11 | rttnews.com | Gold Prices Surge On Fed Rate Cut Expectations"
+    ]
   }
 }
