@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-11T15:20:16.862Z",
+  "checkedAt": "2026-02-11T15:22:20.360Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-11T15:20:16.790Z",
+  "dataFetchedAt": "2026-02-11T15:22:20.281Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,44 +9,18 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 4,
-    "missingFactors": [
-      "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y",
-      "VIX Volatility Index"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 4,
     "countryActionCount": 15,
     "dollarYieldCount": 11,
-    "sourceFailures": [
-      {
-        "id": "us_breakeven_10y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_fed_funds_effective",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_treasury_2y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "vix",
-        "error": "The operation timed out."
-      }
-    ],
-    "healthy": false
+    "sourceFailures": [],
+    "healthy": true
   },
-  "hardFailures": [
-    "Missing required factors: US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 2Y, VIX Volatility Index"
-  ],
-  "warnings": [
-    "Source failures: us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.)"
-  ],
-  "canProceedToIntegration": false
+  "hardFailures": [],
+  "warnings": [],
+  "canProceedToIntegration": true
 }
