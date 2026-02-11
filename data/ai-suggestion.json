@@ -1,31 +1,35 @@
 {
-  "generatedAt": "2026-02-11T14:30:53.234Z",
+  "generatedAt": "2026-02-11T14:39:21.599Z",
   "provider": "z.ai",
-  "model": "unknown",
-  "source": "heuristic",
+  "model": "GLM-4.7",
+  "source": "ai",
   "suggestion": {
     "status": "CHỜ",
     "confidence": "Cao",
-    "horizon": "Ngắn hạn",
-    "thesis": "Giá đang ở vùng cao lịch sử và premium nội địa cao, ưu tiên chờ nhịp điều chỉnh.",
+    "horizon": "chuỗi ngắn",
+    "thesis": "Giá đang ở đỉnh lịch sử (percentile 100%) với động lượng tăng quá nóng trong 30 ngày (+9.81%), rủi ro điều chỉnh kỹ thuật cao hơn cơ hội tăng tiếp.",
     "reasons": [
-      "Phân vị 5 năm: 100%",
-      "Premium hiện tại: 14.6%"
+      "Đỉnh lịch sử 5 năm: Giá SJC ở mức cao nhất tuyệt đối, không còn vùng kháng cự kỹ thuật.",
+      "Động lượng quá mua: Tăng gần 10% trong 30 ngày với biến động cao (2.19%/ngày).",
+      "Phân kỳ tiêu cực: Giá thế giới ngày 11/2 thấp hơn đỉnh 28/1 nhưng giá SJC vẫn neo cao.",
+      "Premium giãn: Chênh lệch tăng từ 13.2% lên 14.9%, áp lực mua nội địa cản trở điều chỉnh."
     ],
     "risks": [
-      "Nếu xu hướng tăng kéo dài, có thể bỏ lỡ cơ hội mua ở giá thấp hơn."
+      "Điều chỉnh ngắn hạn: Khả năng hồi về vùng hỗ trợ 173-175 triệu/lượng.",
+      "Thanh khoản thấp ở đỉnh: Khó thoát hàng nhanh nếu thị trường đảo chiều.",
+      "Biến động giá thế giới: Giá vàng thế giới dao động mạnh quanh đỉnh 5000+ USD/oz."
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T14:07:22.501Z",
+    "latestTimestamp": "2026-02-11T14:39:09.571Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157946710.8056621,
-    "premiumPct": 14.6,
-    "change7dPct": 2.74,
-    "change30dPct": 11.09,
+    "intlVndPerTael": 157588136.50792357,
+    "premiumPct": 14.86,
+    "change7dPct": 2.47,
+    "change30dPct": 9.81,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 153035856,
-    "ma30VndPerTael": 151024412,
+    "ma7VndPerTael": 155284488,
+    "ma30VndPerTael": 152109579,
     "percentile5y": 100,
     "drawdowns": {
       "total": 3,
@@ -34,6 +38,5 @@
       "worstPct": 41.26,
       "avgRecoveryDays": 1369
     }
-  },
-  "error": "Missing ZAI_API_KEY_1/ZAI_API_KEY_2/ZAI_API_KEY/ANTHROPIC_AUTH_TOKEN"
+  }
 }
