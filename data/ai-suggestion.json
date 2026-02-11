@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T20:11:21.305Z",
+  "generatedAt": "2026-02-11T21:13:42.586Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Thị trường vàng đang trong giai đoạn tăng giá mạnh nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn rất cao do giá đã vượt xa trung bình động và premium đang ở mức cao. Nhà đầu tư cá nhân nên chờ đợi nhịp điều chỉnh về vùng hỗ trợ gần (MA7 hoặc MA30) hoặc khi premium co hẹp lại trước khi quyết định mua đuổi.",
+    "thesis": "Thị trường vàng đang trong giai đoạn tăng giá mạnh nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn là rất cao khi giá SJC đã vượt xa trung bình động (MA7 cao hơn MA30 khoảng 22%) và chạm vùng phân phối 181 triệu/lượng. Mặc dù các yếu tố vĩ mô như lợi suất thực giảm và USD yếu vẫn hỗ trợ vàng, nhưng mức giá hiện tại đã chiết khấu kỳ vọng tăng trưởng trong tương lai gần, do đó nhà đầu tư cá nhân nên chờ đợi nhịp điều chỉnh về vùng hỗ trợ 170-175 triệu/lượng để gia tăng vị thế an toàn hơn.",
     "reasons": [
-      "Giá vàng SJC (181 triệu/lượng) đang vượt xa MA7 (156.5 triệu/lượng) và MA30 (152.6 triệu/lượng), tạo khoảng cách quá lớn (gap) báo hiệu động lượng quá mua (overbought) và cần tích lũy.",
-      "Chênh lệch giá trong nước (Premium) ở mức 14.36%, cao hơn nhiều so với trung bình tháng 1 (dao động 11-13%), cho thấy rủi ro giá nội địa đang điều chỉnh mạnh về mặt giá trị tương đối so với thế giới.",
-      "Giá vàng thế giới (XAUUSD) đang kiểm định vùng kháng cự tâm lý 5,100 USD/oz, trong khi chỉ số VIX tăng 11.33% trong 20 ngày qua cho thấy sự bất ổn của thị trường tài chính có thể gây ra biến động giá vàng mạnh.",
-      "Lợi suất thực của Mỹ (US Real Yield 10Y) giảm 3.61% trong 5 ngày qua là động lực chính đẩy giá vàng thế giới lên, nhưng tác động này đã được phản ánh mạnh vào giá hiện tại."
+      "Động lượng tăng giá quá nóng: Giá SJC hiện tại (181 triệu) cao hơn 22% so với MA7 (156.5 triệu) và 18.5% so với MA30 (152.6 triệu), tạo khoảng cách lớn cần lấp đầy (mean reversion).",
+      "Premium đang ở mức cao: Chênh lệch giá nội địa và thế giới ở mức 14.33%, cao hơn nhiều so với mức trung bình của tháng 1 (khoảng 12-13%), cho thấy rủi ro chốt lời ngắn hạn.",
+      "Vĩ mô vẫn hỗ trợ trung hạn: Lợi suất thực Mỹ (US Real Yield 10Y) giảm 3.61% trong 5 ngày qua xuống 1.87%, tạo môi trường thuận lợi cho vàng nhưng giá đã phản ánh trước.",
+      "Sức mạnh đồng USD giảm: Chỉ số USD Index giảm 1.54% trong 20 ngày qua, hỗ trợ giá vàng thế giới neo ở mức cao (5086 USD/oz)."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn rất cao khi giá SJC tăng 10.61% trong 30 ngày qua và đạt mức percentile 100 trong 5 năm qua.",
-      "Sự gián đoạn thanh khoản hoặc can thiệp bình ổn thị trường có thể làm premium co hẹp nhanh chóng, khiến giá vàng trong nước giảm mạnh hơn giá thế giới.",
-      "Dữ liệu tin tức vĩ mô (ECB, BoE) ít tác động trực tiếp đến giá vàng USD hiện tại, khiến confidence ở mức trung bình."
+      "Rủi ro chốt lời kỹ thuật: Khi giá SJC tăng quá nhanh so với đường trung bình (gap >20%), khả năng quay đầu kiểm tra vùng hỗ trợ dưới 175 triệu là rất lớn.",
+      "Biến động địa chính trị: Các tiêu đề về 'Escalating War in Middle East' có thể đẩy giá lên vọt ngay lập tức, khiến việc chờ đợi điều chỉnh bị bỏ lỡ (FOMO).",
+      "Dữ liệu vĩ mô nhiễu: Các phát ngôn từ ECB và BoE trong tuần này có thể làm biến động tỷ giá USD/VND, ảnh hưởng đến tỷ giá quy đổi vàng SJC."
     ],
     "evidence": [
       {
-        "key": "sjc_vnd_per_tael",
+        "key": "sjcVndPerTael",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd_per_tael",
-        "value": 156487984,
+        "key": "ma7VndPerTael",
+        "value": 156493723,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_pct",
-        "value": 14.36,
+        "key": "premiumPct",
+        "value": 14.33,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "world_usd_per_ounce",
-        "value": 5085.47,
+        "key": "us_real_yield_10y",
+        "value": 1.87,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "usd_index_trade_weighted",
+        "value": 118.2407,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "worldUsdPerOunce",
+        "value": 5086.76,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": -3.61,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 11.33,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "change_30d_pct",
-        "value": 10.61,
+        "key": "volatilityDailyPct",
+        "value": 2.15,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T20:11:06.693Z",
+    "latestTimestamp": "2026-02-11T21:13:26.777Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158268471.8638983,
-    "premiumPct": 14.36,
-    "change7dPct": 5.25,
-    "change30dPct": 10.61,
+    "intlVndPerTael": 158308640.33415163,
+    "premiumPct": 14.33,
+    "change7dPct": 5.28,
+    "change30dPct": 10.64,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 156487984,
-    "ma30VndPerTael": 152633188,
+    "ma7VndPerTael": 156493723,
+    "ma30VndPerTael": 152634527,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-11T20:11:14.277Z",
+    "fetchedAt": "2026-02-11T21:13:31.619Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5086.03,
+        "value": 5087.56,
         "unit": "USD/oz",
         "date": "2026-02-11",
-        "change1dPct": 1.2,
-        "change5dPct": 2.44,
-        "change20dPct": 9.91,
+        "change1dPct": 1.24,
+        "change5dPct": 2.47,
+        "change20dPct": 9.94,
         "relationToGold": "context"
       },
       {
@@ -186,15 +186,15 @@
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-11 | abc.net.au | Transparency concerns as Bougainville mine that sparked civil war on path to reopen"
+      "2026-02-11 | tennesseedaily.com | Gemdale Gold Announces Commencement of Trading on the TSX Venture Exchange"
     ],
     "countryActionHeadlines": [
+      "2026-02-11 | finanzen.ch | Crude Oil Advances Amid Escalating War - Threat In Middle East",
+      "2026-02-11 | abc30.com | Norwegian biathlete Sturla Holm Laegreid regrets tearful TV confession overshadowing teammate Olympic gold medal",
       "2026-02-11 | bullionvault.com | Bubble - Like  Gold and Silver Sink on US Jobs Surprise as  Distrusted  Dollar Bounces",
       "2026-02-11 | bravenewcoin.com | Gold ( XAU / USD ) Price Prediction : Gold Tests $5 , 100 Triangle Resistance as SPDR Signals Strong Bullish Momentum Near Highs",
       "2026-02-11 | investorschronicle.co.uk | What the new Federal Reserve chair means for markets",
-      "2026-02-11 | saratogian.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
-      "2026-02-11 | businessghana.com | Bank of Ghana rolls out structured auction system for dollar interventions",
-      "2026-02-11 | sentinelandenterprise.com | Biathlete regrets tearful TV confession overshadowing teammate gold"
+      "2026-02-11 | saratogian.com | Biathlete regrets tearful TV confession overshadowing teammate gold"
     ],
     "dollarYieldHeadlines": [
       "2026-02-11 | bullionvault.com | Bubble - Like  Gold and Silver Sink on US Jobs Surprise as  Distrusted  Dollar Bounces",
