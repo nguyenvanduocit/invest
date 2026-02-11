@@ -318,6 +318,9 @@ const recommendationColorClass = recommendationClass(displayedRecommendation.act
 const recommendationSourceLabel = aiSuggestion
   ? `AI (${aiSuggestion.model})`
   : 'Rule-based'
+const heroRecommendationText = aiSuggestion
+  ? `${recommendationSourceLabel} đang hoạt động · Xem luận điểm chi tiết ở mục AI SUGGEST bên dưới.`
+  : `${recommendationSourceLabel} → ${displayedRecommendation.reason}`
 
 // Sort markets by VND price
 const sortedMarkets = [...latest.normalized].sort((a, b) => a.vndPerGram - b.vndPerGram)
@@ -1256,7 +1259,7 @@ const html = `<!DOCTYPE html>
           <p>Thay đổi ${insights.totalChange > 0 ? '+' : ''}${insights.totalChange.toFixed(1)}% trong ${historyData.data.length} ngày qua</p>
           <p>Premium Việt Nam: ${insights.premium.toFixed(1)}% ${insights.premiumStatus === 'high' ? '(Cao hơn bình thường)' : insights.premiumStatus === 'low' ? '(Thấp hơn bình thường)' : '(Bình thường)'}</p>
           <div class="recommendation-badge ${recommendationColorClass}">
-            ${escapeHtml(recommendationSourceLabel)} → ${escapeHtml(displayedRecommendation.reason)}
+            ${escapeHtml(heroRecommendationText)}
           </div>
         </div>
         <div class="hero-action">
