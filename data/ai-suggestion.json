@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T16:03:08.573Z",
+  "generatedAt": "2026-02-11T16:23:58.715Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở mức cao kỷ lục (percentile 100) với động lượng tăng mạnh (MA7 > MA30) và chênh lệch premium cao (14.94%). Tuy nhiên, rủi ro điều chỉnh kỹ thuật đang gia tăng khi giá thế giới (XAUUSD) chạm vùng cản 5060 USD/oz và các chỉ báo vĩ mô (Lợi suất thực, USD Index) đang có dấu hiệu ổn định hoặc hồi phục nhẹ sau khi giảm mạnh. Nhà đầu tư nên chờ nhịp điều chỉnh hoặc breakout quyết định để tránh mua đỉnh ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở mức cao kỷ lục (percentile 100) với động lượng tăng mạnh (MA7 > MA30) và premium ổn định ở mức cao. Tuy nhiên, rủi ro điều chỉnh kỹ thuật đang gia tăng khi giá thế giới chạm đỉnh 5058 USD/oz và các chỉ báo vĩ mô (Lợi suất thực, USD Index) đang cho thấy dấu hiệu ổn định hoặc giảm nhẹ, hỗ trợ giá nhưng không đủ để bứt phá mạnh mẽ hơn nữa trong ngắn hạn.",
     "reasons": [
-      "Xu hướng tăng mạnh: Giá SJC (181 triệu/lượng) đang nằm trên MA7 (155.3 triệu/lượng) và MA30 (152.1 triệu/lượng), cho thấy xu hướng tăng ngắn hạn rất mạnh.",
-      "Momentum dương: Giá tăng 9.73% trong 30 ngày qua và 2.4% trong 7 ngày qua, cho phép lực mua vẫn đang chủ động.",
-      "Premium cao nhưng không cực đoan: Chênh lệch 14.94% cao hơn trung bình 30 ngày (khoảng 13-14%) nhưng thấp hơn đỉnh 18.9% ngày 05/02, cho thấy thị trường nội địa đang nóng nhưng chưa hoàn toàn mất kiểm soát.",
-      "Ngưỡng cản thế giới: Giá thế giới đang tiếp cận vùng 5060 USD/oz (ngưỡng tâm lý gần 5100), có thể gây áp lực chốt lời ngắn hạn."
+      "Xu hướng tăng mạnh: MA7 (155.2 triệu VND/lượng) vượt MA30 (152.1 triệu VND/lượng), giá tăng 9.6% trong 30 ngày qua.",
+      "Premium cao nhưng ổn định: Chênh lệch 15.08% được duy trì trong tuần qua, cho thấy cầu nội địa vẫn tốt nhưng không sốt nhiệt.",
+      "Vĩ mô hỗ trợ: Lợi suất thực Mỹ (US Real Yield 10Y) giảm 3.61% trong 5 ngày qua, hỗ trợ giá vàng thế giới neo ở mức cao.",
+      "Rủi ro kỹ thuật: VIX tăng 11.33% trong 20 ngày qua cho thấy thị trường tài chính đang bất ổn, có thể kích hoạt chốt lời ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật từ vùng quá mua (percentile 5 năm = 100%) và độ biến động ngày cao (2.19%).",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) ở mức 1.87% và có dấu hiệu giảm chậm lại (change5dPct -3.61%), nếu lợi suất này hồi phục sẽ gây áp lực lên giá vàng thế giới.",
-      "Dữ liệu sự kiện vĩ mô (Policy/Geopolitics) trong input chủ yếu là tin cũ hoặc không đủ tính cấp thiết mới (low signal noise), làm giảm độ tin cậy của dự báo sự kiện đột biến."
+      "Giá vàng thế giới đang ở vùng quá mua (5058 USD/oz), nếu lợi suất Mỹ hồi phục nhẹ sẽ gây áp lực điều chỉnh.",
+      "Premium cao (15%) khiến biên độ an toàn thấp, bất kỳ sự đảo chiều nào của giá thế giới cũng sẽ làm giảm giá SJC nhanh chóng."
     ],
     "evidence": [
       {
@@ -28,27 +27,21 @@
       },
       {
         "key": "premiumPct",
-        "value": 14.94,
+        "value": 15.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "ma7VndPerTael",
-        "value": 155268267,
+        "value": 155241507,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
         "key": "ma30VndPerTael",
-        "value": 152105795,
+        "value": 152099551,
         "unit": "VND/lượng",
         "source": "market_snapshot"
-      },
-      {
-        "key": "worldUsdPerOunce",
-        "value": 5059.96,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       },
       {
         "key": "us_real_yield_10y",
@@ -61,19 +54,25 @@
         "value": 118.2407,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "vix",
+        "value": 17.79,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T16:02:40.628Z",
+    "latestTimestamp": "2026-02-11T16:23:40.894Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157474591.46593705,
-    "premiumPct": 14.94,
-    "change7dPct": 2.4,
-    "change30dPct": 9.73,
+    "intlVndPerTael": 157287273.67294398,
+    "premiumPct": 15.08,
+    "change7dPct": 2.28,
+    "change30dPct": 9.6,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 155268267,
-    "ma30VndPerTael": 152105795,
+    "ma7VndPerTael": 155241507,
+    "ma30VndPerTael": 152099551,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-11T16:02:59.665Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-11T16:23:52.976Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5061.13,
+        "value": 5058.41,
         "unit": "USD/oz",
         "date": "2026-02-11",
-        "change1dPct": 0.71,
-        "change5dPct": 1.94,
-        "change20dPct": 9.37,
+        "change1dPct": 0.66,
+        "change5dPct": 1.88,
+        "change20dPct": 9.31,
         "relationToGold": "context"
       },
       {
@@ -186,17 +185,23 @@
       "2026-02-09 | ECB Press / Speeches | Statement from Christine Lagarde, President of the European Central Bank"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-11 | actionforex.com | Blowout Payrolls Challenge Dovish Narrative , Dollar Rebounds With Uneven Momentum",
-      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist"
+      "2026-02-11 | moultrieobserver.com | Watson describes Week Four under the Gold Dome"
     ],
     "countryActionHeadlines": [
+      "2026-02-11 | finance.yahoo.com | US job strength signals Fed may hold off on additional rate cuts",
       "2026-02-11 | fortmorgantimes.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
       "2026-02-11 | qcostarica.com | Two Years of the Dollar Freeze : Who Wins and Loses in Nicaragua ?",
       "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
       "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
-      "2026-02-11 | ghanamma.com | Kenya to Diversify Reserve Holdings",
-      "2026-02-11 | cnbc.com | Dollar under pressure ; yen and Aussie resurgent"
+      "2026-02-11 | ghanamma.com | Kenya to Diversify Reserve Holdings"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-11 | markets.financialcontent.com | FinancialContent - Deep Dive : Why Hilton ( HLT ) is the  Gold Standard  of Global Lodging Following 2025 Record Earnings",
+      "2026-02-11 | moneycontrol.com | Why Kerala may continue to see higher inflation even under the new CPI series",
+      "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
+      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
+      "2026-02-11 | newsghana.com.gh | Gold Holds Above US$5 , 060 as Markets Weigh Economic Data",
+      "2026-02-11 | domain-b.com | Silver jumps nearly Rs 7 , 000 / kg ; gold rises Rs 1 , 600 as weak US retail data boosts rate - cut bets"
+    ]
   }
 }
