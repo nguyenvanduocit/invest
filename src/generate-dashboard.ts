@@ -462,17 +462,6 @@ function generateAiSuggestionSection(): string {
   const risks = (aiSuggestion.suggestion.risks || [])
     .map(risk => `<li>${escapeHtml(risk)}</li>`)
     .join('')
-  const evidence = (aiSuggestion.suggestion.evidence || [])
-    .slice(0, 8)
-    .map(item => `
-      <tr>
-        <td data-label="Key">${escapeHtml(item.key)}</td>
-        <td data-label="Value">${fmt(item.value, 4)}</td>
-        <td data-label="Unit">${escapeHtml(item.unit)}</td>
-        <td data-label="Source">${escapeHtml(item.source)}</td>
-      </tr>
-    `)
-    .join('')
   const generatedAt = new Date(aiSuggestion.generatedAt).toLocaleString('vi-VN')
 
   return `
@@ -499,24 +488,6 @@ function generateAiSuggestionSection(): string {
             <ul class="ai-suggestion-list">${risks || '<li>Biến động thị trường và tỷ giá.</li>'}</ul>
           </div>
         </div>
-        <details class="ai-evidence-details">
-          <summary class="ai-evidence-summary">Evidence (số liệu bắt buộc)</summary>
-          <div class="ai-evidence-table-wrap">
-            <table class="comparison-table" style="margin: 0;">
-              <thead>
-                <tr>
-                  <th>Key</th>
-                  <th>Value</th>
-                  <th>Unit</th>
-                  <th>Source</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${evidence || '<tr><td colspan="4">Không có evidence.</td></tr>'}
-              </tbody>
-            </table>
-          </div>
-        </details>
       </div>
     </section>
   `
@@ -839,47 +810,6 @@ const html = `<!DOCTYPE html>
       gap: 6px;
       font-size: 14px;
       line-height: 1.4;
-    }
-
-    .ai-evidence-details {
-      margin: 0 16px 16px;
-      border: var(--border);
-      background: #fffaf0;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .ai-evidence-summary {
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 16px;
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0;
-    }
-
-    .ai-evidence-summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .ai-evidence-summary::after {
-      content: '+';
-      font-size: 18px;
-      line-height: 1;
-    }
-
-    .ai-evidence-details[open] .ai-evidence-summary::after {
-      content: '-';
-    }
-
-    .ai-evidence-table-wrap {
-      padding: 0 12px 12px;
     }
 
     @media (max-width: 960px) {
