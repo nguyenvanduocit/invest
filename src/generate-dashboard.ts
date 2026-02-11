@@ -6,6 +6,7 @@ const longHistoryFile = Bun.file('data/history-5y.json')
 const vietnamHistoryFile = Bun.file('data/vietnam-history.json')
 const drawdownsFile = Bun.file('data/drawdowns.json')
 const aiSuggestionFile = Bun.file('data/ai-suggestion.json')
+const firstPrinciplesFile = Bun.file('data/first-principles.json')
 
 if (!await latestFile.exists() || !await historyFile.exists()) {
   console.error('Missing data files. Run:')
@@ -18,6 +19,7 @@ const hasLongHistory = await longHistoryFile.exists()
 const hasVietnamHistory = await vietnamHistoryFile.exists()
 const hasDrawdowns = await drawdownsFile.exists()
 const hasAiSuggestion = await aiSuggestionFile.exists()
+const hasFirstPrinciples = await firstPrinciplesFile.exists()
 
 interface NormalizedPrice {
   source: string
@@ -128,6 +130,58 @@ interface AiSuggestionData {
     thesis: string
     reasons: string[]
     risks: string[]
+    evidence?: Array<{
+      key: string
+      value: number
+      unit: string
+      source: string
+    }>
+  }
+}
+
+interface FirstPrinciplesData {
+  fetchedAt: string
+  factors: Array<{
+    id: string
+    name: string
+    unit: string
+    latest: {
+      date: string
+      value: number
+    } | null
+    change1dPct: number | null
+    change5dPct: number | null
+    change20dPct: number | null
+  }>
+  policyStatements: Array<{
+    title: string
+    source: string
+    url: string
+    publishedAt: string
+  }>
+  geopoliticalEvents: Array<{
+    title: string
+    source: string
+    url: string
+    publishedAt: string
+  }>
+  countryActions: Array<{
+    title: string
+    source: string
+    url: string
+    publishedAt: string
+  }>
+  dollarAndYieldDrivers: Array<{
+    title: string
+    source: string
+    url: string
+    publishedAt: string
+  }>
+  coverage: {
+    healthy: boolean
+    availableFactors: number
+    requiredFactors: number
+    sourceFailures: Array<{ id: string; error: string }>
   }
 }
 
@@ -137,6 +191,7 @@ const longHistory: LongHistoryData | null = hasLongHistory ? await longHistoryFi
 const vietnamHistory: VietnamHistoryData | null = hasVietnamHistory ? await vietnamHistoryFile.json() : null
 const drawdownsData: DrawdownData | null = hasDrawdowns ? await drawdownsFile.json() : null
 const aiSuggestion: AiSuggestionData | null = hasAiSuggestion ? await aiSuggestionFile.json() : null
+const firstPrinciples: FirstPrinciplesData | null = hasFirstPrinciples ? await firstPrinciplesFile.json() : null
 
 function escapeHtml(text: string): string {
   return text
@@ -407,6 +462,17 @@ function generateAiSuggestionSection(): string {
   const risks = (aiSuggestion.suggestion.risks || [])
     .map(risk => `<li>${escapeHtml(risk)}</li>`)
     .join('')
+  const evidence = (aiSuggestion.suggestion.evidence || [])
+    .slice(0, 8)
+    .map(item => `
+      <tr>
+        <td data-label="Key">${escapeHtml(item.key)}</td>
+        <td data-label="Value">${fmt(item.value, 4)}</td>
+        <td data-label="Unit">${escapeHtml(item.unit)}</td>
+        <td data-label="Source">${escapeHtml(item.source)}</td>
+      </tr>
+    `)
+    .join('')
   const generatedAt = new Date(aiSuggestion.generatedAt).toLocaleString('vi-VN')
 
   return `
@@ -433,7 +499,107 @@ function generateAiSuggestionSection(): string {
             <ul class="ai-suggestion-list">${risks || '<li>Biến động thị trường và tỷ giá.</li>'}</ul>
           </div>
         </div>
+        <div style="padding: 0 16px 16px 16px;">
+          <div class="ai-suggestion-list-title" style="margin-bottom: 10px;">Evidence (số liệu bắt buộc)</div>
+          <table class="comparison-table" style="margin: 0;">
+            <thead>
+              <tr>
+                <th>Key</th>
+                <th>Value</th>
+                <th>Unit</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${evidence || '<tr><td colspan="4">Không có evidence.</td></tr>'}
+            </tbody>
+          </table>
+        </div>
       </div>
+    </section>
+  `
+}
+
+function formatPct(value: number | null): string {
+  if (value === null || Number.isNaN(value)) return 'n/a'
+  return `${value >= 0 ? '+' : ''}${value.toFixed(2)}%`
+}
+
+function renderHeadlineList(
+  title: string,
+  items: Array<{ title: string; source: string; url: string; publishedAt: string }>
+): string {
+  const rows = items.slice(0, 4).map(item => {
+    const date = item.publishedAt.slice(0, 10)
+    return `
+      <li style=\"margin-bottom: 8px;\">
+        <a href=\"${escapeHtml(item.url)}\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: var(--black); text-decoration: underline; font-weight: 600;\">
+          ${escapeHtml(item.title)}
+        </a>
+        <div style=\"font-size: 12px; color: var(--gray); margin-top: 2px;\">${date} • ${escapeHtml(item.source)}</div>
+      </li>
+    `
+  }).join('')
+
+  return `
+    <div class=\"ai-suggestion-panel\" style=\"padding: 14px;\">
+      <div class=\"ai-suggestion-list-title\" style=\"margin-bottom: 10px;\">${title}</div>
+      <ul class=\"ai-suggestion-list\" style=\"margin-left: 18px;\">
+        ${rows || '<li>Không có dữ liệu.</li>'}
+      </ul>
+    </div>
+  `
+}
+
+function generateFirstPrinciplesSection(): string {
+  if (!firstPrinciples) return ''
+
+  const factorRows = firstPrinciples.factors.slice(0, 8).map(factor => `
+    <tr>
+      <td data-label=\"Factor\">${escapeHtml(factor.name)}</td>
+      <td data-label=\"Latest\">
+        ${factor.latest
+          ? `${fmt(factor.latest.value, 3)} ${escapeHtml(factor.unit)}<br><span style=\"font-size: 11px; color: var(--gray);\">${factor.latest.date}</span>`
+          : '<span style=\"color: var(--red);\">N/A</span>'}
+      </td>
+      <td data-label=\"1D\">${formatPct(factor.change1dPct)}</td>
+      <td data-label=\"5D\">${formatPct(factor.change5dPct)}</td>
+      <td data-label=\"20D\">${formatPct(factor.change20dPct)}</td>
+    </tr>
+  `).join('')
+
+  return `
+    <section class=\"comparison-section\" style=\"margin-bottom: 24px;\">
+      <details class=\"first-principles-details\">
+        <summary class=\"comparison-header\">
+          <span><i data-lucide=\"globe\"></i> FIRST PRINCIPLES (Macro + Policy + Geopolitics)</span>
+        </summary>
+        <div style=\"padding: 14px 20px; border-bottom: 1px solid rgba(0,0,0,0.08); font-size: 13px; font-family: 'Space Mono', monospace; background: #fffaf0;\">
+          Coverage: ${firstPrinciples.coverage.availableFactors}/${firstPrinciples.coverage.requiredFactors} factors |
+          Health: <strong>${firstPrinciples.coverage.healthy ? 'OK' : 'CHECK'}</strong> |
+          Updated: ${new Date(firstPrinciples.fetchedAt).toLocaleString('vi-VN')}
+        </div>
+        <table class=\"comparison-table\">
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Latest</th>
+              <th>1D</th>
+              <th>5D</th>
+              <th>20D</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${factorRows}
+          </tbody>
+        </table>
+        <div class=\"ai-suggestion-bottom\" style=\"padding: 16px;\">
+          ${renderHeadlineList('Policy Statements', firstPrinciples.policyStatements)}
+          ${renderHeadlineList('Geopolitical Events', firstPrinciples.geopoliticalEvents)}
+          ${renderHeadlineList('Country Actions', firstPrinciples.countryActions)}
+          ${renderHeadlineList('Dollar & Yield Drivers', firstPrinciples.dollarAndYieldDrivers)}
+        </div>
+      </details>
     </section>
   `
 }
@@ -979,6 +1145,29 @@ const html = `<!DOCTYPE html>
       letter-spacing: 2px;
     }
 
+    .first-principles-details > summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .first-principles-details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .first-principles-details > summary::after {
+      content: '+';
+      font-family: 'Space Mono', monospace;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .first-principles-details[open] > summary::after {
+      content: '-';
+    }
+
     .comparison-table {
       width: 100%;
       border-collapse: collapse;
@@ -1257,6 +1446,7 @@ const html = `<!DOCTYPE html>
     </section>
 
     ${generateAiSuggestionSection()}
+    ${generateFirstPrinciplesSection()}
 
     <!-- Stats Grid -->
     <section class="stats-grid">

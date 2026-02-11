@@ -26,13 +26,23 @@ async function main() {
   await $`bun run src/analyze-drawdowns.ts`.quiet()
   console.log('   Done')
 
-  // 5. Generate AI suggestion (Z.AI)
-  console.log('\n5. Generating AI suggestion...')
+  // 5. Fetch macro/event first-principles context for AI
+  console.log('\n5. Fetching first-principles context...')
+  await $`bun run src/fetch-first-principles.ts`.quiet()
+  console.log('   Done')
+
+  // 6. Verify first-principles coverage (report-only in scheduled build)
+  console.log('\n6. Verifying first-principles coverage...')
+  await $`bun run src/verify-first-principles.ts`.quiet()
+  console.log('   Done')
+
+  // 7. Generate AI suggestion (Z.AI)
+  console.log('\n7. Generating AI suggestion...')
   await $`bun run src/generate-ai-suggestion.ts`.quiet()
   console.log('   Done')
 
-  // 6. Generate dashboard
-  console.log('\n6. Generating dashboard...')
+  // 8. Generate dashboard
+  console.log('\n8. Generating dashboard...')
   await $`bun run src/generate-dashboard.ts`.quiet()
   console.log('   Done')
 
