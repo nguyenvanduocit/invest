@@ -31,6 +31,10 @@ jobs:
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           VNAPPMOB_API_KEY: ${{ secrets.VNAPPMOB_API_KEY }}
+          ZAI_API_KEY_1: ${{ secrets.ZAI_API_KEY_1 }}
+          ZAI_API_KEY_2: ${{ secrets.ZAI_API_KEY_2 }}
+          ZAI_BASE_URL: ${{ secrets.ZAI_BASE_URL }}
+          ZAI_MODEL: ${{ secrets.ZAI_MODEL }}
 
       - name: Commit data
         run: |

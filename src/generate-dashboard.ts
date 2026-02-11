@@ -5,6 +5,7 @@ const historyFile = Bun.file('data/history.json')
 const longHistoryFile = Bun.file('data/history-5y.json')
 const vietnamHistoryFile = Bun.file('data/vietnam-history.json')
 const drawdownsFile = Bun.file('data/drawdowns.json')
+const aiSuggestionFile = Bun.file('data/ai-suggestion.json')
 
 if (!await latestFile.exists() || !await historyFile.exists()) {
   console.error('Missing data files. Run:')
@@ -16,6 +17,7 @@ if (!await latestFile.exists() || !await historyFile.exists()) {
 const hasLongHistory = await longHistoryFile.exists()
 const hasVietnamHistory = await vietnamHistoryFile.exists()
 const hasDrawdowns = await drawdownsFile.exists()
+const hasAiSuggestion = await aiSuggestionFile.exists()
 
 interface NormalizedPrice {
   source: string
@@ -114,11 +116,43 @@ interface DrawdownData {
   }[]
 }
 
+interface AiSuggestionData {
+  generatedAt: string
+  provider: string
+  model: string
+  source: 'ai' | 'heuristic'
+  suggestion: {
+    status: string
+    confidence: string
+    horizon: string
+    thesis: string
+    reasons: string[]
+    risks: string[]
+  }
+}
+
 const latest: LatestData = await latestFile.json()
 const historyData: HistoryData = await historyFile.json()
 const longHistory: LongHistoryData | null = hasLongHistory ? await longHistoryFile.json() : null
 const vietnamHistory: VietnamHistoryData | null = hasVietnamHistory ? await vietnamHistoryFile.json() : null
 const drawdownsData: DrawdownData | null = hasDrawdowns ? await drawdownsFile.json() : null
+const aiSuggestion: AiSuggestionData | null = hasAiSuggestion ? await aiSuggestionFile.json() : null
+
+function escapeHtml(text: string): string {
+  return text
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+}
+
+function recommendationClass(action: string): 'buy' | 'sell' | 'wait' {
+  const normalized = action.toLowerCase()
+  if (normalized.includes('mua')) return 'buy'
+  if (normalized.includes('bán')) return 'sell'
+  return 'wait'
+}
 
 // Calculate long-term context (in VND)
 function calculateLongTermContext() {
@@ -273,6 +307,17 @@ function calculateInsights() {
 }
 
 const insights = calculateInsights()
+const displayedRecommendation = aiSuggestion?.suggestion
+  ? {
+      action: aiSuggestion.suggestion.status,
+      reason: aiSuggestion.suggestion.thesis,
+      confidence: aiSuggestion.suggestion.confidence
+    }
+  : insights.recommendation
+const recommendationColorClass = recommendationClass(displayedRecommendation.action)
+const recommendationSourceLabel = aiSuggestion
+  ? `AI (${aiSuggestion.model})`
+  : 'Rule-based'
 
 // Sort markets by VND price
 const sortedMarkets = [...latest.normalized].sort((a, b) => a.vndPerGram - b.vndPerGram)
@@ -340,6 +385,44 @@ function generateDrawdownsSection(): string {
         Drawdown tệ nhất: <span style="color: var(--red);">-${drawdownsData.summary.worstDrawdownPct.toFixed(1)}%</span> |
         Phục hồi lâu nhất: <strong>${longestRecovery}</strong> |
         TB phục hồi: ${avgRecovery}
+      </div>
+    </section>
+  `
+}
+
+function generateAiSuggestionSection(): string {
+  if (!aiSuggestion?.suggestion) return ''
+
+  const statusClass = recommendationClass(aiSuggestion.suggestion.status)
+  const reasons = (aiSuggestion.suggestion.reasons || [])
+    .map(reason => `<li>${escapeHtml(reason)}</li>`)
+    .join('')
+  const risks = (aiSuggestion.suggestion.risks || [])
+    .map(risk => `<li>${escapeHtml(risk)}</li>`)
+    .join('')
+  const generatedAt = new Date(aiSuggestion.generatedAt).toLocaleString('vi-VN')
+
+  return `
+    <section class="comparison-section ai-suggestion-section" style="margin-bottom: 24px;">
+      <div class="comparison-header"><i data-lucide="bot"></i> AI SUGGEST (${escapeHtml(aiSuggestion.model)})</div>
+      <div class="ai-suggestion-grid">
+        <div class="ai-suggestion-main">
+          <div class="ai-suggestion-meta">
+            <span>Nguồn: ${aiSuggestion.source === 'ai' ? 'Z.AI model' : 'Heuristic fallback'}</span>
+            <span>Cập nhật: ${generatedAt}</span>
+          </div>
+          <div class="ai-suggestion-thesis">${escapeHtml(aiSuggestion.suggestion.thesis)}</div>
+          <div class="ai-suggestion-status">
+            <span class="recommendation-badge ${statusClass}">${escapeHtml(aiSuggestion.suggestion.status)}</span>
+            <span class="ai-suggestion-confidence">Độ tin cậy: ${escapeHtml(aiSuggestion.suggestion.confidence)} · ${escapeHtml(aiSuggestion.suggestion.horizon)}</span>
+          </div>
+        </div>
+        <div class="ai-suggestion-side">
+          <div class="ai-suggestion-list-title">Luận điểm chính</div>
+          <ul class="ai-suggestion-list">${reasons || '<li>Không có luận điểm chi tiết.</li>'}</ul>
+          <div class="ai-suggestion-list-title">Rủi ro</div>
+          <ul class="ai-suggestion-list">${risks || '<li>Biến động thị trường và tỷ giá.</li>'}</ul>
+        </div>
       </div>
     </section>
   `
@@ -522,13 +605,87 @@ const html = `<!DOCTYPE html>
       font-family: 'Space Mono', monospace;
       font-size: 48px;
       font-weight: 700;
-      color: ${insights.recommendation.action === 'MUA' ? 'var(--green)' : insights.recommendation.action === 'BÁN/CHỜ' ? 'var(--red)' : 'var(--black)'};
+      color: ${recommendationColorClass === 'buy' ? 'var(--green)' : recommendationColorClass === 'sell' ? 'var(--red)' : 'var(--black)'};
     }
 
     .hero-action-confidence {
       font-size: 11px;
       margin-top: 8px;
       color: var(--gray);
+    }
+
+    .ai-suggestion-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 18px;
+      padding: 20px;
+      background: var(--white);
+    }
+
+    .ai-suggestion-main {
+      border: var(--border);
+      background: #fffbe6;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .ai-suggestion-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 11px;
+      color: var(--gray);
+      font-family: 'Space Mono', monospace;
+      margin-bottom: 8px;
+    }
+
+    .ai-suggestion-thesis {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .ai-suggestion-status {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .ai-suggestion-confidence {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .ai-suggestion-side {
+      border: var(--border);
+      background: var(--white);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .ai-suggestion-list-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 8px 0 6px;
+    }
+
+    .ai-suggestion-list {
+      margin-left: 18px;
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 960px) {
+      .ai-suggestion-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     /* Stats Grid */
@@ -1011,6 +1168,10 @@ const html = `<!DOCTYPE html>
       .comparison-table td {
         padding: 12px 10px;
       }
+
+      .ai-suggestion-thesis {
+        font-size: 18px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -1094,17 +1255,19 @@ const html = `<!DOCTYPE html>
           <h1>Giá vàng ${insights.trendDirection === 'up' ? 'tăng mạnh' : 'giảm'}</h1>
           <p>Thay đổi ${insights.totalChange > 0 ? '+' : ''}${insights.totalChange.toFixed(1)}% trong ${historyData.data.length} ngày qua</p>
           <p>Premium Việt Nam: ${insights.premium.toFixed(1)}% ${insights.premiumStatus === 'high' ? '(Cao hơn bình thường)' : insights.premiumStatus === 'low' ? '(Thấp hơn bình thường)' : '(Bình thường)'}</p>
-          <div class="recommendation-badge ${insights.recommendation.action === 'MUA' ? 'buy' : insights.recommendation.action === 'BÁN/CHỜ' ? 'sell' : 'wait'}">
-            → ${insights.recommendation.reason}
+          <div class="recommendation-badge ${recommendationColorClass}">
+            ${escapeHtml(recommendationSourceLabel)} → ${escapeHtml(displayedRecommendation.reason)}
           </div>
         </div>
         <div class="hero-action">
           <div class="hero-action-label">Khuyến nghị</div>
-          <div class="hero-action-value">${insights.recommendation.action}</div>
-          <div class="hero-action-confidence">Độ tin cậy: ${insights.recommendation.confidence}</div>
+          <div class="hero-action-value">${escapeHtml(displayedRecommendation.action)}</div>
+          <div class="hero-action-confidence">Độ tin cậy: ${escapeHtml(displayedRecommendation.confidence)}</div>
         </div>
       </div>
     </section>
+
+    ${generateAiSuggestionSection()}
 
     <!-- Stats Grid -->
     <section class="stats-grid">

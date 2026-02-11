@@ -38,6 +38,9 @@ bun run fetch:history 60    # custom days
 # Generate interactive dashboard
 bun run dashboard           # creates data/dashboard.html
 
+# Generate AI suggestion (Z.AI -> fallback heuristic when key missing)
+bun run ai:suggest
+
 # Analyze drawdowns (price drops & recovery times)
 bun run analyze:drawdowns      # default 10% threshold
 bun run analyze:drawdowns 5    # 5% threshold (more drawdowns)
@@ -83,6 +86,7 @@ data/
 ├── latest.json           # Current prices (all markets, normalized)
 ├── history.json          # 30-day international history
 ├── history-Ny.json       # N-year history (TwelveData, up to 19y)
+├── ai-suggestion.json    # AI recommendation status + reasoning
 ├── vietnam-history.json  # Daily collected Vietnam snapshots
 ├── vietnam-history-1y.json # 1 year SJC history (webgia.com)
 ├── drawdowns.json        # Drawdown analysis results
@@ -123,6 +127,10 @@ Vàng quốc tế (XAUUSD) chỉ giao dịch vào ngày làm việc:
 ```bash
 # .env (local) or GitHub Secrets (CI)
 TWELVEDATA_API_KEY=xxx   # Required for TwelveData source
+ZAI_API_KEY_1=xxx        # Optional: Z.AI key for AI suggest
+ZAI_API_KEY_2=xxx        # Optional: second key for basic load-balancing
+ZAI_BASE_URL=xxx         # e.g. your Anthropic-compatible endpoint
+ZAI_MODEL=xxx            # e.g. model name configured for that endpoint
 ```
 
 ## Typical Output

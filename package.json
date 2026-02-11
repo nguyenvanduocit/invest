@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "bun run src/main.ts",
+    "ai:suggest": "bun run src/generate-ai-suggestion.ts",
     "backfill": "bun run src/backfill.ts",
     "type-check": "tsc --noEmit"
   },

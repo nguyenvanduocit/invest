@@ -21,8 +21,13 @@ async function main() {
   await $`bun run src/analyze-drawdowns.ts`.quiet()
   console.log('   Done')
 
-  // 4. Generate dashboard
-  console.log('\n4. Generating dashboard...')
+  // 4. Generate AI suggestion (Z.AI)
+  console.log('\n4. Generating AI suggestion...')
+  await $`bun run src/generate-ai-suggestion.ts`.quiet()
+  console.log('   Done')
+
+  // 5. Generate dashboard
+  console.log('\n5. Generating dashboard...')
   await $`bun run src/generate-dashboard.ts`.quiet()
   console.log('   Done')
 
