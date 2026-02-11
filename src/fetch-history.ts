@@ -147,16 +147,6 @@ async function main() {
 
   await Bun.write('data/history.json', JSON.stringify(jsonOutput, null, 2))
   console.log('\nSaved to data/history.json')
-
-  // Also save CSV for easy charting
-  const csvLines = [
-    'date,usd_per_oz,usd_per_gram,vnd_per_gram,vnd_per_tael',
-    ...data.international.map(p =>
-      `${p.date},${p.usdPerOunce.toFixed(2)},${p.usdPerGram.toFixed(2)},${p.vndPerGram.toFixed(0)},${p.vndPerTael.toFixed(0)}`
-    )
-  ]
-  await Bun.write('data/history.csv', csvLines.join('\n'))
-  console.log('Saved to data/history.csv')
 }
 
 main().catch(console.error)

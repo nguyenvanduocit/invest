@@ -63,7 +63,7 @@ This repository is a Bun/TypeScript batch pipeline for collecting gold prices fr
 ```text
 .
 ├── .github/workflows/          # Scheduled automation and deployment pipelines
-├── data/                       # Generated artifacts (json/csv/html) committed and published
+├── data/                       # Generated artifacts (json/html) committed and published
 ├── docs/                       # Codebase oracle architecture documentation
 ├── src/                        # TypeScript pipeline code
 │   ├── main.ts                 # Daily orchestrator entrypoint

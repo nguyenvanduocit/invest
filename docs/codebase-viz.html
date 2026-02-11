@@ -145,7 +145,7 @@
           <span class="badge b-ext">TwelveData API</span>
           <span class="badge b-ext">FreeGoldAPI</span>
           <span class="badge b-ext">VNAppMob</span>
-          <span class="badge b-data">JSON/CSV artifacts</span>
+          <span class="badge b-data">JSON artifacts</span>
           <span class="badge b-infra">GitHub Actions + Pages</span>
         </div>
       </div>
@@ -550,7 +550,7 @@
       { id: 'sources', label: 'source adapters', path: 'src/sources/*', layer: 'core' },
       { id: 'types', label: 'types.ts', path: 'src/types.ts', layer: 'core', hub: true },
       { id: 'constants', label: 'constants.ts', path: 'src/constants.ts', layer: 'core', hub: true },
-      { id: 'artifact_json', label: 'JSON/CSV Artifacts', path: 'data/*.json,csv', layer: 'data' },
+      { id: 'artifact_json', label: 'JSON Artifacts', path: 'data/*.json', layer: 'data' },
       { id: 'dashboard_html', label: 'dashboard.html', path: 'data/dashboard.html', layer: 'data' },
       { id: 'ci', label: 'CI/CD Pipelines', path: '.github/workflows/*.yml', layer: 'infra' }
     ];
@@ -576,7 +576,7 @@
       { from: 'fetch_all', to: 'artifact_json', type: 'data-flow', label: 'latest.json' },
       { from: 'collect', to: 'artifact_json', type: 'data-flow', label: 'vietnam-history.json' },
       { from: 'drawdowns', to: 'artifact_json', type: 'data-flow', label: 'drawdowns.json' },
-      { from: 'fetch_history', to: 'artifact_json', type: 'data-flow', label: 'history.json/csv' },
+      { from: 'fetch_history', to: 'artifact_json', type: 'data-flow', label: 'history.json' },
       { from: 'backfill_vn', to: 'artifact_json', type: 'data-flow', label: 'merge history' },
       { from: 'dashboard', to: 'dashboard_html', type: 'data-flow', label: 'render html' },
       { from: 'dashboard_html', to: 'pages', type: 'event', label: 'static deploy' },

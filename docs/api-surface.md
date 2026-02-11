@@ -9,8 +9,8 @@
 | CLI | `bun run build` | `src/main.ts` | N/A | Scheduled orchestration: fetch current data, collect snapshot, analyze drawdowns, generate dashboard |
 | CLI | `bun run backfill` | `src/backfill.ts` | N/A | Weekly orchestration: refresh international history + backfill Vietnam snapshots |
 | CLI | `bun run src/fetch-all.ts` | `main()` in `src/fetch-all.ts` | N/A | Aggregates global spot prices and writes `data/latest.json` |
-| CLI | `bun run src/fetch-history.ts [days]` | `main()` in `src/fetch-history.ts` | N/A | Fetches historical international prices and writes `data/history.json/csv` |
-| CLI | `bun run src/fetch-long-history.ts [years]` | `main()` in `src/fetch-long-history.ts` | N/A | Builds long-history datasets (`data/history-Ny.json/csv`) |
+| CLI | `bun run src/fetch-history.ts [days]` | `main()` in `src/fetch-history.ts` | N/A | Fetches historical international prices and writes `data/history.json` |
+| CLI | `bun run src/fetch-long-history.ts [years]` | `main()` in `src/fetch-long-history.ts` | N/A | Builds long-history datasets (`data/history-Ny.json`) |
 | CLI | `bun run src/collect-daily.ts` | `main()` in `src/collect-daily.ts` | N/A | Upserts today’s Vietnam + international snapshot |
 | CLI | `bun run src/backfill-vietnam.ts` | `main()` in `src/backfill-vietnam.ts` | N/A | Merges webgia + TwelveData history into `data/vietnam-history.json` |
 | CLI | `bun run src/update-vietnam-daily.ts` | `main()` in `src/update-vietnam-daily.ts` | N/A | Uses VNAppMob + TwelveData to append latest Vietnam record |

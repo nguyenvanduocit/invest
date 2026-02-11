@@ -123,15 +123,6 @@ async function main(): Promise<void> {
 
   await Bun.write(`data/history-${years}y.json`, JSON.stringify(output, null, 2))
   console.log(`\nSaved to data/history-${years}y.json`)
-
-  // CSV
-  const csv = [
-    'date,usd_per_oz,usd_per_gram,vnd_per_gram,vnd_per_tael',
-    ...data.map(d => `${d.date},${d.usdPerOunce.toFixed(2)},${d.usdPerGram.toFixed(2)},${d.vndPerGram.toFixed(0)},${d.vndPerTael.toFixed(0)}`)
-  ].join('\n')
-
-  await Bun.write(`data/history-${years}y.csv`, csv)
-  console.log(`Saved to data/history-${years}y.csv`)
 }
 
 main().catch(console.error)

@@ -41,7 +41,7 @@ mindmap
 
 ### Historical Intelligence
 
-- **International history export**: Produce configurable day/year history JSON+CSV datasets.
+- **International history export**: Produce configurable day/year history JSON datasets.
 - **Vietnam history merging**: Align webgia SJC history against international trading days using nearby-date matching.
 - **Timeline freshness**: Upsert current-day snapshots to keep Vietnam history current during intraday runs.
 

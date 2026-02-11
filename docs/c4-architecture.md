@@ -35,7 +35,7 @@ C4Container
         Container(collectors, "Source Collectors", "TypeScript modules", "Regional and international adapters with fallback chain")
         Container(processing, "Analytics + Normalization", "TypeScript", "VND conversion, premium calculation, drawdown analysis")
         Container(renderer, "Dashboard Generator", "TypeScript -> HTML/JS", "Builds static dashboard with Chart.js")
-        ContainerDb(artifacts, "Artifact Store", "JSON/CSV/HTML files in data/", "Latest snapshot, histories, drawdowns, dashboard")
+        ContainerDb(artifacts, "Artifact Store", "JSON/HTML files in data/", "Latest snapshot, histories, drawdowns, dashboard")
     }
     System_Ext(externalApis, "External Market/FX APIs", "Data providers")
     System_Ext(gha, "GitHub Actions", "Scheduled CI runner")
@@ -45,7 +45,7 @@ C4Container
     Rel(orchestrator, collectors, "Invokes")
     Rel(collectors, externalApis, "Reads prices + rates", "HTTPS")
     Rel(collectors, processing, "Provides normalized inputs")
-    Rel(processing, artifacts, "Writes JSON/CSV")
+    Rel(processing, artifacts, "Writes JSON")
     Rel(renderer, artifacts, "Reads/writes dashboard artifacts")
     Rel(gha, artifacts, "Commits generated files", "git push")
     Rel(gha, pages, "Deploys data/ as static site")

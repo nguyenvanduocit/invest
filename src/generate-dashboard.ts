@@ -301,12 +301,12 @@ function generateDrawdownsSection(): string {
   )
   const rows = sortedDrawdowns.slice(0, 5).map(dd => `
     <tr>
-      <td>${dd.peakDate}</td>
-      <td>${dd.troughDate}</td>
-      <td><span class="premium-badge positive">-${dd.drawdownPct.toFixed(1)}%</span></td>
-      <td>${formatDuration(dd.daysToTrough)}</td>
-      <td>${dd.recoveryDate || '<span style="color: var(--red);">Chưa</span>'}</td>
-      <td>${dd.daysToRecovery ? formatDuration(dd.daysToRecovery) : '<span style="color: var(--red);">Đang chờ</span>'}</td>
+      <td data-label="Đỉnh">${dd.peakDate}</td>
+      <td data-label="Đáy">${dd.troughDate}</td>
+      <td data-label="Mức giảm"><span class="premium-badge positive">-${dd.drawdownPct.toFixed(1)}%</span></td>
+      <td data-label="Thời gian xuống">${formatDuration(dd.daysToTrough)}</td>
+      <td data-label="Phục hồi">${dd.recoveryDate || '<span style="color: var(--red);">Chưa</span>'}</td>
+      <td data-label="Thời gian hồi">${dd.daysToRecovery ? formatDuration(dd.daysToRecovery) : '<span style="color: var(--red);">Đang chờ</span>'}</td>
     </tr>
   `).join('')
 
@@ -1012,6 +1012,66 @@ const html = `<!DOCTYPE html>
         padding: 12px 10px;
       }
     }
+
+    @media (max-width: 640px) {
+      .comparison-table thead {
+        display: none;
+      }
+
+      .comparison-table,
+      .comparison-table tbody,
+      .comparison-table tr,
+      .comparison-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .comparison-table tr {
+        border-bottom: 2px solid #eee;
+        padding: 8px 0;
+      }
+
+      .comparison-table tr:last-child {
+        border-bottom: none;
+      }
+
+      .comparison-table td {
+        border-bottom: 1px dashed #e8e8e8;
+        padding: 10px 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .comparison-table td:last-child {
+        border-bottom: none;
+      }
+
+      .comparison-table td::before {
+        content: attr(data-label);
+        flex: 0 0 42%;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        color: var(--gray);
+      }
+
+      .comparison-table td > * {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .country-cell {
+        justify-content: flex-end;
+      }
+
+      .price-bar {
+        justify-content: flex-end;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1226,14 +1286,14 @@ const html = `<!DOCTYPE html>
             const flag = m.country === 'International' ? '🌍' : m.country === 'Vietnam' ? '🇻🇳' : m.country === 'China' ? '🇨🇳' : m.country === 'Russia' ? '🇷🇺' : m.country === 'India' ? '🇮🇳' : '🌐'
 
             return `<tr class="${isIntl ? 'highlight' : isVN ? 'vietnam' : ''}">
-              <td>
+              <td data-label="Thị trường">
                 <div class="country-cell">
                   <span class="country-flag">${flag}</span>
                   <span class="country-name">${m.country}</span>
                 </div>
               </td>
-              <td style="font-family: 'Work Sans'; font-size: 13px;">${m.source}</td>
-              <td>
+              <td data-label="Nguồn" style="font-family: 'Work Sans'; font-size: 13px;">${m.source}</td>
+              <td data-label="Giá/gram">
                 <div class="price-bar">
                   <div class="price-bar-bg">
                     <div class="price-bar-fill ${isIntl ? 'intl' : ''}" style="width: ${barWidth}%;"></div>
@@ -1241,12 +1301,12 @@ const html = `<!DOCTYPE html>
                   <span>${fmt(m.vndPerGram)}</span>
                 </div>
               </td>
-              <td>
+              <td data-label="So với Quốc tế">
                 <span class="premium-badge ${isIntl ? 'base' : diff > 0 ? 'positive' : 'negative'}">
                   ${isIntl ? 'BASE' : (diff > 0 ? '+' : '') + diff.toFixed(1) + '%'}
                 </span>
               </td>
-              <td>${fmt(m.originalPricePerGram)} ${m.originalCurrency}/g</td>
+              <td data-label="Giá gốc">${fmt(m.originalPricePerGram)} ${m.originalCurrency}/g</td>
             </tr>`
           }).join('')}
         </tbody>

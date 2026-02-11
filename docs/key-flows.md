@@ -102,7 +102,7 @@ sequenceDiagram
     Scheduler->>Backfill: bun run backfill
     Backfill->>Hist: bun run src/fetch-history.ts
     Hist->>Twelve: fetch history
-    Hist->>Data: write history.json/csv
+    Hist->>Data: write history.json
     Backfill->>VNBackfill: bun run src/backfill-vietnam.ts
     VNBackfill->>VNHist: fetchVietnamHistory(1year)
     VNBackfill->>Twelve: fetchHistory(400)
