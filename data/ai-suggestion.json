@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T16:23:58.715Z",
+  "generatedAt": "2026-02-11T16:56:52.141Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở mức cao kỷ lục (percentile 100) với động lượng tăng mạnh (MA7 > MA30) và premium ổn định ở mức cao. Tuy nhiên, rủi ro điều chỉnh kỹ thuật đang gia tăng khi giá thế giới chạm đỉnh 5058 USD/oz và các chỉ báo vĩ mô (Lợi suất thực, USD Index) đang cho thấy dấu hiệu ổn định hoặc giảm nhẹ, hỗ trợ giá nhưng không đủ để bứt phá mạnh mẽ hơn nữa trong ngắn hạn.",
+    "thesis": "Thị trường vàng đang trong giai đoạn tăng giá mạnh nhưng rủi ro điều chỉnh kỹ thuật cao khi giá SJC đã vượt xa đường trung bình MA7 và MA30. Mặc dù các yếu tố vĩ mô như lợi suất thực giảm và kỳ vọng lạm phát ổn định hỗ trợ giá vàng thế giới, nhưng mức premium cao và sự biến động trong 30 ngày qua (đạt mức cao nhất 5 năm) khuyến nghị nhà đầu tư nên chờ đợi nhịp điều chỉnh hoặc ổn định trước khi quyết định mua đuổi.",
     "reasons": [
-      "Xu hướng tăng mạnh: MA7 (155.2 triệu VND/lượng) vượt MA30 (152.1 triệu VND/lượng), giá tăng 9.6% trong 30 ngày qua.",
-      "Premium cao nhưng ổn định: Chênh lệch 15.08% được duy trì trong tuần qua, cho thấy cầu nội địa vẫn tốt nhưng không sốt nhiệt.",
-      "Vĩ mô hỗ trợ: Lợi suất thực Mỹ (US Real Yield 10Y) giảm 3.61% trong 5 ngày qua, hỗ trợ giá vàng thế giới neo ở mức cao.",
-      "Rủi ro kỹ thuật: VIX tăng 11.33% trong 20 ngày qua cho thấy thị trường tài chính đang bất ổn, có thể kích hoạt chốt lời ngắn hạn."
+      "Giá SJC hiện tại (181 triệu VND/lượng) đang cao hơn đáng kể so với MA7 (155.3 triệu VND/lượng) và MA30 (152.1 triệu VND/lượng), cho thấy trạng thái quá mua (overbought) trong ngắn hạn.",
+      "Premium chênh lệch giá nội địa ở mức 14.63%, cao hơn nhiều so với mức trung bình của tháng 1 (khoảng 12-13%), phản ánh rủi ro chênh lệch giá cao nếu thị trường thế giới điều chỉnh.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm 3.61% trong 5 ngày qua xuống 1.87%, tạo động lực tăng giá cho vàng thế giới (XAUUSD đang ở mức 5072 USD/oz).",
+      "Chỉ số biến động trong 30 ngày đạt phân vị 100 (cao nhất trong 5 năm qua), cho thấy thị trường đang dao động mạnh và không ổn định."
     ],
     "risks": [
-      "Giá vàng thế giới đang ở vùng quá mua (5058 USD/oz), nếu lợi suất Mỹ hồi phục nhẹ sẽ gây áp lực điều chỉnh.",
-      "Premium cao (15%) khiến biên độ an toàn thấp, bất kỳ sự đảo chiều nào của giá thế giới cũng sẽ làm giảm giá SJC nhanh chóng."
+      "Rủi ro chốt lời ngắn hạn khi giá SJC đã tăng 10.03% trong 30 ngày qua và đang ở vùng giá cực cao (percentile 5y = 100).",
+      "Dữ liệu tin tức vĩ mô (Fed, ECB) không có biến động bất ngờ lớn (Fed Funds Rate giữ 3.64%), nên động lực tăng giá tiếp tục phụ thuộc vào tâm lý thị trường hơn là thay đổi chính sách.",
+      "Sự giãn cách giữa giá SJC và giá thế giới (premium) có thể thu hẹp nhanh chóng nếu giá thế giới điều chỉnh, gây thua lỗ cho người mua vào thời điểm premium cao."
     ],
     "evidence": [
       {
-        "key": "sjcVndPerTael",
+        "key": "Giá SJC hiện tại",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "premiumPct",
-        "value": 15.08,
+        "key": "MA7 SJC",
+        "value": 155329249,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 152120024,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium hiện tại",
+        "value": 14.63,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7VndPerTael",
-        "value": 155241507,
-        "unit": "VND/lượng",
+        "key": "Tăng giá 30 ngày SJC",
+        "value": 10.03,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30VndPerTael",
-        "value": 152099551,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 5072.04,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
+        "key": "Lợi suất thực Mỹ 10Y",
         "value": 1.87,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "usd_index_trade_weighted",
-        "value": 118.2407,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix",
-        "value": 17.79,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "Phân vị biến động 5 năm",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T16:23:40.894Z",
+    "latestTimestamp": "2026-02-11T16:56:37.918Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157287273.67294398,
-    "premiumPct": 15.08,
-    "change7dPct": 2.28,
-    "change30dPct": 9.6,
+    "intlVndPerTael": 157901464.51842213,
+    "premiumPct": 14.63,
+    "change7dPct": 2.67,
+    "change30dPct": 10.03,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 155241507,
-    "ma30VndPerTael": 152099551,
+    "ma7VndPerTael": 155329249,
+    "ma30VndPerTael": 152120024,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-11T16:23:52.976Z",
+    "fetchedAt": "2026-02-11T16:56:44.582Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5058.41,
+        "value": 5072.04,
         "unit": "USD/oz",
         "date": "2026-02-11",
-        "change1dPct": 0.66,
-        "change5dPct": 1.88,
-        "change20dPct": 9.31,
+        "change1dPct": 0.93,
+        "change5dPct": 2.16,
+        "change20dPct": 9.61,
         "relationToGold": "context"
       },
       {
@@ -188,12 +195,12 @@
       "2026-02-11 | moultrieobserver.com | Watson describes Week Four under the Gold Dome"
     ],
     "countryActionHeadlines": [
+      "2026-02-11 | standardspeaker.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
       "2026-02-11 | finance.yahoo.com | US job strength signals Fed may hold off on additional rate cuts",
       "2026-02-11 | fortmorgantimes.com | Biathlete regrets tearful TV confession overshadowing teammate gold",
       "2026-02-11 | qcostarica.com | Two Years of the Dollar Freeze : Who Wins and Loses in Nicaragua ?",
       "2026-02-11 | portfolio-adviser.com | Investors brace for US jobs and inflation reports as AI fears persist",
-      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy",
-      "2026-02-11 | ghanamma.com | Kenya to Diversify Reserve Holdings"
+      "2026-02-11 | actionforex.com | Gold Climbs to a Two - Week High : Markets Await a Softer Fed Policy"
     ],
     "dollarYieldHeadlines": [
       "2026-02-11 | markets.financialcontent.com | FinancialContent - Deep Dive : Why Hilton ( HLT ) is the  Gold Standard  of Global Lodging Following 2025 Record Earnings",
