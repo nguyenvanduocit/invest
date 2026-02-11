@@ -4,6 +4,7 @@ const latestFile = Bun.file('data/latest.json')
 const historyFile = Bun.file('data/history.json')
 const longHistoryFile = Bun.file('data/history-5y.json')
 const drawdownsFile = Bun.file('data/drawdowns.json')
+const vietnamHistoryFile = Bun.file('data/vietnam-history.json')
 const outputFile = 'data/ai-suggestion.json'
 
 type RecommendationStatus = 'MUA' | 'CHỜ' | 'BÁN/CHỜ' | 'GIỮ'
@@ -52,6 +53,16 @@ interface DrawdownData {
   }
 }
 
+interface VietnamHistoryData {
+  snapshots: {
+    date: string
+    sjcMieng?: {
+      sell: number
+    }
+    premium: number
+  }[]
+}
+
 interface MarketSnapshot {
   latestTimestamp: string
   sjcVndPerTael: number | null
@@ -70,6 +81,14 @@ interface MarketSnapshot {
     worstPct: number
     avgRecoveryDays: number
   } | null
+}
+
+interface MonthlySeriesPoint {
+  date: string
+  worldVndPerTael: number
+  worldUsdPerOunce: number
+  vnSjcVndPerTael: number | null
+  premiumPct: number | null
 }
 
 interface SuggestionPayload {
@@ -284,13 +303,17 @@ function buildHeuristicSuggestion(snapshot: MarketSnapshot): SuggestionPayload {
 
 async function requestAiSuggestion(
   snapshot: MarketSnapshot,
+  monthlySeries: MonthlySeriesPoint[],
   apiKey: string,
   baseUrl: string,
   model: string
 ): Promise<SuggestionPayload> {
   const systemPrompt = [
     'Bạn là AI phân tích vàng cho thị trường Việt Nam.',
+    'Lưu ý quan trọng: chênh lệch giá vàng Việt Nam và thế giới (premium) là hiện tượng bình thường của thị trường Việt Nam.',
+    'Không coi premium dương là bất thường nếu không có dấu hiệu cực đoan theo chuỗi dữ liệu.',
     'Nhiệm vụ: đưa ra trạng thái hành động ngắn gọn cho nhà đầu tư cá nhân.',
+    'Bạn phải đọc dữ liệu chuỗi 30 ngày của giá thế giới và giá SJC Việt Nam để phân tích kỹ thuật cơ bản (xu hướng, động lượng, dao động premium).',
     'Chỉ trả về JSON hợp lệ, không markdown, không giải thích ngoài JSON.',
     'status phải thuộc: MUA, CHỜ, BÁN/CHỜ, GIỮ.',
     'confidence phải thuộc: Thấp, Trung bình, Cao, Rất cao.',
@@ -298,7 +321,7 @@ async function requestAiSuggestion(
   ].join(' ')
 
   const userPrompt = JSON.stringify({
-    task: 'Đưa nhận định đầu tư vàng ngắn gọn dựa trên dữ liệu.',
+    task: 'Đưa nhận định đầu tư vàng ngắn gọn dựa trên dữ liệu, ưu tiên phân tích kỹ thuật từ chuỗi 30 ngày.',
     output_schema: {
       status: 'MUA|CHỜ|BÁN/CHỜ|GIỮ',
       confidence: 'Thấp|Trung bình|Cao|Rất cao',
@@ -307,7 +330,8 @@ async function requestAiSuggestion(
       reasons: ['2-4 ý ngắn'],
       risks: ['1-3 rủi ro chính']
     },
-    market_snapshot: snapshot
+    market_snapshot: snapshot,
+    monthly_series_30d: monthlySeries
   })
 
   const res = await fetch(`${baseUrl.replace(/\/$/, '')}/v1/messages`, {
@@ -344,6 +368,31 @@ async function requestAiSuggestion(
   return normalizeSuggestion(parsed)
 }
 
+function buildMonthlySeries(
+  history: HistoryData,
+  vietnamHistory: VietnamHistoryData | null
+): MonthlySeriesPoint[] {
+  const vietnamByDate = new Map<string, { sell: number; premium: number }>()
+  for (const snapshot of vietnamHistory?.snapshots || []) {
+    if (!snapshot.sjcMieng?.sell) continue
+    vietnamByDate.set(snapshot.date, {
+      sell: snapshot.sjcMieng.sell,
+      premium: snapshot.premium
+    })
+  }
+
+  return history.data.slice(-30).map(point => {
+    const vn = vietnamByDate.get(point.date)
+    return {
+      date: point.date,
+      worldVndPerTael: round(point.vndPerTael, 0),
+      worldUsdPerOunce: round(point.usdPerOunce, 2),
+      vnSjcVndPerTael: vn ? round(vn.sell, 0) : null,
+      premiumPct: vn ? round(vn.premium, 2) : null
+    }
+  })
+}
+
 async function main() {
   if (!await latestFile.exists() || !await historyFile.exists()) {
     console.error('Missing required files for AI suggest: data/latest.json, data/history.json')
@@ -354,8 +403,10 @@ async function main() {
   const history: HistoryData = await historyFile.json()
   const longHistory: LongHistoryData | null = await longHistoryFile.exists() ? await longHistoryFile.json() : null
   const drawdowns: DrawdownData | null = await drawdownsFile.exists() ? await drawdownsFile.json() : null
+  const vietnamHistory: VietnamHistoryData | null = await vietnamHistoryFile.exists() ? await vietnamHistoryFile.json() : null
 
   const snapshot = buildSnapshot(latest, history, longHistory, drawdowns)
+  const monthlySeries = buildMonthlySeries(history, vietnamHistory)
   const model = process.env.ZAI_MODEL || process.env.ANTHROPIC_DEFAULT_OPUS_MODEL
   const baseUrl = process.env.ZAI_BASE_URL || process.env.ANTHROPIC_BASE_URL
   const apiKey = pickApiKey()
@@ -373,7 +424,7 @@ async function main() {
       throw new Error('Missing ZAI_MODEL or ANTHROPIC_DEFAULT_OPUS_MODEL')
     }
 
-    const suggestion = await requestAiSuggestion(snapshot, apiKey, baseUrl, model)
+    const suggestion = await requestAiSuggestion(snapshot, monthlySeries, apiKey, baseUrl, model)
     output = {
       generatedAt: new Date().toISOString(),
       provider: 'z.ai',
