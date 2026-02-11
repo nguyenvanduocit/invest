@@ -1,28 +1,26 @@
 {
-  "generatedAt": "2026-02-11T13:52:13.957Z",
+  "generatedAt": "2026-02-11T14:07:23.844Z",
   "provider": "z.ai",
-  "model": "GLM-4.7",
-  "source": "ai",
+  "model": "unknown",
+  "source": "heuristic",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
-    "horizon": "ngắn hạn (3-7 ngày)",
-    "thesis": "Giá đã tăng mạnh 11% trong tháng và đang ở vùng cực kỳ cao (percentile 100). Premium ổn định nhưng giá thế giới đang có dấu hiệu chững lại quanh 5000 USD, rủi ro điều chỉnh kỹ thuật hiện hữu.",
+    "confidence": "Cao",
+    "horizon": "Ngắn hạn",
+    "thesis": "Giá đang ở vùng cao lịch sử và premium nội địa cao, ưu tiên chờ nhịp điều chỉnh.",
     "reasons": [
-      "Giá SJC đã tăng 11% trong 30 ngày qua, vượt xa trung bình động (MA7, MA30), tạo trạng thái quá mua (Overbought).",
-      "Premium ổn định ở mức 14-15%, cho thấy cung cầu trong nước cân bằng, không còn yếu tố đẩy giá sốc như cuối tháng 1.",
-      "Giá thế giới (Intl) đang dao động giằng co quanh mức 5000 USD/oz sau nhịp tăng nóng, thiếu động lượng tiếp tục bứt phá."
+      "Phân vị 5 năm: 100%",
+      "Premium hiện tại: 14.6%"
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn khi giá chạm vùng kháng cự tâm lý 181 triệu/lượng.",
-      "Biến động giá thế giới cao (số liệu lịch sử cho thấy drawdown lớn có thể xảy ra khi đạt đỉnh)."
+      "Nếu xu hướng tăng kéo dài, có thể bỏ lỡ cơ hội mua ở giá thấp hơn."
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T13:52:08.746Z",
+    "latestTimestamp": "2026-02-11T14:07:22.501Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157689296.6683837,
-    "premiumPct": 14.78,
+    "intlVndPerTael": 157946710.8056621,
+    "premiumPct": 14.6,
     "change7dPct": 2.74,
     "change30dPct": 11.09,
     "volatilityDailyPct": 2.19,
@@ -36,5 +34,6 @@
       "worstPct": 41.26,
       "avgRecoveryDays": 1369
     }
-  }
+  },
+  "error": "Missing ZAI_API_KEY_1/ZAI_API_KEY_2/ZAI_API_KEY/ANTHROPIC_AUTH_TOKEN"
 }

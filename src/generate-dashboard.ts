@@ -410,21 +410,6 @@ function generateAiSuggestionSection(): string {
             </div>
             <div class="ai-suggestion-thesis">${escapeHtml(aiSuggestion.suggestion.thesis)}</div>
           </div>
-
-          <div class="ai-suggestion-context">
-            <div class="ai-context-item">
-              <div class="ai-context-label">Mô hình</div>
-              <div class="ai-context-value">${escapeHtml(aiSuggestion.model)}</div>
-            </div>
-            <div class="ai-context-item">
-              <div class="ai-context-label">Khung đánh giá</div>
-              <div class="ai-context-value">${escapeHtml(aiSuggestion.suggestion.horizon)}</div>
-            </div>
-            <div class="ai-context-item">
-              <div class="ai-context-label">Tín hiệu</div>
-              <div class="ai-context-value">${escapeHtml(aiSuggestion.source === 'ai' ? 'Mô hình AI' : 'Heuristic fallback')}</div>
-            </div>
-          </div>
         </div>
 
         <div class="ai-suggestion-bottom">
@@ -621,7 +606,7 @@ const html = `<!DOCTYPE html>
 
     .ai-suggestion-top {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr);
+      grid-template-columns: 1fr;
       gap: 16px;
     }
 
@@ -646,42 +631,6 @@ const html = `<!DOCTYPE html>
       font-size: 20px;
       font-weight: 700;
       line-height: 1.3;
-    }
-
-    .ai-suggestion-context {
-      border: var(--border);
-      background: #f2f2f2;
-      padding: 16px;
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 12px;
-      align-content: start;
-    }
-
-    .ai-context-item {
-      border-bottom: 2px dashed #cfcfcf;
-      padding-bottom: 10px;
-    }
-
-    .ai-context-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .ai-context-label {
-      font-family: 'Space Mono', monospace;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--gray);
-      margin-bottom: 4px;
-    }
-
-    .ai-context-value {
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.35;
     }
 
     .ai-suggestion-bottom {
