@@ -1,10 +1,10 @@
-// Daily build - fetch today's data and generate dashboard
-// Usage: bun run build (runs daily via CI)
+// Scheduled build - fetch latest data and generate dashboard
+// Usage: bun run build (runs via CI schedule and on pushes)
 
 import { $ } from 'bun'
 
 async function main() {
-  console.log('=== Daily Build ===\n')
+  console.log('=== Scheduled Build ===\n')
 
   // 1. Fetch current prices (all markets)
   console.log('1. Fetching current prices...')

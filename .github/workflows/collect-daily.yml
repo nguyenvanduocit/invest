@@ -1,11 +1,11 @@
-name: Collect Daily Gold Prices
+name: Collect Gold Prices
 
 on:
   push:
     branches: [main]
   schedule:
-    # 9 AM Vietnam time (2 AM UTC)
-    - cron: '0 2 * * *'
+    # Hourly (UTC) to keep dashboard data fresh intraday
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:

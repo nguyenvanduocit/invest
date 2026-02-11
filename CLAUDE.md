@@ -6,6 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Investment analysis system for gold prices across multiple markets. Fetches real-time and historical data from Vietnam, China, Russia, India, and international (XAUUSD) sources. All prices are normalized to VND for easy comparison.
 
+## Codebase Overview
+
+This codebase is a Bun/TypeScript batch pipeline that pulls multi-source market data, normalizes values into VND, computes analytics (premium and drawdown metrics), and renders a static dashboard artifact. Daily and weekly GitHub Actions workflows execute these jobs and publish results via GitHub Pages.
+
+**Stack**: Bun, TypeScript, Cheerio, Chart.js, GitHub Actions/Pages  
+**Structure**: single-repo CLI pipeline with adapter modules under `src/sources/` and file-based outputs under `data/`
+
+For detailed architecture, see [docs/CODEBASE_MAP.md](docs/CODEBASE_MAP.md).
+
 ## Tech Stack
 
 - **Runtime:** Bun

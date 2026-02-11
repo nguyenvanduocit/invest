@@ -1,5 +1,5 @@
-// Collect and store daily snapshot
-// Run this daily via cron to build up Vietnam historical data
+// Collect and store snapshot
+// Scheduled CI runs should refresh the current day's snapshot.
 
 import { fetchAll as fetchVietnam } from './sources/vietnam/index'
 import { fetchAll as fetchInternational } from './sources/international/index'
@@ -99,17 +99,10 @@ async function main() {
   const existing = await loadExisting()
   const today = new Date().toISOString().split('T')[0]
 
-  // Check if already collected today
+  // Refresh today's snapshot if it already exists so intraday runs stay fresh.
   const alreadyHasToday = existing.snapshots.some(s => s.date === today)
   if (alreadyHasToday) {
-    console.log(`Already have data for ${today}`)
-
-    // Option to force update with --force
-    if (!process.argv.includes('--force')) {
-      console.log('Use --force to overwrite')
-      return
-    }
-    console.log('Force updating...')
+    console.log(`Refreshing existing snapshot for ${today}...`)
     existing.snapshots = existing.snapshots.filter(s => s.date !== today)
   }
 
