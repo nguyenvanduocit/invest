@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-11T22:09:06.727Z",
+  "generatedAt": "2026-02-11T23:10:22.235Z",
   "provider": "z.ai",
   "model": "GLM-4.7",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Thị trường vàng đang trong giai đoạn tăng giá mạnh nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn rất cao do giá đã vượt xa trung bình động lực và premium đang neo ở mức cao. Mặc dù các yếu tố vĩ mô (lợi suất thực giảm, USD yếu) vẫn hỗ trợ vàng, nhưng động lượng tăng quá nhanh trong 7 ngày qua (5.23%) và mức giá hiện tại cao hơn MA7 tới 15.6% cho thấy thị trường đang bị mua quá mức (overbought) và cần tích lũy.",
+    "thesis": "Thị trường vàng đang trong giai đoạn tăng giá mạnh nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn đang gia tăng. Mặc dù các yếu tố vĩ mô như lợi suất thực giảm và USD yếu vẫn hỗ trợ giá vàng thế giới, nhưng mức giá hiện tại đã vượt xa trung bình động lực (MA7) và chạm vùng phân phối cao trong 30 ngày qua. Nhà đầu tư cá nhân nên chờ đợi nhịp điều chỉnh về vùng hỗ trợ gần hơn hoặc đợi giá ổn định sau nhịp tăng nóng trước khi quyết định mua đuổi.",
     "reasons": [
-      "Động lượng tăng giá quá mạnh và giãn cách với trung bình: Giá SJC hiện tại (181 triệu VND/lượng) cao hơn MA7 (156.4 triệu VND/lượng) tới 15.6%, cao hơn MA30 (152.6 triệu VND/lượng) tới 18.6%, cho thấy rủi ro điều chỉnh kỹ thuật lớn.",
-      "Premium neo ở mức cao bất thường: Chênh lệch giá nội địa đang ở mức 14.38%, cao hơn đáng kể so với mức trung bình của tháng 1 (khoảng 12-13%), làm giảm biên độ an toàn nếu giá thế giới quay đầu.",
-      "Sức mạnh giá thế giới vẫn được duy trì: Giá vàng thế giới (XAUUSD) đạt 5084 USD/oz, tăng 9.88% trong 20 ngày qua nhờ lợi suất thực 10 năm Mỹ giảm xuống 1.84%, tạo nền tảng giá cao nhưng cần chờ đợi nhịp điều chỉnh để an toàn.",
-      "Biến động thị trường gia tăng: Biến độ hàng ngày ở mức 2.15% kết hợp với bối cảnh tin tức hỗn loạn (NFP, ECB) cho thấy thị trường đang nhạy cảm với tin tức."
+      "Giá vàng SJC (181 triệu VND/lượng) đang cao hơn MA7 (156.48 triệu VND/lượng) tới 15.6%, cho thấy trạng thái quá mua (overbought) và rủi ro điều chỉnh giá về trung bình là rất lớn.",
+      "Premium chênh lệch (14.4%) đang ở mức cao trong chuỗi 30 ngày (trung bình ~13%), phản ánh tâm lý mua vào quá mức của thị trường nội địa thay vì đà tăng thực của giá thế giới.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm xuống 1.84% (giảm 4.17% trong 5 ngày qua) là động lực chính thúc đẩy giá vàng thế giới lên 5081 USD/oz, nhưng đà tăng này chưa được kiểm chứng bởi nhịp giảm nào.",
+      "Chỉ số VIX tăng 11.33% trong 20 ngày qua lên mức 17.79, cho thấy sự bất ổn của thị trường tài chính đang gia tăng, thường là yếu tố hỗ trợ vàng nhưng cũng báo hiệu biến động mạnh."
     ],
     "risks": [
-      "Giá vàng thế giới có thể giảm mạnh về vùng hỗ trợ tâm lý 5000 USD/oz nếu lợi suất Mỹ hồi phục hoặc USD index tăng trở lại.",
-      "Ngân hàng Nhà nước có thể can thiệp hoặc thị trường nội địa điều chỉnh mạnh để thu hẹp mức premium cao hiện tại (14.38%) về mức trung bình.",
-      "Dữ liệu sự kiện vĩ mô (NFP, phát ngôn ECB) gây biến động giá ngắn hạn khó lường."
+      "Rủi ro chốt lời ngắn hạn cao khi giá vàng SJC đã tăng 10.57% trong 30 ngày qua và đang ở mức cao nhất 5 năm (percentile 100%).",
+      "Dữ liệu vĩ mô thiếu sót (US Effective Fed Funds Rate null) có thể ẩn chứa các yếu tố chính sách tiền tệ bất ngờ chưa được phản ánh vào mô hình.",
+      "Sự kiện địa chính trị và tin tức vĩ mô trong input chủ yếu là tin cũ hoặc không liên quan trực tiếp (ECC, Argentina), làm giảm độ tin cậy của tín hiệu giao dịch trong ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjcVndPerTael",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA7",
-        "value": 156484208,
+        "key": "ma7VndPerTael",
+        "value": 156480458,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium %",
-        "value": 14.38,
+        "key": "premiumPct",
+        "value": 14.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 7d %",
-        "value": 5.23,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "World Gold Price",
-        "value": 5084.65,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y",
+        "key": "us_real_yield_10y",
         "value": 1.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index",
-        "value": 118.24,
+        "key": "worldUsdPerOunce",
+        "value": 5083.78,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "change30dPct",
+        "value": 10.57,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix",
+        "value": 17.79,
         "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-11T22:08:42.416Z",
+    "latestTimestamp": "2026-02-11T23:09:52.749Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158242036.4673255,
-    "premiumPct": 14.38,
-    "change7dPct": 5.23,
-    "change30dPct": 10.59,
+    "intlVndPerTael": 158215785.3112317,
+    "premiumPct": 14.4,
+    "change7dPct": 5.21,
+    "change30dPct": 10.57,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 156484208,
-    "ma30VndPerTael": 152632307,
+    "ma7VndPerTael": 156480458,
+    "ma30VndPerTael": 152631432,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-11T22:08:56.075Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-11T23:10:14.208Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Effective Fed Funds Rate"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5084.65,
+        "value": 5081.16,
         "unit": "USD/oz",
-        "date": "2026-02-11",
-        "change1dPct": 1.18,
-        "change5dPct": 2.41,
-        "change20dPct": 9.88,
+        "date": "2026-02-12",
+        "change1dPct": -0.07,
+        "change5dPct": 6.31,
+        "change20dPct": 10.07,
         "relationToGold": "context"
       },
       {
@@ -135,12 +137,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-10",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -186,24 +188,15 @@
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-11 | mining.com | Press Release",
-      "2026-02-11 | investinglive.com | investingLive Americas market news wrap : Non - farm payrolls blasts through expectations",
-      "2026-02-11 | thecaribbeancamera.com | Guyana Opposition Leader Vote Sparks National Controversy",
-      "2026-02-11 | mooseradio.com | Jefferson Starship Extends 2026 Runaway Again World Tour",
-      "2026-02-11 | almanacnews.com | San Mateo County Superintendent Nancy Magee to step down early",
-      "2026-02-11 | mynorthwest.com | The Latest : Bondi faces questions from Congress over Epstein files"
+      "2026-02-11 | jckonline.com | Experiential Retail , Gold Refiners , LVMH Watch Week : Podcast",
+      "2026-02-11 | zerohedge.com | No Privacy  CBDCs Will Come , Warns Billionaire Ray Dalio"
     ],
     "countryActionHeadlines": [
-      "2026-02-11 | abc7news.com | Norwegian biathlete Sturla Holm Laegreid regrets tearful TV confession overshadowing teammate Olympic gold medal",
-      "2026-02-11 | finanzen.ch | Crude Oil Advances Amid Escalating War - Threat In Middle East",
-      "2026-02-11 | abc30.com | Norwegian biathlete Sturla Holm Laegreid regrets tearful TV confession overshadowing teammate Olympic gold medal",
-      "2026-02-11 | bullionvault.com | Bubble - Like  Gold and Silver Sink on US Jobs Surprise as  Distrusted  Dollar Bounces",
-      "2026-02-11 | bravenewcoin.com | Gold ( XAU / USD ) Price Prediction : Gold Tests $5 , 100 Triangle Resistance as SPDR Signals Strong Bullish Momentum Near Highs",
-      "2026-02-11 | investorschronicle.co.uk | What the new Federal Reserve chair means for markets"
+      "2026-02-11 | naharnet.com | Argentina monthly inflation ticks up as Milei faces backlash over outdated index",
+      "2026-02-11 | abc7news.com | Norwegian biathlete Sturla Holm Laegreid regrets tearful TV confession overshadowing teammate Olympic gold medal"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-11 | bullionvault.com | Bubble - Like  Gold and Silver Sink on US Jobs Surprise as  Distrusted  Dollar Bounces",
-      "2026-02-11 | bravenewcoin.com | Gold ( XAU / USD ) Price Prediction : Gold Tests $5 , 100 Triangle Resistance as SPDR Signals Strong Bullish Momentum Near Highs"
+      "2026-02-11 | bullionvault.com | Bubble - Like  Gold and Silver Sink on US Jobs Surprise as  Distrusted  Dollar Bounces"
     ]
   }
 }
