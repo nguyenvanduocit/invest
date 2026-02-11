@@ -233,6 +233,47 @@
       line-height: 1.4;
     }
 
+    .ai-evidence-details {
+      margin: 0 16px 16px;
+      border: var(--border);
+      background: #fffaf0;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .ai-evidence-summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    .ai-evidence-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .ai-evidence-summary::after {
+      content: '+';
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .ai-evidence-details[open] .ai-evidence-summary::after {
+      content: '-';
+    }
+
+    .ai-evidence-table-wrap {
+      padding: 0 12px 12px;
+    }
+
     @media (max-width: 960px) {
       .ai-suggestion-top,
       .ai-suggestion-bottom {
@@ -819,7 +860,7 @@
         GOLD TRACKER
       </div>
       <div class="timestamp">
-        Cập nhật: 15:22:12 11/2/2026
+        Cập nhật: 22:22:12 11/2/2026
       </div>
     </header>
 
@@ -847,7 +888,7 @@
           <div class="ai-suggestion-main">
             <div class="ai-suggestion-meta">
               <span>Nguồn: Z.AI model</span>
-              <span>Cập nhật: 15:22:36 11/2/2026</span>
+              <span>Cập nhật: 22:22:36 11/2/2026</span>
             </div>
             <div class="ai-suggestion-thesis">Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi giá vượt xa MA30 đến 19%. Nhà đầu tư nên chờ đợi hồi phục về vùng hỗ trợ cận MA7 (~175-176 triệu/lượng) thay vì đu đỉnh.</div>
           </div>
@@ -863,19 +904,20 @@
             <ul class="ai-suggestion-list"><li>Giá ở phân vị 100% trong 5 năm, rủi ro chốt lời ngắn hạn cao nếu dữ liệu lạm phát Mỹ bất ngờ.</li><li>Biến động 2.19%/ngày có thể gây sốc tài khoản nếu mua đu đỉnh without stop-loss.</li><li>Dữ liệu sự kiện vĩ mô chủ yếu về ECB/Anh, thiếu tin tức cụ thể về chính sách Fed/Địa chính trị cấp bách, độ tin cậy giảm.</li></ul>
           </div>
         </div>
-        <div style="padding: 0 16px 16px 16px;">
-          <div class="ai-suggestion-list-title" style="margin-bottom: 10px;">Evidence (số liệu bắt buộc)</div>
-          <table class="comparison-table" style="margin: 0;">
-            <thead>
-              <tr>
-                <th>Key</th>
-                <th>Value</th>
-                <th>Unit</th>
-                <th>Source</th>
-              </tr>
-            </thead>
-            <tbody>
-              
+        <details class="ai-evidence-details">
+          <summary class="ai-evidence-summary">Evidence (số liệu bắt buộc)</summary>
+          <div class="ai-evidence-table-wrap">
+            <table class="comparison-table" style="margin: 0;">
+              <thead>
+                <tr>
+                  <th>Key</th>
+                  <th>Value</th>
+                  <th>Unit</th>
+                  <th>Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                
       <tr>
         <td data-label="Key">sjc_price_latest</td>
         <td data-label="Value">181.000.000</td>
@@ -932,9 +974,10 @@
         <td data-label="Source">market_snapshot</td>
       </tr>
     
-            </tbody>
-          </table>
-        </div>
+              </tbody>
+            </table>
+          </div>
+        </details>
       </div>
     </section>
   
@@ -947,7 +990,7 @@
         <div style="padding: 14px 20px; border-bottom: 1px solid rgba(0,0,0,0.08); font-size: 13px; font-family: 'Space Mono', monospace; background: #fffaf0;">
           Coverage: 8/8 factors |
           Health: <strong>OK</strong> |
-          Updated: 15:22:20 11/2/2026
+          Updated: 22:22:20 11/2/2026
         </div>
         <table class="comparison-table">
           <thead>
