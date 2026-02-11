@@ -39,7 +39,9 @@ async function main(): Promise<void> {
   console.log('Updating Vietnam daily price...\n')
 
   // Get today's date
-  const today = new Date().toISOString().split('T')[0]
+  const today = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Ho_Chi_Minh'
+  }).format(new Date())
 
   // Load existing data
   const existing = await loadExisting()

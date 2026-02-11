@@ -3,7 +3,7 @@
 
 import { fetchAll as fetchVietnam } from './sources/vietnam/index'
 import { fetchAll as fetchInternational } from './sources/international/index'
-import { fetchAllRates } from './sources/exchange-rate/index'
+import { DEFAULT_HISTORICAL_EXCHANGE_RATE } from './constants'
 
 const STORAGE_FILE = 'data/vietnam-history.json'
 
@@ -40,21 +40,22 @@ async function loadExisting(): Promise<StoredData> {
 }
 
 async function collectSnapshot(): Promise<DailySnapshot | null> {
-  const today = new Date().toISOString().split('T')[0]
+  const today = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Ho_Chi_Minh'
+  }).format(new Date())
 
   // Fetch all data
-  const [vnResult, intlResult, ratesResult] = await Promise.all([
+  const [vnResult, intlResult] = await Promise.all([
     fetchVietnam(),
-    fetchInternational(),
-    fetchAllRates()
+    fetchInternational()
   ])
 
-  if (!intlResult.ok || !ratesResult.ok) {
+  if (!intlResult.ok) {
     console.error('Failed to fetch required data')
     return null
   }
 
-  const vndRate = ratesResult.data['VND'] || 25000
+  const vndRate = parseFloat(process.env.HISTORICAL_EXCHANGE_RATE ?? '') || DEFAULT_HISTORICAL_EXCHANGE_RATE
   const intl = intlResult.data[0]
   const intlVndPerTael = (intl.pricePerOunce! / 31.1035) * vndRate * 37.5
 
@@ -97,7 +98,9 @@ async function main() {
   console.log('Collecting daily snapshot...')
 
   const existing = await loadExisting()
-  const today = new Date().toISOString().split('T')[0]
+  const today = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Ho_Chi_Minh'
+  }).format(new Date())
 
   // Refresh today's snapshot if it already exists so intraday runs stay fresh.
   const alreadyHasToday = existing.snapshots.some(s => s.date === today)

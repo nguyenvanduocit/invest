@@ -159,14 +159,17 @@ function calculateLongTermContext() {
   if (!longHistory) return null
 
   const vndPrices = longHistory.data.map(d => d.vndPerTael).sort((a, b) => a - b)
-  const currentVnd = longHistory.data.at(-1)!.vndPerTael
+  const latestHistoryPoint = historyData.data.at(-1)
+  const currentVnd = latestHistoryPoint?.vndPerTael ?? longHistory.data.at(-1)!.vndPerTael
   const firstVnd = longHistory.data[0]!.vndPerTael
   const minVnd = Math.min(...vndPrices)
   const maxVnd = Math.max(...vndPrices)
   const avgVnd = vndPrices.reduce((a, b) => a + b, 0) / vndPrices.length
 
   const percentileIndex = vndPrices.findIndex(p => p >= currentVnd)
-  const percentile = Math.round((percentileIndex / vndPrices.length) * 100)
+  const percentile = percentileIndex < 0
+    ? 100
+    : Math.round((percentileIndex / vndPrices.length) * 100)
 
   const fromMin = ((currentVnd - minVnd) / minVnd) * 100
   const fromMax = ((maxVnd - currentVnd) / currentVnd) * 100
@@ -197,6 +200,9 @@ const longTermContext = calculateLongTermContext()
 // Calculate insights
 function calculateInsights() {
   const prices = historyData.data
+  if (prices.length === 0) {
+    throw new Error('No historical data available in history.json')
+  }
   const current = prices.at(-1)!
   const first = prices[0]!
 
@@ -214,7 +220,9 @@ function calculateInsights() {
 
   // Moving averages
   const ma7 = prices.slice(-7).reduce((sum, p) => sum + p.vndPerTael, 0) / 7
-  const ma30 = prices.reduce((sum, p) => sum + p.vndPerTael, 0) / prices.length
+  const ma30 = prices.length >= 30
+    ? prices.slice(-30).reduce((sum, p) => sum + p.vndPerTael, 0) / 30
+    : prices.reduce((sum, p) => sum + p.vndPerTael, 0) / prices.length
 
   // Min/Max
   const sorted = [...prices].sort((a, b) => a.vndPerTael - b.vndPerTael)
@@ -318,7 +326,10 @@ const recommendationColorClass = recommendationClass(displayedRecommendation.act
 
 // Sort markets by VND price
 const sortedMarkets = [...latest.normalized].sort((a, b) => a.vndPerGram - b.vndPerGram)
-const international = sortedMarkets.find(p => p.country === 'International')!
+const international = sortedMarkets.find(p => p.country === 'International')
+if (!international) {
+  throw new Error('Missing International price in latest.normalized; cannot render comparisons')
+}
 const vietnam = sortedMarkets.filter(p => p.country === 'Vietnam')
 const sjcMieng = vietnam.find(p => p.source.includes('Miếng'))
 

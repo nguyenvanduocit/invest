@@ -160,6 +160,9 @@ function buildSnapshot(
   longHistory: LongHistoryData | null,
   drawdowns: DrawdownData | null
 ): MarketSnapshot {
+  if (history.data.length === 0) {
+    throw new Error('history.json has no data points')
+  }
   const sjc = latest.normalized.find(p => p.country === 'Vietnam' && p.source.includes('Miếng'))
     || latest.normalized.find(p => p.country === 'Vietnam')
   const intl = latest.normalized.find(p => p.country === 'International')
@@ -383,12 +386,15 @@ function buildMonthlySeries(
 
   return history.data.slice(-30).map(point => {
     const vn = vietnamByDate.get(point.date)
+    const premiumPct = vn
+      ? round(((vn.sell - point.vndPerTael) / point.vndPerTael) * 100, 2)
+      : null
     return {
       date: point.date,
       worldVndPerTael: round(point.vndPerTael, 0),
       worldUsdPerOunce: round(point.usdPerOunce, 2),
       vnSjcVndPerTael: vn ? round(vn.sell, 0) : null,
-      premiumPct: vn ? round(vn.premium, 2) : null
+      premiumPct
     }
   })
 }
@@ -404,6 +410,11 @@ async function main() {
   const longHistory: LongHistoryData | null = await longHistoryFile.exists() ? await longHistoryFile.json() : null
   const drawdowns: DrawdownData | null = await drawdownsFile.exists() ? await drawdownsFile.json() : null
   const vietnamHistory: VietnamHistoryData | null = await vietnamHistoryFile.exists() ? await vietnamHistoryFile.json() : null
+
+  if (history.data.length === 0) {
+    console.error('history.json has no data points')
+    process.exit(1)
+  }
 
   const snapshot = buildSnapshot(latest, history, longHistory, drawdowns)
   const monthlySeries = buildMonthlySeries(history, vietnamHistory)

@@ -139,6 +139,10 @@ async function fetchAllPrices(): Promise<FetchResult<AllPrices>> {
   if (internationalResult.ok) raw.international = internationalResult.data
   else if (internationalResult.ok === false) errors.push(`International: ${internationalResult.error}`)
 
+  if (raw.international.length === 0) {
+    return { ok: false, error: 'International price is required but unavailable' }
+  }
+
   if (chinaResult.ok) raw.china = dedupeBySource(chinaResult.data)
   else if (chinaResult.ok === false) errors.push(`China: ${chinaResult.error}`)
 
