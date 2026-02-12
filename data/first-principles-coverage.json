@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-12T05:31:53.511Z",
+  "checkedAt": "2026-02-12T06:25:17.827Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-12T05:31:53.439Z",
+  "dataFetchedAt": "2026-02-12T06:25:17.752Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,39 +9,28 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "US Breakeven Inflation 10Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 0,
     "countryActionCount": 0,
-    "dollarYieldCount": 11,
+    "dollarYieldCount": 5,
     "sourceFailures": [
       {
-        "id": "us_breakeven_10y",
-        "error": "HTTP 504"
-      },
-      {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
-      },
-      {
         "id": "gdelt_country_actions",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Breakeven Inflation 10Y",
     "Not enough geopolitical events (0/3)",
     "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_breakeven_10y (HTTP 504); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429)"
+    "Source failures: gdelt_country_actions (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }

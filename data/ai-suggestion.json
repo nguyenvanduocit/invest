@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T05:32:14.571Z",
+  "generatedAt": "2026-02-12T06:25:46.243Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,56 +7,57 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 10.28% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn hỗ trợ vàng nhờ lợi suất thực USD giảm 3.16% trong 20 ngày, nhà đầu tư nên chờ tín hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ gần MA7 (157.2 triệu đồng) trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 30 ngày qua (+10.13%), tạo ra rủi ro điều chỉnh kỹ thuật cao. Dù vĩ mô ủng hộ dài hạn nhờ lợi suất thực USD giảm mạnh (-4.17%/5 ngày), nhà đầu tư nên chờ đợi hồi phục về vùng giá tốt hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), tăng 10.28% sau 30 ngày và cao xa MA30 (153.4 triệu đồng), báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng được hỗ trợ bởi yếu tố vĩ mô: Lợi suất thực US 10Y giảm mạnh 3.16% trong 20 ngày qua và lợi suất danh nghĩa US Treasury 10Y giảm 2.8% trong 5 ngày, tạo đà cho giá vàng thế giới tăng 9.81% trong 20 ngày.",
-      "Biên độ dao động ngày cao (2.19%) kèm theo VIX tăng 11.33% trong 20 ngày cho thấy thị trường đang biến động mạnh, rủi ro trồi sụt ngắn hạn lớn cho nhà đầu tư FOMO."
+      "Giá SJC 181,000,000 VND/lượng đang vượt xa MA7 (157,195,143 VND/lượng) khoảng 15.2%, cho thấy thị trường đang ở trạng thái quá mua (overbought) ngắn hạn.",
+      "Đà tăng 10.13% trong 30 ngày và 4.8% chỉ trong 7 ngày là động lượng tăng quá nhanh, thường đi kèm khả năng điều chỉnh ngắn hạn để kiểm chứng giá.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 4.17% trong 5 ngày (xuống 1.84%) là động lực hỗ trợ giá vàng, nhưng tin tức việc làm mạnh làm mờ khả năng cắt giảm lãi suất sớm của Fed.",
+      "Premium 14.27% đang ở mức cao nhưng ổn định trong vùng 12-18% gần đây, chưa có dấu hiệu bong bóng tách biệt so với biến động giá thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá về mức MA7 (157.2 triệu đồng/lượng) nếu dòng tiền ngắn hạn chốt lời sau đợt tăng 4.94% trong 7 ngày.",
-      "Dữ liệu lạm phát kỳ vọng (US Breakeven 10Y) bị thiếu, làm giảm độ tin cậy trong việc đánh giá xu hướng lạm phát thực tế.",
-      "Premium 14.11% hiện tại cao hơn mức thấp nhất 6.22% trong chuỗi dữ liệu nhưng vẫn trong biên độ dao động lịch sử, có thể gây thiệt hại nếu giá thế giới giảm mà premium không giãn kịp."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch ở mức cao nhất lịch sử 5 năm (percentile 100%), khả năng chốt lời ngắn hạn rất lớn.",
+      "Biến động ngày cao (2.19%) cộng với tin tức việc làm Mỹ mạnh có thể gây sốc giá hai chiều bất ngờ.",
+      "Dữ liệu sự kiện địa chính trị và hành động quốc gia trống, thiếu tín hiệu hỗ trợ tăng giá từ cú sốc vĩ mô."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
+        "key": "sjc_price_vs_ma7",
+        "value": 15.2,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change30dPct",
+        "value": 10.13,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change5d",
+        "value": -4.17,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_current_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5 Year",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30 Days",
-        "value": 10.28,
+        "key": "premium_current",
+        "value": 14.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA 7 Days",
-        "value": 157225096,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -3.16,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Change 20d",
-        "value": 9.81,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 20d",
+        "key": "vix_change20d",
         "value": 11.33,
         "unit": "%",
         "source": "first_principles_context"
@@ -64,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T05:31:41.465Z",
+    "latestTimestamp": "2026-02-12T06:24:56.542Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158612031.41843736,
-    "premiumPct": 14.11,
-    "change7dPct": 4.94,
-    "change30dPct": 10.28,
+    "intlVndPerTael": 158402363.69465858,
+    "premiumPct": 14.27,
+    "change7dPct": 4.8,
+    "change30dPct": 10.13,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157225096,
-    "ma30VndPerTael": 153401946,
+    "ma7VndPerTael": 157195143,
+    "ma30VndPerTael": 153394957,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T05:31:53.439Z",
+    "fetchedAt": "2026-02-12T06:25:17.752Z",
     "healthy": false,
-    "missingFactors": [
-      "US Breakeven Inflation 10Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5069.2,
+        "value": 5062.22,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.3,
-        "change5dPct": 6.06,
-        "change20dPct": 9.81,
+        "change1dPct": -0.44,
+        "change5dPct": 5.91,
+        "change20dPct": 9.66,
         "relationToGold": "context"
       },
       {
@@ -125,12 +124,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.32,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 0,
+        "change5dPct": -1.28,
+        "change20dPct": 0.87,
         "relationToGold": "direct"
       },
       {
@@ -189,11 +188,8 @@
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-12 | thehindubusinessline.com | Indian government bonds may surrender some recent gains as US yields rebound after jobs data",
-      "2026-02-12 | businesstimes.com.sg | Gold , silver dip as dollar rises after strong US jobs data",
-      "2026-02-12 | zawya.com | Asian stocks at record high , US jobs data buoys yields , dollar",
-      "2026-02-12 | businesstimes.com.sg | Asian stocks at record high , US jobs data buoys yields , dollar",
-      "2026-02-12 | businesstimes.com.sg | Buy gold on dips ? With sky - high volatility , caution is warranted"
+      "2026-02-12 | business-standard.com | Wall Street Slips as Strong Jobs Report Dims Hopes for Early Fed Rate Cuts",
+      "2026-02-12 | thehindubusinessline.com | Indian government bonds may surrender some recent gains as US yields rebound after jobs data"
     ]
   }
 }
