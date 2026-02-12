@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T11:17:21.328Z",
+  "generatedAt": "2026-02-12T12:14:40.128Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng rất mạnh 10.09% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn tích cực nhờ lợi suất thực USD giảm sâu 4.17% trong 5 ngày và giá thế giới giữ vững trên 5000 USD/oz.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.07% trong 30 ngày qua, tạo áp lực điều chỉnh kỹ thuật lớn. Dù vĩ mô ủng hộ dài hạn nhờ lợi suất thực USD giảm và căng thẳng Trung Đông, rủi ro mua đỉp ngắn hạn là rất cao khi giá đã vượt xa MA30 (153.4 triệu VND/lượng) và premium dao động thất thường.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5N: 100%), cao hơn MA30 (153.4 triệu đồng/lượng) tới 18%, cho thấy thị trường đã mua quá mức ngắn hạn.",
-      "Động lượng tăng giá 30 ngày đạt 10.09% và 7 ngày đạt 4.76% là rất mạnh, nhưng biến động ngày 2.19% cảnh báo rủi ro dao động lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 4.17% trong 5 ngày xuống 1.84% và giá vàng thế giới tăng 9.68% trong 20 ngày lên 5061.79 USD/oz tạo nền tảng tăng giá vững chắc.",
-      "Premium 14.31% nằm trong biên độ dao động 6-18% của 30 ngày qua, không có dấu hiệu bất thường cực đoan so với đỉnh 18.3% ngày 05/02."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 10.07% sau 30 ngày và vượt xa MA30 (153.39 triệu VND/lượng), tín hiệu quá mua rõ ràng.",
+      "Động lượng tăng trưởng chậm lại: tăng 4.74% trong 7 ngày gần đây so với đợt tăng vọt 9.64% của giá thế giới trong 20 ngày qua, cho thấy sức cầu nội địa đang bị kháng cự ở vùng giá cao.",
+      "Lợi suất thực USD 10Y giảm mạnh 4.17% trong 5 ngày và VIX tăng 11.33% trong 20 ngày là động lực hỗ trợ giá vàng, nhưng dữ liệu việc làm Mỹ mạnh đang khiến thị trường điều chỉnh kỳ vọng lãi suất Fed.",
+      "Premium 14.33% hiện tại nằm trong biên độ dao động 12-18% của 30 ngày qua, không có tín hiệu bùng nổ đột biến để thúc đẩy giá tiếp tục tăng tốc trong ngắn hạn."
     ],
     "risks": [
-      "Điểm kỹ thuật: Mua tại đỉnh lịch sử新高 (181 triệu đồng/lượng) có rủi ro điều chỉnh kỹ thuật cao nếu thị trường chốt lời.",
-      "Tin tức: Dữ liệu việc làm Mỹ tốt hơn dự báo đang làm chậm kỳ vọng cắt giảm lãi suất Fed, có thể khiến USD hồi phục và gây áp lực lên giá vàng.",
-      "Biến động: Độ biến động ngày 2.19% kết hợp VIX tăng 11.33% trong 20 ngày cho thấy thị trường đang thần kinh căng thẳng."
+      "Rủi ro chốt lời nhanh: Giá đã tăng liên tục và đạt đỉnh 5 năm, khả năng điều chỉnh về vùng MA7 (157.18 triệu VND/lượng) là khả dĩ.",
+      "Biến động premium cao: Premium đã từng giảm xuống 6.22% và vọt lên 18.3% trong tháng qua, nhà đầu tư có thể bị thiệt hại nếu mua lúc premium cao và bán lúc thấp.",
+      "Tin tức việc làm Mỹ mạnh làm giảm kỳ vọng cắt giảm lãi suất Fed, có thể khiến giá vàng thế giới điều chỉnh giảm thêm."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 10.09,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 14.31,
+        "key": "SJC Change 30d",
+        "value": 10.07,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
+        "key": "SJC vs MA30 Deviation",
+        "value": 17.98,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
         "value": -4.17,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 9.68,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 11.33,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 18,
-        "unit": "% above",
-        "source": "market_snapshot"
+        "key": "Premium Range 30d",
+        "value": 6.22,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Intl Gold Change 20d",
+        "value": 9.64,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T11:16:57.187Z",
+    "latestTimestamp": "2026-02-12T12:14:06.298Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158341173.6701481,
-    "premiumPct": 14.31,
-    "change7dPct": 4.76,
-    "change30dPct": 10.09,
+    "intlVndPerTael": 158310634.02640334,
+    "premiumPct": 14.33,
+    "change7dPct": 4.74,
+    "change30dPct": 10.07,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157186402,
-    "ma30VndPerTael": 153392917,
+    "ma7VndPerTael": 157182039,
+    "ma30VndPerTael": 153391899,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T11:17:05.665Z",
+    "fetchedAt": "2026-02-12T12:14:21.008Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5063.22,
+        "value": 5061.2,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.42,
-        "change5dPct": 5.93,
-        "change20dPct": 9.68,
+        "change1dPct": -0.46,
+        "change5dPct": 5.89,
+        "change20dPct": 9.64,
         "relationToGold": "context"
       },
       {
@@ -185,19 +185,22 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions",
       "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-12 | marketscreener.com | U . S . Futures Climb After Wednesday Selling , Dollar Holds Higher",
-      "2026-02-12 | investordaily.com.au | US jobs surpass forecasts , delaying expected Fed rate cuts",
-      "2026-02-12 | tribune.com.pk | Gold prices in Pakistan Today - February 12 , 2026",
-      "2026-02-12 | thebftonline.com | Is Treasury yield compression running ahead of issuance risk ?",
-      "2026-02-12 | geo.tv | Shining gold , nervous economy"
+    "geopoliticalHeadlines": [
+      "2026-02-12 | openthemagazine.com | Middle East Tensions Rise : US - Iran Talks Stalled , Military Options on the Table",
+      "2026-02-12 | collider.com | Holly Hunter and Paul Giamatti Unpack Their Explosive Rivalry on Star Trek Hotly Debated New Series",
+      "2026-02-12 | timesofindia.indiatimes.com | From canvas to concept : A new way of seeing art @ India Art Fair | Events Movie News",
+      "2026-02-12 | newjerseytelegraph.com | Guardian Metal Resources PLC Announces Interim Results",
+      "2026-02-12 | click2houston.com | Former Elon Musk lawyer emerges as frontrunner in GOP primary for Michael McCaul congressional seat",
+      "2026-02-12 | bnnbloomberg.ca | Stock market today : Wall Street wobbles over strong jobs numbers"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-12 | economictimes.indiatimes.com | Gold rate prediction : Gold price prediction : Gold rate , silver price fall today . What to expect during China Lunar New Year ?",
-      "2026-02-12 | marketscreener.com | U . S . Futures Climb After Wednesday Selling , Dollar Holds Higher",
-      "2026-02-12 | tribune.com.pk | Gold prices in Pakistan Today - February 12 , 2026",
-      "2026-02-12 | geo.tv | Shining gold , nervous economy"
-    ]
+    "countryActionHeadlines": [
+      "2026-02-12 | pakistankakhudahafiz.com | Gold Dips Lower Due To Firmer Dollar After Strong US Jobs Data",
+      "2026-02-12 | dailythepatriot.com | Gold edges lower on firmer dollar after strong US jobs data",
+      "2026-02-12 | fxstreet.com | Forex Today : Upbeat US jobs data help USD stabilize",
+      "2026-02-12 | english.aawsat.com | Gold Eases as Strong US Jobs Data Tempers Fed Rate ‑ cut Expectations",
+      "2026-02-12 | fxstreet.com | NZD / USD holds gains above 0 . 6050 due to RBNZ cautious tone",
+      "2026-02-12 | marketscreener.com | U . S . Futures Climb After Wednesday Selling , Dollar Holds Higher"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
