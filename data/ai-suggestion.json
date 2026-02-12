@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T04:41:47.721Z",
+  "generatedAt": "2026-02-12T05:32:14.571Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,40 +7,40 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.05% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.19%/ngày và không có tín hiệu vĩ mô đặc biệt nào hỗ trợ đà tăng thêm trong ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 10.28% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn hỗ trợ vàng nhờ lợi suất thực USD giảm 3.16% trong 20 ngày, nhà đầu tư nên chờ tín hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ gần MA7 (157.2 triệu đồng) trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 10.05% sau 30 ngày và vượt xa MA30 (153.4 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng giá thế giới (XAUUSD +9.59%/20d) được hỗ trợ bởi lợi suất thực Mỹ giảm (US Real Yield 10Y giảm 3.16%/20d xuống 1.84%), tạo nền tảng vững chắc nhưng không thúc đẩy đột phá mới.",
-      "Biên độ dao động giá cao (2.19%/ngày) cho thấy thanh khoản thị trường đang căng thẳng, nhà đầu tư cần thận trọng khi vào lệnh lúc đỉnh."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), tăng 10.28% sau 30 ngày và cao xa MA30 (153.4 triệu đồng), báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng được hỗ trợ bởi yếu tố vĩ mô: Lợi suất thực US 10Y giảm mạnh 3.16% trong 20 ngày qua và lợi suất danh nghĩa US Treasury 10Y giảm 2.8% trong 5 ngày, tạo đà cho giá vàng thế giới tăng 9.81% trong 20 ngày.",
+      "Biên độ dao động ngày cao (2.19%) kèm theo VIX tăng 11.33% trong 20 ngày cho thấy thị trường đang biến động mạnh, rủi ro trồi sụt ngắn hạn lớn cho nhà đầu tư FOMO."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu sau khi tăng 10.05% trong 30 ngày, đặc biệt nếu giá thế giới không duy trì được trên 5000 USD/oz.",
-      "Biên độ dao động cao 2.19%/ngày có thể gây thanh khoản cạn kiệt hoặc spread giãn rộng bất ngờ.",
-      "Dữ liệu vĩ mô thiếu một số chỉ số quan trọng (Fed Funds Rate, US Treasury 10Y/2Y) làm giảm độ tin cậy của phân tích first-principles."
+      "Rủi ro điều chỉnh giá về mức MA7 (157.2 triệu đồng/lượng) nếu dòng tiền ngắn hạn chốt lời sau đợt tăng 4.94% trong 7 ngày.",
+      "Dữ liệu lạm phát kỳ vọng (US Breakeven 10Y) bị thiếu, làm giảm độ tin cậy trong việc đánh giá xu hướng lạm phát thực tế.",
+      "Premium 14.11% hiện tại cao hơn mức thấp nhất 6.22% trong chuỗi dữ liệu nhưng vẫn trong biên độ dao động lịch sử, có thể gây thiệt hại nếu giá thế giới giảm mà premium không giãn kịp."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 Year",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 10.05,
+        "key": "Change 30 Days",
+        "value": 10.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA30",
-        "value": 153390809,
+        "key": "MA 7 Days",
+        "value": 157225096,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.19,
-        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -51,28 +51,28 @@
       },
       {
         "key": "Gold Spot Change 20d",
-        "value": 9.59,
+        "value": 9.81,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 14.36,
+        "key": "VIX Change 20d",
+        "value": 11.33,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T04:41:10.594Z",
+    "latestTimestamp": "2026-02-12T05:31:41.465Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158277934.3851163,
-    "premiumPct": 14.36,
-    "change7dPct": 4.72,
-    "change30dPct": 10.05,
+    "intlVndPerTael": 158612031.41843736,
+    "premiumPct": 14.11,
+    "change7dPct": 4.94,
+    "change30dPct": 10.28,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157177368,
-    "ma30VndPerTael": 153390809,
+    "ma7VndPerTael": 157225096,
+    "ma30VndPerTael": 153401946,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,23 +83,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T04:41:31.752Z",
+    "fetchedAt": "2026-02-12T05:31:53.439Z",
     "healthy": false,
     "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 10Y",
-      "US Treasury Yield 2Y"
+      "US Breakeven Inflation 10Y"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5058.68,
+        "value": 5069.2,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.51,
-        "change5dPct": 5.84,
-        "change20dPct": 9.59,
+        "change1dPct": -0.3,
+        "change5dPct": 6.06,
+        "change20dPct": 9.81,
         "relationToGold": "context"
       },
       {
@@ -127,45 +125,45 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.32,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 0,
-        "change5dPct": -1.28,
-        "change20dPct": 0.87,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-10",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": null,
+        "value": 4.16,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-10",
+        "change1dPct": -1.42,
+        "change5dPct": -2.8,
+        "change20dPct": -0.72,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.45,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-10",
+        "change1dPct": -0.86,
+        "change5dPct": -3.36,
+        "change20dPct": -2.54,
         "relationToGold": "inverse"
       },
       {
@@ -188,11 +186,14 @@
       "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media",
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-12 | zawya.com | Asian stocks at record high , US jobs data buoys yields , dollar",
-      "2026-02-12 | businesstimes.com.sg | Asian stocks at record high , US jobs data buoys yields , dollar"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-12 | thehindubusinessline.com | Indian government bonds may surrender some recent gains as US yields rebound after jobs data",
+      "2026-02-12 | businesstimes.com.sg | Gold , silver dip as dollar rises after strong US jobs data",
+      "2026-02-12 | zawya.com | Asian stocks at record high , US jobs data buoys yields , dollar",
+      "2026-02-12 | businesstimes.com.sg | Asian stocks at record high , US jobs data buoys yields , dollar",
+      "2026-02-12 | businesstimes.com.sg | Buy gold on dips ? With sky - high volatility , caution is warranted"
+    ]
   }
 }

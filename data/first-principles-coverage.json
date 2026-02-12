@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-12T04:41:31.827Z",
+  "checkedAt": "2026-02-12T05:31:53.511Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-12T04:41:31.752Z",
+  "dataFetchedAt": "2026-02-12T05:31:53.439Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,49 +9,39 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 5,
+    "availableFactors": 7,
     "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 10Y",
-      "US Treasury Yield 2Y"
+      "US Breakeven Inflation 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
+    "geopoliticalCount": 0,
     "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "dollarYieldCount": 11,
     "sourceFailures": [
       {
-        "id": "us_fed_funds_effective",
-        "error": "The operation timed out."
+        "id": "us_breakeven_10y",
+        "error": "HTTP 504"
       },
       {
-        "id": "us_treasury_10y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_treasury_2y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_country_actions",
+        "id": "gdelt_geopolitics",
         "error": "HTTP 429"
       },
       {
-        "id": "gdelt_dollar_yields",
+        "id": "gdelt_country_actions",
         "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Breakeven Inflation 10Y",
+    "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_breakeven_10y (HTTP 504); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
