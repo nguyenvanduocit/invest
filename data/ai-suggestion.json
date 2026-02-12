@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-02-12T22:08:41.638Z",
+  "generatedAt": "2026-02-12T23:08:07.843Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.22%/ngày, đắt hơn giá thế giới tới 17.55%. Dù xu hướng 30 ngày vẫn tăng mạnh (+6.09%), động lực ngắn hạn đã suy yếu (-0.72% tuần qua) và rủi ro điều chỉnh là rất cao khi lợi suất thực USD tăng vọt.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, trong khi giá thế giới điều chỉnh giảm nhẹ; nhà đầu tư nên chờ đợi hồi correction về vùng hỗ trợ MA7 (~156.4 triệu VND/lượng) hoặc sự ổn định của giá thế giới trước khi tham gia.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA7 (156.5 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Premium tăng vọt lên 17.55% từ mức 12.76% đầu tháng, cho thấy giá nội địa đã chạy quá xa so với giá thế giới (4922 USD/oz).",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh 1.09% lên 1.86%, tạo áp lực bán vàng tài sản tài chính; giá thế giới giảm 3.2% trong ngày.",
-      "Biên độ dao động ngày cao (2.22%) kết hợp với việc giá thế giới giảm 3.2% cho thấy thị trường đang trong trạng thái rung lắc mạnh, chưa ổn định."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 5.48% trong 30 ngày gần nhất.",
+      "Premium 18.24% đang ở vùng cao so với trung bình 30 ngày (9.79%-18.3%), tiềm ẩn rủi ro co hẹp biên độ.",
+      "Giá thế giới XAUUSD giảm 1.02% trong 5 ngày và lợi suất thực USD 10Y tăng 1.09%, tạo áp lực bán ngắn hạn.",
+      "Biên độ dao động ngày 2.23% cho thấy thanh khoản cao nhưng rủi ro biến động lớn."
     ],
     "risks": [
-      "Rủi ro co giãn premium: Nếu giá thế giới tiếp tục giảm, giá SJC có thể giảm sâu để thu hẹp khoảng cách 17.55% về mức trung bình.",
-      "Áp lực từ lãi suất thực USD: Lợi suất thực 1.86% đang tạo sức ép ngược lên giá vàng toàn cầu.",
-      "Thanh khoản cao điểm: Khối lượng giao dịch ở đỉnh giá 181 triệu thường đi kèm rủi ro bẫy thanh khoản cho người mua đuổi."
+      "Giá thế giới có thể hồi phục nhanh do VIX vẫn ở mức 17.65 và lạm phát kỳ vọng ổn định 2.29%.",
+      "Premium có thể tiếp tục mở rộng nếu cầu nội địa tăng đột biến, khiến giá SJC không điều chỉnh theo giá thế giới.",
+      "Thiếu tín hiệu vĩ mô rõ ràng từ Fed/ECB trong dữ liệu đầu vào, độ tin cậy giảm."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World Price",
-        "value": 17.55,
+        "key": "SJC Premium vs Intl",
+        "value": 18.24,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA7",
-        "value": 181000000,
+        "key": "SJC Change 30d",
+        "value": 5.48,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 SJC Price",
+        "value": 156378502,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 Value",
-        "value": 156506210,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Gold Spot Change 5d",
+        "value": -1.02,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 1D",
+        "key": "US Real Yield 10Y Change 1d",
         "value": 1.09,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot XAUUSD Change 1D",
-        "value": -3.2,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "SJC Change 30D",
-        "value": 6.09,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "VIX Level",
+        "value": 17.65,
+        "unit": "index",
+        "source": "first_principles_context"
       },
       {
         "key": "Daily Volatility",
-        "value": 2.22,
+        "value": 2.23,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T22:08:11.615Z",
+    "latestTimestamp": "2026-02-12T23:07:44.948Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153973087.12401932,
-    "premiumPct": 17.55,
-    "change7dPct": -0.72,
-    "change30dPct": 6.09,
-    "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 156506210,
-    "ma30VndPerTael": 153566130,
+    "intlVndPerTael": 153079131.55321395,
+    "premiumPct": 18.24,
+    "change7dPct": -1.29,
+    "change30dPct": 5.48,
+    "volatilityDailyPct": 2.23,
+    "ma7VndPerTael": 156378502,
+    "ma30VndPerTael": 153536332,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T22:08:21.481Z",
+    "fetchedAt": "2026-02-12T23:07:55.055Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4921.96,
+        "value": 4902.51,
         "unit": "USD/oz",
-        "date": "2026-02-12",
-        "change1dPct": -3.2,
-        "change5dPct": 2.98,
-        "change20dPct": 6.62,
+        "date": "2026-02-13",
+        "change1dPct": -0.4,
+        "change5dPct": -1.02,
+        "change20dPct": 6.99,
         "relationToGold": "context"
       },
       {
@@ -192,14 +192,17 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | abc.net.au | Cooper Woods wins Australia first gold of Olympics | ABC News Top Stories"
+      "2026-02-12 | freemalaysiatoday.com | Global stocks fall amid tech slide , yields also decline",
+      "2026-02-12 | finanznachrichten.de | Galiano Gold Inc .: Galiano Gold Delivers Annual Mineral Reserve and Mineral Resource Update , Highlighted by Maiden Underground Mineral Resources at Nkran and Abore",
+      "2026-02-12 | cantechletter.com | Waraba Gold Provides Supplemental and Corrective Disclosure in Connection with Annual General and Special Meeting of Shareholders",
+      "2026-02-12 | cantechletter.com | Galiano Gold Delivers Annual Mineral Reserve and Mineral Resource Update , Highlighted by Maiden Underground Mineral Resources at Nkran and Abore"
     ],
     "countryActionHeadlines": [
-      "2026-02-12 | allafrica.com | Nigeria : 2027 Elections - Excess Liquidity May Erode Economic Gains , CBN Warns",
-      "2026-02-12 | currencynews.co.uk | GBP / USD Forecast : Pound Sterling Resilient as Markets Turn Risk - Positive",
-      "2026-02-12 | fxstreet.com | USD / JPY slides as Japan election supports Yen , intervention risks weigh"
+      "2026-02-12 | freemalaysiatoday.com | Global stocks fall amid tech slide , yields also decline",
+      "2026-02-12 | cantechletter.com | Advantage Announces Operations Update , Conclusion of Strategic Review and 2025 Reserves"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-12 | freemalaysiatoday.com | Global stocks fall amid tech slide , yields also decline",
       "2026-02-12 | finance.yahoo.com | Stock market today : Dow , S & P 500 , Nasdaq sink as tech gets hit as AI disruption fears grow ; gold , bitcoin sink"
     ]
   }
