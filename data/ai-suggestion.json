@@ -1,85 +1,85 @@
 {
-  "generatedAt": "2026-02-12T14:22:33.035Z",
+  "generatedAt": "2026-02-12T15:19:21.862Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.04% trong 30 ngày qua, tuy nhiên động lực tăng đã chững lại ở vùng 181 triệu đồng. Biên độ premium 14.36% nằm trong trung bình 30 ngày, không có tín hiệu bất thường nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi giá thế giới có dấu hiệu giảm nhiệt.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+10.19%), tín hiệu kỹ thuật cho thấy cần thời gian củng cố trước khi tiếp tục.",
     "reasons": [
-      "Giá SJC 181 triệu đồng đang ở mức cao nhất 5 năm (percentile 100%), tăng quá nhanh 10.04% trong 30 ngày và cao xa MA30 (153.4 triệu đồng/lượng), rủi ro điều chỉnh cao.",
-      "Động lượng tăng chậm lại: giá thế giới giảm nhẹ -0.43% ngày 12/02 và SJC đi ngang 2 phiên liên tiếp ở 181 triệu đồng, cho thấy áp lực bán chốt lợi nhuận xuất hiện.",
-      "Premium 14.36% nằm trong vùng dao động 30 ngày (9.79%-18.30%), không có tín hiệu khan hiếm cục bộ đột biến để đẩy giá tăng thêm.",
-      "Dữ liệu vĩ mô thiếu an toàn: thiếu US Real Yield và VIX nên không thể đánh giá đầy đủ môi trường lãi suất thực và rủi ro thị trường để ra quyết định MUA mạnh."
+      "Đà tăng quá mạnh trong ngắn hạn: Giá SJC tăng 10.19% trong 30 ngày và 4.85% chỉ trong 7 ngày qua, vượt xa MA30 (153.4 triệu VND/lượng) đến 18% - vùng hiếm khi duy trì được đà tăng tức thì.",
+      "Lợi suất thực Mỹ giảm sâu hỗ trợ xu hướng dài: US Real Yield 10Y giảm 4.17% trong 5 ngày và 3.16% trong 20 ngày, xuống mức 1.84% - động lực chính đẩy giá vàng thế giới lên vùng 5,066 USD/oz.",
+      "Premium đang ổn định: Mức chênh lệch 14.21% nằm trong biên dao động 6-18% của 30 ngày qua, không có dấu hiệu căng thẳng cực đoan cần can thiệp.",
+      "Cảnh báo kiệt sức từ thị trường quốc tế: Headline ngày 12/02 nêu 'Gold Rally Faces Risk of Exhaustion Below $5,170' - gần sát mức giá hiện tại 5,066 USD/oz."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật mạnh sau khi tăng 10.04%/tháng, có thể test vùng hỗ trợ MA7 (157.2 triệu đồng/lượng).",
-      "Giá thế giới giảm (Gold Spot -0.43%) kéo theo tâm lý thị trường Việt Nam.",
-      "Dữ liệu vĩ mô không đầy đủ (thiếu Real Yield, VIX) dẫn đến mù mờ về xu hướng lãi suất thực và rủi ro biến động."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá đang ở mức cao nhất 5 năm (percentile 100%), mọi tín hiệu đảo chiều có thể kích hoạt chốt lời mạnh.",
+      "Biên độ dao động ngày 2.19% cộng với drawdown tồi tệ 41.26% trong lịch sử cho thấy rủi ro biến động cực lớn nếu thị trường quay đầu.",
+      "Dữ liệu vĩ mô thiếu US Treasury Yield 10Y (null) làm giảm khả năng đánh giá chính xác áp lực lãi suất danh nghĩa."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá thế giới quy đổi",
+        "value": 158483693,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biên độ tăng 30 ngày",
+        "value": 10.19,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 10.04,
+        "key": "MA30 giá SJC",
+        "value": 153397668,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y",
+        "value": 1.84,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "SJC vs MA30 Gap",
-        "value": 18,
-        "unit": "million VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Current",
-        "value": 14.36,
+        "key": "Thay đổi lợi suất thực 5 ngày",
+        "value": -4.17,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 8.51,
-        "unit": "% (9.79-18.30)",
+        "key": "Giá vàng thế giới XAUUSD",
+        "value": 5066.35,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Gold Spot Change 1d",
-        "value": -0.43,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Change 20d",
-        "value": 9.67,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Missing Macro Factors",
-        "value": 4,
-        "unit": "indicators",
-        "source": "first_principles_context"
+        "key": "Percentile 5 năm",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T14:21:49.259Z",
+    "latestTimestamp": "2026-02-12T15:18:51.077Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158266868.8162444,
-    "premiumPct": 14.36,
-    "change7dPct": 4.71,
-    "change30dPct": 10.04,
+    "intlVndPerTael": 158483693.4674337,
+    "premiumPct": 14.21,
+    "change7dPct": 4.85,
+    "change30dPct": 10.19,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157175787,
-    "ma30VndPerTael": 153390440,
+    "ma7VndPerTael": 157206762,
+    "ma30VndPerTael": 153397668,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,24 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T14:22:10.612Z",
+    "fetchedAt": "2026-02-12T15:19:00.137Z",
     "healthy": false,
     "missingFactors": [
-      "US Real Yield 10Y",
-      "US Treasury Yield 10Y",
-      "US Treasury Yield 2Y",
-      "VIX Volatility Index"
+      "US Treasury Yield 10Y"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5062.66,
+        "value": 5067.19,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.43,
-        "change5dPct": 5.92,
-        "change20dPct": 9.67,
+        "change1dPct": -0.34,
+        "change5dPct": 6.02,
+        "change20dPct": 9.77,
         "relationToGold": "context"
       },
       {
@@ -124,12 +121,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.84,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-10",
+        "change1dPct": -1.6,
+        "change5dPct": -4.17,
+        "change20dPct": -3.16,
         "relationToGold": "inverse"
       },
       {
@@ -168,23 +165,23 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.45,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-10",
+        "change1dPct": -0.86,
+        "change5dPct": -3.36,
+        "change20dPct": -2.54,
         "relationToGold": "inverse"
       },
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": null,
+        "value": 17.65,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": -0.79,
+        "change5dPct": -5.31,
+        "change20dPct": 5.37,
         "relationToGold": "direct"
       }
     ],
@@ -197,15 +194,17 @@
       "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | manilatimes.net | Midland Provides an Overview of Its 2026 Exploration Activities for Its Gold and Copper - Gold Projects , Including Those with Its Partners"
+      "2026-02-12 | telegraphherald.com | Wall Street points higher as earnings roll out ahead of new jobs data",
+      "2026-02-12 | thewrap.com | Good Luck , Have Fun , Dont Die Director Gore Verbinksi Tells All"
     ],
     "countryActionHeadlines": [
-      "2026-02-12 | rttnews.com | Gold Prices Slip As Traders Trim Rate Cut Bets",
-      "2026-02-12 | marketscreener.com | Long US Treasury yields to rise later in year ; supply to postpone Fed balance sheet reduction : Reuters Poll",
-      "2026-02-12 | finance.yahoo.com | Stock market today : Dow , S & P 500 , Nasdaq futures rise after jobs surprise puts focus back on Fed rate path",
-      "2026-02-12 | investinglive.com | USDJPY fades quickly NFP gains and falls to a key trendline ; US CPI in focus now",
-      "2026-02-12 | marketscreener.com | India retail inflation at 2 . 75 % in first reading under new data series"
+      "2026-02-12 | actionforex.com | Fed Has Room to Wait - ActionForex",
+      "2026-02-12 | ecb.europa.eu | Europe and monetary sovereignty"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-12 | actionforex.com | Chart Alert : Gold Rally Faces Risk of Exhaustion Below $5 , 170",
+      "2026-02-12 | jcnnewswire.com | Radisson Highlights Developing Vein Model at OBrien Gold Project with Implications for Future Growth and Mine Planning",
+      "2026-02-12 | juniorminingnetwork.com | Fortuna Mining Extends High Grade Gold Mineralization at Sunbird , Including 6 . 1 g / t Au over 18 . 9 meters , Séguéla Mine , Côte dIvoire"
+    ]
   }
 }

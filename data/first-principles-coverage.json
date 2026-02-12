@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-12T14:22:10.686Z",
+  "checkedAt": "2026-02-12T15:19:00.224Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-12T14:22:10.612Z",
+  "dataFetchedAt": "2026-02-12T15:19:00.137Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,50 +9,30 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 4,
+    "availableFactors": 7,
     "missingFactors": [
-      "US Real Yield 10Y",
-      "US Treasury Yield 10Y",
-      "US Treasury Yield 2Y",
-      "VIX Volatility Index"
+      "US Treasury Yield 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 2,
-    "countryActionCount": 13,
-    "dollarYieldCount": 0,
+    "countryActionCount": 9,
+    "dollarYieldCount": 8,
     "sourceFailures": [
       {
-        "id": "us_real_yield_10y",
-        "error": "The operation timed out."
-      },
-      {
         "id": "us_treasury_10y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_treasury_2y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "vix",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "error": "HTTP 502"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Real Yield 10Y, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index",
-    "Not enough geopolitical events (2/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Treasury Yield 10Y",
+    "Not enough geopolitical events (2/3)"
   ],
   "warnings": [
-    "Source failures: us_real_yield_10y (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_treasury_10y (HTTP 502)"
   ],
   "canProceedToIntegration": false
 }
