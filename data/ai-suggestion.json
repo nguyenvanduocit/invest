@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T08:14:44.778Z",
+  "generatedAt": "2026-02-12T09:18:52.094Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 100% 5 năm) với đà tăng quá nóng +10.28% trong 30 ngày, khiến rủi ro điều chỉnh ngắn hạn cao hơn lợi ích mua đuổi. Dù first-principles hỗ trợ vàng dài hạn nhờ lợi suất thực USD giảm, nhà đầu tư nên chờ hồi về vùng hỗ trợ gần MA7 (157.2 triệu VND/lượng) hoặc xác nhận phá vỡ đỉnh cũ trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.4%/tháng, nhưng rủi ro mua đỉp ngắn hạn rất lớn khi biên độ dao động cao (2.19%) và giá đã xa MA7. Nhà đầu tư nên chờ đợi信 hiệu hồi điều chỉnh về vùng hỗ trợ MA7 (~157.2 triệu VND/lượng) trước khi nhập cuộc.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA7 là 157.2 triệu VND/lượng tới 15.1% - tín hiệu quá mua rõ rệt.",
-      "Động lượng tăng quá nóng: giá tăng +10.28% trong 30 ngày và +4.94% trong 7 ngày, vượt xa biên độ dao động bình quân 2.19%/ngày.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh -4.17% trong 5 ngày xuống 1.84% là động lực hỗ trợ giá vàng thế giới tăng +6.03% trong 5 ngày, nhưng đã phần nào được định giá.",
-      "Premium 14.11% hiện tại cao hơn đáng kể so với mức đáy 6.22% ngày 28/01, cho thấy giá trong nước đã tích hợp phần lớn đà tăng thế giới và tiềm ẩn rủi ro co hẹp."
+      "Giá SJC 181 triệu VND đang ở mức cao nhất lịch sử 5 năm (percentile 100%), tăng mạnh 10.4% trong 30 ngày qua, rủi ro điều chỉnh ngắn hạn rất cao.",
+      "Giá hiện tại (181 triệu) cao hơn đáng kể so với MA7 (157.2 triệu VND/lượng) và MA30 (153.4 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua (overbought) trên đồ thị ngày.",
+      "Động lực vĩ mô tích cực từ việc lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 4.17% trong 5 ngày và VIX tăng 11.33% trong 20 ngày, hỗ trợ xu hướng tăng dài hạn của vàng.",
+      "Premium 13.99% đang ở mức hợp lý so với đỉnh 18.3% ngày 05-02, cho thấy tâm lý thị trường Việt Nam ổn định, không có dấu hiệu hoảng loạn mua gom đẩy chênh lệch lên cực đoan."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu về vùng MA7 (157.2 triệu VND/lượng) hoặc thấp hơn do giá quá cao so với trung bình động.",
-      "Rủi ro thanh khoản khi mua ở đỉnh lịch sử; dữ liệu cho thấy có 1 đợt giảm sâu chưa phục hồi với mức tệ nhất -41.26%.",
-      "Tin tức việc làm Mỹ mạnh làm giảm kỳ vọng cắt giảm lãi suất Fed sớm, gây áp lực lên giá vàng ngắn hạn."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá quá xa đường trung bình động ngắn hạn và biến động ngày cao (2.19%).",
+      "Dữ liệu vĩ mô không hoàn chỉnh (healthy: false) và tin tức chính sách không có sự kiện đột biến, có thể dẫn đến thiếu tín hiệu đảo chiều rõ ràng.",
+      "Phản ứng của FED trước báo cáo việc làm mạnh (Strong Jobs Report) có thể làm mạnh USD, gây áp lực giảm giá vàng ngắn hạn."
     ],
     "evidence": [
       {
@@ -34,20 +34,14 @@
       },
       {
         "key": "Change 30d",
-        "value": 10.28,
+        "value": 10.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7",
-        "value": 157225826,
+        "key": "MA7 Price",
+        "value": 157249036,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Current",
-        "value": 14.11,
-        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -57,23 +51,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 5d",
-        "value": 6.03,
+        "key": "VIX Change 20d",
+        "value": 11.33,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Current",
+        "value": 13.99,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Volatility Daily",
+        "value": 2.19,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T08:14:03.354Z",
+    "latestTimestamp": "2026-02-12T09:18:15.715Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158617143.15194038,
-    "premiumPct": 14.11,
-    "change7dPct": 4.94,
-    "change30dPct": 10.28,
+    "intlVndPerTael": 158779610.3153778,
+    "premiumPct": 13.99,
+    "change7dPct": 5.05,
+    "change30dPct": 10.4,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157225826,
-    "ma30VndPerTael": 153402116,
+    "ma7VndPerTael": 157249036,
+    "ma30VndPerTael": 153407532,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T08:14:17.507Z",
+    "fetchedAt": "2026-02-12T09:18:32.304Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5067.67,
+        "value": 5074.44,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.33,
-        "change5dPct": 6.03,
-        "change20dPct": 9.78,
+        "change1dPct": -0.2,
+        "change5dPct": 6.17,
+        "change20dPct": 9.93,
         "relationToGold": "context"
       },
       {
@@ -178,21 +184,17 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty",
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026",
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions",
       "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026",
-      "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media",
-      "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
+      "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-12 | clickorlando.com | Asia shares mostly gained after Wall Street wobbled over strong jobs report",
-      "2026-02-12 | stabroeknews.com | PPP mum on Mohamed bankrolling claims"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
       "2026-02-12 | fxstreet.com | USD / CHF steadies despite rising Swiss yields on safe - haven demand",
-      "2026-02-12 | thyblackman.com | Social Security and Medicare Debt Could Trigger Inflation Crisis .",
-      "2026-02-12 | thehindubusinessline.com | Indian government bonds may surrender some recent gains as US yields rebound after jobs data"
+      "2026-02-12 | thyblackman.com | Social Security and Medicare Debt Could Trigger Inflation Crisis ."
     ],
     "dollarYieldHeadlines": [
       "2026-02-12 | ianslive.in | Precious metal prices dip over dollar gains",
