@@ -1,85 +1,79 @@
 {
-  "generatedAt": "2026-02-12T17:23:48.271Z",
+  "generatedAt": "2026-02-12T18:20:59.389Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+7.99%), cộng hưởng premium mở rộng nhanh ra mức 16.53%; rủi ro điều chỉnh kỹ thuật ngắn hạn rất cao khi lợi suất thực USD và VIX đang giảm, khuyến nghị chờ đợi hồi về vùng hỗ trợ thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với premium giãn mạnh lên 17.72%, trong khi giá thế giới điều chỉnh giảm -3.39% do dữ liệu việc làm Mỹ mạnh. Rủi ro mua đỉp ngắn hạn rất cao, cần chờ xác nhận xu hướng hoặc premium hồi về vùng 12-14%.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn MA30 (153,292,316 VND/lượng) tới 18.1% sau đà tăng 30 ngày (+7.99%) rất nhanh.",
-      "Premium 16.53% đang ở vùng cao so với trung bình chuỗi dữ liệu (dao động 6.22%-18.30%), cho thấy thị trường Việt Nam đã định giá quá lạc quan so với giá thế giới.",
-      "Động lực vĩ mô đang suy yếu: Lợi suất thực 10Y Mỹ giảm -4.17% trong 5 ngày và VIX giảm -5.31%, cho thấy lo ngại rủi ro hạ nhiệt, bớt hỗ trợ cho đà tăng giá vàng.",
-      "Giá thế giới (XAUUSD) giảm -2.23% trong ngày và đối mặt cảnh báo 'rủi ro kiệt sức' dưới ngưỡng 5,170 USD/oz từ tin tức thị trường."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 6.9% sau 30 ngày và nằm trên MA7 (156.5 triệu VND/lượng) đến 15.6%.",
+      "Premium giãn đột biến lên 17.72% so với mức trung bình 12-14% trong tháng, cho thấy định giá SJC đang căng thẳng so với giá thế giới.",
+      "Giá thế giới XAUUSD giảm mạnh -3.39% trong ngày xuống 4912 USD/oz do dữ liệu việc làm Mỹ tốt (headline: 'strong US jobs data'), gây áp lực bán ra.",
+      "Lợi suất thực 10Y giảm -4.17% trong 5 ngày xuống 1.84% và USD Index giảm -1.54% trong 20 ngày là hỗ trợ vĩ mô dài hạn, nhưng động lực ngắn hạn đã suy yếu."
     ],
     "risks": [
-      "Đà tăng có thể tiếp tục kéo dài nếu số liệu việc làm Mỹ (Jobs Blockbuster) làm tăng lo ngại lạm phát, đẩy vàng lên thành kênh trú ẩn.",
-      "Premium có thể nới rộng thêm (từ 16.53% lên gần đỉnh 18.30%) nếu cung cầu SJC tại địa phương căng thẳng, gây thiệt hại cho người bán khống.",
-      "Thời gian phục hồi sau các đợt sụt giảm trước đây rất dài (trung bình 1,369 ngày), rủi ro thanh khoản nếu mua đỉnh lịch sử."
+      "Điều chỉnh kỹ thuật sâu hơn nếu giá thế giới mất mốc hỗ trợ 4900 USD/oz, kéo SJC giảm theo dù premium cao.",
+      "Premium co lại nhanh từ 17.72% về mức bình thường 12-14% sẽ gây mất giá cho người mua đỉnh, ước tính rủi ro giảm 8-10%.",
+      "Biến động ngày cao (2.28%) cộng với VIX tăng 5.37% trong 20 ngày cho thấy thị trường không ổn định, dễ tạo bẫy thanh khoản."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs 5Y Percentile",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC 30D Change",
-        "value": 7.99,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Premium over World Price",
-        "value": 16.53,
+        "key": "Premium SJC/Thế giới",
+        "value": 17.72,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y 5D Change",
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động giá XAUUSD 1 ngày",
+        "value": -3.39,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10Y thay đổi 5 ngày",
         "value": -4.17,
         "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "VIX 5D Change",
-        "value": -5.31,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Gold Spot 1D Change",
-        "value": -2.23,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "SJC Price vs MA30",
-        "value": 18.1,
-        "unit": "%",
+        "key": "MA7 giá SJC",
+        "value": 156530593,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Avg Recovery Days",
-        "value": 1369,
-        "unit": "days",
-        "source": "market_snapshot"
+        "key": "VIX thay đổi 20 ngày",
+        "value": 5.37,
+        "unit": "%",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T17:23:06.786Z",
+    "latestTimestamp": "2026-02-12T18:20:29.207Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155323127.81816307,
-    "premiumPct": 16.53,
-    "change7dPct": 2.76,
-    "change30dPct": 7.99,
-    "volatilityDailyPct": 2.24,
-    "ma7VndPerTael": 156755253,
-    "ma30VndPerTael": 153292316,
+    "intlVndPerTael": 153750513.53223163,
+    "premiumPct": 17.72,
+    "change7dPct": 1.72,
+    "change30dPct": 6.9,
+    "volatilityDailyPct": 2.28,
+    "ma7VndPerTael": 156530593,
+    "ma30VndPerTael": 153239895,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T17:23:26.184Z",
+    "fetchedAt": "2026-02-12T18:20:43.366Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4971.32,
+        "value": 4912.37,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -2.23,
-        "change5dPct": 4.01,
-        "change20dPct": 7.69,
+        "change1dPct": -3.39,
+        "change5dPct": 2.78,
+        "change20dPct": 6.42,
         "relationToGold": "context"
       },
       {
@@ -192,21 +186,25 @@
       "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | mdjonline.com | War of words erupts over Fulton County elections after FBI raid"
+      "2026-02-12 | fastmarkets.com | Chinese zinc and lead smelters rely on byproducts in 2026",
+      "2026-02-12 | internationalviewpoint.org | In Search of Russia Lost Opposition - International Viewpoint - online socialist magazine",
+      "2026-02-12 | dailymail.co.uk | As a Norwegian Olympian admits his affair on live TV , what these 10 celebrities REALLY meant when they publicly confessed indiscretions - according to a psychologist",
+      "2026-02-12 | tickerreport.com | Himax Technologies Q4 Earnings Call Highlights",
+      "2026-02-12 | mining.com | Battered Vizsla keeps  long - term  commitment to Mexican project"
     ],
     "countryActionHeadlines": [
+      "2026-02-12 | marketscreener.com | Gold cascades down as strong US jobs data and stop - selling weigh",
       "2026-02-12 | rediff.com | Gold falls Rs 400 to Rs 1 . 6 lakh / 10g , silver remains flat",
       "2026-02-12 | manilatimes.net | LLV Exchange launches its unique Gold Contract service : a hardware - free cloud solution for earning rewards on the Ripple network .",
       "2026-02-12 | naturalnews.com | The Terminal Phase : How America Economic Warfare and Technological Decline Have Sealed Its Fate – NaturalNews . com",
       "2026-02-12 | dailybreeze.com | Congress may finally touch the  third rail . Inflation will hold them accountable . – Daily Breeze",
-      "2026-02-12 | finance.yahoo.com | Inflation hidden tax on capital : Lessons from Argentina and Bolivia",
-      "2026-02-12 | markets.financialcontent.com | FinancialContent - Jobs Blockbuster Chills Rate Cut Hopes : Wall Street Tumbles as January Payrolls Double Forecasts"
+      "2026-02-12 | finance.yahoo.com | Inflation hidden tax on capital : Lessons from Argentina and Bolivia"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-12 | marketscreener.com | Gold cascades down as strong US jobs data and stop - selling weigh",
       "2026-02-12 | rediff.com | Govt releases new CPI series ; January retail inflation at 2 . 75 %",
       "2026-02-12 | marketpulse.com | Chart alert : Gold rally faces risk of exhaustion below $5 , 170",
-      "2026-02-12 | marketpulse.com | Markets Today : Nikkei record anchors fifth day of Asian gains , US Dollar struggles as FTSE 100 slides 50 points after all - time high print",
-      "2026-02-12 | actionforex.com | Chart Alert : Gold Rally Faces Risk of Exhaustion Below $5 , 170"
+      "2026-02-12 | marketpulse.com | Markets Today : Nikkei record anchors fifth day of Asian gains , US Dollar struggles as FTSE 100 slides 50 points after all - time high print"
     ]
   }
 }
