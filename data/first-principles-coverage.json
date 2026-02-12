@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-11T23:10:14.281Z",
+  "checkedAt": "2026-02-12T00:20:41.170Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-11T23:10:14.208Z",
+  "dataFetchedAt": "2026-02-12T00:20:41.099Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,22 +16,27 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
+    "geopoliticalCount": 0,
     "countryActionCount": 15,
-    "dollarYieldCount": 11,
+    "dollarYieldCount": 14,
     "sourceFailures": [
       {
         "id": "us_fed_funds_effective",
         "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Effective Fed Funds Rate"
+    "Missing required factors: US Effective Fed Funds Rate",
+    "Not enough geopolitical events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_fed_funds_effective (The operation timed out.)"
+    "Source failures: us_fed_funds_effective (The operation timed out.); gdelt_geopolitics (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
