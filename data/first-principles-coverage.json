@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-12T12:14:21.082Z",
+  "checkedAt": "2026-02-12T13:32:16.341Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-12T12:14:21.008Z",
+  "dataFetchedAt": "2026-02-12T13:32:16.270Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,27 +9,35 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 6,
+    "missingFactors": [
+      "US Dollar Trade Weighted Index",
+      "US Effective Fed Funds Rate"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
-    "countryActionCount": 13,
-    "dollarYieldCount": 0,
+    "geopoliticalCount": 2,
+    "countryActionCount": 15,
+    "dollarYieldCount": 14,
     "sourceFailures": [
       {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "id": "usd_index_trade_weighted",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "us_fed_funds_effective",
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Dollar Trade Weighted Index, US Effective Fed Funds Rate",
+    "Not enough geopolitical events (2/3)"
   ],
   "warnings": [
-    "Source failures: gdelt_dollar_yields (HTTP 429)"
+    "Source failures: usd_index_trade_weighted (HTTP 504); us_fed_funds_effective (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
