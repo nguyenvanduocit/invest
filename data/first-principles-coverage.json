@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-12T13:32:16.341Z",
+  "checkedAt": "2026-02-12T14:22:10.686Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-12T13:32:16.270Z",
+  "dataFetchedAt": "2026-02-12T14:22:10.612Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,35 +9,50 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 6,
+    "availableFactors": 4,
     "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Effective Fed Funds Rate"
+      "US Real Yield 10Y",
+      "US Treasury Yield 10Y",
+      "US Treasury Yield 2Y",
+      "VIX Volatility Index"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 2,
-    "countryActionCount": 15,
-    "dollarYieldCount": 14,
+    "countryActionCount": 13,
+    "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "usd_index_trade_weighted",
-        "error": "HTTP 504"
+        "id": "us_real_yield_10y",
+        "error": "The operation timed out."
       },
       {
-        "id": "us_fed_funds_effective",
+        "id": "us_treasury_10y",
         "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_2y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "vix",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_dollar_yields",
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Dollar Trade Weighted Index, US Effective Fed Funds Rate",
-    "Not enough geopolitical events (2/3)"
+    "Missing required factors: US Real Yield 10Y, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index",
+    "Not enough geopolitical events (2/3)",
+    "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: usd_index_trade_weighted (HTTP 504); us_fed_funds_effective (The operation timed out.)"
+    "Source failures: us_real_yield_10y (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
