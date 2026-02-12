@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T10:18:26.423Z",
+  "generatedAt": "2026-02-12T11:17:21.328Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 10.17%/tháng, nhưng thanh khoản cao điểm và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư không nên FOMO mua đuổi tại vùng giá 181 triệu/lượng này.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng rất mạnh 10.09% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn tích cực nhờ lợi suất thực USD giảm sâu 4.17% trong 5 ngày và giá thế giới giữ vững trên 5000 USD/oz.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang vượt xa MA30 (153.4 triệu/lượng) tới 17.9% và đang ở mức cao nhất 5 năm (percentile 100%), tín hiệu quá mua rõ ràng cần thời gian củng cố.",
-      "Động lượng vĩ mô vẫn hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh 3.16% trong 20 ngày (xuống 1.84%) và giá vàng thế giới tăng 9.73% trong 20 ngày (lên 5065 USD/oz), tạo nền tảng giá dài hạn.",
-      "Premium 14.23% hiện tại nằm trong biên độ dao động 30 ngày (6.22% - 18.30%), không có dấu hiệu bất thường cực đoan so với đỉnh premium 18.3% hôm 05/02.",
-      "VIX tăng 11.33% trong 20 ngày (lên 17.79) cho thấy tâm lý thị trường lo ngại, hỗ trợ nhu cầu trú ẩn vào vàng ngắn hạn."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5N: 100%), cao hơn MA30 (153.4 triệu đồng/lượng) tới 18%, cho thấy thị trường đã mua quá mức ngắn hạn.",
+      "Động lượng tăng giá 30 ngày đạt 10.09% và 7 ngày đạt 4.76% là rất mạnh, nhưng biến động ngày 2.19% cảnh báo rủi ro dao động lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 4.17% trong 5 ngày xuống 1.84% và giá vàng thế giới tăng 9.68% trong 20 ngày lên 5061.79 USD/oz tạo nền tảng tăng giá vững chắc.",
+      "Premium 14.31% nằm trong biên độ dao động 6-18% của 30 ngày qua, không có dấu hiệu bất thường cực đoan so với đỉnh 18.3% ngày 05/02."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá quá xa MA7 (157.2 triệu/lượng) và biến động ngày cao (2.19%).",
-      "Dữ liệu sự kiện vĩ mô (ECB, Fed) không có tin tức đột biến cụ thể, confidence bị giới hạn do thiếu driver mới.",
-      "Giá thế giới giảm nhẹ 0.38% phiên gần nhất có thể báo hiệu chốt lời ngắn hạn."
+      "Điểm kỹ thuật: Mua tại đỉnh lịch sử新高 (181 triệu đồng/lượng) có rủi ro điều chỉnh kỹ thuật cao nếu thị trường chốt lời.",
+      "Tin tức: Dữ liệu việc làm Mỹ tốt hơn dự báo đang làm chậm kỳ vọng cắt giảm lãi suất Fed, có thể khiến USD hồi phục và gây áp lực lên giá vàng.",
+      "Biến động: Độ biến động ngày 2.19% kết hợp VIX tăng 11.33% trong 20 ngày cho thấy thị trường đang thần kinh căng thẳng."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_change_30d",
+        "value": 10.09,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_pct",
-        "value": 10.17,
+        "key": "sjc_premium_current",
+        "value": 14.31,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30_vnd",
-        "value": 153396489,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_pct",
-        "value": 14.23,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.84,
+        "key": "us_real_yield_10y_change_5d",
+        "value": -4.17,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 9.73,
+        "key": "gold_spot_change_20d",
+        "value": 9.68,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "vix_change_20d",
         "value": 11.33,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_price_vs_ma30",
+        "value": 18,
+        "unit": "% above",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T10:17:38.930Z",
+    "latestTimestamp": "2026-02-12T11:16:57.187Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158448341.45552233,
-    "premiumPct": 14.23,
-    "change7dPct": 4.83,
-    "change30dPct": 10.17,
+    "intlVndPerTael": 158341173.6701481,
+    "premiumPct": 14.31,
+    "change7dPct": 4.76,
+    "change30dPct": 10.09,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157201712,
-    "ma30VndPerTael": 153396489,
+    "ma7VndPerTael": 157186402,
+    "ma30VndPerTael": 153392917,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T10:17:44.017Z",
+    "fetchedAt": "2026-02-12T11:17:05.665Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5065.27,
+        "value": 5063.22,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.38,
-        "change5dPct": 5.98,
-        "change20dPct": 9.73,
+        "change1dPct": -0.42,
+        "change5dPct": 5.93,
+        "change20dPct": 9.68,
         "relationToGold": "context"
       },
       {
@@ -184,25 +178,25 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty",
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026",
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions",
-      "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026",
-      "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media"
+      "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-12 | sitkasentinel.com | Asia shares mostly gained after Wall Street wobbled over strong jobs report",
-      "2026-02-12 | rockymounttelegram.com | Asia shares mostly gain after Wall Street wobbled over strong jobs report",
-      "2026-02-12 | fnarena.com | ASX Winners And Losers Of Today - 12 - 02 - 26",
-      "2026-02-12 | durangoherald.com | Asia shares mostly gain after Wall Street wobbled over strong jobs report",
-      "2026-02-12 | hawaiitelegraph.com | Guardian Metal Resources PLC Announces Interim Results",
-      "2026-02-12 | eco-business.com | Global treaty to trace critical minerals stalls amid uncertainty"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-12 | marketscreener.com | U . S . Futures Climb After Wednesday Selling , Dollar Holds Higher",
+      "2026-02-12 | investordaily.com.au | US jobs surpass forecasts , delaying expected Fed rate cuts",
+      "2026-02-12 | tribune.com.pk | Gold prices in Pakistan Today - February 12 , 2026",
+      "2026-02-12 | thebftonline.com | Is Treasury yield compression running ahead of issuance risk ?",
       "2026-02-12 | geo.tv | Shining gold , nervous economy"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-12 | economictimes.indiatimes.com | Gold rate prediction : Gold price prediction : Gold rate , silver price fall today . What to expect during China Lunar New Year ?",
+      "2026-02-12 | marketscreener.com | U . S . Futures Climb After Wednesday Selling , Dollar Holds Higher",
+      "2026-02-12 | tribune.com.pk | Gold prices in Pakistan Today - February 12 , 2026",
       "2026-02-12 | geo.tv | Shining gold , nervous economy"
     ]
   }
