@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-12T15:19:00.224Z",
+  "checkedAt": "2026-02-12T16:20:10.375Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-12T15:19:00.137Z",
+  "dataFetchedAt": "2026-02-12T16:20:10.301Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,30 +9,18 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "US Treasury Yield 10Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 2,
-    "countryActionCount": 9,
+    "geopoliticalCount": 6,
+    "countryActionCount": 12,
     "dollarYieldCount": 8,
-    "sourceFailures": [
-      {
-        "id": "us_treasury_10y",
-        "error": "HTTP 502"
-      }
-    ],
-    "healthy": false
+    "sourceFailures": [],
+    "healthy": true
   },
-  "hardFailures": [
-    "Missing required factors: US Treasury Yield 10Y",
-    "Not enough geopolitical events (2/3)"
-  ],
-  "warnings": [
-    "Source failures: us_treasury_10y (HTTP 502)"
-  ],
-  "canProceedToIntegration": false
+  "hardFailures": [],
+  "warnings": [],
+  "canProceedToIntegration": true
 }

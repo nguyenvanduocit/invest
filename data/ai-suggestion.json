@@ -1,85 +1,72 @@
 {
-  "generatedAt": "2026-02-12T15:19:21.862Z",
+  "generatedAt": "2026-02-12T16:20:27.918Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+10.19%), tín hiệu kỹ thuật cho thấy cần thời gian củng cố trước khi tiếp tục.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với động lượng tăng mạnh 7.33%/tháng, nhưng tín hiệu kỹ thuật cho thấy xu hướng ngắn hạn đang quá mua và đối mặt với áp lực điều chỉnh khi giá thế giới quay đầu giảm.",
     "reasons": [
-      "Đà tăng quá mạnh trong ngắn hạn: Giá SJC tăng 10.19% trong 30 ngày và 4.85% chỉ trong 7 ngày qua, vượt xa MA30 (153.4 triệu VND/lượng) đến 18% - vùng hiếm khi duy trì được đà tăng tức thì.",
-      "Lợi suất thực Mỹ giảm sâu hỗ trợ xu hướng dài: US Real Yield 10Y giảm 4.17% trong 5 ngày và 3.16% trong 20 ngày, xuống mức 1.84% - động lực chính đẩy giá vàng thế giới lên vùng 5,066 USD/oz.",
-      "Premium đang ổn định: Mức chênh lệch 14.21% nằm trong biên dao động 6-18% của 30 ngày qua, không có dấu hiệu căng thẳng cực đoan cần can thiệp.",
-      "Cảnh báo kiệt sức từ thị trường quốc tế: Headline ngày 12/02 nêu 'Gold Rally Faces Risk of Exhaustion Below $5,170' - gần sát mức giá hiện tại 5,066 USD/oz."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (153.26 triệu VND/lượng), cho thấy thị trường đang trong vùng quá mua.",
+      "Premium tăng vọt lên 17.25% từ mức 9.79% đầu tháng, cho thấy nhà đầu tư Việt Nam FOMO mạnh trong khi giá thế giới đã giảm 3.13% xuống 4925 USD/oz.",
+      "Lợi suất thực 10Y giảm 4.17% trong 5 ngày xuống 1.84% và USD Index giảm 1.54% trong 20 ngày là động lực hỗ trợ vàng, nhưng các headline cảnh báo 'rally faces exhaustion' dưới ngưỡng 5170 USD."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá đang ở mức cao nhất 5 năm (percentile 100%), mọi tín hiệu đảo chiều có thể kích hoạt chốt lời mạnh.",
-      "Biên độ dao động ngày 2.19% cộng với drawdown tồi tệ 41.26% trong lịch sử cho thấy rủi ro biến động cực lớn nếu thị trường quay đầu.",
-      "Dữ liệu vĩ mô thiếu US Treasury Yield 10Y (null) làm giảm khả năng đánh giá chính xác áp lực lãi suất danh nghĩa."
+      "Rủi ro điều chỉnh giá cao khi biên độ dao động 2.26%/ngày và giá thế giới giảm mạnh 3.13% trong 1 ngày.",
+      "Premium 17.25% ở mức cao trong chuỗi dữ liệu, có thể co lại nếu giá thế giới tiếp tục giảm khiến nhà đầu tư mua đuôi chịu lỗ.",
+      "Dữ liệu sự kiện địa chính trị từ nguồn không chính thống (naturalnews.com) có độ tin cậy thấp, có thể gây nhiễu tín hiệu đầu tư."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới quy đổi",
-        "value": 158483693,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biên độ tăng 30 ngày",
-        "value": 10.19,
+        "key": "SJC Price Percentile 5Y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 giá SJC",
-        "value": 153397668,
-        "unit": "VND/lượng",
+        "key": "SJC Premium vs World",
+        "value": 17.25,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.84,
+        "key": "SJC Change 30d",
+        "value": 7.33,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi lợi suất thực 5 ngày",
+        "key": "Gold Spot Change 1d",
+        "value": -3.13,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
         "value": -4.17,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "Giá vàng thế giới XAUUSD",
-        "value": 5066.35,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Percentile 5 năm",
-        "value": 100,
-        "unit": "percentile",
+        "key": "SJC Price vs MA30",
+        "value": 18.1,
+        "unit": "triệu VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T15:18:51.077Z",
+    "latestTimestamp": "2026-02-12T16:20:03.833Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158483693.4674337,
-    "premiumPct": 14.21,
-    "change7dPct": 4.85,
-    "change30dPct": 10.19,
-    "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157206762,
-    "ma30VndPerTael": 153397668,
+    "intlVndPerTael": 154370827.2884007,
+    "premiumPct": 17.25,
+    "change7dPct": 2.13,
+    "change30dPct": 7.33,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 156619210,
+    "ma30VndPerTael": 153260572,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,21 +77,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T15:19:00.137Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Treasury Yield 10Y"
-    ],
+    "fetchedAt": "2026-02-12T16:20:10.301Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5067.19,
+        "value": 4925.58,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.34,
-        "change5dPct": 6.02,
-        "change20dPct": 9.77,
+        "change1dPct": -3.13,
+        "change5dPct": 3.05,
+        "change20dPct": 6.7,
         "relationToGold": "context"
       },
       {
@@ -154,12 +139,12 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": null,
+        "value": 4.16,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-10",
+        "change1dPct": -1.42,
+        "change5dPct": -2.8,
+        "change20dPct": -0.72,
         "relationToGold": "inverse"
       },
       {
@@ -194,17 +179,21 @@
       "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | telegraphherald.com | Wall Street points higher as earnings roll out ahead of new jobs data",
-      "2026-02-12 | thewrap.com | Good Luck , Have Fun , Dont Die Director Gore Verbinksi Tells All"
+      "2026-02-12 | naturalnews.com | The Terminal Phase : How America Economic Warfare and Technological Decline Have Sealed Its Fate – NaturalNews . com"
     ],
     "countryActionHeadlines": [
-      "2026-02-12 | actionforex.com | Fed Has Room to Wait - ActionForex",
-      "2026-02-12 | ecb.europa.eu | Europe and monetary sovereignty"
+      "2026-02-12 | naturalnews.com | The Terminal Phase : How America Economic Warfare and Technological Decline Have Sealed Its Fate – NaturalNews . com",
+      "2026-02-12 | dailybreeze.com | Congress may finally touch the  third rail . Inflation will hold them accountable . – Daily Breeze",
+      "2026-02-12 | finance.yahoo.com | Inflation hidden tax on capital : Lessons from Argentina and Bolivia",
+      "2026-02-12 | markets.financialcontent.com | FinancialContent - Jobs Blockbuster Chills Rate Cut Hopes : Wall Street Tumbles as January Payrolls Double Forecasts",
+      "2026-02-12 | marketpulse.com | Markets Today : Nikkei record anchors fifth day of Asian gains , US Dollar struggles as FTSE 100 slides 50 points after all - time high print",
+      "2026-02-12 | dailynews.com | Congress may finally touch the  third rail . Inflation will hold them accountable . – Daily News"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-12 | marketpulse.com | Chart alert : Gold rally faces risk of exhaustion below $5 , 170",
+      "2026-02-12 | marketpulse.com | Markets Today : Nikkei record anchors fifth day of Asian gains , US Dollar struggles as FTSE 100 slides 50 points after all - time high print",
       "2026-02-12 | actionforex.com | Chart Alert : Gold Rally Faces Risk of Exhaustion Below $5 , 170",
-      "2026-02-12 | jcnnewswire.com | Radisson Highlights Developing Vein Model at OBrien Gold Project with Implications for Future Growth and Mine Planning",
-      "2026-02-12 | juniorminingnetwork.com | Fortuna Mining Extends High Grade Gold Mineralization at Sunbird , Including 6 . 1 g / t Au over 18 . 9 meters , Séguéla Mine , Côte dIvoire"
+      "2026-02-12 | jcnnewswire.com | Radisson Highlights Developing Vein Model at OBrien Gold Project with Implications for Future Growth and Mine Planning"
     ]
   }
 }
