@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T07:24:03.904Z",
+  "generatedAt": "2026-02-12T08:14:44.778Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 10.03% trong 30 ngày qua, khiến rủi ro mua đuổi rất cao. Tuy nhiên, lợi suất thực USD giảm sâu 3.16% trong 20 ngày và xu hướng tăng dài hạn vẫn còn, nên chiến lược tối ưu là chờ hồi điều chỉnh về vùng hỗ trợ MA7 (157 triệu VND/lượng) hoặc tích lũy dần thay vì mua tất tay.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 100% 5 năm) với đà tăng quá nóng +10.28% trong 30 ngày, khiến rủi ro điều chỉnh ngắn hạn cao hơn lợi ích mua đuổi. Dù first-principles hỗ trợ vàng dài hạn nhờ lợi suất thực USD giảm, nhà đầu tư nên chờ hồi về vùng hỗ trợ gần MA7 (157.2 triệu VND/lượng) hoặc xác nhận phá vỡ đỉnh cũ trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 10.03% trong 30 ngày và vượt xa MA30 (153.4 triệu VND/lượng) 18% - tín hiệu quá mua rõ ràng.",
-      "Động lực tăng giá vĩ mô vẫn còn khi lợi suất thực Mỹ 10 năm giảm mạnh 3.16% trong 20 ngày qua (xuống 1.84%) và USD Index giảm 1.54%, hỗ trợ vàng thế giới tăng 9.58% trong 20 ngày.",
-      "Premium 14.38% nằm trong biên dao động 6-18% của 30 ngày qua, không cực đoan; nhưng biến động ngày 2.19% và số lần drawdown 41.26% trong quá khứ cảnh báo rủi ro biến động lớn.",
-      "VIX tăng 11.33% trong 20 ngày lên mức 17.79 cho thấy lo ngại thị trường đang tăng, có thể hỗ trợ vàng nhưng cũng gây biến động giá ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA7 là 157.2 triệu VND/lượng tới 15.1% - tín hiệu quá mua rõ rệt.",
+      "Động lượng tăng quá nóng: giá tăng +10.28% trong 30 ngày và +4.94% trong 7 ngày, vượt xa biên độ dao động bình quân 2.19%/ngày.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh -4.17% trong 5 ngày xuống 1.84% là động lực hỗ trợ giá vàng thế giới tăng +6.03% trong 5 ngày, nhưng đã phần nào được định giá.",
+      "Premium 14.11% hiện tại cao hơn đáng kể so với mức đáy 6.22% ngày 28/01, cho thấy giá trong nước đã tích hợp phần lớn đà tăng thế giới và tiềm ẩn rủi ro co hẹp."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật mạnh sau khi tăng 10.03% trong 30 ngày, có thể về vùng MA7 là 157 triệu VND/lượng (giảm ~13% từ giá hiện tại).",
-      "Tin tức việc làm Mỹ mạnh làm giảm kỳ vọng cắt giảm lãi suất Fed sớm, khiến USD và lợi suất trái phiếu hồi phục, gây áp lực lên giá vàng.",
-      "Dữ liệu sự kiện vĩ mô (ECB speeches, Olympic news) độ liên quan thấp với giá vàng Việt Nam, có thể gây nhiễu và giảm độ tin cậy dự báo."
+      "Điều chỉnh kỹ thuật sâu về vùng MA7 (157.2 triệu VND/lượng) hoặc thấp hơn do giá quá cao so với trung bình động.",
+      "Rủi ro thanh khoản khi mua ở đỉnh lịch sử; dữ liệu cho thấy có 1 đợt giảm sâu chưa phục hồi với mức tệ nhất -41.26%.",
+      "Tin tức việc làm Mỹ mạnh làm giảm kỳ vọng cắt giảm lãi suất Fed sớm, gây áp lực lên giá vàng ngắn hạn."
     ],
     "evidence": [
       {
@@ -34,52 +34,46 @@
       },
       {
         "key": "Change 30d",
-        "value": 10.03,
+        "value": 10.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 VND",
-        "value": 157173415,
+        "key": "MA7",
+        "value": 157225826,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium",
-        "value": 14.38,
+        "key": "Premium Current",
+        "value": 14.11,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -3.16,
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.17,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 9.58,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 20d",
-        "value": 11.33,
+        "key": "Gold Spot Change 5d",
+        "value": 6.03,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T07:23:28.222Z",
+    "latestTimestamp": "2026-02-12T08:14:03.354Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158250263.89379123,
-    "premiumPct": 14.38,
-    "change7dPct": 4.7,
-    "change30dPct": 10.03,
+    "intlVndPerTael": 158617143.15194038,
+    "premiumPct": 14.11,
+    "change7dPct": 4.94,
+    "change30dPct": 10.28,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157173415,
-    "ma30VndPerTael": 153389887,
+    "ma7VndPerTael": 157225826,
+    "ma30VndPerTael": 153402116,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T07:23:41.097Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-12T08:14:17.507Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5058.24,
+        "value": 5067.67,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.52,
-        "change5dPct": 5.83,
-        "change20dPct": 9.58,
+        "change1dPct": -0.33,
+        "change5dPct": 6.03,
+        "change20dPct": 9.78,
         "relationToGold": "context"
       },
       {
@@ -192,15 +186,13 @@
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | france24.com | Dutch speed skater Jutta Leerdam combines Olympic gold and influencer attitude"
+      "2026-02-12 | clickorlando.com | Asia shares mostly gained after Wall Street wobbled over strong jobs report",
+      "2026-02-12 | stabroeknews.com | PPP mum on Mohamed bankrolling claims"
     ],
     "countryActionHeadlines": [
       "2026-02-12 | fxstreet.com | USD / CHF steadies despite rising Swiss yields on safe - haven demand",
       "2026-02-12 | thyblackman.com | Social Security and Medicare Debt Could Trigger Inflation Crisis .",
-      "2026-02-12 | thehindubusinessline.com | Indian government bonds may surrender some recent gains as US yields rebound after jobs data",
-      "2026-02-12 | businesstimes.com.sg | Gold , silver dip as dollar rises after strong US jobs data",
-      "2026-02-12 | zawya.com | Asian stocks at record high , US jobs data buoys yields , dollar",
-      "2026-02-12 | businesstimes.com.sg | Asian stocks at record high , US jobs data buoys yields , dollar"
+      "2026-02-12 | thehindubusinessline.com | Indian government bonds may surrender some recent gains as US yields rebound after jobs data"
     ],
     "dollarYieldHeadlines": [
       "2026-02-12 | ianslive.in | Precious metal prices dip over dollar gains",
