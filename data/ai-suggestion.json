@@ -1,79 +1,79 @@
 {
-  "generatedAt": "2026-02-12T19:24:36.280Z",
+  "generatedAt": "2026-02-12T20:11:48.440Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+7.48%), trong khi giá thế giới vừa điều chỉnh mạnh -2.8%/ngày; nhà đầu tư nên chờ đợi vùng giá tốt hơn thay vì đu đỉnh.",
+    "thesis": "Giá SJC 181 triệu VND/lượng đang ở đỉnh lịch sử (percentile 5Y: 100%) với biên độ premium giãn mạnh lên 17.07%, rủi ro điều chỉnh kỹ thuật cao khi giá thế giới giảm 2.84% trong ngày. Nên chờ đợi hồi phục về vùng giá tốt hơn hoặc co hẹp premium trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh rất lớn khi mua tại vùng giá này.",
-      "Động lượng tăng quá nóng: tăng 7.48% trong 30 ngày và 2.27% trong 7 ngày gần gấp đôi độ biến động ngày (2.26%), thường báo hiệu sự mệt mỏi của xu hướng.",
-      "Giá thế giới XAUUSD điều chỉnh mạnh -2.8% xuống 4942 USD/oz theo tin 'Gold cascades down as strong US jobs data', tạo áp lực giảm lên giá nội địa.",
-      "Premium SJC nới rộng lên 17.09% (từ mức thấp 6.22% ngày 28/01), cho thấy giá Việt Nam đã định giá quá lạc quan so với giá thế giới."
+      "Giá SJC đang ở mức cao nhất 5 năm (percentile 5Y: 100%) tại 181 triệu VND/lượng, rủi ro mua đỉp ngắn hạn rất lớn.",
+      "Premium giãn mạnh lên 17.07% (so với trung bình ~13% trong tháng), cho thấy định giá SJC đang đắt hơn bất thường so với giá thế giới.",
+      "Lợi suất thực Mỹ 10 năm giảm 4.17% trong 5 ngày xuống 1.84%, hỗ trợ giá vàng thế giới nhưng áp lực bán chốt lời đang hiện hữu khi giá giảm 2.84% trong ngày.",
+      "Động lượng tăng 30 ngày (+6.53%) đang chững lại với biến động ngày cao (2.22%), cần chờ xác nhận xu hướng mới."
     ],
     "risks": [
-      "Đà tăng xu hướng rất mạnh có thể tiếp tục kéo dài nếu lợi suất thực Mỹ (đang giảm -4.17%/5 ngày) tiếp tục đi xuống.",
-      "Premium có thể tiếp tục nới rộng nếu cầu nội địa Việt Nam FOMO (sợ bỏ lỡ) bất chấp giá thế giới giảm.",
-      "Dữ liệu sự kiện vĩ mô và địa chính trị trong kỳ không có biến động nghiêm trọng, thị trường có thể thiếu chất xúc tác lớn để xác định hướng đi rõ ràng."
+      "Giá thế giới có thể tiếp tục điều chỉnh sâu hơn sau đợt giảm 2.84%, kéo theo áp lực bán trên thị trường Việt Nam.",
+      "Premium có thể co hẹp từ 17.07% về mức trung bình 13-14%, gây mất giá cho người mua ở mức giá hiện tại.",
+      "Thiếu tín hiệu địa chính trị cấp thiết trong dữ liệu đầu vào, giảm động lực tăng giá ngắn hạn từ yếu tố an toàn."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Thay đổi giá SJC 30 ngày",
-        "value": 7.48,
+        "key": "Current Premium vs World",
+        "value": 17.07,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 17.09,
+        "key": "SJC Price Change 30d",
+        "value": 6.53,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4942.23,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Biến động giá XAUUSD 1 ngày",
-        "value": -2.8,
+        "key": "Gold Spot Change 1d",
+        "value": -2.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y thay đổi 5 ngày",
+        "key": "US Real Yield 10Y Change 5d",
         "value": -4.17,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.22,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Current SJC Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T19:24:09.144Z",
+    "latestTimestamp": "2026-02-12T20:09:49.622Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154581063.08684084,
-    "premiumPct": 17.09,
-    "change7dPct": 2.27,
-    "change30dPct": 7.48,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156649243,
-    "ma30VndPerTael": 153267580,
+    "intlVndPerTael": 154603908.6973416,
+    "premiumPct": 17.07,
+    "change7dPct": -0.31,
+    "change30dPct": 6.53,
+    "volatilityDailyPct": 2.22,
+    "ma7VndPerTael": 156596327,
+    "ma30VndPerTael": 153587158,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T19:24:19.156Z",
+    "fetchedAt": "2026-02-12T20:10:01.625Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4942.23,
+        "value": 4940.33,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -2.8,
-        "change5dPct": 3.4,
-        "change20dPct": 7.06,
+        "change1dPct": -2.84,
+        "change5dPct": 3.36,
+        "change20dPct": 7.02,
         "relationToGold": "context"
       },
       {
@@ -186,12 +186,12 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | napaneeguide.com | When mass murder meets politics | The Napanee Guide",
-      "2026-02-12 | republicanherald.com | Q & A : Roxy Music Phil Manzanera shares stories from the Cuban Revolution to stardom – Pottsville Republican Herald",
+      "2026-02-12 | tvguide.co.uk | The UnXplained with William Shatner",
+      "2026-02-12 | freerepublic.com | Latest Articles",
+      "2026-02-12 | timesherald.com | Q & A : Roxy Music Phil Manzanera shares stories from the Cuban Revolution to stardom – The Times Herald",
+      "2026-02-12 | theherald.co.za | IN FULL | President Ramaphosa state of the nation address",
       "2026-02-12 | kbzk.com | Thursday Headlines : February 12 , 2026",
-      "2026-02-12 | rttnews.com | Futures Pointing To Initial Rebound On Wall Street",
-      "2026-02-12 | keranews.org | UNT cancels prominent street artist exhibit on campus featuring ICE - related work",
-      "2026-02-12 | uiargonaut.com | Standout Vandal Spotlight :  Keenan Kuntz ,  breaking records without breaking a sweat"
+      "2026-02-12 | dailylocal.com | Q & A : Roxy Music Phil Manzanera shares stories from the Cuban Revolution to stardom – Daily Local"
     ],
     "countryActionHeadlines": [
       "2026-02-12 | sgvtribune.com | Congress may finally touch the  third rail . Inflation will hold them accountable . – San Gabriel Valley Tribune",
@@ -200,8 +200,7 @@
     ],
     "dollarYieldHeadlines": [
       "2026-02-12 | marketscreener.com | Gold cascades down as strong US jobs data and stop - selling weigh",
-      "2026-02-12 | rediff.com | Govt releases new CPI series ; January retail inflation at 2 . 75 %",
-      "2026-02-12 | marketpulse.com | Chart alert : Gold rally faces risk of exhaustion below $5 , 170"
+      "2026-02-12 | rediff.com | Govt releases new CPI series ; January retail inflation at 2 . 75 %"
     ]
   }
 }
