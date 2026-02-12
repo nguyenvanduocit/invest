@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T03:05:30.010Z",
+  "generatedAt": "2026-02-12T03:06:59.662Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 10.21%/tháng, nhưng rủi ro mua đỉp cao khi lợi suất thực USD giảm sâu và giá thế giới đã tăng gần 10%/20 ngày. Nên chờ hồi phục về vùng hỗ trợ MA7 (~157.2 triệu VND/lượng) hoặc ổn định premium dưới 13% trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+10.27%), đòi hỏi nhà đầu tư chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (153.4 triệu) tới 18% - rủi ro điều chỉnh kỹ thuật rất lớn.",
-      "Động lượng tăng quá nóng: +10.21%/30 ngày và +4.87%/7 ngày, vượt xa biến động trung bình 2.19%/ngày.",
-      "Lợi suất thực USD 10Y giảm mạnh -4.17%/5 ngày xuống 1.84% đang hỗ trợ giá vàng thế giới tăng +9.81%/20 ngày, nhưng áp lực này đã phản ánh hết vào giá.",
-      "Premium 14.19% đang ở mức cao trong chuỗi 30 ngày (dao động 6.22%-18.3%), cho thấy nhà đầu tư Việt đã FOMO mua mạnh - rủi ro co giãn ngược."
+      "Động lượng tăng quá mạnh: Giá SJC 181,000,000 VND/lượng đã vượt xa MA30 (153,401,289 VND/lượng) tới 18%, và tăng 10.27% trong 30 ngày gần nhất.",
+      "Đỉnh giá 5 năm: Giá hiện tại nằm ở percentile 100% trong 5 năm qua, rủi ro mua đỉnh cao khi biến động ngày ở mức 2.19%.",
+      "Hỗ trợ vĩ mô: Lợi suất thực Mỹ 10 năm giảm 4.17% trong 5 ngày (xuống 1.84%) và căng thẳng Mỹ-Iran hỗ trợ giá, nhưng dữ liệu việc làm Mỹ mạnh đang hạn chế kỳ vọng cắt giảm lãi suất Fed.",
+      "Premium ổn định: Mức chênh lệch 14.13% nằm trong biên dao động 30 ngày (6.22%-18.3%), không có dấu hiệu bất thường cần cảnh báo."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu về vùng MA7 (157.2 triệu VND/lượng) hoặc MA30 (153.4 triệu VND/lượng) - tương đương giảm 8-13% từ giá hiện tại.",
-      "Căng thẳng Mỹ-Iran có thể đẩy giá thế giới bật tăng đột biến (tail risk), khiến nhà đầu tư đứng ngoài mất cơ hội.",
-      "Dữ liệu việc làm Mỹ tốt hơn kỳ vọng làm giảm kỳ vọng cắt giảm lãi suất Fed, có thể khiến USD hồi phục và vàng điều chỉnh."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi RSI ngầm quá mua sau đà tăng 10.27%/tháng.",
+      "Dữ liệu việc làm Mỹ mạnh hơn dự báo có thể khiến Fed duy trì lãi suất cao, gây áp lực lên giá vàng thế giới.",
+      "Biến động ngày 2.19% cho thấy thị trường đang rung lắc mạnh, dễ kích lệnh cắt lỗ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Thay đổi 30 ngày",
+        "value": 10.27,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 153401289,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 10.21,
+        "key": "Premium SJC/Thế giới",
+        "value": 14.13,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 14.19,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_ma7_vnd",
-        "value": 157210281,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_5d",
+        "key": "Lợi suất thực Mỹ 10N (thay đổi 5d)",
         "value": -4.17,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 9.81,
-        "unit": "%",
+        "key": "Giá vàng thế giới XAUUSD",
+        "value": 5069.14,
+        "unit": "USD/oz",
         "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 11.33,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_volatility_daily",
-        "value": 2.19,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T03:05:03.284Z",
+    "latestTimestamp": "2026-02-12T03:06:33.182Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158508329.9520734,
-    "premiumPct": 14.19,
-    "change7dPct": 4.87,
-    "change30dPct": 10.21,
+    "intlVndPerTael": 158592331.80290875,
+    "premiumPct": 14.13,
+    "change7dPct": 4.93,
+    "change30dPct": 10.27,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157210281,
-    "ma30VndPerTael": 153398489,
+    "ma7VndPerTael": 157222282,
+    "ma30VndPerTael": 153401289,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,18 +84,18 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T03:05:12.302Z",
+    "fetchedAt": "2026-02-12T03:06:42.967Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5068.88,
+        "value": 5069.14,
         "unit": "USD/oz",
         "date": "2026-02-12",
         "change1dPct": -0.31,
-        "change5dPct": 6.05,
+        "change5dPct": 6.06,
         "change20dPct": 9.81,
         "relationToGold": "context"
       },
@@ -193,23 +187,24 @@
     ],
     "geopoliticalHeadlines": [
       "2026-02-12 | singletonargus.com.au | Asian stocks at record high , US jobs data buoys dollar",
-      "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes"
+      "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes",
+      "2026-02-12 | naroomanewsonline.com.au | Asian stocks at record high , US jobs data buoys dollar"
     ],
     "countryActionHeadlines": [
       "2026-02-12 | bworldonline.com | Peso hits near four - month high as dollar falls on weak US data",
       "2026-02-12 | singletonargus.com.au | Asian stocks at record high , US jobs data buoys dollar",
       "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes",
-      "2026-02-12 | fxstreet.com | Gold posts modest gains as US - Iran tensions persist despite strong labor data",
-      "2026-02-12 | fxstreet.com | NZD / USD spun in a tight circle on Wednesday",
-      "2026-02-12 | fxstreet.com | GBP / USD slips heading into the Thursday trading window"
+      "2026-02-12 | investinglive.com | PBOC is expected to set the USD / CNY reference rate at 6 . 9153 – Reuters estimate",
+      "2026-02-12 | naroomanewsonline.com.au | Asian stocks at record high , US jobs data buoys dollar",
+      "2026-02-12 | fxstreet.com | Gold posts modest gains as US - Iran tensions persist despite strong labor data"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-12 | singletonargus.com.au | Asian stocks at record high , US jobs data buoys dollar",
+      "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes",
+      "2026-02-12 | naroomanewsonline.com.au | Asian stocks at record high , US jobs data buoys dollar",
       "2026-02-12 | fxstreet.com | Gold posts modest gains as US - Iran tensions persist despite strong labor data",
       "2026-02-12 | fxstreet.com | Silver Forecast : XAG / USD eyes $82 . 00 after failing near 38 . 2 % Fibo .",
-      "2026-02-12 | fxstreet.com | EUR / USD holds steady below 1 . 1900 as Fed - ECB divergence persists",
-      "2026-02-12 | zerohedge.com | US stocks were choppy after better - than - expected jobs data pared Fed rate cut bets - Newsquawk Asia - Pac Market Open",
-      "2026-02-12 | interest.co.nz | Will  Sell America  end the US dollar hegemony ?",
-      "2026-02-12 | livecharts.co.uk | Silver and Gold Keep Traders On Heat | Live Wire"
+      "2026-02-12 | fxstreet.com | EUR / USD holds steady below 1 . 1900 as Fed - ECB divergence persists"
     ]
   }
 }
