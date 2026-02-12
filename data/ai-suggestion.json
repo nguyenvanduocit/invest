@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T09:18:52.094Z",
+  "generatedAt": "2026-02-12T10:18:26.423Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.4%/tháng, nhưng rủi ro mua đỉp ngắn hạn rất lớn khi biên độ dao động cao (2.19%) và giá đã xa MA7. Nhà đầu tư nên chờ đợi信 hiệu hồi điều chỉnh về vùng hỗ trợ MA7 (~157.2 triệu VND/lượng) trước khi nhập cuộc.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 10.17%/tháng, nhưng thanh khoản cao điểm và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư không nên FOMO mua đuổi tại vùng giá 181 triệu/lượng này.",
     "reasons": [
-      "Giá SJC 181 triệu VND đang ở mức cao nhất lịch sử 5 năm (percentile 100%), tăng mạnh 10.4% trong 30 ngày qua, rủi ro điều chỉnh ngắn hạn rất cao.",
-      "Giá hiện tại (181 triệu) cao hơn đáng kể so với MA7 (157.2 triệu VND/lượng) và MA30 (153.4 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua (overbought) trên đồ thị ngày.",
-      "Động lực vĩ mô tích cực từ việc lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 4.17% trong 5 ngày và VIX tăng 11.33% trong 20 ngày, hỗ trợ xu hướng tăng dài hạn của vàng.",
-      "Premium 13.99% đang ở mức hợp lý so với đỉnh 18.3% ngày 05-02, cho thấy tâm lý thị trường Việt Nam ổn định, không có dấu hiệu hoảng loạn mua gom đẩy chênh lệch lên cực đoan."
+      "Giá SJC 181 triệu/lượng đang vượt xa MA30 (153.4 triệu/lượng) tới 17.9% và đang ở mức cao nhất 5 năm (percentile 100%), tín hiệu quá mua rõ ràng cần thời gian củng cố.",
+      "Động lượng vĩ mô vẫn hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh 3.16% trong 20 ngày (xuống 1.84%) và giá vàng thế giới tăng 9.73% trong 20 ngày (lên 5065 USD/oz), tạo nền tảng giá dài hạn.",
+      "Premium 14.23% hiện tại nằm trong biên độ dao động 30 ngày (6.22% - 18.30%), không có dấu hiệu bất thường cực đoan so với đỉnh premium 18.3% hôm 05/02.",
+      "VIX tăng 11.33% trong 20 ngày (lên 17.79) cho thấy tâm lý thị trường lo ngại, hỗ trợ nhu cầu trú ẩn vào vàng ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá quá xa đường trung bình động ngắn hạn và biến động ngày cao (2.19%).",
-      "Dữ liệu vĩ mô không hoàn chỉnh (healthy: false) và tin tức chính sách không có sự kiện đột biến, có thể dẫn đến thiếu tín hiệu đảo chiều rõ ràng.",
-      "Phản ứng của FED trước báo cáo việc làm mạnh (Strong Jobs Report) có thể làm mạnh USD, gây áp lực giảm giá vàng ngắn hạn."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá quá xa MA7 (157.2 triệu/lượng) và biến động ngày cao (2.19%).",
+      "Dữ liệu sự kiện vĩ mô (ECB, Fed) không có tin tức đột biến cụ thể, confidence bị giới hạn do thiếu driver mới.",
+      "Giá thế giới giảm nhẹ 0.38% phiên gần nhất có thể báo hiệu chốt lời ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5Y",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30d",
-        "value": 10.4,
+        "key": "change30d_pct",
+        "value": 10.17,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 Price",
-        "value": 157249036,
+        "key": "ma30_vnd",
+        "value": 153396489,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.17,
+        "key": "premium_pct",
+        "value": 14.23,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "intl_gold_20d_change",
+        "value": 9.73,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_20d_change",
         "value": 11.33,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Premium Current",
-        "value": 13.99,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Volatility Daily",
-        "value": 2.19,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T09:18:15.715Z",
+    "latestTimestamp": "2026-02-12T10:17:38.930Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158779610.3153778,
-    "premiumPct": 13.99,
-    "change7dPct": 5.05,
-    "change30dPct": 10.4,
+    "intlVndPerTael": 158448341.45552233,
+    "premiumPct": 14.23,
+    "change7dPct": 4.83,
+    "change30dPct": 10.17,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157249036,
-    "ma30VndPerTael": 153407532,
+    "ma7VndPerTael": 157201712,
+    "ma30VndPerTael": 153396489,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T09:18:32.304Z",
+    "fetchedAt": "2026-02-12T10:17:44.017Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5074.44,
+        "value": 5065.27,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.2,
-        "change5dPct": 6.17,
-        "change20dPct": 9.93,
+        "change1dPct": -0.38,
+        "change5dPct": 5.98,
+        "change20dPct": 9.73,
         "relationToGold": "context"
       },
       {
@@ -191,14 +191,19 @@
       "2026-02-10 | Bank of England News | Foreign Currency Reserves 2026 – Market Notice 10 February 2026",
       "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-12 | sitkasentinel.com | Asia shares mostly gained after Wall Street wobbled over strong jobs report",
+      "2026-02-12 | rockymounttelegram.com | Asia shares mostly gain after Wall Street wobbled over strong jobs report",
+      "2026-02-12 | fnarena.com | ASX Winners And Losers Of Today - 12 - 02 - 26",
+      "2026-02-12 | durangoherald.com | Asia shares mostly gain after Wall Street wobbled over strong jobs report",
+      "2026-02-12 | hawaiitelegraph.com | Guardian Metal Resources PLC Announces Interim Results",
+      "2026-02-12 | eco-business.com | Global treaty to trace critical minerals stalls amid uncertainty"
+    ],
     "countryActionHeadlines": [
-      "2026-02-12 | fxstreet.com | USD / CHF steadies despite rising Swiss yields on safe - haven demand",
-      "2026-02-12 | thyblackman.com | Social Security and Medicare Debt Could Trigger Inflation Crisis ."
+      "2026-02-12 | geo.tv | Shining gold , nervous economy"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-12 | ianslive.in | Precious metal prices dip over dollar gains",
-      "2026-02-12 | business-standard.com | Wall Street Slips as Strong Jobs Report Dims Hopes for Early Fed Rate Cuts"
+      "2026-02-12 | geo.tv | Shining gold , nervous economy"
     ]
   }
 }
