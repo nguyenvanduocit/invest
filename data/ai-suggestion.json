@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-12T03:06:59.662Z",
+  "generatedAt": "2026-02-12T04:41:47.721Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+10.27%), đòi hỏi nhà đầu tư chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.05% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.19%/ngày và không có tín hiệu vĩ mô đặc biệt nào hỗ trợ đà tăng thêm trong ngắn hạn.",
     "reasons": [
-      "Động lượng tăng quá mạnh: Giá SJC 181,000,000 VND/lượng đã vượt xa MA30 (153,401,289 VND/lượng) tới 18%, và tăng 10.27% trong 30 ngày gần nhất.",
-      "Đỉnh giá 5 năm: Giá hiện tại nằm ở percentile 100% trong 5 năm qua, rủi ro mua đỉnh cao khi biến động ngày ở mức 2.19%.",
-      "Hỗ trợ vĩ mô: Lợi suất thực Mỹ 10 năm giảm 4.17% trong 5 ngày (xuống 1.84%) và căng thẳng Mỹ-Iran hỗ trợ giá, nhưng dữ liệu việc làm Mỹ mạnh đang hạn chế kỳ vọng cắt giảm lãi suất Fed.",
-      "Premium ổn định: Mức chênh lệch 14.13% nằm trong biên dao động 30 ngày (6.22%-18.3%), không có dấu hiệu bất thường cần cảnh báo."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 10.05% sau 30 ngày và vượt xa MA30 (153.4 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng giá thế giới (XAUUSD +9.59%/20d) được hỗ trợ bởi lợi suất thực Mỹ giảm (US Real Yield 10Y giảm 3.16%/20d xuống 1.84%), tạo nền tảng vững chắc nhưng không thúc đẩy đột phá mới.",
+      "Biên độ dao động giá cao (2.19%/ngày) cho thấy thanh khoản thị trường đang căng thẳng, nhà đầu tư cần thận trọng khi vào lệnh lúc đỉnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi RSI ngầm quá mua sau đà tăng 10.27%/tháng.",
-      "Dữ liệu việc làm Mỹ mạnh hơn dự báo có thể khiến Fed duy trì lãi suất cao, gây áp lực lên giá vàng thế giới.",
-      "Biến động ngày 2.19% cho thấy thị trường đang rung lắc mạnh, dễ kích lệnh cắt lỗ."
+      "Rủi ro điều chỉnh kỹ thuật sâu sau khi tăng 10.05% trong 30 ngày, đặc biệt nếu giá thế giới không duy trì được trên 5000 USD/oz.",
+      "Biên độ dao động cao 2.19%/ngày có thể gây thanh khoản cạn kiệt hoặc spread giãn rộng bất ngờ.",
+      "Dữ liệu vĩ mô thiếu một số chỉ số quan trọng (Fed Funds Rate, US Treasury 10Y/2Y) làm giảm độ tin cậy của phân tích first-principles."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Thay đổi 30 ngày",
-        "value": 10.27,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 SJC",
-        "value": 153401289,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 năm",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 14.13,
+        "key": "SJC Change 30d",
+        "value": 10.05,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (thay đổi 5d)",
-        "value": -4.17,
+        "key": "SJC MA30",
+        "value": 153390809,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.19,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.16,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới XAUUSD",
-        "value": 5069.14,
-        "unit": "USD/oz",
+        "key": "Gold Spot Change 20d",
+        "value": 9.59,
+        "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Current Premium",
+        "value": 14.36,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T03:06:33.182Z",
+    "latestTimestamp": "2026-02-12T04:41:10.594Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158592331.80290875,
-    "premiumPct": 14.13,
-    "change7dPct": 4.93,
-    "change30dPct": 10.27,
+    "intlVndPerTael": 158277934.3851163,
+    "premiumPct": 14.36,
+    "change7dPct": 4.72,
+    "change30dPct": 10.05,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157222282,
-    "ma30VndPerTael": 153401289,
+    "ma7VndPerTael": 157177368,
+    "ma30VndPerTael": 153390809,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,23 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T03:06:42.967Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-12T04:41:31.752Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 10Y",
+      "US Treasury Yield 2Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5069.14,
+        "value": 5058.68,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.31,
-        "change5dPct": 6.06,
-        "change20dPct": 9.81,
+        "change1dPct": -0.51,
+        "change5dPct": 5.84,
+        "change20dPct": 9.59,
         "relationToGold": "context"
       },
       {
@@ -135,34 +138,34 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-10",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.16,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-10",
-        "change1dPct": -1.42,
-        "change5dPct": -2.8,
-        "change20dPct": -0.72,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.45,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-10",
-        "change1dPct": -0.86,
-        "change5dPct": -3.36,
-        "change20dPct": -2.54,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -186,25 +189,10 @@
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-12 | singletonargus.com.au | Asian stocks at record high , US jobs data buoys dollar",
-      "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes",
-      "2026-02-12 | naroomanewsonline.com.au | Asian stocks at record high , US jobs data buoys dollar"
+      "2026-02-12 | zawya.com | Asian stocks at record high , US jobs data buoys yields , dollar",
+      "2026-02-12 | businesstimes.com.sg | Asian stocks at record high , US jobs data buoys yields , dollar"
     ],
-    "countryActionHeadlines": [
-      "2026-02-12 | bworldonline.com | Peso hits near four - month high as dollar falls on weak US data",
-      "2026-02-12 | singletonargus.com.au | Asian stocks at record high , US jobs data buoys dollar",
-      "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes",
-      "2026-02-12 | investinglive.com | PBOC is expected to set the USD / CNY reference rate at 6 . 9153 – Reuters estimate",
-      "2026-02-12 | naroomanewsonline.com.au | Asian stocks at record high , US jobs data buoys dollar",
-      "2026-02-12 | fxstreet.com | Gold posts modest gains as US - Iran tensions persist despite strong labor data"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-12 | singletonargus.com.au | Asian stocks at record high , US jobs data buoys dollar",
-      "2026-02-12 | econotimes.com | Asian Stocks Hit Record High as Strong U . S . Jobs Data Tempers Fed Rate Cut Hopes",
-      "2026-02-12 | naroomanewsonline.com.au | Asian stocks at record high , US jobs data buoys dollar",
-      "2026-02-12 | fxstreet.com | Gold posts modest gains as US - Iran tensions persist despite strong labor data",
-      "2026-02-12 | fxstreet.com | Silver Forecast : XAG / USD eyes $82 . 00 after failing near 38 . 2 % Fibo .",
-      "2026-02-12 | fxstreet.com | EUR / USD holds steady below 1 . 1900 as Fed - ECB divergence persists"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
