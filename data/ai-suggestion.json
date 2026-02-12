@@ -1,79 +1,79 @@
 {
-  "generatedAt": "2026-02-12T01:36:00.340Z",
+  "generatedAt": "2026-02-12T03:04:30.508Z",
   "provider": "z.ai",
-  "model": "GLM-4.7",
+  "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở mức cao kỷ lục (percentile 100) trong 5 năm, tạo đà tăng mạnh nhờ động lượng dương và chênh lệch premium ổn định ở mức cao. Tuy nhiên, rủi ro điều chỉnh kỹ thuật đang gia tăng khi giá thế giới (XAUUSD) có dấu hiệu chững lại quanh mức 5060 USD/oz và thị trường thiếu các chất xúc tác vĩ mô mới để duy trì đà tăng nóng.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng rất mạnh 10.17%/tháng; rủi ro điều chỉnh kỹ thuật cao hơn cơ hội tăng ngắn hạn, nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc tín hiệu ổn định thay vì đu đỉnh.",
     "reasons": [
-      "Động lượng tăng mạnh: Giá SJC tăng 4.72% trong 7 ngày qua và 10.05% trong 30 ngày qua, vượt xa MA30 (153.4 triệu/lượng) khoảng 18%.",
-      "Premium ổn định ở mức cao: Chênh lệch giá nội địa đang ở mức 14.35%, cao hơn nhiều so với mức trung bình 10-12% của tháng 1, cho thấy cầu nội địa vẫn mạnh.",
-      "Vĩ mô hỗ trợ nhưng có dấu hiệu giảm tốc: Lợi suất thực Mỹ (US Real Yield 10Y) giảm 4.17% trong 5 ngày qua (hỗ trợ giá vàng), nhưng chỉ số VIX tăng 11.33% trong 20 ngày qua báo hiệu sự bất ổn ngắn hạn.",
-      "Giá thế giới chạm vùng cản: XAUUSD đang giao dịch quanh 5060 USD/oz, sát mức cao nhất chuỗi 30 ngày (5327 USD/oz), cho thấy áp lực chốt lời tiềm ẩn."
+      "Giá SJC 181,000,000 VND/lượng đang vượt xa MA30 (153,396,845 VND/lượng) tới 17.9% và nằm ở percentile 100% trong 5 năm, cho thấy thị trường đang ở trạng thái quá mua cực độ.",
+      "Động lượng tăng 10.17% trong 30 ngày và 4.84% trong 7 ngày quá mạnh so với biên độ dao động ngày bình quân 2.19%, cần thời gian củng cố.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 3.16% trong 20 ngày qua (xuống 1.84%) đang hỗ trợ giá vàng thế giới tăng 9.77% 20 ngày qua, nhưng áp lực này đã phần nào được định giá.",
+      "Premium 14.23% ở mức cao nhưng ổn định trong vùng 12-18% gần đây, không có dấu hiệu bong bóng premium cực đoan so với lịch sử 30 ngày."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật lớn: Do giá đã tăng quá nhanh và quá xa so với MA30, khả năng quay về kiểm tra vùng hỗ trợ thấp hơn là hiện hữu.",
-      "Tín hiệu vĩ mô hỗn loạn: Dữ liệu first-principles cho thấy healthy=false và thiếu các sự kiện địa chính trị hoặc hành động quốc gia rõ ràng để duy trì tâm lý FOMO.",
-      "Biến động premium: Premium đang ở mức cao (14.35%), nếu quay về mức trung bình 10-12% thì nhà đầu tư SJC sẽ chịu lỗ lớn hơn so với giá thế giới."
+      "Đang ở đỉnh giá lịch sử (percentile 100%), rủi ro điều chỉnh giảm sâu nếu lợi suất thực Mỹ đảo chiều tăng.",
+      "Động lượng tăng quá nóng (+10.17%/tháng) có thể dẫn về vùng sideway hoặc giảm nhẹ để kiểm chứng.",
+      "Căng thẳng Mỹ-Iran được tin tức nhắc đến nhưng thiếu chi tiết định lượng; dữ liệu vĩ mô có thể nhiễu do ngày thu thập không đồng nhất."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "SJC Price vs MA30",
+        "value": 17.9,
+        "unit": "% above MA",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium hiện tại",
-        "value": 14.35,
+        "key": "SJC 30D Change",
+        "value": 10.17,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Tăng trưởng 30 ngày",
-        "value": 10.05,
-        "unit": "%",
+        "key": "5Y Percentile",
+        "value": 100,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 VND/lượng",
-        "value": 153390861,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới XAUUSD",
-        "value": 5057.56,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y (5d)",
-        "value": -4.17,
+        "key": "US Real Yield 10Y 20D Change",
+        "value": -3.16,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index (20d)",
-        "value": 11.33,
+        "key": "Gold Spot 20D Change",
+        "value": 9.77,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Current Premium",
+        "value": 14.23,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.19,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-12T01:35:18.170Z",
+    "latestTimestamp": "2026-02-12T03:03:22.150Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158279487.83157468,
-    "premiumPct": 14.35,
-    "change7dPct": 4.72,
-    "change30dPct": 10.05,
+    "intlVndPerTael": 158459002.86554927,
+    "premiumPct": 14.23,
+    "change7dPct": 4.84,
+    "change30dPct": 10.17,
     "volatilityDailyPct": 2.19,
-    "ma7VndPerTael": 157177590,
-    "ma30VndPerTael": 153390861,
+    "ma7VndPerTael": 157203235,
+    "ma30VndPerTael": 153396845,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-12T01:35:31.546Z",
+    "fetchedAt": "2026-02-12T03:03:41.574Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5057.56,
+        "value": 5067.13,
         "unit": "USD/oz",
         "date": "2026-02-12",
-        "change1dPct": -0.53,
-        "change5dPct": 5.81,
-        "change20dPct": 9.56,
+        "change1dPct": -0.34,
+        "change5dPct": 6.02,
+        "change20dPct": 9.77,
         "relationToGold": "context"
       },
       {
@@ -185,8 +185,18 @@
       "2026-02-10 | ECB Press / Speeches | Luis de Guindos: Interview with Econostream Media",
       "2026-02-09 | ECB Press / Speeches | Christine Lagarde: European Parliament plenary debate on the ECB Annual Report"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-12 | sofrep.com | The Weapons and Gear Special Forces Recon Teams Carried in the Vietnam War",
+      "2026-02-12 | nbcsandiego.com | French biathlete who stole from teammate wins Olympic gold – NBC 7 San Diego"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-12 | fxstreet.com | Gold posts modest gains as US - Iran tensions persist despite strong labor data",
+      "2026-02-12 | fxstreet.com | NZD / USD spun in a tight circle on Wednesday",
+      "2026-02-12 | fxstreet.com | GBP / USD slips heading into the Thursday trading window",
+      "2026-02-12 | fxstreet.com | EUR / USD holds steady below 1 . 1900 as Fed - ECB divergence persists",
+      "2026-02-12 | fxstreet.com | Canadian Dollar edges lower below 1 . 3600 as strong US NFP boosts US Dollar",
+      "2026-02-12 | zerohedge.com | US stocks were choppy after better - than - expected jobs data pared Fed rate cut bets - Newsquawk Asia - Pac Market Open"
+    ],
     "dollarYieldHeadlines": []
   }
 }
