@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T03:04:14.427Z",
+  "generatedAt": "2026-02-13T04:40:18.800Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7.45%/tháng, nhưng thanh toán rủi ro có thể xảy ra ngắn hạn khi lợi suất thực USD tăng đột biến 1.09% và giá thế giới đang điều chỉnh giảm từ đỉnh 5327 USD/oz.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.39%/tháng, nhưng rủi ro điều chỉnh kỹ thuật đang gia tăng khi biên độ premium giãn nhanh và giá thế giới có dấu hiệu dao động mạnh (flash crash). Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (153.4 triệu VND/lượng) đến 16.5%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng giá 30 ngày đạt 7.45% kết hợp biên độ dao động ngày 2.25% cho thấy thị trường đang nóng, rủi ro điều chỉnh nhanh là hiện hữu.",
-      "Lợi suất thực USD 10Y tăng vọt 1.09%/ngày lên 1.86% tạo áp lực nghịch biến lên giá vàng thế giới, vốn đã giảm từ đỉnh 5327 USD/oz (28/01) về 4985 USD/oz.",
-      "Premium 14.95% nằm trong biên dao động 6.36%-18.46% của chuỗi 30 ngày, chưa đạt cực đoan để dự báo đảo chiều kỹ thuật."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cao đáng kể so với MA30 (153.4 triệu VND/lượng), gợi ý vùng quá mua kỹ thuật.",
+      "Premium giãn rộng từ mức thấp 6.36% (28/01) lên 15.01% hiện tại, cho thấy thị trường nội địa đang định giá quá mức so với biến động giá thế giới.",
+      "Lợi suất thực 10 năm giảm 4.12% trong 5 ngày và giá vàng thế giới tăng 8.69% trong 20 ngày là động lực hỗ trợ, nhưng tin tức 'Flash Crash' cảnh báo rủi ro biến động ngược chiều bất ngờ."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng sẽ gây áp lực bán tháo lên giá vàng thế giới, kéo theo điều chỉnh giá SJC.",
-      "Thanh khoản thoát ra ở vùng giá kỷ lục 179 triệu VND/lượng có thể gặp khó nếu thị trường điều chỉnh.",
-      "Biên độ dao động 2.25%/ngày cho thấy rủi ro biến động ngắn hạn cao, nhà đầu tư tài chính nhỏ có thể bị 'lọc' tài khoản."
+      "Điều chỉnh kỹ thuật sâu khi giá thoát khỏi vùng đỉnh lịch sử và biên độ dao động ngày cao (2.25%).",
+      "Rủi ro thanh khoản nếu premium co hẹp nhanh từ mức 15% về vùng trung bình 12-13%.",
+      "Biến động cực đoan từ thị trường quốc tế (tin tức Flash Crash) kết hợp với thời gian phục hồi drawdown rất dài (trung bình 1369 ngày)."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 16.54,
+        "key": "sjc_change_30d",
+        "value": 7.39,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30d SJC",
-        "value": 7.45,
+        "key": "premium_current",
+        "value": 15.01,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 1d",
-        "value": 1.09,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Gold World Peak 30d",
-        "value": 5327.18,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Gold World Latest",
-        "value": 4984.85,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Premium Range Low",
+        "key": "premium_low_jan",
         "value": 6.36,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Premium Range High",
-        "value": 18.46,
+        "key": "us_real_yield_change_5d",
+        "value": -4.12,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "macro_context"
+      },
+      {
+        "key": "intl_gold_change_20d",
+        "value": 8.69,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "avg_recovery_days",
+        "value": 1369,
+        "unit": "days",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "daily_volatility",
+        "value": 2.25,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T03:03:35.603Z",
+    "latestTimestamp": "2026-02-13T04:39:01.568Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155714915.46532774,
-    "premiumPct": 14.95,
-    "change7dPct": 0.55,
-    "change30dPct": 7.45,
+    "intlVndPerTael": 155640654.5121128,
+    "premiumPct": 15.01,
+    "change7dPct": 0.5,
+    "change30dPct": 7.39,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156565869,
-    "ma30VndPerTael": 153415435,
+    "ma7VndPerTael": 156555260,
+    "ma30VndPerTael": 153412960,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,21 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T03:03:55.189Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Breakeven Inflation 10Y"
-    ],
+    "fetchedAt": "2026-02-13T04:39:09.721Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4984.98,
+        "value": 4980.68,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.28,
-        "change5dPct": 0.65,
-        "change20dPct": 8.79,
+        "change1dPct": 1.19,
+        "change5dPct": 0.56,
+        "change20dPct": 8.69,
         "relationToGold": "context"
       },
       {
@@ -132,12 +129,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.29,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -1.29,
+        "change5dPct": -1.29,
+        "change20dPct": 0,
         "relationToGold": "direct"
       },
       {
@@ -194,17 +191,17 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | finance.yahoo.com | Top investor betting on bigger Fed interest - rate cuts and gold",
-      "2026-02-13 | cantechletter.com | RUA GOLD Announces Uplisting to Toronto Stock Exchange"
+      "2026-02-13 | zerohedge.com | A Warning To Seattle : Dont Become The Next Cleveland"
     ],
     "countryActionHeadlines": [
-      "2026-02-13 | marketscreener.com | Gold and silver rise from near one - week lows on bargain - hunting",
-      "2026-02-13 | finance.yahoo.com | Top investor betting on bigger Fed interest - rate cuts and gold",
-      "2026-02-13 | finance-commerce.com | Strategists foresee 10 - year Treasury yields rising on inflation",
-      "2026-02-13 | edition.cnn.com | A year in , it official : Americans , not foreigners , are paying for Trump tariffs",
-      "2026-02-13 | fxstreet.com | Australian Dollar gains as RBA signals inflation concerns",
-      "2026-02-13 | fxstreet.com | GBP / USD inching closer to 1 . 36"
+      "2026-02-13 | moneycontrol.com | Gold hovers near Rs 1 . 55 lakh after early losses ; is it the right time to invest ?",
+      "2026-02-13 | freemalaysiatoday.com | Gold , silver rise from near one - week lows on bargain - hunting",
+      "2026-02-13 | ghanamma.com | Goldman Sachs SA Commodity Deals Drive Investment Surge"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-13 | zerohedge.com | A Warning To Seattle : Dont Become The Next Cleveland",
+      "2026-02-13 | actionforex.com | Metals Market – Gold ( XAU / USD ) and Silver ( XAG / USD ) Flash Crash",
+      "2026-02-13 | moneycontrol.com | Gold hovers near Rs 1 . 55 lakh after early losses ; is it the right time to invest ?"
+    ]
   }
 }
