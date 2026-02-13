@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T05:30:34.501Z",
+  "generatedAt": "2026-02-13T06:22:57.618Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh kỹ thuật đang xuất hiện khi giá thế giới có dấu hiệu chững lại sau đợt tăng nóng.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 6.79%/tháng, nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn là rất lớn khi biên độ dao động lên tới 2.25% và giá thế giới có dấu hiệu chững lại sau đợt tăng nóng.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 7.45% sau 30 ngày, rủi ro mua đỉp ngắn hạn là đáng kể.",
-      "Đà tăng giảm tốc: biên độ tăng 7 ngày gần nhất chỉ còn 0.55%, thấp hơn đáng kể so với mức 7.45% của cả chu kỳ 30 ngày, cho thấy động lượng mua đang yếu đi.",
-      "Lợi suất thực USD 10 năm (1.86%) và chỉ số USD (118.24) vẫn ở mức cao, tạo áp lực dồn vốn lên vàng thế giới, hạn chế đà tăng của giá vàng nội địa.",
-      "Premium 14.94% đang ở mức cao hơn vùng thấp nhất 6.36% (ngày 28/01) nhưng thấp hơn đỉnh 18.46% (ngày 05/02), cho thấy thị trường Việt Nam chưa hoảng loạn mua gom quá mức."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tạo ra rủi ro mua đỉnh cao cho nhà đầu tư mới.",
+      "Đà tăng giảm sức: Giá thế giới (XAU/USD) chỉ tăng nhẹ 0.06% trong 5 ngày gần đây, thấp hơn nhiều so với mức tăng 8.15% của 20 ngày trước, cho thấy động lượng tăng giá đang cạn kiệt.",
+      "Biên độ dao động ngày cao (2.25%) kết hợp với lợi suất thực Mỹ (1.86%) và VIX (17.65) đang ở mức trung bình, thị trường chưa có tín hiệu thoái chí rõ ràng để đẩy giá cao hơn trong ngắn hạn.",
+      "Premium 15.66% đang ở mức cao hơn vùng an toàn 11-13% của chuỗi 30 ngày, áp lực bán chốt lời có thể xuất hiện quanh vùng giá 179-181 triệu."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh 5 năm nếu dòng tiền quốc tế chốt lời sau đợt tăng 20 ngày qua (+8.72% giá thế giới).",
-      "Biến động ngày 2.25% có thể gây áp lực tâm lý lớn cho nhà đầu tư dùng đòn bẩy.",
-      "Dữ liệu vĩ mô thiếu lãi suất Fed Funds thực tế, hạn chế khả năng đánh giá chính xác xu hướng lãi suất ngắn hạn."
+      "Rủi ro điều chỉnh giá nhanh từ vùng đỉnh 179 triệu VND/lượng nếu giá thế giới không duy trì được trên 4900 USD/oz.",
+      "Biên độ dao động 2.25%/ngày rất lớn, có thể gây thanh khoản cạn nếu nhà đầu tư FOMO mua đuổi.",
+      "Lợi suất thực Mỹ (1.86%) và Fed Funds (3.64%) vẫn duy trì ở mức kìm hãm vàng, nếu tăng thêm sẽ gây áp lực bán mạnh."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "Giá SJC hiện tại",
+        "value": 179000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Vị thế percentile 5 năm",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d vs 7d",
-        "value": 7.45,
-        "unit": "pct (vs 0.55pct)",
+        "key": "Biến động giá 30 ngày",
+        "value": 6.79,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Intl Gold Change 20d",
-        "value": 8.72,
-        "unit": "pct",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y",
-        "value": 1.86,
-        "unit": "pct",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Premium Range 30d",
-        "value": 6.36,
-        "unit": "pct (min)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Current Premium",
-        "value": 14.94,
-        "unit": "pct",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Daily Volatility",
+        "key": "Biên độ dao động ngày",
         "value": 2.25,
-        "unit": "pct",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "USD Index",
-        "value": 118.24,
-        "unit": "index",
+        "key": "XAU/USD thay đổi 5 ngày",
+        "value": 0.06,
+        "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "XAU/USD thay đổi 20 ngày",
+        "value": 8.15,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10 năm",
+        "value": 1.86,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium trung bình 30 ngày",
+        "value": 13.17,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T05:29:52.868Z",
+    "latestTimestamp": "2026-02-13T06:22:11.062Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155726756.40897608,
-    "premiumPct": 14.94,
-    "change7dPct": 0.55,
-    "change30dPct": 7.45,
+    "intlVndPerTael": 154767812.7176686,
+    "premiumPct": 15.66,
+    "change7dPct": -0.07,
+    "change30dPct": 6.79,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156567560,
-    "ma30VndPerTael": 153415830,
+    "ma7VndPerTael": 156430568,
+    "ma30VndPerTael": 153383865,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T05:30:14.205Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate"
-    ],
+    "fetchedAt": "2026-02-13T06:22:28.892Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4981.73,
+        "value": 4955.86,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.21,
-        "change5dPct": 0.58,
-        "change20dPct": 8.72,
+        "change1dPct": 0.69,
+        "change5dPct": 0.06,
+        "change20dPct": 8.15,
         "relationToGold": "context"
       },
       {
@@ -143,12 +141,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -194,20 +192,20 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026"
+      "2026-02-13 | finance.yahoo.com | Equinox Gold ( EQX ) Announces New AI - Supported Gold Discovery at Valentine Mine"
     ],
     "countryActionHeadlines": [
+      "2026-02-13 | marketscreener.com | Start - of - year price increases seen lifting monthly US consumer inflation in January",
+      "2026-02-13 | marketrealist.com | New Fed report on Trump tariffs confirms what most economists warned about",
+      "2026-02-13 | allafrica.com | Liberia : Why Inflation Is Low in Liberia - Policy Discipline , Institutional Coordination , and the Central Bank Role",
       "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026",
-      "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc",
-      "2026-02-13 | moneycontrol.com | Gold hovers near Rs 1 . 55 lakh after early losses ; is it the right time to invest ?",
-      "2026-02-13 | freemalaysiatoday.com | Gold , silver rise from near one - week lows on bargain - hunting"
+      "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc"
     ],
     "dollarYieldHeadlines": [
       "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026",
       "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc",
       "2026-02-13 | zerohedge.com | A Warning To Seattle : Dont Become The Next Cleveland",
-      "2026-02-13 | actionforex.com | Metals Market – Gold ( XAU / USD ) and Silver ( XAG / USD ) Flash Crash",
-      "2026-02-13 | moneycontrol.com | Gold hovers near Rs 1 . 55 lakh after early losses ; is it the right time to invest ?"
+      "2026-02-13 | actionforex.com | Metals Market – Gold ( XAU / USD ) and Silver ( XAG / USD ) Flash Crash"
     ]
   }
 }
