@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-13T09:16:56.754Z",
+  "checkedAt": "2026-02-13T10:15:25.120Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-13T09:16:56.678Z",
+  "dataFetchedAt": "2026-02-13T10:15:25.043Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,18 +9,29 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 7,
+    "missingFactors": [
+      "US Real Yield 10Y"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 7,
-    "countryActionCount": 15,
-    "dollarYieldCount": 8,
-    "sourceFailures": [],
-    "healthy": true
+    "geopoliticalCount": 5,
+    "countryActionCount": 14,
+    "dollarYieldCount": 7,
+    "sourceFailures": [
+      {
+        "id": "us_real_yield_10y",
+        "error": "HTTP 504"
+      }
+    ],
+    "healthy": false
   },
-  "hardFailures": [],
-  "warnings": [],
-  "canProceedToIntegration": true
+  "hardFailures": [
+    "Missing required factors: US Real Yield 10Y"
+  ],
+  "warnings": [
+    "Source failures: us_real_yield_10y (HTTP 504)"
+  ],
+  "canProceedToIntegration": false
 }

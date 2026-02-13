@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T09:17:15.200Z",
+  "generatedAt": "2026-02-13T10:15:44.604Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật đang gia tăng khi biên độ dao động cao và premium giãn rộng. Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc tín hiệu ổn định thay vì đu đỉnh.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng đã chững lại và biến động premium cao đòi hỏi nhà đầu tư chờ xác nhận kỹ thuật tốt hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 7.28% sau 30 ngày và vượt xa MA30 (153.4 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua.",
-      "Biên độ dao động ngày cao (2.25%) kèm theo 4 lần drawdown trong lịch sử với mức sụt giảm sâu nhất 41.26% cho thấy rủi ro biến động giá lớn là hiện hữu.",
-      "Premium giãn rộng lên 15.13% (so với trung bình khoảng 13% đầu tháng 1) và có lúc đạt 18.46% ngày 5/2, cho thấy giá nội địa đang bị đẩy lên cao hơn so với biến động giá thế giới.",
-      "Lợi suất thực 10 năm Mỹ giảm 4.12% trong 5 ngày và giá vàng thế giới tăng 8.7% trong 20 ngày là động lực hỗ trợ xu hướng tăng dài hạn, nhưng ngắn hạn cần cảnh giác điều chỉnh."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 7.26% trong 30 ngày gần nhất.",
+      "Premium 15.15% hiện tại cao hơn đáng kể so với mức đáy 6.36% ngày 28/01, cho thấy định giá SJC đã bão hòa tạm thời.",
+      "Đà tăng 7 ngày (0.38%) chậm lại đáng kể so với xu hướng 30 ngày, giá hiện thấp hơn MA7 (156.5 triệu VND/lượng) cho thấy áp lực điều chỉnh ngắn hạn.",
+      "Biến động daily 2.25% kết hợp VIX ở 17.65 chỉ ra rủi ro thị trường vẫn hiện hữu, chưa phải môi trường tăng trưởng ổn định."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh sau đợt tăng nóng 7.28%/tháng khi giá ở vùng đỉnh 5 năm (percentile 100%).",
-      "Premium co giãn thất thường (dao động 6.36% - 18.46% trong 30 ngày qua) có thể khiến nhà đầu tư mua đỉnh premium và chịu lỗ khi premium về mức trung bình.",
-      "Dữ liệu sự kiện vĩ mô không có tin tức địa chính trị cấp bách hay thay đổi chính sách lớn, confidence bị giới hạn do thiếu tín hiệu định hướng rõ ràng từ các đầu mối tin tức được cung cấp."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá xa MA30 (153.4 triệu VND/lượng) và ở vùng quá mua.",
+      "Premium co giãn mạnh từ 6.36% lên 18.46% trong vòng 2 tuần cho thấy thanh khoản thị trường Việt Nam có thể bị hạn chế, khó thoát hàng nhanh.",
+      "Thiếu dữ liệu lợi suất thực US 10Y (missing factor) làm giảm độ tin cậy trong việc đánh giá xu hướng vĩ mô dài hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 7.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 16.68,
+        "key": "SJC Change 30d",
+        "value": 7.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 15.13,
+        "key": "SJC Premium Current",
+        "value": 15.15,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.25,
+        "key": "SJC Premium 30d Low",
+        "value": 6.36,
         "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC MA7",
+        "value": 156528324,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": -4.12,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "SJC MA30",
+        "value": 153406675,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 8.7,
+        "key": "Gold Spot Change 20d",
+        "value": 8.51,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
+      },
+      {
+        "key": "VIX Index",
+        "value": 17.65,
+        "unit": "index",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T09:16:37.911Z",
+    "latestTimestamp": "2026-02-13T10:15:04.084Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155477776.09407166,
-    "premiumPct": 15.13,
-    "change7dPct": 0.39,
-    "change30dPct": 7.28,
+    "intlVndPerTael": 155452104.05608693,
+    "premiumPct": 15.15,
+    "change7dPct": 0.38,
+    "change30dPct": 7.26,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156531991,
-    "ma30VndPerTael": 153407531,
+    "ma7VndPerTael": 156528324,
+    "ma30VndPerTael": 153406675,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T09:16:56.678Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-13T10:15:25.043Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Real Yield 10Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4980.975,
+        "value": 4972.285,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.2,
-        "change5dPct": 0.57,
-        "change20dPct": 8.7,
+        "change1dPct": 1.02,
+        "change5dPct": 0.39,
+        "change20dPct": 8.51,
         "relationToGold": "context"
       },
       {
@@ -113,12 +121,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.86,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 1.09,
-        "change5dPct": -4.12,
-        "change20dPct": -1.06,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -186,19 +194,22 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | tvguide.co.uk | The Curse of Civil War Gold"
+      "2026-02-13 | finanznachrichten.de | Asian Shares Follow Wall Street Lower As AI Jitters Spread",
+      "2026-02-13 | howestreet.com | Putin Whacks Silver",
+      "2026-02-13 | geo.tv | Bangladesh political heir Tarique Rahman poised for PM",
+      "2026-02-13 | indianexpress.com | Why a harsh post - retirement penalty on Gurgaon bank officer was slashed : Punjab and Haryana HC insists punishment must fit the misconduct",
+      "2026-02-13 | morningsun.net | AP News Summary at 12 : 13 a . m . EST - The Morning Sun"
     ],
     "countryActionHeadlines": [
+      "2026-02-13 | thearabianpost.com | Hong Kong gold buying accelerates before Lunar New Year",
+      "2026-02-13 | finance.yahoo.com | Dow ends flat as jobs report clouds Fed outlook",
       "2026-02-13 | investinglive.com | ECB policymaker Kazāks : Now is not the time to move interest rates",
-      "2026-02-13 | rediff.com | GIFT IFSC captures 65 % of ECBs in FY26 on lower taxes , lighter rules",
-      "2026-02-13 | zerohedge.com | Liberty Eroding , Gold Rising : 30 Years of Warning",
-      "2026-02-13 | actionforex.com | USD Fails to Capitalize on Yesterday Soured Mood",
-      "2026-02-13 | freepressjournal.in | Gold & Silver Surge 1 - 2 % On Value Buying At Key Support Levels After Sharp Correction",
-      "2026-02-13 | econotimes.com | Asian Currencies Slip as Dollar Stabilizes Ahead of U . S . CPI Data"
+      "2026-02-13 | rediff.com | GIFT IFSC captures 65 % of ECBs in FY26 on lower taxes , lighter rules"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-13 | zerohedge.com | Liberty Eroding , Gold Rising : 30 Years of Warning",
-      "2026-02-13 | thestar.com.my | Gold bounces back from near one - week low ; US inflation data in focus"
+      "2026-02-13 | thearabianpost.com | Hong Kong gold buying accelerates before Lunar New Year",
+      "2026-02-13 | newsx.com | Gold And Silver Price Alert : MCX Rebounds , Check Out City - Wise Rates And Global Prices In INR – See How Prices Are Moving Today !",
+      "2026-02-13 | finance.yahoo.com | Dow ends flat as jobs report clouds Fed outlook"
     ]
   }
 }
