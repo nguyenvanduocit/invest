@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T08:14:39.206Z",
+  "generatedAt": "2026-02-13T09:17:15.200Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, đòi hỏi nhà đầu tư chờ đợi vùng giá tốt hơn thay vì đu đỉnh. Dù xu hướng chính sách vĩ mô vẫn hỗ trợ vàng dài hạn, rủi ro điều chỉnh ngắn hạn đang rất cao khi premium đã giãn mạnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật đang gia tăng khi biên độ dao động cao và premium giãn rộng. Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc tín hiệu ổn định thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 7.41% sau 30 ngày, cảnh báo vùng quá mua kỹ thuật.",
-      "Premium đã giãn từ mức 9.95% (ngày 22/01) lên 15% hiện tại và từng chạm 18.46% (ngày 05/02), cho thấy giá nội địa đã định giá quá lạc quan so với thế giới.",
-      "Lợi suất thực 10 năm của Mỹ giảm 4.12% trong 5 ngày (xuống 1.86%) đang hỗ trợ giá vàng thế giới tăng 8.72% trong 20 ngày, tạo nền tảng xu hướng tăng dài hạn.",
-      "Biên độ dao động ngày cao (2.25%) kết hợp với VIX ở 17.65 cho thấy thị trường đang trong trạng thái bất ổn, rủi ro chốt lời nhanh là hiện hữu."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 7.28% sau 30 ngày và vượt xa MA30 (153.4 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua.",
+      "Biên độ dao động ngày cao (2.25%) kèm theo 4 lần drawdown trong lịch sử với mức sụt giảm sâu nhất 41.26% cho thấy rủi ro biến động giá lớn là hiện hữu.",
+      "Premium giãn rộng lên 15.13% (so với trung bình khoảng 13% đầu tháng 1) và có lúc đạt 18.46% ngày 5/2, cho thấy giá nội địa đang bị đẩy lên cao hơn so với biến động giá thế giới.",
+      "Lợi suất thực 10 năm Mỹ giảm 4.12% trong 5 ngày và giá vàng thế giới tăng 8.7% trong 20 ngày là động lực hỗ trợ xu hướng tăng dài hạn, nhưng ngắn hạn cần cảnh giác điều chỉnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều chốt lời.",
-      "Premium co hẹp nhanh gây mất giá cho người mua ở mức giá cao hiện tại.",
-      "Dữ liệu lạm phát Mỹ (CPI) sắp công bố có thể gây biến động bất ngờ cho giá vàng thế giới."
+      "Rủi ro điều chỉnh kỹ thuật mạnh sau đợt tăng nóng 7.28%/tháng khi giá ở vùng đỉnh 5 năm (percentile 100%).",
+      "Premium co giãn thất thường (dao động 6.36% - 18.46% trong 30 ngày qua) có thể khiến nhà đầu tư mua đỉnh premium và chịu lỗ khi premium về mức trung bình.",
+      "Dữ liệu sự kiện vĩ mô không có tin tức địa chính trị cấp bách hay thay đổi chính sách lớn, confidence bị giới hạn do thiếu tín hiệu định hướng rõ ràng từ các đầu mối tin tức được cung cấp."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_change_30d",
+        "value": 7.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 7.41,
+        "key": "sjc_vs_ma30",
+        "value": 16.68,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Expansion (Jan 22 to Current)",
-        "value": 9.95,
-        "unit": "% to 15%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.12,
+        "key": "premium_current",
+        "value": 15.13,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 8.72,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Daily Volatility",
+        "key": "volatility_daily",
         "value": 2.25,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 17.65,
-        "unit": "index",
+        "key": "us_real_yield_10y_change_5d",
+        "value": -4.12,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "gold_spot_change_20d",
+        "value": 8.7,
+        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T08:14:08.024Z",
+    "latestTimestamp": "2026-02-13T09:16:37.911Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155657342.9143042,
-    "premiumPct": 15,
-    "change7dPct": 0.51,
-    "change30dPct": 7.41,
+    "intlVndPerTael": 155477776.09407166,
+    "premiumPct": 15.13,
+    "change7dPct": 0.39,
+    "change30dPct": 7.28,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156557644,
-    "ma30VndPerTael": 153413516,
+    "ma7VndPerTael": 156531991,
+    "ma30VndPerTael": 153407531,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T08:14:19.487Z",
+    "fetchedAt": "2026-02-13T09:16:56.678Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4981.685,
+        "value": 4980.975,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.21,
-        "change5dPct": 0.58,
-        "change20dPct": 8.72,
+        "change1dPct": 1.2,
+        "change5dPct": 0.57,
+        "change20dPct": 8.7,
         "relationToGold": "context"
       },
       {
@@ -178,31 +178,27 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025",
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty",
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
-      "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026",
-      "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
+      "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | actionforex.com | Yen Stands Tall as Risk - Off Tone Strengthens With Metal Crash , Tech Rout",
-      "2026-02-13 | idahostatejournal.com | AP News in Brief at 11 : 04 p . m . EST",
-      "2026-02-13 | asiaone.com | Malaysian woman reportedly dismembered , body parts found in housing estate rubbish dump",
-      "2026-02-13 | zerohedge.com | AI frightens logistics stocks ; Markets await US CPI - Newsquawk EU Market Open"
+      "2026-02-13 | tvguide.co.uk | The Curse of Civil War Gold"
     ],
     "countryActionHeadlines": [
-      "2026-02-13 | zerohedge.com | Liberty Eroding , Gold Rising : 30 Years of Warning",
+      "2026-02-13 | investinglive.com | ECB policymaker Kazāks : Now is not the time to move interest rates",
       "2026-02-13 | rediff.com | GIFT IFSC captures 65 % of ECBs in FY26 on lower taxes , lighter rules",
+      "2026-02-13 | zerohedge.com | Liberty Eroding , Gold Rising : 30 Years of Warning",
       "2026-02-13 | actionforex.com | USD Fails to Capitalize on Yesterday Soured Mood",
       "2026-02-13 | freepressjournal.in | Gold & Silver Surge 1 - 2 % On Value Buying At Key Support Levels After Sharp Correction",
-      "2026-02-13 | econotimes.com | Asian Currencies Slip as Dollar Stabilizes Ahead of U . S . CPI Data",
-      "2026-02-13 | finance.yahoo.com | Gold Rebounds After Sharp Drop Sparked by Wider Market Jitters"
+      "2026-02-13 | econotimes.com | Asian Currencies Slip as Dollar Stabilizes Ahead of U . S . CPI Data"
     ],
     "dollarYieldHeadlines": [
       "2026-02-13 | zerohedge.com | Liberty Eroding , Gold Rising : 30 Years of Warning",
-      "2026-02-13 | thestar.com.my | Gold bounces back from near one - week low ; US inflation data in focus",
-      "2026-02-13 | freepressjournal.in | Gold & Silver Surge 1 - 2 % On Value Buying At Key Support Levels After Sharp Correction"
+      "2026-02-13 | thestar.com.my | Gold bounces back from near one - week low ; US inflation data in focus"
     ]
   }
 }
