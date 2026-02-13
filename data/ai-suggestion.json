@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T04:40:18.800Z",
+  "generatedAt": "2026-02-13T05:30:34.501Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.39%/tháng, nhưng rủi ro điều chỉnh kỹ thuật đang gia tăng khi biên độ premium giãn nhanh và giá thế giới có dấu hiệu dao động mạnh (flash crash). Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh kỹ thuật đang xuất hiện khi giá thế giới có dấu hiệu chững lại sau đợt tăng nóng.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cao đáng kể so với MA30 (153.4 triệu VND/lượng), gợi ý vùng quá mua kỹ thuật.",
-      "Premium giãn rộng từ mức thấp 6.36% (28/01) lên 15.01% hiện tại, cho thấy thị trường nội địa đang định giá quá mức so với biến động giá thế giới.",
-      "Lợi suất thực 10 năm giảm 4.12% trong 5 ngày và giá vàng thế giới tăng 8.69% trong 20 ngày là động lực hỗ trợ, nhưng tin tức 'Flash Crash' cảnh báo rủi ro biến động ngược chiều bất ngờ."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 7.45% sau 30 ngày, rủi ro mua đỉp ngắn hạn là đáng kể.",
+      "Đà tăng giảm tốc: biên độ tăng 7 ngày gần nhất chỉ còn 0.55%, thấp hơn đáng kể so với mức 7.45% của cả chu kỳ 30 ngày, cho thấy động lượng mua đang yếu đi.",
+      "Lợi suất thực USD 10 năm (1.86%) và chỉ số USD (118.24) vẫn ở mức cao, tạo áp lực dồn vốn lên vàng thế giới, hạn chế đà tăng của giá vàng nội địa.",
+      "Premium 14.94% đang ở mức cao hơn vùng thấp nhất 6.36% (ngày 28/01) nhưng thấp hơn đỉnh 18.46% (ngày 05/02), cho thấy thị trường Việt Nam chưa hoảng loạn mua gom quá mức."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu khi giá thoát khỏi vùng đỉnh lịch sử và biên độ dao động ngày cao (2.25%).",
-      "Rủi ro thanh khoản nếu premium co hẹp nhanh từ mức 15% về vùng trung bình 12-13%.",
-      "Biến động cực đoan từ thị trường quốc tế (tin tức Flash Crash) kết hợp với thời gian phục hồi drawdown rất dài (trung bình 1369 ngày)."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh 5 năm nếu dòng tiền quốc tế chốt lời sau đợt tăng 20 ngày qua (+8.72% giá thế giới).",
+      "Biến động ngày 2.25% có thể gây áp lực tâm lý lớn cho nhà đầu tư dùng đòn bẩy.",
+      "Dữ liệu vĩ mô thiếu lãi suất Fed Funds thực tế, hạn chế khả năng đánh giá chính xác xu hướng lãi suất ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 7.39,
-        "unit": "%",
+        "key": "SJC Change 30d vs 7d",
+        "value": 7.45,
+        "unit": "pct (vs 0.55pct)",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 15.01,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Intl Gold Change 20d",
+        "value": 8.72,
+        "unit": "pct",
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_low_jan",
+        "key": "US Real Yield 10Y",
+        "value": 1.86,
+        "unit": "pct",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30d",
         "value": 6.36,
-        "unit": "%",
+        "unit": "pct (min)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_change_5d",
-        "value": -4.12,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "intl_gold_change_20d",
-        "value": 8.69,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "avg_recovery_days",
-        "value": 1369,
-        "unit": "days",
+        "key": "Current Premium",
+        "value": 14.94,
+        "unit": "pct",
         "source": "market_snapshot"
       },
       {
-        "key": "daily_volatility",
+        "key": "Daily Volatility",
         "value": 2.25,
-        "unit": "%",
+        "unit": "pct",
         "source": "market_snapshot"
+      },
+      {
+        "key": "USD Index",
+        "value": 118.24,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T04:39:01.568Z",
+    "latestTimestamp": "2026-02-13T05:29:52.868Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155640654.5121128,
-    "premiumPct": 15.01,
-    "change7dPct": 0.5,
-    "change30dPct": 7.39,
+    "intlVndPerTael": 155726756.40897608,
+    "premiumPct": 14.94,
+    "change7dPct": 0.55,
+    "change30dPct": 7.45,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156555260,
-    "ma30VndPerTael": 153412960,
+    "ma7VndPerTael": 156567560,
+    "ma30VndPerTael": 153415830,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T04:39:09.721Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-13T05:30:14.205Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Effective Fed Funds Rate"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4980.68,
+        "value": 4981.73,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.19,
-        "change5dPct": 0.56,
-        "change20dPct": 8.69,
+        "change1dPct": 1.21,
+        "change5dPct": 0.58,
+        "change20dPct": 8.72,
         "relationToGold": "context"
       },
       {
@@ -140,12 +143,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -191,14 +194,17 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | zerohedge.com | A Warning To Seattle : Dont Become The Next Cleveland"
+      "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026"
     ],
     "countryActionHeadlines": [
+      "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026",
+      "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc",
       "2026-02-13 | moneycontrol.com | Gold hovers near Rs 1 . 55 lakh after early losses ; is it the right time to invest ?",
-      "2026-02-13 | freemalaysiatoday.com | Gold , silver rise from near one - week lows on bargain - hunting",
-      "2026-02-13 | ghanamma.com | Goldman Sachs SA Commodity Deals Drive Investment Surge"
+      "2026-02-13 | freemalaysiatoday.com | Gold , silver rise from near one - week lows on bargain - hunting"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026",
+      "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc",
       "2026-02-13 | zerohedge.com | A Warning To Seattle : Dont Become The Next Cleveland",
       "2026-02-13 | actionforex.com | Metals Market – Gold ( XAU / USD ) and Silver ( XAG / USD ) Flash Crash",
       "2026-02-13 | moneycontrol.com | Gold hovers near Rs 1 . 55 lakh after early losses ; is it the right time to invest ?"
