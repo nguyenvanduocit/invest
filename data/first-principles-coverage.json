@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-13T19:17:38.013Z",
+  "checkedAt": "2026-02-13T20:10:36.794Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-13T19:17:37.931Z",
+  "dataFetchedAt": "2026-02-13T20:10:36.715Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,49 +9,54 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 6,
+    "availableFactors": 3,
     "missingFactors": [
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
       "US Breakeven Inflation 10Y",
-      "US Treasury Yield 2Y"
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
+    "geopoliticalCount": 6,
     "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "dollarYieldCount": 7,
     "sourceFailures": [
       {
+        "id": "usd_index_trade_weighted",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "us_real_yield_10y",
+        "error": "HTTP 504"
+      },
+      {
         "id": "us_breakeven_10y",
-        "error": "The operation timed out."
+        "error": "HTTP 502"
       },
       {
-        "id": "us_treasury_2y",
-        "error": "The operation timed out."
+        "id": "us_fed_funds_effective",
+        "error": "HTTP 504"
       },
       {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
+        "id": "us_treasury_10y",
+        "error": "HTTP 504"
       },
       {
         "id": "gdelt_country_actions",
         "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Breakeven Inflation 10Y, US Treasury Yield 2Y",
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Dollar Trade Weighted Index, US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y",
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_breakeven_10y (The operation timed out.); us_treasury_2y (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: usd_index_trade_weighted (HTTP 504); us_real_yield_10y (HTTP 504); us_breakeven_10y (HTTP 502); us_fed_funds_effective (HTTP 504); us_treasury_10y (HTTP 504); gdelt_country_actions (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
