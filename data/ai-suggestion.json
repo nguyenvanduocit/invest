@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-02-13T06:22:57.618Z",
+  "generatedAt": "2026-02-13T07:23:50.261Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 6.79%/tháng, nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn là rất lớn khi biên độ dao động lên tới 2.25% và giá thế giới có dấu hiệu chững lại sau đợt tăng nóng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 5 năm 100%) với đà tăng nóng trong 30 ngày qua (+7.14%), trong khi động lực tăng từ thị trường quốc tế đang chững lại. Biên độ dao động lớn (2.25%) và giá trị tuyệt đối cao (179 triệu VND/lượng) khuyến nghị nhà đầu tư chờ tín hiệu xác nhận thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tạo ra rủi ro mua đỉnh cao cho nhà đầu tư mới.",
-      "Đà tăng giảm sức: Giá thế giới (XAU/USD) chỉ tăng nhẹ 0.06% trong 5 ngày gần đây, thấp hơn nhiều so với mức tăng 8.15% của 20 ngày trước, cho thấy động lượng tăng giá đang cạn kiệt.",
-      "Biên độ dao động ngày cao (2.25%) kết hợp với lợi suất thực Mỹ (1.86%) và VIX (17.65) đang ở mức trung bình, thị trường chưa có tín hiệu thoái chí rõ ràng để đẩy giá cao hơn trong ngắn hạn.",
-      "Premium 15.66% đang ở mức cao hơn vùng an toàn 11-13% của chuỗi 30 ngày, áp lực bán chốt lời có thể xuất hiện quanh vùng giá 179-181 triệu."
+      "Giá SJC 179,000,000 VND/lượng đang nằm trên xa MA7 (156,502,140 VND/lượng) tới 14.4%, cho thấy thị trường đang ở trạng thái quá mua kỹ thuật ngắn hạn.",
+      "Động lượng tăng giá 30 ngày qua rất mạnh (+7.14%), nhưng xu hướng thế giới đang phân kỳ khi giá XAUUSD giảm nhẹ 5 ngày gần nhất (-0.32%) bất chấp tăng dài hạn.",
+      "Premium 15.28% là mức cao trong chuỗi dữ liệu (đỉnh 18.46% ngày 05/02), cho thấy tâm lý thị trường Việt Nam đang hưng phấn quá mức so với giá trị nội tại.",
+      "Lợi suất thực USD 10 năm (1.86%) và VIX (17.65) không cho thấy tín hiệu hoảng loạn cực đoan, không đủ động lực để đẩy giá tiếp tục tăng vọt trong ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá nhanh từ vùng đỉnh 179 triệu VND/lượng nếu giá thế giới không duy trì được trên 4900 USD/oz.",
-      "Biên độ dao động 2.25%/ngày rất lớn, có thể gây thanh khoản cạn nếu nhà đầu tư FOMO mua đuổi.",
-      "Lợi suất thực Mỹ (1.86%) và Fed Funds (3.64%) vẫn duy trì ở mức kìm hãm vàng, nếu tăng thêm sẽ gây áp lực bán mạnh."
+      "Rủi ro điều chỉnh giá mạnh nếu giá thế giới không duy trì được mức hỗ trợ 4,900 - 5,000 USD/oz, kéo premium co hẹp.",
+      "Thanh khoản có thể giảm khi giá ở đỉnh lịch sử 5 năm, gây khó khăn cho việc thoát hàng nhanh.",
+      "Biến động ngày ở mức 2.25% cho thấy thị trường đang rung lọc mạnh, dễ gây stop-loss cho nhà đầu tư dùng đòn bẩy."
     ],
     "evidence": [
       {
@@ -27,14 +27,8 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Vị thế percentile 5 năm",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động giá 30 ngày",
-        "value": 6.79,
+        "key": "Tăng trưởng 30 ngày SJC",
+        "value": 7.14,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -45,16 +39,16 @@
         "source": "market_snapshot"
       },
       {
-        "key": "XAU/USD thay đổi 5 ngày",
-        "value": 0.06,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Vị thế percentile 5 năm",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       },
       {
-        "key": "XAU/USD thay đổi 20 ngày",
-        "value": 8.15,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Giá thế giới XAUUSD",
+        "value": 4970.57,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
         "key": "Lợi suất thực Mỹ 10 năm",
@@ -63,23 +57,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium trung bình 30 ngày",
-        "value": 13.17,
+        "key": "Chỉ số VIX",
+        "value": 17.65,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biên độ Premium",
+        "value": 15.28,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T06:22:11.062Z",
+    "latestTimestamp": "2026-02-13T07:22:34.605Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 154767812.7176686,
-    "premiumPct": 15.66,
-    "change7dPct": -0.07,
-    "change30dPct": 6.79,
+    "intlVndPerTael": 155268813.39558554,
+    "premiumPct": 15.28,
+    "change7dPct": 0.26,
+    "change30dPct": 7.14,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156430568,
-    "ma30VndPerTael": 153383865,
+    "ma7VndPerTael": 156502140,
+    "ma30VndPerTael": 153400565,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T06:22:28.892Z",
+    "fetchedAt": "2026-02-13T07:22:40.314Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4955.86,
+        "value": 4968.925,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 0.69,
-        "change5dPct": 0.06,
-        "change20dPct": 8.15,
+        "change1dPct": 0.95,
+        "change5dPct": 0.32,
+        "change20dPct": 8.44,
         "relationToGold": "context"
       },
       {
@@ -192,20 +192,19 @@
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | finance.yahoo.com | Equinox Gold ( EQX ) Announces New AI - Supported Gold Discovery at Valentine Mine"
+      "2026-02-13 | smh.com.au | ASX Runners of the Week : Great Dirt , EMC Gold , MetalsGrove & EuroRes"
     ],
     "countryActionHeadlines": [
-      "2026-02-13 | marketscreener.com | Start - of - year price increases seen lifting monthly US consumer inflation in January",
-      "2026-02-13 | marketrealist.com | New Fed report on Trump tariffs confirms what most economists warned about",
-      "2026-02-13 | allafrica.com | Liberia : Why Inflation Is Low in Liberia - Policy Discipline , Institutional Coordination , and the Central Bank Role",
-      "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026",
-      "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc"
+      "2026-02-13 | econotimes.com | Asian Currencies Slip as Dollar Stabilizes Ahead of U . S . CPI Data",
+      "2026-02-13 | finance.yahoo.com | Gold Rebounds After Sharp Drop Sparked by Wider Market Jitters",
+      "2026-02-13 | econotimes.com | FxWirePro : AUD / USD runs out of steam but maintains bullish outlook",
+      "2026-02-13 | freepressjournal.in | Gold & Silver Surge 1 - 2 % On Value Buying At Key Support Levels After Sharp Correction",
+      "2026-02-13 | en.dailypakistan.com.pk | Gold , Silver Rates in Pakistan Today – New Gold Prices – 13 February 2026",
+      "2026-02-13 | thelantern.com | Understanding the Federal Reserve system through Ohio regional bank president"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-13 | chiangraitimes.com | Gold Price Today : Why Thailand Market Is Surging In 2026",
-      "2026-02-13 | kashmirreader.com | India unveils new CPI series with 2024 base ; Jan inflation at 2 . 75 pc",
-      "2026-02-13 | zerohedge.com | A Warning To Seattle : Dont Become The Next Cleveland",
-      "2026-02-13 | actionforex.com | Metals Market – Gold ( XAU / USD ) and Silver ( XAG / USD ) Flash Crash"
+      "2026-02-13 | finance.yahoo.com | Gold Rebounds After Sharp Drop Sparked by Wider Market Jitters",
+      "2026-02-13 | freepressjournal.in | Gold & Silver Surge 1 - 2 % On Value Buying At Key Support Levels After Sharp Correction"
     ]
   }
 }
