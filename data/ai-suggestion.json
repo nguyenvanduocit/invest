@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T14:18:21.870Z",
+  "generatedAt": "2026-02-13T15:16:21.857Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn 2.25%/ngày, xu hướng tăng mạnh 7.71%/tháng nhưng thanh khoản và tín hiệu vĩ mô chưa đủ rõ ràng để hành động ngay.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.85% trong 30 ngày qua, nhưng động lượng tăng giá thế giới đang chững lại gần ngưỡng 5,000 USD/oz. Biên độ dao động premium mở rộng và VIX tăng cao cảnh báo rủi ro điều chỉnh kỹ thuật, nhà đầu tư nên chờ đợi xác nhận xu hướng hoặc đợt điều chỉnh để tham gia an toàn hơn.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 7.71% sau 30 ngày nhưng rủi ro điều chỉnh cao khi mua đỉnh.",
-      "Lợi suất thực Mỹ 10N giảm 4.12% trong 5 ngày và USD Index giảm 1.54% trong 20 ngày đang hỗ trợ giá vàng thế giới tăng 9.16% trong 20 ngày qua.",
-      "Premium 14.67% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (khoảng 13-14%), không có dấu hiệu bất thường cần cảnh báo.",
-      "Giá thế giới (4997 USD/oz) đang giao dịch trên MA7 và MA30, xu hướng ngắn hạn vẫn là tăng nhưng động lượng đang chững lại."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 7.85% sau 30 ngày và cao hơn MA30 (153.4 triệu VND/lượng) tới 16.5%.",
+      "Giá thế giới XAUUSD (~5,004 USD/oz) đã tăng hơn 9.24% trong 20 ngày và đang tiếp cận ngưỡng tâm lý 5,000 USD, cộng hưởng lợi suất thực 10Y giảm 4.12% trong 5 ngày tạo đà tăng nhưng có thể gặp kháng cự mạnh.",
+      "Rủi ro biến động tăng cao khi VIX nhảy vọt 17.96% lên mức 20.82 và biên độ dao động ngày của vàng lên tới 2.26%, trong khi premium đã mở rộng đến 14.52% so với mức 9.95% đầu chuỗi dữ liệu."
     ],
     "risks": [
-      "Giá đang ở vùng quá mua với percentile 100% trong 5 năm, rủi ro điều chỉnh ngắn hạn cao nếu lợi suất thực Mỹ hồi phục.",
-      "Biên độ dao động ngày 2.25% cho thấy thị trường biến động mạnh, nhà đầu tư có thể chịu lỗ tạm thời nếu điểm vào không tốt.",
-      "Dữ liệu sự kiện vĩ mô và địa chính trị không có tin tức trọng yếu, thiếu chất xúc tác để dự đoán xu hướng tiếp theo."
+      "Rủi ro chốt lời ngắn hạn khi giá đang ở vùng quá mua (percentile 100%) và chênh lệch premium nới rộng.",
+      "Điểm tựa kỹ thuật ở MA7 (156.65 triệu VND/lượng) khá xa giá hiện tại, nguy cơ điều chỉnh về vùng giá thấp hơn.",
+      "Dữ liệu tin tức địa chính trị không có tín hiệu rõ ràng, giảm độ tin cậy vào đà tăng giá dài hạn từ vĩ mô."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 179000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_30d",
-        "value": 7.71,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.25,
-        "unit": "%/ngày",
+        "key": "sjc_change_30d",
+        "value": 7.85,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 14.67,
+        "key": "sjc_premium_current",
+        "value": 14.52,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "xauusd_change_20d",
+        "value": 9.24,
+        "unit": "%",
+        "source": "macro_context"
       },
       {
         "key": "us_real_yield_10y_change_5d",
         "value": -4.12,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 9.16,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "vix_level",
+        "value": 20.82,
+        "unit": "index",
+        "source": "macro_context"
       },
       {
-        "key": "usd_index_change_20d",
-        "value": -1.54,
+        "key": "vix_change_1d",
+        "value": 17.96,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T14:17:47.613Z",
+    "latestTimestamp": "2026-02-13T15:15:52.488Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 156104179.69357687,
-    "premiumPct": 14.67,
-    "change7dPct": 0.8,
-    "change30dPct": 7.71,
-    "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156621478,
-    "ma30VndPerTael": 153428411,
+    "intlVndPerTael": 156305326.4196305,
+    "premiumPct": 14.52,
+    "change7dPct": 0.93,
+    "change30dPct": 7.85,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 156650213,
+    "ma30VndPerTael": 153435116,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T14:18:02.242Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-13T15:16:02.626Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5002.015,
+        "value": 5005.875,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.63,
-        "change5dPct": 0.99,
-        "change20dPct": 9.16,
+        "change1dPct": 1.7,
+        "change5dPct": 1.07,
+        "change20dPct": 9.24,
         "relationToGold": "context"
       },
       {
@@ -174,12 +173,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 17.65,
+        "value": 20.82,
         "unit": "index",
-        "date": "2026-02-11",
-        "change1dPct": -0.79,
-        "change5dPct": -5.31,
-        "change20dPct": 5.37,
+        "date": "2026-02-12",
+        "change1dPct": 17.96,
+        "change5dPct": -4.36,
+        "change20dPct": 31.44,
         "relationToGold": "direct"
       }
     ],
@@ -192,17 +191,23 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-07 | 943thepoint.com | Monmouth County declares itself pizza capitol of NJ",
-      "2026-02-07 | wnd.com | Portland journey from symbol of chic to shabby * WorldNetDaily * by Mark Hemingway , Real Clear Wire",
-      "2026-02-07 | thetimes.com | It feels like humanity has died in Sudan",
-      "2026-02-07 | thetimes.com | Can you buy a good night sleep ? These are the innovations to try",
-      "2026-02-07 | timeslive.co.za | Sunday Times marks 120 years of fearless journalism",
-      "2026-02-07 | thetimes.com | The Queen , her clothes and me :  She told me her couturier garroted Nazis"
+      "2026-02-13 | wattsupwiththat.com | New York Climate Act Issues",
+      "2026-02-13 | boredpanda.com | 44YO Overjoyed As She Gonna Be A Grandma , Gets Her Heart Broken As 32YO BF Doesnt Want That Life",
+      "2026-02-13 | srilankasource.com | The Galactic Standard : How SUYUG Infra is Engineering a New Real Estate Benchmark in Bengaluru",
+      "2026-02-13 | newpol.org | Build , Expand , Liberate ! - New Politics",
+      "2026-02-13 | boredpanda.com | 44YO Overjoyed As She Gonna Be A Grandma , Gets Her Heart Broken As 32YO BF Doesnt Want That Life"
     ],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-13 | firstpost.com | US consumer prices undershoot forecasts in January , core inflation firms",
+      "2026-02-13 | investopedia.com | Stock Market Today : Stocks Flat Following Tame Inflation Report ; Tech Sell - Off Slows",
+      "2026-02-13 | actionforex.com | EUR / USD Consolidates Ahead of US Inflation Data",
+      "2026-02-13 | theglobeandmail.com | Ottawa asset : an independent central bank - The Globe and Mail",
+      "2026-02-13 | theglobeandmail.com | U . S . inflation seen maintaining steady pace in January after start - of - year price hikes"
+    ],
     "dollarYieldHeadlines": [
-      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says",
-      "2026-02-07 | economictimes.indiatimes.com | Bitcoin crash impact on crypto billionaires : Bitcoin ( BTC USD ) crash wipes out billions from crypto billionaires : Binance , Coinbase , and MicroStrategy leaders take huge losses"
+      "2026-02-13 | tickerreport.com | Gold Stocks To Watch Now – February 10th",
+      "2026-02-13 | investopedia.com | Stock Market Today : Stocks Flat Following Tame Inflation Report ; Tech Sell - Off Slows",
+      "2026-02-13 | gulfbusiness.com | Gold rebounds toward $5 , 000 ahead of US inflation"
     ]
   }
 }
