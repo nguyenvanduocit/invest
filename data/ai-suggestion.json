@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T18:14:34.079Z",
+  "generatedAt": "2026-02-13T19:17:55.853Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 8.29%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư không nên đu đỉnh mà chờ đợi vùng giá tốt hơn hoặc tín hiệu ổn định.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày (+8.61%), tạo rủi ro điều chỉnh kỹ thuật cao ngay cả khi xu hướng vĩ mô vẫn hỗ trợ.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang vượt xa MA30 (153.4 triệu VND/lượng) tới 16.6% và đang ở mức cao nhất 5 năm (percentile 100%), cho thấy thị trường đang trong trạng thái quá mua краткосроч.",
-      "Động lượng tăng 30 ngày rất mạnh (+8.29%) nhưng biến động ngày cao (2.26%) kèm theo đợt giảm sâu ngày 30/01 (từ 177 triệu xuống 154.3 triệu VND/lượng thế giới) cảnh báo rủi ro chốt lời ngắn hạn.",
-      "VIX tăng mạnh 20 ngày (+31.44%) lên mức 20.82 cho thấy lo ngại rủi ro thị trường toàn cầu đang tăng, hỗ trợ nhu cầu trú ẩn vào vàng nhưng cũng làm tăng biến động.",
-      "Lợi suất thực 10 năm Mỹ giảm 5 ngày (-4.12%) xuống 1.86% và USD Index giảm 20 ngày (-1.54%) là động lực vĩ mô tích cực hỗ trợ giá vàng thế giới tăng 9.68% trong 20 ngày qua."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%) và tăng mạnh +8.61% trong 30 ngày qua, tín hiệu thị trường quá mua.",
+      "Động lượng tăng phi lý: Giá SJC hiện cao hơn MA7 (156.8 triệu) tới +14.2% và cao hơn MA30 (153.5 triệu) tới +16.6% trong ngắn hạn.",
+      "VIX tăng vọt +31.44% trong 20 ngày lên mức 20.82 cho thấy lo ngại rủi ro thị trường toàn cầu, thường hỗ trợ vàng nhưng cũng báo hiệu biến động cao.",
+      "Lợi suất thực 10Y giảm -4.12% trong 5 ngày xuống 1.86% là động lực hỗ trợ giá vàng thế giới tăng +9.94% trong 20 ngày, nhưng đã phản ánh vào giá."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh khi giá ở vùng quá mua (percentile 100%), có thể lặp lại kịch bản giảm sâu 10-15% như các đợt điều chỉnh trước đó trong dữ liệu 30 ngày.",
-      "Biến động premium cao (dao động 6.36% - 18.46% trong 30 ngày) làm tăng rủi ro thua lỗ nếu mua đỉnh premium và bán đáy.",
-      "Dữ liệu vĩ mô thiếu cập nhật (USD Index cũ 7 ngày, thiếu sự kiện địa chính trị) làm giảm độ tin cậy của phân tích xu hướng vĩ mô."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá lệch quá xa MA7 và MA30, biên độ dao động ngày lên tới 2.27%.",
+      "Premium 13.72% đang dao động mạnh (biên độ 6.36%-18.46% trong 30 ngày), có thể co hẹp nếu giá thế giới giảm.",
+      "Thiếu dữ liệu lạm phát kỳ vọng (Breakeven 10Y) và sự kiện địa chính trị cụ thể, giảm độ tin cậy dự báo xu hướng dài hạn."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 179000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 năm",
+        "key": "SJC Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi 30 ngày SJC",
-        "value": 8.29,
+        "key": "SJC Change 30d",
+        "value": 8.61,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 SJC",
-        "value": 153456226,
-        "unit": "VND/lượng",
+        "key": "SJC vs MA7 Deviation",
+        "value": 14.2,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX thay đổi 20 ngày",
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực 10Y thay đổi 5 ngày",
+        "key": "US Real Yield 10Y Change 5d",
         "value": -4.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới thay đổi 20 ngày",
-        "value": 9.68,
+        "key": "Gold Spot Change 20d",
+        "value": 9.94,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium hiện tại",
-        "value": 14.06,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Premium Range 30d",
+        "value": 12.1,
+        "unit": "% (6.36-18.46)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T18:13:19.405Z",
+    "latestTimestamp": "2026-02-13T19:17:15.268Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 156938627.2922786,
-    "premiumPct": 14.06,
-    "change7dPct": 1.34,
-    "change30dPct": 8.29,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156740684,
-    "ma30VndPerTael": 153456226,
+    "intlVndPerTael": 157407544.40452707,
+    "premiumPct": 13.72,
+    "change7dPct": 1.64,
+    "change30dPct": 8.61,
+    "volatilityDailyPct": 2.27,
+    "ma7VndPerTael": 156807673,
+    "ma30VndPerTael": 153471856,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,22 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T18:13:41.060Z",
+    "fetchedAt": "2026-02-13T19:17:37.931Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Breakeven Inflation 10Y",
+      "US Treasury Yield 2Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5025.895,
+        "value": 5037.875,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 2.11,
-        "change5dPct": 1.47,
-        "change20dPct": 9.68,
+        "change1dPct": 2.36,
+        "change5dPct": 1.71,
+        "change20dPct": 9.94,
         "relationToGold": "context"
       },
       {
@@ -130,12 +127,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.29,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": -1.29,
-        "change5dPct": -1.29,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -163,12 +160,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.52,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 2.03,
-        "change5dPct": -1.4,
-        "change20dPct": -0.28,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -192,14 +189,7 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-13 | thehindubusinessline.com | Indian gold , silver prices dip on global cues - The HinduBusinessLine",
-      "2026-02-13 | kgw.com | Inflation falls to nearly five - year low as gas prices fall and housing costs cool",
-      "2026-02-13 | 12newsnow.com | Inflation falls to nearly five - year low as gas prices fall and housing costs cool",
-      "2026-02-13 | bear953.com | Inflation measure falls to nearly five - year low as gas prices fall and housing costs cool",
-      "2026-02-13 | fox10phoenix.com | Inflation measure dips to nearly five - year low as gas prices drop , housing costs ease",
-      "2026-02-13 | dailylocal.com | An encouraging update on inflation helps Wall Street hold steadier"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
