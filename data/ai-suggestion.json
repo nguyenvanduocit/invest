@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T01:35:22.729Z",
+  "generatedAt": "2026-02-13T03:04:14.427Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.2% trong 30 ngày qua, tuy nhiên thanh khoản thấp và biến động cao (2.25%) cảnh báo rủi ro điều chỉnh kỹ thuật ngắn hạn trước khi tiếp tục xu hướng tăng.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7.45%/tháng, nhưng thanh toán rủi ro có thể xảy ra ngắn hạn khi lợi suất thực USD tăng đột biến 1.09% và giá thế giới đang điều chỉnh giảm từ đỉnh 5327 USD/oz.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.2% sau 30 ngày và nằm trên MA7 (156.5 triệu VND/lượng).",
-      "Lợi suất thực Mỹ 10 năm giảm 4.12% trong 5 ngày và USD Index giảm 1.54% trong 20 ngày tạo động lực hỗ trợ giá vàng thế giới tăng 8.53% trong 20 ngày qua.",
-      "Premium 15.22% nằm trong biên dao động bình thường của chuỗi 30 ngày (9.95% - 18.46%), không có dấu hiệu căng thẳng cực đoan."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (153.4 triệu VND/lượng) đến 16.5%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng giá 30 ngày đạt 7.45% kết hợp biên độ dao động ngày 2.25% cho thấy thị trường đang nóng, rủi ro điều chỉnh nhanh là hiện hữu.",
+      "Lợi suất thực USD 10Y tăng vọt 1.09%/ngày lên 1.86% tạo áp lực nghịch biến lên giá vàng thế giới, vốn đã giảm từ đỉnh 5327 USD/oz (28/01) về 4985 USD/oz.",
+      "Premium 14.95% nằm trong biên dao động 6.36%-18.46% của chuỗi 30 ngày, chưa đạt cực đoan để dự báo đảo chiều kỹ thuật."
     ],
     "risks": [
-      "Giá ở vùng overbought kỹ thuật với biến động ngày cao (2.25%), rủi ro chốt lời ngắn hạn.",
-      "VIX giảm 5.31% trong 5 ngày cho thấy tâm lý sợ hãi giảm, có thể làm giảm nhu cầu trú ẩn.",
-      "Dữ liệu sự kiện vĩ mô không có tin tức địa chính trị cấp bách, thiếu chất xúc tác mới."
+      "Lợi suất thực USD tiếp tục tăng sẽ gây áp lực bán tháo lên giá vàng thế giới, kéo theo điều chỉnh giá SJC.",
+      "Thanh khoản thoát ra ở vùng giá kỷ lục 179 triệu VND/lượng có thể gặp khó nếu thị trường điều chỉnh.",
+      "Biên độ dao động 2.25%/ngày cho thấy rủi ro biến động ngắn hạn cao, nhà đầu tư tài chính nhỏ có thể bị 'lọc' tài khoản."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 179000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_pct",
-        "value": 7.2,
+        "key": "SJC Price vs MA30",
+        "value": 16.54,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.25,
+        "key": "Change 30d SJC",
+        "value": 7.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 15.22,
+        "key": "US Real Yield 10Y Change 1d",
+        "value": 1.09,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "us_real_yield_10y_change5d",
-        "value": -4.12,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Gold World Peak 30d",
+        "value": 5327.18,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "gold_spot_change20d",
-        "value": 8.53,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Gold World Latest",
+        "value": 4984.85,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "ma7_vnd",
-        "value": 156514547,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Premium Range Low",
+        "value": 6.36,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium Range High",
+        "value": 18.46,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T01:34:46.035Z",
+    "latestTimestamp": "2026-02-13T03:03:35.603Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155355665.6208043,
-    "premiumPct": 15.22,
-    "change7dPct": 0.31,
-    "change30dPct": 7.2,
+    "intlVndPerTael": 155714915.46532774,
+    "premiumPct": 14.95,
+    "change7dPct": 0.55,
+    "change30dPct": 7.45,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156514547,
-    "ma30VndPerTael": 153403460,
+    "ma7VndPerTael": 156565869,
+    "ma30VndPerTael": 153415435,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T01:35:07.228Z",
+    "fetchedAt": "2026-02-13T03:03:55.189Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Breakeven Inflation 10Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4972.91,
+        "value": 4984.98,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.04,
-        "change5dPct": 0.4,
-        "change20dPct": 8.53,
+        "change1dPct": 1.28,
+        "change5dPct": 0.65,
+        "change20dPct": 8.79,
         "relationToGold": "context"
       },
       {
@@ -129,12 +132,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.29,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": -1.29,
-        "change5dPct": -1.29,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -190,11 +193,17 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026",
       "2026-02-11 | ECB Press / Speeches | ECB appoints Thomas Broeng Jorgensen as Director General Specialised Institutions and Less Significant Institutions"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-13 | finance.yahoo.com | Top investor betting on bigger Fed interest - rate cuts and gold",
+      "2026-02-13 | cantechletter.com | RUA GOLD Announces Uplisting to Toronto Stock Exchange"
+    ],
     "countryActionHeadlines": [
-      "2026-02-12 | finance.yahoo.com | Stocks Turn Mixed as Software Stocks Slide",
-      "2026-02-12 | cnn.com | A year in , it official : Americans , not foreigners , are paying for Trump tariffs",
-      "2026-02-12 | finance.yahoo.com | What Today U . S . Jobs Data Tells Us About Gold , Silver Prices"
+      "2026-02-13 | marketscreener.com | Gold and silver rise from near one - week lows on bargain - hunting",
+      "2026-02-13 | finance.yahoo.com | Top investor betting on bigger Fed interest - rate cuts and gold",
+      "2026-02-13 | finance-commerce.com | Strategists foresee 10 - year Treasury yields rising on inflation",
+      "2026-02-13 | edition.cnn.com | A year in , it official : Americans , not foreigners , are paying for Trump tariffs",
+      "2026-02-13 | fxstreet.com | Australian Dollar gains as RBA signals inflation concerns",
+      "2026-02-13 | fxstreet.com | GBP / USD inching closer to 1 . 36"
     ],
     "dollarYieldHeadlines": []
   }
