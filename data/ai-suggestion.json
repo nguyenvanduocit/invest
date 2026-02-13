@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T20:10:55.107Z",
+  "generatedAt": "2026-02-13T21:12:26.788Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng rất mạnh 9% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn; tuy nhiên xu hướng chính vẫn là tăng và VIX đang ở mức 20.82 cho thấy tâm lý thị trường vẫn thận trọng.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9% trong 30 ngày qua, tuy nhiên thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng khi VIX nhảy vọt 31%, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (153.9 triệu VND/lượng) tới 16.3%, cho thấy thị trường đã mua quá mức ngắn hạn.",
-      "Đà tăng giá rất mạnh: +9% trong 30 ngày và +1.45% trong 7 ngày gần đây, kết hợp với biến động ngày cao (2.23%) cảnh báo rủi ro dao động giá lớn.",
-      "VIX tăng 31.44% trong 20 ngày lên mức 20.82 chỉ ra sự bất ổn thị trường, trong khi giá vàng thế giới tăng 9.77% trong 20 ngày (từ ~4590 lên 5030 USD/oz) khẳng định xu hướng tăng cơ bản vẫn còn.",
-      "Premium 13.9% hiện tại nằm trong biên dao động phổ biến của 30 ngày qua (6.36% - 18.46%), không có dấu hiệu bất thường cực đoan."
+      "Giá SJC 179 triệu VND/lượng đang vượt xa MA30 (153.9 triệu VND/lượng) tới 16.3% và đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật cao.",
+      "Đà tăng quá nóng trong ngắn hạn: tăng 9.01% trong 30 ngày và biến động ngày cao 2.23%, cộng hưởng với VIX tăng vọt 31.44% cho thấy thị trường đang trong trạng thái bất ổn.",
+      "Premium 13.89% nằm trong biên dao động 30 ngày (9.95%-18.46%), không có tín hiệu bất thường cực đoan nhưng cho thấy giá nội địa đã phản ánh đầy đủ đà tăng thế giới.",
+      "Lợi suất thực USD 10 năm giảm 1.06% trong 20 ngày và giá vàng thế giới tăng 9.83% cùng kỳ, xu hướng vĩ mô vẫn hỗ trợ vàng nhưng ngắn hạn đã quá mua."
     ],
     "risks": [
-      "Điểm mua đỉnh lịch sử: Mua ở mức percentile 100% mang rủi ro điều chỉnh kỹ thuật cao khi thị trường quá mua.",
-      "Biến động giá lớn: Với volatility 2.23%/ngày và drawdown tồi t nhất 41.26%, nhà đầu tư có thể đối mặt biến động tài sản lớn ngắn hạn.",
-      "Dữ liệu vĩ mô thiếu: Các chỉ số first-principles quan trọng (USD index, lợi suất thực 10Y, lạm phát kỳ vọng) không có sẵn, làm giảm độ tin cậy phân tích."
+      "Điều chỉnh kỹ thuật mạnh sau khi chạm đỉnh 5 năm, rủi ro chốt lời ngắn hạn cao.",
+      "VIX tăng đột biến 31.44% có thể gây áp lực thanh khoản trên nhiều lớp tài sản bao gồm vàng.",
+      "Tin tức 'The Warsh Shock' về Fed có thể gây biến động bất ngờ cho USD và giá vàng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 179000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 9,
+        "key": "change_30d",
+        "value": 9.01,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_premium",
-        "value": 16.3,
+        "key": "ma30_vnd",
+        "value": 153895286,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
+        "value": 13.89,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
+        "key": "vix_change_20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_world_20d_change",
-        "value": 9.77,
+        "key": "us_real_yield_10y_change_20d",
+        "value": -1.06,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.23,
+        "key": "gold_spot_change_20d",
+        "value": 9.83,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 12.1,
-        "unit": "% (18.46-6.36)",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T20:10:14.869Z",
+    "latestTimestamp": "2026-02-13T21:11:50.531Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 157154527.87285274,
-    "premiumPct": 13.9,
-    "change7dPct": 1.45,
-    "change30dPct": 9,
+    "intlVndPerTael": 157166037.38503346,
+    "premiumPct": 13.89,
+    "change7dPct": 1.46,
+    "change30dPct": 9.01,
     "volatilityDailyPct": 2.23,
-    "ma7VndPerTael": 157087407,
-    "ma30VndPerTael": 153894902,
+    "ma7VndPerTael": 157089051,
+    "ma30VndPerTael": 153895286,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,80 +90,74 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T20:10:36.715Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Real Yield 10Y",
-      "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 10Y"
-    ],
+    "fetchedAt": "2026-02-13T21:11:59.328Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5030.175,
+        "value": 5032.915,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 2.2,
-        "change5dPct": 1.56,
-        "change20dPct": 9.77,
+        "change1dPct": 2.25,
+        "change5dPct": 1.61,
+        "change20dPct": 9.83,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 118.2407,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-06",
+        "change1dPct": -0.22,
+        "change5dPct": 0.29,
+        "change20dPct": -1.54,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.86,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 1.09,
+        "change5dPct": -4.12,
+        "change20dPct": -1.06,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.29,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -1.29,
+        "change5dPct": -1.29,
+        "change20dPct": 0,
         "relationToGold": "direct"
       },
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": null,
+        "value": 4.18,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 0.48,
+        "change5dPct": -2.56,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -192,17 +192,21 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve",
-      "2026-02-13 | pushsquare.com | God of War , Helldivers 2 , More Are Getting Official Action Figures Starting This Year",
-      "2026-02-13 | juniorminingnetwork.com | Eldorado Gold Closes $2 . 4 Million Strategic Investment in Gemdale Gold"
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve"
     ],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-13 | barrons.com | Treasury Yields Fall as Investors Look Beyond Strong Labor Data",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve",
+      "2026-02-13 | 1017chuckfm.com | Inflation measure falls to nearly five - year low as gas prices fall and housing costs cool",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - January 2026 CPI Report : Inflation Cools to 2 . 4 %, Sparking Market Relief",
+      "2026-02-13 | finance.yahoo.com | Binance Fires Investigators as $1 Billion Iran - Linked USDT Flows Surface",
+      "2026-02-13 | thefox1049.com | Inflation measure falls to nearly five - year low as gas prices fall and housing costs cool"
+    ],
     "dollarYieldHeadlines": [
       "2026-02-13 | benzinga.com | Hedge America  Trade Takes Over The S & P 500 : Here How You Can Take Part - SPDR Gold Shares ( ARCA : GLD ), iShares Silver Trust ( ARCA : SLV )",
       "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve",
       "2026-02-13 | proactiveinvestors.co.uk | Why you should be watching beyond price : Infrastructure , regulation and innovation still push crypto forward",
-      "2026-02-13 | rttnews.com | U . S . Stocks Seeing Considerable Volatility Following Inflation Data",
-      "2026-02-13 | thehindubusinessline.com | Indian gold , silver prices dip on global cues - The HinduBusinessLine"
+      "2026-02-13 | rttnews.com | U . S . Stocks Seeing Considerable Volatility Following Inflation Data"
     ]
   }
 }
