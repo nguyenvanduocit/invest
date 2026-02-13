@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T21:12:26.788Z",
+  "generatedAt": "2026-02-13T22:09:55.130Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9% trong 30 ngày qua, tuy nhiên thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng khi VIX nhảy vọt 31%, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư nên chờ đợi điểm mua an toàn hơn thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang vượt xa MA30 (153.9 triệu VND/lượng) tới 16.3% và đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật cao.",
-      "Đà tăng quá nóng trong ngắn hạn: tăng 9.01% trong 30 ngày và biến động ngày cao 2.23%, cộng hưởng với VIX tăng vọt 31.44% cho thấy thị trường đang trong trạng thái bất ổn.",
-      "Premium 13.89% nằm trong biên dao động 30 ngày (9.95%-18.46%), không có tín hiệu bất thường cực đoan nhưng cho thấy giá nội địa đã phản ánh đầy đủ đà tăng thế giới.",
-      "Lợi suất thực USD 10 năm giảm 1.06% trong 20 ngày và giá vàng thế giới tăng 9.83% cùng kỳ, xu hướng vĩ mô vẫn hỗ trợ vàng nhưng ngắn hạn đã quá mua."
+      "Giá SJC 179 triệu VND/lượng đang vượt xa MA30 (153.9 triệu VND/lượng) tới 16.3%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
+      "VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82 chỉ thị lo ngại thị trường, hỗ trợ vàng nhưng cũng báo hiệu biến động cao.",
+      "Lợi suất thực 10 năm giảm 4.76% trong 5 ngày xuống 1.8%, giảm chi phí cơ hội nắm giữ vàng, hỗ trợ xu hướng tăng dài hạn.",
+      "Premium 13.62% đang ổn định trong biên độ lịch sử (dao động 9.95%-18.46% trong 30 ngày), không có dấu hiệu bất thường cực đoan."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật mạnh sau khi chạm đỉnh 5 năm, rủi ro chốt lời ngắn hạn cao.",
-      "VIX tăng đột biến 31.44% có thể gây áp lực thanh khoản trên nhiều lớp tài sản bao gồm vàng.",
-      "Tin tức 'The Warsh Shock' về Fed có thể gây biến động bất ngờ cho USD và giá vàng."
+      "Rủi ro điều chỉnh kỹ thuật mạnh khi giá đang ở vùng đỉnh 5 năm (percentile 100%) và tăng quá nhanh 9.27%/tháng.",
+      "Biến động ngày cao 2.23% cộng với VIX tăng có thể gây sụt giảm ngắn hạn trước khi tiếp tục xu hướng.",
+      "Đã có 4 đợt drawdown với mức tồi tệ -41.26%, cần quản lý rủi ro chặt chẽ."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 179000000,
-        "unit": "VND/lượng",
+        "key": "sjc_price_vs_ma30",
+        "value": 16.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change30d_pct",
+        "value": 9.27,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d",
-        "value": 9.01,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vnd",
-        "value": 153895286,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 13.89,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "vix_change20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
-        "value": -1.06,
+        "key": "real_yield_10y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 9.83,
+        "key": "real_yield_change5d",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 9.95,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.23,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T21:11:50.531Z",
+    "latestTimestamp": "2026-02-13T22:09:38.420Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 157166037.38503346,
-    "premiumPct": 13.89,
-    "change7dPct": 1.46,
-    "change30dPct": 9.01,
+    "intlVndPerTael": 157538228.36324185,
+    "premiumPct": 13.62,
+    "change7dPct": 1.7,
+    "change30dPct": 9.27,
     "volatilityDailyPct": 2.23,
-    "ma7VndPerTael": 157089051,
-    "ma30VndPerTael": 153895286,
+    "ma7VndPerTael": 157142221,
+    "ma30VndPerTael": 153907692,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T21:11:59.328Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-13T22:09:41.993Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -119,12 +119,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.86,
+        "value": 1.8,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 1.09,
-        "change5dPct": -4.12,
-        "change20dPct": -1.06,
+        "date": "2026-02-12",
+        "change1dPct": -3.23,
+        "change5dPct": -4.76,
+        "change20dPct": -3.23,
         "relationToGold": "inverse"
       },
       {
@@ -143,7 +143,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-02-11",
+        "date": "2026-02-12",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -152,23 +152,23 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.18,
+        "value": 4.09,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 0.48,
-        "change5dPct": -2.56,
-        "change20dPct": 0,
+        "date": "2026-02-12",
+        "change1dPct": -2.15,
+        "change5dPct": -2.85,
+        "change20dPct": -1.45,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.52,
+        "value": 3.47,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 2.03,
-        "change5dPct": -1.4,
-        "change20dPct": -0.28,
+        "date": "2026-02-12",
+        "change1dPct": -1.42,
+        "change5dPct": 0,
+        "change20dPct": -1.14,
         "relationToGold": "inverse"
       },
       {
@@ -192,21 +192,11 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve"
+      "2026-02-13 | peoplesworld.org | Trump suffers another defeat in his war on renewable energy",
+      "2026-02-13 | timesofindia.indiatimes.com | Gem and jewellery exports stabilize , improve after tariff cut | Surat News",
+      "2026-02-13 | natlawreview.com | US Treasury OFAC Provides Relief for Venezuelan Oil Sector"
     ],
-    "countryActionHeadlines": [
-      "2026-02-13 | barrons.com | Treasury Yields Fall as Investors Look Beyond Strong Labor Data",
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve",
-      "2026-02-13 | 1017chuckfm.com | Inflation measure falls to nearly five - year low as gas prices fall and housing costs cool",
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - January 2026 CPI Report : Inflation Cools to 2 . 4 %, Sparking Market Relief",
-      "2026-02-13 | finance.yahoo.com | Binance Fires Investigators as $1 Billion Iran - Linked USDT Flows Surface",
-      "2026-02-13 | thefox1049.com | Inflation measure falls to nearly five - year low as gas prices fall and housing costs cool"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-13 | benzinga.com | Hedge America  Trade Takes Over The S & P 500 : Here How You Can Take Part - SPDR Gold Shares ( ARCA : GLD ), iShares Silver Trust ( ARCA : SLV )",
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Wall Street Braces for a  Leaner and Meaner  Federal Reserve",
-      "2026-02-13 | proactiveinvestors.co.uk | Why you should be watching beyond price : Infrastructure , regulation and innovation still push crypto forward",
-      "2026-02-13 | rttnews.com | U . S . Stocks Seeing Considerable Volatility Following Inflation Data"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
