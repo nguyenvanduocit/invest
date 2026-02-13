@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T13:28:48.496Z",
+  "generatedAt": "2026-02-13T14:18:21.870Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.08% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.25%/ngày và thiếu động lực vĩ mô cấp thiết để đẩy giá tiếp tục tăng tốc trong ngắn hạn.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn 2.25%/ngày, xu hướng tăng mạnh 7.71%/tháng nhưng thanh khoản và tín hiệu vĩ mô chưa đủ rõ ràng để hành động ngay.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.08% sau 30 ngày, cảnh báo vùng quá mua cần thời gian củng cố.",
-      "Biên độ dao động ngày cao 2.25% cho thấy thị trường bất ổn, nhà đầu tư MUA lúc này dễ hứng chịu rủi ro điều chỉnh ngắn hạn.",
-      "Lợi suất thực USD 10 năm (1.86%) và VIX (17.65) không ở mức cực đoan, thiếu động lực vĩ mô bất ngờ để đẩy giá tiếp tục tăng tốc."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 7.71% sau 30 ngày nhưng rủi ro điều chỉnh cao khi mua đỉnh.",
+      "Lợi suất thực Mỹ 10N giảm 4.12% trong 5 ngày và USD Index giảm 1.54% trong 20 ngày đang hỗ trợ giá vàng thế giới tăng 9.16% trong 20 ngày qua.",
+      "Premium 14.67% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (khoảng 13-14%), không có dấu hiệu bất thường cần cảnh báo.",
+      "Giá thế giới (4997 USD/oz) đang giao dịch trên MA7 và MA30, xu hướng ngắn hạn vẫn là tăng nhưng động lượng đang chững lại."
     ],
     "risks": [
-      "Giá thế giới điều chỉnh giảm từ đỉnh 5327 USD/oz ngày 28/01 về 4967 USD/oz, rủi ro SJC điều chỉnh theo.",
-      "Premium 15.35% cao hơn vùng thấp nhất 6.36% trong chuỗi dữ liệu, có thể co lại nếu thanh khoản cải thiện.",
-      "Thiếu dữ liệu lãi suất Fed Funds và Treasury 2Y khiến đánh giá chính sách tiền tệ Mỹ không hoàn chỉnh."
+      "Giá đang ở vùng quá mua với percentile 100% trong 5 năm, rủi ro điều chỉnh ngắn hạn cao nếu lợi suất thực Mỹ hồi phục.",
+      "Biên độ dao động ngày 2.25% cho thấy thị trường biến động mạnh, nhà đầu tư có thể chịu lỗ tạm thời nếu điểm vào không tốt.",
+      "Dữ liệu sự kiện vĩ mô và địa chính trị không có tin tức trọng yếu, thiếu chất xúc tác để dự đoán xu hướng tiếp theo."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 179000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_30d",
+        "value": 7.71,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 7.08,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
+        "key": "volatility_daily",
         "value": 2.25,
         "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
-        "key": "current_premium",
-        "value": 15.35,
+        "key": "premium_current",
+        "value": 14.67,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_peak_to_current",
-        "value": 5327.18,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "us_real_yield_10y_change_5d",
+        "value": -4.12,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.86,
+        "key": "gold_spot_change_20d",
+        "value": 9.16,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "usd_index_change_20d",
+        "value": -1.54,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T13:27:59.350Z",
+    "latestTimestamp": "2026-02-13T14:17:47.613Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155183657.06239086,
-    "premiumPct": 15.35,
-    "change7dPct": 0.2,
-    "change30dPct": 7.08,
+    "intlVndPerTael": 156104179.69357687,
+    "premiumPct": 14.67,
+    "change7dPct": 0.8,
+    "change30dPct": 7.71,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156489974,
-    "ma30VndPerTael": 153397727,
+    "ma7VndPerTael": 156621478,
+    "ma30VndPerTael": 153428411,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,22 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T13:28:20.610Z",
+    "fetchedAt": "2026-02-13T14:18:02.242Z",
     "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4966.545,
+        "value": 5002.015,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 0.91,
-        "change5dPct": 0.27,
-        "change20dPct": 8.39,
+        "change1dPct": 1.63,
+        "change5dPct": 0.99,
+        "change20dPct": 9.16,
         "relationToGold": "context"
       },
       {
@@ -131,12 +141,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -153,12 +163,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.52,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 2.03,
+        "change5dPct": -1.4,
+        "change20dPct": -0.28,
         "relationToGold": "inverse"
       },
       {
@@ -182,17 +192,17 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-13 | business-standard.com | Gem , jewellery exports dip by 5 . 79 % at USD 2 , 238 . 54 million in Jan : GJEPC"
+      "2026-02-07 | 943thepoint.com | Monmouth County declares itself pizza capitol of NJ",
+      "2026-02-07 | wnd.com | Portland journey from symbol of chic to shabby * WorldNetDaily * by Mark Hemingway , Real Clear Wire",
+      "2026-02-07 | thetimes.com | It feels like humanity has died in Sudan",
+      "2026-02-07 | thetimes.com | Can you buy a good night sleep ? These are the innovations to try",
+      "2026-02-07 | timeslive.co.za | Sunday Times marks 120 years of fearless journalism",
+      "2026-02-07 | thetimes.com | The Queen , her clothes and me :  She told me her couturier garroted Nazis"
     ],
-    "countryActionHeadlines": [
-      "2026-02-13 | theglobeandmail.com | Ottawa asset : an independent central bank - The Globe and Mail",
-      "2026-02-13 | theglobeandmail.com | U . S . inflation seen maintaining steady pace in January after start - of - year price hikes",
-      "2026-02-13 | timesofindia.indiatimes.com | Forex reserves fall $6 . 7 billion to $717 . 06 billion ; gold holdings drag",
-      "2026-02-13 | livemint.com | Gold shines brightest ! Yellow metal beats Nifty 50 , real estate and fixed income across 1 , 5 , 10 and 20 years",
-      "2026-02-13 | ghanaweb.com | Is Treasury yield compression running ahead of issuance risk ?"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-13 | livemint.com | Gold shines brightest ! Yellow metal beats Nifty 50 , real estate and fixed income across 1 , 5 , 10 and 20 years"
+      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says",
+      "2026-02-07 | economictimes.indiatimes.com | Bitcoin crash impact on crypto billionaires : Bitcoin ( BTC USD ) crash wipes out billions from crypto billionaires : Binance , Coinbase , and MicroStrategy leaders take huge losses"
     ]
   }
 }

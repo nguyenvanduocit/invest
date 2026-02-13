@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-13T13:28:20.689Z",
+  "checkedAt": "2026-02-13T14:18:02.322Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-13T13:28:20.610Z",
+  "dataFetchedAt": "2026-02-13T14:18:02.242Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,34 +9,27 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 6,
-    "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 5,
-    "countryActionCount": 15,
-    "dollarYieldCount": 10,
+    "geopoliticalCount": 7,
+    "countryActionCount": 0,
+    "dollarYieldCount": 6,
     "sourceFailures": [
       {
-        "id": "us_fed_funds_effective",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_treasury_2y",
-        "error": "The operation timed out."
+        "id": "gdelt_country_actions",
+        "error": "Failed to parse JSON"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Effective Fed Funds Rate, US Treasury Yield 2Y"
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_fed_funds_effective (The operation timed out.); us_treasury_2y (The operation timed out.)"
+    "Source failures: gdelt_country_actions (Failed to parse JSON)"
   ],
   "canProceedToIntegration": false
 }
