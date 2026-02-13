@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T10:15:44.604Z",
+  "generatedAt": "2026-02-13T11:13:55.679Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,58 +7,52 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng đã chững lại và biến động premium cao đòi hỏi nhà đầu tư chờ xác nhận kỹ thuật tốt hơn trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại trong ngắn hạn; xu hướng vĩ mô vẫn hỗ trợ nhưng rủi ro điều chỉnh kỹ thuật cao, nhà đầu tư nên chờ đợi điểm nhập khẩu tốt hơn hoặc giữ vị thế hiện có.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 7.26% trong 30 ngày gần nhất.",
-      "Premium 15.15% hiện tại cao hơn đáng kể so với mức đáy 6.36% ngày 28/01, cho thấy định giá SJC đã bão hòa tạm thời.",
-      "Đà tăng 7 ngày (0.38%) chậm lại đáng kể so với xu hướng 30 ngày, giá hiện thấp hơn MA7 (156.5 triệu VND/lượng) cho thấy áp lực điều chỉnh ngắn hạn.",
-      "Biến động daily 2.25% kết hợp VIX ở 17.65 chỉ ra rủi ro thị trường vẫn hiện hữu, chưa phải môi trường tăng trưởng ổn định."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (153.4 triệu VND/lượng) tới 16.6%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Động lượng tăng yếu đi: giá thế giới giảm -0.08% trong 5 ngày qua dù vẫn tăng mạnh +8.01% trong 20 ngày, thanh khoản có thể khô hạn sau đợt mua sắm Tết Nguyên Đán (Hong Kong gold buying accelerates).",
+      "Lợi suất thực Mỹ 10 năm (1.86%) và Fed Funds (3.64%) vẫn duy trì áp lực chi phí cơ hội lên vàng, dù VIX (17.65) cho thấy lo ngại thị trường chưa đạt mức cực đoan để thúc đẩy dòng tiền trú ẩn mạnh mẽ hơn.",
+      "Biên độ dao động giá cao (2.25%/ngày) và premium giãn nở (15.76%) so với mức thấp nhất 6.36% trong 30 ngày qua cho thấy rủi ro biến động giá mua-bán lớn cho nhà đầu tư cá nhân."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá xa MA30 (153.4 triệu VND/lượng) và ở vùng quá mua.",
-      "Premium co giãn mạnh từ 6.36% lên 18.46% trong vòng 2 tuần cho thấy thanh khoản thị trường Việt Nam có thể bị hạn chế, khó thoát hàng nhanh.",
-      "Thiếu dữ liệu lợi suất thực US 10Y (missing factor) làm giảm độ tin cậy trong việc đánh giá xu hướng vĩ mô dài hạn."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá thoát khỏi đỉnh lịch sử mà không có chất xúc tác vĩ mô mới, khả năng test lại vùng hỗ trợ MA7 (156.4 triệu VND/lượng).",
+      "Thông tin vĩ mô nhiễu: các bài báo về ECB và việc làm Mỹ (jobs report clouds Fed outlook) chưa đưa ra tín hiệu chính sách rõ ràng, có thể gây biến động hai chiều.",
+      "Premium co giãn thất thường (dao động từ 6.36% đến 18.46% trong 30 ngày) làm tăng chi phí cơ hội nếu mua đuổi ở vùng giá cao hiện tại."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Price",
+        "value": 179000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 7.26,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Premium Current",
-        "value": 15.15,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Premium 30d Low",
-        "value": 6.36,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "SJC MA7",
-        "value": 156528324,
+        "key": "MA30 VND",
+        "value": 153379499,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA30",
-        "value": 153406675,
-        "unit": "VND/lượng",
+        "key": "Premium Current",
+        "value": 15.76,
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y",
+        "value": 1.86,
+        "unit": "%",
+        "source": "macro_context"
       },
       {
         "key": "Gold Spot Change 20d",
-        "value": 8.51,
+        "value": 8.01,
         "unit": "%",
         "source": "macro_context"
       },
@@ -67,19 +61,25 @@
         "value": 17.65,
         "unit": "index",
         "source": "macro_context"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.25,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T10:15:04.084Z",
+    "latestTimestamp": "2026-02-13T11:13:26.711Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 155452104.05608693,
-    "premiumPct": 15.15,
-    "change7dPct": 0.38,
-    "change30dPct": 7.26,
+    "intlVndPerTael": 154636821.6928533,
+    "premiumPct": 15.76,
+    "change7dPct": -0.15,
+    "change30dPct": 6.7,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156528324,
-    "ma30VndPerTael": 153406675,
+    "ma7VndPerTael": 156411855,
+    "ma30VndPerTael": 153379499,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T10:15:25.043Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Real Yield 10Y"
-    ],
+    "fetchedAt": "2026-02-13T11:13:34.048Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4972.285,
+        "value": 4949.105,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.02,
-        "change5dPct": 0.39,
-        "change20dPct": 8.51,
+        "change1dPct": 0.55,
+        "change5dPct": -0.08,
+        "change20dPct": 8.01,
         "relationToGold": "context"
       },
       {
@@ -121,12 +119,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.86,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-11",
+        "change1dPct": 1.09,
+        "change5dPct": -4.12,
+        "change20dPct": -1.06,
         "relationToGold": "inverse"
       },
       {
@@ -196,9 +194,7 @@
     "geopoliticalHeadlines": [
       "2026-02-13 | finanznachrichten.de | Asian Shares Follow Wall Street Lower As AI Jitters Spread",
       "2026-02-13 | howestreet.com | Putin Whacks Silver",
-      "2026-02-13 | geo.tv | Bangladesh political heir Tarique Rahman poised for PM",
-      "2026-02-13 | indianexpress.com | Why a harsh post - retirement penalty on Gurgaon bank officer was slashed : Punjab and Haryana HC insists punishment must fit the misconduct",
-      "2026-02-13 | morningsun.net | AP News Summary at 12 : 13 a . m . EST - The Morning Sun"
+      "2026-02-13 | geo.tv | Bangladesh political heir Tarique Rahman poised for PM"
     ],
     "countryActionHeadlines": [
       "2026-02-13 | thearabianpost.com | Hong Kong gold buying accelerates before Lunar New Year",
