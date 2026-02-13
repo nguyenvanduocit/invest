@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-13T12:11:15.460Z",
+  "checkedAt": "2026-02-13T13:28:20.689Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-13T12:11:15.385Z",
+  "dataFetchedAt": "2026-02-13T13:28:20.610Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,37 +9,34 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 6,
+    "missingFactors": [
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "geopoliticalCount": 5,
+    "countryActionCount": 15,
+    "dollarYieldCount": 10,
     "sourceFailures": [
       {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
-      },
-      {
-        "id": "gdelt_country_actions",
+        "id": "us_fed_funds_effective",
         "error": "The operation timed out."
       },
       {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "id": "us_treasury_2y",
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Effective Fed Funds Rate, US Treasury Yield 2Y"
   ],
   "warnings": [
-    "Source failures: gdelt_geopolitics (HTTP 429); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_fed_funds_effective (The operation timed out.); us_treasury_2y (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }

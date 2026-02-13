@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T12:11:31.930Z",
+  "generatedAt": "2026-02-13T13:28:48.496Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 179 triệu đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, đòi hỏi nhà đầu tư kiên nhẫn chờ tín hiệu hồi調 thay vì đu đỉnh. Dù xu hướng 30 ngày vẫn tăng mạnh 6.91%, nhưng lợi suất thực USD quay đầu tăng và giá thế giới đi ngang tạo áp lực điều chỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.08% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.25%/ngày và thiếu động lực vĩ mô cấp thiết để đẩy giá tiếp tục tăng tốc trong ngắn hạn.",
     "reasons": [
-      "Giá SJC đang ở mức 179,000,000 VND/lượng - đỉnh 5 năm (percentile 100%), rủi ro mua đỉnh cao khi giá đã tăng 6.91% trong 30 ngày gần đây.",
-      "Lợi suất thực USD 10 năm tăng mạnh 1.09% lên 1.86%, tạo áp lực giảm lên giá vàng thế giới trong ngắn hạn.",
-      "Giá thế giới (XAU/USD) đi ngang với change5dPct chỉ +0.04%, thiếu động lực đột phá mới từ tin tức địa chính trị.",
-      "Premium 15.53% nằm trong vùng trung bình của 30 ngày qua (dao động 6.36%-18.46%), không có tín hiệu bất thường để đánh giá thấp hay cao cực đoan."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.08% sau 30 ngày, cảnh báo vùng quá mua cần thời gian củng cố.",
+      "Biên độ dao động ngày cao 2.25% cho thấy thị trường bất ổn, nhà đầu tư MUA lúc này dễ hứng chịu rủi ro điều chỉnh ngắn hạn.",
+      "Lợi suất thực USD 10 năm (1.86%) và VIX (17.65) không ở mức cực đoan, thiếu động lực vĩ mô bất ngờ để đẩy giá tiếp tục tăng tốc."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu lợi suất thực USD tiếp tục tăng.",
-      "Biên độ dao động ngày 2.25% cho thấy thanh khoản cao nhưng biến động lớn, có thể gây sốc tài khoản ngắn hạn.",
-      "Thiếu tin tức địa chính trị hoặc hành động quốc gia mới để tạo đà tăng tiếp theo."
+      "Giá thế giới điều chỉnh giảm từ đỉnh 5327 USD/oz ngày 28/01 về 4967 USD/oz, rủi ro SJC điều chỉnh theo.",
+      "Premium 15.35% cao hơn vùng thấp nhất 6.36% trong chuỗi dữ liệu, có thể co lại nếu thanh khoản cải thiện.",
+      "Thiếu dữ liệu lãi suất Fed Funds và Treasury 2Y khiến đánh giá chính sách tiền tệ Mỹ không hoàn chỉnh."
     ],
     "evidence": [
       {
@@ -28,52 +27,46 @@
       },
       {
         "key": "sjc_change_30d",
-        "value": 6.91,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_1d",
-        "value": 1.09,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "intl_gold_change_5d",
-        "value": 0.04,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 15.53,
+        "value": 7.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "daily_volatility",
         "value": 2.25,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "current_premium",
+        "value": 15.35,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_level",
-        "value": 17.65,
-        "unit": "index",
+        "key": "intl_gold_peak_to_current",
+        "value": 5327.18,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.86,
+        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T12:10:53.907Z",
+    "latestTimestamp": "2026-02-13T13:27:59.350Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 154937400.6705755,
-    "premiumPct": 15.53,
-    "change7dPct": 0.04,
-    "change30dPct": 6.91,
+    "intlVndPerTael": 155183657.06239086,
+    "premiumPct": 15.35,
+    "change7dPct": 0.2,
+    "change30dPct": 7.08,
     "volatilityDailyPct": 2.25,
-    "ma7VndPerTael": 156454795,
-    "ma30VndPerTael": 153389518,
+    "ma7VndPerTael": 156489974,
+    "ma30VndPerTael": 153397727,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +77,22 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T12:11:15.385Z",
+    "fetchedAt": "2026-02-13T13:28:20.610Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4954.785,
+        "value": 4966.545,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 0.67,
-        "change5dPct": 0.04,
-        "change20dPct": 8.13,
+        "change1dPct": 0.91,
+        "change5dPct": 0.27,
+        "change20dPct": 8.39,
         "relationToGold": "context"
       },
       {
@@ -135,12 +131,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -157,12 +153,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.52,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-11",
-        "change1dPct": 2.03,
-        "change5dPct": -1.4,
-        "change20dPct": -0.28,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -185,8 +181,18 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-13 | business-standard.com | Gem , jewellery exports dip by 5 . 79 % at USD 2 , 238 . 54 million in Jan : GJEPC"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-13 | theglobeandmail.com | Ottawa asset : an independent central bank - The Globe and Mail",
+      "2026-02-13 | theglobeandmail.com | U . S . inflation seen maintaining steady pace in January after start - of - year price hikes",
+      "2026-02-13 | timesofindia.indiatimes.com | Forex reserves fall $6 . 7 billion to $717 . 06 billion ; gold holdings drag",
+      "2026-02-13 | livemint.com | Gold shines brightest ! Yellow metal beats Nifty 50 , real estate and fixed income across 1 , 5 , 10 and 20 years",
+      "2026-02-13 | ghanaweb.com | Is Treasury yield compression running ahead of issuance risk ?"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-13 | livemint.com | Gold shines brightest ! Yellow metal beats Nifty 50 , real estate and fixed income across 1 , 5 , 10 and 20 years"
+    ]
   }
 }
