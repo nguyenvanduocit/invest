@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T15:16:21.857Z",
+  "generatedAt": "2026-02-13T16:16:35.813Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.85% trong 30 ngày qua, nhưng động lượng tăng giá thế giới đang chững lại gần ngưỡng 5,000 USD/oz. Biên độ dao động premium mở rộng và VIX tăng cao cảnh báo rủi ro điều chỉnh kỹ thuật, nhà đầu tư nên chờ đợi xác nhận xu hướng hoặc đợt điều chỉnh để tham gia an toàn hơn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.57%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium giãn nhanh và giá thế giới đã tăng hơn 9% trong 20 ngày qua.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 7.85% sau 30 ngày và cao hơn MA30 (153.4 triệu VND/lượng) tới 16.5%.",
-      "Giá thế giới XAUUSD (~5,004 USD/oz) đã tăng hơn 9.24% trong 20 ngày và đang tiếp cận ngưỡng tâm lý 5,000 USD, cộng hưởng lợi suất thực 10Y giảm 4.12% trong 5 ngày tạo đà tăng nhưng có thể gặp kháng cự mạnh.",
-      "Rủi ro biến động tăng cao khi VIX nhảy vọt 17.96% lên mức 20.82 và biên độ dao động ngày của vàng lên tới 2.26%, trong khi premium đã mở rộng đến 14.52% so với mức 9.95% đầu chuỗi dữ liệu."
+      "Giá SJC 179 triệu VND/lượng đang vượt xa MA30 (153.4 triệu VND/lượng) tới 16.7%, tín hiệu khu vực quá mua rõ rệt cần thời gian củng cố.",
+      "Đà tăng thế giới (XAUUSD) rất mạnh với +9.03%/20 ngày và VIX tăng vọt 31.44% cho thấy thị trường tài chính đang bất ổn, hỗ trợ giá vàng nhưng dễ gây biến động hai chiều.",
+      "Premium SJC giãn từ mức thấp 6.36% (ngày 28/01) lên 14.82% hiện tại, cho thấy thị trường nội địa đã định giá phần lớn cú sốc cung/cầu gần đây."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn khi giá đang ở vùng quá mua (percentile 100%) và chênh lệch premium nới rộng.",
-      "Điểm tựa kỹ thuật ở MA7 (156.65 triệu VND/lượng) khá xa giá hiện tại, nguy cơ điều chỉnh về vùng giá thấp hơn.",
-      "Dữ liệu tin tức địa chính trị không có tín hiệu rõ ràng, giảm độ tin cậy vào đà tăng giá dài hạn từ vĩ mô."
+      "Rủi ro điều chỉnh giá cao khi giá đang ở vùng hiếm (percentile 5 năm: 100%), khả năng sinh lời ngắn hạn thấp nếu mua đuổi.",
+      "Biên độ dao động ngày cao (2.25%) kết hợp với VIX tăng mạnh có thể gây sốc tài khoản nếu đòn bẩy cao.",
+      "Dữ liệu lạm phát Mỹ mới phát hành cho thấy kỳ vọng cắt giảm lãi suất tháng 6 đang cao (83%), nếu Fed có phát ngôn khác đi sẽ gây chốt lời mạnh tay."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "Giá SJC hiện tại",
+        "value": 179000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Khoảng cách giá so với MA30",
+        "value": 16.67,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "XAUUSD Biến động 20 ngày",
+        "value": 9.03,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Chỉ số VIX 20 ngày",
+        "value": 31.44,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC hiện tại",
+        "value": 14.82,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC thấp nhất 30 ngày",
+        "value": 6.36,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Percentile 5 năm",
         "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 7.85,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_premium_current",
-        "value": 14.52,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "xauusd_change_20d",
-        "value": 9.24,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_5d",
-        "value": -4.12,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "vix_level",
-        "value": 20.82,
-        "unit": "index",
-        "source": "macro_context"
-      },
-      {
-        "key": "vix_change_1d",
-        "value": 17.96,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T15:15:52.488Z",
+    "latestTimestamp": "2026-02-13T16:15:16.435Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 156305326.4196305,
-    "premiumPct": 14.52,
-    "change7dPct": 0.93,
-    "change30dPct": 7.85,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156650213,
-    "ma30VndPerTael": 153435116,
+    "intlVndPerTael": 155890599.44565243,
+    "premiumPct": 14.82,
+    "change7dPct": 0.66,
+    "change30dPct": 7.57,
+    "volatilityDailyPct": 2.25,
+    "ma7VndPerTael": 156590966,
+    "ma30VndPerTael": 153421291,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T15:16:02.626Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-13T16:15:30.954Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5005.875,
+        "value": 4996.175,
         "unit": "USD/oz",
         "date": "2026-02-13",
-        "change1dPct": 1.7,
-        "change5dPct": 1.07,
-        "change20dPct": 9.24,
+        "change1dPct": 1.51,
+        "change5dPct": 0.87,
+        "change20dPct": 9.03,
         "relationToGold": "context"
       },
       {
@@ -190,24 +184,22 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-13 | wattsupwiththat.com | New York Climate Act Issues",
-      "2026-02-13 | boredpanda.com | 44YO Overjoyed As She Gonna Be A Grandma , Gets Her Heart Broken As 32YO BF Doesnt Want That Life",
-      "2026-02-13 | srilankasource.com | The Galactic Standard : How SUYUG Infra is Engineering a New Real Estate Benchmark in Bengaluru",
-      "2026-02-13 | newpol.org | Build , Expand , Liberate ! - New Politics",
-      "2026-02-13 | boredpanda.com | 44YO Overjoyed As She Gonna Be A Grandma , Gets Her Heart Broken As 32YO BF Doesnt Want That Life"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-13 | firstpost.com | US consumer prices undershoot forecasts in January , core inflation firms",
-      "2026-02-13 | investopedia.com | Stock Market Today : Stocks Flat Following Tame Inflation Report ; Tech Sell - Off Slows",
-      "2026-02-13 | actionforex.com | EUR / USD Consolidates Ahead of US Inflation Data",
-      "2026-02-13 | theglobeandmail.com | Ottawa asset : an independent central bank - The Globe and Mail",
-      "2026-02-13 | theglobeandmail.com | U . S . inflation seen maintaining steady pace in January after start - of - year price hikes"
+      "2026-02-13 | thetrucker.com | Inflation measure falls to nearly five - year low as gas prices fall and housing costs cool",
+      "2026-02-13 | ocregister.com | Wall Street drifts after an encouraging update on inflation",
+      "2026-02-13 | fox61.com | Inflation falls to nearly five - year low as gas prices fall and housing costs cool",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - Inflation Thaw : Cooling January Data Fuels 83 % Odds of June Fed Rate Cut",
+      "2026-02-13 | sun-sentinel.com | Inflation measure falls to nearly five - year low",
+      "2026-02-13 | chicoer.com | Inflation measure falls to nearly five - year low"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - The  Warsh Shock : How the Next Fed Chair Sound Money Vision Reshaped the $5 , 000 Gold Market",
+      "2026-02-13 | freepressjournal.in | Precious Metals Prices Slide : Silver Falls 5 Per Cent To ₹2 . 55 Lakh Per Kg , Gold Drops To ₹1 . 58 Lakh Per 10 Grams In Delhi",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - Precious Metals Meltdown : Gold and Silver Plummet as Robust Jobs Report Crushes Rate Cut Hopes",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Golden Renaissance : Global Demand Shatters Records as Central Banks Anchor a New Monetary Era",
       "2026-02-13 | tickerreport.com | Gold Stocks To Watch Now – February 10th",
-      "2026-02-13 | investopedia.com | Stock Market Today : Stocks Flat Following Tame Inflation Report ; Tech Sell - Off Slows",
-      "2026-02-13 | gulfbusiness.com | Gold rebounds toward $5 , 000 ahead of US inflation"
+      "2026-02-13 | investopedia.com | Stock Market Today : Stocks Flat Following Tame Inflation Report ; Tech Sell - Off Slows"
     ]
   }
 }
