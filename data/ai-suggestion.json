@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-13T22:09:55.130Z",
+  "generatedAt": "2026-02-14T00:21:52.002Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư nên chờ đợi điểm mua an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi lợi suất thực USD giảm sâu và VIX tăng vọt, nên chờ đợi điểm nhập trường an toàn hơn thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang vượt xa MA30 (153.9 triệu VND/lượng) tới 16.3%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
-      "VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82 chỉ thị lo ngại thị trường, hỗ trợ vàng nhưng cũng báo hiệu biến động cao.",
-      "Lợi suất thực 10 năm giảm 4.76% trong 5 ngày xuống 1.8%, giảm chi phí cơ hội nắm giữ vàng, hỗ trợ xu hướng tăng dài hạn.",
-      "Premium 13.62% đang ổn định trong biên độ lịch sử (dao động 9.95%-18.46% trong 30 ngày), không có dấu hiệu bất thường cực đoan."
+      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (154.1 triệu VND/lượng) tới 16.2%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng vĩ mô hỗ trợ mạnh: Lợi suất thực Mỹ 10 năm giảm sâu 20 ngày (-3.23%) và VIX tăng vọt 20 ngày (+31.44%) thúc đẩy dòng tiền trú ẩn vào vàng thế giới (+9.83% 20 ngày).",
+      "Premium 13.48% đang ổn định trong biên độ dao động 30 ngày gần đây (6.23% - 18.31%), không có dấu hiệu căng thẳng cực đoan cần can thiệp."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh khi giá đang ở vùng đỉnh 5 năm (percentile 100%) và tăng quá nhanh 9.27%/tháng.",
-      "Biến động ngày cao 2.23% cộng với VIX tăng có thể gây sụt giảm ngắn hạn trước khi tiếp tục xu hướng.",
-      "Đã có 4 đợt drawdown với mức tồi tệ -41.26%, cần quản lý rủi ro chặt chẽ."
+      "Rủi ro điều chỉnh giá cao do mua đuổi (drawdown tồi t nhất trong 5 năm là -41.26%).",
+      "Biến động ngày lớn (2.26%) có thể gây cháy tài khoản nếu dùng đòn bẩy.",
+      "Dữ liệu sự kiện vĩ mô (Fed, ECB) chưa có tín hiệu rõ ràng về xu hướng lãi suất dài hạn, dễ gây nhiễu thị trường."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 16.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 9.27,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change20d",
+        "key": "SJC Price vs MA30 Deviation",
+        "value": 16.16,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.23,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_10y",
-        "value": 1.8,
+        "key": "Gold Spot Change 20d",
+        "value": 9.83,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_change5d",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 9.95,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.23,
+        "key": "SJC Premium Current",
+        "value": 13.48,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Premium 30d Range",
+        "value": 12.08,
+        "unit": "% (spread)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-13T22:09:38.420Z",
+    "latestTimestamp": "2026-02-14T00:21:24.170Z",
     "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 157538228.36324185,
-    "premiumPct": 13.62,
+    "intlVndPerTael": 157741524.03623515,
+    "premiumPct": 13.48,
     "change7dPct": 1.7,
     "change30dPct": 9.27,
-    "volatilityDailyPct": 2.23,
-    "ma7VndPerTael": 157142221,
-    "ma30VndPerTael": 153907692,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 157344721,
+    "ma30VndPerTael": 154105989,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-13T22:09:41.993Z",
+    "fetchedAt": "2026-02-14T00:21:35.070Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -130,12 +123,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.29,
+        "value": 2.27,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": -1.29,
-        "change5dPct": -1.29,
-        "change20dPct": 0,
+        "date": "2026-02-13",
+        "change1dPct": -0.87,
+        "change5dPct": -2.99,
+        "change20dPct": -0.87,
         "relationToGold": "direct"
       },
       {
@@ -191,12 +184,17 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-13 | peoplesworld.org | Trump suffers another defeat in his war on renewable energy",
-      "2026-02-13 | timesofindia.indiatimes.com | Gem and jewellery exports stabilize , improve after tariff cut | Surat News",
-      "2026-02-13 | natlawreview.com | US Treasury OFAC Provides Relief for Venezuelan Oil Sector"
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-14 | swissinfo.ch | Treasury Yields Fall as CPI Keeps Fed Wagers Alive : Markets Wrap",
+      "2026-02-13 | wral.com | US stocks halt their AI - induced slide and rise after an encouraging update on inflation",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Doctrine : A New Era for the Federal Reserve as Kevin Warsh Set to Succeed Jerome Powell",
+      "2026-02-13 | markets.financialcontent.com | FinancialContent - Inflation Cools More Than Expected in January , Igniting Relief Rally Across Wall Street"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-14 | swissinfo.ch | Treasury Yields Fall as CPI Keeps Fed Wagers Alive : Markets Wrap",
+      "2026-02-13 | indianexpress.com | Key themes in new CPI : Gold , silver to back - series",
+      "2026-02-13 | wealthdaily.com | The Day Gold  Died  and the Bull Market That Followed"
+    ]
   }
 }
