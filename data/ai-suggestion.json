@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T17:07:47.671Z",
+  "generatedAt": "2026-02-14T18:07:21.693Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,33 +7,33 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng quá nóng trong 30 ngày (+9.26%), tạo rủi ro điều chỉnh kỹ thuật cao dù xu hướng vĩ mô vẫn hỗ trợ.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.26%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày. Nhà đầu tư nên chờ đợi信 hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang nằm trên MA7 (157 triệu) và MA30 (154 triệu) với biên độ dao động 2.26%/ngày, cho thấy thị trường quá mua và biến động cực mạnh.",
-      "Lợi suất thực Mỹ 10 năm giảm 3.23% và VIX tăng 31.44% trong 20 ngày là động lực hỗ trợ giá tăng, nhưng giá thế giới đã phản giá với mức tăng 9.83% (20 ngày).",
-      "Premium 14.75% đang ở mức cao, giá SJC đã tăng liên tục và cần thời gian tích lũy để kiểm chứng vùng giá mới.",
-      "Đỉnh 181 triệu VND/lượng là ngưỡng tâm lý quan trọng, nhà đầu tư cần chờ xác nhận phá vỡ hoặc điều chỉnh về vùng hỗ trợ gần MA7 (khoảng 157 triệu VND/lượng)."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (154.1 triệu VND/lượng) tới 17.5%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng giá 30 ngày qua rất mạnh (+9.26%), nhưng biến động ngày cao (2.26%) cho thấy thị trường đang rung lắc dữ dội, rủi ro 'bẫy' tăng cao.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm sâu 4.76% trong 5 ngày xuống 1.8%, tạo đòn bẩy cơ bản giúp giá vàng thế giới tăng +9.83% trong 20 ngày, nhưng áp lực chốt lời đang hiện hữu.",
+      "Chỉ số VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82 cho thấy lo ngại rủi ro thị trường, nhưng thiếu tin tức địa chính trị cụ thể trong dữ liệu đầu vào."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá ở mức cực đại 5 năm và đã tăng hơn 9% trong 30 ngày qua.",
-      "Biên độ dao động ngày 2.26% cho thấy thanh khoản có thể bốc hơi nhanh nếu thị trường đảo chiều.",
-      "Lợi suất thực Mỹ có thể hồi phục nếu dữ liệu lạm phát không như kỳ vọng, gây áp lực lên giá vàng thế giới."
+      "Rủi ro điều chỉnh sâu: Mua ở đỉnh percentile 100% có nguy cơ đối mặt với đợt điều chỉnh ngắn hạn mạnh, đặc biệt nếu giá thế giới quay đầu.",
+      "Biên độ biến động: Dao động 2.26%/ngày tương đương hơn 4 triệu VND/lượng có thể kích hoạt các lệnh cắt lỗ hoặc gây áp lực tài chính lớn cho nhà đầu tư dùng đòn bẩy.",
+      "Premium co giãn: Mức premium 14.75% có thể bị nén xuống nếu giá thế giới giảm nhưng tâm lý nhà đầu tư Việt Nam nguội lạnh."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA7",
-        "value": 15.1,
-        "unit": "% above MA7 (VND/lượng)",
+        "key": "SJC Price vs MA30",
+        "value": 17.5,
+        "unit": "% above MA",
         "source": "market_snapshot"
       },
       {
-        "key": "30-Day Change",
+        "key": "SJC 30D Change",
         "value": 9.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
+        "key": "5Y Percentile",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
@@ -45,13 +45,19 @@
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -3.23,
+        "key": "US Real Yield 10Y 5D Change",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "Intl Gold 20D Change",
+        "value": 9.83,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX 20D Change",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
@@ -65,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T17:07:15.796Z",
+    "latestTimestamp": "2026-02-14T18:06:36.897Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157736467.02620867,
+    "intlVndPerTael": 157736194.9085241,
     "premiumPct": 14.75,
     "change7dPct": 1.69,
     "change30dPct": 9.26,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157343999,
-    "ma30VndPerTael": 154105820,
+    "ma7VndPerTael": 157343960,
+    "ma30VndPerTael": 154105811,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T17:07:26.667Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-14T18:06:57.555Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,23 +191,15 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-14 | virginislandsnewsonline.com | Oil , the mighty dollar , and race wars | Virgin Islands News Online"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-14 | taipeitimes.com | US inflation increase lower than expected",
       "2026-02-14 | virginislandsnewsonline.com | Oil , the mighty dollar , and race wars | Virgin Islands News Online",
       "2026-02-14 | insurancenewsnet.com | EUR / USD Forecast : Euro Looking for Momentum to Continue Uptrend - 11 February 2026 - Insurance News",
       "2026-02-14 | finance.yahoo.com | Trump Tariffs Backfired : 94 % Of Economic Burden Fell On US Importers , NY Fed Says",
       "2026-02-14 | dailysabah.com | IMF sees progress in Türkiye disinflation program , steady growth",
-      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis",
-      "2026-02-14 | newstribune.com | Wall Street steadies itself after encouraging update on inflation | Jefferson City News Tribune"
+      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-14 | americanthinker.com | Trump Is Turning Around a 100 - Year - Old Problem",
-      "2026-02-14 | bankingnews.gr | Plato , power , and 2026 : The argument that Donald Trump must suspend Democracy to remain dominant",
-      "2026-02-14 | nbclosangeles.com | Couple Finds Rare Coins Worth Over $800 , 000 During Kitchen Renovation",
-      "2026-02-14 | vir.com.vn | Citi economists project robust Vietnam economic growth in 2026",
-      "2026-02-14 | finance.yahoo.com | Ron Paul raises red flag of  fraud  in the US system , says leaders cant print money forever . Shockproof your riches now"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
