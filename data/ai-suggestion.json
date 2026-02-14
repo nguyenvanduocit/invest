@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T00:21:52.002Z",
+  "generatedAt": "2026-02-14T01:35:11.727Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,15 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi lợi suất thực USD giảm sâu và VIX tăng vọt, nên chờ đợi điểm nhập trường an toàn hơn thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 30 ngày qua (+9.26%), nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, yêu cầu nhà đầu tư kiên nhẫn chờ điểm mua an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 179 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (154.1 triệu VND/lượng) tới 16.2%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng vĩ mô hỗ trợ mạnh: Lợi suất thực Mỹ 10 năm giảm sâu 20 ngày (-3.23%) và VIX tăng vọt 20 ngày (+31.44%) thúc đẩy dòng tiền trú ẩn vào vàng thế giới (+9.83% 20 ngày).",
-      "Premium 13.48% đang ổn định trong biên độ dao động 30 ngày gần đây (6.23% - 18.31%), không có dấu hiệu căng thẳng cực đoan cần can thiệp."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.26% sau 30 ngày và vượt xa MA30 (154.1 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng vọt 17.96% ngày 12/02 là động lực tăng giá cơ bản mạnh mẽ, nhưng giá vàng thế giới đã phản giá trước đó (+9.83% 20 ngày).",
+      "Biên độ dao động ngày cao (2.26%) và số lần giảm giá chưa hồi phục (1/4 lần) cho thấy thị trường đang biến động mạnh và rủi ro điều chỉnh ngắn hạn là hiện hữu."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do mua đuổi (drawdown tồi t nhất trong 5 năm là -41.26%).",
-      "Biến động ngày lớn (2.26%) có thể gây cháy tài khoản nếu dùng đòn bẩy.",
-      "Dữ liệu sự kiện vĩ mô (Fed, ECB) chưa có tín hiệu rõ ràng về xu hướng lãi suất dài hạn, dễ gây nhiễu thị trường."
+      "Rủi ro điều chỉnh kỹ thuật mạnh sau khi tăng quá nóng (change30dPct 9.26%), giá có thể hồi về vùng MA7 (157.3 triệu VND/lượng).",
+      "Premium 14.75% cao hơn đáng kể so với mức thấp nhất trong chuỗi 30 ngày (6.23%), có nguy cơ co hẹp nếu giá thế giới đi ngang."
     ],
     "evidence": [
       {
@@ -26,53 +25,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30 Deviation",
-        "value": 16.16,
+        "key": "SJC Change 30d",
+        "value": 9.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -3.23,
+        "key": "SJC MA30",
+        "value": 154105872,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 31.44,
+        "key": "VIX Change 1d",
+        "value": 17.96,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 9.83,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "SJC Premium Current",
-        "value": 13.48,
+        "key": "Premium Current vs Low",
+        "value": 14.75,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Premium 30d Range",
-        "value": 12.08,
-        "unit": "% (spread)",
-        "source": "monthly_series_30d"
+        "key": "Daily Volatility",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T00:21:24.170Z",
-    "sjcVndPerTael": 179000000,
-    "intlVndPerTael": 157741524.03623515,
-    "premiumPct": 13.48,
-    "change7dPct": 1.7,
-    "change30dPct": 9.27,
+    "latestTimestamp": "2026-02-14T01:34:32.421Z",
+    "sjcVndPerTael": 181000000,
+    "intlVndPerTael": 157738030.29538926,
+    "premiumPct": 14.75,
+    "change7dPct": 1.69,
+    "change30dPct": 9.26,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344721,
-    "ma30VndPerTael": 154105989,
+    "ma7VndPerTael": 157344222,
+    "ma30VndPerTael": 154105872,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +82,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T00:21:35.070Z",
+    "fetchedAt": "2026-02-14T01:34:54.119Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -186,15 +185,8 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-14 | swissinfo.ch | Treasury Yields Fall as CPI Keeps Fed Wagers Alive : Markets Wrap",
-      "2026-02-13 | wral.com | US stocks halt their AI - induced slide and rise after an encouraging update on inflation",
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - The Warsh Doctrine : A New Era for the Federal Reserve as Kevin Warsh Set to Succeed Jerome Powell",
-      "2026-02-13 | markets.financialcontent.com | FinancialContent - Inflation Cools More Than Expected in January , Igniting Relief Rally Across Wall Street"
+      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-14 | swissinfo.ch | Treasury Yields Fall as CPI Keeps Fed Wagers Alive : Markets Wrap",
-      "2026-02-13 | indianexpress.com | Key themes in new CPI : Gold , silver to back - series",
-      "2026-02-13 | wealthdaily.com | The Day Gold  Died  and the Bull Market That Followed"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
