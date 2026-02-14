@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T21:06:45.396Z",
+  "generatedAt": "2026-02-14T22:05:09.816Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động lên tới 2.22%/ngày và VIX tăng vọt, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.22%. Nhà đầu tư không nên mua đuổi tại vùng giá 181 triệu đồng/lượng này mà chờ đợi信 hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ gần MA7 (khoảng 157 triệu đồng/lượng).",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày, rủi ro mua đỉnh ngắn hạn rất lớn.",
-      "Động lượng vĩ mô hỗ trợ vàng: Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 17.96% phản ánh lo ngại thị trường.",
-      "Biên độ dao động ngày cao 2.22% cho thấy thị trường đang rung lắc mạnh, phù hợp với chiến lược chờ quan sát hơn than gia nhập ngay."
+      "Giá SJC 181 triệu đồng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày qua, rủi ro mua đỉnh là rất lớn.",
+      "Biên độ dao động ngày cao (2.22%) cho thấy thị trường đang rung lắc mạnh, thanh khoản có thể bị ảnh hưởng trong ngắn hạn.",
+      "Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày là động lực hỗ trợ giá vàng tăng, nhưng phần lớn đã được định giá ở mức hiện tại.",
+      "Premium 14.75% đang ở mức trung bình so với đỉnh 18.31% ngày 05/02, cho thấy giá Việt Nam chưa bị bong bóng quá mức nhưng cũng không còn rẻ."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu sau khi tăng liên tục và đạt đỉnh percentile 5 năm.",
-      "Biên độ giá rộng (volatility 2.22%) có thể gây cháy tài khoản nếu dùng đòn bẩy.",
-      "Premium 14.75% cao hơn vùng an toàn lịch sử, có nguy cơ co hẹp nếu giá thế giới giảm."
+      "Rủi ro chốt lời ngắn hạn (Take-profit) rất cao khi giá đã tăng gần 10% chỉ trong 1 tháng và chạm đỉnh 5 năm.",
+      "Độ biến động cao (volatility 2.22%) có thể gây sốc tài khoản nếu sử dụng đòn bẩy hoặc mua all-in tại điểm này.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input, khó đánh giá chính xác các cú sốc giá ngoài thị trường."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
+        "key": "change_30d",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_1d",
-        "value": 17.96,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
+        "key": "volatility_daily",
         "value": 2.22,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "current_premium",
-        "value": 14.75,
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "sjc_current_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "vix_change_20d",
+        "value": 31.44,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_current",
+        "value": 14.75,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T21:06:12.034Z",
+    "latestTimestamp": "2026-02-14T22:04:29.789Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157740111.83928624,
+    "intlVndPerTael": 157737954.290105,
     "premiumPct": 14.75,
-    "change7dPct": 0.64,
+    "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157486649,
-    "ma30VndPerTael": 154577799,
+    "ma7VndPerTael": 157486341,
+    "ma30VndPerTael": 154577727,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T21:06:29.757Z",
+    "fetchedAt": "2026-02-14T22:04:51.398Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,18 +186,7 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data",
-      "2026-02-14 | marketscreener.com | ECB opens up euro lifeline in bid to boost global role"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data",
-      "2026-02-14 | thefrontierpost.com | Fuel prices down , gold up in Kabul"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
