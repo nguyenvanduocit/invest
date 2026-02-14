@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T10:06:36.820Z",
+  "generatedAt": "2026-02-14T11:06:19.982Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 9.26% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật đang gia tăng khi lợi suất thực USD giảm sâu và VIX tăng vọt 31.44% trong 20 ngày cho thấy bất ổn thị trường.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.26%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi VIX nhảy vọt +18% và lợi suất thực USD giảm sâu, cần chờ xác nhận xu hướng thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang vượt xa MA30 (154,105,861 VND/lượng) tới 17.4% và đứng ở mức cao nhất 5 năm (percentile 100%), tín hiệu quá mua rõ rệt.",
-      "Động lượng tăng giá 30 ngày đạt 9.26% kết hợp với giá vàng thế giới đã vượt 5,000 USD/oz (mốc 5,043.1 USD/oz) cho thấy xu hướng tăng vẫn còn mạnh.",
-      "Lợi suất thực 10 năm USD giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày lên 20.82 điểm là động lực hỗ trợ vàng.",
-      "Premium 14.75% nằm trong biên dao động 6.23%-18.31% của 30 ngày qua, không có dấu hiệu bất thường cực đoan."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (154.1 triệu VND/lượng) đến 17.5%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng vĩ mô thuận lợi: Lợi suất thực 10Y USD giảm mạnh -4.76%/5 ngày xuống 1.8%, và giá vàng thế giới đã phá 5000 USD/oz (tăng +9.83%/20 ngày) theo tin 'Gold reclaims $5,000'.",
+      "Biến động premium mở rộng (dao động 6.23%-18.31%/tháng) kết hợp VIX tăng vọt +17.96% trong 1 ngày cho thấy tâm lý thị trường bất ổn, rủi ro chốt lời ngắn hạn rất lớn."
     ],
     "risks": [
-      "Đang ở đỉnh lịch sử, rủi ro điều chỉnh kỹ thuật cao nếu dữ liệu Fed đi ngược kỳ vọng.",
-      "Biên độ dao động ngày 2.26% và drawdown tồi t nhất 41.26% cho thấy biến động lớn có thể xảy ra.",
-      "Lạm phát kỳ vọng (breakeven) giảm 2.99% trong 5 ngày có thể làm suy yếu động lực giữ vàng dài hạn."
+      "Điều chỉnh kỹ thuật: Giá cách xa MA7 (157.3 triệu) tới 15%, dễ hồi về mức trung bình ngắn hạn.",
+      "Premium co giãn thất thường từ 6.23% lên 18.31% trong tháng, có thể gây thua lỗ spread nếu mua đỉnh.",
+      "VIX tăng đột biến (+31.44%/20 ngày) báo hiệu rủi ro thanh khoản và đảo chiều thị trường tài sản rủi ro."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d",
+        "key": "sjc_vs_ma30_premium",
+        "value": 17.46,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_5d_change",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_1d_change",
+        "value": 17.96,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "gold_spot_20d_change",
+        "value": 9.83,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_30d_change",
         "value": 9.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30_vnd",
-        "value": 154105861,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 14.75,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "gold_spot",
-        "value": 5043.1,
-        "unit": "USD/oz",
+        "key": "premium_volatility_range",
+        "value": 12.08,
+        "unit": "% points",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T10:05:31.296Z",
+    "latestTimestamp": "2026-02-14T11:05:51.345Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157737695.62191522,
+    "intlVndPerTael": 157738275.8268632,
     "premiumPct": 14.75,
     "change7dPct": 1.69,
     "change30dPct": 9.26,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344174,
-    "ma30VndPerTael": 154105861,
+    "ma7VndPerTael": 157344257,
+    "ma30VndPerTael": 154105880,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T10:05:42.361Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-14T11:05:58.818Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -192,21 +185,19 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | theguardian.com | There only one bed ,  fake dating  and  opposites attract : how tropes took over romance | Romance books",
-      "2026-02-14 | keyt.com | Flora and UCSB made great first impression in season opener",
-      "2026-02-14 | leadertelegram.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
-      "2026-02-14 | yesweekly.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
-      "2026-02-14 | paradisepost.com | SF Giant Logan Webb , Hayden Birdsong throw first live bullpens"
+      "2026-02-14 | rockymounttelegram.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
+      "2026-02-14 | thesalemnewsonline.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
+      "2026-02-14 | thedailytimes.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
+      "2026-02-14 | reflector.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
+      "2026-02-14 | herald-dispatch.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy"
     ],
     "countryActionHeadlines": [
+      "2026-02-14 | presstv.ir | Nancy Pelosi acknowledges Iran rural support , urges more sanctions so they  feel the pain as well",
       "2026-02-14 | businesstimes.com.sg | Gold reclaims US$5 , 000 as cooling inflation lifts Fed easing bets",
-      "2026-02-14 | mariettatimes.com | U . S . stocks halt their AI - induced slide and rise after an encouraging update on inflation | News , Sports , Jobs",
-      "2026-02-14 | cointelegraph.com | Bitcoiners Face Test As Inflation Cools : Pompliano",
-      "2026-02-14 | understandingwar.org | Russian Offensive Campaign Assessment , Feb . 13 , 2026"
+      "2026-02-14 | mariettatimes.com | U . S . stocks halt their AI - induced slide and rise after an encouraging update on inflation | News , Sports , Jobs"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | businesstimes.com.sg | Gold reclaims US$5 , 000 as cooling inflation lifts Fed easing bets",
-      "2026-02-14 | prokerala.com | Gold dips 1 . 82 pc during week amidst macroeconomic volatility , soft US CPI data"
+      "2026-02-14 | newsx.com | The Weekend On Dalal Street : From Trade Euphoria To AI Panic – How Last Week Rollercoaster Sets The Stage For Monday Stock Market Moves"
     ]
   }
 }
