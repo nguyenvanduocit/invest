@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T18:07:21.693Z",
+  "generatedAt": "2026-02-14T19:08:19.803Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.26%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày. Nhà đầu tư nên chờ đợi信 hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ thay vì đu đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh 9.27%/tháng, nhưng thanh toán rủi ro cao và biên an toàn thấp khiến việc xô đỉnh vào lúc này rủi ro.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (154.1 triệu VND/lượng) tới 17.5%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng giá 30 ngày qua rất mạnh (+9.26%), nhưng biến động ngày cao (2.26%) cho thấy thị trường đang rung lắc dữ dội, rủi ro 'bẫy' tăng cao.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm sâu 4.76% trong 5 ngày xuống 1.8%, tạo đòn bẩy cơ bản giúp giá vàng thế giới tăng +9.83% trong 20 ngày, nhưng áp lực chốt lời đang hiện hữu.",
-      "Chỉ số VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82 cho thấy lo ngại rủi ro thị trường, nhưng thiếu tin tức địa chính trị cụ thể trong dữ liệu đầu vào."
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (154.1 triệu VND/lượng) tới 17.5%, tín hiệu quá mua kỹ thuật ngắn hạn.",
+      "Lợi suất thực Mỹ (1.8%) và danh nghĩa (10Y: 4.09%) giảm mạnh 5 ngày qua, hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày qua.",
+      "VIX tăng 31.44% trong 20 ngày cho thấy tâm lý thị trường lo ngại, hỗ trợ nhu cầu trú ẩn an toàn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu: Mua ở đỉnh percentile 100% có nguy cơ đối mặt với đợt điều chỉnh ngắn hạn mạnh, đặc biệt nếu giá thế giới quay đầu.",
-      "Biên độ biến động: Dao động 2.26%/ngày tương đương hơn 4 triệu VND/lượng có thể kích hoạt các lệnh cắt lỗ hoặc gây áp lực tài chính lớn cho nhà đầu tư dùng đòn bẩy.",
-      "Premium co giãn: Mức premium 14.75% có thể bị nén xuống nếu giá thế giới giảm nhưng tâm lý nhà đầu tư Việt Nam nguội lạnh."
+      "Mua tại percentile 100 (đỉnh 5 năm) rủi ro điều chỉnh kỹ thuật cao khi thị trường quá mua.",
+      "Biên độ dao động 2.26%/ngày rất lớn, tiềm ẩn rủi ro thanh khoản ngắn hạn.",
+      "Premium 14.75% có thể bị nén nếu giá thế giới điều chỉnh giảm."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA30",
-        "value": 17.5,
-        "unit": "% above MA",
+        "key": "sjc_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC 30D Change",
-        "value": 9.26,
-        "unit": "%",
+        "key": "ma30_price",
+        "value": 154105960,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5Y Percentile",
+        "key": "percentile_5y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y 5D Change",
-        "value": -4.76,
+        "key": "change30d_sjc",
+        "value": 9.27,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Intl Gold 20D Change",
-        "value": 9.83,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX 20D Change",
+        "key": "vix_change20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 14.75,
+        "key": "intl_gold_change20d",
+        "value": 9.83,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T18:06:36.897Z",
+    "latestTimestamp": "2026-02-14T19:07:59.868Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157736194.9085241,
+    "intlVndPerTael": 157740655.7618763,
     "premiumPct": 14.75,
-    "change7dPct": 1.69,
-    "change30dPct": 9.26,
+    "change7dPct": 1.7,
+    "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157343960,
-    "ma30VndPerTael": 154105811,
+    "ma7VndPerTael": 157344597,
+    "ma30VndPerTael": 154105960,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T18:06:57.555Z",
+    "fetchedAt": "2026-02-14T19:08:03.942Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -192,14 +185,9 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-14 | taipeitimes.com | US inflation increase lower than expected",
-      "2026-02-14 | virginislandsnewsonline.com | Oil , the mighty dollar , and race wars | Virgin Islands News Online",
-      "2026-02-14 | insurancenewsnet.com | EUR / USD Forecast : Euro Looking for Momentum to Continue Uptrend - 11 February 2026 - Insurance News",
-      "2026-02-14 | finance.yahoo.com | Trump Tariffs Backfired : 94 % Of Economic Burden Fell On US Importers , NY Fed Says",
-      "2026-02-14 | dailysabah.com | IMF sees progress in Türkiye disinflation program , steady growth",
-      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis"
-    ],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-14 | thefrontierpost.com | Fuel prices down , gold up in Kabul"
+    ]
   }
 }
