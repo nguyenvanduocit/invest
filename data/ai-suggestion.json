@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T22:05:09.816Z",
+  "generatedAt": "2026-02-14T23:06:34.892Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.22%. Nhà đầu tư không nên mua đuổi tại vùng giá 181 triệu đồng/lượng này mà chờ đợi信 hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ gần MA7 (khoảng 157 triệu đồng/lượng).",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.22%/ngày và giá đã vượt xa MA30 (154.6 triệu/lượng).",
     "reasons": [
-      "Giá SJC 181 triệu đồng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày qua, rủi ro mua đỉnh là rất lớn.",
-      "Biên độ dao động ngày cao (2.22%) cho thấy thị trường đang rung lắc mạnh, thanh khoản có thể bị ảnh hưởng trong ngắn hạn.",
-      "Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày là động lực hỗ trợ giá vàng tăng, nhưng phần lớn đã được định giá ở mức hiện tại.",
-      "Premium 14.75% đang ở mức trung bình so với đỉnh 18.31% ngày 05/02, cho thấy giá Việt Nam chưa bị bong bóng quá mức nhưng cũng không còn rẻ."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày nhưng thanh khoản thấp khiến việc mua đuổi rủi ro cao.",
+      "Động lượng vĩ mô hỗ trợ vàng khi lợi suất thực Mỹ (US Real Yield 10Y) giảm sâu 4.76% trong 5 ngày xuống mức 1.8%, áp dụng áp lực lên USD và hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày.",
+      "Biên độ dao động ngày (volatility) lên đến 2.22% kết hợp với mức giá cách xa MA30 (154.6 triệu/lượng) hơn 26 triệu đồng cho thấy thị trường đang quá mua và dễ bị chốt lời ngắn hạn."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn (Take-profit) rất cao khi giá đã tăng gần 10% chỉ trong 1 tháng và chạm đỉnh 5 năm.",
-      "Độ biến động cao (volatility 2.22%) có thể gây sốc tài khoản nếu sử dụng đòn bẩy hoặc mua all-in tại điểm này.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input, khó đánh giá chính xác các cú sốc giá ngoài thị trường."
+      "Rủi ro điều chỉnh giá mạnh từ vùng đỉnh lịch sử khi động lượng tăng chậm lại, giá có thể hồi về vùng MA7 (157.5 triệu/lượng).",
+      "Biên độ dao động 2.22%/ngày rất lớn, nhà đầu tư mua lúc cao điểm 181 triệu có thể chịu lỗ floating nặng ngay trong ngắn hạn.",
+      "Dữ liệu VIX (chỉ số sợ hãi) bị thiếu và các tiêu đề tin tức không có dữ liệu địa chính trị/dollar cụ thể, làm giảm độ tin cậy của tín hiệu xu hướng."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "SJC Price (Latest)",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
+        "key": "Percentile 5 Year",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d",
+        "key": "Change 30 Days",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
+        "key": "US Real Yield 10Y (Change 5d)",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot Change 20d",
+        "value": 9.83,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Daily Volatility",
         "value": 2.22,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_current",
-        "value": 14.75,
-        "unit": "%",
+        "key": "MA30 VND",
+        "value": 154577763,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T22:04:29.789Z",
+    "latestTimestamp": "2026-02-14T23:05:55.000Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157737954.290105,
+    "intlVndPerTael": 157739034.00303248,
     "premiumPct": 14.75,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157486341,
-    "ma30VndPerTael": 154577727,
+    "ma7VndPerTael": 157486495,
+    "ma30VndPerTael": 154577763,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,9 +83,11 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T22:04:51.398Z",
+    "fetchedAt": "2026-02-14T23:06:16.271Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "VIX Volatility Index"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
@@ -168,12 +169,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 20.82,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-12",
-        "change1dPct": 17.96,
-        "change5dPct": -4.36,
-        "change20dPct": 31.44,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       }
     ],
