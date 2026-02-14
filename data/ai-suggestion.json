@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T13:19:51.145Z",
+  "generatedAt": "2026-02-14T14:08:48.922Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,56 +7,56 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với động lượng tăng mạnh 9.26% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và VIX tăng vọt 31.44%, khuyến nghị chờ đợi vùng giá tốt hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.26% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang vượt xa MA30 (154,105,838 VND/lượng) tới 17.4%, cho thấy thị trường đang ở trạng thái quá mua kỹ thuật.",
-      "Động lượng tăng giá mạnh trong 30 ngày qua (change30dPct: +9.26%) được hỗ trợ bởi lợi suất thực Mỹ giảm (us_real_yield_10y giảm 3.23% xuống 1.8%).",
-      "Chỉ số sợ hãi VIX tăng mạnh 31.44% trong 20 ngày qua (lên mức 20.82) cho thấy biến động thị trường tài chính đang gia tăng, thường đi kèm với dao động giá vàng lớn (volatilityDailyPct: 2.26%)."
+      "Động lượng tăng rất mạnh: Giá thế giới tăng 9.83% trong 20 ngày (XAUUSD), kéo giá SJC lên mức kỷ lục 181 triệu VND/lượng, cao hơn MA30 (154.1 triệu VND/lượng) tới 17.4%.",
+      "Điều kiện vĩ mô thuận lợi: Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 4.76% trong 5 ngày xuống 1.8%, và VIX tăng 31.44% trong 20 ngày lên 20.82 điểm, hỗ trợ vàng tăng giá.",
+      "Kỳ vọng lãi suất thấp hơn: Tin tức về lạm phát Mỹ hạ nhiệt (\"cooling inflation lifts Fed easing bets\") đang thúc đẩy đà tăng giá vàng thế giới lên trên mốc 5,000 USD/oz."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do giá đang ở mức cao nhất lịch sử 5 năm (percentile5y: 100%).",
-      "Biên độ dao động premium lớn (dao động từ 6.23% đến 18.31% trong 30 ngày) có thể gây thua lỗ chênh lệch nếu mua ở premium cao (hiện tại 14.75%).",
-      "Dữ liệu vĩ mô không đầy đủ (healthy: false) và thiếu tin tức địa chính trị cụ thể làm giảm độ tin cậy của xu hướng tăng dài hạn."
+      "Mua đỉnh kỹ thuật: Giá hiện tại (181 triệu VND) đang ở phân vị 100% trong 5 năm, rủi ro điều chỉnh giảm sâu là rất cao sau đà tăng nóng.",
+      "Biên độ dao động cực lớn: Volatility 2.26%/ngày tương đương giá có thể dao động hơn 4 triệu VND/lượng mỗi phiên, gây áp lực tâm lý lớn cho nhà đầu tư.",
+      "Premium biến động mạnh: Chênh lệch giá trong 30 ngày dao động từ 6.23% đến 18.31%, cho thấy thanh khoản và chốt lời có thể xảy ra bất cứ lúc nào."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Tăng trưởng 30 ngày",
-        "value": 9.26,
+        "key": "sjc_price_vs_ma30",
+        "value": 17.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 giá SJC",
-        "value": 154105838,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biên độ dao động ngày",
-        "value": 2.26,
+        "key": "intl_gold_20d_change",
+        "value": 9.83,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "VIX thay đổi 20 ngày",
+        "key": "us_real_yield_5d_change",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_20d_change",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "sjc_5y_percentile",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       },
       {
-        "key": "Premium hiện tại",
+        "key": "daily_volatility",
+        "value": 2.26,
+        "unit": "%/day",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "current_premium",
         "value": 14.75,
         "unit": "%",
         "source": "market_snapshot"
@@ -64,15 +64,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T13:18:38.247Z",
+    "latestTimestamp": "2026-02-14T14:08:17.140Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157737015.32770395,
+    "intlVndPerTael": 157738166.66701046,
     "premiumPct": 14.75,
     "change7dPct": 1.69,
     "change30dPct": 9.26,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344077,
-    "ma30VndPerTael": 154105838,
+    "ma7VndPerTael": 157344242,
+    "ma30VndPerTael": 154105877,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T13:18:59.566Z",
+    "fetchedAt": "2026-02-14T14:08:29.632Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,8 +184,18 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-14 | starkvilledailynews.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
+      "2026-02-14 | wvgazettemail.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-14 | finance.yahoo.com | Trump Tariffs Backfired : 94 % Of Economic Burden Fell On US Importers , NY Fed Says",
+      "2026-02-14 | dailysabah.com | IMF sees progress in Türkiye disinflation program , steady growth",
+      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis",
+      "2026-02-14 | newstribune.com | Wall Street steadies itself after encouraging update on inflation | Jefferson City News Tribune",
+      "2026-02-14 | presstv.ir | Nancy Pelosi acknowledges Iran rural support , urges more sanctions so they  feel the pain as well",
+      "2026-02-14 | businesstimes.com.sg | Gold reclaims US$5 , 000 as cooling inflation lifts Fed easing bets"
+    ],
     "dollarYieldHeadlines": [
       "2026-02-14 | dailysabah.com | IMF sees progress in Türkiye disinflation program , steady growth",
       "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis"
