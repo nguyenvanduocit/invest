@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T11:06:19.982Z",
+  "generatedAt": "2026-02-14T12:08:58.563Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.26%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi VIX nhảy vọt +18% và lợi suất thực USD giảm sâu, cần chờ xác nhận xu hướng thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.26%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và không có tín hiệu vĩ mô mới đủ mạnh để đẩy giá cao hơn trong ngắn hạn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (154.1 triệu VND/lượng) đến 17.5%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng vĩ mô thuận lợi: Lợi suất thực 10Y USD giảm mạnh -4.76%/5 ngày xuống 1.8%, và giá vàng thế giới đã phá 5000 USD/oz (tăng +9.83%/20 ngày) theo tin 'Gold reclaims $5,000'.",
-      "Biến động premium mở rộng (dao động 6.23%-18.31%/tháng) kết hợp VIX tăng vọt +17.96% trong 1 ngày cho thấy tâm lý thị trường bất ổn, rủi ro chốt lời ngắn hạn rất lớn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.26% sau 30 ngày, cảnh báo vùng quá mua cần thận trọng.",
+      "Động lượng tăng đang chững lại khi giá hiện tại (181 triệu) chỉ ngang bằng với đỉnh tuần trước (181 triệu ngày 09-02 và 12-02), cho thấy thanh khoản cầu đang bão hòa.",
+      "Lợi suất thực USD 10 năm giảm mạnh 4.76% trong 5 ngày và VIX tăng 31.44% trong 20 ngày qua là tín hiệu hỗ trợ ngắn hạn, nhưng đã phần nào được định giá vào mức giá hiện tại.",
+      "Premium 14.75% đang ở mức cao hơn nhiều so với đáy 6.23% (ngày 28-01), cho thấy nhà đầu tư Việt đã FOMO mua vào, rủi ro co hẹp premium nếu giá thế giới điều chỉnh là hiện hữu."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật: Giá cách xa MA7 (157.3 triệu) tới 15%, dễ hồi về mức trung bình ngắn hạn.",
-      "Premium co giãn thất thường từ 6.23% lên 18.31% trong tháng, có thể gây thua lỗ spread nếu mua đỉnh.",
-      "VIX tăng đột biến (+31.44%/20 ngày) báo hiệu rủi ro thanh khoản và đảo chiều thị trường tài sản rủi ro."
+      "Độ biến động ngày cao (2.26%) kết hợp với vùng giá kỷ lục dễ gây thanh lý đòn bẩy nếu thị trường điều chỉnh kỹ thuật.",
+      "Dữ liệu vĩ mô 'healthy: false' và tin tức địa chính trị chủ yếu về Iran chưa đủ trọng lượng để tác động trực tiếp đến xu hướng giá vàng toàn cầu.",
+      "Rủi ro chênh lệch giá (premium) co hẹp từ 14.75% về mức trung bình khu vực (khoảng 11-13%) khiến giá SJC đi ngang hoặc giảm ngay cả khi giá thế giới tăng nhẹ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_premium",
-        "value": 17.46,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_5d_change",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_1d_change",
-        "value": 17.96,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_spot_20d_change",
-        "value": 9.83,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_30d_change",
+        "key": "SJC Change 30d",
         "value": 9.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_volatility_range",
-        "value": 12.08,
-        "unit": "% points",
-        "source": "monthly_series_30d"
+        "key": "Daily Volatility",
+        "value": 2.26,
+        "unit": "%/day",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Current Premium vs Monthly Low",
+        "value": 14.75,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 20d",
+        "value": 31.44,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Current SJC Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T11:05:51.345Z",
+    "latestTimestamp": "2026-02-14T12:07:29.929Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157738275.8268632,
+    "intlVndPerTael": 157737155.76545152,
     "premiumPct": 14.75,
     "change7dPct": 1.69,
     "change30dPct": 9.26,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344257,
-    "ma30VndPerTael": 154105880,
+    "ma7VndPerTael": 157344097,
+    "ma30VndPerTael": 154105843,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T11:05:58.818Z",
+    "fetchedAt": "2026-02-14T12:07:49.819Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,19 +186,16 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | rockymounttelegram.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
-      "2026-02-14 | thesalemnewsonline.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
-      "2026-02-14 | thedailytimes.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
-      "2026-02-14 | reflector.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy",
-      "2026-02-14 | herald-dispatch.com | Meet the U . S . Army Soldier - athletes representing the nation in Italy"
+      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis"
     ],
     "countryActionHeadlines": [
+      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis",
       "2026-02-14 | presstv.ir | Nancy Pelosi acknowledges Iran rural support , urges more sanctions so they  feel the pain as well",
       "2026-02-14 | businesstimes.com.sg | Gold reclaims US$5 , 000 as cooling inflation lifts Fed easing bets",
       "2026-02-14 | mariettatimes.com | U . S . stocks halt their AI - induced slide and rise after an encouraging update on inflation | News , Sports , Jobs"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | newsx.com | The Weekend On Dalal Street : From Trade Euphoria To AI Panic – How Last Week Rollercoaster Sets The Stage For Monday Stock Market Moves"
+      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis"
     ]
   }
 }
