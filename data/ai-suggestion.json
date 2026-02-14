@@ -1,85 +1,84 @@
 {
-  "generatedAt": "2026-02-14T15:07:00.878Z",
+  "generatedAt": "2026-02-14T16:08:17.983Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.26% trong 30 ngày qua, tạo áp lực điều chỉnh kỹ thuật lớn; tuy nhiên, lợi suất thực USD giảm sâu và VIX tăng cao đang hỗ trợ giá thế giới, nhà đầu tư nên chờ đợi vùng giá tốt hơn thay vì đu đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động 2.26%/ngày, rủi ro điều chỉnh kỹ thuật cao dù xu hướng vĩ mô vẫn hỗ trợ; nhà đầu tư nên chờ hồi về vùng 175-177 triệu/lượng để tích sản thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%) và tăng mạnh 9.26% sau 30 ngày, rủi ro điều chỉnh kỹ thuật cao khi mua lúc này.",
-      "Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày xuống 1.8%, tạo động lực hỗ trợ giá vàng thế giới tăng (quan hệ nghịch biến).",
-      "VIX tăng 31.44% trong 20 ngày lên mức 20.82 cho thấy lo ngại thị trường đang gia tăng, thường có lợi cho vàng như tài sản trú ẩn.",
-      "Premium 14.75% nằm trong biên độ dao động phổ biến 13-18% của 30 ngày qua (thấp nhất 6.23%, cao nhất 18.31%), không có dấu hiệu bất thường cần cảnh báo."
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA7 (157.3 triệu) và MA30 (154.1 triệu), tăng 9.27% trong 30 ngày với percentile 5 năm ở mức 100% - vùng quá mua cực đoan.",
+      "VIX tăng 31.44% trong 20 ngày lên mức 20.82 kết hợp lợi suất thực Mỹ giảm 4.76% (xuống 1.8%) đang hỗ trợ vàng thế giới tăng 9.83% trong 20 ngày, nhưng tín hiệu này đã phần nào được định giá.",
+      "Premium SJC dao động rộng từ 6.23% đến 18.31% trong 30 ngày, hiện ở 14.75% cho thấy thanh khoản thị trường Việt Nam căng thẳng, rủi ro spread giãn khi bán ra cao."
     ],
     "risks": [
-      "Mua đỉnh lịch sử khi giá đã tăng 9.26%/tháng và biến động ngày ở 2.26% có thể dẫn đến thua lỗ ngắn hạn nếu điều chỉnh.",
-      "Thiếu tín hiệu hành động can thiệp mạnh từ các ngân hàng trung ương lớn (Fed, ECB) trong dữ liệu đầu vào để duy trì đà tăng vững chắc.",
-      "Dữ liệu địa chính trị chứa nhiều tin nhiễu, không đủ độ tin cậy để kết luận về các cú sốc cung cầu thực tế."
+      "Đang ở đỉnh lịch sử 5 năm (percentile 100%), rủi ro điều chỉnh sâu nếu VIX giảm hoặc lợi suất thực Mỹ hồi phục.",
+      "Biên độ dao động ngày 2.26% kết hợp với 4 lần drawdown trong lịch sử (tệ nhất -41.26%, trung bình phục hồi 1369 ngày) cho thấy rủi ro thanh khoản cao.",
+      "Không có dữ liệu sự kiện địa chính trị trong input, thiếu tín hiệu catalyst mới để đẩy giá cao hơn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 9.26,
+        "key": "sjc_change_30d",
+        "value": 9.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 20d",
-        "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Current Premium SJC vs World",
-        "value": 14.75,
+        "key": "sjc_vs_ma7_gap",
+        "value": 15.06,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Latest Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "daily_volatility",
+        "value": 2.26,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Current",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "30d Premium Range (Low-High)",
+        "key": "premium_range_30d",
         "value": 6.23,
         "unit": "%",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "us_real_yield_change_20d",
+        "value": -3.23,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "vix_change_20d",
+        "value": 31.44,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "gold_spot_change_20d",
+        "value": 9.83,
+        "unit": "%",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T15:06:20.421Z",
+    "latestTimestamp": "2026-02-14T16:06:07.365Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157737396.9180202,
+    "intlVndPerTael": 157740474.6628656,
     "premiumPct": 14.75,
-    "change7dPct": 1.69,
-    "change30dPct": 9.26,
+    "change7dPct": 1.7,
+    "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344132,
-    "ma30VndPerTael": 154105851,
+    "ma7VndPerTael": 157344571,
+    "ma30VndPerTael": 154105954,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +89,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T15:06:31.691Z",
+    "fetchedAt": "2026-02-14T16:06:25.721Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,17 +190,15 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-14 | bankingnews.gr | Plato , power , and 2026 : The argument that Donald Trump must suspend Democracy to remain dominant",
-      "2026-02-14 | presstv.ir | Exposed : Leaked docs show monarchists rallying Iranian diaspora to back attack on Iran",
-      "2026-02-14 | naturalnews.com | The Body Electric : A revolutionary blueprint for human health and freedom – NaturalNews . com",
-      "2026-02-14 | ualrpublicradio.org | Opinion : Disqualified but not forgotten",
-      "2026-02-14 | vir.com.vn | Citi economists project robust Vietnam economic growth in 2026"
-    ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-14 | insurancenewsnet.com | EUR / USD Forecast : Euro Looking for Momentum to Continue Uptrend - 11 February 2026 - Insurance News",
+      "2026-02-14 | finance.yahoo.com | Trump Tariffs Backfired : 94 % Of Economic Burden Fell On US Importers , NY Fed Says",
       "2026-02-14 | dailysabah.com | IMF sees progress in Türkiye disinflation program , steady growth",
-      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis"
-    ]
+      "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis",
+      "2026-02-14 | newstribune.com | Wall Street steadies itself after encouraging update on inflation | Jefferson City News Tribune",
+      "2026-02-14 | presstv.ir | Nancy Pelosi acknowledges Iran rural support , urges more sanctions so they  feel the pain as well"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
