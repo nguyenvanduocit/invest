@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T20:05:09.378Z",
+  "generatedAt": "2026-02-14T21:06:45.396Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật khiến điểm tham gia hiện tại không tối ưu, nhà đầu tư nên chờ đợt điều chỉnh về vùng hỗ trợ MA7 (157.4 triệu VND/lượng) hoặc xác nhận phá vỡ đỉnh cũ.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động lên tới 2.22%/ngày và VIX tăng vọt, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày gần nhất theo monthly_series_30d.",
-      "Động lượng vĩ mô hỗ trợ tích cực: Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày, tạo áp lực đẩy giá vàng thế giới tăng 9.83% (20 ngày) theo first_principles_context.",
-      "Premium 14.75% hiện tại nằm trong biên dao động bình thường của chuỗi 30 ngày (6.23% - 18.31%), không ghi nhận dấu hiệu cực đoan hay bất thường thanh khoản từ market_snapshot."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày, rủi ro mua đỉnh ngắn hạn rất lớn.",
+      "Động lượng vĩ mô hỗ trợ vàng: Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 17.96% phản ánh lo ngại thị trường.",
+      "Biên độ dao động ngày cao 2.22% cho thấy thị trường đang rung lắc mạnh, phù hợp với chiến lược chờ quan sát hơn than gia nhập ngay."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá vượt xa MA7 (157.4 triệu VND/lượng) và biến động ngày ở mức 2.22%.",
-      "Dữ liệu sự kiện địa chính trị không liên quan (tin tức văn hóa, tội phạm địa phương) làm giảm độ tin cậy của các yếu tố hỗ trợ ngoại sinh.",
-      "Thanh khoản thấp hoặc thiếu dữ liệu SJC trong các ngày đầu chuỗi (17-18/01) có thể gây nhiễu xu hướng."
+      "Điều chỉnh kỹ thuật sâu sau khi tăng liên tục và đạt đỉnh percentile 5 năm.",
+      "Biên độ giá rộng (volatility 2.22%) có thể gây cháy tài khoản nếu dùng đòn bẩy.",
+      "Premium 14.75% cao hơn vùng an toàn lịch sử, có nguy cơ co hẹp nếu giá thế giới giảm."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 9.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 14.75,
+        "key": "sjc_change_30d",
+        "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change5d",
+        "key": "us_real_yield_10y_change_5d",
         "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
-        "value": 31.44,
+        "key": "vix_change_1d",
+        "value": 17.96,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_change20d",
-        "value": 9.83,
+        "key": "daily_volatility",
+        "value": 2.22,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd",
-        "value": 157486183,
+        "key": "current_premium",
+        "value": 14.75,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_current_price",
+        "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T20:04:42.334Z",
+    "latestTimestamp": "2026-02-14T21:06:12.034Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157736850.4931985,
+    "intlVndPerTael": 157740111.83928624,
     "premiumPct": 14.75,
-    "change7dPct": 0.63,
+    "change7dPct": 0.64,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157486183,
-    "ma30VndPerTael": 154577690,
+    "ma7VndPerTael": 157486649,
+    "ma30VndPerTael": 154577799,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T20:04:48.932Z",
+    "fetchedAt": "2026-02-14T21:06:29.757Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -190,14 +184,17 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-14 | smh.com.au | Hobbies : Can they change your life ?",
-      "2026-02-14 | smh.com.au | How promising lawyer Phillip See turned to raiding affluent Sydney , Melbourne homes",
-      "2026-02-14 | bucksfreepress.co.uk | John le Carré spy stage adaptation coming to MK Theatre",
-      "2026-02-14 | smh.com.au | Outback Australia : Sealing iconic tracks opens up Red Centre tourism"
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data",
+      "2026-02-14 | marketscreener.com | ECB opens up euro lifeline in bid to boost global role"
     ],
-    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
+      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
       "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data",
       "2026-02-14 | thefrontierpost.com | Fuel prices down , gold up in Kabul"
     ]
