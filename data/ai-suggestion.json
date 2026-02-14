@@ -1,84 +1,79 @@
 {
-  "generatedAt": "2026-02-14T16:08:17.983Z",
+  "generatedAt": "2026-02-14T17:07:47.671Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động 2.26%/ngày, rủi ro điều chỉnh kỹ thuật cao dù xu hướng vĩ mô vẫn hỗ trợ; nhà đầu tư nên chờ hồi về vùng 175-177 triệu/lượng để tích sản thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng quá nóng trong 30 ngày (+9.26%), tạo rủi ro điều chỉnh kỹ thuật cao dù xu hướng vĩ mô vẫn hỗ trợ.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang vượt xa MA7 (157.3 triệu) và MA30 (154.1 triệu), tăng 9.27% trong 30 ngày với percentile 5 năm ở mức 100% - vùng quá mua cực đoan.",
-      "VIX tăng 31.44% trong 20 ngày lên mức 20.82 kết hợp lợi suất thực Mỹ giảm 4.76% (xuống 1.8%) đang hỗ trợ vàng thế giới tăng 9.83% trong 20 ngày, nhưng tín hiệu này đã phần nào được định giá.",
-      "Premium SJC dao động rộng từ 6.23% đến 18.31% trong 30 ngày, hiện ở 14.75% cho thấy thanh khoản thị trường Việt Nam căng thẳng, rủi ro spread giãn khi bán ra cao."
+      "Giá SJC 181 triệu VND/lượng đang nằm trên MA7 (157 triệu) và MA30 (154 triệu) với biên độ dao động 2.26%/ngày, cho thấy thị trường quá mua và biến động cực mạnh.",
+      "Lợi suất thực Mỹ 10 năm giảm 3.23% và VIX tăng 31.44% trong 20 ngày là động lực hỗ trợ giá tăng, nhưng giá thế giới đã phản giá với mức tăng 9.83% (20 ngày).",
+      "Premium 14.75% đang ở mức cao, giá SJC đã tăng liên tục và cần thời gian tích lũy để kiểm chứng vùng giá mới.",
+      "Đỉnh 181 triệu VND/lượng là ngưỡng tâm lý quan trọng, nhà đầu tư cần chờ xác nhận phá vỡ hoặc điều chỉnh về vùng hỗ trợ gần MA7 (khoảng 157 triệu VND/lượng)."
     ],
     "risks": [
-      "Đang ở đỉnh lịch sử 5 năm (percentile 100%), rủi ro điều chỉnh sâu nếu VIX giảm hoặc lợi suất thực Mỹ hồi phục.",
-      "Biên độ dao động ngày 2.26% kết hợp với 4 lần drawdown trong lịch sử (tệ nhất -41.26%, trung bình phục hồi 1369 ngày) cho thấy rủi ro thanh khoản cao.",
-      "Không có dữ liệu sự kiện địa chính trị trong input, thiếu tín hiệu catalyst mới để đẩy giá cao hơn."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá ở mức cực đại 5 năm và đã tăng hơn 9% trong 30 ngày qua.",
+      "Biên độ dao động ngày 2.26% cho thấy thanh khoản có thể bốc hơi nhanh nếu thị trường đảo chiều.",
+      "Lợi suất thực Mỹ có thể hồi phục nếu dữ liệu lạm phát không như kỳ vọng, gây áp lực lên giá vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price vs MA7",
+        "value": 15.1,
+        "unit": "% above MA7 (VND/lượng)",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "30-Day Change",
+        "value": 9.26,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 9.27,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_vs_ma7_gap",
-        "value": 15.06,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
+        "key": "Daily Volatility",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 6.23,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -3.23,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 9.83,
+        "key": "Current Premium",
+        "value": 14.75,
         "unit": "%",
-        "source": "macro_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T16:06:07.365Z",
+    "latestTimestamp": "2026-02-14T17:07:15.796Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157740474.6628656,
+    "intlVndPerTael": 157736467.02620867,
     "premiumPct": 14.75,
-    "change7dPct": 1.7,
-    "change30dPct": 9.27,
+    "change7dPct": 1.69,
+    "change30dPct": 9.26,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344571,
-    "ma30VndPerTael": 154105954,
+    "ma7VndPerTael": 157343999,
+    "ma30VndPerTael": 154105820,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T16:06:25.721Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-14T17:07:26.667Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -183,22 +178,30 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation",
+      "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025",
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
-      "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty",
-      "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
-      "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
+      "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-14 | virginislandsnewsonline.com | Oil , the mighty dollar , and race wars | Virgin Islands News Online"
+    ],
     "countryActionHeadlines": [
+      "2026-02-14 | virginislandsnewsonline.com | Oil , the mighty dollar , and race wars | Virgin Islands News Online",
       "2026-02-14 | insurancenewsnet.com | EUR / USD Forecast : Euro Looking for Momentum to Continue Uptrend - 11 February 2026 - Insurance News",
       "2026-02-14 | finance.yahoo.com | Trump Tariffs Backfired : 94 % Of Economic Burden Fell On US Importers , NY Fed Says",
       "2026-02-14 | dailysabah.com | IMF sees progress in Türkiye disinflation program , steady growth",
       "2026-02-14 | irannewsupdate.com | Iran Empty Treasury : Structural Decay Behind the 2025 Economic Crisis",
-      "2026-02-14 | newstribune.com | Wall Street steadies itself after encouraging update on inflation | Jefferson City News Tribune",
-      "2026-02-14 | presstv.ir | Nancy Pelosi acknowledges Iran rural support , urges more sanctions so they  feel the pain as well"
+      "2026-02-14 | newstribune.com | Wall Street steadies itself after encouraging update on inflation | Jefferson City News Tribune"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-14 | americanthinker.com | Trump Is Turning Around a 100 - Year - Old Problem",
+      "2026-02-14 | bankingnews.gr | Plato , power , and 2026 : The argument that Donald Trump must suspend Democracy to remain dominant",
+      "2026-02-14 | nbclosangeles.com | Couple Finds Rare Coins Worth Over $800 , 000 During Kitchen Renovation",
+      "2026-02-14 | vir.com.vn | Citi economists project robust Vietnam economic growth in 2026",
+      "2026-02-14 | finance.yahoo.com | Ron Paul raises red flag of  fraud  in the US system , says leaders cant print money forever . Shockproof your riches now"
+    ]
   }
 }
