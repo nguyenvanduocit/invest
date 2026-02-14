@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T05:21:02.148Z",
+  "generatedAt": "2026-02-14T06:14:46.697Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,22 +7,22 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 30 ngày qua (+9.27%), thanh khoản thị trường có dấu hiệu thắt chặt khiến biên độ dao động rộng. Mặc dù xu hướng tăng và hỗ trợ vĩ mô (lợi suất thực giảm) còn nguyên, rủi ro mua đuổi ở vùng giá cực đại là rất lớn, nhà đầu tư mới nên chờ đợi信 hiệu hồi phục hoặc điều chỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và không có tín hiệu vĩ mô đặc biệt thúc đẩy tăng phi mã.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.27% sau 30 ngày, rủi ro điều chỉnh kỹ thuật cao.",
-      "Động lượng tăng được hỗ trợ bởi vĩ mô: Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và chỉ số USD giảm 1.54% trong 20 ngày, tạo đà cho vàng thế giới tăng 9.83% (20 ngày).",
-      "Biên độ dao động ngày cao (2.26%) và chênh lệch giá (premium) biến động mạnh (từ 6.23% lên 18.31% trong 30 ngày) cho thấy thị trường Việt Nam đang căng thẳng và thiếu ổn định định giá."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.27% sau 30 ngày và nằm trên MA7 (157.3 triệu VND/lượng).",
+      "Lợi suất thực Mỹ (1.8%) giảm 3.23% và VIX tăng 31.44% trong 20 ngày qua hỗ trợ tâm lý避险, nhưng áp lực lạm phát kỳ vọng đang giảm (-2.99% trong 5 ngày).",
+      "Premium 14.74% nằm trong biên dao động 6.23%-18.31% của chuỗi 30 ngày, không có dấu hiệu bong bóng cục bộ cực đoan so với đỉnh 18.31% ngày 05/02."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Rủi ro điều chỉnh giá ngay lập tức khi động lượng tăng chậm lại do giá đã chạy quá xa so với MA7 (157 triệu VND/lượng).",
-      "Thanh khoản và Spread: Biên độ dao động rộng 2.26%/ngày cảnh báo rủi ro trượt giá cao khi cần bán gấp.",
-      "Dữ liệu vĩ mô thiếu hụt: Thiếu dữ liệu VIX và Fed Funds Rate làm giảm độ tin cậy trong việc đánh giá chính xác tâm lý sợ hãi toàn cầu và chi phí cơ hội nắm giữ vàng."
+      "Rủi ro điều chỉnh giá cao do giá đang ở vùng quá mua (percentile 100%) và biến động ngày lớn (2.26%).",
+      "Sự thiếu vắng tin tức địa chính trị cấp bách trong dữ liệu input khiến đà tăng dễ bị đảo chiều nếu dữ liệu vĩ mô Mỹ thay đổi.",
+      "Biên độ dao động premium rộng (gần 12 điểm phần trăm) cho thấy thanh khoản và tâm lý nhà đầu tư Việt Nam không ổn định."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
@@ -32,47 +32,41 @@
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Change 20d",
-        "value": 9.83,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Daily Volatility",
+        "key": "SJC Daily Volatility",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.23,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 20d",
+        "value": 31.44,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
         "key": "Premium Range 30d (Low-High)",
         "value": 6.23,
         "unit": "%",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "Current SJC Price vs MA7",
-        "value": 15.1,
-        "unit": "% above MA",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T05:20:18.582Z",
+    "latestTimestamp": "2026-02-14T06:14:18.928Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157738664.61109522,
-    "premiumPct": 14.75,
-    "change7dPct": 1.69,
+    "intlVndPerTael": 157741121.48972946,
+    "premiumPct": 14.74,
+    "change7dPct": 1.7,
     "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344399,
-    "ma30VndPerTael": 154105913,
+    "ma7VndPerTael": 157344664,
+    "ma30VndPerTael": 154105975,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,13 +77,9 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T05:20:40.241Z",
+    "fetchedAt": "2026-02-14T06:14:30.319Z",
     "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y",
-      "VIX Volatility Index"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
@@ -138,12 +128,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -160,23 +150,23 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.47,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -1.42,
+        "change5dPct": 0,
+        "change20dPct": -1.14,
         "relationToGold": "inverse"
       },
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": null,
+        "value": 20.82,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 17.96,
+        "change5dPct": -4.36,
+        "change20dPct": 31.44,
         "relationToGold": "direct"
       }
     ],
@@ -189,14 +179,13 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | tvguide.co.uk | The Curse of Civil War Gold"
+      "2026-02-14 | moneycontrol.com | 10 - year - old girl invests in gold with festival gift money to stop parents from spending her lucky money"
     ],
     "countryActionHeadlines": [
       "2026-02-14 | economictimes.indiatimes.com | Cooling January inflation keeps Fed easing in play"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | timeslive.co.za | New council to advise African central banks on gold reserve management",
-      "2026-02-14 | actionforex.com | Weekly Economic & Financial Commentary : Strong Payrolls Dampen Hopes for Near - Term Rate Cuts"
+      "2026-02-14 | timeslive.co.za | New council to advise African central banks on gold reserve management"
     ]
   }
 }
