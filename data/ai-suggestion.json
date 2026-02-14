@@ -1,21 +1,22 @@
 {
-  "generatedAt": "2026-02-14T01:35:11.727Z",
+  "generatedAt": "2026-02-14T02:58:01.843Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 30 ngày qua (+9.26%), nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, yêu cầu nhà đầu tư kiên nhẫn chờ điểm mua an toàn hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày qua (+9.27%), tạo ra rủi ro điều chỉnh kỹ thuật ngắn hạn cao. Dù vĩ mô ủng hộ (lợi suất thực giảm, VIX tăng), biên độ an toàn để mua vào hiện tại không còn, nhà đầu tư nên chờ hồi về vùng hỗ trợ cận MA7 (~157.3 triệu/lượng) hoặc xác nhận phá vỡ ổn định.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.26% sau 30 ngày và vượt xa MA30 (154.1 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Lợi suất thực Mỹ 10 năm giảm sâu 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng vọt 17.96% ngày 12/02 là động lực tăng giá cơ bản mạnh mẽ, nhưng giá vàng thế giới đã phản giá trước đó (+9.83% 20 ngày).",
-      "Biên độ dao động ngày cao (2.26%) và số lần giảm giá chưa hồi phục (1/4 lần) cho thấy thị trường đang biến động mạnh và rủi ro điều chỉnh ngắn hạn là hiện hữu."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%) và tăng quá nhanh (+9.27% trong 30 ngày), xa rời MA30 (154.1 triệu/lượng) cho thấy thị trường quá mua.",
+      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 20 ngày qua (-3.23%) và VIX tăng vọt (+31.44%) hỗ trợ giá vàng thế giới, nhưng chưa đủ để biện minh cho mức premium 14.75% của SJC.",
+      "Biên độ dao động ngày cao (2.26%) kèm theo lịch sử drawdown tồi tệ lên tới -41.26% cảnh báo rủi ro biến động cực đoan nếu dòng tiền đảo chiều."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh sau khi tăng quá nóng (change30dPct 9.26%), giá có thể hồi về vùng MA7 (157.3 triệu VND/lượng).",
-      "Premium 14.75% cao hơn đáng kể so với mức thấp nhất trong chuỗi 30 ngày (6.23%), có nguy cơ co hẹp nếu giá thế giới đi ngang."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh kỹ thuật khi động lượng mua cạn kiệt.",
+      "Thanh khoản có thể giảm nếu giá quá cao so với giá thế giới (chênh lệch ~23 triệu/lượng).",
+      "Biên độ dao động rộng (volatility 2.26%) gây khó khăn cho việc chốt lời ngắn hạn."
     ],
     "evidence": [
       {
@@ -26,52 +27,52 @@
       },
       {
         "key": "SJC Change 30d",
-        "value": 9.26,
+        "value": 9.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA30",
-        "value": 154105872,
-        "unit": "VND/lượng",
+        "key": "SJC vs MA30 Deviation",
+        "value": 17.45,
+        "unit": "million VND/tael",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.23,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 1d",
-        "value": 17.96,
+        "key": "VIX Change 20d",
+        "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Current vs Low",
+        "key": "SJC Worst Drawdown",
+        "value": -41.26,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Current Premium",
         "value": 14.75,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T01:34:32.421Z",
+    "latestTimestamp": "2026-02-14T02:57:33.715Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157738030.29538926,
+    "intlVndPerTael": 157738801.29549536,
     "premiumPct": 14.75,
     "change7dPct": 1.69,
-    "change30dPct": 9.26,
+    "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344222,
-    "ma30VndPerTael": 154105872,
+    "ma7VndPerTael": 157344332,
+    "ma30VndPerTael": 154105898,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -82,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T01:34:54.119Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-14T02:57:44.304Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -183,10 +184,21 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says"
+    "geopoliticalHeadlines": [
+      "2026-02-14 | investorplace.com | Here Is Where Gold Goes Next | InvestorPlace"
     ],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [
+      "2026-02-14 | econotimes.com | U . S . Stocks End Mixed as January CPI Cools , Treasury Yields Slide",
+      "2026-02-14 | fox26houston.com | Inflation measure dips to nearly five - year low as gas prices drop , housing costs ease",
+      "2026-02-14 | finance.yahoo.com | Gold and Silver Price Plunge as US Financial Crisis Signals Flash Red",
+      "2026-02-14 | english.news.cn | U . S . stocks close mixed amid cooler inflation data - Xinhua",
+      "2026-02-14 | english.news.cn | U . S . stocks close mixed amid cooler inflation data - Xinhua",
+      "2026-02-14 | gdnonline.com | International Business : Gold prices up 1 per cent on hopes of Fed rate cuts"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-14 | econotimes.com | U . S . Stocks End Mixed as January CPI Cools , Treasury Yields Slide",
+      "2026-02-14 | investorplace.com | Here Is Where Gold Goes Next | InvestorPlace",
+      "2026-02-14 | gdnonline.com | International Business : Gold prices up 1 per cent on hopes of Fed rate cuts"
+    ]
   }
 }
