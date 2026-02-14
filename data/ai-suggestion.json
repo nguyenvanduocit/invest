@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T08:07:37.393Z",
+  "generatedAt": "2026-02-14T09:08:55.713Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật khiến việc xô đỉnh tại 181 triệu VND/lượng cần thời gian xác nhận.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động lên tới 2.26%/ngày và VIX tăng vọt 31.44%, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 9.27% sau 30 ngày, tín hiệu thị trường đã quá mua ngắn hạn.",
-      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10N giảm mạnh 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày, hỗ trợ giá vàng thế giới tăng 9.83%.",
-      "Premium 14.75% đang ở mức ổn định trong vùng giao dịch 30 ngày qua (dao động 9.81% - 18.31%), không có dấu hiệu căng thẳng cực đoan về thanh khoản."
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (154.1 triệu VND/lượng) tới 17.5%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
+      "Lợi suất thực 10 năm Mỹ giảm mạnh 4.76% trong 5 ngày (xuống 1.8%) đang hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày, tạo động lực tăng cơ bản.",
+      "Biên độ dao động ngày cao (2.26%) kết hợp VIX tăng 31.44% trong 20 ngày cho thấy thị trường bất ổn, rủi ro biến động ngược chiều lớn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá chạy quá xa đường MA7 (157.3 triệu VND/lượng) và biến động ngày ở mức 2.26%.",
-      "Sự kiện địa chính trị và chính sách trong dữ liệu đầu vào mang tính nhiễu, không có tác động trực tiếp rõ ràng đến định giá vàng.",
-      "Lịch sử cho thấy thời gian phục hồi sau đợt sụt giảm tồi tệ lên đến 1369 ngày, rủi ro mua đỉnh là hiện hữu."
+      "Điều chỉnh giá sâu từ vùng đỉnh lịch sử khi động lượng mua yếu đi, biên độ 2.26%/ngày có thể gây mất vốn nhanh.",
+      "Premium 14.75% cao hơn mức thấp 6.23% ngày 28/01, có nguy cơ co hẹp nếu giá thế giới đi ngang hoặc giảm.",
+      "Dữ liệu sự kiện địa chính trị không liên quan trực tiếp (sách, triển lãm), thiếu tín hiệu tin tức rõ ràng để đẩy giá tiếp tục tăng."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
+        "key": "sjc_price_vs_ma30",
+        "value": 17.46,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
+        "key": "change30d_pct",
         "value": 9.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
+        "key": "volatility_daily",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change5d",
         "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "vix_change20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium vs Intl Price",
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
         "value": 14.75,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price vs MA7",
-        "value": 181,
-        "unit": "million VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Intl Gold Change 20d",
-        "value": 9.83,
-        "unit": "%",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T08:07:07.775Z",
+    "latestTimestamp": "2026-02-14T09:08:25.386Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157740932.884024,
+    "intlVndPerTael": 157741008.57652932,
     "premiumPct": 14.75,
     "change7dPct": 1.7,
     "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344637,
-    "ma30VndPerTael": 154105969,
+    "ma7VndPerTael": 157344648,
+    "ma30VndPerTael": 154105971,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T08:07:21.762Z",
+    "fetchedAt": "2026-02-14T09:08:34.678Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
@@ -185,20 +185,17 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | orovillemr.com | SF Giant Logan Webb , Hayden Birdsong throw first live bullpens",
-      "2026-02-14 | jpost.com | This month in Jewish history : First permanent Israeli govt",
-      "2026-02-14 | livemint.com | HAL vs BDL vs BEL vs Mazagon Dock : Which defence stock to buy after Q3 results 2026 ?"
+      "2026-02-14 | yorkpress.co.uk | Kemps in Malton : February books of the month",
+      "2026-02-14 | thailand-business-news.com | Spring Fair at VEC Marks Vietnam Most Ambitious Showcase Yet",
+      "2026-02-14 | townhall.com | Judge Rejects Climate Dogma , Begins to Restore Integrity"
     ],
     "countryActionHeadlines": [
       "2026-02-14 | cointelegraph.com | Bitcoiners Face Test As Inflation Cools : Pompliano",
-      "2026-02-14 | understandingwar.org | Russian Offensive Campaign Assessment , Feb . 13 , 2026",
-      "2026-02-14 | economictimes.indiatimes.com | Cooling January inflation keeps Fed easing in play"
+      "2026-02-14 | understandingwar.org | Russian Offensive Campaign Assessment , Feb . 13 , 2026"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | newkerala.com | Gold Price Falls 1 . 82 % Weekly , Silver Gains on US Inflation Data",
-      "2026-02-14 | dunyanews.tv | Gold prices plunge by Rs8 , 600 per tola",
-      "2026-02-14 | cointelegraph.com | Bitcoiners Face Test As Inflation Cools : Pompliano",
-      "2026-02-14 | understandingwar.org | Russian Offensive Campaign Assessment , Feb . 13 , 2026"
+      "2026-02-14 | prokerala.com | Gold dips 1 . 82 pc during week amidst macroeconomic volatility , soft US CPI data",
+      "2026-02-14 | newkerala.com | Gold Price Falls 1 . 82 % Weekly , Silver Gains on US Inflation Data"
     ]
   }
 }
