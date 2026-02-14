@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T03:51:52.371Z",
+  "generatedAt": "2026-02-14T04:34:27.041Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 9.26% trong 30 ngày qua, tuy nhiên thanh khoản có thể thấp và rủi ro điều chỉnh kỹ thuật cao nên không nên mua đuổi tại vùng giá này.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày. Vĩ mô ủng hộ xu hướng tăng dài hạn nhờ lợi suất thực Mỹ giảm và VIX tăng, tuy nhiên nhà đầu tư mới nên chờ hồi về vùng hỗ trợ gần MA7 (157.3 triệu VND/lượng) thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.26% sau 30 ngày và cao hơn MA30 (154.1 triệu VND/lượng) tới 17.5%.",
-      "Lợi suất thực Mỹ 10 năm giảm 3.23% và VIX tăng 31.44% trong 20 ngày qua hỗ trợ vàng thế giới tăng 9.83%, tạo động lực tăng vĩ mô mạnh mẽ.",
-      "Premium 14.75% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (khoảng 13-14%), không có dấu hiệu bất thường cần cảnh báo.",
-      "Lạm phát Mỹ hạ nhiệt (tin tức ngày 14/02) và kỳ vọng nới lỏng Fed hỗ trợ vàng giữ vững trên 5000 USD/oz."
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (154.1 triệu VND/lượng) tới 17.5%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm 4.76% trong 5 ngày xuống mức 1.8%, tạo động lực tăng giá cơ bản cho vàng thế giới.",
+      "VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82, phản ánh lo ngại thị trường, hỗ trợ nhu cầu trú ẩn an toàn.",
+      "Giá vàng thế giới đã lấy lại mốc 5,000 USD/oz theo tin tức ngày 14/02, xác nhận xu hướng tăng dài hạn."
     ],
     "risks": [
-      "Giá đang ở vùng quá mua (percentile 100%), rủi ro chốt lời ngắn hạn cao nếu động lượng yếu đi.",
-      "Biến động ngày 2.26% khá lớn, nhà đầu tư cần chấp nhận dao động giá lớn trong ngắn hạn.",
-      "Dữ liệu sự kiện vĩ mô có nhiễu (tin tức không liên quan), cần thận trọng với các tín hiệu ngắn hạn."
+      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử khi biên độ dao động ngày cao (2.26%) và giá vượt MA30 tới 17.5%.",
+      "Premium SJC dao động mạnh 6.23%-18.31% trong 30 ngày, dễ bị thu hẹp nếu giá thế giới giảm chỉnh.",
+      "Xung đột tín hiệu vĩ mô: Dữ liệu việc làm mạnh (Strong Payrolls) đối đầu với kỳ vọng lạm phát giảm (CPI Cools), tạo biến động bất ngờ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 Year",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 9.26,
+        "key": "Change 30 Days",
+        "value": 9.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 17.5,
-        "unit": "%",
+        "key": "MA 30 Days",
+        "value": 154105974,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
-        "value": -3.23,
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 9.83,
+        "key": "Premium Range 30d (Low-High)",
+        "value": 6.23,
         "unit": "%",
-        "source": "macro_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "current_premium",
-        "value": 14.75,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Intl Gold Price",
+        "value": 5043.21,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T03:51:13.450Z",
+    "latestTimestamp": "2026-02-14T04:33:42.272Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157737254.60359895,
-    "premiumPct": 14.75,
-    "change7dPct": 1.69,
-    "change30dPct": 9.26,
+    "intlVndPerTael": 157741099.59520313,
+    "premiumPct": 14.74,
+    "change7dPct": 1.7,
+    "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344111,
-    "ma30VndPerTael": 154105846,
+    "ma7VndPerTael": 157344661,
+    "ma30VndPerTael": 154105974,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T03:51:33.089Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-14T04:33:54.761Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -186,8 +192,7 @@
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | actionforex.com | Weekly Economic & Financial Commentary : Strong Payrolls Dampen Hopes for Near - Term Rate Cuts",
-      "2026-02-14 | tvguide.co.uk | The Curse of Civil War Gold"
+      "2026-02-14 | cantechletter.com | Canadian Goldfields Closes Acquisition of Miminiska Gold Property in Ontario"
     ],
     "countryActionHeadlines": [
       "2026-02-14 | moneycontrol.com | Gold reclaims $5 , 000 as cooling inflation lifts Fed easing bets",
