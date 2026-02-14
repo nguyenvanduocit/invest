@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-02-14T07:15:47.214Z",
+  "generatedAt": "2026-02-14T08:07:37.393Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 9.26% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn là rất lớn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn tích cực nhờ lợi suất thực USD giảm và VIX tăng, nên chiến lược tối ưu là chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật trước khi mua vào.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 9.27%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật khiến việc xô đỉnh tại 181 triệu VND/lượng cần thời gian xác nhận.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%) và tăng quá nóng 9.26% trong 30 ngày qua, xa rời MA30 (154.1 triệu VND/lượng).",
-      "Lợi suất thực Mỹ 10 năm (US Real Yield) giảm mạnh 4.76% trong 5 ngày xuống 1.8%, tạo động lực tăng giá nền tảng cho vàng thế giới.",
-      "Chỉ số sợ hãi VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82, phản ánh tâm lý thị trường bất ổn, hỗ trợ nhu cầu trú ẩn an toàn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 9.27% sau 30 ngày, tín hiệu thị trường đã quá mua ngắn hạn.",
+      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10N giảm mạnh 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày, hỗ trợ giá vàng thế giới tăng 9.83%.",
+      "Premium 14.75% đang ở mức ổn định trong vùng giao dịch 30 ngày qua (dao động 9.81% - 18.31%), không có dấu hiệu căng thẳng cực đoan về thanh khoản."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đã tăng liên tục và chạm ngưỡng tâm lý 181 triệu VND/lượng.",
-      "Biến động ngày lớn (2.26%) có thể gây sốc tài khoản cho nhà đầu tư dùng đòn bẩy.",
-      "Premium giá SJC (14.75%) dao động mạnh, có thể co hẹp nếu giá thế giới điều chỉnh."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá chạy quá xa đường MA7 (157.3 triệu VND/lượng) và biến động ngày ở mức 2.26%.",
+      "Sự kiện địa chính trị và chính sách trong dữ liệu đầu vào mang tính nhiễu, không có tác động trực tiếp rõ ràng đến định giá vàng.",
+      "Lịch sử cho thấy thời gian phục hồi sau đợt sụt giảm tồi tệ lên đến 1369 ngày, rủi ro mua đỉnh là hiện hữu."
     ],
     "evidence": [
       {
@@ -27,14 +27,8 @@
       },
       {
         "key": "SJC Change 30d",
-        "value": 9.26,
+        "value": 9.27,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC MA30",
-        "value": 154105827,
-        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
@@ -50,23 +44,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.26,
+        "key": "Premium vs Intl Price",
+        "value": 14.75,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price vs MA7",
+        "value": 181,
+        "unit": "million VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Intl Gold Change 20d",
+        "value": 9.83,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T07:15:20.497Z",
+    "latestTimestamp": "2026-02-14T08:07:07.775Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157736690.66315624,
+    "intlVndPerTael": 157740932.884024,
     "premiumPct": 14.75,
-    "change7dPct": 1.69,
-    "change30dPct": 9.26,
+    "change7dPct": 1.7,
+    "change30dPct": 9.27,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157344031,
-    "ma30VndPerTael": 154105827,
+    "ma7VndPerTael": 157344637,
+    "ma30VndPerTael": 154105969,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T07:15:28.199Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-14T08:07:21.762Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -178,9 +184,19 @@
       "2026-02-11 | ECB Press / Speeches | Isabel Schnabel: Made in Europe",
       "2026-02-11 | ECB Press / Speeches | New data release: ECB wage tracker continues to suggest normalisation of negotiated wage pressures in 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-14 | orovillemr.com | SF Giant Logan Webb , Hayden Birdsong throw first live bullpens",
+      "2026-02-14 | jpost.com | This month in Jewish history : First permanent Israeli govt",
+      "2026-02-14 | livemint.com | HAL vs BDL vs BEL vs Mazagon Dock : Which defence stock to buy after Q3 results 2026 ?"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-14 | cointelegraph.com | Bitcoiners Face Test As Inflation Cools : Pompliano",
+      "2026-02-14 | understandingwar.org | Russian Offensive Campaign Assessment , Feb . 13 , 2026",
+      "2026-02-14 | economictimes.indiatimes.com | Cooling January inflation keeps Fed easing in play"
+    ],
     "dollarYieldHeadlines": [
+      "2026-02-14 | newkerala.com | Gold Price Falls 1 . 82 % Weekly , Silver Gains on US Inflation Data",
+      "2026-02-14 | dunyanews.tv | Gold prices plunge by Rs8 , 600 per tola",
       "2026-02-14 | cointelegraph.com | Bitcoiners Face Test As Inflation Cools : Pompliano",
       "2026-02-14 | understandingwar.org | Russian Offensive Campaign Assessment , Feb . 13 , 2026"
     ]
