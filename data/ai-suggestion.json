@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T06:19:04.609Z",
+  "generatedAt": "2026-02-15T07:17:11.123Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật khiến điểm mua hiện tại không tối ưu. Nên chờ hồi về vùng hỗ trợ MA7 (~157.35 triệu VND/lượng) hoặc xác nhận phá đỉnh thế giới rõ ràng hơn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, yêu cầu nhà đầu tư thận trọng chờ điểm mua an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 9.86% sau 30 ngày và nằm trên MA30 (154.44 triệu VND/lượng) 17%.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 4.76% trong 5 ngày xuống 1.8%, hỗ trợ vàng thế giới tăng 9.83% trong 20 ngày (từ ~4595 lên 5043 USD/oz).",
-      "VIX tăng 31.44% trong 20 ngày lên 20.82 điểm cho thấy lo ngại thị trường, nhưng các tiêu đề địa chính trị không đủ cụ thể để thúc đẩy đợt mua khủng hoảng mới.",
-      "Premium 14.84% nằm trong biên dao động 30 ngày (9.9%-18.41%), không cực đoan nhưng biến động ngày 2.26% rủi ro giao dịch cao."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày, cảnh báo vùng quá mua.",
+      "Động lượng tăng giá thế giới rất mạnh (+9.83% 20 ngày lên 5043 USD/oz) được hỗ trợ bởi lợi suất thực Mỹ giảm (1.8%) và VIX tăng cao (20.82).",
+      "Biên độ dao động ngày lớn (2.26%) và premium biến động mạnh (9.9%-18.41%) trong tháng cho thấy thị trường bất ổn, rủi ro sốc giá cao."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật: Giá quá mua ở mức percentile 100%, có thể hồi về MA7 (~157.35 triệu VND/lượng) nếu thị trường chốt lời.",
-      "Biến động premium: Premium đã dao động rộng 8.5 điểm phần trăm (9.9%-18.41%) trong 30 ngày, rủi ro slippage cao.",
-      "Thiếu tín hiệu vĩ mô rõ ràng: Dữ liệu first-principles healthy=false, các tiêu đề sự kiện không cung cấp thông tin hành động cụ thể."
+      "Rủi ro chốt lời ngắn hạn khi giá đã tăng gần 10% trong 30 ngày và chạm ngưỡng tâm lý 181 triệu.",
+      "Premium co giãn thất thường (đã từng xuống 6.32% và lên 18.41%) có thể khiến giá nội địa đi ngược thế giới.",
+      "VIX tăng vọt 31.44% trong 20 ngày phản ánh sự hoảng loạn thị trường chung, có thể gây bán tháo tài sản để gỡ margin."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "30d_change",
-        "value": 9.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5y_percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium",
-        "value": 14.84,
+        "key": "sjc_change_30d",
+        "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd",
-        "value": 157350538,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "world_gold_change_20d",
+        "value": 9.83,
+        "unit": "%",
+        "source": "macro_context"
       },
       {
         "key": "us_real_yield_10y",
         "value": 1.8,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "real_yield_5d_change",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_20d_change",
+        "key": "vix_change_20d",
         "value": 31.44,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
+      },
+      {
+        "key": "daily_volatility",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_range_monthly",
+        "value": 11.59,
+        "unit": "% (độ lệch 6.32-18.41)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T06:18:26.381Z",
+    "latestTimestamp": "2026-02-15T07:16:31.489Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157604087.3961817,
-    "premiumPct": 14.84,
-    "change7dPct": 0.64,
+    "intlVndPerTael": 157599700.08907026,
+    "premiumPct": 14.85,
+    "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350538,
-    "ma30VndPerTael": 154444163,
+    "ma7VndPerTael": 157349911,
+    "ma30VndPerTael": 154444017,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T06:18:44.963Z",
+    "fetchedAt": "2026-02-15T07:16:52.932Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,23 +184,8 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-15 | thetimes.com | How I unravelled the stories and legends woven on the old Silk Road"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-15 | iraqsun.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | timesofoman.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | finance.yahoo.com | Stocks Settle Slightly Higher as Bond Yields Fall",
-      "2026-02-15 | news.webindia123.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | greekherald.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | aninews.in | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-15 | iraqsun.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | timesofoman.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | news.webindia123.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | greekherald.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | aninews.in | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
