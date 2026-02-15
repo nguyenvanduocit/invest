@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T12:08:32.366Z",
+  "generatedAt": "2026-02-15T13:19:58.756Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,20 +7,20 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 9.86% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn hỗ trợ vàng nhờ lợi suất thực USD giảm (1.8%) và VIX tăng vọt 31.44%, nên chiến lược tối ưu là chờ đợi hồi phục về vùng hỗ trợ kỹ thuật thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC 181 triệu đồng/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86% trong 30 ngày, nhưng thanh khoản cao và biến động 2.26%/ngày cảnh báo rủi ro điều chỉnh ngắn hạn cho người mua đuổi.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (154.4 triệu VND/lượng), tín hiệu cho thấy thị trường đã mua quá mức ngắn hạn.",
-      "Động lượng tăng 30 ngày lên tới 9.86% kết hợp với biên độ dao động ngày 2.26% cho thấy thanh khoản căng thẳng và rủi ro biến động lớn cho người mua mới.",
-      "Vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm 3.23% xuống 1.8% và VIX tăng 31.44% trong 20 ngày là động lực thúc đẩy giá vàng thế giới tăng 9.83%."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 9.86% sau 30 ngày và vượt xa MA30 (154,444,054 VND/lượng), cho thấy động lượng tăng rất mạnh nhưng đã quá mua.",
+      "Lợi suất thực Mỹ 10Y giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày lên 20.82 điểm là động lực hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày qua.",
+      "Premium 14.85% hiện tại cao hơn đáng kể so với mức đáy 6.32% (ngày 28/01) nhưng thấp hơn đỉnh 18.41% (ngày 05/02), cho thấy giá nội địa đã định giá phần lớn đà tăng của giá thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá quá xa đường trung bình động và thanh khoản có thể giảm sau đợt tăng nóng.",
-      "Biên độ premium dao động mạnh từ 6.32% đến 18.41% trong 30 ngày qua cho thấy sự thiếu ổn định trong chênh lệch giá nội địa.",
-      "Thiếu dữ liệu tin tức địa chính trị cụ thể (geopoliticalHeadlines rỗng) làm giảm độ tin cậy về khả năng duy trì đà tăng vĩ mô."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở percentile 100% trong 5 năm và biến động ngày lên tới 2.26%.",
+      "Premium có thể giảm nếu giá thế giới đi ngang hoặc điều chỉnh, làm giảm hiệu quả đầu tư so với vàng thế giới.",
+      "Dữ liệu sự kiện vĩ mô (ECB, Olympic) độ liên quan thấp, có thể là nhiễu làm giảm độ tin cậy của dự báo."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
@@ -32,20 +32,20 @@
         "source": "market_snapshot"
       },
       {
-        "key": "SJC vs MA30",
-        "value": 26.56,
-        "unit": "triệu VND/lượng",
+        "key": "SJC Price Latest",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 18.41,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "MA30 VND",
+        "value": 154444054,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 1d",
-        "value": -3.23,
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -56,17 +56,23 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Intl Gold Change 20d",
-        "value": 9.83,
+        "key": "Premium Range 30d Low",
+        "value": 6.32,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium Range 30d High",
+        "value": 18.41,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T12:07:52.314Z",
+    "latestTimestamp": "2026-02-15T13:19:09.888Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157600794.49390706,
+    "intlVndPerTael": 157600793.86889005,
     "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
@@ -83,8 +89,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T12:08:14.003Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-15T13:19:15.594Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -184,8 +190,27 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-14 | thestar.com.my | Gu Ailing  bummed  about FIS training schedule after reaching Olympic big air final",
+      "2026-02-14 | thetimes.com | Why Russia uses poison to silence enemies like Alexei Navalny",
+      "2026-02-14 | nytimes.com | One day later , Canada and Sweden Olympic curling beef is still simmering",
+      "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
+      "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
+      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
+      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
+      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
+      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
+    ]
   }
 }
