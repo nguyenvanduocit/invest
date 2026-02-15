@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T21:06:46.961Z",
+  "generatedAt": "2026-02-15T22:04:59.162Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.74%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng. Nhà đầu tư nên chờ đợi hồi phục về vùng hỗ trợ kỹ thuật hoặc ổn định premium trước khi gia nhập vị thế mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng đã chững lại và biến động premium cao khiến rủi ro mua đuổi là đáng kể, nhà đầu tư nên chờ hồi điều chỉnh về vùng hỗ trợ MA7.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (154.9 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng 30 ngày đạt 9.74% kết hợp với biến động ngày 2.22% cho thấy thị trường đang sôi động nhưng rủi ro dao động giá lớn.",
-      "Premium 14.84% nằm trong biên dao động 30 ngày (10.9%-18.41%), không có dấu hiệu bong bóng cực đoan, nhưng VIX tăng 31.44%/20 ngày hỗ trợ nhu cầu trú ẩn an toàn.",
-      "Lợi suất thực Mỹ 10 năm giảm 3.23%/20 ngày xuống 1.8% và USD Index giảm 1.54%/20 ngày là động lực vĩ mô tích cực hỗ trợ giá vàng thế giới tăng 9.83%/20 ngày."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%) và tăng mạnh 9.74% sau 30 ngày, rủi ro mua đỉnh ngắn hạn rất lớn.",
+      "Động lượng tăng đã chững lại với change7dPct chỉ -0.62% trong khi giá hiện tại (181 triệu) cao xa MA7 (157.2 triệu VND/lượng), cho thấy thị trường đang nghỉ po hoặc điều chỉnh.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày lên 20.82 điểm đang hỗ trợ giá vàng thế giới, tạo nền tảng vĩ mô tích cực dài hạn.",
+      "Premium 14.85% đang dao động rộng (9.9% - 18.41% trong 30 ngày) và cao hơn mức đầu tháng (13.04%), cho thấy tâm lý thị trường Việt Nam đang nóng nhưng không cực đoan."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở đỉnh 5 năm và đã tăng gần 10% chỉ trong 1 tháng.",
-      "Biến động premium rộng (dao động từ 10.9% đến 18.41% trong 30 ngày) có thể gây thiệt hại nếu mua đỉnh premium và bán đáy.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể liên quan trực tiếp đến giá vàng, độ tin cậy phân tích giảm, cần thận trọng với tin tức nhiễu."
+      "Rủi ro điều chỉnh giá về mức MA7 (157.2 triệu VND/lượng) nếu động lượng mua yếu đi, gây lỗ ngắn hạn đáng kể cho người mua hiện tại.",
+      "Biến động premium cao (độ dao động ~8.5 điểm phần trăm trong 30 ngày) có thể khiến nhà đầu tư bị thiệt hại khi chốt lời nếu mua lúc premium cao.",
+      "Thiếu dữ liệu Gold Spot XAUUSD thời gian thực và headlines vĩ mô không tập trung vào vàng làm giảm độ tin cậy của tín hiệu vĩ mô."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Price vs 5Y Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 30d",
+        "key": "SJC Change 30d",
         "value": 9.74,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 181,
-        "unit": "triệu VND/lượng",
+        "key": "SJC Change 7d",
+        "value": -0.62,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Current",
-        "value": 14.84,
-        "unit": "%",
+        "key": "SJC Price vs MA7",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 VND/lượng",
+        "value": 157209964,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
         "key": "Premium Range 30d",
-        "value": 7.51,
-        "unit": "% (10.9-18.41)",
+        "value": 8.51,
+        "unit": "% (18.41-9.9)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -3.23,
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
         "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Gold Spot Change 20d",
-        "value": 9.83,
-        "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T21:06:18.476Z",
+    "latestTimestamp": "2026-02-15T22:04:34.952Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157604261.1509188,
-    "premiumPct": 14.84,
+    "intlVndPerTael": 157601759.83272517,
+    "premiumPct": 14.85,
     "change7dPct": -0.62,
     "change30dPct": 9.74,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157209808,
-    "ma30VndPerTael": 154910623,
+    "ma7VndPerTael": 157209964,
+    "ma30VndPerTael": 154910660,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T21:06:28.739Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-15T22:04:41.489Z",
+    "healthy": false,
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5032.915,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-02-13",
-        "change1dPct": 2.25,
-        "change5dPct": 1.61,
-        "change20dPct": 9.83,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
@@ -192,22 +194,15 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | cadillacnews.com | AP News Summary at 3 : 18 p . m . EST",
-      "2026-02-15 | nbcdfw.com | Russian figure skater Adeliia Petrosian is an Olympic mystery – NBC 5 Dallas - Fort Worth",
-      "2026-02-15 | historyextra.com | London 1908 was the weirdest Winter Olympics in history – and here why",
-      "2026-02-15 | srilankasource.com | Irfan Pathan hails Kishan takedown of Pakistan",
-      "2026-02-15 | sbs.com.au | Russia claims more territory in Ukraine | Morning News Bulletin 16 February 2026",
-      "2026-02-15 | blayneychronicle.com.au | Embrace autumn : Join local walking groups nationwide"
+      "2026-02-15 | abc.net.au | Coles , ACCC showdown in federal court | ABC News Top Stories"
     ],
     "countryActionHeadlines": [
       "2026-02-15 | bworldonline.com | Debt yields slip on policy easing bets - BusinessWorld Online",
       "2026-02-15 | livemint.com | Wall Street Week Ahead : Market braces for Fed minutes , PCE inflation , Q4 GDP , personal income & spending data",
-      "2026-02-15 | taipeitimes.com | EU central bank pushes access to euro",
-      "2026-02-15 | castanetkamloops.net | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | bankingnews.gr | Something is happening with the dollar , the ECB fortifies itself with euro liquidity lines ahead of capital wars with the Federal Reserve",
-      "2026-02-15 | zerohedge.com | The Weak Dollar Narrative"
+      "2026-02-15 | taipeitimes.com | EU central bank pushes access to euro"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-15 | abc.net.au | Coles , ACCC showdown in federal court | ABC News Top Stories",
       "2026-02-15 | elciudadano.com | Gold Price Analysis : Economic Insights for 2026",
       "2026-02-15 | dailypolitical.com | Zambesigold Hits Self Reported Market Cap of $6 . 55 Million ( ZGD )",
       "2026-02-15 | livemint.com | Wall Street Week Ahead : Market braces for Fed minutes , PCE inflation , Q4 GDP , personal income & spending data",
