@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T00:22:20.451Z",
+  "generatedAt": "2026-02-15T01:35:17.880Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và các yếu tố vĩ mô cốt lõi (USD, Lợi suất thực) đang thiếu dữ liệu để xác nhận xu hướng.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày. Nhà đầu tư không nên mua đuổi tại vùng giá 181 triệu đồng/lượng này mà chờ đợi信 hiệu ổn định hoặc điều chỉnh về vùng hỗ trợ gần nhất.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày qua.",
-      "Động lượng tăng được hỗ trợ bởi lo ngại rủi ro toàn cầu khi VIX tăng 31.44% trong 20 ngày và lợi suất Trái phiếu Mỹ 10N giảm 1.45%.",
-      "Biên độ dao động ngày cao (2.26%) và giá hiện tại vượt xa MA30 (154.4 triệu VND/lượng) cảnh báo thị trường đang quá mua."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (154.4 triệu đồng/lượng) tới 17%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng trưởng nóng trong 30 ngày qua đạt 9.86%, đi kèm độ biến động ngày cao (2.26%), cho thấy thị trường đang trong trạng thái投 cơ mạnh.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm 4.76% trong 5 ngày xuống mức 1.8% và giá vàng thế giới tăng mạnh 9.83% trong 20 ngày là động lực hỗ trợ xu hướng tăng dài hạn.",
+      "Premium 14.84% hiện tại cao hơn đáng kể so với mức đáy 6.32% (ngày 28/01), cho thấy tâm lý FOMO đang đẩy giá nội địa cao hơn tương đối so với giá thế giới."
     ],
     "risks": [
-      "Thị trường quá mua ở đỉnh lịch sử, rủi ro chốt lời ngắn hạn cao nếu động lực mua yếu đi.",
-      "Dữ liệu vĩ mô Mỹ (DXY, Fed Funds) bị thiếu, không thể đánh giá đầy đủ áp lực từ đồng USD và lãi suất thực.",
-      "Premium 14.85% cao hơn đáng kể so với mức thấp nhất 6.32% trong chuỗi dữ liệu, có thể thu hẹp lại nếu giá thế giới điều chỉnh."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh: Giá hiện cách xa MA7 (157.3 triệu) và MA30 (154.4 triệu), dễ xảy ra hồi phục về giá trị trung bình (mean reversion).",
+      "Dữ liệu vĩ mô thiếu hụt: Không có dữ liệu DXY, VIX và Lạm phát kỳ vọng (missingFactors) làm giảm độ tin cậy trong việc đánh giá động lực tăng giá từ yếu tố vĩ mô.",
+      "Sự kiện chính sách không rõ ràng: Các tiêu đề về ECB (Liên minh Châu Âu) có liên quan gián tiếp nhưng không có tin tức cụ thể về USD/Lãi suất Mỹ hay hành động của Ngân hàng Nhà nước Việt Nam."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
+        "key": "30D Change",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
         "key": "Daily Volatility",
         "value": 2.26,
-        "unit": "%/day",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Current Premium vs Monthly Low",
-        "value": 8.53,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
+        "key": "Premium vs World",
+        "value": 14.84,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "US Treasury 10Y Change 20d",
-        "value": -1.45,
+        "key": "US Real Yield 10Y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 26.56,
-        "unit": "million VND/tael",
-        "source": "market_snapshot"
+        "key": "Intl Gold 20D Change",
+        "value": 9.83,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "MA30 Distance",
+        "value": 17.1,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T00:21:51.149Z",
+    "latestTimestamp": "2026-02-15T01:34:35.794Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157599761.34074017,
-    "premiumPct": 14.85,
-    "change7dPct": 0.63,
+    "intlVndPerTael": 157604089.2712328,
+    "premiumPct": 14.84,
+    "change7dPct": 0.64,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157349920,
-    "ma30VndPerTael": 154444019,
+    "ma7VndPerTael": 157350538,
+    "ma30VndPerTael": 154444163,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,13 +90,13 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T00:22:03.252Z",
+    "fetchedAt": "2026-02-15T01:34:57.334Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
-      "US Real Yield 10Y",
       "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate"
+      "US Effective Fed Funds Rate",
+      "VIX Volatility Index"
     ],
     "factors": [
       {
@@ -117,12 +124,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.8,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -3.23,
+        "change5dPct": -4.76,
+        "change20dPct": -3.23,
         "relationToGold": "inverse"
       },
       {
@@ -172,12 +179,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 20.82,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-12",
-        "change1dPct": 17.96,
-        "change5dPct": -4.36,
-        "change20dPct": 31.44,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       }
     ],
@@ -189,20 +196,12 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-15 | whatech.com | Spring Fair at VEC Marks Vietnam Most Ambitious Showcase Yet",
-      "2026-02-15 | gna.org.gh | Indian community opens Sikh temple in Accra | Ghana News Agency",
-      "2026-02-15 | island.lk | Nestomalt Wellness run 2026",
-      "2026-02-15 | goskagit.com | Eileen Gu says she disappointed she cant get help with her packed Olympic schedule",
-      "2026-02-15 | medafricatimes.com | AU Executive Council Concludes 48th Session with Renewed Push for Unity and Development – Medafrica Times",
-      "2026-02-15 | theage.com.au | Hobbies : Can they change your life ?"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role"
+      "2026-02-15 | freemalaysiatoday.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-15 | 933thedrive.com | Factbox - ECB opens up euro lifeline in bid to boost global role",
+      "2026-02-15 | 933thedrive.com | ECB makes euro backstop global to bolster currency role",
+      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role"
     ],
     "dollarYieldHeadlines": []
   }
