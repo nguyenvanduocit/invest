@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-15T22:04:41.577Z",
+  "checkedAt": "2026-02-15T23:06:55.774Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-15T22:04:41.489Z",
+  "dataFetchedAt": "2026-02-15T23:06:55.703Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,29 +9,44 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
+    "availableFactors": 5,
     "missingFactors": [
-      "Gold Spot XAUUSD"
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 9,
-    "countryActionCount": 13,
+    "geopoliticalCount": 5,
+    "countryActionCount": 0,
     "dollarYieldCount": 9,
     "sourceFailures": [
       {
-        "id": "gold_spot_xauusd",
-        "error": "Malformed Stooq daily CSV payload"
+        "id": "usd_index_trade_weighted",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "us_real_yield_10y",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "us_breakeven_10y",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD"
+    "Missing required factors: US Dollar Trade Weighted Index, US Real Yield 10Y, US Breakeven Inflation 10Y",
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
+    "Source failures: usd_index_trade_weighted (HTTP 504); us_real_yield_10y (HTTP 504); us_breakeven_10y (HTTP 504); gdelt_country_actions (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
