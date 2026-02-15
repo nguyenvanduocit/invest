@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T11:06:45.963Z",
+  "generatedAt": "2026-02-15T12:08:32.366Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang tích tụ, nhà đầu tư không nên đu đỉnh mà chờ tín hiệu xác nhận hoặc hồi điều chỉnh về vùng hỗ trợ MA7.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 9.86% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn hỗ trợ vàng nhờ lợi suất thực USD giảm (1.8%) và VIX tăng vọt 31.44%, nên chiến lược tối ưu là chờ đợi hồi phục về vùng hỗ trợ kỹ thuật thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (154.4 triệu VND/lượng) tới 17.1%, cho thấy thị trường đang ở trạng thái quá mua kỹ thuật ngắn hạn.",
-      "Động lượng tăng 30 ngày đạt 9.86% kết hợp VIX tăng 20 ngày (+31.44%) cho thấy vàng đang đóng vai trò trú ẩn an toàn trong bối cảnh bất định.",
-      "Lợi suất thực Mỹ 10 năm giảm 20 ngày (-3.23%) xuống 1.8% và USD Index giảm (-1.54%) tạo đà hỗ trợ vĩ mô tích cực cho giá vàng thế giới.",
-      "Premium 14.85% nằm trong biên dao động 30 ngày (9.9%-18.41%), không có dấu hiệu bong bóng cực đoan nhưng thanh khoản cao cần thận trọng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (154.4 triệu VND/lượng), tín hiệu cho thấy thị trường đã mua quá mức ngắn hạn.",
+      "Động lượng tăng 30 ngày lên tới 9.86% kết hợp với biên độ dao động ngày 2.26% cho thấy thanh khoản căng thẳng và rủi ro biến động lớn cho người mua mới.",
+      "Vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm 3.23% xuống 1.8% và VIX tăng 31.44% trong 20 ngày là động lực thúc đẩy giá vàng thế giới tăng 9.83%."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh khi giá ở vùng đỉnh 5 năm và volatility 2.26%/ngày.",
-      "Thanh khoản thấp và spread rộng nếu thị trường sốc ngược chiều từ đỉnh lịch sử.",
-      "Dữ liệu vĩ mô thiếu cập nhật (healthy: false) và thiếu sự kiện địa chính trị cụ thể làm giảm độ tin cậy dự báo."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá quá xa đường trung bình động và thanh khoản có thể giảm sau đợt tăng nóng.",
+      "Biên độ premium dao động mạnh từ 6.32% đến 18.41% trong 30 ngày qua cho thấy sự thiếu ổn định trong chênh lệch giá nội địa.",
+      "Thiếu dữ liệu tin tức địa chính trị cụ thể (geopoliticalHeadlines rỗng) làm giảm độ tin cậy về khả năng duy trì đà tăng vĩ mô."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_30d_pct",
-        "value": 9.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vnd",
-        "value": 154444079,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "SJC Change 30d",
+        "value": 9.86,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC vs MA30",
+        "value": 26.56,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 18.41,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "US Real Yield 10Y Change 1d",
+        "value": -3.23,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_pct",
-        "value": 14.85,
+        "key": "Intl Gold Change 20d",
+        "value": 9.83,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.26,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T11:06:16.288Z",
+    "latestTimestamp": "2026-02-15T12:07:52.314Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157601565.45242578,
+    "intlVndPerTael": 157600794.49390706,
     "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350177,
-    "ma30VndPerTael": 154444079,
+    "ma7VndPerTael": 157350067,
+    "ma30VndPerTael": 154444054,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T11:06:20.189Z",
+    "fetchedAt": "2026-02-15T12:08:14.003Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -192,19 +185,7 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-15 | businesstimes.com.sg | India central bank allows lenders to fund up to 75 % in M & A deals",
-      "2026-02-15 | livemint.com | India forex reserves drop $6 . 7 billion to $717 billion , gold reserves dip , reveals RBI data",
-      "2026-02-15 | zeenews.india.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | thedailystar.net | ECB to extend euro backstop to boost currency global role",
-      "2026-02-15 | scmp.com | Fading US dollar trust threatens world economy , ex - IMF official warns"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-15 | livemint.com | Gold rate in India may crash below ₹1 lakh , COMEX gold price to touch $3 , 000 / oz after this reported Russian move",
-      "2026-02-15 | zeenews.india.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | scmp.com | Fading US dollar trust threatens world economy , ex - IMF official warns",
-      "2026-02-15 | livemint.com | US Fed minutes to gold , silver rates , FII activity : Top five triggers that may dictate Indian stock market this week",
-      "2026-02-15 | zeenews.india.com | How the US Dollar became the world reserve currency And why no rival has replaced it yet | Economy News"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
