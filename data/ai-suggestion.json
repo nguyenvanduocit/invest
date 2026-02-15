@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T16:07:53.116Z",
+  "generatedAt": "2026-02-15T17:07:59.449Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,77 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao 2.26%/ngày, xu hướng tăng mạnh 9.86%/tháng nhưng thanh khoản mua vào lúc này rủi ro cao, nên chờ hồi về vùng hỗ trợ MA7 (~157.35 triệu/lượng) hoặc ổn định premium dưới 13%.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và VIX tăng vọt 31.44%. Nhà đầu tư không nên mua đuổi ở mức giá 181 triệu/lượng mà chờ tín hiệu ổn định hoặc hồi về vùng hỗ trợ gần MA7 (~157 triệu VND/lượng theo giá thế giới).",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày và cao hơn MA30 (154.44 triệu/lượng) tới 17.2%, rủi ro mua đỉnh ngắn hạn đáng kể.",
-      "Premium 14.84% tuy không cực đoan nhưng đang dao động rộng từ 6.32% đến 18.41% trong 30 ngày qua, thanh khoản thị trường Việt Nam có thể bị ép biên khi giá thế giới điều chỉnh."
+      "Giá SJC đang ở mức cao nhất lịch sử 5 năm (percentile 100) tại 181,000,000 VND/lượng, rủi ro mua đuổi là rất lớn.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 4.76% trong 5 ngày xuống 1.8%, tạo nền tảng hỗ trợ vĩ mô cho giá vàng thế giới tiếp tục tăng.",
+      "Biên độ dao động ngày cao (2.26%) kết hợp với VIX tăng 31.44% trong 20 ngày cho thấy thị trường đang bất ổn, dễ xảy ra biến động hai chiều mạnh.",
+      "Premium 14.85% đang ở mức trung bình so với các đợt cao điểm trước đó (như 18.41% ngày 05/02), chưa có dấu hiệu投机 cực đoan nhưng cũng không hấp dẫn để nhập hàng mới."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu nếu giá thế giới quay về test vùng hỗ trợ 4860-4900 USD/oz, kéo SJC về test MA7 (157.35 triệu/lượng).",
-      "Biến động premium có thể giãn rộng thêm 2-3% nếu thanh khoản SJC cục bộ căng, làm tăng chi phí cơ hội cho nhà đầu tư mới.",
-      "Tin tức địa chính trị trong input không đủ trọng tâm để duy trì đà tăng vọt, rủi ro nhiễu dữ liệu cao."
+      "Rủi ro chốt lời ngắn hạn (take-profit) rất cao khi giá đã tăng liên tục 9.86% trong 30 ngày qua.",
+      "Thanh khoản có thể giảm nếu giá đi ngang hoặc điều chỉnh nhẹ, gây khó khăn cho việc thoát hàng nhanh.",
+      "Dữ liệu tin tức vĩ mô (ECB, địa chính trị) trong input chủ yếu là nhiễu, thiếu sự kiện trọng điểm trực tiếp tác động giá vàng, làm giảm độ tin cậy dự báo."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 100,
-        "unit": "%",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
+        "key": "5-Year Percentile",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "30-Day Change",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 14.84,
+        "key": "Daily Volatility",
+        "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_ma7_vnd",
-        "value": 157350551,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_ma30_vnd",
-        "value": 154444167,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_change_20d",
-        "value": 9.83,
+        "key": "US Real Yield 10Y",
+        "value": 1.8,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_change_5d",
+        "key": "Real Yield 5d Change",
         "value": -4.76,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "VIX 20d Change",
         "value": 31.44,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Current Premium",
+        "value": 14.85,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T16:05:55.781Z",
+    "latestTimestamp": "2026-02-15T17:07:22.804Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157604184.27382287,
-    "premiumPct": 14.84,
+    "intlVndPerTael": 157603690.8228699,
+    "premiumPct": 14.85,
     "change7dPct": 0.64,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350551,
-    "ma30VndPerTael": 154444167,
+    "ma7VndPerTael": 157350481,
+    "ma30VndPerTael": 154444150,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -88,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T16:06:04.765Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-15T17:07:36.381Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -190,22 +192,23 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | ncregister.com | The Sparkling Story of the World - Famous  Smiling Angel  | National Catholic Register",
-      "2026-02-15 | abcnews.com | Today in History : February 15 , USS Maine explodes in Havana Harbor"
+      "2026-02-15 | southwalesargus.co.uk | No one else does biscuits like Burtons factory in Cwmbran",
+      "2026-02-15 | tvguide.co.uk | Death Coast",
+      "2026-02-15 | slashfilm.com | Genosha Genocide In X - Men  97 Was Much More Than Just A Shocking Plot Turn"
     ],
     "countryActionHeadlines": [
-      "2026-02-15 | fool.com | Forget Tariffs ! Earnings Quality Is a Far More Sinister Worry for Wall Street .",
-      "2026-02-15 | niagarafallsreview.ca | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | zerohedge.com | The Weak Dollar Narrative",
+      "2026-02-15 | toronto.citynews.ca | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | bnnbloomberg.ca | Food inflation expected to jump in January amid tax changes",
+      "2026-02-15 | business-standard.com | Silver , gold braces for another jittery week on US inflation data : Analysts",
       "2026-02-15 | wellandtribune.ca | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | timesofindia.indiatimes.com | Gold , Silver likely to consolidate in coming week amid Fed rate - cut uncertainty : Analysts",
-      "2026-02-15 | therecord.com | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | dominicantoday.com | Is the dollar rising or falling ? What it means for your wallet"
+      "2026-02-15 | fool.com | Forget Tariffs ! Earnings Quality Is a Far More Sinister Worry for Wall Street ."
     ],
     "dollarYieldHeadlines": [
+      "2026-02-15 | washingtonexaminer.com | Dollar dominance , if you can keep it",
+      "2026-02-15 | business-standard.com | Silver , gold braces for another jittery week on US inflation data : Analysts",
       "2026-02-15 | timesofindia.indiatimes.com | Gold , Silver likely to consolidate in coming week amid Fed rate - cut uncertainty : Analysts",
-      "2026-02-15 | finance.yahoo.com | Warren Buffett once said this US investment was  terrible long - term . Now he has $381 billion of it . Should you get in ?",
-      "2026-02-15 | thestar.com.my | Gold rises over 2 % at the weekend as soft inflation data rekindles Fed rate - cut hopes",
-      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts"
+      "2026-02-15 | finance.yahoo.com | Warren Buffett once said this US investment was  terrible long - term . Now he has $381 billion of it . Should you get in ?"
     ]
   }
 }
