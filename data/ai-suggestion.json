@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T15:07:08.444Z",
+  "generatedAt": "2026-02-15T16:07:53.116Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,77 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 9.86% trong 30 ngày qua, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật khiến việc mua đuổi tại mức giá 181 triệu/lượng là rủi ro.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao 2.26%/ngày, xu hướng tăng mạnh 9.86%/tháng nhưng thanh khoản mua vào lúc này rủi ro cao, nên chờ hồi về vùng hỗ trợ MA7 (~157.35 triệu/lượng) hoặc ổn định premium dưới 13%.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày và cao hơn MA30 (154.4 triệu/lượng) tới 17.2%.",
-      "Động lượng tăng được hỗ trợ bởi vĩ mô: Lợi suất thực Mỹ 10N giảm 3.23% và VIX tăng 31.44% trong 20 ngày qua, thúc đẩy dòng tiền vào kênh trú ẩn.",
-      "Premium 14.85% đang ổn định trong biên độ dao động 6-18% của chuỗi 30 ngày, không có dấu hiệu bong bóng địa phương cực đoan."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày và cao hơn MA30 (154.44 triệu/lượng) tới 17.2%, rủi ro mua đỉnh ngắn hạn đáng kể.",
+      "Premium 14.84% tuy không cực đoan nhưng đang dao động rộng từ 6.32% đến 18.41% trong 30 ngày qua, thanh khoản thị trường Việt Nam có thể bị ép biên khi giá thế giới điều chỉnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi thị trường đã tăng liên tục và giá hiện tại cách xa MA7 (157.3 triệu/lượng).",
-      "Biên độ dao động ngày lớn (2.26%) cộng với VIX ở mức 20.82 có thể gây sốc giá ngắn hạn cho nhà đầu tư dùng đòn bẩy.",
-      "Dữ liệu sự kiện vĩ mô (ECB, Trump) độ liên quan thấp với giá vàng trực tiếp, có thể gây nhiễu thị trường."
+      "Điều chỉnh kỹ thuật sâu nếu giá thế giới quay về test vùng hỗ trợ 4860-4900 USD/oz, kéo SJC về test MA7 (157.35 triệu/lượng).",
+      "Biến động premium có thể giãn rộng thêm 2-3% nếu thanh khoản SJC cục bộ căng, làm tăng chi phí cơ hội cho nhà đầu tư mới.",
+      "Tin tức địa chính trị trong input không đủ trọng tâm để duy trì đà tăng vọt, rủi ro nhiễu dữ liệu cao."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30d",
+        "key": "sjc_change_30d",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 14.85,
+        "key": "sjc_premium_current",
+        "value": 14.84,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 Price",
-        "value": 154444055,
+        "key": "sjc_ma7_vnd",
+        "value": 157350551,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -3.23,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "sjc_ma30_vnd",
+        "value": 154444167,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "intl_gold_change_20d",
+        "value": 9.83,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "us_real_yield_change_5d",
+        "value": -4.76,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "vix_change_20d",
         "value": 31.44,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "World Gold Price",
-        "value": 5043.09,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T15:06:33.261Z",
+    "latestTimestamp": "2026-02-15T16:05:55.781Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157600849.18289807,
-    "premiumPct": 14.85,
-    "change7dPct": 0.63,
+    "intlVndPerTael": 157604184.27382287,
+    "premiumPct": 14.84,
+    "change7dPct": 0.64,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350075,
-    "ma30VndPerTael": 154444055,
+    "ma7VndPerTael": 157350551,
+    "ma30VndPerTael": 154444167,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,8 +88,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T15:06:49.351Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-15T16:06:04.765Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -191,18 +190,20 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | pilotonline.com | Today in History : February 15 , USS Maine explodes in Havana Harbor",
-      "2026-02-15 | theguardian.com | Readers reply : can you acquire courage ?",
-      "2026-02-15 | independentnews.com | Welcome to Trump World / Trump : The Midas Touch ?"
+      "2026-02-15 | ncregister.com | The Sparkling Story of the World - Famous  Smiling Angel  | National Catholic Register",
+      "2026-02-15 | abcnews.com | Today in History : February 15 , USS Maine explodes in Havana Harbor"
     ],
     "countryActionHeadlines": [
-      "2026-02-15 | dominicantoday.com | Is the dollar rising or falling ? What it means for your wallet",
-      "2026-02-15 | thestar.com.my | Gold rises over 2 % at the weekend as soft inflation data rekindles Fed rate - cut hopes",
-      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts",
-      "2026-02-15 | stcatharinesstandard.ca | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | winnipegfreepress.com | Food inflation expected to jump in January amid tax changes : economists – Winnipeg Free Press"
+      "2026-02-15 | fool.com | Forget Tariffs ! Earnings Quality Is a Far More Sinister Worry for Wall Street .",
+      "2026-02-15 | niagarafallsreview.ca | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | wellandtribune.ca | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | timesofindia.indiatimes.com | Gold , Silver likely to consolidate in coming week amid Fed rate - cut uncertainty : Analysts",
+      "2026-02-15 | therecord.com | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | dominicantoday.com | Is the dollar rising or falling ? What it means for your wallet"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-15 | timesofindia.indiatimes.com | Gold , Silver likely to consolidate in coming week amid Fed rate - cut uncertainty : Analysts",
+      "2026-02-15 | finance.yahoo.com | Warren Buffett once said this US investment was  terrible long - term . Now he has $381 billion of it . Should you get in ?",
       "2026-02-15 | thestar.com.my | Gold rises over 2 % at the weekend as soft inflation data rekindles Fed rate - cut hopes",
       "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts"
     ]
