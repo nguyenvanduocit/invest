@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T20:08:40.552Z",
+  "generatedAt": "2026-02-15T21:06:46.961Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 30 ngày (+9.74%), xu hướng tăng mạnh nhưng cần thận trọng rủi ro điều chỉnh ngắn hạn khi VIX tăng vọt.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.74%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng. Nhà đầu tư nên chờ đợi hồi phục về vùng hỗ trợ kỹ thuật hoặc ổn định premium trước khi gia nhập vị thế mới.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.74% trong 30 ngày qua - động lượng tăng quá nhanh cần cảnh giác.",
-      "VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82 cho thấy lo ngại rủi ro thị trường tăng cao, thường đi kèm biến động giá vàng lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày xuống 1.8% và USD Index giảm 1.54% trong 20 ngày - hỗ trợ xu hướng tăng giá vàng thế giới.",
-      "Premium 14.85% nằm trong biên dao động 6.32%-18.41% của 30 ngày qua, không cực đoan nhưng cho thấy giá Việt Nam đắt hơn thế giới đáng kể."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (154.9 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng 30 ngày đạt 9.74% kết hợp với biến động ngày 2.22% cho thấy thị trường đang sôi động nhưng rủi ro dao động giá lớn.",
+      "Premium 14.84% nằm trong biên dao động 30 ngày (10.9%-18.41%), không có dấu hiệu bong bóng cực đoan, nhưng VIX tăng 31.44%/20 ngày hỗ trợ nhu cầu trú ẩn an toàn.",
+      "Lợi suất thực Mỹ 10 năm giảm 3.23%/20 ngày xuống 1.8% và USD Index giảm 1.54%/20 ngày là động lực vĩ mô tích cực hỗ trợ giá vàng thế giới tăng 9.83%/20 ngày."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở vùng quá mua (percentile 100%), biến động ngày 2.22% có thể gây thua lỗ ngắn hạn.",
-      "Giá thế giới (5,043 USD/oz) cách xa MA7 (5,029 USD/oz) không đáng kể nhưng đã tăng liên tục, dễ chịu áp lực chốt lời.",
-      "Dữ liệu vĩ mô thiếu cập nhật (USD Index ngày 06/02, lợi suất ngày 12/02) có thể không phản ánh đúng bối cảnh hiện tại."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở đỉnh 5 năm và đã tăng gần 10% chỉ trong 1 tháng.",
+      "Biến động premium rộng (dao động từ 10.9% đến 18.41% trong 30 ngày) có thể gây thiệt hại nếu mua đỉnh premium và bán đáy.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể liên quan trực tiếp đến giá vàng, độ tin cậy phân tích giảm, cần thận trọng với tin tức nhiễu."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5y_percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d",
+        "key": "SJC Price Change 30d",
         "value": 9.74,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.22,
+        "key": "SJC Price vs MA30",
+        "value": 181,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Current",
+        "value": 14.84,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 14.85,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Premium Range 30d",
+        "value": 7.51,
+        "unit": "% (10.9-18.41)",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "vix_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.23,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "Gold Spot Change 20d",
+        "value": 9.83,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "usd_index_change_20d",
-        "value": -1.54,
-        "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T20:04:58.781Z",
+    "latestTimestamp": "2026-02-15T21:06:18.476Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157601590.76561588,
-    "premiumPct": 14.85,
+    "intlVndPerTael": 157604261.1509188,
+    "premiumPct": 14.84,
     "change7dPct": -0.62,
     "change30dPct": 9.74,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157209940,
-    "ma30VndPerTael": 154910654,
+    "ma7VndPerTael": 157209808,
+    "ma30VndPerTael": 154910623,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T20:05:20.170Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-15T21:06:28.739Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -191,15 +191,27 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-15 | cadillacnews.com | AP News Summary at 3 : 18 p . m . EST",
+      "2026-02-15 | nbcdfw.com | Russian figure skater Adeliia Petrosian is an Olympic mystery – NBC 5 Dallas - Fort Worth",
+      "2026-02-15 | historyextra.com | London 1908 was the weirdest Winter Olympics in history – and here why",
+      "2026-02-15 | srilankasource.com | Irfan Pathan hails Kishan takedown of Pakistan",
+      "2026-02-15 | sbs.com.au | Russia claims more territory in Ukraine | Morning News Bulletin 16 February 2026",
+      "2026-02-15 | blayneychronicle.com.au | Embrace autumn : Join local walking groups nationwide"
+    ],
     "countryActionHeadlines": [
+      "2026-02-15 | bworldonline.com | Debt yields slip on policy easing bets - BusinessWorld Online",
+      "2026-02-15 | livemint.com | Wall Street Week Ahead : Market braces for Fed minutes , PCE inflation , Q4 GDP , personal income & spending data",
       "2026-02-15 | taipeitimes.com | EU central bank pushes access to euro",
       "2026-02-15 | castanetkamloops.net | Food inflation expected to jump in January amid tax changes : economists",
       "2026-02-15 | bankingnews.gr | Something is happening with the dollar , the ECB fortifies itself with euro liquidity lines ahead of capital wars with the Federal Reserve",
-      "2026-02-15 | zerohedge.com | The Weak Dollar Narrative",
-      "2026-02-15 | toronto.citynews.ca | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | bnnbloomberg.ca | Food inflation expected to jump in January amid tax changes"
+      "2026-02-15 | zerohedge.com | The Weak Dollar Narrative"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-15 | elciudadano.com | Gold Price Analysis : Economic Insights for 2026",
+      "2026-02-15 | dailypolitical.com | Zambesigold Hits Self Reported Market Cap of $6 . 55 Million ( ZGD )",
+      "2026-02-15 | livemint.com | Wall Street Week Ahead : Market braces for Fed minutes , PCE inflation , Q4 GDP , personal income & spending data",
+      "2026-02-15 | theheraldghana.com | Diversification alone is failing investors , warns deVere"
+    ]
   }
 }
