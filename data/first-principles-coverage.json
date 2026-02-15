@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-15T01:34:57.408Z",
+  "checkedAt": "2026-02-15T03:03:45.354Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-15T01:34:57.334Z",
+  "dataFetchedAt": "2026-02-15T03:03:45.279Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,39 +9,28 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 4,
+    "availableFactors": 7,
     "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate",
-      "VIX Volatility Index"
+      "US Breakeven Inflation 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 0,
-    "countryActionCount": 4,
+    "countryActionCount": 0,
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "usd_index_trade_weighted",
-        "error": "HTTP 504"
-      },
-      {
         "id": "us_breakeven_10y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_fed_funds_effective",
-        "error": "HTTP 502"
-      },
-      {
-        "id": "vix",
         "error": "HTTP 504"
       },
       {
         "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_dollar_yields",
@@ -51,12 +40,13 @@
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Dollar Trade Weighted Index, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, VIX Volatility Index",
+    "Missing required factors: US Breakeven Inflation 10Y",
     "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: usd_index_trade_weighted (HTTP 504); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (HTTP 502); vix (HTTP 504); gdelt_geopolitics (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_breakeven_10y (HTTP 504); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }

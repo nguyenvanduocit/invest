@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T01:35:17.880Z",
+  "generatedAt": "2026-02-15T03:04:06.075Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày. Nhà đầu tư không nên mua đuổi tại vùng giá 181 triệu đồng/lượng này mà chờ đợi信 hiệu ổn định hoặc điều chỉnh về vùng hỗ trợ gần nhất.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và premium đã ở mức cao 14.84%. Nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ cận MA7 (157.3 triệu VND/lượng) hoặc tín hiệu ổn định rõ ràng hơn.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (154.4 triệu đồng/lượng) tới 17%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng trưởng nóng trong 30 ngày qua đạt 9.86%, đi kèm độ biến động ngày cao (2.26%), cho thấy thị trường đang trong trạng thái投 cơ mạnh.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm 4.76% trong 5 ngày xuống mức 1.8% và giá vàng thế giới tăng mạnh 9.83% trong 20 ngày là động lực hỗ trợ xu hướng tăng dài hạn.",
-      "Premium 14.84% hiện tại cao hơn đáng kể so với mức đáy 6.32% (ngày 28/01), cho thấy tâm lý FOMO đang đẩy giá nội địa cao hơn tương đối so với giá thế giới."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 9.86% trong 30 ngày qua, rủi ro mua đỉnh ngắn hạn rất cao.",
+      "Biên độ dao động ngày lên tới 2.26% kết hợp với premium 14.84% cho thấy thị trường đang ở trạng thái quá sốc, dễ xảy ra hồi chỉnh kỹ thuật.",
+      "Lợi suất thực Mỹ (1.8%) và danh nghĩa (4.09%) giảm mạnh 20 ngày qua đã hỗ trợ giá thế giới tăng 9.83%, nhưng dòng tiền này đã phần nào được định giá hết ở phiên hiện tại.",
+      "VIX tăng 31.44% trong 20 ngày cho thấy tâm lý thị trường lo ngại, có thể gây áp lực chốt lời nhanh trên thị trường tài sản rủi ro."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh: Giá hiện cách xa MA7 (157.3 triệu) và MA30 (154.4 triệu), dễ xảy ra hồi phục về giá trị trung bình (mean reversion).",
-      "Dữ liệu vĩ mô thiếu hụt: Không có dữ liệu DXY, VIX và Lạm phát kỳ vọng (missingFactors) làm giảm độ tin cậy trong việc đánh giá động lực tăng giá từ yếu tố vĩ mô.",
-      "Sự kiện chính sách không rõ ràng: Các tiêu đề về ECB (Liên minh Châu Âu) có liên quan gián tiếp nhưng không có tin tức cụ thể về USD/Lãi suất Mỹ hay hành động của Ngân hàng Nhà nước Việt Nam."
+      "Đỉnh percentile 100% cảnh báo xác suất điều chỉnh giảm ngắn hạn lớn hơn khả năng tăng tiếp.",
+      "Biên độ 2.26%/ngày có thể gây thanh khoản gấp (margin call) nếu thị trường đảo chiều bất ngờ.",
+      "Premium 14.84% có nguy cơ co hẹp nếu giá thế giới đi ngang hoặc giảm, làm giảm giá SJC nội địa nhanh hơn giá thế giới."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "30D Change",
+        "key": "SJC Change 30d",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
+        "key": "SJC Daily Volatility",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
+        "key": "Current Premium",
         "value": 14.84,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.8,
+        "key": "MA7 Support Level",
+        "value": 157349914,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.23,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Intl Gold 20D Change",
+        "key": "VIX Change 20d",
+        "value": 31.44,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot Change 20d",
         "value": 9.83,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "MA30 Distance",
-        "value": 17.1,
-        "unit": "%",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T01:34:35.794Z",
+    "latestTimestamp": "2026-02-15T03:03:23.867Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157604089.2712328,
+    "intlVndPerTael": 157604393.96703976,
     "premiumPct": 14.84,
-    "change7dPct": 0.64,
+    "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350538,
-    "ma30VndPerTael": 154444163,
+    "ma7VndPerTael": 157349914,
+    "ma30VndPerTael": 154444018,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,13 +90,10 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T01:34:57.334Z",
+    "fetchedAt": "2026-02-15T03:03:45.279Z",
     "healthy": false,
     "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate",
-      "VIX Volatility Index"
+      "US Breakeven Inflation 10Y"
     ],
     "factors": [
       {
@@ -113,12 +110,12 @@
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 118.2407,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-06",
+        "change1dPct": -0.22,
+        "change5dPct": 0.29,
+        "change20dPct": -1.54,
         "relationToGold": "inverse"
       },
       {
@@ -146,12 +143,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -179,12 +176,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": null,
+        "value": 20.82,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 17.96,
+        "change5dPct": -4.36,
+        "change20dPct": 31.44,
         "relationToGold": "direct"
       }
     ],
@@ -197,12 +194,7 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-15 | freemalaysiatoday.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-15 | 933thedrive.com | Factbox - ECB opens up euro lifeline in bid to boost global role",
-      "2026-02-15 | 933thedrive.com | ECB makes euro backstop global to bolster currency role",
-      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
