@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-15T18:07:25.519Z",
+  "checkedAt": "2026-02-15T19:09:07.750Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-15T18:07:25.442Z",
+  "dataFetchedAt": "2026-02-15T19:09:07.678Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,27 +9,34 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 6,
+    "missingFactors": [
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 4,
-    "countryActionCount": 15,
-    "dollarYieldCount": 0,
+    "geopoliticalCount": 6,
+    "countryActionCount": 12,
+    "dollarYieldCount": 3,
     "sourceFailures": [
       {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "id": "us_real_yield_10y",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "us_breakeven_10y",
+        "error": "HTTP 504"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Real Yield 10Y, US Breakeven Inflation 10Y"
   ],
   "warnings": [
-    "Source failures: gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_real_yield_10y (HTTP 504); us_breakeven_10y (HTTP 504)"
   ],
   "canProceedToIntegration": false
 }

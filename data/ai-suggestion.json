@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T18:09:14.548Z",
+  "generatedAt": "2026-02-15T19:09:35.463Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao 2.26%/ngày, xu hướng tăng mạnh 9.86%/tháng nhưng thanh khoản mua vào lúc này rủi ro cao. Nên chờ hồi điều chỉnh về vùng hỗ trợ MA7 (~157.35 triệu VND/lượng) hoặc ổn định premium dưới 13% trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và dữ liệu vĩ mô thiếu chiều sâu do mất tín hiệu lạm phát kỳ vọng.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày qua - rủi ro mua đỉnh ngắn hạn rất cao.",
-      "Premium 14.85% đang ở vùng cao, từng chạm 18.41% ngày 05/02 và dao động rộng 6.32%-18.41% trong tháng, cho thấy thị trường Việt Nam đang định giá quá nhiệt.",
-      "VIX tăng 31.44% trong 20 ngày (lên 20.82) kết hợp lợi suất thực 10Y giảm 3.23% (xuống 1.8%) hỗ trợ vàng thế giới nhưng USD Index vẫn ở mức cao 118.24.",
-      "Biên độ dao động ngày 2.26% và 4 lần drawdown với mức tồi tệ -41.26% cho thấy rủi ro biến động cực lớn khi mua ở vùng giá hiện tại."
+      "Đà tăng giá SJC 30 ngày qua rất mạnh (+9.86%), giá hiện tại 181 triệu VND/lượng đã vượt xa MA30 (154.4 triệu VND/lượng) khoảng 17.2%.",
+      "Biên độ dao động ngày cao (2.26%) và VIX tăng 31.44% trong 20 ngày cho thấy thị trường đang trong trạng thái投機 (speculative) cực độ, dễ xảy ra biến động ngược.",
+      "Lợi suất trái phiếu Mỹ 10 năm giảm 20 ngày qua (-1.45%) và USD Index giảm (-1.54%) là động lực hỗ trợ giá vàng thế giới tăng 9.83% 20 ngày qua.",
+      "Premium 14.85% là chấp nhận được trong bối cảnh biến động cao, không đạt mức cực đại 18.41% đã thấy ngày 05/02."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu: Mua ở percentile 100% lịch sử, drawdown tồi tệ từng đạt -41.26%, phục hồi trung bình 1369 ngày.",
-      "Premium co hẹp: Nếu giá thế giới giữ nguyên mà premium về mức trung bình 13%, giá SJC có thể giảm ~3%.",
-      "Biến động ngắn hạn: Volatility 2.26%/ngày tương đương ~4 triệu VND/lượng có thể kích stop-loss nhanh."
+      "Mua tại đỉnh giá 5 năm (percentile 100%): Rủi ro điều chỉnh giảm sâu sau đà tăng 9.86%/tháng là rất cao.",
+      "Thiếu dữ liệu Real Yield và Breakeven Inflation khiến việc định giá động lực tăng cơ bản (fundamental) không chính xác.",
+      "Tin tức địa chính trị và chính sách (ECB, Fed) trong dữ liệu đầu vào chủ yếu là nhiễu, không có sự kiện gây sốc trực tiếp để biện minh cho đà tăng tiếp theo."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá SJC hiện tại",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "30d_change",
+        "key": "Tăng trưởng 30 ngày SJC",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "5y_percentile",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 14.85,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 12.09,
-        "unit": "% (6.32-18.41)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "daily_volatility",
+        "key": "Biên độ dao động ngày",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
-        "value": 31.44,
+        "key": "Vị thế percentile 5 năm",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 154444011,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá vàng thế giới XAU/USD",
+        "value": 5032.915,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Tăng trưởng 20 ngày XAU/USD",
+        "value": 9.83,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "VIX Index thay đổi 20 ngày",
+        "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T18:07:10.855Z",
+    "latestTimestamp": "2026-02-15T19:08:53.268Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157599764.46582535,
+    "intlVndPerTael": 157599516.33406052,
     "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157349920,
-    "ma30VndPerTael": 154444019,
+    "ma7VndPerTael": 157349885,
+    "ma30VndPerTael": 154444011,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,9 +90,12 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T18:07:25.442Z",
+    "fetchedAt": "2026-02-15T19:09:07.678Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
@@ -119,23 +122,23 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.8,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": -3.23,
-        "change5dPct": -4.76,
-        "change20dPct": -3.23,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.27,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -0.87,
-        "change5dPct": -2.99,
-        "change20dPct": -0.87,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -192,6 +195,8 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
+      "2026-02-15 | el-balad.com | Olympic Ice Hockey Rules : Are Players Permitted to Fight ?",
+      "2026-02-15 | chicagotribune.com | BP workers picket Whiting refinery on contract , AI concerns",
       "2026-02-15 | canoncitydailyrecord.com | Today in History : February 15 , USS Maine explodes in Havana Harbor",
       "2026-02-15 | dailypioneer.com | A concept of  good  freebies | Daily Pioneer",
       "2026-02-15 | prokerala.com | Pakistan dependency on military deployment fails to address root causes of 77 - year Balochistan crisis : Report",
@@ -205,6 +210,9 @@
       "2026-02-15 | toronto.citynews.ca | Food inflation expected to jump in January amid tax changes : economists",
       "2026-02-15 | bnnbloomberg.ca | Food inflation expected to jump in January amid tax changes"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-15 | washingtonexaminer.com | Dollar dominance , if you can keep it",
+      "2026-02-15 | business-standard.com | Silver , gold braces for another jittery week on US inflation data : Analysts"
+    ]
   }
 }
