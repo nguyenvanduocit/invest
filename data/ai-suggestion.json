@@ -1,78 +1,84 @@
 {
-  "generatedAt": "2026-02-15T14:10:11.012Z",
+  "generatedAt": "2026-02-15T15:07:08.444Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng +9.86%/tháng, tạo rủi ro điều chỉnh kỹ thuật ngắn hạn cao. Dù vĩ mô hỗ trợ (lợi suất thực giảm, VIX tăng), nhưng biên an toàn mua vào hiện tại rất thấp.",
+    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 9.86% trong 30 ngày qua, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật khiến việc mua đuổi tại mức giá 181 triệu/lượng là rủi ro.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang vượt xa MA30 (154,444,123 VND/lượng) tới 17.2%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
-      "Vĩ mô hỗ trợ: Lợi suất thực Mỹ 10Y giảm mạnh 20 ngày qua (-3.23%) và VIX tăng 31.44% cho thấy tâm lý避 hiểm (risk-off) đang hiện hữu.",
-      "Premium 14.85% nằm trong biên dao động 30 ngày (9.9% - 18.41%), không cảnh báo bất thường nhưng cho thấy giá Việt Nam đã định giá đầy đủ đà tăng thế giới."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày và cao hơn MA30 (154.4 triệu/lượng) tới 17.2%.",
+      "Động lượng tăng được hỗ trợ bởi vĩ mô: Lợi suất thực Mỹ 10N giảm 3.23% và VIX tăng 31.44% trong 20 ngày qua, thúc đẩy dòng tiền vào kênh trú ẩn.",
+      "Premium 14.85% đang ổn định trong biên độ dao động 6-18% của chuỗi 30 ngày, không có dấu hiệu bong bóng địa phương cực đoan."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Rủi ro điều chỉnh giá cao khi percentile 5Y đạt 100% và giá thế giới đã tăng gần 10% trong 20 ngày qua.",
-      "Biến động cao: Volatility 2.26%/ngày và drawdown tồi tệ nhất 41.26% cho thấy tài khoản có thể sụt giảm nhanh chóng nếu thị trường đảo chiều.",
-      "Dữ liệu Fed Funds Rate bị thiếu, hạn chế khả năng đánh giá chính xác xu hướng lãi suất ngắn hạn."
+      "Rủi ro điều chỉnh kỹ thuật cao khi thị trường đã tăng liên tục và giá hiện tại cách xa MA7 (157.3 triệu/lượng).",
+      "Biên độ dao động ngày lớn (2.26%) cộng với VIX ở mức 20.82 có thể gây sốc giá ngắn hạn cho nhà đầu tư dùng đòn bẩy.",
+      "Dữ liệu sự kiện vĩ mô (ECB, Trump) độ liên quan thấp với giá vàng trực tiếp, có thể gây nhiễu thị trường."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Độ lệch giá so với MA30",
-        "value": 17.17,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 năm",
+        "key": "Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y (20 ngày)",
+        "key": "Change 30d",
+        "value": 9.86,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium vs World",
+        "value": 14.85,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 Price",
+        "value": 154444055,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
         "value": -3.23,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "VIX Index (20 ngày)",
+        "key": "VIX Change 20d",
         "value": 31.44,
-        "unit": "% thay đổi",
-        "source": "macro_context"
-      },
-      {
-        "key": "Giá vàng thế giới (20 ngày)",
-        "value": 9.83,
-        "unit": "% thay đổi",
-        "source": "macro_context"
-      },
-      {
-        "key": "Premium trung bình 30 ngày",
-        "value": 13.82,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "World Gold Price",
+        "value": 5043.09,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T14:08:55.397Z",
+    "latestTimestamp": "2026-02-15T15:06:33.261Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157602863.6128176,
+    "intlVndPerTael": 157600849.18289807,
     "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350363,
-    "ma30VndPerTael": 154444123,
+    "ma7VndPerTael": 157350075,
+    "ma30VndPerTael": 154444055,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,11 +89,9 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T14:09:16.781Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate"
-    ],
+    "fetchedAt": "2026-02-15T15:06:49.351Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
@@ -136,12 +140,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -187,20 +191,20 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts"
+      "2026-02-15 | pilotonline.com | Today in History : February 15 , USS Maine explodes in Havana Harbor",
+      "2026-02-15 | theguardian.com | Readers reply : can you acquire courage ?",
+      "2026-02-15 | independentnews.com | Welcome to Trump World / Trump : The Midas Touch ?"
     ],
     "countryActionHeadlines": [
+      "2026-02-15 | dominicantoday.com | Is the dollar rising or falling ? What it means for your wallet",
+      "2026-02-15 | thestar.com.my | Gold rises over 2 % at the weekend as soft inflation data rekindles Fed rate - cut hopes",
       "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts",
       "2026-02-15 | stcatharinesstandard.ca | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | winnipegfreepress.com | Food inflation expected to jump in January amid tax changes : economists – Winnipeg Free Press",
-      "2026-02-15 | businesstimes.com.sg | India central bank allows lenders to fund up to 75 % in M & A deals",
-      "2026-02-15 | livemint.com | India forex reserves drop $6 . 7 billion to $717 billion , gold reserves dip , reveals RBI data",
-      "2026-02-15 | zeenews.india.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
+      "2026-02-15 | winnipegfreepress.com | Food inflation expected to jump in January amid tax changes : economists – Winnipeg Free Press"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts",
-      "2026-02-15 | livemint.com | Gold rate in India may crash below ₹1 lakh , COMEX gold price to touch $3 , 000 / oz after this reported Russian move",
-      "2026-02-15 | zeenews.india.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
+      "2026-02-15 | thestar.com.my | Gold rises over 2 % at the weekend as soft inflation data rekindles Fed rate - cut hopes",
+      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts"
     ]
   }
 }
