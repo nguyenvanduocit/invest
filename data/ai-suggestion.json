@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T17:07:59.449Z",
+  "generatedAt": "2026-02-15T18:09:14.548Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và VIX tăng vọt 31.44%. Nhà đầu tư không nên mua đuổi ở mức giá 181 triệu/lượng mà chờ tín hiệu ổn định hoặc hồi về vùng hỗ trợ gần MA7 (~157 triệu VND/lượng theo giá thế giới).",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao 2.26%/ngày, xu hướng tăng mạnh 9.86%/tháng nhưng thanh khoản mua vào lúc này rủi ro cao. Nên chờ hồi điều chỉnh về vùng hỗ trợ MA7 (~157.35 triệu VND/lượng) hoặc ổn định premium dưới 13% trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC đang ở mức cao nhất lịch sử 5 năm (percentile 100) tại 181,000,000 VND/lượng, rủi ro mua đuổi là rất lớn.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 4.76% trong 5 ngày xuống 1.8%, tạo nền tảng hỗ trợ vĩ mô cho giá vàng thế giới tiếp tục tăng.",
-      "Biên độ dao động ngày cao (2.26%) kết hợp với VIX tăng 31.44% trong 20 ngày cho thấy thị trường đang bất ổn, dễ xảy ra biến động hai chiều mạnh.",
-      "Premium 14.85% đang ở mức trung bình so với các đợt cao điểm trước đó (như 18.41% ngày 05/02), chưa có dấu hiệu投机 cực đoan nhưng cũng không hấp dẫn để nhập hàng mới."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày qua - rủi ro mua đỉnh ngắn hạn rất cao.",
+      "Premium 14.85% đang ở vùng cao, từng chạm 18.41% ngày 05/02 và dao động rộng 6.32%-18.41% trong tháng, cho thấy thị trường Việt Nam đang định giá quá nhiệt.",
+      "VIX tăng 31.44% trong 20 ngày (lên 20.82) kết hợp lợi suất thực 10Y giảm 3.23% (xuống 1.8%) hỗ trợ vàng thế giới nhưng USD Index vẫn ở mức cao 118.24.",
+      "Biên độ dao động ngày 2.26% và 4 lần drawdown với mức tồi tệ -41.26% cho thấy rủi ro biến động cực lớn khi mua ở vùng giá hiện tại."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn (take-profit) rất cao khi giá đã tăng liên tục 9.86% trong 30 ngày qua.",
-      "Thanh khoản có thể giảm nếu giá đi ngang hoặc điều chỉnh nhẹ, gây khó khăn cho việc thoát hàng nhanh.",
-      "Dữ liệu tin tức vĩ mô (ECB, địa chính trị) trong input chủ yếu là nhiễu, thiếu sự kiện trọng điểm trực tiếp tác động giá vàng, làm giảm độ tin cậy dự báo."
+      "Rủi ro điều chỉnh sâu: Mua ở percentile 100% lịch sử, drawdown tồi tệ từng đạt -41.26%, phục hồi trung bình 1369 ngày.",
+      "Premium co hẹp: Nếu giá thế giới giữ nguyên mà premium về mức trung bình 13%, giá SJC có thể giảm ~3%.",
+      "Biến động ngắn hạn: Volatility 2.26%/ngày tương đương ~4 triệu VND/lượng có thể kích stop-loss nhanh."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
-        "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "30-Day Change",
+        "key": "30d_change",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
+        "key": "5y_percentile",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
+        "value": 14.85,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 12.09,
+        "unit": "% (6.32-18.41)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "daily_volatility",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Real Yield 5d Change",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX 20d Change",
+        "key": "vix_20d_change",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 14.85,
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T17:07:22.804Z",
+    "latestTimestamp": "2026-02-15T18:07:10.855Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157603690.8228699,
+    "intlVndPerTael": 157599764.46582535,
     "premiumPct": 14.85,
-    "change7dPct": 0.64,
+    "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350481,
-    "ma30VndPerTael": 154444150,
+    "ma7VndPerTael": 157349920,
+    "ma30VndPerTael": 154444019,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T17:07:36.381Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-15T18:07:25.442Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -192,23 +192,19 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | southwalesargus.co.uk | No one else does biscuits like Burtons factory in Cwmbran",
-      "2026-02-15 | tvguide.co.uk | Death Coast",
-      "2026-02-15 | slashfilm.com | Genosha Genocide In X - Men  97 Was Much More Than Just A Shocking Plot Turn"
+      "2026-02-15 | canoncitydailyrecord.com | Today in History : February 15 , USS Maine explodes in Havana Harbor",
+      "2026-02-15 | dailypioneer.com | A concept of  good  freebies | Daily Pioneer",
+      "2026-02-15 | prokerala.com | Pakistan dependency on military deployment fails to address root causes of 77 - year Balochistan crisis : Report",
+      "2026-02-15 | eptrail.com | Today in History : February 15 , USS Maine explodes in Havana Harbor"
     ],
     "countryActionHeadlines": [
+      "2026-02-15 | taipeitimes.com | EU central bank pushes access to euro",
+      "2026-02-15 | castanetkamloops.net | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | bankingnews.gr | Something is happening with the dollar , the ECB fortifies itself with euro liquidity lines ahead of capital wars with the Federal Reserve",
       "2026-02-15 | zerohedge.com | The Weak Dollar Narrative",
       "2026-02-15 | toronto.citynews.ca | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | bnnbloomberg.ca | Food inflation expected to jump in January amid tax changes",
-      "2026-02-15 | business-standard.com | Silver , gold braces for another jittery week on US inflation data : Analysts",
-      "2026-02-15 | wellandtribune.ca | Food inflation expected to jump in January amid tax changes : economists",
-      "2026-02-15 | fool.com | Forget Tariffs ! Earnings Quality Is a Far More Sinister Worry for Wall Street ."
+      "2026-02-15 | bnnbloomberg.ca | Food inflation expected to jump in January amid tax changes"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-15 | washingtonexaminer.com | Dollar dominance , if you can keep it",
-      "2026-02-15 | business-standard.com | Silver , gold braces for another jittery week on US inflation data : Analysts",
-      "2026-02-15 | timesofindia.indiatimes.com | Gold , Silver likely to consolidate in coming week amid Fed rate - cut uncertainty : Analysts",
-      "2026-02-15 | finance.yahoo.com | Warren Buffett once said this US investment was  terrible long - term . Now he has $381 billion of it . Should you get in ?"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
