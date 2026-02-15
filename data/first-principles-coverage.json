@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-15T13:19:15.669Z",
+  "checkedAt": "2026-02-15T14:09:16.858Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-15T13:19:15.594Z",
+  "dataFetchedAt": "2026-02-15T14:09:16.781Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,18 +9,29 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 7,
+    "missingFactors": [
+      "US Effective Fed Funds Rate"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 5,
-    "countryActionCount": 7,
-    "dollarYieldCount": 8,
-    "sourceFailures": [],
-    "healthy": true
+    "countryActionCount": 13,
+    "dollarYieldCount": 4,
+    "sourceFailures": [
+      {
+        "id": "us_fed_funds_effective",
+        "error": "The operation timed out."
+      }
+    ],
+    "healthy": false
   },
-  "hardFailures": [],
-  "warnings": [],
-  "canProceedToIntegration": true
+  "hardFailures": [
+    "Missing required factors: US Effective Fed Funds Rate"
+  ],
+  "warnings": [
+    "Source failures: us_fed_funds_effective (The operation timed out.)"
+  ],
+  "canProceedToIntegration": false
 }

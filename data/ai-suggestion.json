@@ -1,84 +1,78 @@
 {
-  "generatedAt": "2026-02-15T13:19:58.756Z",
+  "generatedAt": "2026-02-15T14:10:11.012Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC 181 triệu đồng/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86% trong 30 ngày, nhưng thanh khoản cao và biến động 2.26%/ngày cảnh báo rủi ro điều chỉnh ngắn hạn cho người mua đuổi.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng +9.86%/tháng, tạo rủi ro điều chỉnh kỹ thuật ngắn hạn cao. Dù vĩ mô hỗ trợ (lợi suất thực giảm, VIX tăng), nhưng biên an toàn mua vào hiện tại rất thấp.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 9.86% sau 30 ngày và vượt xa MA30 (154,444,054 VND/lượng), cho thấy động lượng tăng rất mạnh nhưng đã quá mua.",
-      "Lợi suất thực Mỹ 10Y giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày lên 20.82 điểm là động lực hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày qua.",
-      "Premium 14.85% hiện tại cao hơn đáng kể so với mức đáy 6.32% (ngày 28/01) nhưng thấp hơn đỉnh 18.41% (ngày 05/02), cho thấy giá nội địa đã định giá phần lớn đà tăng của giá thế giới."
+      "Giá SJC 181,000,000 VND/lượng đang vượt xa MA30 (154,444,123 VND/lượng) tới 17.2%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
+      "Vĩ mô hỗ trợ: Lợi suất thực Mỹ 10Y giảm mạnh 20 ngày qua (-3.23%) và VIX tăng 31.44% cho thấy tâm lý避 hiểm (risk-off) đang hiện hữu.",
+      "Premium 14.85% nằm trong biên dao động 30 ngày (9.9% - 18.41%), không cảnh báo bất thường nhưng cho thấy giá Việt Nam đã định giá đầy đủ đà tăng thế giới."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở percentile 100% trong 5 năm và biến động ngày lên tới 2.26%.",
-      "Premium có thể giảm nếu giá thế giới đi ngang hoặc điều chỉnh, làm giảm hiệu quả đầu tư so với vàng thế giới.",
-      "Dữ liệu sự kiện vĩ mô (ECB, Olympic) độ liên quan thấp, có thể là nhiễu làm giảm độ tin cậy của dự báo."
+      "Mua đỉnh lịch sử: Rủi ro điều chỉnh giá cao khi percentile 5Y đạt 100% và giá thế giới đã tăng gần 10% trong 20 ngày qua.",
+      "Biến động cao: Volatility 2.26%/ngày và drawdown tồi tệ nhất 41.26% cho thấy tài khoản có thể sụt giảm nhanh chóng nếu thị trường đảo chiều.",
+      "Dữ liệu Fed Funds Rate bị thiếu, hạn chế khả năng đánh giá chính xác xu hướng lãi suất ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 30d",
-        "value": 9.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price Latest",
+        "key": "Giá SJC hiện tại",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 VND",
-        "value": 154444054,
-        "unit": "VND/lượng",
+        "key": "Độ lệch giá so với MA30",
+        "value": 17.17,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
+        "key": "Percentile 5 năm",
+        "value": 100,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "Lợi suất thực Mỹ 10Y (20 ngày)",
+        "value": -3.23,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "VIX Index (20 ngày)",
         "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
+        "unit": "% thay đổi",
+        "source": "macro_context"
       },
       {
-        "key": "Premium Range 30d Low",
-        "value": 6.32,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "Giá vàng thế giới (20 ngày)",
+        "value": 9.83,
+        "unit": "% thay đổi",
+        "source": "macro_context"
       },
       {
-        "key": "Premium Range 30d High",
-        "value": 18.41,
+        "key": "Premium trung bình 30 ngày",
+        "value": 13.82,
         "unit": "%",
         "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T13:19:09.888Z",
+    "latestTimestamp": "2026-02-15T14:08:55.397Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157600793.86889005,
+    "intlVndPerTael": 157602863.6128176,
     "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350067,
-    "ma30VndPerTael": 154444054,
+    "ma7VndPerTael": 157350363,
+    "ma30VndPerTael": 154444123,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,9 +83,11 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T13:19:15.594Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-15T14:09:16.781Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Effective Fed Funds Rate"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
@@ -140,12 +136,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -191,26 +187,20 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | thestar.com.my | Gu Ailing  bummed  about FIS training schedule after reaching Olympic big air final",
-      "2026-02-14 | thetimes.com | Why Russia uses poison to silence enemies like Alexei Navalny",
-      "2026-02-14 | nytimes.com | One day later , Canada and Sweden Olympic curling beef is still simmering",
-      "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
-      "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
+      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts"
     ],
     "countryActionHeadlines": [
-      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data"
+      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts",
+      "2026-02-15 | stcatharinesstandard.ca | Food inflation expected to jump in January amid tax changes : economists",
+      "2026-02-15 | winnipegfreepress.com | Food inflation expected to jump in January amid tax changes : economists – Winnipeg Free Press",
+      "2026-02-15 | businesstimes.com.sg | India central bank allows lenders to fund up to 75 % in M & A deals",
+      "2026-02-15 | livemint.com | India forex reserves drop $6 . 7 billion to $717 billion , gold reserves dip , reveals RBI data",
+      "2026-02-15 | zeenews.india.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
-      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
+      "2026-02-15 | thehindubusinessline.com | Silver , gold braces for another jittery week on US inflation data , Fed cues : Analysts",
+      "2026-02-15 | livemint.com | Gold rate in India may crash below ₹1 lakh , COMEX gold price to touch $3 , 000 / oz after this reported Russian move",
+      "2026-02-15 | zeenews.india.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
     ]
   }
 }
