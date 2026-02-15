@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-14T23:06:34.892Z",
+  "generatedAt": "2026-02-15T00:22:20.451Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.22%/ngày và giá đã vượt xa MA30 (154.6 triệu/lượng).",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và các yếu tố vĩ mô cốt lõi (USD, Lợi suất thực) đang thiếu dữ liệu để xác nhận xu hướng.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.86% sau 30 ngày nhưng thanh khoản thấp khiến việc mua đuổi rủi ro cao.",
-      "Động lượng vĩ mô hỗ trợ vàng khi lợi suất thực Mỹ (US Real Yield 10Y) giảm sâu 4.76% trong 5 ngày xuống mức 1.8%, áp dụng áp lực lên USD và hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày.",
-      "Biên độ dao động ngày (volatility) lên đến 2.22% kết hợp với mức giá cách xa MA30 (154.6 triệu/lượng) hơn 26 triệu đồng cho thấy thị trường đang quá mua và dễ bị chốt lời ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày qua.",
+      "Động lượng tăng được hỗ trợ bởi lo ngại rủi ro toàn cầu khi VIX tăng 31.44% trong 20 ngày và lợi suất Trái phiếu Mỹ 10N giảm 1.45%.",
+      "Biên độ dao động ngày cao (2.26%) và giá hiện tại vượt xa MA30 (154.4 triệu VND/lượng) cảnh báo thị trường đang quá mua."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá mạnh từ vùng đỉnh lịch sử khi động lượng tăng chậm lại, giá có thể hồi về vùng MA7 (157.5 triệu/lượng).",
-      "Biên độ dao động 2.22%/ngày rất lớn, nhà đầu tư mua lúc cao điểm 181 triệu có thể chịu lỗ floating nặng ngay trong ngắn hạn.",
-      "Dữ liệu VIX (chỉ số sợ hãi) bị thiếu và các tiêu đề tin tức không có dữ liệu địa chính trị/dollar cụ thể, làm giảm độ tin cậy của tín hiệu xu hướng."
+      "Thị trường quá mua ở đỉnh lịch sử, rủi ro chốt lời ngắn hạn cao nếu động lực mua yếu đi.",
+      "Dữ liệu vĩ mô Mỹ (DXY, Fed Funds) bị thiếu, không thể đánh giá đầy đủ áp lực từ đồng USD và lãi suất thực.",
+      "Premium 14.85% cao hơn đáng kể so với mức thấp nhất 6.32% trong chuỗi dữ liệu, có thể thu hẹp lại nếu giá thế giới điều chỉnh."
     ],
     "evidence": [
       {
-        "key": "SJC Price (Latest)",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 Year",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30 Days",
+        "key": "SJC Change 30d",
         "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y (Change 5d)",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Change 20d",
-        "value": 9.83,
+        "key": "VIX Change 20d",
+        "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
         "key": "Daily Volatility",
-        "value": 2.22,
-        "unit": "%",
+        "value": 2.26,
+        "unit": "%/day",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 VND",
-        "value": 154577763,
-        "unit": "VND/lượng",
+        "key": "Current Premium vs Monthly Low",
+        "value": 8.53,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "US Treasury 10Y Change 20d",
+        "value": -1.45,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Price vs MA30",
+        "value": 26.56,
+        "unit": "million VND/tael",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-14T23:05:55.000Z",
+    "latestTimestamp": "2026-02-15T00:21:51.149Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157739034.00303248,
-    "premiumPct": 14.75,
+    "intlVndPerTael": 157599761.34074017,
+    "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
-    "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157486495,
-    "ma30VndPerTael": 154577763,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 157349920,
+    "ma30VndPerTael": 154444019,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,10 +83,13 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-14T23:06:16.271Z",
+    "fetchedAt": "2026-02-15T00:22:03.252Z",
     "healthy": false,
     "missingFactors": [
-      "VIX Volatility Index"
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y",
+      "US Effective Fed Funds Rate"
     ],
     "factors": [
       {
@@ -103,45 +106,45 @@
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 118.2407,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-06",
-        "change1dPct": -0.22,
-        "change5dPct": 0.29,
-        "change20dPct": -1.54,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.8,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": -3.23,
-        "change5dPct": -4.76,
-        "change20dPct": -3.23,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.27,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -0.87,
-        "change5dPct": -2.99,
-        "change20dPct": -0.87,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -169,12 +172,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": null,
+        "value": 20.82,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 17.96,
+        "change5dPct": -4.36,
+        "change20dPct": 31.44,
         "relationToGold": "direct"
       }
     ],
@@ -186,8 +189,21 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-15 | whatech.com | Spring Fair at VEC Marks Vietnam Most Ambitious Showcase Yet",
+      "2026-02-15 | gna.org.gh | Indian community opens Sikh temple in Accra | Ghana News Agency",
+      "2026-02-15 | island.lk | Nestomalt Wellness run 2026",
+      "2026-02-15 | goskagit.com | Eileen Gu says she disappointed she cant get help with her packed Olympic schedule",
+      "2026-02-15 | medafricatimes.com | AU Executive Council Concludes 48th Session with Renewed Push for Unity and Development – Medafrica Times",
+      "2026-02-15 | theage.com.au | Hobbies : Can they change your life ?"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role"
+    ],
     "dollarYieldHeadlines": []
   }
 }
