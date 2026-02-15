@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T19:09:35.463Z",
+  "generatedAt": "2026-02-15T20:08:40.552Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.26%/ngày và dữ liệu vĩ mô thiếu chiều sâu do mất tín hiệu lạm phát kỳ vọng.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 30 ngày (+9.74%), xu hướng tăng mạnh nhưng cần thận trọng rủi ro điều chỉnh ngắn hạn khi VIX tăng vọt.",
     "reasons": [
-      "Đà tăng giá SJC 30 ngày qua rất mạnh (+9.86%), giá hiện tại 181 triệu VND/lượng đã vượt xa MA30 (154.4 triệu VND/lượng) khoảng 17.2%.",
-      "Biên độ dao động ngày cao (2.26%) và VIX tăng 31.44% trong 20 ngày cho thấy thị trường đang trong trạng thái投機 (speculative) cực độ, dễ xảy ra biến động ngược.",
-      "Lợi suất trái phiếu Mỹ 10 năm giảm 20 ngày qua (-1.45%) và USD Index giảm (-1.54%) là động lực hỗ trợ giá vàng thế giới tăng 9.83% 20 ngày qua.",
-      "Premium 14.85% là chấp nhận được trong bối cảnh biến động cao, không đạt mức cực đại 18.41% đã thấy ngày 05/02."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.74% trong 30 ngày qua - động lượng tăng quá nhanh cần cảnh giác.",
+      "VIX tăng vọt 31.44% trong 20 ngày lên mức 20.82 cho thấy lo ngại rủi ro thị trường tăng cao, thường đi kèm biến động giá vàng lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày xuống 1.8% và USD Index giảm 1.54% trong 20 ngày - hỗ trợ xu hướng tăng giá vàng thế giới.",
+      "Premium 14.85% nằm trong biên dao động 6.32%-18.41% của 30 ngày qua, không cực đoan nhưng cho thấy giá Việt Nam đắt hơn thế giới đáng kể."
     ],
     "risks": [
-      "Mua tại đỉnh giá 5 năm (percentile 100%): Rủi ro điều chỉnh giảm sâu sau đà tăng 9.86%/tháng là rất cao.",
-      "Thiếu dữ liệu Real Yield và Breakeven Inflation khiến việc định giá động lực tăng cơ bản (fundamental) không chính xác.",
-      "Tin tức địa chính trị và chính sách (ECB, Fed) trong dữ liệu đầu vào chủ yếu là nhiễu, không có sự kiện gây sốc trực tiếp để biện minh cho đà tăng tiếp theo."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở vùng quá mua (percentile 100%), biến động ngày 2.22% có thể gây thua lỗ ngắn hạn.",
+      "Giá thế giới (5,043 USD/oz) cách xa MA7 (5,029 USD/oz) không đáng kể nhưng đã tăng liên tục, dễ chịu áp lực chốt lời.",
+      "Dữ liệu vĩ mô thiếu cập nhật (USD Index ngày 06/02, lợi suất ngày 12/02) có thể không phản ánh đúng bối cảnh hiện tại."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Tăng trưởng 30 ngày SJC",
-        "value": 9.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biên độ dao động ngày",
-        "value": 2.26,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Vị thế percentile 5 năm",
+        "key": "5y_percentile",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 SJC",
-        "value": 154444011,
-        "unit": "VND/lượng",
+        "key": "change_30d",
+        "value": 9.74,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới XAU/USD",
-        "value": 5032.915,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "volatility_daily",
+        "value": 2.22,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "Tăng trưởng 20 ngày XAU/USD",
-        "value": 9.83,
+        "key": "premium_current",
+        "value": 14.85,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change_20d",
+        "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index thay đổi 20 ngày",
-        "value": 31.44,
+        "key": "us_real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "usd_index_change_20d",
+        "value": -1.54,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T19:08:53.268Z",
+    "latestTimestamp": "2026-02-15T20:04:58.781Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157599516.33406052,
+    "intlVndPerTael": 157601590.76561588,
     "premiumPct": 14.85,
-    "change7dPct": 0.63,
-    "change30dPct": 9.86,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157349885,
-    "ma30VndPerTael": 154444011,
+    "change7dPct": -0.62,
+    "change30dPct": 9.74,
+    "volatilityDailyPct": 2.22,
+    "ma7VndPerTael": 157209940,
+    "ma30VndPerTael": 154910654,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,12 +90,9 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T19:09:07.678Z",
+    "fetchedAt": "2026-02-15T20:05:20.170Z",
     "healthy": false,
-    "missingFactors": [
-      "US Real Yield 10Y",
-      "US Breakeven Inflation 10Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
@@ -122,23 +119,23 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.8,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -3.23,
+        "change5dPct": -4.76,
+        "change20dPct": -3.23,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.27,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-13",
+        "change1dPct": -0.87,
+        "change5dPct": -2.99,
+        "change20dPct": -0.87,
         "relationToGold": "direct"
       },
       {
@@ -194,14 +191,7 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-15 | el-balad.com | Olympic Ice Hockey Rules : Are Players Permitted to Fight ?",
-      "2026-02-15 | chicagotribune.com | BP workers picket Whiting refinery on contract , AI concerns",
-      "2026-02-15 | canoncitydailyrecord.com | Today in History : February 15 , USS Maine explodes in Havana Harbor",
-      "2026-02-15 | dailypioneer.com | A concept of  good  freebies | Daily Pioneer",
-      "2026-02-15 | prokerala.com | Pakistan dependency on military deployment fails to address root causes of 77 - year Balochistan crisis : Report",
-      "2026-02-15 | eptrail.com | Today in History : February 15 , USS Maine explodes in Havana Harbor"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
       "2026-02-15 | taipeitimes.com | EU central bank pushes access to euro",
       "2026-02-15 | castanetkamloops.net | Food inflation expected to jump in January amid tax changes : economists",
@@ -210,9 +200,6 @@
       "2026-02-15 | toronto.citynews.ca | Food inflation expected to jump in January amid tax changes : economists",
       "2026-02-15 | bnnbloomberg.ca | Food inflation expected to jump in January amid tax changes"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-15 | washingtonexaminer.com | Dollar dominance , if you can keep it",
-      "2026-02-15 | business-standard.com | Silver , gold braces for another jittery week on US inflation data : Analysts"
-    ]
+    "dollarYieldHeadlines": []
   }
 }

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-15T19:09:07.750Z",
+  "checkedAt": "2026-02-15T20:05:20.248Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-15T19:09:07.678Z",
+  "dataFetchedAt": "2026-02-15T20:05:20.170Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,34 +9,32 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 6,
-    "missingFactors": [
-      "US Real Yield 10Y",
-      "US Breakeven Inflation 10Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
-    "countryActionCount": 12,
-    "dollarYieldCount": 3,
+    "geopoliticalCount": 0,
+    "countryActionCount": 11,
+    "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "us_real_yield_10y",
-        "error": "HTTP 504"
+        "id": "gdelt_geopolitics",
+        "error": "The operation timed out."
       },
       {
-        "id": "us_breakeven_10y",
-        "error": "HTTP 504"
+        "id": "gdelt_dollar_yields",
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Real Yield 10Y, US Breakeven Inflation 10Y"
+    "Not enough geopolitical events (0/3)",
+    "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_real_yield_10y (HTTP 504); us_breakeven_10y (HTTP 504)"
+    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
