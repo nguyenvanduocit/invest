@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T04:40:20.136Z",
+  "generatedAt": "2026-02-15T05:28:14.488Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.86% trong 30 ngày qua, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư nên chờ đợi điểm nhập khẩu an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.86%/tháng, nhưng thanh toán rủi ro cao do VIX tăng vọt +31.44% và giá đã xa MA30. Nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~157.3 triệu VND/lượng) hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 9.86% trong 30 ngày và cao hơn MA30 (154.4 triệu VND/lượng) tới 17.2%, báo hiệu vùng quá mua kỹ thuật.",
-      "Lợi suất thực Mỹ 10 năm giảm 3.23% xuống 1.8% và VIX tăng 31.44% trong 20 ngày là động lực vĩ mô tích cực hỗ trợ giá vàng thế giới tăng 9.83% trong 20 ngày qua.",
-      "Premium 14.85% nằm trong biên dao động 30 ngày (6.32%-18.41%), không cực đoan nhưng cho thấy thị trường Việt Nam đã định giá đầy đủ đà tăng của giá thế giới."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng +9.86% sau 30 ngày và nằm xa MA30 (154.4 triệu VND/lượng) 16.5 triệu VND.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh -4.76% trong 5 ngày xuống 1.8%, tạo động lực hỗ trợ giá vàng thế giới tăng +9.83% trong 20 ngày qua.",
+      "VIX tăng vọt +31.44% trong 20 ngày lên mức 20.82, phản ánh lo ngại thị trường nhưng có thể gây áp lực chốt lời thanh khoản trên tài sản rủi ro.",
+      "Premium 14.85% nằm trong biên dao động 30 ngày (6.32%-18.41%), không cực đoan nhưng biến động giá SJC 2.26%/ngày khiến rủi ro mua đuôi cao."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá vượt xa MA7 (157.3 triệu VND/lượng) và biến động ngày ở mức 2.26%.",
-      "VIX tăng đột biến 17.96% trong 1 ngày có thể báo hiệu bất ổn thị trường tài chính ngắn hạn, gây áp lực chốt lời trên tài sản rủi ro.",
-      "Dữ liệu sự kiện địa chính trị không đủ liên quan (nhiễu), giảm độ tin cậy của các yếu tố hỗ trợ tăng giá dài hạn."
+      "Mua đỉnh lịch sử: Rủi ro điều chỉnh sâu khi giá đã tăng gần 10%/tháng và cách xa đường MA7.",
+      "Biến động cao: Dao động 2.26%/ngày tương đương ~4 triệu VND/lượng có thể kích stop-loss nhanh.",
+      "Thanh khoản rủi ro: VIX tăng +31.44% có thể gây đợt bán tháo tài sản nếu thị trường tài chính căng thẳng."
     ],
     "evidence": [
       {
@@ -26,32 +27,26 @@
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_pct",
-        "value": 9.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
         "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_pct",
-        "value": 14.85,
+        "key": "change30d_pct",
+        "value": 9.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "ma30_vnd",
-        "value": 154444093,
+        "value": 154444039,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
-        "value": -3.23,
+        "key": "us_real_yield_10y_change5d",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -62,23 +57,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_change20d",
-        "value": 9.83,
+        "key": "premium_pct",
+        "value": 14.85,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.26,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T04:39:42.982Z",
+    "latestTimestamp": "2026-02-15T05:27:43.645Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157601984.83885953,
+    "intlVndPerTael": 157600354.48191097,
     "premiumPct": 14.85,
     "change7dPct": 0.63,
     "change30dPct": 9.86,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157350237,
-    "ma30VndPerTael": 154444093,
+    "ma7VndPerTael": 157350004,
+    "ma30VndPerTael": 154444039,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T04:40:00.558Z",
+    "fetchedAt": "2026-02-15T05:27:56.484Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,24 +192,24 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | kimt.com | The shocking , rule - breaking new move in pro wrestling : getting specific about politics",
-      "2026-02-15 | artdaily.com | Artdaily - The First Art Newspaper on the Net"
+      "2026-02-15 | dorsetecho.co.uk | HMP Dorchester history – executions , hangings & grisly past",
+      "2026-02-15 | irishtimes.com | Author Ian McGuire :  Historical fiction is able to encourage the longer view  – The Irish Times"
     ],
     "countryActionHeadlines": [
-      "2026-02-15 | heraldglobe.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | cambodiantimes.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | pakistantelegraph.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | milwaukeesun.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | orlandoecho.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | indianexpress.com | As US reportedly weighs scaling back steel and aluminium tariffs , a look at who really foots the bill"
+      "2026-02-15 | timesofoman.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | finance.yahoo.com | Stocks Settle Slightly Higher as Bond Yields Fall",
+      "2026-02-15 | news.webindia123.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | greekherald.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | aninews.in | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | sanantoniopost.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-15 | heraldglobe.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | cambodiantimes.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | pakistantelegraph.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | milwaukeesun.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | orlandoecho.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
-      "2026-02-15 | moneycontrol.com | India forex reserves slip to $717 billion ; gold takes the hit as RBI data flags a sharp drop"
+      "2026-02-15 | timesofoman.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | news.webindia123.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | greekherald.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | aninews.in | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | sanantoniopost.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1",
+      "2026-02-15 | heraldglobe.com | India forex reserves drop $6 . 7 billion from record high to $717 . 1"
     ]
   }
 }
