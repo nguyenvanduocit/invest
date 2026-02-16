@@ -1,85 +1,79 @@
 {
-  "generatedAt": "2026-02-16T13:30:06.276Z",
+  "generatedAt": "2026-02-16T14:20:00.191Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua +8.78%, nhưng động lượng đang yếu lại (-1.5% tuần qua) amid thanh khoản thấp dịp Tết; chờ hồi về vùng MA7 ~156.3 triệu/lượng hoặc xác nhận phá đỉnh mới mua.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.27%/ngày, đòi hỏi nhà đầu tư chờ xác nhận kỹ thuật thay vì đu đỉnh. Dòng tiền vĩ mô vẫn hỗ trợ dài hạn nhờ lợi suất thực USD giảm và VIX tăng, nhưng rủi ro điều chỉnh ngắn hạn là rất cao.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn cao sau đà tăng +8.78% trong 30 ngày.",
-      "Động lượng ngắn hạn yếu: giá hiện 181 triệu thấp hơn MA7 (156.3 triệu VND/lượng) và giảm -1.5% trong 7 ngày gần nhất.",
-      "Premium 16.39% nằm trong biên dao động 30 ngày (10.4%-18.94%), không cực đoan; VIX tăng +31.44% trong 20 ngày hỗ trợ tâm lý an toàn nhưng chưa đẩy giá vàng Việt Nam bật lên.",
-      "Lợi suất thực Mỹ 10Y giảm -4.76% trong 5 ngày và VIX ở 20.82 tạo nền hỗ trợ vĩ mô, nhưng thiếu tin tức địa chính trị cấp bách để thúc đẩy đà tăng tiếp."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 8.76% trong 30 ngày qua và cần thời gian hợp nhất.",
+      "Biên độ dao động ngày cao (2.27%) cùng việc giá thế giới giảm 1.51% trong 7 ngày qua cho thấy áp lực chốt lời ngắn hạn đang hiện hữu.",
+      "Yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm sâu 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày cho thấy tâm lý thận trọng hỗ trợ vàng.",
+      "Premium 16.4% ở mức hợp lý so với trung bình giai đoạn (dao động 11-19% trong 30 ngày), không có dấu hiệu bong bóng nội địa."
     ],
     "risks": [
-      "Đang ở đỉnh 5 năm, rủi ro điều chỉnh kỹ thuật sâu nếu không phá được đỉnh 181 triệu/lượng.",
-      "Thanh khoản Tết Nguyên Đán (16/02/2026) thấp có thể gây trượt giá khi mua/bán số lượng lớn.",
-      "Dữ liệu vĩ mô (USD Index, Fed Funds) cập nhật đến 06-12/02, thiếu tín hiệu mới nhất từ tuần lễ hiện hành."
+      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi động lượng tăng 30 ngày (8.76%) đã quá nóng.",
+      "Giá thế giới (XAUUSD) đang điều chỉnh giảm (-1.24% trong 5 ngày), có thể kéo giá SJC đi theo bất chấp premium.",
+      "Thanh khoản có thể giảm nếu giá đi ngang kéo dài sau đợt tăng nóng."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "30D Change",
-        "value": 8.78,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "7D Change",
-        "value": -1.5,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5Y Percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 16.39,
+        "key": "SJC Price Change 30d",
+        "value": 8.76,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 Price",
-        "value": 156308176,
-        "unit": "VND/lượng",
+        "key": "Daily Volatility",
+        "value": 2.27,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX 20D Change",
+        "key": "World Gold Change 7d",
+        "value": -1.51,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y 5D Change",
-        "value": -4.76,
+        "key": "Current Premium",
+        "value": 16.4,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T13:29:34.205Z",
+    "latestTimestamp": "2026-02-16T14:19:14.110Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155510280.27918985,
-    "premiumPct": 16.39,
-    "change7dPct": -1.5,
-    "change30dPct": 8.78,
+    "intlVndPerTael": 155492934.37006286,
+    "premiumPct": 16.4,
+    "change7dPct": -1.51,
+    "change30dPct": 8.76,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156308176,
-    "ma30VndPerTael": 154170958,
+    "ma7VndPerTael": 156305698,
+    "ma30VndPerTael": 154170380,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T13:29:47.026Z",
+    "fetchedAt": "2026-02-16T14:19:35.405Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4993.355,
+        "value": 4995.685,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.79,
-        "change5dPct": -1.29,
-        "change20dPct": 6.9,
+        "change1dPct": -0.74,
+        "change5dPct": -1.24,
+        "change20dPct": 6.95,
         "relationToGold": "context"
       },
       {
@@ -191,26 +185,8 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-16 | windsorstar.com | Atlantic Canada faces urgent economic choice",
-      "2026-02-16 | wcsufm.org | DHS shuts down after a funding lapse . And , why athletes get the  yip at the Olympics",
-      "2026-02-16 | citizensvoice.com | Today in History : February 16 , Tutankhamen tomb unsealed",
-      "2026-02-16 | wisn.com | Ukrainian big air skier gets engaged on Valentine Day at Olympics",
-      "2026-02-16 | npr.org | Up First briefing : DHS shutdown ; Russia - Ukraine talks ; Winter Olympics : NPR",
-      "2026-02-16 | investinglive.com | Market outlook for the week of 16th - 20th February"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-16 | wyomingnewsnow.tv | European stocks , dollar up in subdued start to week",
-      "2026-02-16 | investinglive.com | NZDUSD stays rangebound ahead of the RBNZ decision : traders expect no change to the OCR",
-      "2026-02-16 | asia.nikkei.com | Japan Takaichi holds first meeting with BOJ chief since election win",
-      "2026-02-16 | ashleycountyledger.com | European stocks , dollar up in subdued start to week",
-      "2026-02-16 | investinglive.com | USDJPY consolidates at a major trendline as traders await new catalysts for direction",
-      "2026-02-16 | timesofindia.indiatimes.com | Gold price today : How much 18K , 22K and 24K gold costs in your city ? Check rates for Bengaluru , Delhi & more"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-16 | timesofindia.indiatimes.com | Gold price today : How much 18K , 22K and 24K gold costs in your city ? Check rates for Bengaluru , Delhi & more",
-      "2026-02-16 | zerohedge.com | These Are The Countries Buying ( And Selling ) The Most Gold Since 2020",
-      "2026-02-16 | asahi.com | Asian shares mixed ahead of Lunar New Year holidays and gold prices fall | The Asahi Shimbun : Breaking News , Japan News and Analysis"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
