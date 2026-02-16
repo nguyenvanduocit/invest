@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T16:14:42.762Z",
+  "generatedAt": "2026-02-16T17:16:32.789Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,71 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh hóa ở mức 181 triệu/lượng với premium 16.84% cao hơn trung bình, trong khi giá thế giới điều chỉnh giảm từ đỉnh 5,600 USD/oz; nhà đầu tư nên chờ đợi hồi chỉnh hoặc tín hiệu ổn định rõ ràng hơn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) sau đà tăng 8.63%/tháng, nhưng áp lực điều chỉnh từ tin tức đề cử Fed diều hâu khiến giá thế giới giảm từ $5,600 về $4,992 USD/oz. Nhà đầu tư không nên đu đỉnh mà chờ xác nhận hỗ trợ kỹ thuật và rõ ràng hơn về chính sách tiền tệ Mỹ.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang giao dịch trên MA7 (156.2 triệu/lượng) và MA30 (154.2 triệu/lượng), nhưng giảm 1.87% sau 7 ngày cho thấy động lượng tăng đã yếu đi.",
-      "Premium 16.84% ở mức cao, cao hơn đáng kể so với vùng 10-13% đầu chuỗi dữ liệu, cho thấy rủi ro co hẹp premium nếu giá thế giới tiếp tục điều chỉnh.",
-      "Giá thế giới giảm 1.09% xuống 4,979 USD/oz, VIX tăng 17.96% lên 20.82 điểm nhưng vàng không tăng cho thấy áp lực bán đang hiện hữu.",
-      "Lợi suất thực 10Y giảm 4.76% trong 5 ngày xuống 1.8% là hỗ trợ dài hạn, nhưng tin tức 'Warsh Shock' về đề cử Fed diều hâu gây áp lực ngắn hạn."
+      "Áp lực bán từ tin tức đề cử Fed diều hâu (Warsh Shock) khiến giá thế giới giảm từ đỉnh $5,600 về $4,992 USD/oz, tạo ra sự bất ổn ngắn hạn và xu hướng giảm 1.31% trong 5 ngày gần nhất.",
+      "Biên độ dao động ngày cao (2.27%) và VIX tăng 31.44% trong 20 ngày cho thấy thị trường đang rung lắc mạnh, không thuận lợi cho việc mua đuổi trong ngắn hạn."
     ],
     "risks": [
-      "Premium 16.84% có thể co về mức 13-14% nếu giá thế giới sideway, gây thiệt hại cho người mua đuổi.",
-      "Tin tức đề cử Fed diều hâu (Warsh Shock) có thể khiến USD mạnh lên và vàng thế giới điều chỉnh sâu hơn.",
-      "Giá SJC ở percentile 100 (5 năm) - mức đỉnh lịch sử - rủi ro mua đỉnh ngắn hạn rất cao."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới không giữ được hỗ trợ $4,900-$5,000 USD/oz do chính sách Fed thắt chặt lại.",
+      "Premium 16.55% đang ở mức cao, có nguy cơ co hẹp nếu giá thế giới tiếp tục giảm, gây thiệt hại cho người nắm giữ vàng vật lý.",
+      "Thanh khoản cao nhưng biến động mạnh có thể gây thua lỗ ngắn hạn cho nhà đầu tư dùng đòn bẩy."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_pct",
-        "value": 16.84,
+        "key": "SJC Price Percentile 5Y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change7d_pct",
-        "value": -1.87,
+        "key": "SJC Change 30d",
+        "value": 8.63,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd",
-        "value": 156223367,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold",
-        "value": 4979.49,
+        "key": "Gold Spot Price (XAUUSD)",
+        "value": 4992.47,
         "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
+        "key": "VIX Change 20d",
+        "value": 31.44,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Current Premium",
+        "value": 16.55,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y",
         "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change1d",
-        "value": 17.96,
+        "key": "Daily Volatility",
+        "value": 2.27,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T16:14:16.732Z",
+    "latestTimestamp": "2026-02-16T17:15:47.108Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154916613.70044467,
-    "premiumPct": 16.84,
-    "change7dPct": -1.87,
-    "change30dPct": 8.36,
+    "intlVndPerTael": 155299564.27199307,
+    "premiumPct": 16.55,
+    "change7dPct": -1.63,
+    "change30dPct": 8.63,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156223367,
-    "ma30VndPerTael": 154151169,
+    "ma7VndPerTael": 156278074,
+    "ma30VndPerTael": 154163934,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +82,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T16:14:22.503Z",
+    "fetchedAt": "2026-02-16T17:15:53.454Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4977.965,
+        "value": 4992.465,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -1.09,
-        "change5dPct": -1.59,
-        "change20dPct": 6.57,
+        "change1dPct": -0.8,
+        "change5dPct": -1.31,
+        "change20dPct": 6.88,
         "relationToGold": "context"
       },
       {
@@ -191,14 +183,8 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-16 | markets.financialcontent.com | FinancialContent - Gold Stability Above $5 , 000 Driven by Central Bank Hoarding"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-16 | markets.financialcontent.com | FinancialContent - Gold Stability Above $5 , 000 Driven by Central Bank Hoarding",
-      "2026-02-16 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Gold Plummets from Record $5 , 600 as Hawkish Fed Nomination Reasserts Monetary Independence",
-      "2026-02-16 | fxstreet.com | EUR / USD extends losses in a dozy holiday session"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
       "2026-02-16 | markets.financialcontent.com | FinancialContent - Gold Stability Above $5 , 000 Driven by Central Bank Hoarding",
       "2026-02-16 | markets.financialcontent.com | FinancialContent - The Warsh Shock : Gold Plummets from Record $5 , 600 as Hawkish Fed Nomination Reasserts Monetary Independence"
