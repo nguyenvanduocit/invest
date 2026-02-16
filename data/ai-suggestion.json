@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T19:15:18.433Z",
+  "generatedAt": "2026-02-16T20:07:57.089Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, đòi hỏi nhà đầu tư chờ đợi vùng giá tốt hơn thay vì đu đỉnh. Dù xu hướng 30 ngày vẫn tăng mạnh và vĩ mô hỗ trợ, nhưng tín hiệu ngắn hạn đã chuyển sang điều chỉnh kỹ thuật.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lực ngắn hạn đã yếu đi (-0.73% tuần qua) và thanh khoản thấp dịp Tết khiến rủi ro mua đuôi cao, cần chờ điều chỉnh về vùng hỗ trợ MA7 (156.1 triệu/lượng) để tham gia an toàn hơn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 8.65% sau 30 ngày và có dấu hiệu chững lại khi giảm 1.61% trong 7 ngày gần nhất.",
-      "Biên độ dao động ngày cao (2.27%) cộng với đỉnh giá lịch sử tạo rủi ro mua đu đỉnh lớn cho nhà đầu tư cá nhân.",
-      "Vĩ mô hỗ trợ vàng dài hạn: Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày cho thấy lo ngại rủi ro thị trường.",
-      "Dữ liệu vĩ mô có độ trễ lớn (cập nhật đến 10/02-12/02) và tin tức địa chính trị không đủ trọng yếu để biện minh cho việc FOMO ở vùng giá kỷ lục."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 8.64% sau 30 ngày nhưng đã giảm 0.73% trong 7 ngày gần nhất cho thấy áp lực chốt lời xuất hiện.",
+      "Premium 16.54% đang nới rộng so với đầu chuỗi (13.55%), giá SJC cách xa MA7 (156.1 triệu/lượng) khoảng 16% - khoảng cách quá lớn so với biến động bình quân 2.23%/ngày.",
+      "VIX tăng 31.44% trong 20 ngày và lợi suất thực Mỹ giảm 3.23% hỗ trợ vàng thế giới (xuất khẩu), nhưng giá vàng thế giới đã giảm 1.31% trong 5 ngày gần nhất.",
+      "Lợi suất thực 10Y giảm mạnh 4.76% trong 5 ngày và Fed Funds ổn định 3.64% tạo nền tảng vĩ mô tích cực cho giá vàng dài hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử khi động lượng mua suy yếu.",
-      "Biên độ biến động ngày 2.27% có thể gây sốc tài khoản ngắn hạn.",
-      "Thiếu dữ liệu vĩ mô thời gian thực (trễ 4-6 ngày) làm giảm độ tin cậy dự báo ngắn hạn."
+      "Mua đỉnh lịch sử: percentile 100% nghĩa là giá chưa từng cao hơn mức này trong 5 năm, rủi ro điều chỉnh sâu nếu không có tin tức thúc đẩy.",
+      "Premium cao 16.54% (25.7 triệu/lượng) có nguy cơ co hẹp nếu giá thế giới đi ngang, làm giảm hiệu quả đầu tư.",
+      "Thanh khoản thấp dịp Tết Nguyên Đán (China Trading Shuts) có thể gây trượt giá lớn khi cần bán gấp."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Price vs 5Y Percentile",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 30d",
-        "value": 8.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -1.61,
+        "key": "SJC Change 30D",
+        "value": 8.64,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.27,
+        "key": "SJC Change 7D",
+        "value": -0.73,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
+        "key": "Premium vs World Price",
+        "value": 16.54,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "SJC Price vs MA7 Distance",
+        "value": 15.94,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX Change 20D",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 16.53,
+        "key": "US Real Yield 10Y Change 5D",
+        "value": -4.76,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot Change 5D",
+        "value": -1.31,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T19:14:46.082Z",
+    "latestTimestamp": "2026-02-16T20:07:07.265Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155328578.3422143,
-    "premiumPct": 16.53,
-    "change7dPct": -1.61,
-    "change30dPct": 8.65,
-    "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156282219,
-    "ma30VndPerTael": 154164901,
+    "intlVndPerTael": 155315890.98645952,
+    "premiumPct": 16.54,
+    "change7dPct": -0.73,
+    "change30dPct": 8.64,
+    "volatilityDailyPct": 2.23,
+    "ma7VndPerTael": 156118685,
+    "ma30VndPerTael": 154576360,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T19:14:54.485Z",
+    "fetchedAt": "2026-02-16T20:07:23.507Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4990.985,
+        "value": 4992.4,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.83,
-        "change5dPct": -1.34,
-        "change20dPct": 6.85,
+        "change1dPct": -0.81,
+        "change5dPct": -1.31,
+        "change20dPct": 6.88,
         "relationToGold": "context"
       },
       {
@@ -186,20 +192,16 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-16 | lexology.com | US Eases Venezuela Sanctions Through New General Licenses and FAQs",
-      "2026-02-16 | goldderby.com | Industry  Season 4 Episode 6 explained , Ken Leung exit interview"
+      "2026-02-16 | abc.net.au | Interest rate hike worries ? Here some good news"
     ],
     "countryActionHeadlines": [
-      "2026-02-16 | fxstreet.com | GBP / USD slips in thin trade as markets eye united kingdom CPI",
-      "2026-02-16 | fxstreet.com | AUD / USD flat amid US Dollar strength , RBA minutes eyed",
-      "2026-02-16 | hometownregister.com | Stocks mixed , dollar up in subdued start to week",
-      "2026-02-16 | lexology.com | US Eases Venezuela Sanctions Through New General Licenses and FAQs",
-      "2026-02-16 | omakchronicle.com | Stocks mixed , dollar up in subdued start to week",
-      "2026-02-16 | markets.financialcontent.com | FinancialContent - Inflation Hits 2 . 4 % in January : Market Braces for Rate Cuts as Yields Slide"
+      "2026-02-16 | theage.com.au | BlockFills crisis : Australian investors narrowly avoid losses after local outpost of high - yield crypto platform was shelved",
+      "2026-02-16 | 247wallst.com | Forget Gold and Silver : This is the Metal to Buy in 2026 ( And 3 Stocks to Play This Trend )",
+      "2026-02-16 | carrollspaper.com | Stocks mixed , dollar up in subdued start to week",
+      "2026-02-16 | bullionvault.com | Gold and Silver Slip as Comex Bulls Retreat , China Trading Shuts for New Year",
+      "2026-02-16 | smh.com.au | BlockFills crisis : Australian investors narrowly avoid losses after local outpost of high - yield crypto platform was shelved",
+      "2026-02-16 | fxstreet.com | GBP / USD slips in thin trade as markets eye united kingdom CPI"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-16 | elpasoinc.com | US manufacturing is in retreat , and tariffs arent helping | Wjournal",
-      "2026-02-16 | livemint.com | Gold , silver rates today : Comex gold slips $65 / oz ; silver down $3 . 40 / oz on profit booking , firm US dollar"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
