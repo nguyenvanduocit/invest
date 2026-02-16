@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T18:12:54.585Z",
+  "generatedAt": "2026-02-16T19:15:18.433Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100) với đà tăng quá nóng +8.64%/tháng; kỹ thuật cho thấy cần thời gian củng cố hoặc điều chỉnh về vùng MA7 (156.3 triệu VND/lượng) trước khi tiếp tục xu hướng tăng dài hạn được hỗ trợ bởi lợi suất thực âm và VIX cao.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, đòi hỏi nhà đầu tư chờ đợi vùng giá tốt hơn thay vì đu đỉnh. Dù xu hướng 30 ngày vẫn tăng mạnh và vĩ mô hỗ trợ, nhưng tín hiệu ngắn hạn đã chuyển sang điều chỉnh kỹ thuật.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn rất lớn khi P/E thị trường đã mở rộng mạnh.",
-      "Đà tăng 30 ngày (+8.64%) vượt xa ngưỡng biến động bình thường, đối chiếu với điều chỉnh 7 ngày gần nhất (-1.62%) cho thấy động lượng đang suy yếu dần.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 20 ngày (-4.76%) xuống 1.8% và VIX tăng +31.44% lên 20.82 điểm tạo nền tảng tăng giá vĩ mô tốt, nhưng giá thế giới đã phản ánh trước (xuống -1.28% trong 5 ngày).",
-      "Premium 16.53% nằm trong vùng trung bình của chuỗi dữ liệu (dao động 10.4%-18.94% trong 30 ngày), không có tín hiệu bất thường về căng thẳng nguồn cung cục bộ."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 8.65% sau 30 ngày và có dấu hiệu chững lại khi giảm 1.61% trong 7 ngày gần nhất.",
+      "Biên độ dao động ngày cao (2.27%) cộng với đỉnh giá lịch sử tạo rủi ro mua đu đỉnh lớn cho nhà đầu tư cá nhân.",
+      "Vĩ mô hỗ trợ vàng dài hạn: Lợi suất thực Mỹ 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày cho thấy lo ngại rủi ro thị trường.",
+      "Dữ liệu vĩ mô có độ trễ lớn (cập nhật đến 10/02-12/02) và tin tức địa chính trị không đủ trọng yếu để biện minh cho việc FOMO ở vùng giá kỷ lục."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu về MA7 (156.3 triệu VND/lượng), tương đương giảm ~13.6% từ giá hiện tại nếu thị trường về giá cân bằng.",
-      "Tin tức lạm phát Mỹ giảm (Inflation Hits 2.4%) có thể khiến Fed giữ lãi suất cao lâu hơn, gây áp lực lên giá vàng thế giới.",
-      "Dữ liệu vĩ mô không hoàn chỉnh (healthy: false) và một số chỉ báo USD đã cũ (cập nhật đến 10/02/2026) làm giảm độ tin cậy dự báo."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử khi động lượng mua suy yếu.",
+      "Biên độ biến động ngày 2.27% có thể gây sốc tài khoản ngắn hạn.",
+      "Thiếu dữ liệu vĩ mô thời gian thực (trễ 4-6 ngày) làm giảm độ tin cậy dự báo ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 8.64,
+        "key": "SJC Change 30d",
+        "value": 8.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma7_distance",
-        "value": 15.9,
+        "key": "SJC Change 7d",
+        "value": -1.61,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "Daily Volatility",
+        "value": 2.27,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
         "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 10.4,
+        "key": "Current Premium",
+        "value": 16.53,
         "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "gold_spot_change_5d",
-        "value": -1.28,
-        "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T18:12:19.767Z",
+    "latestTimestamp": "2026-02-16T19:14:46.082Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155318550.03919575,
+    "intlVndPerTael": 155328578.3422143,
     "premiumPct": 16.53,
-    "change7dPct": -1.62,
-    "change30dPct": 8.64,
+    "change7dPct": -1.61,
+    "change30dPct": 8.65,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156280786,
-    "ma30VndPerTael": 154164567,
+    "ma7VndPerTael": 156282219,
+    "ma30VndPerTael": 154164901,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T18:12:30.073Z",
+    "fetchedAt": "2026-02-16T19:14:54.485Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4993.705,
+        "value": 4990.985,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.78,
-        "change5dPct": -1.28,
-        "change20dPct": 6.91,
+        "change1dPct": -0.83,
+        "change5dPct": -1.34,
+        "change20dPct": 6.85,
         "relationToGold": "context"
       },
       {
@@ -186,17 +186,16 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-16 | redstate.com | Man , I Miss the Cold War - Era Olympics",
-      "2026-02-16 | business-review.eu | Alexandru Petrescu ( ASF ): Early warning systems for financial contagion - a network - based framework for financial supervisory authorities",
-      "2026-02-16 | elpasoinc.com | US manufacturing is in retreat , and tariffs arent helping | Wjournal"
+      "2026-02-16 | lexology.com | US Eases Venezuela Sanctions Through New General Licenses and FAQs",
+      "2026-02-16 | goldderby.com | Industry  Season 4 Episode 6 explained , Ken Leung exit interview"
     ],
     "countryActionHeadlines": [
-      "2026-02-16 | markets.financialcontent.com | FinancialContent - Inflation Hits 2 . 4 % in January : Market Braces for Rate Cuts as Yields Slide",
-      "2026-02-16 | internationalbanker.com | Is the Banking Sector Now Warming to Stablecoins ?",
-      "2026-02-16 | elpasoinc.com | US manufacturing is in retreat , and tariffs arent helping | Wjournal",
-      "2026-02-16 | firstpost.com | ECB opens euro lifeline to foreign central banks in push to elevate single currency global clout – Firstpost",
-      "2026-02-16 | livemint.com | Gold , silver rates today : Comex gold slips $65 / oz ; silver down $3 . 40 / oz on profit booking , firm US dollar",
-      "2026-02-16 | cnbcafrica.com | Coronation forecasts 19 . 19 % January inflation for Nigeria"
+      "2026-02-16 | fxstreet.com | GBP / USD slips in thin trade as markets eye united kingdom CPI",
+      "2026-02-16 | fxstreet.com | AUD / USD flat amid US Dollar strength , RBA minutes eyed",
+      "2026-02-16 | hometownregister.com | Stocks mixed , dollar up in subdued start to week",
+      "2026-02-16 | lexology.com | US Eases Venezuela Sanctions Through New General Licenses and FAQs",
+      "2026-02-16 | omakchronicle.com | Stocks mixed , dollar up in subdued start to week",
+      "2026-02-16 | markets.financialcontent.com | FinancialContent - Inflation Hits 2 . 4 % in January : Market Braces for Rate Cuts as Yields Slide"
     ],
     "dollarYieldHeadlines": [
       "2026-02-16 | elpasoinc.com | US manufacturing is in retreat , and tariffs arent helping | Wjournal",
