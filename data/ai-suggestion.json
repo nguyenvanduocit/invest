@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T03:03:11.120Z",
+  "generatedAt": "2026-02-16T04:44:01.730Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +8.65%/tháng, nhưng động lượng ngắn hạn đã yếu đi (-1.62%/tuần) và thanh khoản kỹ thuật ở vùng quá mua. Nên chờ đợi điều chỉnh về vùng hỗ trợ MA7 (~156.3 triệu VND/lượng) hoặc xác nhận phá đỉnh trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 30 ngày qua (+8.25%), tín hiệu kỹ thuật ngắn hạn đã chuyển sang điều chỉnh giảm sau khi chạm đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi tăng +8.65% trong 30 ngày qua.",
-      "Động lượng ngắn hạn suy yếu: giá giảm -1.62% trong 7 ngày gần đây so với đà tăng trước đó.",
-      "Premium 16.53% nằm trong biên dao động 30 ngày (10.4%-18.94%), không cảnh báo bất thường cực đoan.",
-      "VIX tăng +31.44% trong 20 ngày và lợi suất thực Mỹ giảm -3.23% hỗ trợ vàng về mặt first-principles, nhưng giá đã phản ánh trước."
+      "Động lượng tăng quá mạnh trong 30 ngày qua (+8.25%) kèm biến động cao (2.28%/ngày) và giá đang ở mức cao nhất lịch sử 5 năm (percentile 100%), rủi ro điều chỉnh ngắn hạn rất lớn.",
+      "Tín hiệu điều chỉnh đã xuất hiện khi giá SJC giảm 1.98% trong 7 ngày qua và giá hiện tại (181 triệu) thấp hơn MA7 (156.2 triệu VND/lượng) cho thấy xung lực mua đã yếu đi.",
+      "Premium đang ở mức 16.96%, cao hơn đáng kể so với vùng thấp nhất 6.8% trong chuỗi dữ liệu, cho thấy giá nội địa đã phản ứng quá mức so với biến động giá thế giới.",
+      "Lợi suất thực 10 năm giảm 4.76% trong 5 ngày và VIX tăng 31.44% trong 20 ngày là tín hiệu hỗ trợ vĩ mô, nhưng đã phần lớn được định giá vào mức giá hiện tại."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu khi giá ở vùng quá mua (percentile 100%), khả năng hồi về MA7 (~156.3 triệu VND/lượng).",
-      "Biến động ngày cao 2.27%, rủi ro trượt giá khi vào lệnh thiếu kiên nhẫn.",
-      "Thanh khoản đầu ra có thể bị hạn chế nếu thị trường sốc ngược dòng."
+      "Rủi ro chốt lời ngắn hạn cao khi giá giao dịch quanh đỉnh lịch sử và động lượng đã chuyển sang giảm.",
+      "Premium co giãn mạnh từ 6.8% lên gần 17% trong vòng 3 tuần, có thể giảm về mức trung bình 13-14% nếu giá thế giới đi ngang.",
+      "Biến động ngày 2.28% cho thấy thị trường bất ổn, nhà đầu tư MUA lúc này dễ bị 'đu đỉnh' nếu không quản lý vốn tốt."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá SJC hiện tại",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
+        "key": "Biến động 30 ngày",
+        "value": 8.25,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 7 ngày",
+        "value": -1.98,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_30d",
-        "value": 8.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": -1.62,
+        "key": "Premium hiện tại",
+        "value": 16.96,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 16.53,
+        "key": "Lợi suất thực 10Y (20 ngày)",
+        "value": -3.23,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "ma7_vnd",
-        "value": 156281865,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX (20 ngày)",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Giá thế giới XAUUSD",
+        "value": 4974.26,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T03:02:29.050Z",
+    "latestTimestamp": "2026-02-16T04:43:05.182Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155326103.46629098,
-    "premiumPct": 16.53,
-    "change7dPct": -1.62,
-    "change30dPct": 8.65,
-    "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156281865,
-    "ma30VndPerTael": 154164819,
+    "intlVndPerTael": 154754037.52993837,
+    "premiumPct": 16.96,
+    "change7dPct": -1.98,
+    "change30dPct": 8.25,
+    "volatilityDailyPct": 2.28,
+    "ma7VndPerTael": 156200142,
+    "ma30VndPerTael": 154145750,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T03:02:50.831Z",
+    "fetchedAt": "2026-02-16T04:43:41.452Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4990.965,
+        "value": 4974.565,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.83,
-        "change5dPct": -1.34,
-        "change20dPct": 6.85,
+        "change1dPct": -1.16,
+        "change5dPct": -1.66,
+        "change20dPct": 6.5,
         "relationToGold": "context"
       },
       {
@@ -192,11 +192,8 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | thestar.com.my | Gu Ailing  bummed  about FIS training schedule after reaching Olympic big air final",
-      "2026-02-14 | thetimes.com | Why Russia uses poison to silence enemies like Alexei Navalny",
-      "2026-02-14 | nytimes.com | One day later , Canada and Sweden Olympic curling beef is still simmering",
-      "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
-      "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
+      "2026-02-16 | freemalaysiatoday.com | Yen softens after strong week , dollar steady as traders weigh rate outlook",
+      "2026-02-16 | cbsnews.com | Human  biology was never intended to handle  ultraprocessed foods , former FDA head David Kessler warns"
     ],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
