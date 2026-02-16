@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-16T21:08:18.426Z",
+  "checkedAt": "2026-02-16T22:06:47.491Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-16T21:08:18.350Z",
+  "dataFetchedAt": "2026-02-16T22:06:47.411Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,32 +9,22 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "US Breakeven Inflation 10Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [
       "US Dollar Trade Weighted Index (2026-02-06)"
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 11,
-    "countryActionCount": 15,
-    "dollarYieldCount": 11,
-    "sourceFailures": [
-      {
-        "id": "us_breakeven_10y",
-        "error": "HTTP 502"
-      }
-    ],
+    "geopoliticalCount": 8,
+    "countryActionCount": 12,
+    "dollarYieldCount": 8,
+    "sourceFailures": [],
     "healthy": false
   },
-  "hardFailures": [
-    "Missing required factors: US Breakeven Inflation 10Y"
-  ],
+  "hardFailures": [],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)",
-    "Source failures: us_breakeven_10y (HTTP 502)"
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)"
   ],
-  "canProceedToIntegration": false
+  "canProceedToIntegration": true
 }
