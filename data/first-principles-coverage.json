@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-16T17:15:53.529Z",
+  "checkedAt": "2026-02-16T18:12:30.150Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-16T17:15:53.454Z",
+  "dataFetchedAt": "2026-02-16T18:12:30.073Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,28 +16,15 @@
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 0,
-    "dollarYieldCount": 8,
-    "sourceFailures": [
-      {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
-      },
-      {
-        "id": "gdelt_country_actions",
-        "error": "HTTP 429"
-      }
-    ],
+    "geopoliticalCount": 9,
+    "countryActionCount": 15,
+    "dollarYieldCount": 13,
+    "sourceFailures": [],
     "healthy": false
   },
-  "hardFailures": [
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)"
-  ],
+  "hardFailures": [],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)",
-    "Source failures: gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429)"
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)"
   ],
-  "canProceedToIntegration": false
+  "canProceedToIntegration": true
 }
