@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T20:07:57.089Z",
+  "generatedAt": "2026-02-16T21:08:39.065Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lực ngắn hạn đã yếu đi (-0.73% tuần qua) và thanh khoản thấp dịp Tết khiến rủi ro mua đuôi cao, cần chờ điều chỉnh về vùng hỗ trợ MA7 (156.1 triệu/lượng) để tham gia an toàn hơn.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua (+8.65%), nhưng động lượng ngắn hạn đã yếu đi (-0.72% tuần qua) và thanh khoản thấp dịp Tết khiến rủi ro mua đuôi cao.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 8.64% sau 30 ngày nhưng đã giảm 0.73% trong 7 ngày gần nhất cho thấy áp lực chốt lời xuất hiện.",
-      "Premium 16.54% đang nới rộng so với đầu chuỗi (13.55%), giá SJC cách xa MA7 (156.1 triệu/lượng) khoảng 16% - khoảng cách quá lớn so với biến động bình quân 2.23%/ngày.",
-      "VIX tăng 31.44% trong 20 ngày và lợi suất thực Mỹ giảm 3.23% hỗ trợ vàng thế giới (xuất khẩu), nhưng giá vàng thế giới đã giảm 1.31% trong 5 ngày gần nhất.",
-      "Lợi suất thực 10Y giảm mạnh 4.76% trong 5 ngày và Fed Funds ổn định 3.64% tạo nền tảng vĩ mô tích cực cho giá vàng dài hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm ẩn rủi ro điều chỉnh kỹ thuật mạnh sau đà tăng +8.65% trong 30 ngày qua.",
+      "Động lượng ngắn hạn suy yếu: giá hiện tại (181 triệu) thấp hơn đỉnh tuần trước (181.2 triệu) và biến động cao (2.23%/ngày) trong bối cảnh thanh khoản thấp dịp Tết.",
+      "Lợi suất thực USD 10Y giảm 4.76% trong 5 ngày qua xuống 1.8% và VIX tăng 31.44% trong 20 ngày là hỗ trợ vĩ mô tích cực, nhưng tin tức địa chính trị không có yếu tố nóng cấp thiết.",
+      "Premium 16.53% đang ở mức cao hơn vùng thấp nhất 6.8% (ngày 28/01) gấp đôi, cho thấy định giá nội địa đã phản ánh phần lớn yếu tố tâm lý."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: percentile 100% nghĩa là giá chưa từng cao hơn mức này trong 5 năm, rủi ro điều chỉnh sâu nếu không có tin tức thúc đẩy.",
-      "Premium cao 16.54% (25.7 triệu/lượng) có nguy cơ co hẹp nếu giá thế giới đi ngang, làm giảm hiệu quả đầu tư.",
-      "Thanh khoản thấp dịp Tết Nguyên Đán (China Trading Shuts) có thể gây trượt giá lớn khi cần bán gấp."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới quay đầu giảm do thanh khoản thấp dịp Tết Nguyên Đán.",
+      "Mua đỉnh lịch sử khi percentile 5y = 100%, các đợt điều chỉnh trước có mức tồi nhất -41.26%.",
+      "Thiếu tín hiệu lạm phát kỳ vọng (US Breakeven 10Y = null) làm giảm độ tin cậy của phân tích vĩ mô."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs 5Y Percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30D",
-        "value": 8.64,
+        "key": "SJC Change 30d",
+        "value": 8.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7D",
-        "value": -0.73,
+        "key": "SJC Change 7d",
+        "value": -0.72,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "Premium vs World Price",
-        "value": 16.54,
+        "value": 16.53,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA7 Distance",
-        "value": 15.94,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "VIX Change 20D",
-        "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5D",
+        "key": "US Real Yield 10Y Change 5d",
         "value": -4.76,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "Gold Spot Change 5D",
-        "value": -1.31,
+        "key": "VIX Change 20d",
+        "value": 31.44,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.23,
+        "unit": "%/day",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Worst Historical Drawdown",
+        "value": -41.26,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T20:07:07.265Z",
+    "latestTimestamp": "2026-02-16T21:07:59.236Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155315890.98645952,
-    "premiumPct": 16.54,
-    "change7dPct": -0.73,
-    "change30dPct": 8.64,
+    "intlVndPerTael": 155323641.96807534,
+    "premiumPct": 16.53,
+    "change7dPct": -0.72,
+    "change30dPct": 8.65,
     "volatilityDailyPct": 2.23,
-    "ma7VndPerTael": 156118685,
-    "ma30VndPerTael": 154576360,
+    "ma7VndPerTael": 156119793,
+    "ma30VndPerTael": 154576619,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,17 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T20:07:23.507Z",
+    "fetchedAt": "2026-02-16T21:08:18.350Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Breakeven Inflation 10Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4992.4,
+        "value": 4992.47,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.81,
+        "change1dPct": -0.8,
         "change5dPct": -1.31,
         "change20dPct": 6.88,
         "relationToGold": "context"
@@ -130,12 +132,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.27,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -0.87,
-        "change5dPct": -2.99,
-        "change20dPct": -0.87,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -192,7 +194,9 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-16 | abc.net.au | Interest rate hike worries ? Here some good news"
+      "2026-02-16 | allafrica.com | Uganda : Lukwago Is Playing Gesture Politics - The Commonwealth Has No Gold Standard for Democracy",
+      "2026-02-16 | mirror.co.uk | Gold standard  sci - fi series with 100s of episodes now streaming on Netflix",
+      "2026-02-16 | mlive.com | How to watch the Gold Medal runs of the 2026 Winter Olympics Women Monobob for free"
     ],
     "countryActionHeadlines": [
       "2026-02-16 | theage.com.au | BlockFills crisis : Australian investors narrowly avoid losses after local outpost of high - yield crypto platform was shelved",
@@ -202,6 +206,11 @@
       "2026-02-16 | smh.com.au | BlockFills crisis : Australian investors narrowly avoid losses after local outpost of high - yield crypto platform was shelved",
       "2026-02-16 | fxstreet.com | GBP / USD slips in thin trade as markets eye united kingdom CPI"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-16 | abc.net.au | Interest rate hike worries ? Here some good news",
+      "2026-02-16 | theage.com.au | BlockFills crisis : Australian investors narrowly avoid losses after local outpost of high - yield crypto platform was shelved",
+      "2026-02-16 | bullionvault.com | Gold and Silver Slip as Comex Bulls Retreat , China Trading Shuts for New Year",
+      "2026-02-16 | smh.com.au | BlockFills crisis : Australian investors narrowly avoid losses after local outpost of high - yield crypto platform was shelved"
+    ]
   }
 }
