@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T07:25:38.708Z",
+  "generatedAt": "2026-02-16T08:15:10.758Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,45 +7,46 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn 2.27%/ngày, xu hướng tăng mạnh 8.74%/tháng nhưng động lượng ngắn hạn đã chững lại -1.53%/tuần. Lợi suất thực USD giảm và VIX tăng 31.44% hỗ trợ giá vàng, tuy nhiên rủi ro điều chỉnh kỹ thuật cao khi giá lệch xa MA7.",
+    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100) với đà tăng quá nóng +8.86%/tháng; thị trường quốc tế đang điều chỉnh nhẹ -0.66%/ngày và chốt lời. Nên chờ hồi về vùng hỗ trợ 176-178 triệu/lượng hoặc xác nhận phá đỉnh thế giới rõ ràng hơn trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 8.74% so với 30 ngày trước nhưng giảm 1.53% trong 7 ngày gần nhất cho thấy áp lực chốt lời.",
-      "Biên độ dao động ngày cao 2.27% kết hợp với VIX tăng 31.44% trong 20 ngày phản ánh thị trường biến động mạnh, chưa có tín hiệu ổn định.",
-      "Lợi suất thực 10 năm USD giảm 4.76% trong 5 ngày xuống 1.8% tạo động lực hỗ trợ giá vàng thế giới, nhưng giá SJC đã phản ánh trước với premium 16.43%."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100), rủi ro mua đỉp cao khi P/E 30 ngày已达 +8.86%.",
+      "Đà tăng thế giới yếu đi: XAUUSD giảm -0.66%/ngày và -1.16%/5 ngày, lợi suất thực Mỹ 1.8% vẫn dương gây áp lực.",
+      "Premium 16.29% cao hơn trung bình chuỗi 30 ngày (14-15%), thanh khoản thấp dịp Tết có thể làm giá giật cục.",
+      "VIX tăng +31.44%/20 ngày cho thấy bất ổn thị trường, nhưng vàng chưa hưởng lợi do đồng USD vẫn mạnh (index 118.24)."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu khi giá hiện tại 181 triệu VND/lượng cao xa MA7 (156.3 triệu VND/lượng) và MA30 (154.2 triệu VND/lượng).",
-      "Premium 16.43% có thể co hẹp nếu giá thế giới giảm, khiến giá SJC chịu áp lực kép.",
-      "Thiếu dữ liệu Gold Spot XAUUSD trực tiếp (healthy: false) làm giảm độ tin cậy phân tích xu hướng thế giới ngắn hạn."
+      "Giá thế giới quay đầu tăng mạnh do địa chính trị (VIX cao), kéo giá SJC vượt 185 triệu/lượng – bỏ lỡ cơ hội mua.",
+      "Thanh khoản thấp dịp Tết Ân lịch làm biên độ mua-bán giãn rộng, slippage cao khi thực hiện giao dịch.",
+      "Dữ liệu vĩ mô không đầy đủ (healthy: false), thiếu cập nhật mới nhất về lợi suất thực và lạm phát kỳ vọng."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
         "key": "sjc_change_30d",
-        "value": 8.74,
+        "value": 8.86,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -1.53,
+        "key": "xauusd_change_1d",
+        "value": -0.66,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.27,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
+        "key": "us_real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
         "key": "premium_current",
-        "value": 16.43,
+        "value": 16.29,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -56,29 +57,23 @@
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_vs_ma7_gap",
-        "value": 15.8,
-        "unit": "triệu VND/lượng",
+        "key": "sjc_ma7_vnd",
+        "value": 156326047,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T07:25:04.789Z",
+    "latestTimestamp": "2026-02-16T08:14:32.909Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155453796.1751029,
-    "premiumPct": 16.43,
-    "change7dPct": -1.53,
-    "change30dPct": 8.74,
-    "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156300107,
-    "ma30VndPerTael": 154169075,
+    "intlVndPerTael": 155647718.8036113,
+    "premiumPct": 16.29,
+    "change7dPct": -1.42,
+    "change30dPct": 8.86,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 156326047,
+    "ma30VndPerTael": 154175128,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T07:25:15.735Z",
+    "fetchedAt": "2026-02-16T08:14:50.954Z",
     "healthy": false,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": null,
+        "value": 4999.775,
         "unit": "USD/oz",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-16",
+        "change1dPct": -0.66,
+        "change5dPct": -1.16,
+        "change20dPct": 7.04,
         "relationToGold": "context"
       },
       {
@@ -192,21 +185,23 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-16 | english.aawsat.com | Ksiaz Castle : A Dark Nazi Secret and Buried Gold Mystery",
+      "2026-02-16 | english.aawsat.com | Gold Drops over 1 % as Thin Trading , Profit ‑ taking Weigh"
+    ],
     "countryActionHeadlines": [
-      "2026-02-16 | accesswdun.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | wsls.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | gulfnews.com | Gold slides under Dh600 after global rally cools",
-      "2026-02-16 | theweek.in | Why cant Lebanon sell its gold reserves to fix its banking crisis ?",
-      "2026-02-16 | businessinsider.com | Gold Price Rally Isnt a Sign of Commodity Supercycle , Goldman Says",
-      "2026-02-16 | 2news.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall"
+      "2026-02-16 | seattletimes.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | zerohedge.com | Why gold has beaten Bitcoin",
+      "2026-02-16 | english.aawsat.com | Gold Drops over 1 % as Thin Trading , Profit ‑ taking Weigh",
+      "2026-02-16 | wral.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | econotimes.com | BOJ Governor Ueda Meets PM Takaichi as Markets Eye Possible Rate Hike",
+      "2026-02-16 | smdailyjournal.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-16 | accesswdun.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | wsls.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | gulfnews.com | Gold slides under Dh600 after global rally cools",
-      "2026-02-16 | 2news.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | newsday.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall"
+      "2026-02-16 | seattletimes.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | english.aawsat.com | Gold Drops over 1 % as Thin Trading , Profit ‑ taking Weigh",
+      "2026-02-16 | wral.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | smdailyjournal.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall"
     ]
   }
 }
