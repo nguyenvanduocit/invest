@@ -1,52 +1,46 @@
 {
-  "generatedAt": "2026-02-16T14:20:00.191Z",
+  "generatedAt": "2026-02-16T15:16:10.646Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.27%/ngày, đòi hỏi nhà đầu tư chờ xác nhận kỹ thuật thay vì đu đỉnh. Dòng tiền vĩ mô vẫn hỗ trợ dài hạn nhờ lợi suất thực USD giảm và VIX tăng, nhưng rủi ro điều chỉnh ngắn hạn là rất cao.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lực tăng bị kìm hãm bởi lợi suất thực USD cao và tín hiệu điều chỉnh ngắn hạn từ thị trường quốc tế. Nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 8.76% trong 30 ngày qua và cần thời gian hợp nhất.",
-      "Biên độ dao động ngày cao (2.27%) cùng việc giá thế giới giảm 1.51% trong 7 ngày qua cho thấy áp lực chốt lời ngắn hạn đang hiện hữu.",
-      "Yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm sâu 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày cho thấy tâm lý thận trọng hỗ trợ vàng.",
-      "Premium 16.4% ở mức hợp lý so với trung bình giai đoạn (dao động 11-19% trong 30 ngày), không có dấu hiệu bong bóng nội địa."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 8.32% sau 30 ngày, rủi ro mua đỉh là rất lớn trong ngắn hạn.",
+      "Động lượng tăng yếu đi: giá thế giới giảm 1.11% ngày 16/02 và giảm 1.91% sau 7 ngày, cho thấy áp lực chốt lời đang hiện hữu.",
+      "Lợi suất thực USD 10Y ở mức 1.8% là rào cản vĩ mô lớn, hạn chế đà tăng của vàng; VIX tăng 31.44% trong 20 ngày cho thấy thanh khoản có thể bị rút khỏi tài sản rủi ro.",
+      "Premium 16.88% đang ở mức cao hơn trung bình chuỗi 30 ngày (khoảng 14-15%), cho thấy giá nội địa đã phản ứng quá mức so với biến động giá thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi động lượng tăng 30 ngày (8.76%) đã quá nóng.",
-      "Giá thế giới (XAUUSD) đang điều chỉnh giảm (-1.24% trong 5 ngày), có thể kéo giá SJC đi theo bất chấp premium.",
-      "Thanh khoản có thể giảm nếu giá đi ngang kéo dài sau đợt tăng nóng."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ kỹ thuật gần 4900 USD/oz.",
+      "Thanh khoản thấp và biên độ dao động cao 2.27%/ngày có thể gây trượt stop-loss.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể để duy trì sentiment rủi ro cao."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 30d",
-        "value": 8.76,
+        "key": "SJC Change 30d",
+        "value": 8.32,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.27,
+        "key": "Gold Spot Change 1d",
+        "value": -1.11,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "World Gold Change 7d",
-        "value": -1.51,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
+        "key": "US Real Yield 10Y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -58,22 +52,28 @@
       },
       {
         "key": "Current Premium",
-        "value": 16.4,
+        "value": 16.88,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Volatility Daily",
+        "value": 2.27,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T14:19:14.110Z",
+    "latestTimestamp": "2026-02-16T15:15:30.448Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155492934.37006286,
-    "premiumPct": 16.4,
-    "change7dPct": -1.51,
-    "change30dPct": 8.76,
+    "intlVndPerTael": 154862723.93832183,
+    "premiumPct": 16.88,
+    "change7dPct": -1.91,
+    "change30dPct": 8.32,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156305698,
-    "ma30VndPerTael": 154170380,
+    "ma7VndPerTael": 156215668,
+    "ma30VndPerTael": 154149373,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T14:19:35.405Z",
+    "fetchedAt": "2026-02-16T15:15:52.081Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4995.685,
+        "value": 4977.075,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.74,
-        "change5dPct": -1.24,
-        "change20dPct": 6.95,
+        "change1dPct": -1.11,
+        "change5dPct": -1.61,
+        "change20dPct": 6.55,
         "relationToGold": "context"
       },
       {
@@ -187,6 +187,8 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-16 | fxstreet.com | The week ahead : Key inflation readings and why the AI trade could be overdone"
+    ]
   }
 }
