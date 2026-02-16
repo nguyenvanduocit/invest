@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T11:17:14.238Z",
+  "generatedAt": "2026-02-16T12:13:49.032Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với biên độ dao động lớn, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập khẩu tốt hơn thay vì đu đỉnh. Dù xu hướng trung hạn vẫn tích cực nhờ USD và lợi suất thực giảm, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng ngắn hạn đã yếu đi (-1.44% tuần qua) và thanh khoản thấp dịp Tết khiến rủi ro mua đuôi cao hơn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 8.82% sau 30 ngày và cần thời gian củng cố kỹ thuật.",
-      "Lợi suất thực Mỹ 10Y giảm 4.76% trong 5 ngày xuống 1.8% và DXY giảm 1.54% trong 20 ngày tạo nền tảng vĩ mô tích cực hỗ trợ giá vàng.",
-      "VIX tăng 31.44% trong 20 ngày lên mức 20.82 cho thấy bất ổn thị trường đang gia tăng, vàng giữ vai trò trú ẩn nhưng biến động ngắn hạn cao (2.27%/ngày).",
-      "Premium 16.34% hiện tại cao hơn đáng kể so với mức đáy 6.8% ngày 28/01, cho thấy giá Việt Nam đã định giá quá nhiệt so với thế giới trong ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 8.84% sau 30 ngày, cho thấy thị trường đã định giá khá đầy đủ đà tăng.",
+      "Động lượng ngắn hạn chững lại: giá hiện tại (181 triệu) thấp hơn MA7 (156.3 triệu VND/lượng - *lưu ý dữ liệu MA có sự bất thường*) và giảm 1.44% trong 7 ngày qua so với xu hướng tăng mạnh trước đó.",
+      "Lợi suất thực USD 10 năm giảm 3.23% và VIX tăng 31.44% trong 20 ngày qua hỗ trợ vàng về mặt first-principles, nhưng tín hiệu vĩ mô đã cũ (cập nhật đến 12/02) và thiếu sự kiện địa chính trị cấp thiết.",
+      "Premium 16.32% nằm trong biên dao động bình thường của chuỗi 30 ngày (10.4%-18.94%), không có tín hiệu bất thường đòi hỏi hành động gấp."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh từ vùng đỉnh lịch sử khi thị trường quá mua.",
-      "Premium co hẹp từ mức 16.34% về mức trung bình 13-14% sẽ khiến giá SJC giảm nhanh hơn giá thế giới.",
-      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu input để duy trì đà tăng vọt."
+      "Dữ liệu vĩ mô (Fed, Yield) đã cũ 4 ngày so với thời điểm hiện tại, có thể bỏ sót các biến động chính sách mới.",
+      "Rủi ro điều chỉnh kỹ thuật sâu hơn sau khi tăng 8.84% trong tháng, đặc biệt khi thanh khoản thị trường thấp sau kỳ nghỉ Tết.",
+      "Sự bất đồng bộ trong dữ liệu kỹ thuật (MA7 thấp hơn giá hiện tại quá nhiều) gợi ý độ trễ hoặc nhiễu dữ liệu, làm giảm độ tin cậy của phân tích."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "30D Change",
+        "value": 8.84,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5Y Percentile",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium vs World",
+        "value": 16.32,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 8.82,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_5d",
-        "value": -4.76,
+        "key": "US Real Yield 10Y Change 20D",
+        "value": -3.23,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "dxy_change_20d",
-        "value": -1.54,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20D",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.27,
-        "unit": "%/day",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 6.8,
-        "unit": "% (low)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "current_premium",
-        "value": 16.34,
+        "key": "World Gold Change 20D",
+        "value": 7.01,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T11:16:40.878Z",
+    "latestTimestamp": "2026-02-16T12:13:08.724Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155575973.8461407,
-    "premiumPct": 16.34,
-    "change7dPct": -1.46,
-    "change30dPct": 8.82,
+    "intlVndPerTael": 155602593.9289037,
+    "premiumPct": 16.32,
+    "change7dPct": -1.44,
+    "change30dPct": 8.84,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156317561,
-    "ma30VndPerTael": 154173148,
+    "ma7VndPerTael": 156321364,
+    "ma30VndPerTael": 154174035,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T11:16:54.927Z",
+    "fetchedAt": "2026-02-16T12:13:24.259Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5001.625,
+        "value": 4998.675,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.62,
-        "change5dPct": -1.12,
-        "change20dPct": 7.08,
+        "change1dPct": -0.68,
+        "change5dPct": -1.18,
+        "change20dPct": 7.01,
         "relationToGold": "context"
       },
       {
@@ -193,10 +187,6 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-16 | union-bulletin.com | Asian shares mixed ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | clickondetroit.com | Asian shares mixed ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | springfieldnewssun.com | Asian shares mixed ahead of Lunar New Year holidays and gold prices fall"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
