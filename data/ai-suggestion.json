@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T04:44:01.730Z",
+  "generatedAt": "2026-02-16T05:32:40.737Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 30 ngày qua (+8.25%), tín hiệu kỹ thuật ngắn hạn đã chuyển sang điều chỉnh giảm sau khi chạm đỉnh.",
+    "thesis": "Giá SJC đang đỉnh hóa ở mức 181 triệu VND/lượng (percentile 5 năm 100%) với động lượng giảm 1.72% trong 7 ngày qua, trong khi lợi suất thực USD giảm và VIX tăng 31.44% hỗ trợ nền giá nhưng chưa đủ để phá vỡ đỉnh cũ.",
     "reasons": [
-      "Động lượng tăng quá mạnh trong 30 ngày qua (+8.25%) kèm biến động cao (2.28%/ngày) và giá đang ở mức cao nhất lịch sử 5 năm (percentile 100%), rủi ro điều chỉnh ngắn hạn rất lớn.",
-      "Tín hiệu điều chỉnh đã xuất hiện khi giá SJC giảm 1.98% trong 7 ngày qua và giá hiện tại (181 triệu) thấp hơn MA7 (156.2 triệu VND/lượng) cho thấy xung lực mua đã yếu đi.",
-      "Premium đang ở mức 16.96%, cao hơn đáng kể so với vùng thấp nhất 6.8% trong chuỗi dữ liệu, cho thấy giá nội địa đã phản ứng quá mức so với biến động giá thế giới.",
-      "Lợi suất thực 10 năm giảm 4.76% trong 5 ngày và VIX tăng 31.44% trong 20 ngày là tín hiệu hỗ trợ vĩ mô, nhưng đã phần lớn được định giá vào mức giá hiện tại."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh cao khi mua đuổi.",
+      "Động lượng giảm -1.72% trong 7 ngày gần đây cho thấy áp lực chốt lời ngắn hạn tại đỉnh lịch sử.",
+      "Lợi suất thực 10Y giảm -3.23% và VIX tăng +31.44% trong 20 ngày là yếu tố hỗ trợ nền giá, hạn chế đợt bán tháo mạnh.",
+      "Premium 16.65% cao hơn đáng kể so với vùng 11-13% đầu chuỗi dữ liệu, cho thấy định giá SJC đã phản ánh đầy đủ tin tích cực."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá giao dịch quanh đỉnh lịch sử và động lượng đã chuyển sang giảm.",
-      "Premium co giãn mạnh từ 6.8% lên gần 17% trong vòng 3 tuần, có thể giảm về mức trung bình 13-14% nếu giá thế giới đi ngang.",
-      "Biến động ngày 2.28% cho thấy thị trường bất ổn, nhà đầu tư MUA lúc này dễ bị 'đu đỉnh' nếu không quản lý vốn tốt."
+      "Giá thế giới điều chỉnh sâu nếu VIX tiếp tục tăng và rủi ro địa chính trị (Greenland, phân mảnh địa kinh tế) leo thang.",
+      "Thanh khoản mỏng và biến động 2.27%/ngày có thể gây trượt giá khi vào lệnh lớn.",
+      "Dữ liệu vĩ mô USD (DXY, Fed Funds) cũ 4-10 ngày, có thể đã thay đổi trong bối cảnh thị trường biến động."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 30 ngày",
-        "value": 8.25,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 7 ngày",
-        "value": -1.98,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 năm",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium hiện tại",
-        "value": 16.96,
+        "key": "sjc_change_7d",
+        "value": -1.72,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực 10Y (20 ngày)",
-        "value": -3.23,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX (20 ngày)",
+        "key": "vix_change_20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4974.26,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "us_real_yield_change_20d",
+        "value": -3.23,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "current_premium",
+        "value": 16.65,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.27,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_current_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T04:43:05.182Z",
+    "latestTimestamp": "2026-02-16T05:32:11.431Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154754037.52993837,
-    "premiumPct": 16.96,
-    "change7dPct": -1.98,
-    "change30dPct": 8.25,
-    "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 156200142,
-    "ma30VndPerTael": 154145750,
+    "intlVndPerTael": 155167525.9859471,
+    "premiumPct": 16.65,
+    "change7dPct": -1.72,
+    "change30dPct": 8.54,
+    "volatilityDailyPct": 2.27,
+    "ma7VndPerTael": 156259211,
+    "ma30VndPerTael": 154159533,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T04:43:41.452Z",
+    "fetchedAt": "2026-02-16T05:32:24.665Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4974.565,
+        "value": 4988.115,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -1.16,
-        "change5dPct": -1.66,
-        "change20dPct": 6.5,
+        "change1dPct": -0.89,
+        "change5dPct": -1.39,
+        "change20dPct": 6.79,
         "relationToGold": "context"
       },
       {
@@ -192,10 +186,18 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-16 | freemalaysiatoday.com | Yen softens after strong week , dollar steady as traders weigh rate outlook",
-      "2026-02-16 | cbsnews.com | Human  biology was never intended to handle  ultraprocessed foods , former FDA head David Kessler warns"
+      "2026-02-16 | marketscreener.com | Gold drops over 1 % as thin trading , profit - taking weigh",
+      "2026-02-16 | kshb.com | 94 - year - old Korean War veteran finally receives Purple Heart",
+      "2026-02-16 | dailymail.co.uk | AOC warns European leaders how serious Trump is about taking over Greenland :  His threats are no joke"
     ],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-16 | marketscreener.com | Rupee cushioned by dollar pullback and RBI ; flows , equities weigh",
+      "2026-02-16 | marketscreener.com | Gold drops over 1 % as thin trading , profit - taking weigh",
+      "2026-02-16 | fxstreet.com | Silver Price Forecast : XAG / USD declines to near $75 at the start of the week",
+      "2026-02-16 | fxstreet.com | British Pound flat lines vs . USD as traders eye united kingdom data , FOMC minutes",
+      "2026-02-16 | fxstreet.com | US Dollar Index steadies near 97 . 00 amid US , China holiday trading pause",
+      "2026-02-16 | fxstreet.com | NZD / USD hovers near 0 . 6050 following January Business NZ PSI data"
+    ],
     "dollarYieldHeadlines": []
   }
 }
