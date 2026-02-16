@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-16T00:21:35.278Z",
+  "checkedAt": "2026-02-16T01:35:04.535Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-16T00:21:35.203Z",
+  "dataFetchedAt": "2026-02-16T01:35:04.456Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -11,40 +11,30 @@
     "requiredFactors": 8,
     "availableFactors": 7,
     "missingFactors": [
-      "US Breakeven Inflation 10Y"
+      "US Real Yield 10Y"
     ],
     "staleFactors": [
       "US Dollar Trade Weighted Index (2026-02-06)"
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
-    "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "geopoliticalCount": 5,
+    "countryActionCount": 7,
+    "dollarYieldCount": 8,
     "sourceFailures": [
       {
-        "id": "us_breakeven_10y",
-        "error": "HTTP 504"
-      },
-      {
-        "id": "gdelt_country_actions",
+        "id": "us_real_yield_10y",
         "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Breakeven Inflation 10Y",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Real Yield 10Y"
   ],
   "warnings": [
     "Stale factors: US Dollar Trade Weighted Index (2026-02-06)",
-    "Source failures: us_breakeven_10y (HTTP 504); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_real_yield_10y (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
