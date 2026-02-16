@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T12:13:49.032Z",
+  "generatedAt": "2026-02-16T13:30:06.276Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng ngắn hạn đã yếu đi (-1.44% tuần qua) và thanh khoản thấp dịp Tết khiến rủi ro mua đuôi cao hơn.",
+    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua +8.78%, nhưng động lượng đang yếu lại (-1.5% tuần qua) amid thanh khoản thấp dịp Tết; chờ hồi về vùng MA7 ~156.3 triệu/lượng hoặc xác nhận phá đỉnh mới mua.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 8.84% sau 30 ngày, cho thấy thị trường đã định giá khá đầy đủ đà tăng.",
-      "Động lượng ngắn hạn chững lại: giá hiện tại (181 triệu) thấp hơn MA7 (156.3 triệu VND/lượng - *lưu ý dữ liệu MA có sự bất thường*) và giảm 1.44% trong 7 ngày qua so với xu hướng tăng mạnh trước đó.",
-      "Lợi suất thực USD 10 năm giảm 3.23% và VIX tăng 31.44% trong 20 ngày qua hỗ trợ vàng về mặt first-principles, nhưng tín hiệu vĩ mô đã cũ (cập nhật đến 12/02) và thiếu sự kiện địa chính trị cấp thiết.",
-      "Premium 16.32% nằm trong biên dao động bình thường của chuỗi 30 ngày (10.4%-18.94%), không có tín hiệu bất thường đòi hỏi hành động gấp."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn cao sau đà tăng +8.78% trong 30 ngày.",
+      "Động lượng ngắn hạn yếu: giá hiện 181 triệu thấp hơn MA7 (156.3 triệu VND/lượng) và giảm -1.5% trong 7 ngày gần nhất.",
+      "Premium 16.39% nằm trong biên dao động 30 ngày (10.4%-18.94%), không cực đoan; VIX tăng +31.44% trong 20 ngày hỗ trợ tâm lý an toàn nhưng chưa đẩy giá vàng Việt Nam bật lên.",
+      "Lợi suất thực Mỹ 10Y giảm -4.76% trong 5 ngày và VIX ở 20.82 tạo nền hỗ trợ vĩ mô, nhưng thiếu tin tức địa chính trị cấp bách để thúc đẩy đà tăng tiếp."
     ],
     "risks": [
-      "Dữ liệu vĩ mô (Fed, Yield) đã cũ 4 ngày so với thời điểm hiện tại, có thể bỏ sót các biến động chính sách mới.",
-      "Rủi ro điều chỉnh kỹ thuật sâu hơn sau khi tăng 8.84% trong tháng, đặc biệt khi thanh khoản thị trường thấp sau kỳ nghỉ Tết.",
-      "Sự bất đồng bộ trong dữ liệu kỹ thuật (MA7 thấp hơn giá hiện tại quá nhiều) gợi ý độ trễ hoặc nhiễu dữ liệu, làm giảm độ tin cậy của phân tích."
+      "Đang ở đỉnh 5 năm, rủi ro điều chỉnh kỹ thuật sâu nếu không phá được đỉnh 181 triệu/lượng.",
+      "Thanh khoản Tết Nguyên Đán (16/02/2026) thấp có thể gây trượt giá khi mua/bán số lượng lớn.",
+      "Dữ liệu vĩ mô (USD Index, Fed Funds) cập nhật đến 06-12/02, thiếu tín hiệu mới nhất từ tuần lễ hiện hành."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "SJC Spot Price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
         "key": "30D Change",
-        "value": 8.84,
+        "value": 8.78,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "7D Change",
+        "value": -1.5,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "5Y Percentile",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "Premium vs World",
-        "value": 16.32,
+        "value": 16.39,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20D",
-        "value": -3.23,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "MA7 Price",
+        "value": 156308176,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20D",
+        "key": "VIX 20D Change",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "World Gold Change 20D",
-        "value": 7.01,
+        "key": "US Real Yield 10Y 5D Change",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T12:13:08.724Z",
+    "latestTimestamp": "2026-02-16T13:29:34.205Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155602593.9289037,
-    "premiumPct": 16.32,
-    "change7dPct": -1.44,
-    "change30dPct": 8.84,
+    "intlVndPerTael": 155510280.27918985,
+    "premiumPct": 16.39,
+    "change7dPct": -1.5,
+    "change30dPct": 8.78,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156321364,
-    "ma30VndPerTael": 154174035,
+    "ma7VndPerTael": 156308176,
+    "ma30VndPerTael": 154170958,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T12:13:24.259Z",
+    "fetchedAt": "2026-02-16T13:29:47.026Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4998.675,
+        "value": 4993.355,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.68,
-        "change5dPct": -1.18,
-        "change20dPct": 7.01,
+        "change1dPct": -0.79,
+        "change5dPct": -1.29,
+        "change20dPct": 6.9,
         "relationToGold": "context"
       },
       {
@@ -178,15 +184,33 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel",
       "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation",
       "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025",
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
-      "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector",
-      "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
+      "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-16 | windsorstar.com | Atlantic Canada faces urgent economic choice",
+      "2026-02-16 | wcsufm.org | DHS shuts down after a funding lapse . And , why athletes get the  yip at the Olympics",
+      "2026-02-16 | citizensvoice.com | Today in History : February 16 , Tutankhamen tomb unsealed",
+      "2026-02-16 | wisn.com | Ukrainian big air skier gets engaged on Valentine Day at Olympics",
+      "2026-02-16 | npr.org | Up First briefing : DHS shutdown ; Russia - Ukraine talks ; Winter Olympics : NPR",
+      "2026-02-16 | investinglive.com | Market outlook for the week of 16th - 20th February"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-16 | wyomingnewsnow.tv | European stocks , dollar up in subdued start to week",
+      "2026-02-16 | investinglive.com | NZDUSD stays rangebound ahead of the RBNZ decision : traders expect no change to the OCR",
+      "2026-02-16 | asia.nikkei.com | Japan Takaichi holds first meeting with BOJ chief since election win",
+      "2026-02-16 | ashleycountyledger.com | European stocks , dollar up in subdued start to week",
+      "2026-02-16 | investinglive.com | USDJPY consolidates at a major trendline as traders await new catalysts for direction",
+      "2026-02-16 | timesofindia.indiatimes.com | Gold price today : How much 18K , 22K and 24K gold costs in your city ? Check rates for Bengaluru , Delhi & more"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-16 | timesofindia.indiatimes.com | Gold price today : How much 18K , 22K and 24K gold costs in your city ? Check rates for Bengaluru , Delhi & more",
+      "2026-02-16 | zerohedge.com | These Are The Countries Buying ( And Selling ) The Most Gold Since 2020",
+      "2026-02-16 | asahi.com | Asian shares mixed ahead of Lunar New Year holidays and gold prices fall | The Asahi Shimbun : Breaking News , Japan News and Analysis"
+    ]
   }
 }
