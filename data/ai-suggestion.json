@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T01:35:29.664Z",
+  "generatedAt": "2026-02-16T03:03:11.120Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua (+9.43%), nhưng động lượng ngắn hạn đã giảm nhiệt (-0.91% 7 ngày) và biên độ dao động cao (2.26%) báo hiệu thị trường cần củng cố trước khi tiếp tục.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +8.65%/tháng, nhưng động lượng ngắn hạn đã yếu đi (-1.62%/tuần) và thanh khoản kỹ thuật ở vùng quá mua. Nên chờ đợi điều chỉnh về vùng hỗ trợ MA7 (~156.3 triệu VND/lượng) hoặc xác nhận phá đỉnh trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở vùng cực kỳ cao, vượt xa MA30 (154.2 triệu VND/lượng) và MA7 (156.4 triệu VND/lượng), tiềm ẩn rủi ro điều chỉnh kỹ thuật ngắn hạn.",
-      "Động lượng tăng đã chững lại: giá thế giới giảm nhẹ 0.57% trong 5 ngày gần nhất (xuống 5029.68 USD/oz) sau đợt tăng mạnh 7.68% trong 20 ngày trước đó.",
-      "VIX tăng vọt 31.44% trong 20 ngày (lên mức 20.82) kết hợp với Lagarde cảnh báo về sự phân mảnh địa kinh tế (geoeconomic fragmentation) hỗ trợ tâm lý an toàn nhưng cũng làm tăng biến động.",
-      "Lợi suất trái phiếu Mỹ 10 năm giảm 2.85% trong 5 ngày (xuống 4.09%) và kỳ vọng lạm phát 10 năm giảm 2.99% (xuống 2.27%) tạo áp lực hai chiều lên giá vàng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi tăng +8.65% trong 30 ngày qua.",
+      "Động lượng ngắn hạn suy yếu: giá giảm -1.62% trong 7 ngày gần đây so với đà tăng trước đó.",
+      "Premium 16.53% nằm trong biên dao động 30 ngày (10.4%-18.94%), không cảnh báo bất thường cực đoan.",
+      "VIX tăng +31.44% trong 20 ngày và lợi suất thực Mỹ giảm -3.23% hỗ trợ vàng về mặt first-principles, nhưng giá đã phản ánh trước."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử khi giá đã tăng quá nhanh (+9.43%) trong 30 ngày và biên độ dao động ngày cao (2.26%).",
-      "Dữ liệu vĩ mô thiếu US Real Yield 10Y (nghiệp thức quan trọng nhất định hướng vàng) làm giảm độ tin cậy phân tích.",
-      "Premium 15.7% cao hơn mức trung bình chuỗi 30 ngày (13-14%), có thể bị thu hẹp nếu giá thế giới giảm."
+      "Điều chỉnh kỹ thuật sâu khi giá ở vùng quá mua (percentile 100%), khả năng hồi về MA7 (~156.3 triệu VND/lượng).",
+      "Biến động ngày cao 2.27%, rủi ro trượt giá khi vào lệnh thiếu kiên nhẫn.",
+      "Thanh khoản đầu ra có thể bị hạn chế nếu thị trường sốc ngược dòng."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA30",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30 Diff",
-        "value": 17.38,
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_30d",
+        "value": 8.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot 20D Change",
-        "value": 7.68,
+        "key": "change_7d",
+        "value": -1.62,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot 5D Change",
-        "value": -0.57,
+        "key": "premium_current",
+        "value": 16.53,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX 20D Change",
+        "key": "ma7_vnd",
+        "value": 156281865,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change_20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Treasury 10Y 5D Change",
-        "value": -2.85,
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Premium Current",
-        "value": 15.7,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC 30D Change",
-        "value": 9.43,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T01:34:42.819Z",
+    "latestTimestamp": "2026-02-16T03:02:29.050Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156445634.04565704,
-    "premiumPct": 15.7,
-    "change7dPct": -0.91,
-    "change30dPct": 9.43,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156441798,
-    "ma30VndPerTael": 154202136,
+    "intlVndPerTael": 155326103.46629098,
+    "premiumPct": 16.53,
+    "change7dPct": -1.62,
+    "change30dPct": 8.65,
+    "volatilityDailyPct": 2.27,
+    "ma7VndPerTael": 156281865,
+    "ma30VndPerTael": 154164819,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T01:35:04.456Z",
+    "fetchedAt": "2026-02-16T03:02:50.831Z",
     "healthy": false,
-    "missingFactors": [
-      "US Real Yield 10Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5029.675,
+        "value": 4990.965,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.06,
-        "change5dPct": -0.57,
-        "change20dPct": 7.68,
+        "change1dPct": -0.83,
+        "change5dPct": -1.34,
+        "change20dPct": 6.85,
         "relationToGold": "context"
       },
       {
@@ -121,12 +119,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.8,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -3.23,
+        "change5dPct": -4.76,
+        "change20dPct": -3.23,
         "relationToGold": "inverse"
       },
       {
@@ -200,20 +198,7 @@
       "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
       "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
     ],
-    "countryActionHeadlines": [
-      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
-      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
