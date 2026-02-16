@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-16T06:25:23.721Z",
+  "generatedAt": "2026-02-16T07:25:38.708Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động năng ngắn hạn đã yếu đi (-1.67% tuần qua) và giá thế giới đang điều chỉnh giảm từ vùng $5,000/oz, khuyến nghị chờ đợi vùng giá tốt hơn hoặc tín hiệu ổn định trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn 2.27%/ngày, xu hướng tăng mạnh 8.74%/tháng nhưng động lượng ngắn hạn đã chững lại -1.53%/tuần. Lợi suất thực USD giảm và VIX tăng 31.44% hỗ trợ giá vàng, tuy nhiên rủi ro điều chỉnh kỹ thuật cao khi giá lệch xa MA7.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn cao khi P/E premium đã nới rộng lên 16.59%.",
-      "Động lượng ngắn hạn yếu: giá giảm 1.67% trong 7 ngày qua và giá thế giới điều chỉnh về 4990 USD/oz (-0.85% ngày).",
-      "Lợi suất thực 10Y giảm xuống 1.8% và VIX tăng 31.44% trong 20 ngày là tín hiệu hỗ trợ vĩ mô tích cực, tạo nền tảng cho xu hướng tăng dài hạn.",
-      "Biên độ dao động cao 2.27%/ngày và premium dao động mạnh (6.8%-18.94% trong 30 ngày) cho thấy thanh khoản và rủi ro biến động lớn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 8.74% so với 30 ngày trước nhưng giảm 1.53% trong 7 ngày gần nhất cho thấy áp lực chốt lời.",
+      "Biên độ dao động ngày cao 2.27% kết hợp với VIX tăng 31.44% trong 20 ngày phản ánh thị trường biến động mạnh, chưa có tín hiệu ổn định.",
+      "Lợi suất thực 10 năm USD giảm 4.76% trong 5 ngày xuống 1.8% tạo động lực hỗ trợ giá vàng thế giới, nhưng giá SJC đã phản ánh trước với premium 16.43%."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu hơn nếu giá thế giới mất mốc hỗ trợ 4900 USD/oz.",
-      "Thanh khoản giảm trong dịp Tết Nguyên Đán có thể làm biên độ mua-bán giãn rộng.",
-      "Premium co hẹp từ 18.94% về 16.59% có thể khiến giá nội giảm nhanh hơn giá thế giới."
+      "Rủi ro điều chỉnh sâu khi giá hiện tại 181 triệu VND/lượng cao xa MA7 (156.3 triệu VND/lượng) và MA30 (154.2 triệu VND/lượng).",
+      "Premium 16.43% có thể co hẹp nếu giá thế giới giảm, khiến giá SJC chịu áp lực kép.",
+      "Thiếu dữ liệu Gold Spot XAUUSD trực tiếp (healthy: false) làm giảm độ tin cậy phân tích xu hướng thế giới ngắn hạn."
     ],
     "evidence": [
       {
@@ -27,34 +26,28 @@
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d_pct",
-        "value": -1.67,
+        "key": "sjc_change_30d",
+        "value": 8.74,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d_pct",
-        "value": 8.59,
+        "key": "sjc_change_7d",
+        "value": -1.53,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "daily_volatility",
+        "value": 2.27,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
         "key": "premium_current",
-        "value": 16.59,
+        "value": 16.43,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "gold_spot_price",
-        "value": 4990.35,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
       },
       {
         "key": "vix_change_20d",
@@ -63,23 +56,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 12.14,
-        "unit": "% (6.8-18.94)",
-        "source": "monthly_series_30d"
+        "key": "us_real_yield_10y_change_5d",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_vs_ma7_gap",
+        "value": 15.8,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-16T06:24:42.511Z",
+    "latestTimestamp": "2026-02-16T07:25:04.789Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155247061.43593767,
-    "premiumPct": 16.59,
-    "change7dPct": -1.67,
-    "change30dPct": 8.59,
+    "intlVndPerTael": 155453796.1751029,
+    "premiumPct": 16.43,
+    "change7dPct": -1.53,
+    "change30dPct": 8.74,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156270574,
-    "ma30VndPerTael": 154162184,
+    "ma7VndPerTael": 156300107,
+    "ma30VndPerTael": 154169075,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +89,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-16T06:25:04.044Z",
+    "fetchedAt": "2026-02-16T07:25:15.735Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4990.345,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-02-16",
-        "change1dPct": -0.85,
-        "change5dPct": -1.35,
-        "change20dPct": 6.84,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
@@ -193,13 +194,19 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-16 | accesswdun.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | wsls.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | gulfnews.com | Gold slides under Dh600 after global rally cools",
+      "2026-02-16 | theweek.in | Why cant Lebanon sell its gold reserves to fix its banking crisis ?",
       "2026-02-16 | businessinsider.com | Gold Price Rally Isnt a Sign of Commodity Supercycle , Goldman Says",
-      "2026-02-16 | 2news.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | economictimes.indiatimes.com | US Stock Market | Softer US inflation strengthens case for Fed rate cuts",
-      "2026-02-16 | newsday.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | news4jax.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
-      "2026-02-16 | business-standard.com | Wall Street Ends Volatile Week Mixed as Inflation Eases and Bond Yields Fall"
+      "2026-02-16 | 2news.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-16 | accesswdun.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | wsls.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | gulfnews.com | Gold slides under Dh600 after global rally cools",
+      "2026-02-16 | 2news.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall",
+      "2026-02-16 | newsday.com | Asian shares trade higher ahead of Lunar New Year holidays and gold prices fall"
+    ]
   }
 }
