@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-15T23:07:10.574Z",
+  "generatedAt": "2026-02-16T00:21:52.020Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với biên độ dao động rộng 2.22%/ngày, đòi hỏi nhà đầu tư chờ đợi hồi chỉnh về vùng hỗ trợ MA7 (~157.1 triệu VND/lượng) thay vì đu đỉnh khi premium đã giãn mạnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 30 ngày qua 9.21%, nhưng động lượng đang giảm nhiệt (-1.1% tuần qua) và thanh khoản thấp dịp Tết khiến rủi ro mua đuôi cao, nên chờ đợi điều chỉnh về vùng hỗ trợ MA7 (156.4 triệu đồng/lượng) hoặc xác nhận xả thải trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cách xa MA7 (157.1 triệu VND/lượng) và MA30 (154.9 triệu VND/lượng), rủi ro điều chỉnh ngắn hạn cao.",
-      "Premium 15.46% đang ở vùng cao so với trung bình chuỗi 30 ngày (10-18%), thanh khoản tại đỉnh có thể gặp áp lực chốt lời sau đợt tăng 30 ngày (+9.16%).",
-      "VIX tăng mạnh +31.44% trong 20 ngày lên mức 20.82 chỉ thị bất ổn thị trường, nhưng thiếu dữ liệu USD Index và Lợi suất thực (missing factors) nên không đủ cơ sở xác nhận xu hướng tăng vững chắc.",
-      "Lợi suất US Treasury 10Y giảm -2.85% trong 5 ngày (xuống 4.09%) hỗ trợ giá vàng thế giới, nhưng giá vàng spot giảm -0.86% cùng kỳ cho thấy động lực tăng đang yếu đi."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA7 15.9% cho thấy thị trường đang ở trạng thái quá mua ngắn hạn cần điều chỉnh.",
+      "Động lượng tăng đã giảm tốc: tăng 9.21% trong 30 ngày nhưng chỉ giảm 1.1% trong 7 ngày gần đây, cho thấy phe mua đang mệt mỏi và có thể chốt lời.",
+      "Premium 15.92% nằm trong biên dao động bình thường của 30 ngày qua (6.8%-18.94%), không có tín hiệu bất thường đột biến cần hành động gấp.",
+      "VIX tăng 31.44% trong 20 ngày và lợi suất thực Mỹ giảm 3.23% hỗ trợ vàng dài hạn, nhưng thiếu dữ liệu lạm phát kỳ vọng và sự kiện địa chính trị không liên quan giảm độ tin cậy dự báo."
     ],
     "risks": [
-      "Thiếu dữ liệu đầu vào quan trọng (USD Index, Real Yield, Breakeven Inflation) làm giảm độ tin cậy của phân tích vĩ mô (healthy: false).",
-      "Biên độ dao động ngày cao (2.22%) kèm theo 4 lần drawdown trong lịch sử, tồi nhất là -41.26%, cho thấy rủi ro biến động cực lớn.",
-      "Tin tức địa chính trị không liên quan (nhiễu), không cung cấp tín hiệu避险 rõ ràng."
+      "Rủi ro điều chỉnh sâu: giá cách xa MA7 15.9% có thể hồi về mức 170-175 triệu đồng/lượng nếu thế giới giảm nhiệt.",
+      "Thanh khoản thấp dịp Tết Â lịch có thể gây trượt giá lớn khi mua/bán với chênh lệch giá rộng.",
+      "Thiếu dữ liệu lạm phát kỳ vọng (US Breakeven 10Y null) và sự kiện vĩ mô không rõ ràng làm tăng khả năng dự báo sai."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_intl",
-        "value": 15.46,
+        "key": "change30d_pct",
+        "value": 9.21,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 9.16,
+        "key": "change7d_pct",
+        "value": -1.1,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma7_gap",
-        "value": 15.2,
-        "unit": "triệu VND/lượng",
+        "key": "premium_pct",
+        "value": 15.92,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_20d",
+        "key": "ma7_vnd",
+        "value": 156397872,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change20d",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_treasury_10y_change_5d",
-        "value": -2.85,
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "gold_spot_change_5d",
-        "value": -0.86,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.22,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-15T23:06:34.422Z",
+    "latestTimestamp": "2026-02-16T00:21:13.877Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156764921.08043215,
-    "premiumPct": 15.46,
-    "change7dPct": -1.15,
-    "change30dPct": 9.16,
-    "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157090415,
-    "ma30VndPerTael": 154882765,
+    "intlVndPerTael": 156138151.78985083,
+    "premiumPct": 15.92,
+    "change7dPct": -1.1,
+    "change30dPct": 9.21,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 156397872,
+    "ma30VndPerTael": 154191887,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,45 +90,43 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-15T23:06:55.703Z",
+    "fetchedAt": "2026-02-16T00:21:35.203Z",
     "healthy": false,
     "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Real Yield 10Y",
       "US Breakeven Inflation 10Y"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5015.205,
+        "value": 5018.435,
         "unit": "USD/oz",
         "date": "2026-02-16",
-        "change1dPct": -0.35,
-        "change5dPct": -0.86,
-        "change20dPct": 7.37,
+        "change1dPct": -0.29,
+        "change5dPct": -0.79,
+        "change20dPct": 7.44,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 118.2407,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-06",
+        "change1dPct": -0.22,
+        "change5dPct": 0.29,
+        "change20dPct": -1.54,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.8,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -3.23,
+        "change5dPct": -4.76,
+        "change20dPct": -3.23,
         "relationToGold": "inverse"
       },
       {
@@ -196,19 +194,10 @@
       "2026-02-12 | ECB Press / Speeches | Piero Cipollone: Europe and monetary sovereignty"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-15 | areanews.com.au | Embrace autumn : Join local walking groups nationwide | The Area News",
-      "2026-02-15 | yasstribune.com.au | Embrace autumn : Join local walking groups nationwide | Yass Tribune",
-      "2026-02-15 | batemansbaypost.com.au | Embrace autumn : Join local walking groups nationwide | Bay Post - Moruya Examiner",
-      "2026-02-15 | comicbook.com | 7 Best Spider - Man Movie Costumes , Ranked By Comics Accuracy",
-      "2026-02-15 | tahoedailytribune.com | Investment Corner : Time to Panic ? Probably not ."
+      "2026-02-16 | theage.com.au | How awards season has ruined cinema",
+      "2026-02-16 | mumbaimirror.indiatimes.com | Baby Gold … Gold … Gold"
     ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-15 | quadrant.org.au | The Value of Gold - Quadrant",
-      "2026-02-15 | abc.net.au | Coles , ACCC showdown in federal court | ABC News Top Stories",
-      "2026-02-15 | elciudadano.com | Gold Price Analysis : Economic Insights for 2026",
-      "2026-02-15 | dailypolitical.com | Zambesigold Hits Self Reported Market Cap of $6 . 55 Million ( ZGD )",
-      "2026-02-15 | livemint.com | Wall Street Week Ahead : Market braces for Fed minutes , PCE inflation , Q4 GDP , personal income & spending data"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
