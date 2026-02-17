@@ -1,23 +1,22 @@
 {
-  "generatedAt": "2026-02-17T10:18:09.558Z",
+  "generatedAt": "2026-02-17T11:18:02.490Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư chờ đợi điểm nhập khẩu an toàn hơn thay vì mua đuổi. Dù xu hướng 30 ngày vẫn tăng và vĩ mô hỗ trợ (VIX tăng, lợi suất thực giảm), nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn đang rất cao.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium mở rộng nhanh, trong khi giá thế giới đang điều chỉnh giảm và VIX tăng vọt cho thấy thanh khoản thị trường đang căng thẳng.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cách xa MA30 (155.2 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng đang suy yếu: giá giảm 1.9% trong 7 ngày qua dù vẫn tăng 7.36% so với 30 ngày trước.",
-      "Premium 17.41% đang nới rộng so với mức 13.05% đầu chu kỳ dữ liệu, cho thấy tâm lý投机cao tại Việt Nam.",
-      "Vĩ mô hỗ trợ dài hạn: VIX tăng 31.44% trong 20 ngày và Lợi suất thực 10Y giảm 3.23% là động lực tích cực cho vàng."
+      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm, đồng thời cao hơn MA30 (155.2 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua kỹ thuật.",
+      "Premium tăng vọt lên 17.58%, cao hơn đáng kể so với mức 13.05% đầu chu kỳ 30 ngày, thanh khoản cao có thể gây khó khăn khi cần bán gấp.",
+      "VIX tăng 31.44% trong 20 ngày lên mức 20.82 điểm, giá thế giới giảm 1.96% trong 5 ngày xuống 4927 USD/oz, áp lực bán chốt đang hiện hữu."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh kỹ thuật khi thanh khoản thấp trong dịp Tết Nguyên Đán.",
-      "Biên độ dao động ngày cao (2.28%) có thể gây sốc tài khoản ngắn hạn.",
-      "Dữ liệu vĩ mô (Fed, DXY) không được cập nhật mới nhất (chỉ đến 06-12/02), có thể bỏ sót tín hiệu đảo chiều gần đây từ USD."
+      "Rủi ro điều chỉnh giá sâu nếu giá thế giới tiếp tục giảm và premium co hẹp về mức trung bình 13-15%.",
+      "Thanh khoản thấp tại đỉnh giá lịch sử có thể khiến spread mua-bán giãn rộng khi muốn thoát hàng.",
+      "Dữ liệu vĩ mô thiếu cập nhật (USD Index, Fed Funds) làm giảm khả năng đánh giá chính xác xu hướng lãi suất ngắn hạn."
     ],
     "evidence": [
       {
@@ -27,22 +26,22 @@
         "source": "market_snapshot"
       },
       {
+        "key": "SJC Premium vs Intl",
+        "value": 17.58,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
         "key": "SJC Price vs MA30",
-        "value": 16.62,
+        "value": 16.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -1.9,
+        "key": "Intl Gold Change 5d",
+        "value": -1.96,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Current",
-        "value": 17.41,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
         "key": "VIX Change 20d",
@@ -51,29 +50,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 1d",
-        "value": -3.23,
+        "key": "US Real Yield 10Y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.28,
+        "key": "Premium Start of Cycle",
+        "value": 13.05,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T10:17:38.738Z",
+    "latestTimestamp": "2026-02-17T11:17:16.769Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154157308.4416163,
-    "premiumPct": 17.41,
-    "change7dPct": -1.9,
-    "change30dPct": 7.36,
-    "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 156541022,
-    "ma30VndPerTael": 155193483,
+    "intlVndPerTael": 153936692.34033012,
+    "premiumPct": 17.58,
+    "change7dPct": -2.04,
+    "change30dPct": 7.2,
+    "volatilityDailyPct": 2.29,
+    "ma7VndPerTael": 156509506,
+    "ma30VndPerTael": 155186130,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T10:17:49.821Z",
+    "fetchedAt": "2026-02-17T11:17:30.614Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4932.895,
+        "value": 4927.125,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -1.19,
-        "change5dPct": -1.84,
-        "change20dPct": 3.55,
+        "change1dPct": -1.31,
+        "change5dPct": -1.96,
+        "change20dPct": 3.43,
         "relationToGold": "context"
       },
       {
@@ -186,24 +185,13 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-17 | 2news.com | Shares fall in Japan , while most Asian markets are shut for Lunar New Year",
-      "2026-02-17 | abcnews.com | Shares fall in Japan , while most Asian markets are shut for Lunar New Year",
-      "2026-02-17 | clickondetroit.com | Shares fall in Japan , while most Asian markets are shut for Lunar New Year",
-      "2026-02-17 | wror.com | This Day in Rock History : February 17",
-      "2026-02-17 | kpcnews.com | Community Calendar",
-      "2026-02-17 | the-messenger.com | Shares fall in Japan , while most Asian markets are shut for Lunar New Year"
+      "2026-02-17 | moneycontrol.com | India likely to keep gold out of trade deal with Gulf bloc"
     ],
-    "countryActionHeadlines": [
-      "2026-02-17 | livemint.com | Chinese New Year 2026 : How China stock market closures hit gold and silver prices - Time to buy ?",
-      "2026-02-17 | businessday.co.za | Robust dollar takes shine off gold",
-      "2026-02-17 | thedailystar.net | Dollar holds gains in thin trading as markets await Fed minutes , US GDP",
-      "2026-02-17 | zawya.com | Gold falls 1 % on firmer dollar , thin Asia trade",
-      "2026-02-17 | investinglive.com | investingLive Asia - Pacific FX news wrap : USD / JPY sharp drop"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
+      "2026-02-17 | timesofindia.indiatimes.com | Gold price today : Yellow metal slips ; check 24K , 22K city - wise rates in Delhi , Mumbai , Kolkata and more",
       "2026-02-17 | bankingnews.gr | Incredible Bitcoin prediction : Why the dollar is the real enemy , and how BTC could hit $1 million",
-      "2026-02-17 | investinglive.com | AI bubble top tail risk , long gold most crowded trade according to BofA survey",
-      "2026-02-17 | livemint.com | Chinese New Year 2026 : How China stock market closures hit gold and silver prices - Time to buy ?"
+      "2026-02-17 | investinglive.com | AI bubble top tail risk , long gold most crowded trade according to BofA survey"
     ]
   }
 }
