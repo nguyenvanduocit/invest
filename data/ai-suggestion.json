@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T07:23:12.824Z",
+  "generatedAt": "2026-02-17T08:15:04.789Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,67 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị hãm lại trong ngắn hạn (-2.36% tuần qua). Mặc dù xu hướng vĩ mô vẫn hỗ trợ vàng nhờ lợi suất thực giảm và VIX tăng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi giá thế giới đã mất ngưỡng 5,000 USD/oz.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực cao kỷ lục 5 năm (percentile 100%) với đà tăng bị hãm lại trong 7 ngày qua (-2%), cho thấy áp lực chốt lời ngắn hạn mạnh mẽ mặc dù xu hướng dài hạn vẫn tích cực nhờ lợi suất thực Mỹ giảm.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tiềm ẩn rủi ro mua đỉnh cao độ.",
-      "Động lượng ngắn hạn yếu đi: giá thế giới giảm -2.26% trong 5 ngày và mất ngưỡng tâm lý 5,000 USD/oz (đang ở 4910.3 USD/oz).",
-      "Yếu tố hỗ trợ vĩ mô: Lợi suất thực Mỹ 10 năm giảm mạnh 5 ngày qua (-4.76%) và VIX tăng 31.44% trong 20 ngày cho thấy lo ngại rủi ro vẫn hiện hữu.",
-      "Premium 17.97% đang ở vùng cao so với trung bình 30 ngày (khoảng 13-14%), thanh khoản tại mức giá 181 triệu có thể thấp."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.2 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng ngắn hạn yếu đi: giá giảm 2% trong 7 ngày qua và thấp hơn MA7 (156.5 triệu VND/lượng), đối lập với xu hướng tăng 7.24% của cả tháng.",
+      "Lợi suất thực Mỹ 10Y giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày là tín hiệu vĩ mô hỗ trợ vàng, nhưng chưa đủ để đẩy giá qua đỉnh cũ.",
+      "Premium 17.54% hiện tại cao hơn đáng kể so với mức 13.05% đầu tháng 1, cho thấy giá nội địa đã định giá quá lạc quan so với biến động giá thế giới."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu hơn nếu giá thế giới không nhanh chóng lấy lại mốc 5,000 USD/oz.",
-      "Thanh khoản thấp ở vùng giá đỉnh lịch sử khiến việc chốt lời hoặc thoát hàng gặp khó khăn.",
-      "Dữ liệu vĩ mô thiếu chỉ số USD Index (DXY) khiến việc đánh giá sức mạnh đồng USD không đầy đủ."
+      "Rủi ro điều chỉnh giá sâu về mức hỗ trợ MA7 (~156.5 triệu VND/lượng) sau giai đoạn tăng nóng kéo dài.",
+      "Biến động ngày cao (2.29%) cộng với việc giá đang kẹt ở đỉnh lịch sử có thể gây thua lỗ ngắn hạn cho nhà đầu tư MUA bây giờ.",
+      "Dữ liệu sự kiện vĩ mô (Olympic, quảng cáo IRA) có độ tin cậy thấp, thiếu tín hiệu địa chính trị rõ ràng để thúc đẩy đột phá giá."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price vs MA7",
+        "key": "Giá SJC hiện tại",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 5d",
-        "value": -2.26,
+        "key": "Vị thế percentile 5 năm",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động giá 7 ngày",
+        "value": -2,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 giá SJC",
+        "value": 156517562,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10Y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": -4.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 20d",
+        "key": "Thay đổi VIX 20 ngày",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium vs 30d Avg",
-        "value": 17.97,
+        "key": "Chênh lệch Premium",
+        "value": 17.54,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T07:22:33.935Z",
+    "latestTimestamp": "2026-02-17T08:14:34.333Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153434510.63855898,
-    "premiumPct": 17.97,
-    "change7dPct": -2.36,
-    "change30dPct": 6.86,
+    "intlVndPerTael": 153993085.9539878,
+    "premiumPct": 17.54,
+    "change7dPct": -2,
+    "change30dPct": 7.24,
     "volatilityDailyPct": 2.29,
-    "ma7VndPerTael": 156437765,
-    "ma30VndPerTael": 155169390,
+    "ma7VndPerTael": 156517562,
+    "ma30VndPerTael": 155188009,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,33 +84,30 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T07:22:55.384Z",
+    "fetchedAt": "2026-02-17T08:14:42.537Z",
     "healthy": false,
-    "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Treasury Yield 2Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4912.055,
+        "value": 4930.005,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -1.61,
-        "change5dPct": -2.26,
-        "change20dPct": 3.12,
+        "change1dPct": -1.25,
+        "change5dPct": -1.9,
+        "change20dPct": 3.49,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 118.2407,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-06",
+        "change1dPct": -0.22,
+        "change5dPct": 0.29,
+        "change20dPct": -1.54,
         "relationToGold": "inverse"
       },
       {
@@ -154,12 +157,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.47,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": -1.42,
+        "change5dPct": 0,
+        "change20dPct": -1.14,
         "relationToGold": "inverse"
       },
       {
@@ -182,14 +185,27 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-17 | investinglive.com | investingLive Asia - Pacific FX news wrap : USD / JPY sharp drop",
-      "2026-02-17 | marketscreener.com | Gold falls on easing geopolitical risks , stronger dollar",
-      "2026-02-17 | ianslive.in | Gold , silver prices continue to decline amid weakening safe haven demand",
-      "2026-02-17 | thehindubusinessline.com | Gold slides below $5 , 000 as Lunar New Year holiday mutes trade",
-      "2026-02-17 | miragenews.com | Gold , Silver Defy Norms in Historic Rally"
+    "geopoliticalHeadlines": [
+      "2026-02-14 | thestar.com.my | Gu Ailing  bummed  about FIS training schedule after reaching Olympic big air final",
+      "2026-02-14 | thetimes.com | Why Russia uses poison to silence enemies like Alexei Navalny",
+      "2026-02-14 | nytimes.com | One day later , Canada and Sweden Olympic curling beef is still simmering",
+      "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
+      "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
     ],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [
+      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
+      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
+      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
+      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
+      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
+      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
+    ]
   }
 }

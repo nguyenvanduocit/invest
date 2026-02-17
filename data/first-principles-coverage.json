@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-17T07:22:55.458Z",
+  "checkedAt": "2026-02-17T08:14:42.615Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-17T07:22:55.384Z",
+  "dataFetchedAt": "2026-02-17T08:14:42.537Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,44 +9,22 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 6,
-    "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Treasury Yield 2Y"
+    "availableFactors": 8,
+    "missingFactors": [],
+    "staleFactors": [
+      "US Dollar Trade Weighted Index (2026-02-06)"
     ],
-    "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 13,
-    "dollarYieldCount": 0,
-    "sourceFailures": [
-      {
-        "id": "usd_index_trade_weighted",
-        "error": "HTTP 504"
-      },
-      {
-        "id": "us_treasury_2y",
-        "error": "HTTP 504"
-      },
-      {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
-      }
-    ],
+    "geopoliticalCount": 5,
+    "countryActionCount": 7,
+    "dollarYieldCount": 8,
+    "sourceFailures": [],
     "healthy": false
   },
-  "hardFailures": [
-    "Missing required factors: US Dollar Trade Weighted Index, US Treasury Yield 2Y",
-    "Not enough geopolitical events (0/3)",
-    "Not enough dollar/yield events (0/3)"
-  ],
+  "hardFailures": [],
   "warnings": [
-    "Source failures: usd_index_trade_weighted (HTTP 504); us_treasury_2y (HTTP 504); gdelt_geopolitics (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)"
   ],
-  "canProceedToIntegration": false
+  "canProceedToIntegration": true
 }
