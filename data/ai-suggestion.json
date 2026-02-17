@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T15:19:06.912Z",
+  "generatedAt": "2026-02-17T16:20:40.287Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với biến động cao; vàng thế giới điều chỉnh giảm -3.4% tuần qua, nhưng VIX tăng và lợi suất thực giảm là tín hiệu hỗ trợ ngược chiều, nên chờ xác nhận xu hướng rõ hơn.",
+    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với biến động cao và premium giãn mạnh, trong khi giá thế giới điều chỉnh giảm; nhà đầu tư nên chờ xác nhận xu hướng hoặc hồi về vùng MA7 (~156.3 triệu/lượng) trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (155.1 triệu) tới 16.7%, rủi ro mua đỉp ngắn hạn lớn.",
-      "Vàng thế giới giảm -3.4% trong 7 ngày qua (từ 5043 về 4858 USD/oz), kéo premium SJC nới rộng lên 19.23% - mức cao nhất trong chuỗi 30 ngày.",
-      "VIX tăng mạnh +22.12% trong 5 ngày lên 21.2 điểm và lợi suất thực 10Y giảm -4.76% xuống 1.8% là tín hiệu vĩ mô tích cực (hỗ trợ giá vàng), tạo sự mâu thuẫn với đà giảm giá hiện tại.",
-      "Độ biến động ngày cao (2.33%) cộng với 4 lần drawdown trong lịch sử (tệ nhất -41.26%) cho thấy thị trường Việt Nam rất rung lắc, không phù hợp để mạo hiểm lúc giá đỉnh."
+      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (155.1 triệu/lượng) tới 16.7%, rủi ro mua đỉnh ngắn hạn đáng kể.",
+      "Premium giãn mạnh lên 18.49% từ mức 13.05% đầu chu kỳ, cho thấy thị trường Việt Nam định giá quá mức so với giá thế giới đang điều chỉnh (-2.79% trong 7 ngày).",
+      "VIX tăng mạnh 22.12% trong 5 ngày lên mức 21.2 điểm nhưng giá vàng không tăng tương ứng, tín hiệu cho thấy động lượng tăng đã yếu đi.",
+      "Lợi suất thực 10 năm Mỹ giảm 4.76% trong 5 ngày về 1.8% là hỗ trợ dài hạn, nhưng giá vàng thế giới vẫn giảm cho thấy áp lực chốt lời ngắn hạn đang chiếm ưu thế."
     ],
     "risks": [
-      "Premium 19.23% có thể co hẹp nhanh nếu giá thế giới tiếp tục giảm, khiến giá SJC điều chỉnh mạnh dù thế giới hồi phục.",
-      "Thiếu sự kiện địa chính trị cấp bách trong dữ liệu đầu vào, rủi ro suy diễn tín hiệu VIX là nhiễu.",
-      "Lạm phát kỳ vọng (breakeven) giảm -2.99% trong 5 ngày, tín hiệu yếu cầu trú ẩn lạm phát giảm sút."
+      "Giá có thể tiếp tục điều chỉnh sâu về vùng hỗ trợ kỹ thuật MA7 (~156.3 triệu/lượng) nếu giá thế giới không giữ được mức 4,800 USD/oz.",
+      "Biến động ngày cao (2.31%) và premium giãn rộng tạo rủi ro thanh khoản nếu thị trường sốc ngược.",
+      "Thiếu dữ liệu lãi suất Fed Funds hiệu quả làm giảm khả năng đánh giá chính xác định hướng chính sách tiền tệ ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 năm",
-        "value": 100,
+        "key": "SJC Price vs MA30",
+        "value": 16.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -3.4,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC/Thế giới",
-        "value": 19.23,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4858.03,
-        "unit": "USD/oz",
+        "key": "Premium Expansion",
+        "value": 5.44,
+        "unit": "percentage points",
         "source": "monthly_series_30d"
       },
       {
-        "key": "VIX Index",
-        "value": 21.2,
-        "unit": "index",
+        "key": "5Y Percentile",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX 5d Change",
+        "value": 22.12,
+        "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "Lợi suất thực US 10Y",
+        "key": "US Real Yield 10Y",
         "value": 1.8,
         "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "MA30 giá SJC",
-        "value": 155114952,
-        "unit": "VND/lượng",
+        "key": "Gold Spot 7d Change",
+        "value": -2.79,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.31,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T15:18:25.396Z",
+    "latestTimestamp": "2026-02-17T16:19:55.136Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 151801352.22448078,
-    "premiumPct": 19.23,
-    "change7dPct": -3.4,
-    "change30dPct": 5.72,
-    "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 156204457,
-    "ma30VndPerTael": 155114952,
+    "intlVndPerTael": 152757062.020185,
+    "premiumPct": 18.49,
+    "change7dPct": -2.79,
+    "change30dPct": 6.38,
+    "volatilityDailyPct": 2.31,
+    "ma7VndPerTael": 156340987,
+    "ma30VndPerTael": 155146809,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T15:18:40.293Z",
+    "fetchedAt": "2026-02-17T16:20:17.431Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Effective Fed Funds Rate"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4864.105,
+        "value": 4885.435,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -2.57,
-        "change5dPct": -3.21,
-        "change20dPct": 2.11,
+        "change1dPct": -2.14,
+        "change5dPct": -2.79,
+        "change20dPct": 2.56,
         "relationToGold": "context"
       },
       {
@@ -141,12 +137,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -192,26 +188,24 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | thestar.com.my | Gu Ailing  bummed  about FIS training schedule after reaching Olympic big air final",
-      "2026-02-14 | thetimes.com | Why Russia uses poison to silence enemies like Alexei Navalny",
-      "2026-02-14 | nytimes.com | One day later , Canada and Sweden Olympic curling beef is still simmering",
-      "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
-      "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
+      "2026-02-17 | marketscreener.com | Commodities : oil looks for a direction",
+      "2026-02-17 | cnbcafrica.com | BMI : Major SSA currencies to exhibit greater stability in 2026",
+      "2026-02-17 | torontosun.com | U . S . civil rights leader Jesse Jackson dies at 84",
+      "2026-02-17 | kevinmd.com | The honest broker in pediatrics : Building the medical home",
+      "2026-02-17 | marketscreener.com | BHP Targets $10 Billion in Asset Sales to Help Fund Copper Expansion -- Commodities Roundup",
+      "2026-02-17 | broomfieldenterprise.com | Wall Street heads lower in premarket trading as tech stocks"
     ],
     "countryActionHeadlines": [
-      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data"
+      "2026-02-17 | marketpulse.com | Markets Today : Yen rebounds , Pound Sinks on Labour Data , Gold slides 2 % as Market Focus Shifts to Diplomacy",
+      "2026-02-17 | marketpulse.com | Breaking News : Canadian CPI eases from 3 - month high , USD / CAD extends gains",
+      "2026-02-17 | timesofindia.indiatimes.com | Gold , Silver price today : Precious metals slide up to 2 % in Delhi on weak demand , soft global cues",
+      "2026-02-17 | bulawayo24.com | Zimbabwe tames inflation , now the test is keeping it below 10 %",
+      "2026-02-17 | businesstoday.in | Gold , silver outlook remains bright , but leverage proved brutal for retail investors : Pravesh Jain",
+      "2026-02-17 | newsghana.com.gh | Gold Retreats from Record Highs as Fed Uncertainty Weighs on Market"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
-      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
+      "2026-02-17 | marketpulse.com | Markets Today : Yen rebounds , Pound Sinks on Labour Data , Gold slides 2 % as Market Focus Shifts to Diplomacy",
+      "2026-02-17 | timesofindia.indiatimes.com | Gold , Silver price today : Precious metals slide up to 2 % in Delhi on weak demand , soft global cues"
     ]
   }
 }
