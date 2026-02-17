@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T05:29:46.576Z",
+  "generatedAt": "2026-02-17T06:21:58.714Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, trong khi giá thế giới điều chỉnh giảm và thanh khoản thấp do lễ Tết Trung Quốc; nhà đầu tư nên chờ đợt điều chỉnh sâu hơn hoặc tín hiệu ổn định từ thị trường quốc tế trước khi vào lệnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 6.59%/tháng, nhưng động lượng ngắn hạn đã suy yếu (-2.6%/tuần) và giá thế giới đang điều chỉnh giảm, khuyến nghị chờ xác nhận tín hiệu ổn định trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (155.1 triệu VND/lượng) tới 16.7%, rủi ro mua đỉp ngắn hạn rất lớn.",
-      "Premium tăng vọt lên 18.26% từ mức 9.91% đầu tháng (2026-01-22), cho thấy thị trường nội địa đang định giá quá nóng so với biến động giá thế giới.",
-      "Giá thế giới giảm 1.82% xuống 4901 USD/oz và thanh khoản thấp (holiday in China), thiếu động lực để duy trì đà tăng lịch sử.",
-      "VIX tăng mạnh 20.82 (+31.44% trong 20 ngày) nhưng vàng không tăng giá tương ứng, tín hiệu phân kỳ cho thấy đà tăng có thể yếu dần."
+      "Giá SJC 181 triệu VND/lượng đang giao dịch quá cao so với MA7 (156.4 triệu) và MA30 (155.2 triệu), rủi ro điều chỉnh kỹ thuật lớn khi percentile 5 năm đạt 100%.",
+      "Premium tăng vọt lên 18.25% từ mức 13.05% đầu tháng, cho thấy thị trường Việt Nam định giá quá nhiệt so với biến động giá thế giới (-1.89%/ngày).",
+      "VIX tăng 31.44% trong 20 ngày và lợi suất thực Mỹ giảm 3.23% hỗ trợ vàng dài hạn, nhưng giá XAUUSD đã giảm 2.53% trong 5 ngày gần nhất cần thời gian ổn định."
     ],
     "risks": [
-      "Premium có thể co lại nhanh về mức trung bình 13-15%, gây mất giá cho người mua ở mức 18%+.",
-      "Giá thế giới nếu phá vỡ dưới 4800 USD/oz sẽ kéo tâm lý thị trường Việt Nam điều chỉnh mạnh.",
-      "Rủi ro thanh khoản thấp sau Tết khiến chênh lệch Mua-Bán giãn rộng, tăng chi phí giao dịch."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới tiếp tục giảm và premium co lại từ mức 18.25% về trung bình 15%.",
+      "Thanh khoản có thể giảm khi nhà đầu tư chốt lời sau đà tăng 6.59% trong 30 ngày qua.",
+      "Biến động cao 2.3%/ngày có thể gây kích thích tài khoản đòn bẩy."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium vs World",
+        "value": 18.25,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 6.59,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 7d",
+        "value": -2.6,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5Y Percentile",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium vs Jan 22",
-        "value": 8.35,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "SJC vs MA30",
-        "value": 16.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 1D",
-        "value": -1.82,
+        "key": "XAUUSD Change 5d",
+        "value": -2.53,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Level",
-        "value": 20.82,
-        "unit": "index",
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -3.23,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20D",
+        "key": "VIX Change 20d",
         "value": 31.44,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y",
-        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T05:29:20.421Z",
+    "latestTimestamp": "2026-02-17T06:21:20.870Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153054178.56413487,
-    "premiumPct": 18.26,
+    "intlVndPerTael": 153060314.63576514,
+    "premiumPct": 18.25,
     "change7dPct": -2.6,
     "change30dPct": 6.59,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156383432,
-    "ma30VndPerTael": 155156712,
+    "ma7VndPerTael": 156384309,
+    "ma30VndPerTael": 155156917,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T05:29:28.718Z",
+    "fetchedAt": "2026-02-17T06:21:42.364Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4901.395,
+        "value": 4898.085,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -1.82,
-        "change5dPct": -2.47,
-        "change20dPct": 2.89,
+        "change1dPct": -1.89,
+        "change5dPct": -2.53,
+        "change20dPct": 2.82,
         "relationToGold": "context"
       },
       {
@@ -185,23 +190,8 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-17 | miragenews.com | Gold , Silver Defy Norms in Historic Rally",
-      "2026-02-17 | moneycontrol.com | Gold slipped 1 . 36 % today to $4 , 977 / oz ; is now the right time to invest ?",
-      "2026-02-17 | theage.com.au | Gateway readies rigs for 16km WA gold play",
-      "2026-02-17 | finance.yahoo.com | Oil in spotlight as Trump Iran warning rattles sleepy markets"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-17 | miragenews.com | Gold , Silver Defy Norms in Historic Rally",
-      "2026-02-17 | fxstreet.com | Gold declines as trading volumes remain subdued due to holidays in China",
-      "2026-02-17 | fxstreet.com | Canadian Dollar dips to one - week low vs . USD as traders await CPI data",
-      "2026-02-17 | fxstreet.com | Silver Price Forecast : XAG / USD drops to near $76 . 00 while investors await FOMC Minutes"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-17 | miragenews.com | Gold , Silver Defy Norms in Historic Rally",
-      "2026-02-17 | moneycontrol.com | Gold slipped 1 . 36 % today to $4 , 977 / oz ; is now the right time to invest ?",
-      "2026-02-17 | fxstreet.com | Gold declines as trading volumes remain subdued due to holidays in China",
-      "2026-02-17 | fxstreet.com | Silver Price Forecast : XAG / USD drops to near $76 . 00 while investors await FOMC Minutes"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
