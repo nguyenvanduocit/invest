@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T17:23:13.860Z",
+  "generatedAt": "2026-02-17T18:20:01.165Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,63 +7,57 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang kẹt ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị hãm lại sau đợt điều chỉnh 7 ngày; trong khi đó, premium vọt lên 19.13% tạo rủi ro điều chỉnh giá nội địa nếu giá thế giới tiếp tục giảm.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị kiệt sức khi giá thế giới điều chỉnh -2.97% trong 5 ngày qua, tạo ra rủi ro mua đuôi cao trong ngắn hạn cho nhà đầu tư cá nhân.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang giao dịch quá xa MA7 (156.2 triệu) và ở mức percentile 100% trong 5 năm, báo hiệu vùng quá mua kỹ thuật.",
-      "Đà tăng yếu đi rõ rệt với change7dPct = -3.31% dù change30dPct vẫn dương 5.81%, cho thấy động lượng mua đã chuyển sang chốt lời.",
-      "Premium giãn mạnh lên 19.13% (so với mức 13-15% phổ biến trong tháng), trong khi giá thế giới giảm -2.58% ngày 17/02, gây áp lực lên biên lợi nhuận nhà đầu tư.",
-      "VIX tăng 22.12% trong 5 ngày và bài phát biểu của Trump cảnh báo Iran gây bất ổn địa chính trị, nhưng giá vàng thế giới vẫn giảm cho thấy áp lực USD mạnh hơn yếu tố an toàn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (156.3 triệu VND/lượng) tới 15.8% cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Động lượng giá thế giới suy yếu: XAUUSD giảm -2.33% trong 1 ngày và -2.97% trong 5 ngày về mức 4875.96 USD/oz, kéo theo giá quy đổi VND giảm tương ứng.",
+      "Premium VND nới rộng đột ngột lên 18.8% từ mức 13.89% ngày 13/02, cho thấy chênh lệch thanh khoản đang căng thẳng và rủi ro điều chỉnh premium là hiện hữu.",
+      "VIX tăng mạnh +22.12% trong 5 ngày lên 21.2 điểm nhưng vàng không tăng giá, biểu hiện tín hiệu phân kỳ tiêu cực về động lượng an toàn."
     ],
     "risks": [
-      "Premium 19.13% có thể co về mức trung bình 14-15%, khiến giá SJC giảm sâu hơn giá thế giới.",
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở đỉnh 5 năm và đã có dấu hiệu đảo chiều tuần.",
-      "Dữ liệu vĩ mô (lợi suất thực, Fed funds) bị trễ 5 ngày so với hiện tại, có thể bỏ sót biến động chính sách mới nhất."
+      "Premium 18.8% có thể co hẹp nhanh chóng nếu giá thế giới tiếp tục điều chỉnh sâu, gây thiệt hại cho người mua đuôi.",
+      "Biến động ngày 2.32% kết hợp với vị thế đỉnh 5 năm làm tăng nguy cơ chịu lỗ ngắn hạn nếu thị trường sửa chữa tăng nhiệt.",
+      "Thiếu tín hiệu vĩ mô rõ ràng từ Fed/ECB trong các phát ngôn gần đây, thị trường có thể dao động thiếu định hướng."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Percentage",
-        "value": 19.13,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 7 Days",
-        "value": -3.31,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA7",
-        "value": 156224369,
-        "unit": "VND/lượng",
+        "key": "sjc_premium_current",
+        "value": 18.8,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 1 Day",
-        "value": -2.58,
+        "key": "xauusd_change_5d",
+        "value": -2.97,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 5 Days",
+        "key": "sjc_vs_ma7_premium",
+        "value": 15.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change_5d",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y",
+        "key": "daily_volatility",
+        "value": 2.32,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
         "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
@@ -71,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T17:22:30.642Z",
+    "latestTimestamp": "2026-02-17T18:19:26.823Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 151940735.13671064,
-    "premiumPct": 19.13,
-    "change7dPct": -3.31,
-    "change30dPct": 5.81,
-    "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 156224369,
-    "ma30VndPerTael": 155119598,
+    "intlVndPerTael": 152361644.59005007,
+    "premiumPct": 18.8,
+    "change7dPct": -3.04,
+    "change30dPct": 6.11,
+    "volatilityDailyPct": 2.32,
+    "ma7VndPerTael": 156284499,
+    "ma30VndPerTael": 155133628,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T17:22:52.107Z",
+    "fetchedAt": "2026-02-17T18:19:43.132Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4863.565,
+        "value": 4875.985,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -2.58,
-        "change5dPct": -3.22,
-        "change20dPct": 2.1,
+        "change1dPct": -2.33,
+        "change5dPct": -2.97,
+        "change20dPct": 2.36,
         "relationToGold": "context"
       },
       {
@@ -184,23 +178,24 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel",
       "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation",
       "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
-      "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025",
-      "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro"
+      "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-17 | manilatimes.net | Oil in spotlight as Trump Iran warning rattles sleepy markets",
-      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle"
+      "2026-02-17 | manilatimes.net | Oil in spotlight as Trump Iran warning rattles sleepy markets"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data",
+    "countryActionHeadlines": [
+      "2026-02-17 | marketscreener.com | Canadian dollar hits 11 - day low as cooler inflation boosts rate cut bets",
       "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle",
+      "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data",
+      "2026-02-17 | thehindubusinessline.com | Rupee stabilises as dollar lacks momentum - The HinduBusinessLine",
       "2026-02-17 | el-balad.com | TSX Falls as Gold Declines ; Investors Analyze Inflation Data",
-      "2026-02-17 | economictimes.indiatimes.com | gold prices : Gold prices fall below $4 , 900 as strong dollar , US data fears , and US - Iran talks pressure markets"
-    ]
+      "2026-02-17 | economictimes.indiatimes.com | why copper price falling today explained : Metals market alert : Why copper price is falling today after stockpiles hit 20 - year high and aluminum slips amid tariff uncertainty"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
