@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T08:15:04.789Z",
+  "generatedAt": "2026-02-17T09:20:48.662Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực cao kỷ lục 5 năm (percentile 100%) với đà tăng bị hãm lại trong 7 ngày qua (-2%), cho thấy áp lực chốt lời ngắn hạn mạnh mẽ mặc dù xu hướng dài hạn vẫn tích cực nhờ lợi suất thực Mỹ giảm.",
+    "thesis": "Giá SJC 181 triệu VND/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với premium giãn rộng mức cao (17.68%), nhưng động lượng ngắn hạn đã suy yếu (-2.12% trong 7 ngày) và giá cách xa MA30 tới 16.6%, khuyến nghị chờ hồi điều chỉnh về vùng 170-175 triệu trước khi vào lệnh thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.2 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng ngắn hạn yếu đi: giá giảm 2% trong 7 ngày qua và thấp hơn MA7 (156.5 triệu VND/lượng), đối lập với xu hướng tăng 7.24% của cả tháng.",
-      "Lợi suất thực Mỹ 10Y giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày là tín hiệu vĩ mô hỗ trợ vàng, nhưng chưa đủ để đẩy giá qua đỉnh cũ.",
-      "Premium 17.54% hiện tại cao hơn đáng kể so với mức 13.05% đầu tháng 1, cho thấy giá nội địa đã định giá quá lạc quan so với biến động giá thế giới."
+      "Giá SJC hiện tại 181 triệu VND/lượng ở mức cao nhất 5 năm (percentile 100%), cách xa MA30 (155.2 triệu VND/lượng) 16.6%, rủi ro mua đỉnh ngắn hạn rất cao.",
+      "Premium 17.68% đang ở vùng cao trong chuỗi 30 ngày (so với mức thấp nhất 6.33% ngày 28/01), cho thấy giá nội địa đã phản ứng quá mức so với giá thế giới.",
+      "Động lượng ngắn hạn quay đầu giảm -2.12% (7 ngày) trong khi xu hướng 30 ngày vẫn tăng +7.11%, tín hiệu phân kỳ cho thấy áp lực bán tháo ngắn hạn đang xuất hiện.",
+      "VIX tăng mạnh +31.44% (20 ngày) lên 20.82 điểm nhưng giá vàng thế giới giảm -2.12% (5 ngày) và USD Index mạnh (118.24 điểm), vàng chưa hưởng lợi từ tâm lý rủi ro."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu về mức hỗ trợ MA7 (~156.5 triệu VND/lượng) sau giai đoạn tăng nóng kéo dài.",
-      "Biến động ngày cao (2.29%) cộng với việc giá đang kẹt ở đỉnh lịch sử có thể gây thua lỗ ngắn hạn cho nhà đầu tư MUA bây giờ.",
-      "Dữ liệu sự kiện vĩ mô (Olympic, quảng cáo IRA) có độ tin cậy thấp, thiếu tín hiệu địa chính trị rõ ràng để thúc đẩy đột phá giá."
+      "Premium có thể co hẹp nhanh từ 17.68% về mức trung bình 13-14% nếu giá thế giới hồi phục trong khi giá nội địa điều chỉnh, gây thiệt hại cho người mua đỉnh.",
+      "Thị trường thanh khoản thấp dịp Tết Nguyên Đán (Asian markets shut) có thể gây biến động giá bất thường và spread mua bán giãn rộng.",
+      "Dữ liệu vĩ mô không đầy đủ (healthy: false) và tin tức địa chính trị nhiễu, có thể bỏ sót các yếu tố rủi ro quan trọng."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Vị thế percentile 5 năm",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá 7 ngày",
-        "value": -2,
+        "key": "SJC Price vs MA30 Deviation",
+        "value": 16.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 156517562,
-        "unit": "VND/lượng",
+        "key": "Premium Current",
+        "value": 17.68,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y",
-        "value": 1.8,
+        "key": "Premium 30D Low",
+        "value": 6.33,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Thay đổi VIX 20 ngày",
+        "key": "SJC Change 7D",
+        "value": -2.12,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30D",
+        "value": 7.11,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Change 20D",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Chênh lệch Premium",
-        "value": 17.54,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "USD Index Value",
+        "value": 118.24,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T08:14:34.333Z",
+    "latestTimestamp": "2026-02-17T09:17:41.862Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153993085.9539878,
-    "premiumPct": 17.54,
-    "change7dPct": -2,
-    "change30dPct": 7.24,
+    "intlVndPerTael": 153807148.64098883,
+    "premiumPct": 17.68,
+    "change7dPct": -2.12,
+    "change30dPct": 7.11,
     "volatilityDailyPct": 2.29,
-    "ma7VndPerTael": 156517562,
-    "ma30VndPerTael": 155188009,
+    "ma7VndPerTael": 156490999,
+    "ma30VndPerTael": 155181811,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T08:14:42.537Z",
+    "fetchedAt": "2026-02-17T09:17:53.688Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4930.005,
+        "value": 4918.945,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -1.25,
-        "change5dPct": -1.9,
-        "change20dPct": 3.49,
+        "change1dPct": -1.47,
+        "change5dPct": -2.12,
+        "change20dPct": 3.26,
         "relationToGold": "context"
       },
       {
@@ -186,26 +192,20 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-14 | thestar.com.my | Gu Ailing  bummed  about FIS training schedule after reaching Olympic big air final",
-      "2026-02-14 | thetimes.com | Why Russia uses poison to silence enemies like Alexei Navalny",
-      "2026-02-14 | nytimes.com | One day later , Canada and Sweden Olympic curling beef is still simmering",
-      "2026-02-14 | toronto.citynews.ca | Canadian curler at Olympics insists he no cheat , accuses Swedish team of  premeditated  attack",
-      "2026-02-14 | gazette.com | Colorado Springs area military events starting Feb . 15"
+      "2026-02-17 | kpcnews.com | Community Calendar",
+      "2026-02-17 | the-messenger.com | Shares fall in Japan , while most Asian markets are shut for Lunar New Year",
+      "2026-02-17 | hometownregister.com | Not just props that eat : Extras seek recognition at their own  Oscars",
+      "2026-02-17 | telegraphherald.com | Glen Powell to produce new  Texas Chainsaw Massacre  TV series , film | Features",
+      "2026-02-17 | mining.com | Press Release",
+      "2026-02-17 | pakistantelegraph.com | Sensex down 230 pts , Nifty loses 100 pts in early trade as markets open on cautious note amid US - Iran tensions"
     ],
     "countryActionHeadlines": [
-      "2026-02-14 | lebanondemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | suncommercial.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | the-messenger.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | voiceofalexandria.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | mtdemocrat.com | ECB to extend euro backstop to boost currency global role",
-      "2026-02-14 | zawya.com | Gold gains on dip - buying ; investors await US inflation data"
+      "2026-02-17 | livemint.com | Chinese New Year 2026 : How China stock market closures hit gold and silver prices - Time to buy ?",
+      "2026-02-17 | businessday.co.za | Robust dollar takes shine off gold",
+      "2026-02-17 | thedailystar.net | Dollar holds gains in thin trading as markets await Fed minutes , US GDP",
+      "2026-02-17 | zawya.com | Gold falls 1 % on firmer dollar , thin Asia trade",
+      "2026-02-17 | investinglive.com | investingLive Asia - Pacific FX news wrap : USD / JPY sharp drop"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
-      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
