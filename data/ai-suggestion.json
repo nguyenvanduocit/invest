@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T22:08:29.458Z",
+  "generatedAt": "2026-02-17T23:08:28.502Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,46 +7,46 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) kèm biên độ premium mở rộng đột biến lên 18.73%, trong khi giá thế giới điều chỉnh mạnh -2.3% do rủi ro địa chính trị hạ nhiệt. Nhà đầu tư nên chờ đợi sự ổn định của premium hoặc xác nhận xu hướng mới thay vì mua đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi giá thế giới điều chỉnh giảm mạnh; nhà đầu tư nên chờ đợi信 hiệu ổn định hoặc giảm sâu hơn trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), rủi ro điều chỉnh cao khi mua đuổi.",
-      "Premium tăng vọt từ mức 6.33% (28/01) lên 18.73% hiện tại, mức cao nhất trong chuỗi 30 ngày, cho thấy giá nội địa đã định giá quá cao so với thế giới.",
-      "Giá thế giới giảm mạnh -2.3% xuống 4,877.5 USD/oz và -2.94% trong 5 ngày, phá vỡ ngưỡng tâm lý 5,000 USD/oz do tin tức Mỹ-Iran đàm phán làm giảm nhu cầu trú ẩn.",
-      "VIX tăng 22.12% trong 5 ngày nhưng giá vàng thế giới vẫn giảm, cho thấy sự phân kỳ tiêu cực - vàng không còn được ưu tiên làm tài sản trú ẩn an toàn trong ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá thế giới đã giảm 4.13% trong 5 ngày gần nhất.",
+      "Premium tăng vọt lên mức 18.97% (gần đỉnh 30 ngày), cho thấy giá nội địa đã định giá quá cao so với biến động giá quốc tế hiện tại.",
+      "Đà tăng giá SJC đã suy yếu rõ rệt với change7dPct = -4.17%, ngược chiều với xu hướng tăng 30 ngày (+4.24%), tín hiệu đảo chiều ngắn hạn.",
+      "VIX tăng mạnh 22.12% trong 5 ngày nhưng giá vàng không tăng, cho thấy động lượng tăng đã mất."
     ],
     "risks": [
-      "Premium 18.73% có thể co lại nhanh chóng về mức trung bình 13-15% nếu giá thế giới tiếp tục giảm, gây thua lỗ cho người mua đuổi.",
-      "Biên độ dao động ngày 2.28% và thay đổi 7 ngày -3.97% cho thấy thanh khoản và biến động giá cao, rủi ro chốt lãi/lỗ lớn trong ngắn hạn.",
-      "Thiếu dữ liệu Fed Funds Rate và tin tức địa chính trị không đủ rõ ràng, có thể gây nhiễu tín hiệu định giá."
+      "Giá thế giới có thể phục hồi nhanh do lợi suất thực 10 năm giảm sâu (-5.85% trong 20 ngày), đẩy giá nội địa cao hơn nữa.",
+      "Premium có thể tiếp tục mở rộng nếu tâm lý thị trường Việt Nam lo sợ lạm phát thực phẩm tăng 7.3%.",
+      "Thiếu dữ liệu vĩ mô Việt Nam cụ thể (lãi suất, tỷ giá VND) khiến độ tin cậy đánh giá giảm."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "premium_current",
-        "value": 18.73,
+        "value": 18.97,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 6.33,
+        "key": "sjc_change_7d",
+        "value": -4.17,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_1d",
-        "value": -2.3,
+        "key": "gold_spot_change_5d",
+        "value": -4.13,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_change_5d",
-        "value": -2.94,
+        "key": "us_real_yield_10y_change_20d",
+        "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -57,23 +57,23 @@
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -3.97,
-        "unit": "%",
+        "key": "sjc_current_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T22:07:50.015Z",
+    "latestTimestamp": "2026-02-17T23:07:56.985Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 152449610.67799202,
-    "premiumPct": 18.73,
-    "change7dPct": -3.97,
-    "change30dPct": 4.45,
+    "intlVndPerTael": 152137773.43665957,
+    "premiumPct": 18.97,
+    "change7dPct": -4.17,
+    "change30dPct": 4.24,
     "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 155406942,
-    "ma30VndPerTael": 155355742,
+    "ma7VndPerTael": 155362394,
+    "ma30VndPerTael": 155345348,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T22:08:11.130Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate"
-    ],
+    "fetchedAt": "2026-02-17T23:08:12.006Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4877.525,
+        "value": 4874.545,
         "unit": "USD/oz",
-        "date": "2026-02-17",
-        "change1dPct": -2.3,
-        "change5dPct": -2.94,
-        "change20dPct": 2.39,
+        "date": "2026-02-18",
+        "change1dPct": -0.06,
+        "change5dPct": -4.13,
+        "change20dPct": 0.87,
         "relationToGold": "context"
       },
       {
@@ -137,12 +135,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-16",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -188,16 +186,22 @@
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
     "geopoliticalHeadlines": [
+      "2026-02-17 | newjerseytelegraph.com | SMX Low Float Infrastructure Story : After Gold $5 , 500 Record Price , Could This Be a Path Back to Prior Highs ?",
       "2026-02-17 | thechronicle.com.gh | The Gold Coast Regiment and Ghana part in the world wars - The Ghanaian Chronicle"
     ],
     "countryActionHeadlines": [
+      "2026-02-17 | bravenewcoin.com | Silver ( XAG / USD ) Price Prediction : Silver Slips Below $75 Support Ahead of FOMC Minutes , SLV Braces for Volatility",
+      "2026-02-17 | finance-commerce.com | U . S . dollar could rebound after four - month slide",
+      "2026-02-17 | gx94radio.com | Food inflation spiked 7 . 3 % in January . Here what driving the increase | GX94 Radio - Now That Country !",
       "2026-02-17 | fxstreet.com | Forex Today : US Dollar trims gains despite strong ADP jobs data",
       "2026-02-17 | fxstreet.com | Gold plunges over 3 % as US - Iran talks boost USD demand",
-      "2026-02-17 | fxstreet.com | Fed Barr : We should be prepared for  short - term disruptions  in the labor market from AI",
-      "2026-02-17 | fxstreet.com | Australian Dollar Price Forecast : Further losses could revisit the 0 . 7000 level",
-      "2026-02-17 | economictimes.indiatimes.com | gold investment opportunities after price drop : Will gold triple in 2026 ? Why investors placed massive bets after gold historic price correction",
-      "2026-02-17 | medicinehatnews.com | Food inflation spiked 7 . 3 % in January . Here what driving the increase - Medicine Hat NewsMedicine Hat News"
+      "2026-02-17 | fxstreet.com | Fed Barr : We should be prepared for  short - term disruptions  in the labor market from AI"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-17 | rttnews.com | TSX Remains Firmly Down Despite Softer - than - expected Inflation Data",
+      "2026-02-17 | fxstreet.com | Forex Today : US Dollar trims gains despite strong ADP jobs data",
+      "2026-02-17 | fxstreet.com | Gold plunges over 3 % as US - Iran talks boost USD demand",
+      "2026-02-17 | hawaiitelegraph.com | U . S . Gold Bureau Announces Expanded Resources for Investors Exploring a Precious Metals IRA"
+    ]
   }
 }
