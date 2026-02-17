@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T03:02:22.521Z",
+  "generatedAt": "2026-02-17T04:38:13.901Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh hóa ở mức kỷ lục 181 triệu/lượng (percentile 5 năm 100%) với đà tăng 30 ngày đã kịch kim (+8.09%), trong khi giá thế giới đang điều chỉnh giảm; nhà đầu tư không nên mua đuổi mà chờ tín hiệu ổn định hoặc hồi về vùng 175-177 triệu.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, yêu cầu nhà đầu tư chờ đợi điểm nhập khẩu tốt hơn thay vì đu đỉnh. Dù lợi suất thực USD giảm và VIX tăng hỗ trợ giá vàng dài hạn, nhưng biên độ dao động cao (2.28%) và premium giãn rộng (16.95%) tạo rủi ro điều chỉnh ngắn hạn.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), rủi ro mua đỉnh rất lớn khi đã tăng mạnh +8.09% trong 30 ngày qua.",
-      "Động lượng tăng giá thế giới đã suy yếu, giảm -1.13% trong 5 ngày và -0.47% ngày qua, trong khi lợi suất thực Mỹ (1.8%) vẫn duy trì áp lực lên giá vàng.",
-      "Premium 16.62% đang ở vùng cao so với trung bình chuỗi 30 ngày (10-18%), thanh khoản có thể giảm khi giá quá cao."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.2 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
+      "Đà tăng trưởng 7 ngày chậm lại đáng kể (-1.51%) so với xu hướng mạnh của 30 ngày trước đó (+7.78%), cho thấy động lượng tăng đang yếu đi.",
+      "Premium giãn rộng lên 16.95% (tương đương ~26.2 triệu VND/lượng) so với mức trung bình khu vực 11-14% trong tháng, làm giảm hiệu quả chi phí đầu tư.",
+      "Lợi suất thực USD 10Y giảm 4.76% trong 5 ngày xuống 1.8% và VIX tăng 31.44% trong 20 ngày là tín hiệu vĩ mô tích cực hỗ trợ giá vàng nền tảng, hạn chế rủi ro bán tháo mạnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới tiếp tục giảm và premium co lại về mức 13-14%.",
-      "Thiếu dữ liệu USD Index và Fed Funds Rate khiến đánh giá xu hướng vĩ mô chưa hoàn chỉnh.",
-      "Biên độ dao động 2.27%/ngày cho thấy thị trường đang rung lắc mạnh, dễ bị quét stoploss."
+      "Rủi ro điều chỉnh giá cao do biên độ dao động ngày lớn (2.28%) sau khi giá đạt đỉnh lịch sử.",
+      "Premium co hẹp đột ngột có thể khiến giá SJC giảm nhanh hơn giá thế giới, gây thua lỗ cho người mua đu đỉnh.",
+      "Thanh khoản thấp do kỳ nghỉ lễ tại Trung Quốc có thể gây biến động giá bất thường thiếu định hướng."
     ],
     "evidence": [
       {
@@ -26,59 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 8.09,
+        "key": "sjc_premium_vs_intl",
+        "value": 16.95,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_current_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "gold_spot_change_5d",
-        "value": -1.13,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 16.62,
+        "key": "sjc_change_7d_vs_30d",
+        "value": -1.51,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_20d",
+        "key": "sjc_vs_ma30_gap",
+        "value": 25.8,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_5d_change",
+        "value": -4.76,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_20d_change",
         "value": 31.44,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.27,
+        "key": "volatility_daily",
+        "value": 2.28,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T03:00:42.524Z",
+    "latestTimestamp": "2026-02-17T04:37:45.763Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155205365.22480187,
-    "premiumPct": 16.62,
-    "change7dPct": -1.23,
-    "change30dPct": 8.09,
-    "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156690745,
-    "ma30VndPerTael": 155228419,
+    "intlVndPerTael": 154765192.312489,
+    "premiumPct": 16.95,
+    "change7dPct": -1.51,
+    "change30dPct": 7.78,
+    "volatilityDailyPct": 2.28,
+    "ma7VndPerTael": 156627863,
+    "ma30VndPerTael": 155213746,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,33 +84,30 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T03:01:04.004Z",
+    "fetchedAt": "2026-02-17T04:37:53.968Z",
     "healthy": false,
-    "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Effective Fed Funds Rate"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4968.915,
+        "value": 4951.285,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -0.47,
-        "change5dPct": -1.13,
-        "change20dPct": 4.31,
+        "change1dPct": -0.82,
+        "change5dPct": -1.48,
+        "change20dPct": 3.94,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 118.2407,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-06",
+        "change1dPct": -0.22,
+        "change5dPct": 0.29,
+        "change20dPct": -1.54,
         "relationToGold": "inverse"
       },
       {
@@ -143,12 +135,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -193,8 +185,20 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-17 | theage.com.au | Gateway readies rigs for 16km WA gold play",
+      "2026-02-17 | finance.yahoo.com | Oil in spotlight as Trump Iran warning rattles sleepy markets",
+      "2026-02-17 | grenadachronicle.com | Russia - Ukraine war : List of key events , day 1 , 454 - Grenada Chronicle – Daily Grenada And Caribbean News"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-17 | fxstreet.com | Gold declines as trading volumes remain subdued due to holidays in China",
+      "2026-02-17 | fxstreet.com | Canadian Dollar dips to one - week low vs . USD as traders await CPI data",
+      "2026-02-17 | fxstreet.com | Silver Price Forecast : XAG / USD drops to near $76 . 00 while investors await FOMC Minutes"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-17 | fxstreet.com | Gold declines as trading volumes remain subdued due to holidays in China",
+      "2026-02-17 | fxstreet.com | Silver Price Forecast : XAG / USD drops to near $76 . 00 while investors await FOMC Minutes",
+      "2026-02-17 | econotimes.com | Gold and Silver Prices Slip Ahead of Key U . S . Economic Data and Fed Minutes"
+    ]
   }
 }
