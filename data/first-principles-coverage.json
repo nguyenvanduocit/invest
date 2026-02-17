@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-17T12:13:18.386Z",
+  "checkedAt": "2026-02-17T13:29:40.639Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-17T12:13:18.310Z",
+  "dataFetchedAt": "2026-02-17T13:29:40.567Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,32 +9,22 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [
       "US Dollar Trade Weighted Index (2026-02-06)"
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 4,
-    "countryActionCount": 11,
-    "dollarYieldCount": 8,
-    "sourceFailures": [
-      {
-        "id": "gold_spot_xauusd",
-        "error": "Malformed Stooq daily CSV payload"
-      }
-    ],
+    "geopoliticalCount": 9,
+    "countryActionCount": 10,
+    "dollarYieldCount": 11,
+    "sourceFailures": [],
     "healthy": false
   },
-  "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD"
-  ],
+  "hardFailures": [],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)",
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)"
   ],
-  "canProceedToIntegration": false
+  "canProceedToIntegration": true
 }

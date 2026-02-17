@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T12:13:39.836Z",
+  "generatedAt": "2026-02-17T13:29:59.358Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua (+7.44%), nhưng động lượng đã chững lại và giá thế giới đang điều chỉnh giảm, đòi hỏi nhà đầu tư kiên nhẫn chờ vùng giá tốt hơn trước khi vào lệnh.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với premium cao (17.76%) trong khi giá thế giới điều chỉnh giảm; chờ đợi hồi phục kỹ thuật hoặc thu hẹp premium trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.2 triệu VND/lượng), cho thấy rủi ro mua đỉp ngắn hạn là đáng kể.",
-      "Động lượng tăng đã suy yếu: giá thế giới giảm 1.82% trong 7 ngày gần nhất (từ đỉnh 5080 USD/oz xuống 4937 USD/oz) trong khi giá SJC vẫn neo cao, kéo mức premium lên 17.32%.",
-      "Lợi suất thực USD 10 năm giảm 4.76% trong 5 ngày (xuống 1.8%) và VIX tăng 31.44% trong 20 ngày là tín hiệu hỗ trợ vĩ mô tích cực, nhưng chưa đủ để đẩy giá phá đỉnh ngay lập tức khi USD Index vẫn mạnh (118.24).",
-      "Biên độ dao động cao (2.28%/ngày) và premium mở rộng cho thấy thanh khoản thị trường đang căng thẳng, không phù hợp để MUA mạnh ở vùng giá hiện tại."
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (155.2 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua ngắn hạn.",
+      "Premium 17.76% ở mức cao so với trung bình 30 ngày (13.1%), rủi ro thu hẹp chênh lệch nếu giá thế giới không tăng mạnh.",
+      "Giá thế giới giảm -2.08% trong 5 ngày gần nhất (từ ~5043 về 4918 USD/oz), động lượng ngắn hạn yếu đi.",
+      "VIX tăng 31.44% trong 20 ngày cho thấy lo ngại thị trường, nhưng lợi suất thực 10Y vẫn dương 1.8% kìm hãm đà tăng vàng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 4900 USD/oz và premium co lại về mức trung bình (13-15%), đẩy giá SJC về vùng 170-175 triệu VND/lượng.",
-      "Sự thiếu vắng dữ liệu Gold Spot XAUUSD trực tiếp (trạng thái healthy: false) làm giảm độ tin cậy của tín hiệu phân tích kỹ thuật ngắn hạn.",
-      "Thanh khoản thấp và biến động cao (volatility 2.28%) có thể gây trượt giá lớn khi thực hiện giao dịch quy mô lớn."
+      "Premium co lại nhanh từ 17.76% về mức trung bình 13-14% gây lỗ giá cho người mua đuổi.",
+      "Giá thế giới phá vỡ hỗ trợ ngắn hạn nếu USD tiếp tục mạnh từ mức 118.24.",
+      "Thanh khoản thấp khi giá ở đỉnh lịch sử, khó thoát hàng với spread tốt."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA30",
-        "value": 25.8,
-        "unit": "triệu VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC 30D Change",
-        "value": 7.44,
+        "key": "sjc_price_vs_ma30",
+        "value": 16.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "World Gold 7D Change",
-        "value": -1.82,
+        "key": "premium_current",
+        "value": 17.76,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Current Premium",
-        "value": 17.32,
+        "key": "premium_30d_avg",
+        "value": 13.1,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "US Real Yield 10Y 5D Change",
-        "value": -4.76,
+        "key": "intl_gold_5d_change",
+        "value": -2.08,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX 20D Change",
+        "key": "vix_20d_change",
         "value": 31.44,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "5Y Percentile",
+        "key": "us_real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T12:13:08.231Z",
+    "latestTimestamp": "2026-02-17T13:29:32.371Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154274053.16484234,
-    "premiumPct": 17.32,
-    "change7dPct": -1.82,
-    "change30dPct": 7.44,
-    "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 156557700,
-    "ma30VndPerTael": 155197375,
+    "intlVndPerTael": 153700457.8009783,
+    "premiumPct": 17.76,
+    "change7dPct": -2.19,
+    "change30dPct": 7.04,
+    "volatilityDailyPct": 2.29,
+    "ma7VndPerTael": 156475758,
+    "ma30VndPerTael": 155178255,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T12:13:18.310Z",
+    "fetchedAt": "2026-02-17T13:29:40.567Z",
     "healthy": false,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": null,
+        "value": 4920.855,
         "unit": "USD/oz",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-17",
+        "change1dPct": -1.43,
+        "change5dPct": -2.08,
+        "change20dPct": 3.3,
         "relationToGold": "context"
       },
       {
@@ -188,23 +186,24 @@
       "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-17 | argentinastar.com | Camino Intercepts High - Grade Copper with 83 . 5m at 0 . 94 % Cu including 7 . 1m at 2 . 13 % Cu at Los Chapitos , Peru",
-      "2026-02-17 | npr.org | Glenn , Liu and Levito are Olympic figure skating women to watch : NPR",
-      "2026-02-17 | wknofm.org | U . S . women figure skaters couldve been rivals . Instead , theyre the  Blade Angels",
-      "2026-02-17 | indianexpress.com | Gurugram roads only 4 - 5 metres wide in most inspected stretches , HC told in stilt - plus - four PIL"
+      "2026-02-17 | finanznachrichten.de | Scottie Resources Corp .: Scottie Resources Demonstrates More High - Grade Continuity at Blueberry Contact Zone Including 141 g / t Gold over 4 . 55 Metres and 54 . 6 g / t Gold over 7 . 05 Metres",
+      "2026-02-17 | ibtimes.co.uk | ANZ Says Gold Remains The Ultimate Insurance Policy as Prices Set to Reach $5 , 800 in Q2 , Supported by Fed Rate Cuts",
+      "2026-02-17 | enca.com | Springs gold rush sparks legal and safety warnings"
     ],
     "countryActionHeadlines": [
+      "2026-02-17 | ibtimes.co.uk | ANZ Says Gold Remains The Ultimate Insurance Policy as Prices Set to Reach $5 , 800 in Q2 , Supported by Fed Rate Cuts",
+      "2026-02-17 | marketscreener.com | TSX futures fall as gold dips ; inflation data in focus",
       "2026-02-17 | zawya.com | Nigeria : Naira strengthens to $0 . 99 per dollar at official market",
       "2026-02-17 | londonlovesbusiness.com | The decisive trend battle for gold - London Business News | Londonlovesbusiness . com",
-      "2026-02-17 | marketscreener.com | TSX futures fall as gold dips ; inflation data in focus",
       "2026-02-17 | timesofindia.indiatimes.com | Gold price today : Yellow metal slips ; check 24K , 22K city - wise rates in Delhi , Mumbai , Kolkata and more",
       "2026-02-17 | thehindu.com | Gold futures drop nearly 2 % to ₹1 . 52 lakh / 10g on strong dollar"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-17 | ibtimes.co.uk | ANZ Says Gold Remains The Ultimate Insurance Policy as Prices Set to Reach $5 , 800 in Q2 , Supported by Fed Rate Cuts",
+      "2026-02-17 | thebftonline.com | What gold and copper tell us about the new logic of mining investment in Africa",
       "2026-02-17 | tribune.com.pk | Gold prices in Pakistan Today - February 17 , 2026",
-      "2026-02-17 | londonlovesbusiness.com | The decisive trend battle for gold - London Business News | Londonlovesbusiness . com",
       "2026-02-17 | marketscreener.com | TSX futures fall as gold dips ; inflation data in focus",
-      "2026-02-17 | timesofindia.indiatimes.com | Gold price today : Yellow metal slips ; check 24K , 22K city - wise rates in Delhi , Mumbai , Kolkata and more"
+      "2026-02-17 | londonlovesbusiness.com | The decisive trend battle for gold - London Business News | Londonlovesbusiness . com"
     ]
   }
 }
