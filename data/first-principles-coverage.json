@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-17T19:21:01.926Z",
+  "checkedAt": "2026-02-17T20:11:42.974Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-17T19:21:01.849Z",
+  "dataFetchedAt": "2026-02-17T20:11:42.897Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,22 +9,42 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 6,
+    "missingFactors": [
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y"
+    ],
     "staleFactors": [
       "US Dollar Trade Weighted Index (2026-02-06)"
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 9,
-    "countryActionCount": 14,
-    "dollarYieldCount": 10,
-    "sourceFailures": [],
+    "geopoliticalCount": 0,
+    "countryActionCount": 15,
+    "dollarYieldCount": 13,
+    "sourceFailures": [
+      {
+        "id": "us_fed_funds_effective",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_2y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
+      }
+    ],
     "healthy": false
   },
-  "hardFailures": [],
-  "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)"
+  "hardFailures": [
+    "Missing required factors: US Effective Fed Funds Rate, US Treasury Yield 2Y",
+    "Not enough geopolitical events (0/3)"
   ],
-  "canProceedToIntegration": true
+  "warnings": [
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)",
+    "Source failures: us_fed_funds_effective (The operation timed out.); us_treasury_2y (The operation timed out.); gdelt_geopolitics (HTTP 429)"
+  ],
+  "canProceedToIntegration": false
 }

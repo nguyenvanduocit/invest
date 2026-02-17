@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T19:21:26.313Z",
+  "generatedAt": "2026-02-17T20:12:11.111Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với đợt điều chỉnh kỹ thuật -2.67% tuần qua; xu hướng trung hạn vẫn tăng nhưng rủi ro mua đỉh cao do premium nới rộng nhanh lên 18.34% và VIX tăng vọt.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động mạnh, trong khi giá thế giới đang điều chỉnh giảm và VIX tăng vọt cho thấy thanh khoản thị trường đang căng thẳng.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm năng tăng thêm hạn chế trong ngắn hạn sau đợt tăng +6.51% tháng qua.",
-      "Premium nới rộng mạnh lên 18.34% từ mức ~13% đầu tháng, cho thấy giá Việt Nam đã chạy trước giá thế giới và rủi ro thu hẹp premium nếu giá thế giới tiếp tục điều chỉnh.",
-      "VIX tăng vọt +22.12% trong 5 ngày lên mức 21.2 điểm, tín hiệu lo ngại thị trường thường đi kèm đợt chốt lời tài sản rủi ro.",
-      "Giá thế giới XAUUSD giảm -2.73% trong 5 ngày về 4888 USD/oz, kéo MA7 xuống dưới MA30 trên đồ thị thế giới, tín hiệu điều chỉnh kỹ thuật ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm và giảm 4.03% trong 7 ngày qua, cho thấy áp lực chốt lời ngắn hạn rất lớn.",
+      "Premium tăng vọt lên 18.79% từ mức 10.91% đầu chuỗi dữ liệu, thanh khoản mua vào ở mức giá đỉnh hiện mang rủi ro cao nếu premium hồi về trung bình.",
+      "Giá thế giới giảm 2.26% xuống 4879 USD/oz và VIX tăng mạnh 22.12% trong 5 ngày, tín hiệu cho thấy dòng tiền đang rút khỏi tài sản rủi ro.",
+      "Lợi suất thực 10 năm giảm 4.76% trong 5 ngày xuống 1.8% là yếu tố hỗ trợ dài hạn, nhưng tín hiệu ngắn hạn đang xung đột với xu hướng giảm giá hiện tại."
     ],
     "risks": [
-      "Giá thế giới có thể phục hồi nhanh nếu lợi suất thực Mỹ (hiện 1.8%) tiếp tục giảm, khiến nhà đầu tư CHỜ bỏ lỡ cơ hội mua giá tốt.",
-      "Premium 18.34% có thể duy trì hoặc mở rộng thêm nếu cầu nội địa Việt Nam tăng mạnh do tâm lý FOMO, gây thiệt hại cho vị thế bán/chờ.",
-      "Dữ liệu vĩ mô (lợi suất, USD Index) bị trễ 5 ngày so với hiện tại, có thể không phản ánh đúng các biến động mới nhất của thị trường."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới tiếp tục giảm và premium SJC co lại từ mức 18.79% hiện tại.",
+      "Biến động ngày ở mức 2.28% kết hợp với VIX 21.2 điểm có thể gây sốc thanh khoản cho nhà đầu tư dùng đòn bẩy.",
+      "Thiếu dữ liệu lãi suất Fed Funds và Treasury 2Y khiến khả năng đánh giá chính sách tiền tệ ngắn hạn bị hạn chế."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 18.34,
+        "key": "SJC Change 7d",
+        "value": -4.03,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "Premium Current",
+        "value": 18.79,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động VIX 5 ngày",
+        "key": "Premium Start of Series",
+        "value": 10.91,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Gold Spot Change 1d",
+        "value": -2.26,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 5d",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới (XAUUSD)",
-        "value": 4888.495,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.8,
+        "key": "US Real Yield 10Y Change 5d",
+        "value": -4.76,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Thay đổi giá SJC 7 ngày",
-        "value": -2.67,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T19:20:54.008Z",
+    "latestTimestamp": "2026-02-17T20:11:21.004Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 152942776.53850693,
-    "premiumPct": 18.34,
-    "change7dPct": -2.67,
-    "change30dPct": 6.51,
-    "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156367518,
-    "ma30VndPerTael": 155152999,
+    "intlVndPerTael": 152363745.671969,
+    "premiumPct": 18.79,
+    "change7dPct": -4.03,
+    "change30dPct": 4.39,
+    "volatilityDailyPct": 2.28,
+    "ma7VndPerTael": 155394676,
+    "ma30VndPerTael": 155352880,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,22 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T19:21:01.849Z",
+    "fetchedAt": "2026-02-17T20:11:42.897Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4888.495,
+        "value": 4879.465,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -2.08,
-        "change5dPct": -2.73,
-        "change20dPct": 2.62,
+        "change1dPct": -2.26,
+        "change5dPct": -2.91,
+        "change20dPct": 2.43,
         "relationToGold": "context"
       },
       {
@@ -135,12 +138,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -157,12 +160,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.47,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-12",
-        "change1dPct": -1.42,
-        "change5dPct": 0,
-        "change20dPct": -1.14,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -185,25 +188,19 @@
       "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-17 | centralwesterndaily.com.au | Australia rabbit crisis : how our history repeats itself | Central Western Daily",
-      "2026-02-17 | collider.com | 10 Greatest Spy Thrillers of the Last 100 Years , Ranked",
-      "2026-02-17 | sbsun.com | US Cancer Institute studying ivermectin  ability to kill cancer cell – San Bernardino Sun",
-      "2026-02-17 | bunburymail.com.au | Australia rabbit crisis : how our history repeats itself | Bunbury Mail",
-      "2026-02-17 | ucsdguardian.org | Timeout : Winter Olympics edition",
-      "2026-02-17 | westernadvocate.com.au | Australia rabbit crisis : how our history repeats itself | Western Advocate"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-17 | cp24.com | StatCan : Food inflation spiked 7 . 3 % in January",
+      "2026-02-17 | forbes.com | Brands Are Hiking Prices Just As Inflation Cools",
+      "2026-02-17 | lethbridgeherald.com | Food inflation spiked 7 . 3 % in January . Here what driving the increase",
       "2026-02-17 | marketscreener.com | Canadian dollar hits 11 - day low as cooler inflation boosts rate cut bets",
-      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle",
-      "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data",
-      "2026-02-17 | thehindubusinessline.com | Rupee stabilises as dollar lacks momentum - The HinduBusinessLine",
-      "2026-02-17 | el-balad.com | TSX Falls as Gold Declines ; Investors Analyze Inflation Data"
+      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-17 | aol.co.uk | FTSE 100 hits record high as rate cut hopes rise",
-      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle",
-      "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data"
+      "2026-02-17 | hawaiitelegraph.com | U . S . Gold Bureau Announces Expanded Resources for Investors Exploring a Precious Metals IRA",
+      "2026-02-17 | lbc.co.uk | FTSE 100 hits record high as rate cut hopes rise",
+      "2026-02-17 | bnnbloomberg.ca | AI spending debate grows as Canada inflation steadies at 2 . 3 %",
+      "2026-02-17 | aol.co.uk | FTSE 100 hits record high as rate cut hopes rise"
     ]
   }
 }
