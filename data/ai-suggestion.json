@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T13:29:59.358Z",
+  "generatedAt": "2026-02-17T14:20:16.430Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với premium cao (17.76%) trong khi giá thế giới điều chỉnh giảm; chờ đợi hồi phục kỹ thuật hoặc thu hẹp premium trước khi vào lệnh.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với động lượng giảm -2.71% trong 7 ngày qua; kỹ thuật cho thấy giá xa trung bình động và vĩ mô hỗ trợ chưa đủ mạnh để phá đỉnh ngay lập tức.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (155.2 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua ngắn hạn.",
-      "Premium 17.76% ở mức cao so với trung bình 30 ngày (13.1%), rủi ro thu hẹp chênh lệch nếu giá thế giới không tăng mạnh.",
-      "Giá thế giới giảm -2.08% trong 5 ngày gần nhất (từ ~5043 về 4918 USD/oz), động lượng ngắn hạn yếu đi.",
-      "VIX tăng 31.44% trong 20 ngày cho thấy lo ngại thị trường, nhưng lợi suất thực 10Y vẫn dương 1.8% kìm hãm đà tăng vàng."
+      "Giá SJC 181 triệu VND/lượng đang cao hơn xa MA7 (156.4 triệu) và MA30 (155.2 triệu), cho thấy thị trường đang ở trạng thái quá mua ngắn hạn.",
+      "Premium 18.4% đang ở mức cao trong chuỗi 30 ngày (so với mức thấp nhất 6.33%), rủi ro co hẹp premium nếu giá thế giới điều chỉnh.",
+      "Giá thế giới giảm -1.95% xuống 4892 USD/oz, VIX tăng 17.96% cho thấy tâm lý thị trường đang lo ngại.",
+      "Lợi suất thực 10 năm Mỹ 1.8% và Fed Funds 3.64% vẫn duy trì áp lực chi phí cơ hội lên vàng."
     ],
     "risks": [
-      "Premium co lại nhanh từ 17.76% về mức trung bình 13-14% gây lỗ giá cho người mua đuổi.",
-      "Giá thế giới phá vỡ hỗ trợ ngắn hạn nếu USD tiếp tục mạnh từ mức 118.24.",
-      "Thanh khoản thấp khi giá ở đỉnh lịch sử, khó thoát hàng với spread tốt."
+      "Điều chỉnh kỹ thuật sâu hơn nếu mất đà tăng 30 ngày (+6.46%).",
+      "Premium co hẹp từ 18.4% về mức trung bình 14-15% sẽ gây lỗ cho người mua đuổi.",
+      "Thiếu sự kiện địa chính trị cấp bách để thúc đẩy giá phá đỉnh."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 16.6,
+        "key": "SJC Price vs MA7",
+        "value": 15.8,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 17.76,
+        "key": "Premium Current",
+        "value": 18.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_avg",
-        "value": 13.1,
+        "key": "Change 7 Days",
+        "value": -2.71,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_5d_change",
-        "value": -2.08,
+        "key": "Percentile 5Y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot Change 1D",
+        "value": -1.95,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
-        "value": 31.44,
+        "key": "VIX Change 1D",
+        "value": 17.96,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
+        "key": "US Real Yield 10Y",
         "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T13:29:32.371Z",
+    "latestTimestamp": "2026-02-17T14:19:50.435Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153700457.8009783,
-    "premiumPct": 17.76,
-    "change7dPct": -2.19,
-    "change30dPct": 7.04,
-    "volatilityDailyPct": 2.29,
-    "ma7VndPerTael": 156475758,
-    "ma30VndPerTael": 155178255,
+    "intlVndPerTael": 152873585.82358402,
+    "premiumPct": 18.4,
+    "change7dPct": -2.71,
+    "change30dPct": 6.46,
+    "volatilityDailyPct": 2.31,
+    "ma7VndPerTael": 156357633,
+    "ma30VndPerTael": 155150693,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T13:29:40.567Z",
+    "fetchedAt": "2026-02-17T14:19:54.644Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4920.855,
+        "value": 4895.055,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -1.43,
-        "change5dPct": -2.08,
-        "change20dPct": 3.3,
+        "change1dPct": -1.95,
+        "change5dPct": -2.6,
+        "change20dPct": 2.76,
         "relationToGold": "context"
       },
       {
@@ -178,32 +178,20 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel",
       "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation",
       "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025",
-      "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro",
-      "2026-02-12 | ECB Press / Speeches | ECB and ESRB issue joint report analysing financial stability risks from linkages between banks and the non-bank financial intermediation sector"
+      "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-17 | finanznachrichten.de | Scottie Resources Corp .: Scottie Resources Demonstrates More High - Grade Continuity at Blueberry Contact Zone Including 141 g / t Gold over 4 . 55 Metres and 54 . 6 g / t Gold over 7 . 05 Metres",
-      "2026-02-17 | ibtimes.co.uk | ANZ Says Gold Remains The Ultimate Insurance Policy as Prices Set to Reach $5 , 800 in Q2 , Supported by Fed Rate Cuts",
-      "2026-02-17 | enca.com | Springs gold rush sparks legal and safety warnings"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-17 | ibtimes.co.uk | ANZ Says Gold Remains The Ultimate Insurance Policy as Prices Set to Reach $5 , 800 in Q2 , Supported by Fed Rate Cuts",
-      "2026-02-17 | marketscreener.com | TSX futures fall as gold dips ; inflation data in focus",
-      "2026-02-17 | zawya.com | Nigeria : Naira strengthens to $0 . 99 per dollar at official market",
-      "2026-02-17 | londonlovesbusiness.com | The decisive trend battle for gold - London Business News | Londonlovesbusiness . com",
-      "2026-02-17 | timesofindia.indiatimes.com | Gold price today : Yellow metal slips ; check 24K , 22K city - wise rates in Delhi , Mumbai , Kolkata and more",
-      "2026-02-17 | thehindu.com | Gold futures drop nearly 2 % to ₹1 . 52 lakh / 10g on strong dollar"
+      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-17 | ibtimes.co.uk | ANZ Says Gold Remains The Ultimate Insurance Policy as Prices Set to Reach $5 , 800 in Q2 , Supported by Fed Rate Cuts",
-      "2026-02-17 | thebftonline.com | What gold and copper tell us about the new logic of mining investment in Africa",
-      "2026-02-17 | tribune.com.pk | Gold prices in Pakistan Today - February 17 , 2026",
-      "2026-02-17 | marketscreener.com | TSX futures fall as gold dips ; inflation data in focus",
-      "2026-02-17 | londonlovesbusiness.com | The decisive trend battle for gold - London Business News | Londonlovesbusiness . com"
+      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says",
+      "2026-02-07 | economictimes.indiatimes.com | Bitcoin crash impact on crypto billionaires : Bitcoin ( BTC USD ) crash wipes out billions from crypto billionaires : Binance , Coinbase , and MicroStrategy leaders take huge losses"
     ]
   }
 }
