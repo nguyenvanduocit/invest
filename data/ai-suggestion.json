@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T18:20:01.165Z",
+  "generatedAt": "2026-02-17T19:21:26.313Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị kiệt sức khi giá thế giới điều chỉnh -2.97% trong 5 ngày qua, tạo ra rủi ro mua đuôi cao trong ngắn hạn cho nhà đầu tư cá nhân.",
+    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với đợt điều chỉnh kỹ thuật -2.67% tuần qua; xu hướng trung hạn vẫn tăng nhưng rủi ro mua đỉh cao do premium nới rộng nhanh lên 18.34% và VIX tăng vọt.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (156.3 triệu VND/lượng) tới 15.8% cho thấy thị trường đã mua quá mức trong ngắn hạn.",
-      "Động lượng giá thế giới suy yếu: XAUUSD giảm -2.33% trong 1 ngày và -2.97% trong 5 ngày về mức 4875.96 USD/oz, kéo theo giá quy đổi VND giảm tương ứng.",
-      "Premium VND nới rộng đột ngột lên 18.8% từ mức 13.89% ngày 13/02, cho thấy chênh lệch thanh khoản đang căng thẳng và rủi ro điều chỉnh premium là hiện hữu.",
-      "VIX tăng mạnh +22.12% trong 5 ngày lên 21.2 điểm nhưng vàng không tăng giá, biểu hiện tín hiệu phân kỳ tiêu cực về động lượng an toàn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm năng tăng thêm hạn chế trong ngắn hạn sau đợt tăng +6.51% tháng qua.",
+      "Premium nới rộng mạnh lên 18.34% từ mức ~13% đầu tháng, cho thấy giá Việt Nam đã chạy trước giá thế giới và rủi ro thu hẹp premium nếu giá thế giới tiếp tục điều chỉnh.",
+      "VIX tăng vọt +22.12% trong 5 ngày lên mức 21.2 điểm, tín hiệu lo ngại thị trường thường đi kèm đợt chốt lời tài sản rủi ro.",
+      "Giá thế giới XAUUSD giảm -2.73% trong 5 ngày về 4888 USD/oz, kéo MA7 xuống dưới MA30 trên đồ thị thế giới, tín hiệu điều chỉnh kỹ thuật ngắn hạn."
     ],
     "risks": [
-      "Premium 18.8% có thể co hẹp nhanh chóng nếu giá thế giới tiếp tục điều chỉnh sâu, gây thiệt hại cho người mua đuôi.",
-      "Biến động ngày 2.32% kết hợp với vị thế đỉnh 5 năm làm tăng nguy cơ chịu lỗ ngắn hạn nếu thị trường sửa chữa tăng nhiệt.",
-      "Thiếu tín hiệu vĩ mô rõ ràng từ Fed/ECB trong các phát ngôn gần đây, thị trường có thể dao động thiếu định hướng."
+      "Giá thế giới có thể phục hồi nhanh nếu lợi suất thực Mỹ (hiện 1.8%) tiếp tục giảm, khiến nhà đầu tư CHỜ bỏ lỡ cơ hội mua giá tốt.",
+      "Premium 18.34% có thể duy trì hoặc mở rộng thêm nếu cầu nội địa Việt Nam tăng mạnh do tâm lý FOMO, gây thiệt hại cho vị thế bán/chờ.",
+      "Dữ liệu vĩ mô (lợi suất, USD Index) bị trễ 5 ngày so với hiện tại, có thể không phản ánh đúng các biến động mới nhất của thị trường."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 18.8,
+        "key": "Premium SJC/Thế giới",
+        "value": 18.34,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_change_5d",
-        "value": -2.97,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_vs_ma7_premium",
-        "value": 15.8,
-        "unit": "%",
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_5d",
+        "key": "Biến động VIX 5 ngày",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.32,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 4888.495,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
+        "key": "Lợi suất thực Mỹ 10 năm",
         "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Thay đổi giá SJC 7 ngày",
+        "value": -2.67,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T18:19:26.823Z",
+    "latestTimestamp": "2026-02-17T19:20:54.008Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 152361644.59005007,
-    "premiumPct": 18.8,
-    "change7dPct": -3.04,
-    "change30dPct": 6.11,
-    "volatilityDailyPct": 2.32,
-    "ma7VndPerTael": 156284499,
-    "ma30VndPerTael": 155133628,
+    "intlVndPerTael": 152942776.53850693,
+    "premiumPct": 18.34,
+    "change7dPct": -2.67,
+    "change30dPct": 6.51,
+    "volatilityDailyPct": 2.3,
+    "ma7VndPerTael": 156367518,
+    "ma30VndPerTael": 155152999,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T18:19:43.132Z",
+    "fetchedAt": "2026-02-17T19:21:01.849Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4875.985,
+        "value": 4888.495,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -2.33,
-        "change5dPct": -2.97,
-        "change20dPct": 2.36,
+        "change1dPct": -2.08,
+        "change5dPct": -2.73,
+        "change20dPct": 2.62,
         "relationToGold": "context"
       },
       {
@@ -186,16 +186,24 @@
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-17 | manilatimes.net | Oil in spotlight as Trump Iran warning rattles sleepy markets"
+      "2026-02-17 | centralwesterndaily.com.au | Australia rabbit crisis : how our history repeats itself | Central Western Daily",
+      "2026-02-17 | collider.com | 10 Greatest Spy Thrillers of the Last 100 Years , Ranked",
+      "2026-02-17 | sbsun.com | US Cancer Institute studying ivermectin  ability to kill cancer cell – San Bernardino Sun",
+      "2026-02-17 | bunburymail.com.au | Australia rabbit crisis : how our history repeats itself | Bunbury Mail",
+      "2026-02-17 | ucsdguardian.org | Timeout : Winter Olympics edition",
+      "2026-02-17 | westernadvocate.com.au | Australia rabbit crisis : how our history repeats itself | Western Advocate"
     ],
     "countryActionHeadlines": [
       "2026-02-17 | marketscreener.com | Canadian dollar hits 11 - day low as cooler inflation boosts rate cut bets",
       "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle",
       "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data",
       "2026-02-17 | thehindubusinessline.com | Rupee stabilises as dollar lacks momentum - The HinduBusinessLine",
-      "2026-02-17 | el-balad.com | TSX Falls as Gold Declines ; Investors Analyze Inflation Data",
-      "2026-02-17 | economictimes.indiatimes.com | why copper price falling today explained : Metals market alert : Why copper price is falling today after stockpiles hit 20 - year high and aluminum slips amid tariff uncertainty"
+      "2026-02-17 | el-balad.com | TSX Falls as Gold Declines ; Investors Analyze Inflation Data"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-17 | aol.co.uk | FTSE 100 hits record high as rate cut hopes rise",
+      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle",
+      "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data"
+    ]
   }
 }

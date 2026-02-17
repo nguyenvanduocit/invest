@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-17T18:19:43.209Z",
+  "checkedAt": "2026-02-17T19:21:01.926Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-17T18:19:43.132Z",
+  "dataFetchedAt": "2026-02-17T19:21:01.849Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,23 +16,15 @@
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 7,
-    "countryActionCount": 13,
-    "dollarYieldCount": 0,
-    "sourceFailures": [
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
-      }
-    ],
+    "geopoliticalCount": 9,
+    "countryActionCount": 14,
+    "dollarYieldCount": 10,
+    "sourceFailures": [],
     "healthy": false
   },
-  "hardFailures": [
-    "Not enough dollar/yield events (0/3)"
-  ],
+  "hardFailures": [],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)",
-    "Source failures: gdelt_dollar_yields (HTTP 429)"
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-06)"
   ],
-  "canProceedToIntegration": false
+  "canProceedToIntegration": true
 }
