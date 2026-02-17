@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-17T16:20:40.287Z",
+  "generatedAt": "2026-02-17T17:23:13.860Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với biến động cao và premium giãn mạnh, trong khi giá thế giới điều chỉnh giảm; nhà đầu tư nên chờ xác nhận xu hướng hoặc hồi về vùng MA7 (~156.3 triệu/lượng) trước khi vào lệnh.",
+    "thesis": "Giá SJC đang kẹt ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị hãm lại sau đợt điều chỉnh 7 ngày; trong khi đó, premium vọt lên 19.13% tạo rủi ro điều chỉnh giá nội địa nếu giá thế giới tiếp tục giảm.",
     "reasons": [
-      "Giá SJC 181 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (155.1 triệu/lượng) tới 16.7%, rủi ro mua đỉnh ngắn hạn đáng kể.",
-      "Premium giãn mạnh lên 18.49% từ mức 13.05% đầu chu kỳ, cho thấy thị trường Việt Nam định giá quá mức so với giá thế giới đang điều chỉnh (-2.79% trong 7 ngày).",
-      "VIX tăng mạnh 22.12% trong 5 ngày lên mức 21.2 điểm nhưng giá vàng không tăng tương ứng, tín hiệu cho thấy động lượng tăng đã yếu đi.",
-      "Lợi suất thực 10 năm Mỹ giảm 4.76% trong 5 ngày về 1.8% là hỗ trợ dài hạn, nhưng giá vàng thế giới vẫn giảm cho thấy áp lực chốt lời ngắn hạn đang chiếm ưu thế."
+      "Giá SJC 181 triệu VND/lượng đang giao dịch quá xa MA7 (156.2 triệu) và ở mức percentile 100% trong 5 năm, báo hiệu vùng quá mua kỹ thuật.",
+      "Đà tăng yếu đi rõ rệt với change7dPct = -3.31% dù change30dPct vẫn dương 5.81%, cho thấy động lượng mua đã chuyển sang chốt lời.",
+      "Premium giãn mạnh lên 19.13% (so với mức 13-15% phổ biến trong tháng), trong khi giá thế giới giảm -2.58% ngày 17/02, gây áp lực lên biên lợi nhuận nhà đầu tư.",
+      "VIX tăng 22.12% trong 5 ngày và bài phát biểu của Trump cảnh báo Iran gây bất ổn địa chính trị, nhưng giá vàng thế giới vẫn giảm cho thấy áp lực USD mạnh hơn yếu tố an toàn."
     ],
     "risks": [
-      "Giá có thể tiếp tục điều chỉnh sâu về vùng hỗ trợ kỹ thuật MA7 (~156.3 triệu/lượng) nếu giá thế giới không giữ được mức 4,800 USD/oz.",
-      "Biến động ngày cao (2.31%) và premium giãn rộng tạo rủi ro thanh khoản nếu thị trường sốc ngược.",
-      "Thiếu dữ liệu lãi suất Fed Funds hiệu quả làm giảm khả năng đánh giá chính xác định hướng chính sách tiền tệ ngắn hạn."
+      "Premium 19.13% có thể co về mức trung bình 14-15%, khiến giá SJC giảm sâu hơn giá thế giới.",
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở đỉnh 5 năm và đã có dấu hiệu đảo chiều tuần.",
+      "Dữ liệu vĩ mô (lợi suất thực, Fed funds) bị trễ 5 ngày so với hiện tại, có thể bỏ sót biến động chính sách mới nhất."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA30",
-        "value": 16.7,
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Percentage",
+        "value": 19.13,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Expansion",
-        "value": 5.44,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "5Y Percentile",
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX 5d Change",
+        "key": "SJC Change 7 Days",
+        "value": -3.31,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC MA7",
+        "value": 156224369,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot Change 1 Day",
+        "value": -2.58,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 5 Days",
         "value": 22.12,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
         "key": "US Real Yield 10Y",
         "value": 1.8,
         "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Gold Spot 7d Change",
-        "value": -2.79,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.31,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T16:19:55.136Z",
+    "latestTimestamp": "2026-02-17T17:22:30.642Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 152757062.020185,
-    "premiumPct": 18.49,
-    "change7dPct": -2.79,
-    "change30dPct": 6.38,
-    "volatilityDailyPct": 2.31,
-    "ma7VndPerTael": 156340987,
-    "ma30VndPerTael": 155146809,
+    "intlVndPerTael": 151940735.13671064,
+    "premiumPct": 19.13,
+    "change7dPct": -3.31,
+    "change30dPct": 5.81,
+    "volatilityDailyPct": 2.33,
+    "ma7VndPerTael": 156224369,
+    "ma30VndPerTael": 155119598,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T16:20:17.431Z",
+    "fetchedAt": "2026-02-17T17:22:52.107Z",
     "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4885.435,
+        "value": 4863.565,
         "unit": "USD/oz",
         "date": "2026-02-17",
-        "change1dPct": -2.14,
-        "change5dPct": -2.79,
-        "change20dPct": 2.56,
+        "change1dPct": -2.58,
+        "change5dPct": -3.22,
+        "change20dPct": 2.1,
         "relationToGold": "context"
       },
       {
@@ -137,12 +141,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-12",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -188,24 +192,15 @@
       "2026-02-12 | ECB Press / Speeches | Philip R. Lane: Bulgaria and the euro"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-17 | marketscreener.com | Commodities : oil looks for a direction",
-      "2026-02-17 | cnbcafrica.com | BMI : Major SSA currencies to exhibit greater stability in 2026",
-      "2026-02-17 | torontosun.com | U . S . civil rights leader Jesse Jackson dies at 84",
-      "2026-02-17 | kevinmd.com | The honest broker in pediatrics : Building the medical home",
-      "2026-02-17 | marketscreener.com | BHP Targets $10 Billion in Asset Sales to Help Fund Copper Expansion -- Commodities Roundup",
-      "2026-02-17 | broomfieldenterprise.com | Wall Street heads lower in premarket trading as tech stocks"
+      "2026-02-17 | manilatimes.net | Oil in spotlight as Trump Iran warning rattles sleepy markets",
+      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle"
     ],
-    "countryActionHeadlines": [
-      "2026-02-17 | marketpulse.com | Markets Today : Yen rebounds , Pound Sinks on Labour Data , Gold slides 2 % as Market Focus Shifts to Diplomacy",
-      "2026-02-17 | marketpulse.com | Breaking News : Canadian CPI eases from 3 - month high , USD / CAD extends gains",
-      "2026-02-17 | timesofindia.indiatimes.com | Gold , Silver price today : Precious metals slide up to 2 % in Delhi on weak demand , soft global cues",
-      "2026-02-17 | bulawayo24.com | Zimbabwe tames inflation , now the test is keeping it below 10 %",
-      "2026-02-17 | businesstoday.in | Gold , silver outlook remains bright , but leverage proved brutal for retail investors : Pravesh Jain",
-      "2026-02-17 | newsghana.com.gh | Gold Retreats from Record Highs as Fed Uncertainty Weighs on Market"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-17 | marketpulse.com | Markets Today : Yen rebounds , Pound Sinks on Labour Data , Gold slides 2 % as Market Focus Shifts to Diplomacy",
-      "2026-02-17 | timesofindia.indiatimes.com | Gold , Silver price today : Precious metals slide up to 2 % in Delhi on weak demand , soft global cues"
+      "2026-02-17 | investopedia.com | Stock Market Today : Stocks Pare Early Losses in Volatile Session To Start Week of Inflation , GDP Data",
+      "2026-02-17 | webpronews.com | Gold Relentless Ascent : Why Goldman Sachs Sees $4 , 000 and What It Signals About a Brewing Commodity Supercycle",
+      "2026-02-17 | el-balad.com | TSX Falls as Gold Declines ; Investors Analyze Inflation Data",
+      "2026-02-17 | economictimes.indiatimes.com | gold prices : Gold prices fall below $4 , 900 as strong dollar , US data fears , and US - Iran talks pressure markets"
     ]
   }
 }
