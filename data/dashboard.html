@@ -1864,6 +1864,13 @@
     }
 
     // === Price Action TA ===
+    const taPresets = {
+      scalper:  { label: 'Scalper',     rsi: 7,  macdF: 6,  macdS: 13, macdSig: 5, bb: 10, momA: 3,  momB: 5,  maF: 5,  maS: 15, sr: 10 },
+      day:      { label: 'Day Trader',  rsi: 14, macdF: 12, macdS: 26, macdSig: 9, bb: 20, momA: 5,  momB: 10, maF: 7,  maS: 30, sr: 20 },
+      swing:    { label: 'Swing',       rsi: 21, macdF: 12, macdS: 26, macdSig: 9, bb: 20, momA: 10, momB: 20, maF: 20, maS: 50, sr: 40 },
+    };
+    let taPreset = 'day';
+
     function calcRSI(prices, period = 14) {
       if (prices.length < period + 1) return null;
       const changes = [];
@@ -1890,12 +1897,12 @@
       return r;
     }
 
-    function calcMACD(prices) {
-      if (prices.length < 35) return null;
-      const emaF = calcEMA(prices, 12);
-      const emaS = calcEMA(prices, 26);
+    function calcMACD(prices, fast = 12, slow = 26, sig = 9) {
+      if (prices.length < slow + sig) return null;
+      const emaF = calcEMA(prices, fast);
+      const emaS = calcEMA(prices, slow);
       const macdLine = emaF.map((v, i) => v - emaS[i]);
-      const sigLine = calcEMA(macdLine, 9);
+      const sigLine = calcEMA(macdLine, sig);
       const n = prices.length - 1;
       const hist = macdLine[n] - sigLine[n];
       const prevHist = macdLine[n - 1] - sigLine[n - 1];
@@ -1927,27 +1934,28 @@
 
     function renderTA(data) {
       const section = document.getElementById('ta-section');
-      if (!section || data.length < 30) { if (section) section.innerHTML = ''; return; }
+      if (!section || data.length < 15) { if (section) section.innerHTML = ''; return; }
 
+      const p = taPresets[taPreset];
       const prices = data.map(d => d.usdPerOunce || d.vndPerTael);
       const vndPrices = data.map(d => d.vndPerTael);
       const fN = (n, d = 1) => n !== null ? n.toFixed(d) : 'N/A';
       const fV = (n) => n ? n.toLocaleString('vi-VN', { maximumFractionDigits: 0 }) : 'N/A';
 
-      // Indicators
-      const rsi = calcRSI(prices);
-      const macd = calcMACD(prices);
-      const bbPct = calcBBPct(prices);
-      const mom5 = calcMom(prices, 5);
-      const mom10 = calcMom(prices, 10);
+      // Indicators using preset config
+      const rsi = calcRSI(prices, p.rsi);
+      const macd = calcMACD(prices, p.macdF, p.macdS, p.macdSig);
+      const bbPct = calcBBPct(prices, p.bb);
+      const momA = calcMom(prices, p.momA);
+      const momB = calcMom(prices, p.momB);
 
       // MA crossover
-      const ma7v = prices.slice(-7).reduce((a, b) => a + b, 0) / 7;
-      const ma30v = prices.length >= 30 ? prices.slice(-30).reduce((a, b) => a + b, 0) / 30 : null;
-      const maCross = ma30v ? (ma7v > ma30v ? 'bullish' : 'bearish') : null;
+      const maFv = prices.length >= p.maF ? prices.slice(-p.maF).reduce((a, b) => a + b, 0) / p.maF : null;
+      const maSv = prices.length >= p.maS ? prices.slice(-p.maS).reduce((a, b) => a + b, 0) / p.maS : null;
+      const maCross = (maFv && maSv) ? (maFv > maSv ? 'bullish' : 'bearish') : null;
 
-      // Support / Resistance (20-day)
-      const srSlice = vndPrices.slice(-20);
+      // Support / Resistance
+      const srSlice = vndPrices.slice(-p.sr);
       const support = Math.min(...srSlice);
       const resistance = Math.max(...srSlice);
       const currentVnd = vndPrices[vndPrices.length - 1];
@@ -1980,7 +1988,7 @@
       let maSig = 'neutral', maLbl = 'N/A';
       if (maCross) {
         maSig = maCross;
-        maLbl = maCross === 'bullish' ? 'MA7 > MA30' : 'MA7 < MA30';
+        maLbl = maCross === 'bullish' ? 'MA' + p.maF + ' > MA' + p.maS : 'MA' + p.maF + ' < MA' + p.maS;
         signals.push(maSig);
       }
 
@@ -1994,11 +2002,11 @@
       }
 
       let momSig = 'neutral', momLbl = 'Đi ngang';
-      if (mom5 !== null) {
-        if (mom5 > 2) { momSig = 'bullish'; momLbl = 'Tăng mạnh'; }
-        else if (mom5 < -2) { momSig = 'bearish'; momLbl = 'Giảm mạnh'; }
-        else if (mom5 > 0.5) { momSig = 'bullish'; momLbl = 'Tăng nhẹ'; }
-        else if (mom5 < -0.5) { momSig = 'bearish'; momLbl = 'Giảm nhẹ'; }
+      if (momA !== null) {
+        if (momA > 2) { momSig = 'bullish'; momLbl = 'Tăng mạnh'; }
+        else if (momA < -2) { momSig = 'bearish'; momLbl = 'Giảm mạnh'; }
+        else if (momA > 0.5) { momSig = 'bullish'; momLbl = 'Tăng nhẹ'; }
+        else if (momA < -0.5) { momSig = 'bearish'; momLbl = 'Giảm nhẹ'; }
         signals.push(momSig);
       }
 
@@ -2013,21 +2021,29 @@
       else if (bear >= 3 && bull <= 1) { comp = 'bearish'; compLbl = 'Tiêu cực'; compAction = 'BÁN'; }
       else { comp = 'neutral'; compLbl = 'Trung tính'; compAction = 'CHỜ'; }
 
+      // Preset selector options
+      const presetOpts = Object.keys(taPresets).map(function(k) {
+        return '<option value="' + k + '"' + (k === taPreset ? ' selected' : '') + '>' + taPresets[k].label + '</option>';
+      }).join('');
+
       section.innerHTML =
         '<div class="ta-container">' +
           '<div class="ta-header">' +
             '<span><i data-lucide="activity"></i> PRICE ACTION TA</span>' +
-            '<span class="ta-subtitle">' + data.length + ' phiên | Short-term signals</span>' +
+            '<div style="display:flex;align-items:center;gap:12px;">' +
+              '<select id="taPresetSelect" class="chart-select" style="color:var(--white);background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.3);">' + presetOpts + '</select>' +
+              '<span class="ta-subtitle">' + data.length + ' phiên</span>' +
+            '</div>' +
           '</div>' +
           '<div class="ta-grid">' +
             '<div class="ta-card ' + taSignalClass(rsiSig) + '">' +
-              '<div class="ta-card-title">RSI (14)</div>' +
+              '<div class="ta-card-title">RSI (' + p.rsi + ')</div>' +
               '<div class="ta-card-value">' + fN(rsi) + '</div>' +
               '<div class="ta-card-signal">' + rsiLbl + '</div>' +
               '<div class="ta-card-bar"><div class="ta-rsi-bar"><div class="ta-rsi-fill" style="left:' + Math.min(Math.max(rsi || 50, 0), 100) + '%;"></div></div><div class="ta-rsi-zones"><span>30</span><span>70</span></div></div>' +
             '</div>' +
             '<div class="ta-card ' + taSignalClass(macdSig) + '">' +
-              '<div class="ta-card-title">MACD (12,26,9)</div>' +
+              '<div class="ta-card-title">MACD (' + p.macdF + ',' + p.macdS + ',' + p.macdSig + ')</div>' +
               '<div class="ta-card-value">' + (macd ? (macd.histogram >= 0 ? '+' : '') + fN(macd.histogram, 2) : 'N/A') + '</div>' +
               '<div class="ta-card-signal">' + macdLbl + '</div>' +
               '<div class="ta-card-detail">' + (macd ? 'Momentum: ' + (macd.momentum === 'increasing' ? 'Tăng' : 'Giảm') : '') + '</div>' +
@@ -2038,15 +2054,15 @@
               '<div class="ta-card-signal">' + (maCross === 'bullish' ? 'Golden cross' : maCross === 'bearish' ? 'Death cross' : 'N/A') + '</div>' +
             '</div>' +
             '<div class="ta-card ' + taSignalClass(bbSig) + '">' +
-              '<div class="ta-card-title">BB %B</div>' +
+              '<div class="ta-card-title">BB %B (' + p.bb + ')</div>' +
               '<div class="ta-card-value">' + fN(bbPct) + '%</div>' +
               '<div class="ta-card-signal">' + bbLbl + '</div>' +
             '</div>' +
             '<div class="ta-card ' + taSignalClass(momSig) + '">' +
-              '<div class="ta-card-title">Momentum 5D</div>' +
-              '<div class="ta-card-value">' + (mom5 !== null ? (mom5 >= 0 ? '+' : '') + fN(mom5) + '%' : 'N/A') + '</div>' +
+              '<div class="ta-card-title">Momentum ' + p.momA + 'D</div>' +
+              '<div class="ta-card-value">' + (momA !== null ? (momA >= 0 ? '+' : '') + fN(momA) + '%' : 'N/A') + '</div>' +
               '<div class="ta-card-signal">' + momLbl + '</div>' +
-              '<div class="ta-card-detail">' + (mom10 !== null ? '10D: ' + (mom10 >= 0 ? '+' : '') + fN(mom10) + '%' : '') + '</div>' +
+              '<div class="ta-card-detail">' + (momB !== null ? p.momB + 'D: ' + (momB >= 0 ? '+' : '') + fN(momB) + '%' : '') + '</div>' +
             '</div>' +
             '<div class="ta-card ta-composite ' + taSignalClass(comp) + '">' +
               '<div class="ta-card-title">Tổng hợp</div>' +
@@ -2057,7 +2073,7 @@
           '</div>' +
           '<div class="ta-levels">' +
             '<div class="ta-level-item">' +
-              '<span class="ta-level-label">Hỗ trợ (20D)</span>' +
+              '<span class="ta-level-label">Hỗ trợ (' + p.sr + 'D)</span>' +
               '<span class="ta-level-value" style="color:var(--green);">' + fV(support) + ' ₫</span>' +
               '<span class="ta-level-dist">-' + fN(distSupport) + '%</span>' +
             '</div>' +
@@ -2066,7 +2082,7 @@
               '<span class="ta-level-value">' + fV(currentVnd) + ' ₫</span>' +
             '</div>' +
             '<div class="ta-level-item">' +
-              '<span class="ta-level-label">Kháng cự (20D)</span>' +
+              '<span class="ta-level-label">Kháng cự (' + p.sr + 'D)</span>' +
               '<span class="ta-level-value" style="color:var(--red);">' + fV(resistance) + ' ₫</span>' +
               '<span class="ta-level-dist">+' + fN(distResist) + '%</span>' +
             '</div>' +
@@ -2074,6 +2090,10 @@
         '</div>';
 
       lucide.createIcons();
+
+      // Bind preset selector (re-binds each render since innerHTML replaces DOM)
+      const sel = document.getElementById('taPresetSelect');
+      if (sel) sel.addEventListener('change', function() { taPreset = this.value; renderTA(filteredData); });
     }
 
     // Initialize chart
