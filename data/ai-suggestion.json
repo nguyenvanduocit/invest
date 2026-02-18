@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T15:19:18.100Z",
+  "generatedAt": "2026-02-18T16:21:14.303Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 7.13% trong 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn cao hơn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn hỗ trợ vàng nhờ lợi suất thực USD giảm 5.85% và giá vàng thế giới giữ vững trên 5000 USD/oz.",
+    "thesis": "Giá SJC 181 triệu/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng 2.33%/ngày, xu hướng tăng trung hạn còn nhưng động lượng ngắn hạn đã suy yếu và rủi ro điều chỉnh cao.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA30 (155.4 triệu đồng/lượng) một khoảng lớn, báo hiệu khu vực quá mua kỹ thuật.",
-      "Đà tăng 30 ngày qua rất mạnh (+7.13%) nhưng động lượng đã chững lại 7 ngày gần đây (-1.51%), cho thấy thị trường cần nghỉ ngơi hoặc điều chỉnh.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 5.85% trong 20 ngày qua xuống 1.77%, tạo nền tảng vĩ mô tích cực hỗ trợ giá vàng thế giới giữ vững mức 5003.69 USD/oz.",
-      "Premium 15.85% đang ở mức cao hơn vùng thấp nhất trong chuỗi dữ liệu (6.41% ngày 28/01), cho thấy định giá nội địa đã phản ánh đầy đủ các tin tích cực."
+      "Giá SJC đang ở mức 181 triệu VND/lượng, chạm ngưỡng percentile 100% trong 5 năm và tăng mạnh 7.03% sau 30 ngày, thanh khoản cao nhưng áp lực chốt lời hiện hữu.",
+      "Premium 15.96% ở mức cao, dao động mạnh từ 6.41% đến 18.75% trong 30 ngày qua, cho thấy tâm lý thị trường Việt Nam phân hóa và rủi ro co hẹp premium nếu giá thế giới điều chỉnh.",
+      "Giá thế giới XAUUSD 4996 USD/oz giảm 1.73% trong 5 ngày và biến động theo VIX 20.29 điểm (tăng 14.05% trong 5 ngày), tín hiệu kỹ thuật ngắn hạn không rõ ràng trong bối cảnh Fed Funds Rate neo ở 3.64%.",
+      "Lợi suất trái phiếu Mỹ 10 năm giảm 4.27% trong 5 ngày xuống 4.04%, hỗ trợ giá vàng trung hạn nhưng các headline cảnh báo 'Metals Flash Crash' và 'Shanghai Flip' báo hiệu rủi ro biến động cực đoan."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá xa đường trung bình động 30 ngày và nằm ở đỉnh lịch sử 5 năm.",
-      "Biến động ngày cao (2.34%) cộng với VIX tăng 14.05% trong 5 ngày có thể gây sốc giá ngắn hạn cho nhà đầu tư dùng đòn bẩy.",
-      "Dữ liệu sự kiện vĩ mô (policyHeadlines) thiếu các tin tức trọng yếu trực tiếp đến vàng/USD, làm giảm độ tin cậy của các yếu tố thúc đẩy tăng giá tiếp theo."
+      "Giá ở đỉnh lịch sử kèm biến động cao (2.33%/ngày) có thể kích hoạt bán tháo chốt lời ngắn hạn.",
+      "Premium co giãn mạnh (6.41%-18.75%) tạo rủi ro thua lỗ cho nhà đầu tư mua đỉnh nếu premium giảm dù giá thế giới đi ngang.",
+      "Dữ liệu vĩ mô thiếu US Dollar Index và Real Yield, giảm độ tin cậy phân tích first-principles; headline 'Flash Crash' và cảnh báo chiến tranh Iran có thể gây sốc thị trường hai chiều."
     ],
     "evidence": [
       {
-        "key": "SJC Price (Latest)",
+        "key": "SJC Spot Price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5 Year",
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30 Days",
-        "value": 7.13,
+        "key": "30-Day Change SJC",
+        "value": 7.03,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 SJC",
-        "value": 155372945,
-        "unit": "VND/lượng",
+        "key": "Daily Volatility",
+        "value": 2.33,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -5.85,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Premium Range 30D",
+        "value": 6.41,
+        "unit": "% (min)",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Gold Spot XAUUSD",
-        "value": 5003.69,
+        "key": "Premium Current",
+        "value": 15.96,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "XAUUSD Spot",
+        "value": 4996.45,
         "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium vs World",
-        "value": 15.85,
+        "key": "VIX 5D Change",
+        "value": 14.05,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T15:18:34.072Z",
+    "latestTimestamp": "2026-02-18T16:20:29.375Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156239344.65686715,
-    "premiumPct": 15.85,
-    "change7dPct": -1.51,
-    "change30dPct": 7.13,
-    "volatilityDailyPct": 2.34,
-    "ma7VndPerTael": 155851299,
-    "ma30VndPerTael": 155372945,
+    "intlVndPerTael": 156092209.60559946,
+    "premiumPct": 15.96,
+    "change7dPct": -1.61,
+    "change30dPct": 7.03,
+    "volatilityDailyPct": 2.33,
+    "ma7VndPerTael": 155830279,
+    "ma30VndPerTael": 155368041,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,52 +90,56 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T15:18:55.754Z",
+    "fetchedAt": "2026-02-18T16:20:50.954Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5003.635,
+        "value": 4996.445,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 2.59,
-        "change5dPct": -1.59,
-        "change20dPct": 3.54,
+        "change1dPct": 2.44,
+        "change5dPct": -1.73,
+        "change20dPct": 3.39,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 117.5258,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-13",
-        "change1dPct": -0.01,
-        "change5dPct": -0.6,
-        "change20dPct": -2.06,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.77,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -1.67,
-        "change5dPct": -5.85,
-        "change20dPct": -5.85,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.26,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-17",
-        "change1dPct": -0.44,
-        "change5dPct": -3.83,
-        "change20dPct": -3,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -185,8 +195,25 @@
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel",
       "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Red Gold Rises : Copper Hits Record Highs as AI Boom and Trade Tensions Reshape Global Markets",
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - S & P 500 Valuation Warning : Fed Flags  Expensive  Market as Tariffs and Rates Threaten Reset"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - The Great Rotation : Volatility Triggers a Flight to Yield in Defensive Sectors",
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Labor Market Defiance : January Jobs Surge Crushes Estimates , Cooling Recession Fears While Stiffening Fed Resolve",
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - S & P 500 Valuation Warning : Fed Flags  Expensive  Market as Tariffs and Rates Threaten Reset",
+      "2026-02-18 | rttnews.com | Nvidia May Lead Early Upward Move On Wall Street",
+      "2026-02-18 | coindesk.com | Arthur Hayes : BTC will make new records as Fed responds to AI - related credit collapse",
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - The 2026 Metals Flash Crash : Gold and Silver Shudder as the  Shanghai Flip  Signals a Market Peak"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - S & P 500 Valuation Warning : Fed Flags  Expensive  Market as Tariffs and Rates Threaten Reset",
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - The 2026 Metals Flash Crash : Gold and Silver Shudder as the  Shanghai Flip  Signals a Market Peak",
+      "2026-02-18 | ibtimes.co.uk | Gold Price Warning : Fed Minutes To Reveal Interest Rate Cut Path For 2026",
+      "2026-02-18 | marketscreener.com | The Calm Before the Fed",
+      "2026-02-18 | cnbcafrica.com | Pan African Resources reports record HY profits amid gold boom",
+      "2026-02-18 | zerohedge.com | Axios reports that the Trump admin are edging closer to a war with Iran than people realise ; US equity futures are in the green - Newsquawk US Opening News"
+    ]
   }
 }
