@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-18T07:23:10.210Z",
+  "checkedAt": "2026-02-18T08:13:35.970Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-18T07:23:10.135Z",
+  "dataFetchedAt": "2026-02-18T08:13:35.893Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -14,13 +14,22 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
+    "geopoliticalCount": 0,
     "countryActionCount": 15,
-    "dollarYieldCount": 13,
-    "sourceFailures": [],
-    "healthy": true
+    "dollarYieldCount": 11,
+    "sourceFailures": [
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
+      }
+    ],
+    "healthy": false
   },
-  "hardFailures": [],
-  "warnings": [],
-  "canProceedToIntegration": true
+  "hardFailures": [
+    "Not enough geopolitical events (0/3)"
+  ],
+  "warnings": [
+    "Source failures: gdelt_geopolitics (HTTP 429)"
+  ],
+  "canProceedToIntegration": false
 }
