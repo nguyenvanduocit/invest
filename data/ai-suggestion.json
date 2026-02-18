@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T22:09:30.498Z",
+  "generatedAt": "2026-02-18T23:09:05.889Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng 2.29%/ngày, đòi hỏi nhà đầu tư thận trọng và chờ đợi điểm nhập sân tốt hơn thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động lớn, đắt hơn giá thế giới 16.63%; xu hướng tăng mạnh chịu tác động từ căng thẳng địa chính trị và lợi suất thực giảm, nhưng rủi ro điều chỉnh kỹ thuật là rất cao.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 4.53% trong 30 ngày qua.",
-      "Biên độ dao động ngày cao (2.29%) kết hợp VIX ở mức 20.29 cho thấy thị trường đang rung lắc mạnh, rủi ro mua đỉnh ngắn hạn là hiện hữu.",
-      "Lợi suất thực 10 năm của Mỹ giảm sâu 6.28% trong 20 ngày (xuống 1.79%) đang tạo nền tảng hỗ trợ vĩ mô tích cực cho giá vàng thế giới.",
-      "Premium 16.48% hiện tại cao hơn đáng kể so với mức 13.36% đầu chuỗi dữ liệu 30 ngày, phản ánh tâm lý mua mù quáng cần cảnh giác."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 4.39% sau 30 ngày, cảnh báo vùng quá mua.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 6.28% trong 20 ngày qua (xuống 1.79%) và căng thẳng Iran đẩy giá vàng thế giới về gần mốc 5,000 USD/oz, tạo động lực tăng cơ bản.",
+      "Premium 16.63% hiện tại cao hơn đáng kể so với mức 9.99-13.36% đầu chu kỳ dữ liệu, cho thấy giá nội địa đã định giá quá mức so với biến động giá thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh từ vùng đỉnh khi thị trường quá mua (overbought) ở thời giá 181 triệu.",
-      "Thanh khoản có thể giảm nếu giá đi ngang trong thời gian dài sau cú tăng 4.53%/tháng.",
-      "Biến động premium từ 9.99% đến 18.75% trong 30 ngày cho thấy chênh lệch giá trong nước không ổn định."
+      "Rủi ro điều chỉnh giá cao do vùng quá mua kỹ thuật khi giá立在đỉnh 5 năm.",
+      "Biên độ dao động ngày 2.29% cộng với premium giãn rộng gây bất ổn chi phí giao dịch.",
+      "VIX tăng 14.05% trong 5 ngày cho thấy thanh khoản thị trường có thể thay đổi nhanh chóng."
     ],
     "evidence": [
       {
@@ -33,47 +32,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.29,
-        "unit": "%/ngày",
+        "key": "Premium vs World",
+        "value": 16.63,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "US Real Yield 10Y Change 20d",
         "value": -6.28,
         "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "VIX Index",
-        "value": 20.29,
-        "unit": "điểm",
-        "source": "macro_context"
-      },
-      {
-        "key": "Premium Range 30d (Low-High)",
-        "value": 9.99,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
         "key": "Gold Spot XAUUSD",
-        "value": 4977.45,
+        "value": 4971.275,
         "unit": "USD/oz",
-        "source": "macro_context"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 4.39,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Change 5d",
+        "value": 14.05,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T22:08:58.587Z",
+    "latestTimestamp": "2026-02-18T23:08:28.988Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155395261.54424655,
-    "premiumPct": 16.48,
-    "change7dPct": 0.64,
-    "change30dPct": 4.53,
+    "intlVndPerTael": 155185081.41603622,
+    "premiumPct": 16.63,
+    "change7dPct": 0.5,
+    "change30dPct": 4.39,
     "volatilityDailyPct": 2.29,
-    "ma7VndPerTael": 155889052,
-    "ma30VndPerTael": 155573663,
+    "ma7VndPerTael": 155859026,
+    "ma30VndPerTael": 155566657,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T22:09:14.315Z",
+    "fetchedAt": "2026-02-18T23:08:47.564Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4977.445,
+        "value": 4971.275,
         "unit": "USD/oz",
-        "date": "2026-02-18",
-        "change1dPct": 2.05,
-        "change5dPct": -2.11,
-        "change20dPct": 3,
+        "date": "2026-02-19",
+        "change1dPct": -0.12,
+        "change5dPct": 1,
+        "change20dPct": 0.71,
         "relationToGold": "context"
       },
       {
@@ -186,25 +185,23 @@
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-18 | yahoo.com | Rich Americans Fleeing Trump Scramble for Overseas  Golden Visa  Scheme",
-      "2026-02-18 | yahoo.com | Crime Families , Gold Heists , Interdimensional Doppelgängers Promise Thrills and Chills at Berlinale Series Market German Showcase",
-      "2026-02-18 | yahoo.com | Analysis : Hezbollah hit by new U . S . sanctions while restructuring"
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Global Markets on Edge as Iranian Tensions Drive Gold to Record $5 , 000 ; Oil Surges Amid Military Mobilization",
+      "2026-02-18 | editorinleaf.com | Leafs fans conflicted after Mitch Marner scores Olympic game - winner",
+      "2026-02-18 | interest.co.nz | Breakfast briefing : Aussie wages fail to keep up with inflation",
+      "2026-02-18 | manilatimes.net | Allied Gold Announces Preliminary Q4 2025 Operating Results , 2026 Guidance and MRMR Update ; Special Meeting Set for March 31",
+      "2026-02-18 | investinglive.com | USDCAD Technicals : The USDCAD has pushed to new highs for the day / week"
     ],
     "countryActionHeadlines": [
-      "2026-02-18 | cointelegraph.com | How USDKG is building a gold - backed stablecoin with real reserves : AMA recap",
-      "2026-02-18 | finanzen.ch | Treasuries Move Lower Following Upbeat Data , Fed Minutes",
-      "2026-02-18 | cnn.com | Kevin Hassett says Fed researchers should be  disciplined  over report that Americans are paying tariffs",
-      "2026-02-18 | aa.com.tr | Geopolitics fuel gold price above $5 , 000 , again",
-      "2026-02-18 | marketscreener.com | Euro weaker after report ECB chief to leave ; dollar higher after data , Fed minutes",
-      "2026-02-18 | newsghana.com.gh | Gold Nears US$5k Mark as Fed Rate Signals Drive Safe - Haven Buying"
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Global Markets on Edge as Iranian Tensions Drive Gold to Record $5 , 000 ; Oil Surges Amid Military Mobilization",
+      "2026-02-18 | interest.co.nz | Breakfast briefing : Aussie wages fail to keep up with inflation"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Global Markets on Edge as Iranian Tensions Drive Gold to Record $5 , 000 ; Oil Surges Amid Military Mobilization",
+      "2026-02-18 | interest.co.nz | Breakfast briefing : Aussie wages fail to keep up with inflation",
+      "2026-02-18 | manilatimes.net | Alamos Gold Increases Dividend by 60 % to an Annual Rate of $0 . 16 Per Share",
       "2026-02-18 | cointelegraph.com | How USDKG is building a gold - backed stablecoin with real reserves : AMA recap",
       "2026-02-18 | cnbc.com | How you can add gold and silver exposure to your portfolio",
-      "2026-02-18 | newsghana.com.gh | Gold Nears US$5k Mark as Fed Rate Signals Drive Safe - Haven Buying",
-      "2026-02-18 | newsghana.com.gh | Ghana Sits on a Data Goldmine But Struggles to Spend It",
-      "2026-02-18 | bignewsnetwork.com | Gold eases to $4 , 980 following surge toward $5 , 000 resistance",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - The Yield Anchor : How the 10 - Year Treasury is Dictating the Nasdaq 2026 Velocity"
+      "2026-02-18 | newsghana.com.gh | Gold Nears US$5k Mark as Fed Rate Signals Drive Safe - Haven Buying"
     ]
   }
 }
