@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T08:13:56.808Z",
+  "generatedAt": "2026-02-18T09:17:56.072Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biến động cao, tạo ra rủi ro mua đỉp ngắn hạn dù xu hướng vĩ mô vẫn ủng hộ vàng dài hạn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ xác nhận xu hướng thay vì FOMO. Dù vĩ mô ủng hộ dài hạn nhờ lợi suất thực USD giảm và VIX tăng, nhưng rủi ro điều chỉnh ngắn hạn là rất lớn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (155.3 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua kỹ thuật.",
-      "Premium 17.57% đang nới rộng nhanh từ mức 11% đầu tháng, cho thấy tâm lý nhà đầu tư VN lo âu nhưng cũng tiềm ẩn rủi co hẹp lại bất cứ lúc nào.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) và VIX tăng 22.12% trong 5 ngày là động lực hỗ trợ giá vàng thế giới phục hồi.",
-      "Biến động ngày cao 2.3% và giá thế giới giảm 3.06% trong 5 ngày gần nhất cho thấy thị trường chưa ổn định, cần thận trọng."
+      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm qua, cho thấy thị trường đã mua quá mức (overbought) trong ngắn hạn.",
+      "Biên độ dao động ngày cao (2.3%) và giá giảm 3.23% trong 7 ngày gần nhất cảnh báo áp lực chốt lời mạnh từ các khối vực trên.",
+      "Premium 17.9% hiện tại cao hơn đáng kể so với mức 11-13% đầu chuỗi dữ liệu 30 ngày, làm giảm hiệu quả chi phí khi mua vào lúc này.",
+      "Vĩ mô hỗ trợ: Lợi suất thực USD 10Y giảm mạnh 5.85% trong 20 ngày và VIX tăng 22.12% trong 5 ngày là động lực tích cực cho giá vàng thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá ngắn hạn khi premium co lại từ mức 17-18% về vùng trung bình 13-14%.",
-      "Thanh khoản có thể giảm nếu giá đứng yên ở mức đỉnh lịch sử quá lâu.",
-      "Giá thế giới có thể tiếp tục điều chỉnh nếu dữ liệu kinh tế Mỹ cải thiện."
+      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều.",
+      "Thanh khoản có thể giảm sau các kỳ nghỉ lễ Tết Nguyên đán tại Châu Á.",
+      "Giá thế giới biến động mạnh (đã có lúc giảm về 4687 USD/oz ngày 02/02) có thể kéo giá nội địa despite premium cao."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_pct",
-        "value": 17.57,
+        "key": "SJC Price Change 7d",
+        "value": -3.23,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change7d_pct",
-        "value": -2.96,
+        "key": "Premium Current vs Start (30d)",
+        "value": 17.9,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change5d",
+        "key": "VIX Change 5d",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "ma30_vnd",
-        "value": 155296546,
-        "unit": "VND/lượng",
+        "key": "Daily Volatility",
+        "value": 2.3,
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot Price",
+        "value": 4916.93,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T08:13:29.238Z",
+    "latestTimestamp": "2026-02-18T09:17:16.577Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153947365.2352845,
-    "premiumPct": 17.57,
-    "change7dPct": -2.96,
-    "change30dPct": 5.56,
+    "intlVndPerTael": 153514680.5463927,
+    "premiumPct": 17.9,
+    "change7dPct": -3.23,
+    "change30dPct": 5.26,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155523873,
-    "ma30VndPerTael": 155296546,
+    "ma7VndPerTael": 155462061,
+    "ma30VndPerTael": 155282123,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T08:13:35.893Z",
+    "fetchedAt": "2026-02-18T09:17:38.286Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4929.185,
+        "value": 4916.925,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 1.06,
-        "change5dPct": -3.06,
-        "change20dPct": 2,
+        "change1dPct": 0.81,
+        "change5dPct": -3.3,
+        "change20dPct": 1.74,
         "relationToGold": "context"
       },
       {
@@ -184,27 +178,24 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro",
+      "2026-02-18 | ECB Press / Speeches | ECB and ONCE Foundation launch collaboration to ensure digital euro is accessible for everyone",
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel",
-      "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation",
-      "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
-      "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
+      "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-18 | economictimes.indiatimes.com | Gold , Silver Rates Today Live Updates : Silver rises 3 . 5 %, gold rebounds Rs 1 , 800 despite easing U . S .– Iran tensions",
-      "2026-02-18 | fxstreet.com | Indian Rupee flattens against US Dollar as FOMC Minutes take centre stage",
-      "2026-02-18 | timesofindia.indiatimes.com | Gold price prediction today : When will gold rates resume upward bullish trend ?",
-      "2026-02-18 | finance.yahoo.com | Forget Gold and Silver : This is the Metal to Buy in 2026 ( And 3 Stocks to Play This Trend )",
-      "2026-02-18 | moneycontrol.com | Gold price jumps almost 1 % to Rs 1 , 52 , 899 on February 18 ; what should investors track next ?",
-      "2026-02-18 | tribune.com.pk | Gold drops Rs9 , 000 / tola as dollar firms"
+    "geopoliticalHeadlines": [
+      "2026-02-18 | idahostatejournal.com | Asian shares gain as most regional markets stay closed for Lunar New Year holidays",
+      "2026-02-18 | marketscreener.com | Futures Up ; Mib Rebounds from 45 , 700 Points"
     ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
+      "2026-02-18 | prokerala.com | Gold , silver prices rise over macro - economic factors",
+      "2026-02-18 | businessday.co.za | Gold recovers from one - week low as focus turns to Fed minutes",
       "2026-02-18 | freepressjournal.in | Gold , Silver Prices Rebound On MCX , Gold Up 1 . 24 % To ₹1 , 53 , 294 , Silver Surges 3 . 81 % To ₹2 , 37 , 490 Amid Global Macro Factors",
       "2026-02-18 | economictimes.indiatimes.com | Gold , Silver Rates Today Live Updates : Silver rises 3 . 5 %, gold rebounds Rs 1 , 800 despite easing U . S .– Iran tensions",
-      "2026-02-18 | livemint.com | Rising US debt could test dollar reserve currency status , warns Ray Dalio",
-      "2026-02-18 | timesofindia.indiatimes.com | Gold price prediction today : When will gold rates resume upward bullish trend ?"
+      "2026-02-18 | livemint.com | Rising US debt could test dollar reserve currency status , warns Ray Dalio"
     ]
   }
 }
