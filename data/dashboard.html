@@ -808,6 +808,205 @@
         justify-content: flex-end;
       }
     }
+
+    /* Price Action TA */
+    .ta-container {
+      background: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .ta-header {
+      background: var(--black);
+      color: var(--white);
+      padding: 16px 24px;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ta-subtitle {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0;
+      opacity: 0.6;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .ta-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .ta-card {
+      padding: 16px 20px;
+      border-right: 2px solid #eee;
+      border-bottom: 2px solid #eee;
+      position: relative;
+    }
+
+    .ta-card:last-child {
+      border-right: none;
+    }
+
+    .ta-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+
+    .ta-bullish::before { background: var(--green); }
+    .ta-bearish::before { background: var(--red); }
+    .ta-neutral::before { background: var(--gray); }
+
+    .ta-card-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .ta-card-value {
+      font-family: 'Space Mono', monospace;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .ta-card-signal {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .ta-bullish .ta-card-signal { color: var(--green); }
+    .ta-bearish .ta-card-signal { color: var(--red); }
+    .ta-neutral .ta-card-signal { color: var(--gray); }
+
+    .ta-card-detail {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    .ta-card-bar {
+      margin-top: 8px;
+    }
+
+    .ta-rsi-bar {
+      height: 8px;
+      background: linear-gradient(90deg, var(--green) 0%, var(--green) 30%, #ddd 30%, #ddd 70%, var(--red) 70%, var(--red) 100%);
+      border: 1px solid var(--black);
+      position: relative;
+    }
+
+    .ta-rsi-fill {
+      position: absolute;
+      top: -4px;
+      width: 3px;
+      height: 16px;
+      background: var(--black);
+      transform: translateX(-50%);
+    }
+
+    .ta-rsi-zones {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      font-family: 'Space Mono', monospace;
+      color: var(--gray);
+      padding: 0 28% 0 28%;
+      margin-top: 2px;
+    }
+
+    .ta-composite {
+      background: #f9f9f9;
+    }
+
+    .ta-composite-value {
+      font-size: 28px;
+    }
+
+    .ta-levels {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      padding: 16px 24px;
+      background: #f9f9f9;
+      border-top: 2px solid #eee;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .ta-level-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .ta-level-item:last-child {
+      text-align: right;
+    }
+
+    .ta-level-current {
+      text-align: center;
+      padding: 0 16px;
+      border-left: 2px solid #ddd;
+      border-right: 2px solid #ddd;
+    }
+
+    .ta-level-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray);
+    }
+
+    .ta-level-value {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .ta-level-dist {
+      font-size: 11px;
+      color: var(--gray);
+    }
+
+    @media (max-width: 960px) {
+      .ta-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .ta-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .ta-levels {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .ta-level-item,
+      .ta-level-item:last-child {
+        text-align: left;
+      }
+      .ta-level-current {
+        text-align: left;
+        padding: 0;
+        border: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -819,7 +1018,7 @@
         GOLD TRACKER
       </div>
       <div class="timestamp">
-        Cập nhật: 17:24:26 18/2/2026
+        Cập nhật: 00:24:26 19/2/2026
       </div>
     </header>
 
@@ -847,7 +1046,7 @@
           <div class="ai-suggestion-main">
             <div class="ai-suggestion-meta">
               <span>Nguồn: Z.AI model</span>
-              <span>Cập nhật: 17:25:06 18/2/2026</span>
+              <span>Cập nhật: 00:25:06 19/2/2026</span>
             </div>
             <div class="ai-suggestion-thesis">Giá SJC đang đỉnh lịch sử 181 triệu/lượng với premium 15.96% cao hơn trung bình, trong khi giá thế giới có dấu hiệu điều chỉnh ngắn hạn; chờ xác nhận xu hướng hoặc giảm nhiệt premium trước khi vào lệnh mới.</div>
           </div>
@@ -875,7 +1074,7 @@
         <div style="padding: 14px 20px; border-bottom: 1px solid rgba(0,0,0,0.08); font-size: 13px; font-family: 'Space Mono', monospace; background: #fffaf0;">
           Coverage: 8/8 factors |
           Health: <strong>CHECK</strong> |
-          Updated: 17:24:48 18/2/2026
+          Updated: 00:24:48 19/2/2026
         </div>
         <table class="comparison-table">
           <thead>
@@ -1261,6 +1460,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Price Action TA Section -->
+    <section id="ta-section"></section>
 
     
     <!-- Drawdowns Summary Section -->
@@ -1675,6 +1877,219 @@
       return annotations;
     }
 
+    // === Price Action TA ===
+    function calcRSI(prices, period = 14) {
+      if (prices.length < period + 1) return null;
+      const changes = [];
+      for (let i = 1; i < prices.length; i++) changes.push(prices[i] - prices[i - 1]);
+      let avgGain = 0, avgLoss = 0;
+      for (let i = 0; i < period; i++) {
+        if (changes[i] > 0) avgGain += changes[i];
+        else avgLoss += Math.abs(changes[i]);
+      }
+      avgGain /= period;
+      avgLoss /= period;
+      for (let i = period; i < changes.length; i++) {
+        avgGain = (avgGain * (period - 1) + Math.max(changes[i], 0)) / period;
+        avgLoss = (avgLoss * (period - 1) + Math.max(-changes[i], 0)) / period;
+      }
+      if (avgLoss === 0) return 100;
+      return 100 - (100 / (1 + avgGain / avgLoss));
+    }
+
+    function calcEMA(prices, period) {
+      const k = 2 / (period + 1);
+      const r = [prices[0]];
+      for (let i = 1; i < prices.length; i++) r.push(prices[i] * k + r[i - 1] * (1 - k));
+      return r;
+    }
+
+    function calcMACD(prices) {
+      if (prices.length < 35) return null;
+      const emaF = calcEMA(prices, 12);
+      const emaS = calcEMA(prices, 26);
+      const macdLine = emaF.map((v, i) => v - emaS[i]);
+      const sigLine = calcEMA(macdLine, 9);
+      const n = prices.length - 1;
+      const hist = macdLine[n] - sigLine[n];
+      const prevHist = macdLine[n - 1] - sigLine[n - 1];
+      let cross = hist > 0 ? 'bullish' : 'bearish';
+      if (prevHist <= 0 && hist > 0) cross = 'bullish_cross';
+      else if (prevHist >= 0 && hist < 0) cross = 'bearish_cross';
+      return { macd: macdLine[n], signal: sigLine[n], histogram: hist, crossover: cross, momentum: hist > prevHist ? 'increasing' : 'decreasing' };
+    }
+
+    function calcBBPct(prices, period = 20, mult = 2) {
+      if (prices.length < period) return null;
+      const slice = prices.slice(-period);
+      const mean = slice.reduce((a, b) => a + b, 0) / period;
+      const std = Math.sqrt(slice.reduce((s, v) => s + (v - mean) ** 2, 0) / period);
+      if (std === 0) return 50;
+      return ((prices[prices.length - 1] - (mean - mult * std)) / (2 * mult * std)) * 100;
+    }
+
+    function calcMom(prices, period) {
+      if (prices.length <= period) return null;
+      return ((prices[prices.length - 1] - prices[prices.length - 1 - period]) / prices[prices.length - 1 - period]) * 100;
+    }
+
+    function taSignalClass(sig) {
+      if (sig === 'bullish') return 'ta-bullish';
+      if (sig === 'bearish') return 'ta-bearish';
+      return 'ta-neutral';
+    }
+
+    function renderTA(data) {
+      const section = document.getElementById('ta-section');
+      if (!section || data.length < 30) { if (section) section.innerHTML = ''; return; }
+
+      const prices = data.map(d => d.usdPerOunce || d.vndPerTael);
+      const vndPrices = data.map(d => d.vndPerTael);
+      const fN = (n, d = 1) => n !== null ? n.toFixed(d) : 'N/A';
+      const fV = (n) => n ? n.toLocaleString('vi-VN', { maximumFractionDigits: 0 }) : 'N/A';
+
+      // Indicators
+      const rsi = calcRSI(prices);
+      const macd = calcMACD(prices);
+      const bbPct = calcBBPct(prices);
+      const mom5 = calcMom(prices, 5);
+      const mom10 = calcMom(prices, 10);
+
+      // MA crossover
+      const ma7v = prices.slice(-7).reduce((a, b) => a + b, 0) / 7;
+      const ma30v = prices.length >= 30 ? prices.slice(-30).reduce((a, b) => a + b, 0) / 30 : null;
+      const maCross = ma30v ? (ma7v > ma30v ? 'bullish' : 'bearish') : null;
+
+      // Support / Resistance (20-day)
+      const srSlice = vndPrices.slice(-20);
+      const support = Math.min(...srSlice);
+      const resistance = Math.max(...srSlice);
+      const currentVnd = vndPrices[vndPrices.length - 1];
+      const distSupport = ((currentVnd - support) / currentVnd) * 100;
+      const distResist = ((resistance - currentVnd) / currentVnd) * 100;
+
+      // Signal mapping
+      const signals = [];
+
+      let rsiSig = 'neutral', rsiLbl = 'Trung tính';
+      if (rsi !== null) {
+        if (rsi > 70) { rsiSig = 'bearish'; rsiLbl = 'Quá mua'; }
+        else if (rsi < 30) { rsiSig = 'bullish'; rsiLbl = 'Quá bán'; }
+        else if (rsi > 60) { rsiSig = 'bearish'; rsiLbl = 'Thiên mua'; }
+        else if (rsi < 40) { rsiSig = 'bullish'; rsiLbl = 'Thiên bán'; }
+        signals.push(rsiSig);
+      }
+
+      let macdSig = 'neutral', macdLbl = 'Trung tính';
+      if (macd) {
+        if (macd.crossover === 'bullish_cross') { macdSig = 'bullish'; macdLbl = 'Cắt lên'; }
+        else if (macd.crossover === 'bearish_cross') { macdSig = 'bearish'; macdLbl = 'Cắt xuống'; }
+        else if (macd.crossover === 'bullish' && macd.momentum === 'increasing') { macdSig = 'bullish'; macdLbl = 'Tăng tốc'; }
+        else if (macd.crossover === 'bearish' && macd.momentum === 'decreasing') { macdSig = 'bearish'; macdLbl = 'Giảm tốc'; }
+        else if (macd.crossover === 'bullish') { macdLbl = 'Trên signal'; }
+        else { macdLbl = 'Dưới signal'; }
+        signals.push(macdSig);
+      }
+
+      let maSig = 'neutral', maLbl = 'N/A';
+      if (maCross) {
+        maSig = maCross;
+        maLbl = maCross === 'bullish' ? 'MA7 > MA30' : 'MA7 < MA30';
+        signals.push(maSig);
+      }
+
+      let bbSig = 'neutral', bbLbl = 'Trung tính';
+      if (bbPct !== null) {
+        if (bbPct > 95) { bbSig = 'bearish'; bbLbl = 'Chạm trên'; }
+        else if (bbPct < 5) { bbSig = 'bullish'; bbLbl = 'Chạm dưới'; }
+        else if (bbPct > 80) { bbSig = 'bearish'; bbLbl = 'Gần trên'; }
+        else if (bbPct < 20) { bbSig = 'bullish'; bbLbl = 'Gần dưới'; }
+        signals.push(bbSig);
+      }
+
+      let momSig = 'neutral', momLbl = 'Đi ngang';
+      if (mom5 !== null) {
+        if (mom5 > 2) { momSig = 'bullish'; momLbl = 'Tăng mạnh'; }
+        else if (mom5 < -2) { momSig = 'bearish'; momLbl = 'Giảm mạnh'; }
+        else if (mom5 > 0.5) { momSig = 'bullish'; momLbl = 'Tăng nhẹ'; }
+        else if (mom5 < -0.5) { momSig = 'bearish'; momLbl = 'Giảm nhẹ'; }
+        signals.push(momSig);
+      }
+
+      // Composite
+      const bull = signals.filter(s => s === 'bullish').length;
+      const bear = signals.filter(s => s === 'bearish').length;
+      const total = signals.length;
+      let comp, compLbl, compAction;
+      if (bull >= 4) { comp = 'bullish'; compLbl = 'Rất tích cực'; compAction = 'MUA'; }
+      else if (bull >= 3 && bear <= 1) { comp = 'bullish'; compLbl = 'Tích cực'; compAction = 'MUA'; }
+      else if (bear >= 4) { comp = 'bearish'; compLbl = 'Rất tiêu cực'; compAction = 'BÁN'; }
+      else if (bear >= 3 && bull <= 1) { comp = 'bearish'; compLbl = 'Tiêu cực'; compAction = 'BÁN'; }
+      else { comp = 'neutral'; compLbl = 'Trung tính'; compAction = 'CHỜ'; }
+
+      section.innerHTML =
+        '<div class="ta-container">' +
+          '<div class="ta-header">' +
+            '<span><i data-lucide="activity"></i> PRICE ACTION TA</span>' +
+            '<span class="ta-subtitle">' + data.length + ' phiên | Short-term signals</span>' +
+          '</div>' +
+          '<div class="ta-grid">' +
+            '<div class="ta-card ' + taSignalClass(rsiSig) + '">' +
+              '<div class="ta-card-title">RSI (14)</div>' +
+              '<div class="ta-card-value">' + fN(rsi) + '</div>' +
+              '<div class="ta-card-signal">' + rsiLbl + '</div>' +
+              '<div class="ta-card-bar"><div class="ta-rsi-bar"><div class="ta-rsi-fill" style="left:' + Math.min(Math.max(rsi || 50, 0), 100) + '%;"></div></div><div class="ta-rsi-zones"><span>30</span><span>70</span></div></div>' +
+            '</div>' +
+            '<div class="ta-card ' + taSignalClass(macdSig) + '">' +
+              '<div class="ta-card-title">MACD (12,26,9)</div>' +
+              '<div class="ta-card-value">' + (macd ? (macd.histogram >= 0 ? '+' : '') + fN(macd.histogram, 2) : 'N/A') + '</div>' +
+              '<div class="ta-card-signal">' + macdLbl + '</div>' +
+              '<div class="ta-card-detail">' + (macd ? 'Momentum: ' + (macd.momentum === 'increasing' ? 'Tăng' : 'Giảm') : '') + '</div>' +
+            '</div>' +
+            '<div class="ta-card ' + taSignalClass(maSig) + '">' +
+              '<div class="ta-card-title">MA Cross</div>' +
+              '<div class="ta-card-value">' + maLbl + '</div>' +
+              '<div class="ta-card-signal">' + (maCross === 'bullish' ? 'Golden cross' : maCross === 'bearish' ? 'Death cross' : 'N/A') + '</div>' +
+            '</div>' +
+            '<div class="ta-card ' + taSignalClass(bbSig) + '">' +
+              '<div class="ta-card-title">BB %B</div>' +
+              '<div class="ta-card-value">' + fN(bbPct) + '%</div>' +
+              '<div class="ta-card-signal">' + bbLbl + '</div>' +
+            '</div>' +
+            '<div class="ta-card ' + taSignalClass(momSig) + '">' +
+              '<div class="ta-card-title">Momentum 5D</div>' +
+              '<div class="ta-card-value">' + (mom5 !== null ? (mom5 >= 0 ? '+' : '') + fN(mom5) + '%' : 'N/A') + '</div>' +
+              '<div class="ta-card-signal">' + momLbl + '</div>' +
+              '<div class="ta-card-detail">' + (mom10 !== null ? '10D: ' + (mom10 >= 0 ? '+' : '') + fN(mom10) + '%' : '') + '</div>' +
+            '</div>' +
+            '<div class="ta-card ta-composite ' + taSignalClass(comp) + '">' +
+              '<div class="ta-card-title">Tổng hợp</div>' +
+              '<div class="ta-card-value ta-composite-value">' + compAction + '</div>' +
+              '<div class="ta-card-signal">' + compLbl + '</div>' +
+              '<div class="ta-card-detail">' + bull + ' tăng / ' + bear + ' giảm / ' + (total - bull - bear) + ' trung tính</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="ta-levels">' +
+            '<div class="ta-level-item">' +
+              '<span class="ta-level-label">Hỗ trợ (20D)</span>' +
+              '<span class="ta-level-value" style="color:var(--green);">' + fV(support) + ' ₫</span>' +
+              '<span class="ta-level-dist">-' + fN(distSupport) + '%</span>' +
+            '</div>' +
+            '<div class="ta-level-item ta-level-current">' +
+              '<span class="ta-level-label">Hiện tại</span>' +
+              '<span class="ta-level-value">' + fV(currentVnd) + ' ₫</span>' +
+            '</div>' +
+            '<div class="ta-level-item">' +
+              '<span class="ta-level-label">Kháng cự (20D)</span>' +
+              '<span class="ta-level-value" style="color:var(--red);">' + fV(resistance) + ' ₫</span>' +
+              '<span class="ta-level-dist">+' + fN(distResist) + '%</span>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+
+      lucide.createIcons();
+    }
+
     // Initialize chart
     const ctx = document.getElementById('mainChart').getContext('2d');
     let currentRange = 90;
@@ -1833,6 +2248,7 @@
       chart.data.datasets[5].data = calculateMA(filteredData, 30, useVietnamIndicator);
       chart.options.plugins.annotation.annotations = drawdownAnnotations;
       chart.update();
+      renderTA(filteredData);
     }
 
     // Time range button handlers
@@ -1853,6 +2269,9 @@
         updateChart();
       });
     }
+
+    // Initialize TA section
+    renderTA(filteredData);
 
     // Initialize Lucide icons
     lucide.createIcons();
