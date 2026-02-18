@@ -1,79 +1,85 @@
 {
-  "generatedAt": "2026-02-18T04:39:28.918Z",
+  "generatedAt": "2026-02-18T05:31:06.582Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.3%/ngày, trong khi giá thế giới đang điều chỉnh giảm từ đỉnh. Nên chờ đợi hồi correction về vùng hỗ trợ kỹ thuật hoặc giảm premium trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, trong khi giá thế giới vừa trải qua đợt điều chỉnh và chưa có tín hiệu đảo chiều rõ ràng từ các yếu tố vĩ mô.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (155.5 triệu) và MA30 (155.3 triệu) khoảng 16.4% - vùng quá mua ngắn hạn.",
-      "Premium 17.45% đang ở mức cao so với trung bình 30 ngày (13-15%), tạo rủi ro co hẹp biên độ nếu giá thế giới tiếp tục giảm.",
-      "Giá thế giới XAUUSD giảm -2.94% trong 5 ngày gần nhất về 4935 USD/oz, cho thấy động lượng tăng đang yếu đi.",
-      "VIX tăng mạnh +22.12% trong 5 ngày lên 21.2 điểm nhưng giá vàng không tăng tương ứng - dấu hiệu phân kỳ tiêu cực."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 5.67% sau 30 ngày nhưng giảm 2.86% trong 7 ngày gần nhất cho thấy động lượng mua đang suy yếu.",
+      "Premium tăng vọt từ mức 11% (20/01) lên 17.45% (18/02), cao hơn đáng kể so với trung bình giai đoạn, cho thấy giá nội địa đang bị đẩy lên quá cao so với giá thế giới.",
+      "Lợi suất thực 10 năm của Mỹ giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) và VIX tăng 22.12% trong 5 ngày thường hỗ trợ giá vàng, nhưng giá thế giới vẫn giảm 2.93% trong 5 ngày cho thấy áp lực bán vẫn còn.",
+      "VIX ở mức 21.2 điểm chỉ thị trường đang lo ngại, nhưng thiếu tin tức địa chính trị cụ thể trong dữ liệu nên đà tăng giá có thể không được duy trì."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ 4900 USD/oz và premium co về mức 13-14%.",
-      "Biên độ dao động cao 2.3%/ngày tương đương ~4.2 triệu VND/lượng có thể kích stop-loss nhanh.",
-      "Dữ liệu vĩ mô thiếu cập nhật (US Real Yield, DXY chỉ đến 13/02) làm giảm độ tin cậy phân tích xu hướng lãi suất."
+      "Rủi ro điều chỉnh giá nội địa nếu premium thu hẹp từ 17.45% về mức trung bình 13-14%, khiến giá SJC giảm mạnh dù giá thế giới đi ngang.",
+      "Giá thế giới thất bại trong việc giữ mức 5000 USD/oz, hiện giao dịch ở 4935 USD/oz với xu hướng giảm 3 ngày gần nhất.",
+      "Thanh khoản thấp trong dịp Tết Nguyên Đán có thể gây trượt giá khi bán ra gấp."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 7 ngày SJC",
+        "value": -2.86,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium hiện tại",
         "value": 17.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma7_deviation",
-        "value": 16.38,
+        "key": "Premium đầu kỳ (20/01)",
+        "value": 11,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "xauusd_change_5d",
-        "value": -2.94,
+        "key": "Lợi suất thực 10Y Mỹ",
+        "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_5d",
+        "key": "VIX biến động 5 ngày",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
-        "value": -5.85,
+        "key": "Giá thế giới 5 ngày",
+        "value": -2.93,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T04:38:48.871Z",
+    "latestTimestamp": "2026-02-18T05:30:27.038Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154106062.83366144,
+    "intlVndPerTael": 154108505.55054063,
     "premiumPct": 17.45,
     "change7dPct": -2.86,
-    "change30dPct": 5.66,
+    "change30dPct": 5.67,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155546544,
-    "ma30VndPerTael": 155301836,
+    "ma7VndPerTael": 155546893,
+    "ma30VndPerTael": 155301917,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T04:39:10.617Z",
+    "fetchedAt": "2026-02-18T05:30:46.966Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4935.085,
+        "value": 4935.635,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 1.18,
-        "change5dPct": -2.94,
-        "change20dPct": 2.12,
+        "change1dPct": 1.19,
+        "change5dPct": -2.93,
+        "change20dPct": 2.13,
         "relationToGold": "context"
       },
       {
@@ -186,13 +192,17 @@
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-18 | benzinga.com | Bitcoin , Ethereum , XRP , Dogecoin Slide Ahead Of Fed Meeting Minutes : Analyst Says BTC In An Area Where Theyd  Fancy  Buying Some - Grayscale Bitcoin Mini Trust ( BTC ) ( ARCA : BTC )",
+      "2026-02-18 | channelnewsasia.com | Dollar firm as focus turns to peace talks ; Kiwi hit by RBNZ easy stance",
+      "2026-02-18 | investinglive.com | USD / INR steady as US yields support dollar , RBI offers cap upside",
+      "2026-02-18 | livemint.com | Silver rate today adds 2 % amid thin trade during Lunar New Year holidays , Gold price up 1 % - What lies ahead ?"
+    ],
     "dollarYieldHeadlines": [
-      "2026-02-14 | tennesseedaily.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | hawaiitelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | finanznachrichten.de | IRAEmpire LLC : Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026",
-      "2026-02-14 | fool.com | GDX vs . SIL : The Pros and Cons of Gold and Silver Miner ETFs",
-      "2026-02-14 | newjerseytelegraph.com | Best Rated Gold IRA Companies Announced - Top Precious Metals IRA Company Ranked for 2026"
+      "2026-02-18 | marketpulse.com | Bitcoin ( BTC / USD ) Battle : The $70k wall and technical breakout hint at further downside . Is $50k a possibility ?",
+      "2026-02-18 | benzinga.com | Bitcoin , Ethereum , XRP , Dogecoin Slide Ahead Of Fed Meeting Minutes : Analyst Says BTC In An Area Where Theyd  Fancy  Buying Some - Grayscale Bitcoin Mini Trust ( BTC ) ( ARCA : BTC )",
+      "2026-02-18 | livemint.com | Gold rate jumps 1 % on MCX due to short covering after US - Iran talks ; experts highlight key levels to watch",
+      "2026-02-18 | livemint.com | Silver rate today adds 2 % amid thin trade during Lunar New Year holidays , Gold price up 1 % - What lies ahead ?"
     ]
   }
 }
