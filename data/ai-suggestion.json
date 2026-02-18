@@ -1,79 +1,85 @@
 {
-  "generatedAt": "2026-02-18T00:22:17.681Z",
+  "generatedAt": "2026-02-18T01:35:40.998Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Thấp",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động mạnh, trong khi giá thế giới điều chỉnh giảm khiến rủi ro mua đuôi là rất lớn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động premium mở rộng đột biến lên 18.56%, trong khi giá thế giới lại điều chỉnh giảm 3.85% trong 5 ngày qua. Rủi ro mua đỉp cao khi spread premium so với trung bình 30 ngày (13-15%) đang ở mức căng thẳng.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa trên MA30 155.2 triệu VND/lượng, báo hiệu vùng giá quá mua.",
-      "Premium tăng vọt lên 19.2% từ mức 11% đầu tháng, cho thấy giá nội địa đã căng quá mức so với biến động giá thế giới.",
-      "Giá thế giới giảm 4.42% trong 5 ngày gần nhất (xuống 4859.775 USD/oz), ngược chiều với giá SJC vẫn giữ ngang, tạo áp lực điều chỉnh.",
-      "Thiếu dữ liệu vĩ mô cốt lõi (DXY, lợi suất thực, VIX) và tin tức địa chính trị không liên quan đến vàng khiến không có động lực mới để đẩy giá cao hơn."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cao hơn đáng kể so với MA7 là 155,339,929 VND/lượng.",
+      "Premium 18.56% đang ở vùng cao so với chuỗi 30 ngày (dao động 9.99%-18.75%), cho thấy giá trong nước đã định giá quá hăng hái so với giá thế giới.",
+      "Giá thế giới XAUUSD giảm 3.85% trong 5 ngày và 3.77% trong 7 ngày về mức 4,889 USD/oz, trong khi giá SJC vẫn giữ ngưỡng 181 triệu, tạo sự lệch pha không bền vững.",
+      "DXY giảm 2.06% trong 20 ngày qua (xuống 117.52) nhưng không thể đẩy giá vàng tăng, cho thấy động lượng tăng của vàng đang yếu đi."
     ],
     "risks": [
-      "Premium 19.2% có thể co lại mạnh nếu giá thế giới tiếp tục giảm, gây thiệt hại lớn cho người mua đuôi.",
-      "Biên độ dao động 2.3%/ngày và đà giảm 4.28% trong 7 ngày cho thấy thanh khoản cao và rủi ro biến động ngắn hạn rất lớn.",
-      "Dữ liệu first-principles bị thiếu hoàn toàn, không thể đánh giá chính xác xu hướng dài hạn từ góc độ dòng tiền USD và lãi suất thực."
+      "Premium có thể co lại nhanh chóng từ 18.56% về mức trung bình 13-15%, gây thiệt hại cho người mua lúc này dù giá thế giới không giảm thêm.",
+      "Giá thế giới đã phá vỡ dưới MA7 (theo dữ liệu chuỗi), rủi ro điều chỉnh kỹ thuật tiếp tục về vùng hỗ trợ thấp hơn.",
+      "Dữ liệu vĩ mô (lợi suất thực, VIX) bị thiếu, không thể đánh giá đầy đủ áp lực lãi suất và tâm lý thị trường."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Percentage",
+        "value": 18.56,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 19.2,
-        "unit": "%",
+        "key": "MA7 SJC Price",
+        "value": 155339929,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_ago",
-        "value": 11,
+        "key": "Gold Spot Change 5D",
+        "value": -3.85,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "DXY Change 20D",
+        "value": -2.06,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "30-Day Avg Premium",
+        "value": 14.2,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "intl_gold_change_5d",
-        "value": -4.42,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_vs_ma30",
-        "value": 16.6,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "macro_data_missing",
-        "value": 7,
-        "unit": "factors",
-        "source": "first_principles_context"
+        "key": "Gold Spot Price",
+        "value": 4888.99,
+        "unit": "USD/oz",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T00:21:37.783Z",
+    "latestTimestamp": "2026-02-18T01:34:54.528Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 151851918.8264934,
-    "premiumPct": 19.2,
-    "change7dPct": -4.28,
-    "change30dPct": 4.12,
+    "intlVndPerTael": 152659758.67775658,
+    "premiumPct": 18.56,
+    "change7dPct": -3.77,
+    "change30dPct": 4.67,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155224523,
-    "ma30VndPerTael": 155226698,
+    "ma7VndPerTael": 155339929,
+    "ma30VndPerTael": 155253626,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,10 +90,9 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T00:21:59.049Z",
+    "fetchedAt": "2026-02-18T01:35:16.459Z",
     "healthy": false,
     "missingFactors": [
-      "US Dollar Trade Weighted Index",
       "US Real Yield 10Y",
       "US Breakeven Inflation 10Y",
       "US Effective Fed Funds Rate",
@@ -99,23 +104,23 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4859.775,
+        "value": 4888.985,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": -0.36,
-        "change5dPct": -4.42,
-        "change20dPct": 0.56,
+        "change1dPct": 0.23,
+        "change5dPct": -3.85,
+        "change20dPct": 1.17,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 117.5258,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-13",
+        "change1dPct": -0.01,
+        "change5dPct": -0.6,
+        "change20dPct": -2.06,
         "relationToGold": "inverse"
       },
       {
@@ -194,13 +199,14 @@
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-18 | womansworld.com | Olympic Skier Ryan Cochran - Siegle Won Silver 54 Years After Mom Gold",
-      "2026-02-17 | nationalpost.com | Let the turf war over Carney defence - spending bonanza begin : Ivison"
+      "2026-02-18 | cantechletter.com | IAMGOLD Reports Fourth Quarter and Year - End 2025 Results"
     ],
-    "countryActionHeadlines": [
-      "2026-02-17 | castanetkamloops.net | Food inflation spiked 7 . 3 % in January . Here what driving the increase",
-      "2026-02-17 | marketpulse.com | US Dollar Index ( DXY ) tries to break 2026 downtrend despite 14 - Year record bear positioning"
-    ],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-18 | cantechletter.com | IAMGOLD Reports Fourth Quarter and Year - End 2025 Results",
+      "2026-02-18 | juniorminingnetwork.com | IAMGOLD Reports Fourth Quarter and Year - End 2025 Results",
+      "2026-02-18 | marketscreener.com | TSX ends lower as oil and gold prices fall",
+      "2026-02-18 | dailyreckoning.com | The Great Gold Bust of 1976 - The Daily Reckoning"
+    ]
   }
 }
