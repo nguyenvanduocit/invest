@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T18:17:03.838Z",
+  "generatedAt": "2026-02-18T19:22:00.901Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 181 triệu VND/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) sau đợt tăng 7% tháng qua, động lượng ngắn hạn đã yếu đi khi giá thế giới giảm 1.7% trong 5 ngày, nhà đầu tư nên chờ hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi xu hướng kỹ thuật 30 ngày vẫn tích cực nhưng động lượng ngắn hạn đã suy yếu.",
     "reasons": [
-      "Giá SJC đang ở vùng quá mua percentile 100%, cao hơn MA7 (155.8 triệu VND/lượng) tới 16.15%, rủi ro điều chỉnh kỹ thuật cao.",
-      "Động lượng yếu đi: giá thế giới giảm 1.7% trong 5 ngày qua dù vẫn tăng 3.43% trong 20 ngày, thanh khoản có thể đang yếu ở vùng đỉnh.",
-      "Premium 15.97% nằm trong biên độ dao động 30 ngày (6.41%-18.75%), không có tín hiệu bất thường nhưng cho thấy giá Việt Nam đã phản ứng đầy đủ đợt tăng.",
-      "Lợi suất thực 10Y Mỹ giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) hỗ trợ vàng dài hạn, nhưng VIX tăng 14.05% trong 5 ngày cho thấy bất ổn thị trường đang tăng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 6.9% sau 30 ngày nhưng giảm 1.73% trong 7 ngày gần nhất cho thấy áp lực chốt lời ngắn hạn.",
+      "Premium 16.1% cao hơn đáng kể so với mức 11% đầu chuỗi dữ liệu (20/1), phản ánh tâm lý mua vào mạnh của nhà đầu tư Việt Nam khi giá thế giới điều chỉnh.",
+      "Lợi suất thực Mỹ 10 năm giảm 5.85% trong 20 ngày qua xuống mức 1.77% và USD Index giảm 2.06% tạo động lực hỗ trợ cho giá vàng thế giới duy trì xu hướng tăng dài hạn.",
+      "Giá thế giới (4993 USD/oz) đang giao dịch trên MA7 và MA30, cho thấy xu hướng tăng trung hạn vẫn còn nguyên vẹn mặc dù biến động ngày ở mức 2.33%."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá ở vùng quá mua percentile 100%, biên độ dao động 2.33%/ngày có thể gây cắt lỗ nhanh.",
-      "Premium có thể co hẹp nếu giá thế giới tiếp tục điều chỉnh trong khi giá SJC neo cao, gây thiệt hại cho người mua ở mức giá hiện tại.",
-      "VIX tăng 14.05% trong 5 ngày phản ánh bất ổn thị trường tài chính, có thể gây bán tháo tài sản rủi ro bao gồm vàng ngắn hạn."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua lịch sử (percentile 100%) và đã giảm 1.73% trong 7 ngày.",
+      "Premium giãn rộng từ 11% lên 16.1-18.75% có thể thu hẹp lại nếu giá thế giới đi ngang, gây mất giá cho nhà đầu tư mua đuôi.",
+      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu đầu vào, confidence bị giới hạn do không có tin tức thúc đẩy đột phá."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 15.97,
+        "key": "SJC Change 30d",
+        "value": 6.9,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 7.01,
+        "key": "SJC Change 7d",
+        "value": -1.73,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_volatility_daily",
-        "value": 2.33,
-        "unit": "%/ngày",
+        "key": "Current Premium",
+        "value": 16.1,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "gold_spot_change_5d",
-        "value": -1.7,
+        "key": "Premium 30d Ago",
+        "value": 11,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_5d",
-        "value": 14.05,
+        "key": "USD Index Change 20d",
+        "value": -2.06,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_price_vs_ma7",
-        "value": 16.15,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Gold Spot Price",
+        "value": 4993.88,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T18:16:02.526Z",
+    "latestTimestamp": "2026-02-18T19:21:15.173Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156074580.70242107,
-    "premiumPct": 15.97,
-    "change7dPct": -1.62,
-    "change30dPct": 7.01,
+    "intlVndPerTael": 155905471.8156762,
+    "premiumPct": 16.1,
+    "change7dPct": -1.73,
+    "change30dPct": 6.9,
     "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 155827761,
-    "ma30VndPerTael": 155367453,
+    "ma7VndPerTael": 155803602,
+    "ma30VndPerTael": 155361816,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T18:16:20.704Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-18T19:21:40.338Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4998.225,
+        "value": 4993.875,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 2.47,
-        "change5dPct": -1.7,
-        "change20dPct": 3.43,
+        "change1dPct": 2.39,
+        "change5dPct": -1.79,
+        "change20dPct": 3.34,
         "relationToGold": "context"
       },
       {
@@ -184,29 +184,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies",
       "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro",
       "2026-02-18 | ECB Press / Speeches | ECB and ONCE Foundation launch collaboration to ensure digital euro is accessible for everyone",
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
-      "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
-      "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel"
+      "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-18 | aei.org | Gold is the no - alternative asset",
-      "2026-02-18 | juniorminingnetwork.com | Torr Metals Assays 13 . 1 g / t Gold in Historical Trenching at Filion , Expands Staking to Encompass 60 km Strike - Length to Gold - Bearing Structure"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-18 | aei.org | Gold is the no - alternative asset",
-      "2026-02-18 | theguardian.com | By the end of the day were just knackered : business booms for united kingdom south Asian jewellers as gold prices soar | Gold",
-      "2026-02-18 | swissinfo.ch | Transatlantic tension , a MAGA gold rush , and a climate own goal"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-18 | aei.org | Gold is the no - alternative asset",
-      "2026-02-18 | torontotelegraph.com | Banyan Gold Recognized as a 2026 TSX Venture 50 Company",
-      "2026-02-18 | finance.yahoo.com | IAMGOLD ( IAG ) Q4 2025 Earnings Call Transcript",
-      "2026-02-18 | theguardian.com | By the end of the day were just knackered : business booms for united kingdom south Asian jewellers as gold prices soar | Gold",
-      "2026-02-18 | fortune.com | Current price of gold : February 18 , 2026",
-      "2026-02-18 | swissinfo.ch | Transatlantic tension , a MAGA gold rush , and a climate own goal"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
