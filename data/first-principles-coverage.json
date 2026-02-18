@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-18T17:59:02.853Z",
+  "checkedAt": "2026-02-18T18:16:20.780Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-18T17:59:02.774Z",
+  "dataFetchedAt": "2026-02-18T18:16:20.704Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -14,23 +14,13 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 0,
-    "dollarYieldCount": 6,
-    "sourceFailures": [
-      {
-        "id": "gdelt_country_actions",
-        "error": "HTTP 429"
-      }
-    ],
-    "healthy": false
+    "geopoliticalCount": 5,
+    "countryActionCount": 15,
+    "dollarYieldCount": 14,
+    "sourceFailures": [],
+    "healthy": true
   },
-  "hardFailures": [
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)"
-  ],
-  "warnings": [
-    "Source failures: gdelt_country_actions (HTTP 429)"
-  ],
-  "canProceedToIntegration": false
+  "hardFailures": [],
+  "warnings": [],
+  "canProceedToIntegration": true
 }
