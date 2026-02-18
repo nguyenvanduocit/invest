@@ -46,7 +46,7 @@ async function main() {
   await $`bun run src/generate-dashboard.ts`.quiet()
   console.log('   Done')
 
-  console.log('\n✓ Build complete: data/dashboard.html')
+  console.log('\n✓ Build complete: data/index.html')
 }
 
 main().catch(e => {

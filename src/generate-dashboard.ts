@@ -2828,7 +2828,7 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`
 
-await Bun.write('data/dashboard.html', html)
-console.log('Dashboard generated: data/dashboard.html')
+await Bun.write('data/index.html', html)
+console.log('Dashboard generated: data/index.html')
 
 export {}
