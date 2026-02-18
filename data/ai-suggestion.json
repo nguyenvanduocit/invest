@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T09:17:56.072Z",
+  "generatedAt": "2026-02-18T10:17:20.653Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,40 +7,34 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ xác nhận xu hướng thay vì FOMO. Dù vĩ mô ủng hộ dài hạn nhờ lợi suất thực USD giảm và VIX tăng, nhưng rủi ro điều chỉnh ngắn hạn là rất lớn.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, trong khi giá thế giới đang điều chỉnh giảm; nhà đầu tư nên chờ đợi sự xác nhận xu hướng rõ ràng hơn hoặc đợt điều chỉnh về mức MA7 (155.5 triệu VND/lượng) trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm qua, cho thấy thị trường đã mua quá mức (overbought) trong ngắn hạn.",
-      "Biên độ dao động ngày cao (2.3%) và giá giảm 3.23% trong 7 ngày gần nhất cảnh báo áp lực chốt lời mạnh từ các khối vực trên.",
-      "Premium 17.9% hiện tại cao hơn đáng kể so với mức 11-13% đầu chuỗi dữ liệu 30 ngày, làm giảm hiệu quả chi phí khi mua vào lúc này.",
-      "Vĩ mô hỗ trợ: Lợi suất thực USD 10Y giảm mạnh 5.85% trong 20 ngày và VIX tăng 22.12% trong 5 ngày là động lực tích cực cho giá vàng thế giới."
+      "Giá SJC 181 triệu VND/lượng đang cao hơn đáng kể so với MA7 (155.5 triệu VND/lượng) và MA30 (155.3 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua ngắn hạn.",
+      "Premium 17.82% đang ở mức cao so với trung bình 30 ngày (dao động 6.41%-18.75%), tiềm ẩn rủi ro co hẹp nếu giá thế giới không tiếp tục tăng mạnh.",
+      "Giá thế giới (XAUUSD) giảm 3.21% trong 5 ngày gần nhất xuống 4921 USD/oz, trái ngược với đà tăng của giá SJC nội địa.",
+      "VIX tăng 22.12% trong 5 ngày lên mức 21.2 cho thấy lo ngại thị trường đang gia tăng, nhưng chưa có sự kiện địa chính trị trực tiếp thúc đẩy giá vàng tăng vọt."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều.",
-      "Thanh khoản có thể giảm sau các kỳ nghỉ lễ Tết Nguyên đán tại Châu Á.",
-      "Giá thế giới biến động mạnh (đã có lúc giảm về 4687 USD/oz ngày 02/02) có thể kéo giá nội địa despite premium cao."
+      "Rủi ro điều chỉnh giá sâu nếu premium co hẹp từ 17.82% về mức trung bình 13-14% trong khi giá thế giới đi ngang.",
+      "Thanh khoản có thể giảm trong dịp Tết Nguyên Đán (Lunar New Year holidays theo tin tức), gây khó khăn cho việc thoát hàng.",
+      "Giá SJC có thể tiếp tục thiết lập đỉnh mới nếu đồng USD suy yếu mạnh hơn do lợi suất thực Mỹ giảm 5.85% trong 20 ngày."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
+        "key": "SJC Price vs MA7",
+        "value": 25.5,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Current",
+        "value": 17.82,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 7d",
-        "value": -3.23,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Current vs Start (30d)",
-        "value": 17.9,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -5.85,
+        "key": "XAUUSD Change 5d",
+        "value": -3.21,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -51,29 +45,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.3,
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -5.85,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Percentile 5Y",
+        "value": 100,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Price",
-        "value": 4916.93,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "SJC 30d Range",
+        "value": 168.7,
+        "unit": "triệu VND/lượng (low)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T09:17:16.577Z",
+    "latestTimestamp": "2026-02-18T10:16:50.024Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153514680.5463927,
-    "premiumPct": 17.9,
-    "change7dPct": -3.23,
-    "change30dPct": 5.26,
+    "intlVndPerTael": 153628615.19402865,
+    "premiumPct": 17.82,
+    "change7dPct": -3.16,
+    "change30dPct": 5.34,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155462061,
-    "ma30VndPerTael": 155282123,
+    "ma7VndPerTael": 155478337,
+    "ma30VndPerTael": 155285921,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T09:17:38.286Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-18T10:16:54.788Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4916.925,
+        "value": 4921.245,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 0.81,
-        "change5dPct": -3.3,
-        "change20dPct": 1.74,
+        "change1dPct": 0.9,
+        "change5dPct": -3.21,
+        "change20dPct": 1.83,
         "relationToGold": "context"
       },
       {
@@ -186,16 +186,22 @@
       "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-18 | idahostatejournal.com | Asian shares gain as most regional markets stay closed for Lunar New Year holidays",
-      "2026-02-18 | marketscreener.com | Futures Up ; Mib Rebounds from 45 , 700 Points"
+      "2026-02-18 | 2news.com | Asian shares gain as most regional markets stay closed for Lunar New Year holidays",
+      "2026-02-18 | financialmirror.com | Bitcoin battle : Is further downside to $50K a possibility ?",
+      "2026-02-18 | riotimesonline.com | Latin American Pulse for Wednesday , February 18 , 2026",
+      "2026-02-18 | rttnews.com | Asian Shares Climb On Strong Japan Data , RBNZ Easy Stance",
+      "2026-02-18 | yakimaherald.com | Asian shares gain as most regional markets stay closed for Lunar New Year holidays",
+      "2026-02-18 | lufkindailynews.com | Asian shares gain as most regional markets stay closed for Lunar New Year holidays"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-18 | prokerala.com | Gold , silver prices rise over macro - economic factors",
+    "countryActionHeadlines": [
+      "2026-02-18 | clubofmozambique.com | Zimbabwe tames inflation , now the test is keeping it below 10 %",
+      "2026-02-18 | cnbc.com | European markets : Stoxx 600 , FTSE , DAX , united kingdom inflation data ,",
       "2026-02-18 | businessday.co.za | Gold recovers from one - week low as focus turns to Fed minutes",
-      "2026-02-18 | freepressjournal.in | Gold , Silver Prices Rebound On MCX , Gold Up 1 . 24 % To ₹1 , 53 , 294 , Silver Surges 3 . 81 % To ₹2 , 37 , 490 Amid Global Macro Factors",
-      "2026-02-18 | economictimes.indiatimes.com | Gold , Silver Rates Today Live Updates : Silver rises 3 . 5 %, gold rebounds Rs 1 , 800 despite easing U . S .– Iran tensions",
-      "2026-02-18 | livemint.com | Rising US debt could test dollar reserve currency status , warns Ray Dalio"
+      "2026-02-18 | economictimes.indiatimes.com | Gold , Silver Rates Today Live Updates : Silver rises 3 . 5 %, gold rebounds Rs 1 , 800 despite easing U . S .– Iran tensions"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-18 | thailand-business-news.com | Thai Gold Traders Seek US Dollar Transactions to Mitigate Baht Appreciation",
+      "2026-02-18 | clubofmozambique.com | Zimbabwe tames inflation , now the test is keeping it below 10 %"
     ]
   }
 }
