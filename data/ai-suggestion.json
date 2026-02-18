@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T19:22:00.901Z",
+  "generatedAt": "2026-02-18T20:13:10.113Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi xu hướng kỹ thuật 30 ngày vẫn tích cực nhưng động lượng ngắn hạn đã suy yếu.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động cao, trong khi giá thế giới có dấu hiệu điều chỉnh ngắn hạn; nhà đầu tư nên chờ đợi vùng giá tốt hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 6.9% sau 30 ngày nhưng giảm 1.73% trong 7 ngày gần nhất cho thấy áp lực chốt lời ngắn hạn.",
-      "Premium 16.1% cao hơn đáng kể so với mức 11% đầu chuỗi dữ liệu (20/1), phản ánh tâm lý mua vào mạnh của nhà đầu tư Việt Nam khi giá thế giới điều chỉnh.",
-      "Lợi suất thực Mỹ 10 năm giảm 5.85% trong 20 ngày qua xuống mức 1.77% và USD Index giảm 2.06% tạo động lực hỗ trợ cho giá vàng thế giới duy trì xu hướng tăng dài hạn.",
-      "Giá thế giới (4993 USD/oz) đang giao dịch trên MA7 và MA30, cho thấy xu hướng tăng trung hạn vẫn còn nguyên vẹn mặc dù biến động ngày ở mức 2.33%."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh rất lớn khi tăng 4.61% chỉ trong 30 ngày.",
+      "Giá thế giới (XAU/USD) giảm 2.1% trong 5 ngày gần nhất và lợi suất thực Mỹ (1.77%) đang tạo áp lực điều chỉnh ngắn hạn lên giá vàng.",
+      "Biên độ dao động ngày cao (2.28%) kết hợp VIX ở mức 20.29 cho thấy thị trường biến động mạnh, không ổn định để vào lệnh ngay.",
+      "Dư địa tăng giá còn hạn chế khi giá đã vượt xa MA7 (155.9 triệu) và MA30 (155.6 triệu) một khoảng lớn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua lịch sử (percentile 100%) và đã giảm 1.73% trong 7 ngày.",
-      "Premium giãn rộng từ 11% lên 16.1-18.75% có thể thu hẹp lại nếu giá thế giới đi ngang, gây mất giá cho nhà đầu tư mua đuôi.",
-      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu đầu vào, confidence bị giới hạn do không có tin tức thúc đẩy đột phá."
+      "Căng thẳng Mỹ - Iran leo thang có thể đẩy giá vàng thế giới tăng vọt bất ngờ, bỏ lỡ cơ hội tích sản.",
+      "Premium 16.4% có thể co hẹp nếu giá thế giới tăng mạnh nhưng giá trong nước không theo kịp do can thiệp.",
+      "Thanh khoản thấp ở vùng giá đỉnh lịch sử có thể gây khó khăn khi cần bán gấp."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 6.9,
+        "key": "30-Day Change",
+        "value": 4.61,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -1.73,
+        "key": "Daily Volatility",
+        "value": 2.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Current Premium",
-        "value": 16.1,
+        "key": "XAUUSD 5D Change",
+        "value": -2.1,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Real Yield 10Y",
+        "value": 1.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Index",
+        "value": 20.29,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC vs World",
+        "value": 16.4,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Premium 30d Ago",
-        "value": 11,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -5.85,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "USD Index Change 20d",
-        "value": -2.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Price",
-        "value": 4993.88,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T19:21:15.173Z",
+    "latestTimestamp": "2026-02-18T20:12:34.111Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155905471.8156762,
-    "premiumPct": 16.1,
-    "change7dPct": -1.73,
-    "change30dPct": 6.9,
-    "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 155803602,
-    "ma30VndPerTael": 155361816,
+    "intlVndPerTael": 155502717.35607454,
+    "premiumPct": 16.4,
+    "change7dPct": 0.71,
+    "change30dPct": 4.61,
+    "volatilityDailyPct": 2.28,
+    "ma7VndPerTael": 155904402,
+    "ma30VndPerTael": 155577245,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T19:21:40.338Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-18T20:12:48.812Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4993.875,
+        "value": 4977.775,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 2.39,
-        "change5dPct": -1.79,
-        "change20dPct": 3.34,
+        "change1dPct": 2.06,
+        "change5dPct": -2.1,
+        "change20dPct": 3,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,27 @@
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-18 | economictimes.indiatimes.com | US - Iran War : Why Oil Prices Are Surging Past $64 : Is U . S .– Iran war imminent ? Oil prices spike to $65 . 01 as 150+ U . S . cargo planes signal  war within days  are you prepared for another major Middle East conflict ?",
+      "2026-02-18 | thenationalnews.com | Sudan gold rush : War , survival and foreign interest",
+      "2026-02-18 | wral.com | Snowboarder Su Yiming delivers China 1st gold of Winter Olympics while Japan grabs more medals",
+      "2026-02-18 | 247wallst.com | Stock Market Live February 19 , 2026 : S & P 500 ( SPY ) Up Ahead of Key Fed News"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Fed Minutes Under the Microscope : Market Braces for Rate Cut Clues Amid Strengthening Greenback",
+      "2026-02-18 | thenationalnews.com | Sudan gold rush : War , survival and foreign interest",
+      "2026-02-18 | 247wallst.com | Stock Market Live February 19 , 2026 : S & P 500 ( SPY ) Up Ahead of Key Fed News",
+      "2026-02-18 | marketpulse.com | NZD / USD tumbles after the RBNZ hold – A look at the new Governor Anna Breman",
+      "2026-02-18 | americanbanker.com | MSRs in focus as Fed rethinks Basel III rules",
+      "2026-02-18 | aei.org | Gold is the no - alternative asset"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - The New Proxy War : Bitcoin Consolidation at $83 , 200 Tests the Resilience of Strategy Inc . and Coinbase",
+      "2026-02-18 | economictimes.indiatimes.com | US - Iran War : Why Oil Prices Are Surging Past $64 : Is U . S .– Iran war imminent ? Oil prices spike to $65 . 01 as 150+ U . S . cargo planes signal  war within days  are you prepared for another major Middle East conflict ?",
+      "2026-02-18 | 247wallst.com | Stock Market Live February 19 , 2026 : S & P 500 ( SPY ) Up Ahead of Key Fed News",
+      "2026-02-18 | marketpulse.com | Gold ( XAU / USD ) Breaches $5000 / oz : Has the bullish trajectory resumed ?",
+      "2026-02-18 | cbsnews.com | How much is a 10 - ounce bar of gold worth today ?",
+      "2026-02-18 | aei.org | Gold is the no - alternative asset"
+    ]
   }
 }
