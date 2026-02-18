@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T05:31:06.582Z",
+  "generatedAt": "2026-02-18T06:24:09.122Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, trong khi giá thế giới vừa trải qua đợt điều chỉnh và chưa có tín hiệu đảo chiều rõ ràng từ các yếu tố vĩ mô.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với premium 17.58% cao hơn đáng kể so với mức 11-13% đầu chu kỳ, khiến rủi ro điều chỉnh ngắn hạn lớn hơn cơ hội tăng ngay. Dù vĩ mô ủng hộ vàng dài hạn (lợi suất thực giảm 5.85%, VIX tăng 22.12%), nhà đầu tư nên chờ hồi về vùng 175-177 triệu/lượng hoặc premium <15% để tích sản an toàn hơn.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 5.67% sau 30 ngày nhưng giảm 2.86% trong 7 ngày gần nhất cho thấy động lượng mua đang suy yếu.",
-      "Premium tăng vọt từ mức 11% (20/01) lên 17.45% (18/02), cao hơn đáng kể so với trung bình giai đoạn, cho thấy giá nội địa đang bị đẩy lên quá cao so với giá thế giới.",
-      "Lợi suất thực 10 năm của Mỹ giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) và VIX tăng 22.12% trong 5 ngày thường hỗ trợ giá vàng, nhưng giá thế giới vẫn giảm 2.93% trong 5 ngày cho thấy áp lực bán vẫn còn.",
-      "VIX ở mức 21.2 điểm chỉ thị trường đang lo ngại, nhưng thiếu tin tức địa chính trị cụ thể trong dữ liệu nên đà tăng giá có thể không được duy trì."
+      "Giá SJC 181 triệu/lượng đang ở percentile 100% trong 5 năm, quá gần MA7 (155.5 triệu) và MA30 (155.3 triệu) đến mức giá đã lệch quá xa giá trị trung bình, tăng 5.55% trong 30 ngày gần nhất.",
+      "Premium 17.58% hiện tại cao hơn nhiều so với đầu chu kỳ dữ liệu (11-13.36% ngày 20-21/01), cho thấy định giá Việt Nam đã đắt hơn mức trung bình lịch sử.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) và VIX tăng 22.12% trong 5 ngày (lên 21.2) là động lực hỗ trợ giá vàng thế giới, nhưng giá Việt Nam đã phản ánh trước.",
+      "Đồng USD Index giảm 2.06% trong 20 ngày gần nhất, ủng hộ xu hướng tăng giá vàng thế giới (XAUUSD tăng 1.11% ngày 18/02)."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá nội địa nếu premium thu hẹp từ 17.45% về mức trung bình 13-14%, khiến giá SJC giảm mạnh dù giá thế giới đi ngang.",
-      "Giá thế giới thất bại trong việc giữ mức 5000 USD/oz, hiện giao dịch ở 4935 USD/oz với xu hướng giảm 3 ngày gần nhất.",
-      "Thanh khoản thấp trong dịp Tết Nguyên Đán có thể gây trượt giá khi bán ra gấp."
+      "Giá SJC có thể điều chỉnh giảm nếu giá thế giới không duy trì đà tăng, khi chênh lệch premium hiện tại (17.58%) cao hơn đáng kể so với trung bình 30 ngày (~14%).",
+      "Rủi ro thanh khoản nếu thị trường sốc: dữ liệu lịch sử cho thấy thời gian phục hồi trung bình sau đợt sụt giảm tồi tệ là 1369 ngày.",
+      "Sự kiện FOMC minutes sắp công bố có thể gây biến động hai chiều cho giá vàng và tỷ giá USD."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá SJC hiện tại",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 7 ngày SJC",
-        "value": -2.86,
+        "key": "premium_current_vs_start",
+        "value": 17.58,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium hiện tại",
-        "value": 17.45,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium đầu kỳ (20/01)",
+        "key": "premium_30d_start",
         "value": 11,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Lợi suất thực 10Y Mỹ",
-        "value": 1.77,
+        "key": "change30dPct_sjc",
+        "value": 5.55,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX biến động 5 ngày",
+        "key": "vix_change5d",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá thế giới 5 ngày",
-        "value": -2.93,
+        "key": "usd_index_change20d",
+        "value": -2.06,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "worst_drawdown_recovery_days",
+        "value": 1369,
+        "unit": "ngày",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T05:30:27.038Z",
+    "latestTimestamp": "2026-02-18T06:23:43.097Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 154108505.55054063,
-    "premiumPct": 17.45,
-    "change7dPct": -2.86,
-    "change30dPct": 5.67,
+    "intlVndPerTael": 153933217.5861629,
+    "premiumPct": 17.58,
+    "change7dPct": -2.97,
+    "change30dPct": 5.55,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155546893,
-    "ma30VndPerTael": 155301917,
+    "ma7VndPerTael": 155521852,
+    "ma30VndPerTael": 155296074,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T05:30:46.966Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-18T06:23:50.629Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4935.635,
+        "value": 4931.535,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 1.19,
-        "change5dPct": -2.93,
-        "change20dPct": 2.13,
+        "change1dPct": 1.11,
+        "change5dPct": -3.01,
+        "change20dPct": 2.05,
         "relationToGold": "context"
       },
       {
@@ -191,18 +191,23 @@
       "2026-02-14 | ECB Press / Speeches | ECB enhances repo facility for central banks",
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-18 | californiatelegraph.com | SMX Turns Gold Into a Trackable Asset Just as Prices Reached Record Levels in Early 2026"
+    ],
     "countryActionHeadlines": [
+      "2026-02-18 | morningstar.com | Dow Jones Top Financial Services Headlines at 12 AM ET : Fed Goolsbee Says Future Rate Cuts Depend on Inflation Progress | Fed ...",
+      "2026-02-18 | marketscreener.com | Geneva talks , inflation in spotlight amid Lunar New Year lull",
+      "2026-02-18 | winnipegfreepress.com | Food inflation spiked 7 . 3 % in January . Here what driving the increase – Winnipeg Free Press",
+      "2026-02-18 | marketscreener.com | Gold rises from one - week low ahead of FOMC minutes",
       "2026-02-18 | benzinga.com | Bitcoin , Ethereum , XRP , Dogecoin Slide Ahead Of Fed Meeting Minutes : Analyst Says BTC In An Area Where Theyd  Fancy  Buying Some - Grayscale Bitcoin Mini Trust ( BTC ) ( ARCA : BTC )",
-      "2026-02-18 | channelnewsasia.com | Dollar firm as focus turns to peace talks ; Kiwi hit by RBNZ easy stance",
-      "2026-02-18 | investinglive.com | USD / INR steady as US yields support dollar , RBI offers cap upside",
-      "2026-02-18 | livemint.com | Silver rate today adds 2 % amid thin trade during Lunar New Year holidays , Gold price up 1 % - What lies ahead ?"
+      "2026-02-18 | channelnewsasia.com | Dollar firm as focus turns to peace talks ; Kiwi hit by RBNZ easy stance"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-18 | marketpulse.com | Bitcoin ( BTC / USD ) Battle : The $70k wall and technical breakout hint at further downside . Is $50k a possibility ?",
+      "2026-02-18 | morningstar.com | Dow Jones Top Financial Services Headlines at 12 AM ET : Fed Goolsbee Says Future Rate Cuts Depend on Inflation Progress | Fed ...",
+      "2026-02-18 | sakshipost.com | Gold , Silver Prices Decline Today , February 18 : Hyderabad , Chennai , Kolkata City - Wise Rates",
+      "2026-02-18 | marketscreener.com | Gold rises from one - week low ahead of FOMC minutes",
       "2026-02-18 | benzinga.com | Bitcoin , Ethereum , XRP , Dogecoin Slide Ahead Of Fed Meeting Minutes : Analyst Says BTC In An Area Where Theyd  Fancy  Buying Some - Grayscale Bitcoin Mini Trust ( BTC ) ( ARCA : BTC )",
-      "2026-02-18 | livemint.com | Gold rate jumps 1 % on MCX due to short covering after US - Iran talks ; experts highlight key levels to watch",
-      "2026-02-18 | livemint.com | Silver rate today adds 2 % amid thin trade during Lunar New Year holidays , Gold price up 1 % - What lies ahead ?"
+      "2026-02-18 | marketpulse.com | Bitcoin ( BTC / USD ) Battle : The $70k wall and technical breakout hint at further downside . Is $50k a possibility ?"
     ]
   }
 }
