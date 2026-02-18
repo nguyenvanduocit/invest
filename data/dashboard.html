@@ -1035,6 +1035,130 @@
     .ta-insight-bearish .ta-insight-tag { color: var(--red); }
     .ta-insight-neutral .ta-insight-tag { color: var(--gray); }
 
+    .ta-fib-atr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 2px solid #eee;
+    }
+
+    .ta-fib-panel {
+      padding: 16px 20px;
+      border-right: 2px solid #eee;
+    }
+
+    .ta-atr-panel {
+      padding: 16px 20px;
+    }
+
+    .ta-panel-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+
+    .ta-fib-levels {
+      display: grid;
+      gap: 2px;
+    }
+
+    .ta-fib-level {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+
+    .ta-fib-level.active {
+      background: rgba(255, 215, 0, 0.2);
+      border: 1px solid var(--gold-dark);
+      font-weight: 700;
+    }
+
+    .ta-fib-level.fib-support {
+      color: var(--green);
+    }
+
+    .ta-fib-level.fib-resist {
+      color: var(--red);
+    }
+
+    .ta-fib-ratio {
+      width: 48px;
+      text-align: right;
+      color: var(--gray);
+      font-size: 11px;
+    }
+
+    .ta-fib-price {
+      flex: 1;
+    }
+
+    .ta-fib-tag {
+      font-size: 9px;
+      padding: 1px 4px;
+      border: 1px solid currentColor;
+      white-space: nowrap;
+    }
+
+    .ta-atr-value {
+      font-family: 'Space Mono', monospace;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .ta-atr-pct {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .ta-stop-levels {
+      display: grid;
+      gap: 8px;
+    }
+
+    .ta-stop-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      border-left: 4px solid var(--gray);
+      background: #f9f9f9;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+    }
+
+    .ta-stop-tight { border-left-color: var(--red); }
+    .ta-stop-moderate { border-left-color: var(--gold-dark); }
+    .ta-stop-wide { border-left-color: var(--green); }
+
+    .ta-stop-label {
+      font-size: 11px;
+      color: var(--gray);
+    }
+
+    .ta-stop-price {
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .ta-fib-atr {
+        grid-template-columns: 1fr;
+      }
+      .ta-fib-panel {
+        border-right: none;
+        border-bottom: 2px solid #eee;
+      }
+    }
+
     @media (max-width: 960px) {
       .ta-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1070,7 +1194,7 @@
         GOLD TRACKER
       </div>
       <div class="timestamp">
-        Cập nhật: 17:45:18 18/2/2026
+        Cập nhật: 00:45:18 19/2/2026
       </div>
     </header>
 
@@ -1098,7 +1222,7 @@
           <div class="ai-suggestion-main">
             <div class="ai-suggestion-meta">
               <span>Nguồn: Z.AI model</span>
-              <span>Cập nhật: 17:45:56 18/2/2026</span>
+              <span>Cập nhật: 00:45:56 19/2/2026</span>
             </div>
             <div class="ai-suggestion-thesis">Giá SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại sau 7 ngày điều chỉnh, trong khi xu hướng vĩ mô dài hạn vẫn tích cực nhờ lợi suất thực Mỹ giảm mạnh.</div>
           </div>
@@ -1126,7 +1250,7 @@
         <div style="padding: 14px 20px; border-bottom: 1px solid rgba(0,0,0,0.08); font-size: 13px; font-family: 'Space Mono', monospace; background: #fffaf0;">
           Coverage: 8/8 factors |
           Health: <strong>CHECK</strong> |
-          Updated: 17:45:33 18/2/2026
+          Updated: 00:45:33 19/2/2026
         </div>
         <table class="comparison-table">
           <thead>
@@ -1931,9 +2055,9 @@
 
     // === Price Action TA ===
     const taPresets = {
-      scalper:  { label: 'Scalper',     rsi: 7,  macdF: 6,  macdS: 13, macdSig: 5, bb: 10, momA: 3,  momB: 5,  maF: 5,  maS: 15, sr: 10 },
-      day:      { label: 'Day Trader',  rsi: 14, macdF: 12, macdS: 26, macdSig: 9, bb: 20, momA: 5,  momB: 10, maF: 7,  maS: 30, sr: 20 },
-      swing:    { label: 'Swing',       rsi: 21, macdF: 12, macdS: 26, macdSig: 9, bb: 20, momA: 10, momB: 20, maF: 20, maS: 50, sr: 40 },
+      scalper:  { label: 'Scalper',     rsi: 7,  macdF: 6,  macdS: 13, macdSig: 5, bb: 10, momA: 3,  momB: 5,  maF: 5,  maS: 15, sr: 10, atr: 7,  fib: 15 },
+      day:      { label: 'Day Trader',  rsi: 14, macdF: 12, macdS: 26, macdSig: 9, bb: 20, momA: 5,  momB: 10, maF: 7,  maS: 30, sr: 20, atr: 14, fib: 30 },
+      swing:    { label: 'Swing',       rsi: 21, macdF: 12, macdS: 26, macdSig: 9, bb: 20, momA: 10, momB: 20, maF: 20, maS: 50, sr: 40, atr: 20, fib: 60 },
     };
     let taPreset = 'day';
 
@@ -2076,6 +2200,37 @@
       return { count, direction: dir || 'flat' };
     }
 
+    function calcFibLevels(prices, lookback) {
+      if (prices.length < lookback) return null;
+      const sl = prices.slice(-lookback);
+      const high = Math.max(...sl);
+      const low = Math.min(...sl);
+      const diff = high - low;
+      if (diff < 1) return null;
+      const ratios = [0, 0.236, 0.382, 0.5, 0.618, 0.786, 1];
+      const levels = ratios.map(function(r) {
+        return { ratio: r, label: (r * 100).toFixed(1) + '%', price: high - diff * r };
+      });
+      const cur = prices[prices.length - 1];
+      var nextRes = null, nextSup = null;
+      for (let i = 0; i < levels.length; i++) {
+        if (levels[i].price > cur && (!nextRes || levels[i].price < nextRes.price)) nextRes = levels[i];
+        if (levels[i].price <= cur && (!nextSup || levels[i].price > nextSup.price)) nextSup = levels[i];
+      }
+      return { high, low, diff, levels, current: cur, nextResistance: nextRes, nextSupport: nextSup };
+    }
+
+    function calcATR(prices, period) {
+      if (prices.length < period + 1) return null;
+      var ranges = [];
+      for (let i = 1; i < prices.length; i++) ranges.push(Math.abs(prices[i] - prices[i - 1]));
+      var atr = 0;
+      for (let i = 0; i < period; i++) atr += ranges[i];
+      atr /= period;
+      for (let i = period; i < ranges.length; i++) atr = (atr * (period - 1) + ranges[i]) / period;
+      return atr;
+    }
+
     function taSignalClass(sig) {
       if (sig === 'bullish') return 'ta-bullish';
       if (sig === 'bearish') return 'ta-bearish';
@@ -2203,6 +2358,71 @@
       if (rr >= 2) narrative += 'R:R hấp dẫn (1:' + fN(rr) + '). ';
       else if (rr > 0 && rr < 0.5) narrative += 'R:R bất lợi, nên chờ giá về gần hỗ trợ. ';
 
+      // Fibonacci & ATR
+      const fib = calcFibLevels(vndPrices, p.fib);
+      const atrUsd = calcATR(prices, p.atr);
+      const atrVnd = calcATR(vndPrices, p.atr);
+
+      var fibAtrHtml = '';
+      if (fib || atrVnd) {
+        fibAtrHtml = '<div class="ta-fib-atr">';
+        if (fib) {
+          const fibRows = fib.levels.map(function(lvl) {
+            const isCurrent = Math.abs(lvl.price - fib.current) < fib.diff * 0.03;
+            const isNextSup = fib.nextSupport && lvl.ratio === fib.nextSupport.ratio;
+            const isNextRes = fib.nextResistance && lvl.ratio === fib.nextResistance.ratio;
+            var cls = 'ta-fib-level';
+            if (isCurrent) cls += ' active';
+            else if (isNextSup) cls += ' fib-support';
+            else if (isNextRes) cls += ' fib-resist';
+            var tag = '';
+            if (lvl.ratio === 0) tag = '<span class="ta-fib-tag">Đỉnh</span>';
+            else if (lvl.ratio === 1) tag = '<span class="ta-fib-tag">Đáy</span>';
+            else if (isNextSup) tag = '<span class="ta-fib-tag" style="color:var(--green);">Hỗ trợ</span>';
+            else if (isNextRes) tag = '<span class="ta-fib-tag" style="color:var(--red);">Kháng cự</span>';
+            return '<div class="' + cls + '">' +
+              '<span class="ta-fib-ratio">' + lvl.label + '</span>' +
+              '<span class="ta-fib-price">' + fV(lvl.price) + ' ₫</span>' +
+              tag +
+            '</div>';
+          }).join('');
+
+          fibAtrHtml += '<div class="ta-fib-panel">' +
+            '<div class="ta-panel-title">Fibonacci Retracement (' + p.fib + 'D)</div>' +
+            '<div class="ta-fib-levels">' + fibRows + '</div>' +
+            '<div style="margin-top:8px;font-size:11px;color:var(--gray);font-family:'Space Mono',monospace;">' +
+              'Swing: ' + fV(fib.low) + ' → ' + fV(fib.high) + ' ₫' +
+            '</div>' +
+          '</div>';
+        }
+        if (atrVnd) {
+          var atrPct = (atrVnd / currentVnd) * 100;
+          var stop1x = currentVnd - atrVnd;
+          var stop15x = currentVnd - atrVnd * 1.5;
+          var stop2x = currentVnd - atrVnd * 2;
+          fibAtrHtml += '<div class="ta-atr-panel">' +
+            '<div class="ta-panel-title">ATR (' + p.atr + ') — Stop-Loss</div>' +
+            '<div class="ta-atr-value">' + fV(atrVnd) + ' ₫</div>' +
+            '<div class="ta-atr-pct">' + fN(atrPct, 2) + '% / phiên' + (atrUsd ? ' | $' + fN(atrUsd, 1) + '/oz' : '') + '</div>' +
+            '<div class="ta-stop-levels">' +
+              '<div class="ta-stop-item ta-stop-tight">' +
+                '<div><div class="ta-stop-label">Tight (1x ATR)</div><div>Cho scalper</div></div>' +
+                '<div class="ta-stop-price">' + fV(stop1x) + ' ₫</div>' +
+              '</div>' +
+              '<div class="ta-stop-item ta-stop-moderate">' +
+                '<div><div class="ta-stop-label">Moderate (1.5x ATR)</div><div>Cho day trader</div></div>' +
+                '<div class="ta-stop-price">' + fV(stop15x) + ' ₫</div>' +
+              '</div>' +
+              '<div class="ta-stop-item ta-stop-wide">' +
+                '<div><div class="ta-stop-label">Wide (2x ATR)</div><div>Cho swing</div></div>' +
+                '<div class="ta-stop-price">' + fV(stop2x) + ' ₫</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+        }
+        fibAtrHtml += '</div>';
+      }
+
       // Preset selector options
       const presetOpts = Object.keys(taPresets).map(function(k) {
         return '<option value="' + k + '"' + (k === taPreset ? ' selected' : '') + '>' + taPresets[k].label + '</option>';
@@ -2280,6 +2500,7 @@
               }).join('') +
             '</div>' +
           '</div>' : '') +
+          fibAtrHtml +
         '</div>';
 
       lucide.createIcons();
