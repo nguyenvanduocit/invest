@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-02-17T23:08:28.502Z",
+  "generatedAt": "2026-02-18T00:22:17.681Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Thấp",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi giá thế giới điều chỉnh giảm mạnh; nhà đầu tư nên chờ đợi信 hiệu ổn định hoặc giảm sâu hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động mạnh, trong khi giá thế giới điều chỉnh giảm khiến rủi ro mua đuôi là rất lớn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá thế giới đã giảm 4.13% trong 5 ngày gần nhất.",
-      "Premium tăng vọt lên mức 18.97% (gần đỉnh 30 ngày), cho thấy giá nội địa đã định giá quá cao so với biến động giá quốc tế hiện tại.",
-      "Đà tăng giá SJC đã suy yếu rõ rệt với change7dPct = -4.17%, ngược chiều với xu hướng tăng 30 ngày (+4.24%), tín hiệu đảo chiều ngắn hạn.",
-      "VIX tăng mạnh 22.12% trong 5 ngày nhưng giá vàng không tăng, cho thấy động lượng tăng đã mất."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa trên MA30 155.2 triệu VND/lượng, báo hiệu vùng giá quá mua.",
+      "Premium tăng vọt lên 19.2% từ mức 11% đầu tháng, cho thấy giá nội địa đã căng quá mức so với biến động giá thế giới.",
+      "Giá thế giới giảm 4.42% trong 5 ngày gần nhất (xuống 4859.775 USD/oz), ngược chiều với giá SJC vẫn giữ ngang, tạo áp lực điều chỉnh.",
+      "Thiếu dữ liệu vĩ mô cốt lõi (DXY, lợi suất thực, VIX) và tin tức địa chính trị không liên quan đến vàng khiến không có động lực mới để đẩy giá cao hơn."
     ],
     "risks": [
-      "Giá thế giới có thể phục hồi nhanh do lợi suất thực 10 năm giảm sâu (-5.85% trong 20 ngày), đẩy giá nội địa cao hơn nữa.",
-      "Premium có thể tiếp tục mở rộng nếu tâm lý thị trường Việt Nam lo sợ lạm phát thực phẩm tăng 7.3%.",
-      "Thiếu dữ liệu vĩ mô Việt Nam cụ thể (lãi suất, tỷ giá VND) khiến độ tin cậy đánh giá giảm."
+      "Premium 19.2% có thể co lại mạnh nếu giá thế giới tiếp tục giảm, gây thiệt hại lớn cho người mua đuôi.",
+      "Biên độ dao động 2.3%/ngày và đà giảm 4.28% trong 7 ngày cho thấy thanh khoản cao và rủi ro biến động ngắn hạn rất lớn.",
+      "Dữ liệu first-principles bị thiếu hoàn toàn, không thể đánh giá chính xác xu hướng dài hạn từ góc độ dòng tiền USD và lãi suất thực."
     ],
     "evidence": [
       {
@@ -28,52 +28,52 @@
       },
       {
         "key": "premium_current",
-        "value": 18.97,
+        "value": 19.2,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -4.17,
+        "key": "premium_30d_ago",
+        "value": 11,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "intl_gold_change_5d",
+        "value": -4.42,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_vs_ma30",
+        "value": 16.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "gold_spot_change_5d",
-        "value": -4.13,
+        "key": "volatility_daily",
+        "value": 2.3,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
-        "value": -5.85,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_5d",
-        "value": 22.12,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_current_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
         "source": "market_snapshot"
+      },
+      {
+        "key": "macro_data_missing",
+        "value": 7,
+        "unit": "factors",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-17T23:07:56.985Z",
+    "latestTimestamp": "2026-02-18T00:21:37.783Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 152137773.43665957,
-    "premiumPct": 18.97,
-    "change7dPct": -4.17,
-    "change30dPct": 4.24,
-    "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 155362394,
-    "ma30VndPerTael": 155345348,
+    "intlVndPerTael": 151851918.8264934,
+    "premiumPct": 19.2,
+    "change7dPct": -4.28,
+    "change30dPct": 4.12,
+    "volatilityDailyPct": 2.3,
+    "ma7VndPerTael": 155224523,
+    "ma30VndPerTael": 155226698,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,96 +84,104 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-17T23:08:12.006Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-02-18T00:21:59.049Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y",
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 10Y",
+      "US Treasury Yield 2Y",
+      "VIX Volatility Index"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4874.545,
+        "value": 4859.775,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": -0.06,
-        "change5dPct": -4.13,
-        "change20dPct": 0.87,
+        "change1dPct": -0.36,
+        "change5dPct": -4.42,
+        "change20dPct": 0.56,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 117.5258,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-13",
-        "change1dPct": -0.01,
-        "change5dPct": -0.6,
-        "change20dPct": -2.06,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.77,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -1.67,
-        "change5dPct": -5.85,
-        "change20dPct": -5.85,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.26,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-17",
-        "change1dPct": -0.44,
-        "change5dPct": -3.83,
-        "change20dPct": -3,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-16",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.04,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -1.22,
-        "change5dPct": -4.27,
-        "change20dPct": -3.12,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.4,
+        "value": null,
         "unit": "%",
-        "date": "2026-02-13",
-        "change1dPct": -2.02,
-        "change5dPct": -2.86,
-        "change20dPct": -4.49,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 21.2,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-16",
-        "change1dPct": 2.91,
-        "change5dPct": 22.12,
-        "change20dPct": 12.53,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       }
     ],
@@ -186,22 +194,13 @@
       "2026-02-13 | ECB Press / Speeches | ECB publishes consolidated banking data for end-September 2025"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-17 | newjerseytelegraph.com | SMX Low Float Infrastructure Story : After Gold $5 , 500 Record Price , Could This Be a Path Back to Prior Highs ?",
-      "2026-02-17 | thechronicle.com.gh | The Gold Coast Regiment and Ghana part in the world wars - The Ghanaian Chronicle"
+      "2026-02-18 | womansworld.com | Olympic Skier Ryan Cochran - Siegle Won Silver 54 Years After Mom Gold",
+      "2026-02-17 | nationalpost.com | Let the turf war over Carney defence - spending bonanza begin : Ivison"
     ],
     "countryActionHeadlines": [
-      "2026-02-17 | bravenewcoin.com | Silver ( XAG / USD ) Price Prediction : Silver Slips Below $75 Support Ahead of FOMC Minutes , SLV Braces for Volatility",
-      "2026-02-17 | finance-commerce.com | U . S . dollar could rebound after four - month slide",
-      "2026-02-17 | gx94radio.com | Food inflation spiked 7 . 3 % in January . Here what driving the increase | GX94 Radio - Now That Country !",
-      "2026-02-17 | fxstreet.com | Forex Today : US Dollar trims gains despite strong ADP jobs data",
-      "2026-02-17 | fxstreet.com | Gold plunges over 3 % as US - Iran talks boost USD demand",
-      "2026-02-17 | fxstreet.com | Fed Barr : We should be prepared for  short - term disruptions  in the labor market from AI"
+      "2026-02-17 | castanetkamloops.net | Food inflation spiked 7 . 3 % in January . Here what driving the increase",
+      "2026-02-17 | marketpulse.com | US Dollar Index ( DXY ) tries to break 2026 downtrend despite 14 - Year record bear positioning"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-17 | rttnews.com | TSX Remains Firmly Down Despite Softer - than - expected Inflation Data",
-      "2026-02-17 | fxstreet.com | Forex Today : US Dollar trims gains despite strong ADP jobs data",
-      "2026-02-17 | fxstreet.com | Gold plunges over 3 % as US - Iran talks boost USD demand",
-      "2026-02-17 | hawaiitelegraph.com | U . S . Gold Bureau Announces Expanded Resources for Investors Exploring a Precious Metals IRA"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
