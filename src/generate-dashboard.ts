@@ -1562,6 +1562,58 @@ const html = `<!DOCTYPE html>
       color: var(--gray);
     }
 
+    .ta-insights {
+      padding: 20px 24px;
+      border-top: 2px solid #eee;
+    }
+
+    .ta-narrative {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      padding: 14px 16px;
+      background: #fffbe6;
+      border: var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .ta-narrative strong {
+      font-family: 'Space Mono', monospace;
+    }
+
+    .ta-insight-items {
+      display: grid;
+      gap: 8px;
+    }
+
+    .ta-insight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 8px 12px;
+      border-left: 4px solid var(--gray);
+      background: #f9f9f9;
+    }
+
+    .ta-insight-bullish { border-left-color: var(--green); }
+    .ta-insight-bearish { border-left-color: var(--red); }
+
+    .ta-insight-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border: 2px solid currentColor;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .ta-insight-bullish .ta-insight-tag { color: var(--green); }
+    .ta-insight-bearish .ta-insight-tag { color: var(--red); }
+    .ta-insight-neutral .ta-insight-tag { color: var(--gray); }
+
     @media (max-width: 960px) {
       .ta-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -2069,6 +2121,90 @@ const html = `<!DOCTYPE html>
       return ((prices[prices.length - 1] - prices[prices.length - 1 - period]) / prices[prices.length - 1 - period]) * 100;
     }
 
+    function calcRSISeries(prices, period) {
+      if (prices.length < period + 1) return [];
+      const changes = [];
+      for (let i = 1; i < prices.length; i++) changes.push(prices[i] - prices[i - 1]);
+      const result = [];
+      let avgGain = 0, avgLoss = 0;
+      for (let i = 0; i < period; i++) {
+        if (changes[i] > 0) avgGain += changes[i]; else avgLoss += Math.abs(changes[i]);
+      }
+      avgGain /= period; avgLoss /= period;
+      result.push(avgLoss === 0 ? 100 : 100 - (100 / (1 + avgGain / avgLoss)));
+      for (let i = period; i < changes.length; i++) {
+        avgGain = (avgGain * (period - 1) + Math.max(changes[i], 0)) / period;
+        avgLoss = (avgLoss * (period - 1) + Math.max(-changes[i], 0)) / period;
+        result.push(avgLoss === 0 ? 100 : 100 - (100 / (1 + avgGain / avgLoss)));
+      }
+      return result;
+    }
+
+    function detectDivergence(prices, rsiSeries, lookback) {
+      if (rsiSeries.length < lookback || lookback < 6) return null;
+      const off = prices.length - rsiSeries.length;
+      const n = rsiSeries.length;
+      const half = Math.floor(lookback / 2);
+      const p1 = prices.slice(off + n - lookback, off + n - half);
+      const p2 = prices.slice(off + n - half);
+      const r1 = rsiSeries.slice(n - lookback, n - half);
+      const r2 = rsiSeries.slice(n - half);
+      const pMax1 = Math.max(...p1), pMax2 = Math.max(...p2);
+      const pMin1 = Math.min(...p1), pMin2 = Math.min(...p2);
+      const rMax1 = Math.max(...r1), rMax2 = Math.max(...r2);
+      const rMin1 = Math.min(...r1), rMin2 = Math.min(...r2);
+      if (pMax2 > pMax1 && rMax2 < rMax1 - 3) return 'bearish';
+      if (pMin2 < pMin1 && rMin2 > rMin1 + 3) return 'bullish';
+      return null;
+    }
+
+    function detectBBSqueeze(prices, period) {
+      if (prices.length < period * 2) return null;
+      const widths = [];
+      for (let i = period; i <= prices.length; i++) {
+        const sl = prices.slice(i - period, i);
+        const mean = sl.reduce((a, b) => a + b, 0) / period;
+        const std = Math.sqrt(sl.reduce((s, v) => s + (v - mean) ** 2, 0) / period);
+        widths.push(mean > 0 ? (4 * std / mean) * 100 : 0);
+      }
+      const cur = widths[widths.length - 1];
+      const avg = widths.reduce((a, b) => a + b, 0) / widths.length;
+      return { squeeze: cur < avg * 0.7, width: cur, avgWidth: avg };
+    }
+
+    function detectTrend(prices, lookback) {
+      if (prices.length < lookback) return 'ranging';
+      const sl = prices.slice(-lookback);
+      const ws = Math.max(3, Math.floor(lookback / 4));
+      const wins = [];
+      for (let i = 0; i <= sl.length - ws; i += Math.max(1, Math.floor(ws / 2))) {
+        const w = sl.slice(i, i + ws);
+        wins.push({ high: Math.max(...w), low: Math.min(...w) });
+      }
+      let hh = 0, ll = 0;
+      for (let i = 1; i < wins.length; i++) {
+        if (wins[i].high > wins[i - 1].high) hh++;
+        if (wins[i].low < wins[i - 1].low) ll++;
+      }
+      const c = wins.length - 1;
+      if (c <= 0) return 'ranging';
+      if (hh >= c * 0.6) return 'uptrend';
+      if (ll >= c * 0.6) return 'downtrend';
+      return 'ranging';
+    }
+
+    function countStreak(prices) {
+      let count = 0, dir = null;
+      for (let i = prices.length - 1; i > 0; i--) {
+        const d = prices[i] > prices[i - 1] ? 'up' : prices[i] < prices[i - 1] ? 'down' : null;
+        if (!d) break;
+        if (!dir) dir = d;
+        if (d !== dir) break;
+        count++;
+      }
+      return { count, direction: dir || 'flat' };
+    }
+
     function taSignalClass(sig) {
       if (sig === 'bullish') return 'ta-bullish';
       if (sig === 'bearish') return 'ta-bearish';
@@ -2164,6 +2300,38 @@ const html = `<!DOCTYPE html>
       else if (bear >= 3 && bull <= 1) { comp = 'bearish'; compLbl = 'Tiêu cực'; compAction = 'BÁN'; }
       else { comp = 'neutral'; compLbl = 'Trung tính'; compAction = 'CHỜ'; }
 
+      // Enhanced insights
+      const rsiSeries = calcRSISeries(prices, p.rsi);
+      const divergence = detectDivergence(prices, rsiSeries, p.sr);
+      const bbSqueeze = detectBBSqueeze(prices, p.bb);
+      const trend = detectTrend(prices, p.sr);
+      const streak = countStreak(prices);
+      const rr = distSupport > 0.01 ? distResist / distSupport : 0;
+
+      const taInsights = [];
+      if (divergence === 'bullish') taInsights.push({ type: 'bullish', tag: 'DIVERGENCE', text: 'Phân kỳ tăng - giá tạo đáy thấp hơn nhưng RSI tạo đáy cao hơn. Khả năng đảo chiều tăng.' });
+      if (divergence === 'bearish') taInsights.push({ type: 'bearish', tag: 'DIVERGENCE', text: 'Phân kỳ giảm - giá tạo đỉnh cao hơn nhưng RSI tạo đỉnh thấp hơn. Cẩn thận đảo chiều giảm.' });
+      if (bbSqueeze && bbSqueeze.squeeze) taInsights.push({ type: 'neutral', tag: 'SQUEEZE', text: 'BB siết chặt (width ' + fN(bbSqueeze.width) + '% vs TB ' + fN(bbSqueeze.avgWidth) + '%). Breakout sắp xảy ra - chờ xác nhận hướng.' });
+      if (trend === 'uptrend') taInsights.push({ type: 'bullish', tag: 'TREND', text: 'Xu hướng tăng - chuỗi đỉnh cao hơn & đáy cao hơn (HH/HL). Mua theo xu hướng.' });
+      if (trend === 'downtrend') taInsights.push({ type: 'bearish', tag: 'TREND', text: 'Xu hướng giảm - chuỗi đỉnh thấp hơn & đáy thấp hơn (LH/LL). Cẩn thận bắt đáy.' });
+      if (trend === 'ranging') taInsights.push({ type: 'neutral', tag: 'SIDEWAY', text: 'Thị trường đi ngang, thiếu xu hướng rõ ràng. Chờ breakout hoặc trade range.' });
+      if (streak.count >= 3) taInsights.push({ type: streak.direction === 'up' ? 'bullish' : 'bearish', tag: 'STREAK', text: streak.count + ' phiên ' + (streak.direction === 'up' ? 'tăng' : 'giảm') + ' liên tiếp. ' + (streak.count >= 5 ? 'Chuỗi dài, có thể điều chỉnh.' : '') });
+      if (rr > 0) taInsights.push({ type: rr >= 2 ? 'bullish' : rr <= 0.5 ? 'bearish' : 'neutral', tag: 'R:R', text: 'Risk:Reward = 1:' + fN(rr) + ' — ' + (rr >= 2 ? 'Thuận lợi cho vị thế mua.' : rr >= 1 ? 'Cân bằng, cần thêm xác nhận.' : 'Bất lợi, gần kháng cự hơn hỗ trợ.') });
+      if (rsi !== null && rsi > 80) taInsights.push({ type: 'bearish', tag: 'RSI', text: 'RSI cực cao (' + fN(rsi) + '). Quá mua nghiêm trọng, rủi ro điều chỉnh lớn.' });
+      if (rsi !== null && rsi < 20) taInsights.push({ type: 'bullish', tag: 'RSI', text: 'RSI cực thấp (' + fN(rsi) + '). Quá bán nghiêm trọng, cơ hội mua tốt.' });
+
+      // Narrative
+      let narrative = '';
+      if (comp === 'bullish') narrative += '<strong>' + compAction + '</strong> — Tín hiệu tổng thể tích cực (' + bull + '/' + total + ' chỉ báo tăng). ';
+      else if (comp === 'bearish') narrative += '<strong>' + compAction + '</strong> — Tín hiệu tổng thể tiêu cực (' + bear + '/' + total + ' chỉ báo giảm). ';
+      else narrative += '<strong>' + compAction + '</strong> — Tín hiệu trung tính, thị trường thiếu định hướng. ';
+      if (trend !== 'ranging') narrative += 'Xu hướng ' + (trend === 'uptrend' ? 'tăng' : 'giảm') + ' đang duy trì. ';
+      if (divergence) narrative += '<strong>Phân kỳ ' + (divergence === 'bullish' ? 'tăng' : 'giảm') + '</strong> phát hiện — tín hiệu đảo chiều quan trọng. ';
+      if (bbSqueeze && bbSqueeze.squeeze) narrative += 'BB squeeze — <strong>breakout</strong> sắp tới. ';
+      if (streak.count >= 4) narrative += streak.count + ' phiên ' + (streak.direction === 'up' ? 'tăng' : 'giảm') + ' liên tục, cẩn thận mean reversion. ';
+      if (rr >= 2) narrative += 'R:R hấp dẫn (1:' + fN(rr) + '). ';
+      else if (rr > 0 && rr < 0.5) narrative += 'R:R bất lợi, nên chờ giá về gần hỗ trợ. ';
+
       // Preset selector options
       const presetOpts = Object.keys(taPresets).map(function(k) {
         return '<option value="' + k + '"' + (k === taPreset ? ' selected' : '') + '>' + taPresets[k].label + '</option>';
@@ -2230,6 +2398,17 @@ const html = `<!DOCTYPE html>
               '<span class="ta-level-dist">+' + fN(distResist) + '%</span>' +
             '</div>' +
           '</div>' +
+          (taInsights.length > 0 || narrative ? '<div class="ta-insights">' +
+            (narrative ? '<div class="ta-narrative">' + narrative + '</div>' : '') +
+            '<div class="ta-insight-items">' +
+              taInsights.map(function(ins) {
+                return '<div class="ta-insight-item ta-insight-' + ins.type + '">' +
+                  '<span class="ta-insight-tag">' + ins.tag + '</span>' +
+                  '<span>' + ins.text + '</span>' +
+                '</div>';
+              }).join('') +
+            '</div>' +
+          '</div>' : '') +
         '</div>';
 
       lucide.createIcons();
