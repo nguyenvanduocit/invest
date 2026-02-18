@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T17:35:43.305Z",
+  "generatedAt": "2026-02-18T17:39:32.821Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao 2.33%, thanh khoản mua vào rủi ro; xu hướng tăng trung hạn còn nguyên lực nhưng ngắn hạn cần chờ hồi về vùng hỗ trợ gần MA7 VND/lượng.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi giá thế giới có xu hướng đi ngang; nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn đáng kể.",
-      "Lợi suất thực USD 10Y giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) và DXY giảm 2.06% tạo nền tảng vĩ mô thuận lợi cho xu hướng tăng trung hạn của vàng.",
-      "Premium 15.98% nằm trong biên dao động 30 ngày (9.99%-18.75%), không có dấu hiệu bất thường nhưng cho thấy giá Việt Nam đã phản ứng đầy đủ đợt tăng vừa qua.",
-      "Động lượng tăng 30 ngày mạnh (+7%) nhưng giảm chậm 7 ngày gần đây (-1.63%) cho thấy thị trường đang đi ngang/tích lũy sau đợt tăng nóng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.4 triệu VND/lượng), cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Đà tăng 30 ngày (+7.02%) mạnh nhưng động lượng 7 ngày đã giảm (-1.61%), giá thế giới (XAU/oz) dao động trong phạm vi hẹp xung quanh 5000 USD/oz mà chưa phá vỡ rõ ràng.",
+      "Lợi suất thực 10 năm của Mỹ (1.77%) đang giảm 5.85% trong 20 ngày, hỗ trợ giá vàng thế giới, nhưng VIX giảm 4.29% cho thấy lo ngại rủi ro ngắn hạn đã hạ nhiệt.",
+      "Premium 15.96% nằm trong biên độ dao động phổ biến của chuỗi 30 ngày (9.99%-18.75%), không có dấu hiệu bất thường đòi hỏi hành động gấp."
     ],
     "risks": [
-      "Giá đang ở percentile 100% lịch sử 5 năm, khả năng điều chỉnh kỹ thuật cao nếu không có tin tức kích thích mới.",
-      "Biên độ dao động ngày 2.33% cho thấy thanh khoản co lại, spread mua-bán có thể giãn rộng bất ngờ.",
-      "VIX tăng 14.05% trong 5 ngày cảnh báo biến động thị trường tài chính toàn cầu, có thể gây chảy tiền tạm thời khỏi vàng."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá SJC chạm đỉnh lịch sử 5 năm và động lượng giảm.",
+      "Giá thế giới quay đầu giảm nếu lợi suất thực USD hồi phục mạnh từ mức thấp hiện tại.",
+      "Thanh khoản có thể giảm nếu nhà đầu tư e ngại mua tại vùng giá cao kỷ lục."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 7,
+        "key": "change_7d",
+        "value": -1.61,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -1.63,
+        "key": "change_30d",
+        "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "ma30_vnd",
+        "value": 155367894,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
+        "value": 15.96,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.77,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "us_real_yield_change_20d",
         "value": -5.85,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "usd_index_change20d",
-        "value": -2.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 8.76,
-        "unit": "% (18.75-9.99)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "vix_change_5d",
-        "value": 14.05,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.33,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T17:35:10.591Z",
+    "latestTimestamp": "2026-02-18T17:38:52.444Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156061491.26210728,
-    "premiumPct": 15.98,
-    "change7dPct": -1.63,
-    "change30dPct": 7,
+    "intlVndPerTael": 156087815.65034905,
+    "premiumPct": 15.96,
+    "change7dPct": -1.61,
+    "change30dPct": 7.02,
     "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 155825891,
-    "ma30VndPerTael": 155367017,
+    "ma7VndPerTael": 155829652,
+    "ma30VndPerTael": 155367894,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T17:35:17.304Z",
+    "fetchedAt": "2026-02-18T17:39:10.130Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4995.595,
+        "value": 4995.045,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 2.42,
-        "change5dPct": -1.75,
-        "change20dPct": 3.37,
+        "change1dPct": 2.41,
+        "change5dPct": -1.76,
+        "change20dPct": 3.36,
         "relationToGold": "context"
       },
       {
@@ -191,13 +191,14 @@
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-18 | juniorminingnetwork.com | Torr Metals Assays 13 . 1 g / t Gold in Historical Trenching at Filion , Expands Staking to Encompass 60 km Strike - Length to Gold - Bearing Structure"
+    ],
     "countryActionHeadlines": [
       "2026-02-18 | theguardian.com | By the end of the day were just knackered : business booms for united kingdom south Asian jewellers as gold prices soar | Gold",
       "2026-02-18 | swissinfo.ch | Transatlantic tension , a MAGA gold rush , and a climate own goal",
       "2026-02-18 | markets.financialcontent.com | FinancialContent - The Great Rotation : Volatility Triggers a Flight to Yield in Defensive Sectors",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - Labor Market Defiance : January Jobs Surge Crushes Estimates , Cooling Recession Fears While Stiffening Fed Resolve",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - S & P 500 Valuation Warning : Fed Flags  Expensive  Market as Tariffs and Rates Threaten Reset"
+      "2026-02-18 | markets.financialcontent.com | FinancialContent - Labor Market Defiance : January Jobs Surge Crushes Estimates , Cooling Recession Fears While Stiffening Fed Resolve"
     ],
     "dollarYieldHeadlines": [
       "2026-02-18 | torontotelegraph.com | Banyan Gold Recognized as a 2026 TSX Venture 50 Company",
