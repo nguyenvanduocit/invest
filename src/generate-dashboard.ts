@@ -2519,7 +2519,7 @@ const html = `<!DOCTYPE html>
           fibAtrHtml += '<div class="ta-fib-panel">' +
             '<div class="ta-panel-title">Fibonacci Retracement (' + p.fib + 'D)</div>' +
             '<div class="ta-fib-levels">' + fibRows + '</div>' +
-            '<div style="margin-top:8px;font-size:11px;color:var(--gray);font-family:\'Space Mono\',monospace;">' +
+            '<div style="margin-top:8px;font-size:11px;color:var(--gray);">' +
               'Swing: ' + fV(fib.low) + ' → ' + fV(fib.high) + ' ₫' +
             '</div>' +
           '</div>';
