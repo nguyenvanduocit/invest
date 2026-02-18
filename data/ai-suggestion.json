@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T17:45:56.899Z",
+  "generatedAt": "2026-02-18T17:59:18.320Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,57 +7,50 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại sau 7 ngày điều chỉnh, trong khi xu hướng vĩ mô dài hạn vẫn tích cực nhờ lợi suất thực Mỹ giảm mạnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng; tuy nhiên, xu hướng trung hạn vẫn tích cực nhờ lợi suất thực USD giảm mạnh và giá thế giới giữ vững mốc 5000 USD/oz.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn rất lớn khi giá đã tăng 7% trong 30 ngày qua.",
-      "Đà tăng giá thế giới đang mất động lượng với giá Spot 5000.28 USD/oz giảm 1.66% trong 5 ngày gần nhất.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) tạo nền tảng hỗ trợ vĩ mô dài hạn cho giá vàng.",
-      "Premium 15.99% đang ở mức cao, gấp đôi mức thấp nhất trong chuỗi 30 ngày (6.41% ngày 28/01), cho thấy định giá SJC đang đắt hơn bình thường."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100), tăng mạnh 7.05% sau 30 ngày, rủi ro điều chỉnh ngắn hạn là rất lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 5.85% trong 20 ngày qua xuống mức 1.77%, tạo động lực tăng giá cơ bản cho vàng thế giới.",
+      "Giá vàng thế giới quay lại mốc 5000 USD/oz và nằm trên MA7/MA30, cho thấy xu hướng tăng của giá quốc tế vẫn còn sức mạnh."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu hơn khi giá SJC nằm xa MA7 (155.8 triệu VND/lượng) và MA30 (155.4 triệu VND/lượng).",
-      "Biến động cao 2.33%/ngày cộng với VIX ở mức 20.29 có thể gây sụt giảm nhanh trong ngắn hạn.",
-      "Sự kiện địa chính trị và chính sách trong dữ liệu đầu vào không có tác động trực tiếp rõ ràng, giảm độ tin cậy dự báo."
+      "Giá SJC đã tăng quá nóng (change30dPct 7.05%), có khả năng điều chỉnh giảm ngắn hạn để tích lũy.",
+      "Biên độ dao động ngày cao (2.33%) cho thấy thị trường đang rung lắc mạnh, dễ gây cháy tài khoản nếu đòn bẩy cao.",
+      "Premium 15.93% đang ở mức cao, có nguy cơ co hẹp nếu giá thế giới giảm, làm giảm giá SJC nhanh hơn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 7.05,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 7,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_current_vs_low",
-        "value": 2.5,
-        "unit": "x (15.99% vs 6.41%)",
+        "key": "Gold Spot Price",
+        "value": 5000,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "gold_spot_change_5d",
-        "value": -1.66,
+        "key": "SJC Premium vs World",
+        "value": 15.93,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "vix_level",
-        "value": 20.29,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "volatility_daily",
+        "key": "Daily Volatility",
         "value": 2.33,
         "unit": "%",
         "source": "market_snapshot"
@@ -65,15 +58,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T17:45:18.675Z",
+    "latestTimestamp": "2026-02-18T17:58:42.683Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156051154.28878698,
-    "premiumPct": 15.99,
-    "change7dPct": -1.63,
-    "change30dPct": 7,
+    "intlVndPerTael": 156124020.81743836,
+    "premiumPct": 15.93,
+    "change7dPct": -1.59,
+    "change30dPct": 7.05,
     "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 155824414,
-    "ma30VndPerTael": 155366672,
+    "ma7VndPerTael": 155834824,
+    "ma30VndPerTael": 155369101,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +77,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T17:45:33.725Z",
+    "fetchedAt": "2026-02-18T17:59:02.774Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5000.285,
+        "value": 4998.865,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 2.52,
-        "change5dPct": -1.66,
-        "change20dPct": 3.47,
+        "change1dPct": 2.49,
+        "change5dPct": -1.69,
+        "change20dPct": 3.44,
         "relationToGold": "context"
       },
       {
@@ -185,22 +178,11 @@
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-18 | juniorminingnetwork.com | Torr Metals Assays 13 . 1 g / t Gold in Historical Trenching at Filion , Expands Staking to Encompass 60 km Strike - Length to Gold - Bearing Structure"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-18 | theguardian.com | By the end of the day were just knackered : business booms for united kingdom south Asian jewellers as gold prices soar | Gold",
-      "2026-02-18 | swissinfo.ch | Transatlantic tension , a MAGA gold rush , and a climate own goal",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - The Great Rotation : Volatility Triggers a Flight to Yield in Defensive Sectors",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - Labor Market Defiance : January Jobs Surge Crushes Estimates , Cooling Recession Fears While Stiffening Fed Resolve"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-18 | torontotelegraph.com | Banyan Gold Recognized as a 2026 TSX Venture 50 Company",
-      "2026-02-18 | finance.yahoo.com | IAMGOLD ( IAG ) Q4 2025 Earnings Call Transcript",
-      "2026-02-18 | theguardian.com | By the end of the day were just knackered : business booms for united kingdom south Asian jewellers as gold prices soar | Gold",
-      "2026-02-18 | fortune.com | Current price of gold : February 18 , 2026",
-      "2026-02-18 | swissinfo.ch | Transatlantic tension , a MAGA gold rush , and a climate own goal",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - S & P 500 Valuation Warning : Fed Flags  Expensive  Market as Tariffs and Rates Threaten Reset"
+      "2026-02-07 | marketscreener.com | South Africa keen to utilise new ECB repo lines , central bank governor says",
+      "2026-02-07 | economictimes.indiatimes.com | Bitcoin crash impact on crypto billionaires : Bitcoin ( BTC USD ) crash wipes out billions from crypto billionaires : Binance , Coinbase , and MicroStrategy leaders take huge losses"
     ]
   }
 }
