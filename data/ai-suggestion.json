@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T11:17:16.182Z",
+  "generatedAt": "2026-02-18T12:13:32.269Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực cao (percentile 100% 5 năm) với đà tăng bị hãm lại trong ngắn hạn (-3.23% 7 ngày), trong khi nền tảng vĩ mô (lợi suất thực giảm, USD yếu) vẫn hỗ trợ giá thế giới; nhà đầu tư không nên chạy đuổi theo đỉnh giá hiện tại mà chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị hãm lại bởi tín hiệu điều chỉnh kỹ thuật ngắn hạn; xu hướng vĩ mô vẫn hỗ trợ vàng nhưng rủi ro mua đỉp cao hơn tiềm năng tăng trong ngắn hạn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA7 (155.46 triệu VND/lượng) hơn 16%, báo hiệu rủi ro điều chỉnh kỹ thuật cao.",
-      "Động lượng ngắn hạn yếu đi với change7dPct là -3.23% và giá thế giới (XAUUSD) giảm 3.31% trong 5 ngày gần nhất.",
-      "Premium 17.9% hiện tại cao hơn đáng kể so với mức 11-13% đầu chuỗi dữ liệu 30 ngày, cho thấy giá nội địa đã phản ứng quá mức so với biến động giá quốc tế.",
-      "Vĩ mô hỗ trợ trung hạn: Lợi suất thực Mỹ 10 năm (1.77%) giảm mạnh 5.85% trong 20 ngày và VIX tăng 22.12% trong 5 ngày giúp giữ giá sàn thế giới vững chắc."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.3 triệu VND/lượng), cho thấy thị trường đã mua vào vùng quá mua.",
+      "Động lượng giảm tốc rõ rệt với change7dPct âm -3.08% trong khi change30dPct dương 5.42%, tín hiệu đi ngang/chỉnh sửa sau đợt tăng mạnh.",
+      "Premium 17.72% đang nới rộng nhanh so với mức 11-14% đầu tháng, áp lực chi phí mua vào tăng cao khi giá thế giới chỉ dao động quanh 4924 USD/oz.",
+      "Lợi suất thực 10Y giảm mạnh 5.85% trong 20 ngày và VIX tăng 22.12% trong 5 ngày là động lực vĩ mô hỗ trợ giá vàng giữ vững sàn hỗ trợ."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu về vùng MA7 (155.46 triệu VND/lượng) nếu động lượng bán tiếp tục tăng.",
-      "Premium co hẹp từ 17.9% về mức trung bình lịch sử (13-15%) sẽ khiến giá SJC giảm nhanh hơn giá thế giới.",
-      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu đầu vào có thể khiến biến động bất ngờ giảm."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 4900 USD/oz, kéo premium co hẹp về mức trung bình 13-15%.",
+      "Thanh khoản cao và biến động 2.3%/ngày có thể gây sụt giảm vốn nhanh cho nhà đầu tư mua tại vùng giá hiện tại.",
+      "Thiếu sự kiện địa chính trị cấp bách hoặc hành động can thiệp của quốc gia trong dữ liệu, hạn chế động lực tăng đột phá."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7D",
-        "value": -3.23,
+        "key": "sjc_vs_ma30",
+        "value": 16.55,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_7d_vs_30d",
+        "value": -3.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Current",
-        "value": 17.9,
+        "key": "premium_current",
+        "value": 17.72,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Start (30D ago)",
-        "value": 11,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20D",
+        "key": "us_real_yield_20d_change",
         "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 5D",
+        "key": "vix_5d_change",
         "value": 22.12,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "MA7 VND/Tael",
-        "value": 155462193,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "gold_spot_price",
+        "value": 4924.02,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T11:16:40.100Z",
+    "latestTimestamp": "2026-02-18T12:12:48.647Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 153515602.61502934,
-    "premiumPct": 17.9,
-    "change7dPct": -3.23,
-    "change30dPct": 5.26,
+    "intlVndPerTael": 153751533.21947533,
+    "premiumPct": 17.72,
+    "change7dPct": -3.08,
+    "change30dPct": 5.42,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155462193,
-    "ma30VndPerTael": 155282154,
+    "ma7VndPerTael": 155495897,
+    "ma30VndPerTael": 155290018,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T11:16:47.166Z",
+    "fetchedAt": "2026-02-18T12:12:55.933Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4916.565,
+        "value": 4924.625,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 0.8,
-        "change5dPct": -3.31,
-        "change20dPct": 1.74,
+        "change1dPct": 0.97,
+        "change5dPct": -3.15,
+        "change20dPct": 1.9,
         "relationToGold": "context"
       },
       {
@@ -185,11 +185,13 @@
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel",
       "2026-02-14 | ECB Press / Speeches | Christine Lagarde: Preparing for geoeconomic fragmentation"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-18 | newjerseytelegraph.com | SMX Low Float Infrastructure Story : After Gold Record Price This Year , Could This Be a Path Back to Prior Highs ?"
+    ],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-18 | thailand-business-news.com | Thai Gold Traders Seek US Dollar Transactions to Mitigate Baht Appreciation",
-      "2026-02-18 | clubofmozambique.com | Zimbabwe tames inflation , now the test is keeping it below 10 %"
+      "2026-02-18 | clubofmozambique.com | Zimbabwe tames inflation , now the test is keeping it below 10 %",
+      "2026-02-18 | thailand-business-news.com | Thai Gold Traders Seek US Dollar Transactions to Mitigate Baht Appreciation"
     ]
   }
 }
