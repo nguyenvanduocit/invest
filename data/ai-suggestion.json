@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-18T17:25:06.868Z",
+  "generatedAt": "2026-02-18T17:35:43.305Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang đỉnh lịch sử 181 triệu/lượng với premium 15.96% cao hơn trung bình, trong khi giá thế giới có dấu hiệu điều chỉnh ngắn hạn; chờ xác nhận xu hướng hoặc giảm nhiệt premium trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao 2.33%, thanh khoản mua vào rủi ro; xu hướng tăng trung hạn còn nguyên lực nhưng ngắn hạn cần chờ hồi về vùng hỗ trợ gần MA7 VND/lượng.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức percentile 5 năm là 100%, cho thấy giá đã quá cao lịch sử và rủi ro điều chỉnh lớn.",
-      "Premium 15.96% cao hơn đáng kể so với mức 11% đầu chuỗi dữ liệu 30 ngày, thanh toán quá cao so với giá thế giới.",
-      "Giá thế giới giảm 1.67% trong 5 ngày gần nhất (first_principles), áp lực điều chỉnh ngắn hạn từ vùng đỉnh ~5000 USD/oz.",
-      "Lợi suất thực 10Y Mỹ giảm mạnh 5.85% trong 20 ngày, hỗ trợ vàng dài hạn nhưng ngắn hạn đã phản ánh hết tin tích cực."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn đáng kể.",
+      "Lợi suất thực USD 10Y giảm mạnh 5.85% trong 20 ngày (xuống 1.77%) và DXY giảm 2.06% tạo nền tảng vĩ mô thuận lợi cho xu hướng tăng trung hạn của vàng.",
+      "Premium 15.98% nằm trong biên dao động 30 ngày (9.99%-18.75%), không có dấu hiệu bất thường nhưng cho thấy giá Việt Nam đã phản ứng đầy đủ đợt tăng vừa qua.",
+      "Động lượng tăng 30 ngày mạnh (+7%) nhưng giảm chậm 7 ngày gần đây (-1.63%) cho thấy thị trường đang đi ngang/tích lũy sau đợt tăng nóng."
     ],
     "risks": [
-      "Giá ở đỉnh lịch sử 100% percentile 5 năm, rủi ro điều chỉnh kỹ thuật cao nếu không có tin vĩ mô mới.",
-      "Premium giãn từ 11% lên 15.96% trong 30 ngày, có thể co lại về 12-13% nếu giá thế giới đi ngang.",
-      "VIX tăng 14.05% trong 5 ngày cho thấy biến động thị trường cao, thanh khoản có thể giảm."
+      "Giá đang ở percentile 100% lịch sử 5 năm, khả năng điều chỉnh kỹ thuật cao nếu không có tin tức kích thích mới.",
+      "Biên độ dao động ngày 2.33% cho thấy thanh khoản co lại, spread mua-bán có thể giãn rộng bất ngờ.",
+      "VIX tăng 14.05% trong 5 ngày cảnh báo biến động thị trường tài chính toàn cầu, có thể gây chảy tiền tạm thời khỏi vàng."
     ],
     "evidence": [
       {
@@ -27,28 +27,34 @@
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 15.96,
+        "key": "sjc_change_30d",
+        "value": 7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_start",
-        "value": 11,
+        "key": "sjc_change_7d",
+        "value": -1.63,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_5d",
-        "value": -1.67,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_change_20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -5.85,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "usd_index_change20d",
+        "value": -2.06,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 8.76,
+        "unit": "% (18.75-9.99)",
+        "source": "monthly_series_30d"
       },
       {
         "key": "vix_change_5d",
@@ -57,23 +63,23 @@
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 7.03,
+        "key": "daily_volatility",
+        "value": 2.33,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-18T17:24:26.986Z",
+    "latestTimestamp": "2026-02-18T17:35:10.591Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156092651.43665966,
-    "premiumPct": 15.96,
-    "change7dPct": -1.61,
-    "change30dPct": 7.03,
+    "intlVndPerTael": 156061491.26210728,
+    "premiumPct": 15.98,
+    "change7dPct": -1.63,
+    "change30dPct": 7,
     "volatilityDailyPct": 2.33,
-    "ma7VndPerTael": 155830342,
-    "ma30VndPerTael": 155368056,
+    "ma7VndPerTael": 155825891,
+    "ma30VndPerTael": 155367017,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-18T17:24:48.451Z",
+    "fetchedAt": "2026-02-18T17:35:17.304Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4999.555,
+        "value": 4995.595,
         "unit": "USD/oz",
         "date": "2026-02-18",
-        "change1dPct": 2.5,
-        "change5dPct": -1.67,
-        "change20dPct": 3.45,
+        "change1dPct": 2.42,
+        "change5dPct": -1.75,
+        "change20dPct": 3.37,
         "relationToGold": "context"
       },
       {
@@ -185,9 +191,7 @@
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board",
       "2026-02-16 | Federal Reserve Speeches | Bowman, Revitalizing Bank Mortgage Lending, One Step with Basel"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-18 | juniorminingnetwork.com | Torr Metals Assays 13 . 1 g / t Gold in Historical Trenching at Filion , Expands Staking to Encompass 60 km Strike - Length to Gold - Bearing Structure"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
       "2026-02-18 | theguardian.com | By the end of the day were just knackered : business booms for united kingdom south Asian jewellers as gold prices soar | Gold",
       "2026-02-18 | swissinfo.ch | Transatlantic tension , a MAGA gold rush , and a climate own goal",
