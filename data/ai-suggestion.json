@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T16:19:01.857Z",
+  "generatedAt": "2026-02-19T17:21:12.643Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập trường an toàn hơn thay vì FOMO đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực hiển percentile 5 năm 100% với premium 15.88%, trong khi giá thế giới gặp kháng cự tâm lý 5,000 USD/oz; nhà đầu tư nên chờ đợi hồi chỉnh hoặc xác nhận phá vỡ trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.7 triệu VND/lượng), cho thấy thị trường đã tăng nóng +5.14% trong 30 ngày qua.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh -6.28% trong 20 ngày (xuống 1.79%) và VIX tăng +16.09% đang hỗ trợ giá vàng thế giới, nhưng áp lực bán lại xuất hiện khi giá逼近 ngưỡng tâm lý 5,000 USD/oz.",
-      "Premium 15.71% hiện tại cao hơn mức thấp nhất trong chuỗi 30 ngày (6.32% ngày 28/01) nhưng thấp hơn đỉnh 18.66% (ngày 17/02), cho thấy premium đang dao động trong biên độ bình thường của thị trường Việt Nam."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn rất lớn.",
+      "Giá thế giới XAUUSD (~4,998 USD/oz) đang gặp kháng cự mạnh quanh mốc 5,000 USD/oz, chưa xác nhận phá vỡ thành công.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.28% trong 20 ngày qua (xuống 1.79%) đang hỗ trợ giá vàng dài hạn, nhưng ngắn hạn đã qua vùng quá mua.",
+      "Premium 15.88% cao hơn mức thấp nhất 30 ngày là 6.32% (ngày 28/01), cho thấy giá trong nước đã tích hợp tốt đà tăng của thị trường thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật từ vùng đỉnh khi giá thế giới gặp kháng cự mạnh dưới ngưỡng 5,000 USD/oz theo tin tức thị trường.",
-      "Biến động ngày 2.3% kết hợp với 4 đợt drawdown trong lịch sử (tệ nhất -41.26%) cảnh báo rủi ro thanh khoản nếu thị trường đảo chiều.",
-      "Căng thẳng Mỹ - Iran có thể gây biến động bất ngờ hai chiều, khó dự đoán ngắn hạn."
+      "Căng thẳng Mỹ - Iran có thể đẩy giá tăng vọt bất ngờ (headline ngày 19/02).",
+      "Giá thế giới phá vỡ thành công mốc 5,000 USD/oz và thiết lập vùng giao dịch mới cao hơn.",
+      "Biến động ngày 2.3% có thể gây thanh lý tài khoản đòn bẩy hoặc mua bán thiếu kiên nhẫn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 181,
-        "unit": "triệu VND/lượng",
+        "key": "premium_current",
+        "value": 15.88,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "xauusd_price",
+        "value": 4998.27,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
         "value": -6.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 16.09,
+        "key": "sjc_change30d",
+        "value": 4.99,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Premium Range 30d",
+        "key": "premium_30d_low",
         "value": 6.32,
-        "unit": "% (min)",
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Gold Spot Resistance",
-        "value": 5000,
-        "unit": "USD/oz",
+        "key": "vix_change20d",
+        "value": 16.09,
+        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T16:18:21.550Z",
+    "latestTimestamp": "2026-02-19T17:20:34.240Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156425082.939842,
-    "premiumPct": 15.71,
-    "change7dPct": 1.22,
-    "change30dPct": 5.14,
+    "intlVndPerTael": 156202803.97423202,
+    "premiumPct": 15.88,
+    "change7dPct": 1.08,
+    "change30dPct": 4.99,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156145656,
-    "ma30VndPerTael": 155731157,
+    "ma7VndPerTael": 156113901,
+    "ma30VndPerTael": 155723748,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T16:18:39.822Z",
+    "fetchedAt": "2026-02-19T17:20:54.922Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5003.465,
+        "value": 4998.265,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.52,
-        "change5dPct": 1.66,
-        "change20dPct": 1.36,
+        "change1dPct": 0.42,
+        "change5dPct": 1.55,
+        "change20dPct": 1.26,
         "relationToGold": "context"
       },
       {
@@ -179,19 +186,16 @@
       "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-19 | wral.com | US stocks fall as oil prices climb again on worries about a potential US - Iran conflict",
-      "2026-02-19 | morningstar.com | U . S . trade deficit might be tariff proof - imports jump to record high in 2025",
-      "2026-02-19 | markets.financialcontent.com | FinancialContent - The Gold Standard : A Deep Dive into Newmont Corporation ( NEM ) in 2026",
-      "2026-02-19 | newrepublic.com | How the End of the Cold War Saved the Siberian Tiger"
+      "2026-02-19 | torontotelegraph.com | Rio Grande Resources Reports Gold up to 41 . 2 g / t and Silver up to 1 , 435 g / t at Its Winston Project , New Mexico"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
+    "countryActionHeadlines": [
+      "2026-02-19 | financialpost.com | Gold recaptures US$5 , 000 with focus on interest rates",
+      "2026-02-19 | markets.financialcontent.com | FinancialContent - The Golden Threshold : Gold Stabilizes Above $5 , 000 as Geopolitical Storms and AI Demand Redefine Commodity Markets",
+      "2026-02-19 | akronnewsreporter.com | US stocks slip as oil prices rise on worries of potential US - Iran conflict",
       "2026-02-19 | markets.financialcontent.com | FinancialContent - The Gold Standard : A Deep Dive into Newmont Corporation ( NEM ) in 2026",
       "2026-02-19 | english.aawsat.com | Gold Advances on US – Iran Tensions as Markets Weigh Fed Policy Path",
-      "2026-02-19 | fxstreet.com | Gold struggles below $5 , 000 as strong US Dollar caps gains",
-      "2026-02-19 | fortune.com | Current price of gold : February 19 , 2026",
-      "2026-02-19 | baystreet.ca | Baystreet . ca - Futures Retreat Amid Fed Word",
-      "2026-02-19 | zerohedge.com | The Plan Was To Kill Off Gold As Money ..."
-    ]
+      "2026-02-19 | fxstreet.com | Gold struggles below $5 , 000 as strong US Dollar caps gains"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
