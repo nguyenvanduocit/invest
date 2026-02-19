@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T13:31:59.480Z",
+  "generatedAt": "2026-02-19T14:22:03.652Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 4.71% trong 30 ngày qua, nhưng thanh khoản thấp và sự kiện vĩ mô chưa có tín hiệu đột phá khiến nhà đầu tư nên chờ đợi mức giá tốt hơn hoặc xác nhận xu hướng rõ ràng hơn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập sân tốt hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi đã tăng 4.71% trong 30 ngày qua.",
-      "Premium 16.18% hiện tại cao hơn đáng kể so với mức 13.26% đầu chuỗi dữ liệu 30 ngày, cho thấy giá nội địa đã chạy trước giá thế giới.",
-      "Lợi suất thực 10Y giảm mạnh 6.28% trong 20 ngày (xuống 1.79%) đang hỗ trợ giá vàng thế giới, nhưng VIX tăng 14.05% trong 5 ngày cho thấy thị trường đang căng thẳng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng mạnh 4.61% sau 30 ngày, rủi ro điều chỉnh ngắn hạn cao.",
+      "Biên độ dao động ngày lên tới 2.3% kết hợp với premium giãn nở từ 13.26% lên 16.3% cho thấy tâm lý thị trường đang sốt sắng nhưng thiếu ổn định.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 6.28% trong 20 ngày qua đang hỗ trợ giá vàng thế giới, nhưng giá VND đã phản giá trước (change30dPct 4.61%).",
+      "Giá thế giới (4980 USD/oz) đang giao dịch gần sát MA7 (5029 USD/oz) và MA30 (4982 USD/oz), cho thấy động lượng tăng đang chững lại ở vùng giá cao."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá ngắn hạn khi giá đang ở vùng overbought cực đoan (percentile 100% 5 năm).",
-      "Biến động ngày 2.3% cộng với chênh lệch premium dao động từ 9.9% đến 18.66% trong 30 ngày cho thấy thanh khoản và sprd giao dịch có thể rộng.",
-      "Thiếu tín hiệu hành động quốc gia/cục dự trữ trong dữ liệu, khó dự đoán can thiệp giá nội địa."
+      "Rủi ro điều chỉnh giá cao do SJC đang ở vùng overbought trên chuỗi 30 ngày và đỉnh 5 năm.",
+      "Premium 16.3% có thể co hẹp nếu giá thế giới giảm, làm giảm hiệu quả bảo vệ vốn của nhà đầu tư Việt Nam.",
+      "Thiếu tín hiệu địa chính trị rõ ràng trong dữ liệu đầu vào, giảm độ tin cậy của xu hướng tăng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "sjc_change_30d",
-        "value": 4.71,
+        "value": 4.61,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "current_premium",
-        "value": 16.18,
+        "key": "premium_current",
+        "value": 16.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_start",
+        "key": "premium_30d_ago",
         "value": 13.26,
         "unit": "%",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_10y_change20d",
-        "value": -6.28,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change5d",
-        "value": 14.05,
-        "unit": "%",
-        "source": "first_principles_context"
       },
       {
         "key": "volatility_daily",
         "value": 2.3,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -6.28,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "gold_spot_vs_ma30",
+        "value": 4980.11,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T13:31:04.004Z",
+    "latestTimestamp": "2026-02-19T14:21:19.481Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155786039.50756827,
-    "premiumPct": 16.18,
-    "change7dPct": 0.81,
-    "change30dPct": 4.71,
+    "intlVndPerTael": 155630206.66623893,
+    "premiumPct": 16.3,
+    "change7dPct": 0.71,
+    "change30dPct": 4.61,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156054364,
-    "ma30VndPerTael": 155709856,
+    "ma7VndPerTael": 156032102,
+    "ma30VndPerTael": 155704661,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T13:31:25.456Z",
+    "fetchedAt": "2026-02-19T14:21:40.928Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4978.495,
+        "value": 4979.625,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.02,
-        "change5dPct": 1.15,
-        "change20dPct": 0.86,
+        "change1dPct": 0.04,
+        "change5dPct": 1.17,
+        "change20dPct": 0.88,
         "relationToGold": "context"
       },
       {
@@ -184,14 +185,7 @@
       "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro",
       "2026-02-18 | ECB Press / Speeches | ECB and ONCE Foundation launch collaboration to ensure digital euro is accessible for everyone"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-19 | juniorminingnetwork.com | Val - DOr Mining Exploration Update Perestroika Prospect Eldorado Option",
-      "2026-02-19 | finanznachrichten.de | Sterling Metals Corp .: Sterling Metals Commences 2026 Drill Campaign at Soo Copper , Ontario",
-      "2026-02-19 | juniorminingnetwork.com | Discovery Reports Strong Earnings Growth and Cash Generation in Q4 2025",
-      "2026-02-19 | manilatimes.net | VR Submits Drill Permit Application for its New Boston Moly - Tungsten - Copper - Silver Porphyry Project in Nevada",
-      "2026-02-19 | newsday.co.zw | We expect ED2030 Bill to pass – Zanu PF - Newsday Zimbabwe",
-      "2026-02-19 | edmontonexaminer.com | Lorne Gunter : Classroom complexity finally getting attention it deserves"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
