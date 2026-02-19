@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T12:14:19.095Z",
+  "generatedAt": "2026-02-19T13:31:59.480Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập trường an toàn hơn thay vì FOMO.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 4.71% trong 30 ngày qua, nhưng thanh khoản thấp và sự kiện vĩ mô chưa có tín hiệu đột phá khiến nhà đầu tư nên chờ đợi mức giá tốt hơn hoặc xác nhận xu hướng rõ ràng hơn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm, cho thấy rủi ro điều chỉnh cao nếu mua vào thời điểm này.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 6.28% trong 20 ngày qua (xuống 1.79%) đang hỗ trợ giá vàng thế giới tăng, nhưng giá SJC đã phản ánh hết động lực này.",
-      "Premium 16.2% hiện tại cao hơn đáng kể so với mức 9.9-11.25% đầu chu kỳ dữ liệu, thanh khoản tại mức giá đỉnh có thể thấp."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi đã tăng 4.71% trong 30 ngày qua.",
+      "Premium 16.18% hiện tại cao hơn đáng kể so với mức 13.26% đầu chuỗi dữ liệu 30 ngày, cho thấy giá nội địa đã chạy trước giá thế giới.",
+      "Lợi suất thực 10Y giảm mạnh 6.28% trong 20 ngày (xuống 1.79%) đang hỗ trợ giá vàng thế giới, nhưng VIX tăng 14.05% trong 5 ngày cho thấy thị trường đang căng thẳng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá cao so với MA7 (156 triệu VND/lượng).",
-      "Biên độ dao động ngày 2.3% cho thấy thị trường đang rung lắc mạnh, dễ kích stop-loss.",
-      "Dữ liệu vĩ mô chưa có tín hiệu rõ ràng từ Fed, các phát ngôn chính sách ít liên quan trực tiếp đến giá vàng ngắn hạn."
+      "Rủi ro điều chỉnh giá ngắn hạn khi giá đang ở vùng overbought cực đoan (percentile 100% 5 năm).",
+      "Biến động ngày 2.3% cộng với chênh lệch premium dao động từ 9.9% đến 18.66% trong 30 ngày cho thấy thanh khoản và sprd giao dịch có thể rộng.",
+      "Thiếu tín hiệu hành động quốc gia/cục dự trữ trong dữ liệu, khó dự đoán can thiệp giá nội địa."
     ],
     "evidence": [
       {
@@ -26,59 +26,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_current_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma7_price",
-        "value": 156051537,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 16.2,
+        "key": "sjc_change_30d",
+        "value": 4.71,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_low",
-        "value": 9.9,
+        "key": "current_premium",
+        "value": 16.18,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_30d_start",
+        "value": 13.26,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_change20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -6.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
+        "key": "vix_change5d",
+        "value": 14.05,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "volatility_daily",
         "value": 2.3,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "vix_index",
-        "value": 20.29,
-        "unit": "index",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T12:13:44.117Z",
+    "latestTimestamp": "2026-02-19T13:31:04.004Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155766249.57829225,
-    "premiumPct": 16.2,
-    "change7dPct": 0.79,
-    "change30dPct": 4.7,
+    "intlVndPerTael": 155786039.50756827,
+    "premiumPct": 16.18,
+    "change7dPct": 0.81,
+    "change30dPct": 4.71,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156051537,
-    "ma30VndPerTael": 155709196,
+    "ma7VndPerTael": 156054364,
+    "ma30VndPerTael": 155709856,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T12:13:57.394Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-19T13:31:25.456Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4986.985,
+        "value": 4978.495,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.19,
-        "change5dPct": 1.32,
-        "change20dPct": 1.03,
+        "change1dPct": 0.02,
+        "change5dPct": 1.15,
+        "change20dPct": 0.86,
         "relationToGold": "context"
       },
       {
@@ -183,28 +177,22 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies",
       "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro",
-      "2026-02-18 | ECB Press / Speeches | ECB and ONCE Foundation launch collaboration to ensure digital euro is accessible for everyone",
-      "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?"
+      "2026-02-18 | ECB Press / Speeches | ECB and ONCE Foundation launch collaboration to ensure digital euro is accessible for everyone"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-19 | fxstreet.com | EUR / USD edges up to near 1 . 1800 , outlook remains grim amid firm US Dollar",
-      "2026-02-19 | finanznachrichten.de | Fortuna Mining Corp .: Fortuna expands Indicated Mineral Resource by 73 % to 1 . 25 million gold ounces , Diamba Sud Project , Senegal"
+      "2026-02-19 | juniorminingnetwork.com | Val - DOr Mining Exploration Update Perestroika Prospect Eldorado Option",
+      "2026-02-19 | finanznachrichten.de | Sterling Metals Corp .: Sterling Metals Commences 2026 Drill Campaign at Soo Copper , Ontario",
+      "2026-02-19 | juniorminingnetwork.com | Discovery Reports Strong Earnings Growth and Cash Generation in Q4 2025",
+      "2026-02-19 | manilatimes.net | VR Submits Drill Permit Application for its New Boston Moly - Tungsten - Copper - Silver Porphyry Project in Nevada",
+      "2026-02-19 | newsday.co.zw | We expect ED2030 Bill to pass – Zanu PF - Newsday Zimbabwe",
+      "2026-02-19 | edmontonexaminer.com | Lorne Gunter : Classroom complexity finally getting attention it deserves"
     ],
-    "countryActionHeadlines": [
-      "2026-02-19 | livemint.com | Missed last year gold and silver rally ? Analysts urge investors to avoid FOMO and exercise caution . Here why",
-      "2026-02-19 | fxstreet.com | EUR / USD Forecast : Euro stabilizes but looks fragile",
-      "2026-02-19 | finance.yahoo.com | Best high - yield savings interest rates today , February 19 , 2026 ( top account pays 4 % APY )",
-      "2026-02-19 | fxstreet.com | EUR / USD edges up to near 1 . 1800 , outlook remains grim amid firm US Dollar",
-      "2026-02-19 | fxstreet.com | Solana Price Forecast : SOL below $82 as Fed tone pressures risk assets"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-19 | livemint.com | Missed last year gold and silver rally ? Analysts urge investors to avoid FOMO and exercise caution . Here why",
-      "2026-02-19 | fxstreet.com | EUR / USD edges up to near 1 . 1800 , outlook remains grim amid firm US Dollar",
-      "2026-02-19 | finanznachrichten.de | Fortuna Mining Corp .: Fortuna expands Indicated Mineral Resource by 73 % to 1 . 25 million gold ounces , Diamba Sud Project , Senegal"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
