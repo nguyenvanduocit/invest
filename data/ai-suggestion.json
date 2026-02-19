@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T20:09:38.027Z",
+  "generatedAt": "2026-02-19T21:10:15.521Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động premium cao, đòi hỏi nhà đầu tư chờ đợi vùng giá tốt hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập trường tốt hơn thay vì đu đỉnh. Dù vĩ mô ủng hộ dài hạn nhờ lợi suất thực USD giảm mạnh, rủi ro điều chỉnh ngắn hạn là rất cao.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật cao khi mua tại điểm này.",
-      "Premium 16.07% cao hơn đáng kể so với mức 9.9-11.25% đầu chuỗi dữ liệu 30 ngày, cho thấy giá nội địa đã chạy trước giá thế giới.",
-      "Lợi suất thực USD 10Y giảm mạnh 6.28% trong 20 ngày qua tạo nền tảng hỗ trợ vĩ mô cho vàng, nhưng giá đã phản ánh phần lớn kỳ vọng này.",
-      "Biên độ dao động ngày 2.26% và premium dao động từ 6.32% đến 18.66% trong 30 ngày cho thấy thị trường biến động mạnh, cần thận trọng."
+      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm, quá cao so với MA30 (155.9 triệu VND/lượng) và tăng 4.59% chỉ trong 30 ngày gần nhất.",
+      "Biên độ dao động ngày (volatility) lên tới 2.26% kết hợp với việc giá thế giới (4999.5 USD/oz) chưa phá vỡ đỉnh cũ 5327 USD/oz cho thấy áp lực chốt lời ngắn hạn.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.28% trong 20 ngày (xuống 1.79%) và chỉ số USD giảm 2.06% tạo nền tảng vĩ mô tích cực hỗ trợ xu hướng tăng dài hạn.",
+      "Premium 15.85% hiện tại cao hơn đáng kể so với mức 9.9-11.25% đầu chu kỳ dữ liệu, cho thấy giá nội địa đã phản ứng quá mức so với biến động giá thế giới."
     ],
     "risks": [
-      "Giá thế giới xung quanh đỉnh 5000 USD/oz có thể điều chỉnh ngắn hạn gây áp lực lên giá nội địa.",
-      "Premium co giãn mạnh từ 6.32% đến 18.66% trong 30 ngày, rủi ro mất giá chênh lệch nếu mua tại premium cao.",
-      "Thiếu tín hiệu vĩ mô rõ ràng từ Fed/ECB trong 24-48 giờ qua, thị trường có thể dao động không định hướng."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua (percentile 100%), biên độ 2.26%/ngày có thể gây mất mát lớn nếu mua đu đỉnh.",
+      "Premium co giãn mạnh từ 6.32% lên 18.66% trong 30 ngày; nếu giá thế giới điều chỉnh, premium có thể co lại nhanh làm trầm trọng thêm mức lỗ của nhà đầu tư nội địa.",
+      "Thiếu tín hiệu địa chính trị cấp thiết trong dữ liệu đầu vào, đà tăng hiện tại có thể chủ yếu do động lượng thị trường và dễ bị đảo chiều."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_current_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current_vs_30d_start",
+        "key": "SJC Price vs MA30",
         "value": 16.07,
-        "unit": "%",
+        "unit": "% above MA",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_start",
-        "value": 9.9,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.28,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "volatility_daily",
+        "key": "Daily Volatility",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_range_low",
+        "key": "Premium Range 30d",
         "value": 6.32,
-        "unit": "%",
+        "unit": "% to 18.66%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "premium_30d_range_high",
-        "value": 18.66,
-        "unit": "%",
+        "key": "Gold Spot Price",
+        "value": 4999.5,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX Change 20d",
+        "value": 16.09,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T20:08:53.801Z",
+    "latestTimestamp": "2026-02-19T21:09:32.659Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155934493.82125327,
-    "premiumPct": 16.07,
-    "change7dPct": -0.8,
-    "change30dPct": 4.38,
+    "intlVndPerTael": 156236243.75777003,
+    "premiumPct": 15.85,
+    "change7dPct": -0.6,
+    "change30dPct": 4.59,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 155886377,
-    "ma30VndPerTael": 155930676,
+    "ma7VndPerTael": 155929484,
+    "ma30VndPerTael": 155940734,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T20:09:14.874Z",
+    "fetchedAt": "2026-02-19T21:09:54.365Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4991.235,
+        "value": 4998.605,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.28,
-        "change5dPct": 1.41,
-        "change20dPct": 1.12,
+        "change1dPct": 0.43,
+        "change5dPct": 1.56,
+        "change20dPct": 1.27,
         "relationToGold": "context"
       },
       {
@@ -191,15 +185,8 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies",
       "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-19 | markets.financialcontent.com | FinancialContent - Gold Shatters $5 , 000 : Geopolitics and  Dollar Decoupling  Fuel Historic Rally"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-19 | markets.financialcontent.com | FinancialContent - Gold Shatters $5 , 000 : Geopolitics and  Dollar Decoupling  Fuel Historic Rally",
-      "2026-02-19 | coindesk.com | Bitcoin ( BTC ) news : Fed Kashkari says crypto is  utterly useless",
-      "2026-02-19 | markets.financialcontent.com | FinancialContent - US Labor Market Defies Gravity : February Jobs Surge Calms Spending Fears but Puts Fed Cuts on Ice",
-      "2026-02-19 | gizmodo.com | Federal Reserve Says Prediction Markets Are a Valuable Tool for Policymakers"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
