@@ -1,72 +1,79 @@
 {
-  "generatedAt": "2026-02-19T00:22:41.688Z",
+  "generatedAt": "2026-02-19T01:35:33.132Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng 2.3%/ngày, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập sân tốt hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, trong khi giá thế giới cho thấy dấu hiệu chững lại gần vùng đỉnh; nhà đầu tư nên chờ đợi sự xác nhận xu hướng rõ ràng hơn hoặc đợt điều chỉnh về mức MA7 (VND/lượng) trước khi gia nhập thị trường.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.38% sau 30 ngày, rủi ro điều chỉnh ngắn hạn rất lớn.",
-      "Biên độ dao động ngày cao (2.3%) và premium giãn rộng từ 9.9% lên 16.55% trong 30 ngày cho thấy thanh khoản thị trường căng thẳng, giá dễ trồi sụt.",
-      "Vĩ mô hỗ trợ nhưng đã phần nào phản ánh: Lợi suất thực 10Y giảm mạnh 6.28% trong 20 ngày và giá vàng thế giới đã chạm ngưỡng 5,000 USD/oz."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.25% sau 30 ngày, rủi ro mua đỉp ngắn hạn là rất lớn.",
+      "Động lượng giá thế giới suy yếu: XAUUSD giảm 0.22% ngày 19/02, giao dịch dưới đỉnh 20 ngày trước đó (5327 USD/oz ngày 28/01).",
+      "Lợi suất thực 10 năm Mỹ (1.79%) đang tăng nhẹ ngày (+1.13%), tạo áp lực ngược lên giá vàng thế giới.",
+      "Premium 16.7% hiện tại cao hơn đáng kể so với mức đáy 6.32% trong chuỗi 30 ngày, cho thấy định giá nội địa đã phản ánh quá hưng phấn."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn khi giá đã tăng liên tục 4.38% trong 30 ngày và đang ở đỉnh lịch sử.",
-      "Premium 16.55% cao hơn đáng kể so với mức 9.9-13% đầu chuỗi dữ liệu, có thể co hẹp nếu giá thế giới giảm.",
-      "Tin tức địa chính trị (xung đột Iran) có thể gây biến động giá bất ngờ hai chiều."
+      "Biên độ dao động ngày cao (2.3%) kèm theo sự thay đổi premium thất thường (từ 6.32% đến 18.66%) có thể gây thua lỗ ngắn hạn lớn khi swing trade.",
+      "VIX ở mức 20.29 cho thấy tâm lý thị trường quốc tế vẫn lo ngại, giá vàng có thể biến động thất thường theo tin tức địa chính trị.",
+      "Dữ liệu vĩ mô (first_principles) bị thiếu cập nhật trong 1-2 ngày gần nhất, có thể bỏ lỡ các tín hiệu đảo chiều quan trọng."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 4.38,
+        "key": "sjc_change_30d",
+        "value": 4.25,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
+        "key": "premium_range_30d",
+        "value": 12.34,
+        "unit": "% (18.66-6.32)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "intl_gold_change_1d",
+        "value": -0.22,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.79,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_level",
+        "value": 20.29,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "daily_volatility",
         "value": 2.3,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Expansion (30d)",
-        "value": 6.65,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield Change 20d",
-        "value": -6.28,
         "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Intl Gold Price High",
-        "value": 5327.18,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T00:22:04.394Z",
+    "latestTimestamp": "2026-02-19T01:34:51.459Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155293242.86200988,
-    "premiumPct": 16.55,
-    "change7dPct": 0.49,
-    "change30dPct": 4.38,
+    "intlVndPerTael": 155101407.39333194,
+    "premiumPct": 16.7,
+    "change7dPct": 0.36,
+    "change30dPct": 4.25,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155983964,
-    "ma30VndPerTael": 155693429,
+    "ma7VndPerTael": 155956559,
+    "ma30VndPerTael": 155687034,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T00:22:22.443Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-19T01:35:12.598Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4968.365,
+        "value": 4966.535,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": -0.18,
-        "change5dPct": 0.94,
-        "change20dPct": 0.65,
+        "change1dPct": -0.22,
+        "change5dPct": 0.91,
+        "change20dPct": 0.62,
         "relationToGold": "context"
       },
       {
@@ -179,22 +186,13 @@
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-19 | theage.com.au | Zenith more than doubles WA gold play with 675koz resource surge",
-      "2026-02-19 | navytimes.com | Gold PT uniform phaseout set as Navy streamlines sailor seabag",
-      "2026-02-18 | cantechletter.com | Lundin Gold Reports Further High Grade Results at FDNS Including 91 . 3 g / t over 20 . 65 Metres and Expands the Mineralized Footprint at FDN East",
-      "2026-02-18 | cantechletter.com | OceanaGold Achieves 2025 Guidance & Delivers Record Free Cash Flow"
+      "2026-02-19 | smh.com.au | US dollar : Trump has the left door open for Europe to attack"
     ],
     "countryActionHeadlines": [
-      "2026-02-18 | currencynews.co.uk | GBP / USD Forecast : Pound Sterling Steady despite Softer united kingdom Inflation",
-      "2026-02-18 | zerohedge.com | Crude rallies on reports Trump is close to major war with Iran - Newsquawk US Market Wrap",
-      "2026-02-18 | slguardian.org | Trade War , Rerouted : China Exports Find New Highways Around America – Sri Lanka Guardian"
+      "2026-02-19 | smh.com.au | US dollar : Trump has the left door open for Europe to attack",
+      "2026-02-19 | marketscreener.com | Dollar perks up as Fed appears in no rush to cut rates",
+      "2026-02-19 | staradvertiser.com | Gold surges over 2 % on geopolitical jitters | Honolulu Star - Advertiser"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-19 | investing.com | Gold Trades Sideways but Structure Points to $6 , 800 if Range Resolves Higher",
-      "2026-02-18 | marketpulse.com | January FOMC Minutes and Wartime – North American Mid - Week Market update",
-      "2026-02-18 | zerohedge.com | Crude rallies on reports Trump is close to major war with Iran - Newsquawk US Market Wrap",
-      "2026-02-18 | markets.financialcontent.com | FinancialContent - Global Markets on Edge as Iranian Tensions Drive Gold to Record $5 , 000 ; Oil Surges Amid Military Mobilization",
-      "2026-02-18 | interest.co.nz | Breakfast briefing : Aussie wages fail to keep up with inflation"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
