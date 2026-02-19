@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T06:23:30.700Z",
+  "generatedAt": "2026-02-19T07:23:31.678Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,66 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng 2.3%/ngày, khiến rủi ro mua đuổi rất lớn. Dù xu hướng 30 ngày vẫn tăng mạnh (+5.01%), động lượng đã chững lại khi giá thế giới gặp kháng cự tâm lý 5000 USD/oz và premium giảm từ đỉnh 18.66% về 15.85%.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu/lượng (percentile 5 năm 100%) với đà tăng mạnh 5.37%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium đã giãn nhanh lên 15.46% và thanh khoản thấp. Nhà đầu tư không nên mua đuổi lúc này mà chờ hồi về vùng 176-178 triệu để tích sản an toàn hơn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tiềm ẩn rủi hoãn hồi điều chỉnh kỹ thuật mạnh.",
-      "Động lượng tăng giá thế giới chững lại gần ngưỡng kháng cự 5000 USD/oz (đạt 4999.35 USD/oz) mà chưa phá vỡ dứt khoát.",
-      "Premium SJC co lại từ đỉnh 18.66% (17/02) về 15.85%, cho thấy tâm lý nhà đầu tư Việt Nam đang thận trọng hơn.",
-      "VIX tăng 14.05% trong 5 ngày và tin tức căng thẳng US-Iran hỗ trợ vàng nhưng cũng làm tăng biến động, không phù hợp để MUA đuổi."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất lịch sử (percentile 5Y: 100%), cách xa MA30 (155,742,419 VND/lượng) tới 16%, báo hiệu vùng quá mua kỹ thuật.",
+      "Premium đã giãn rộng lên 15.46% (tương đương chênh lệch 24.2 triệu/lượng), cao hơn nhiều so với mức 9.9-13% đầu chuỗi dữ liệu, cho thấy thị trường Việt Nam đang định giá quá nhiệt.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.28% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06% là động lực hỗ trợ giá thế giới tăng 1.62% trong 20 ngày qua, nhưng các chỉ báo này đã bắt đầu ổn định lại."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu từ vùng đỉnh do biên độ dao động ngày cao (2.3%).",
-      "Thanh khoản có thể giảm nếu giá thế giới quay đầu giảm dưới 4900 USD/oz.",
-      "Thiếu dữ liệu lợi suất thực (US Real Yield) khiến đánh giá chi phí cơ hội holding vàng chưa đầy đủ."
+      "Rủi ro điều chỉnh giá cao khi premium co lại từ đỉnh 18.66% về mức 15.46%, có thể khiến giá SJC giảm nhanh dù giá thế giới đi ngang.",
+      "Thanh khoản hồi phục kém với 1/4 đợt giảm giá chưa lấy lại được đỉnh (worst drawdown 41.26%), trung bình mất 1369 ngày để hồi phục.",
+      "VIX tăng 14.05% trong 5 ngày gần nhất cho thấy biến động thị trường tài chính đang gia tăng, có thể gây chặn lời trên vàng."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4999.35,
-        "unit": "USD/oz",
+        "key": "premium_vs_intl",
+        "value": 15.46,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_vs_ma30_gap",
+        "value": 16.17,
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Premium SJC hiện tại",
-        "value": 15.85,
+        "key": "us_real_yield_20d_change",
+        "value": -6.28,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Biến động ngày",
-        "value": 2.3,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Tăng trưởng 30 ngày SJC",
-        "value": 5.01,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX thay đổi 5 ngày",
+        "key": "vix_5d_change",
         "value": 14.05,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "DXY thay đổi 20 ngày",
-        "value": -2.06,
+        "key": "worst_drawdown",
+        "value": 41.26,
         "unit": "%",
-        "source": "macro_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T06:22:55.338Z",
+    "latestTimestamp": "2026-02-19T07:22:44.733Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156231666.51434928,
-    "premiumPct": 15.85,
-    "change7dPct": 1.1,
-    "change30dPct": 5.01,
+    "intlVndPerTael": 156762956.75518873,
+    "premiumPct": 15.46,
+    "change7dPct": 1.44,
+    "change30dPct": 5.37,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156118025,
-    "ma30VndPerTael": 155724710,
+    "ma7VndPerTael": 156193923,
+    "ma30VndPerTael": 155742419,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,21 +77,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T06:23:13.559Z",
+    "fetchedAt": "2026-02-19T07:23:06.127Z",
     "healthy": false,
-    "missingFactors": [
-      "US Real Yield 10Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4999.125,
+        "value": 5016.105,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.44,
-        "change5dPct": 1.57,
-        "change20dPct": 1.28,
+        "change1dPct": 0.78,
+        "change5dPct": 1.91,
+        "change20dPct": 1.62,
         "relationToGold": "context"
       },
       {
@@ -115,12 +106,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.79,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-17",
+        "change1dPct": 1.13,
+        "change5dPct": -4.28,
+        "change20dPct": -6.28,
         "relationToGold": "inverse"
       },
       {
@@ -187,25 +178,8 @@
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-19 | rediff.com | Gold , Silver Surge Pushes Jan Import Bill Up",
-      "2026-02-19 | heraldglobe.com | Trump claims 78 per cent drop in US trade deficit ; credits tariffs for economic shift"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-19 | newsx.com | What Changed In The Stock Market While You Were Sleeping ? From Fed Minutes To Asian Gains Everything You Need To Know",
-      "2026-02-19 | economictimes.indiatimes.com | Gold , silver prices little changed as traders assess US - Iran tensions , Fed rate cut uncertainty . What are experts saying ?",
-      "2026-02-19 | marketscreener.com | BOJ to hike policy rate to 1 % by end - June , sooner than forecast before election",
-      "2026-02-19 | livemint.com | Silver rate today recovers on MCX amid thin trade even as US Fed minutes lift dollar - What technicals suggest ?",
-      "2026-02-19 | myjoyonline.com | Gold Board is good , but Ghana must prepare for the fall - Prof Peprah",
-      "2026-02-19 | calcuttanews.net | Rupee likely to remain at 89 - 90 / USD by FY27 - end on softer dollar , manageable CAD : CareEdge Ratings"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-19 | newsx.com | What Changed In The Stock Market While You Were Sleeping ? From Fed Minutes To Asian Gains Everything You Need To Know",
-      "2026-02-19 | economictimes.indiatimes.com | Gold , silver prices little changed as traders assess US - Iran tensions , Fed rate cut uncertainty . What are experts saying ?",
-      "2026-02-19 | myjoyonline.com | Dont let Gold Board become the next COCOBOD - Finance professor warns",
-      "2026-02-19 | calcuttanews.net | Consumer inflation likely to rise to 4 . 3 per cent in FY27 from 2 . 5 per cent in FY26 : Crisil",
-      "2026-02-19 | livemint.com | Silver rate today recovers on MCX amid thin trade even as US Fed minutes lift dollar - What technicals suggest ?",
-      "2026-02-19 | myjoyonline.com | Gold Board is good , but Ghana must prepare for the fall - Prof Peprah"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }

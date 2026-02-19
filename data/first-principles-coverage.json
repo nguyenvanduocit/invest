@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-19T06:23:13.633Z",
+  "checkedAt": "2026-02-19T07:23:06.204Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-19T06:23:13.559Z",
+  "dataFetchedAt": "2026-02-19T07:23:06.127Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,29 +9,37 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "US Real Yield 10Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 8,
-    "countryActionCount": 15,
-    "dollarYieldCount": 10,
+    "geopoliticalCount": 0,
+    "countryActionCount": 0,
+    "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "us_real_yield_10y",
-        "error": "HTTP 504"
+        "id": "gdelt_geopolitics",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_dollar_yields",
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Real Yield 10Y"
+    "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)",
+    "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_real_yield_10y (HTTP 504)"
+    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
