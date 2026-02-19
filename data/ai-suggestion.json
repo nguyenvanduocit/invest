@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T07:23:31.678Z",
+  "generatedAt": "2026-02-19T08:14:22.723Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu/lượng (percentile 5 năm 100%) với đà tăng mạnh 5.37%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium đã giãn nhanh lên 15.46% và thanh khoản thấp. Nhà đầu tư không nên mua đuổi lúc này mà chờ hồi về vùng 176-178 triệu để tích sản an toàn hơn.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao, trong khi động lượng tăng giá thế giới đang gặp kháng cự và Fed phát ngôn hawkish gây áp lực ngắn hạn.",
     "reasons": [
-      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất lịch sử (percentile 5Y: 100%), cách xa MA30 (155,742,419 VND/lượng) tới 16%, báo hiệu vùng quá mua kỹ thuật.",
-      "Premium đã giãn rộng lên 15.46% (tương đương chênh lệch 24.2 triệu/lượng), cao hơn nhiều so với mức 9.9-13% đầu chuỗi dữ liệu, cho thấy thị trường Việt Nam đang định giá quá nhiệt.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.28% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06% là động lực hỗ trợ giá thế giới tăng 1.62% trong 20 ngày qua, nhưng các chỉ báo này đã bắt đầu ổn định lại."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm ẩn rủi ro điều chỉnh kỹ thuật sau khi tăng 5.23% trong 30 ngày qua.",
+      "Lợi suất thực Mỹ (1.79%) và USD Index tăng trở lại cùng tín hiệu 'Hawkish Fed' từ biên bản cuộc họp FOMC ngày 18/02 đang tạo áp lực ngược lên giá vàng thế giới.",
+      "Biên độ dao động ngày cao (2.3%) cho thấy thị trường thiếu định hướng rõ ràng, phù hợp với trạng thái chờ đợi xác nhận."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao khi premium co lại từ đỉnh 18.66% về mức 15.46%, có thể khiến giá SJC giảm nhanh dù giá thế giới đi ngang.",
-      "Thanh khoản hồi phục kém với 1/4 đợt giảm giá chưa lấy lại được đỉnh (worst drawdown 41.26%), trung bình mất 1369 ngày để hồi phục.",
-      "VIX tăng 14.05% trong 5 ngày gần nhất cho thấy biến động thị trường tài chính đang gia tăng, có thể gây chặn lời trên vàng."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ vùng hỗ trợ 4,900 USD/oz.",
+      "Thanh khoản thấp hoặc gián đoạn mua bán của SJC nếu biên độ premium (hiện 15.61%) biến động mạnh.",
+      "Căng thẳng địa chính trị bất ngờ có thể đẩy giá bật tăng nhanh chóng, gây trượt điểm chốt lời."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_vs_intl",
-        "value": 15.46,
+        "key": "SJC Change 30d",
+        "value": 5.23,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_gap",
-        "value": 16.17,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_20d_change",
-        "value": -6.28,
+        "key": "US Real Yield 10Y",
+        "value": 1.79,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_5d_change",
-        "value": 14.05,
+        "key": "USD Index Change 1d",
+        "value": -0.01,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "worst_drawdown",
-        "value": 41.26,
+        "key": "Premium SJC vs World",
+        "value": 15.61,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot XAUUSD",
+        "value": 5010.85,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T07:22:44.733Z",
+    "latestTimestamp": "2026-02-19T08:13:45.629Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156762956.75518873,
-    "premiumPct": 15.46,
-    "change7dPct": 1.44,
-    "change30dPct": 5.37,
+    "intlVndPerTael": 156562058.98829553,
+    "premiumPct": 15.61,
+    "change7dPct": 1.31,
+    "change30dPct": 5.23,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156193923,
-    "ma30VndPerTael": 155742419,
+    "ma7VndPerTael": 156165224,
+    "ma30VndPerTael": 155735723,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T07:23:06.127Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-19T08:14:01.356Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5016.105,
+        "value": 5010.845,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.78,
-        "change5dPct": 1.91,
-        "change20dPct": 1.62,
+        "change1dPct": 0.67,
+        "change5dPct": 1.81,
+        "change20dPct": 1.51,
         "relationToGold": "context"
       },
       {
@@ -178,8 +184,25 @@
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-19 | springfieldnewssun.com | Asian shares advance , tracking a Wall St rally led by Nvidia",
+      "2026-02-19 | pjmedia.com | Historic : A Surprise High - Level U . S . Visitor Lands in Venezuela",
+      "2026-02-19 | actionforex.com | Hawkish Minutes - ActionForex",
+      "2026-02-19 | smdailyjournal.com | Asian shares advance , tracking a Wall St rally led by Nvidia",
+      "2026-02-19 | investegate.co.uk | Half - year Financial Report | Company Announcement"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-19 | finance.yahoo.com | Dollar Supported by Hawkish Fed Comments",
+      "2026-02-19 | marketscreener.com | Stocks to rise , Fed has mixed views on AI",
+      "2026-02-19 | northkoreatimes.com | Nifty , Sensex open higher on FII inflows and DII buying ; experts cautious amid global risks , hawkish Fed outlook",
+      "2026-02-19 | zeenews.india.com | Gold and silver surge on safe haven demand , Gold at Rs 1 , 56 , 100 per 10 grams",
+      "2026-02-19 | iranherald.com | Nifty , Sensex open higher on FII inflows and DII buying ; experts cautious amid global risks , hawkish Fed outlook",
+      "2026-02-19 | en.apa.az | Gold dips as dollar firms ahead of inflation data"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-19 | marketscreener.com | Stocks to rise , Fed has mixed views on AI",
+      "2026-02-19 | northkoreatimes.com | Nifty , Sensex open higher on FII inflows and DII buying ; experts cautious amid global risks , hawkish Fed outlook",
+      "2026-02-19 | zeenews.india.com | Gold and silver surge on safe haven demand , Gold at Rs 1 , 56 , 100 per 10 grams"
+    ]
   }
 }
