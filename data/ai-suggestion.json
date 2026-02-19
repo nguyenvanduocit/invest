@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T15:17:42.281Z",
+  "generatedAt": "2026-02-19T16:19:01.857Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,66 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 5.08%/tháng, nhưng rủi ro điều độ kỹ thuật đang gia tăng khi biên độ dao động lên tới 2.3%. Mặc dù vĩ mô ủng hộ với lợi suất thực USD giảm sâu 6.28% trong 20 ngày, nhưng giá SJC đã tách khỏi MA7 (156.1 triệu/lượng) quá xa và premium biến động mạnh, yêu cầu nhà đầu tư kiên nhẫn chờ điểm mua an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập trường an toàn hơn thay vì FOMO đuổi đỉnh.",
     "reasons": [
-      "Đà tăng vĩ mô mạnh mẽ: Lợi suất thực Mỹ 10 năm (US Real Yield) giảm sâu 6.28% trong 20 ngày qua xuống mức 1.79%, tạo động lực chính đẩy giá vàng thế giới tăng 1.32% (20 ngày) và 5.08% (30 ngày) tính theo VND.",
-      "Cảnh báo vùng quá mua kỹ thuật: Giá SJC hiện tại 181 triệu/lượng đang cao hơn đáng kể so với MA7 (156.1 triệu/lượng) và nằm ở phân vị 100% trong 5 năm qua, tín hiệu thị trường đã quá nóng ngắn hạn.",
-      "Biên độ và rủi ro tăng cao: Dao động ngày (volatility) đạt 2.3% kết hợp với VIX tăng 16.09% trong 20 ngày cho thấy thị trường đang bất ổn định; premium co giãn từ 9.9% lên 18.66% trong chuỗi 30 ngày chứng tỏ thanh khoản nội địa đang phân tán mạnh."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (155.7 triệu VND/lượng), cho thấy thị trường đã tăng nóng +5.14% trong 30 ngày qua.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh -6.28% trong 20 ngày (xuống 1.79%) và VIX tăng +16.09% đang hỗ trợ giá vàng thế giới, nhưng áp lực bán lại xuất hiện khi giá逼近 ngưỡng tâm lý 5,000 USD/oz.",
+      "Premium 15.71% hiện tại cao hơn mức thấp nhất trong chuỗi 30 ngày (6.32% ngày 28/01) nhưng thấp hơn đỉnh 18.66% (ngày 17/02), cho thấy premium đang dao động trong biên độ bình thường của thị trường Việt Nam."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đã tăng liên tục 5.08% trong 30 ngày và nằm ở đỉnh 5 năm (percentile 100%), khả năng chốt lời ngắn hạn rất cao.",
-      "Premium nội địa (15.77%) có thể co hẹp nhanh về mức trung bình (khoảng 13-14%) nếu giá thế giới đi ngang hoặc điều chỉnh, làm giảm hiệu quả đầu tư SJC so với vàng thế giới.",
-      "Thanh khoản có thể giảm nếu giá duy trì ở mức 181 triệu/lượng quá lâu, dẫn đến rủi ro chốt lời dồn dập như lịch sử các lần phục hồi trung bình 1369 ngày sau đợt giảm sâu 41.26%."
+      "Rủi ro điều chỉnh kỹ thuật từ vùng đỉnh khi giá thế giới gặp kháng cự mạnh dưới ngưỡng 5,000 USD/oz theo tin tức thị trường.",
+      "Biến động ngày 2.3% kết hợp với 4 đợt drawdown trong lịch sử (tệ nhất -41.26%) cảnh báo rủi ro thanh khoản nếu thị trường đảo chiều.",
+      "Căng thẳng Mỹ - Iran có thể gây biến động bất ngờ hai chiều, khó dự đoán ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma7_price",
-        "value": 156133263,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 5.08,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change20d",
+        "key": "SJC Price vs MA30",
+        "value": 181,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.3,
+        "key": "VIX Change 20d",
+        "value": 16.09,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 8.76,
-        "unit": "% (9.9 to 18.66)",
+        "key": "Premium Range 30d",
+        "value": 6.32,
+        "unit": "% (min)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "vix_change20d",
-        "value": 16.09,
-        "unit": "%",
+        "key": "Gold Spot Resistance",
+        "value": 5000,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T15:17:05.006Z",
+    "latestTimestamp": "2026-02-19T16:18:21.550Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156338332.50500104,
-    "premiumPct": 15.77,
-    "change7dPct": 1.16,
-    "change30dPct": 5.08,
+    "intlVndPerTael": 156425082.939842,
+    "premiumPct": 15.71,
+    "change7dPct": 1.22,
+    "change30dPct": 5.14,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156133263,
-    "ma30VndPerTael": 155728265,
+    "ma7VndPerTael": 156145656,
+    "ma30VndPerTael": 155731157,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +77,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T15:17:14.600Z",
+    "fetchedAt": "2026-02-19T16:18:39.822Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5001.175,
+        "value": 5003.465,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.48,
-        "change5dPct": 1.61,
-        "change20dPct": 1.32,
+        "change1dPct": 0.52,
+        "change5dPct": 1.66,
+        "change20dPct": 1.36,
         "relationToGold": "context"
       },
       {
@@ -183,15 +171,27 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies",
-      "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro",
-      "2026-02-18 | ECB Press / Speeches | ECB and ONCE Foundation launch collaboration to ensure digital euro is accessible for everyone"
+      "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-19 | wral.com | US stocks fall as oil prices climb again on worries about a potential US - Iran conflict",
+      "2026-02-19 | morningstar.com | U . S . trade deficit might be tariff proof - imports jump to record high in 2025",
+      "2026-02-19 | markets.financialcontent.com | FinancialContent - The Gold Standard : A Deep Dive into Newmont Corporation ( NEM ) in 2026",
+      "2026-02-19 | newrepublic.com | How the End of the Cold War Saved the Siberian Tiger"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-19 | markets.financialcontent.com | FinancialContent - The Gold Standard : A Deep Dive into Newmont Corporation ( NEM ) in 2026",
+      "2026-02-19 | english.aawsat.com | Gold Advances on US – Iran Tensions as Markets Weigh Fed Policy Path",
+      "2026-02-19 | fxstreet.com | Gold struggles below $5 , 000 as strong US Dollar caps gains",
+      "2026-02-19 | fortune.com | Current price of gold : February 19 , 2026",
+      "2026-02-19 | baystreet.ca | Baystreet . ca - Futures Retreat Amid Fed Word",
+      "2026-02-19 | zerohedge.com | The Plan Was To Kill Off Gold As Money ..."
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-19T15:17:14.676Z",
+  "checkedAt": "2026-02-19T16:18:39.898Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-19T15:17:14.600Z",
+  "dataFetchedAt": "2026-02-19T16:18:39.822Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -14,32 +14,22 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
+    "geopoliticalCount": 12,
     "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "dollarYieldCount": 14,
     "sourceFailures": [
       {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
-      },
-      {
         "id": "gdelt_country_actions",
-        "error": "HTTP 429"
-      },
-      {
-        "id": "gdelt_dollar_yields",
         "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gdelt_country_actions (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
