@@ -1,78 +1,79 @@
 {
-  "generatedAt": "2026-02-19T08:14:22.723Z",
+  "generatedAt": "2026-02-19T09:17:24.309Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao, trong khi động lượng tăng giá thế giới đang gặp kháng cự và Fed phát ngôn hawkish gây áp lực ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%), thanh khoản mua vào lúc này rất rủi ro. Dù xu hướng vĩ mô tích cực với lợi suất thực USD giảm 6.28% trong 20 ngày, nhưng đà tăng đã quá nóng cần thời gian củng cố hoặc điều chỉnh trước khi tiếp tục.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm ẩn rủi ro điều chỉnh kỹ thuật sau khi tăng 5.23% trong 30 ngày qua.",
-      "Lợi suất thực Mỹ (1.79%) và USD Index tăng trở lại cùng tín hiệu 'Hawkish Fed' từ biên bản cuộc họp FOMC ngày 18/02 đang tạo áp lực ngược lên giá vàng thế giới.",
-      "Biên độ dao động ngày cao (2.3%) cho thấy thị trường thiếu định hướng rõ ràng, phù hợp với trạng thái chờ đợi xác nhận."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm năng điều chỉnh kỹ thuật là rất lớn khi mua ở vùng giá này.",
+      "Động lượng tăng giá đã chững lại: giá thế giới 5,019.48 USD/oz hiện thấp hơn đỉnh 5,327.18 USD/oz vào ngày 28/01, trong khi giá Việt Nam vẫn neo ở đỉnh.",
+      "Yếu tố vĩ mô hỗ trợ dài hạn: Lợi suất thực Mỹ 10 năm (US Real Yield) giảm mạnh 6.28% trong 20 ngày qua thường là động lực tăng giá vàng, nhưng cần chờ thị trường phản ứng.",
+      "Biên độ dao động premium 30 ngày từ 9.9% đến 18.66% cho thấy thanh khoản thị trường Việt Nam không ổn định, rủi ro chênh lệch giá cao."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ vùng hỗ trợ 4,900 USD/oz.",
-      "Thanh khoản thấp hoặc gián đoạn mua bán của SJC nếu biên độ premium (hiện 15.61%) biến động mạnh.",
-      "Căng thẳng địa chính trị bất ngờ có thể đẩy giá bật tăng nhanh chóng, gây trượt điểm chốt lời."
+      "Rủi ro điều chỉnh giá từ vùng đỉnh 181 triệu đồng/lượng nếu dòng tiền yếu đi.",
+      "Premium co giãn mạnh (đã từng chạm 18.66%), có thể giảm xuống mức trung bình 13-15% gây mất giá trị cho người mua đuổi.",
+      "Thiếu tín hiệu địa chính trị cấp bách trong dữ liệu input để thúc đẩy đà tăng tiếp theo."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 5.23,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y",
-        "value": 1.79,
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -6.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index Change 1d",
-        "value": -0.01,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Premium SJC vs World",
-        "value": 15.61,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Gold Spot XAUUSD",
-        "value": 5010.85,
+        "key": "Intl Gold Peak 30d",
+        "value": 5327.18,
         "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Current Intl Gold Price",
+        "value": 5019.48,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 8.76,
+        "unit": "% (9.9 to 18.66)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX Index",
+        "value": 20.29,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T08:13:45.629Z",
+    "latestTimestamp": "2026-02-19T09:16:38.892Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156562058.98829553,
-    "premiumPct": 15.61,
-    "change7dPct": 1.31,
-    "change30dPct": 5.23,
+    "intlVndPerTael": 156860692.0117326,
+    "premiumPct": 15.39,
+    "change7dPct": 1.5,
+    "change30dPct": 5.43,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156165224,
-    "ma30VndPerTael": 155735723,
+    "ma7VndPerTael": 156207885,
+    "ma30VndPerTael": 155745677,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T08:14:01.356Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-19T09:17:00.407Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5010.845,
+        "value": 5020.065,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.67,
-        "change5dPct": 1.81,
-        "change20dPct": 1.51,
+        "change1dPct": 0.86,
+        "change5dPct": 1.99,
+        "change20dPct": 1.7,
         "relationToGold": "context"
       },
       {
@@ -184,25 +185,8 @@
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-19 | springfieldnewssun.com | Asian shares advance , tracking a Wall St rally led by Nvidia",
-      "2026-02-19 | pjmedia.com | Historic : A Surprise High - Level U . S . Visitor Lands in Venezuela",
-      "2026-02-19 | actionforex.com | Hawkish Minutes - ActionForex",
-      "2026-02-19 | smdailyjournal.com | Asian shares advance , tracking a Wall St rally led by Nvidia",
-      "2026-02-19 | investegate.co.uk | Half - year Financial Report | Company Announcement"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-19 | finance.yahoo.com | Dollar Supported by Hawkish Fed Comments",
-      "2026-02-19 | marketscreener.com | Stocks to rise , Fed has mixed views on AI",
-      "2026-02-19 | northkoreatimes.com | Nifty , Sensex open higher on FII inflows and DII buying ; experts cautious amid global risks , hawkish Fed outlook",
-      "2026-02-19 | zeenews.india.com | Gold and silver surge on safe haven demand , Gold at Rs 1 , 56 , 100 per 10 grams",
-      "2026-02-19 | iranherald.com | Nifty , Sensex open higher on FII inflows and DII buying ; experts cautious amid global risks , hawkish Fed outlook",
-      "2026-02-19 | en.apa.az | Gold dips as dollar firms ahead of inflation data"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-19 | marketscreener.com | Stocks to rise , Fed has mixed views on AI",
-      "2026-02-19 | northkoreatimes.com | Nifty , Sensex open higher on FII inflows and DII buying ; experts cautious amid global risks , hawkish Fed outlook",
-      "2026-02-19 | zeenews.india.com | Gold and silver surge on safe haven demand , Gold at Rs 1 , 56 , 100 per 10 grams"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
