@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T17:21:12.643Z",
+  "generatedAt": "2026-02-19T18:19:08.143Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực hiển percentile 5 năm 100% với premium 15.88%, trong khi giá thế giới gặp kháng cự tâm lý 5,000 USD/oz; nhà đầu tư nên chờ đợi hồi chỉnh hoặc xác nhận phá vỡ trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, yêu cầu nhà đầu tư thận trọng và chờ đợi điểm nhập khẩu tốt hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn rất lớn.",
-      "Giá thế giới XAUUSD (~4,998 USD/oz) đang gặp kháng cự mạnh quanh mốc 5,000 USD/oz, chưa xác nhận phá vỡ thành công.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.28% trong 20 ngày qua (xuống 1.79%) đang hỗ trợ giá vàng dài hạn, nhưng ngắn hạn đã qua vùng quá mua.",
-      "Premium 15.88% cao hơn mức thấp nhất 30 ngày là 6.32% (ngày 28/01), cho thấy giá trong nước đã tích hợp tốt đà tăng của thị trường thế giới."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.69% sau 30 ngày, rủi ro điều chỉnh ngắn hạn là rất lớn.",
+      "Biên độ dao động ngày cao (2.3%) kèm theo đợt hồi phục xấu nhất trong quá khứ lên tới -41.26% cho thấy thanh khoản và rủi ro thị trường đang ở mức cực đại.",
+      "Lợi suất thực USD 10 năm giảm mạnh 6.28% trong 20 ngày qua (xuống 1.79%) và VIX tăng 16.09% đang hỗ trợ giá vàng thế giới, nhưng không đủ để khuyến nghị MUA ở vùng giá quá cao này.",
+      "Premium 16.21% hiện tại cao hơn đáng kể so với mức 9.9-13.26% đầu chu kỳ dữ liệu, cho thấy giá nội địa đã phản ứng quá mức so với biến động giá thế giới."
     ],
     "risks": [
-      "Căng thẳng Mỹ - Iran có thể đẩy giá tăng vọt bất ngờ (headline ngày 19/02).",
-      "Giá thế giới phá vỡ thành công mốc 5,000 USD/oz và thiết lập vùng giao dịch mới cao hơn.",
-      "Biến động ngày 2.3% có thể gây thanh lý tài khoản đòn bẩy hoặc mua bán thiếu kiên nhẫn."
+      "Rủi ro điều chỉnh giá cao: Mua ở mức đỉnh lịch sử (percentile 100%) với biến động 2.3%/ngày có thể dẫn đến thua lỗ ngắn hạn nhanh chóng.",
+      "Thanh khoản thoát hàng: Sự kiện drawdown tồi t nhất là -41.26% với thời gian hồi phục trung bình 1369 ngày là rủi ro dài hạn cần cân nhắc kỹ.",
+      "Thông tin nhiễu: Các tiêu đề tin tức vĩ mô (Fed, ECB) trong dữ liệu đầu vào mang tính chung chung, không có sự kiện địa chính trị cụ thể đủ mạnh để dự báo xu hướng bứt phá tiếp theo."
     ],
     "evidence": [
       {
@@ -27,37 +27,37 @@
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 15.88,
+        "key": "sjc_change_30d",
+        "value": 4.69,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_price",
-        "value": 4998.27,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "daily_volatility",
+        "value": 2.3,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "worst_drawdown_history",
+        "value": -41.26,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "current_premium_vs_start",
+        "value": 16.21,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_change_20d",
         "value": -6.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change30d",
-        "value": 4.99,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_30d_low",
-        "value": 6.32,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "vix_change20d",
+        "key": "vix_change_20d",
         "value": 16.09,
         "unit": "%",
         "source": "first_principles_context"
@@ -65,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T17:20:34.240Z",
+    "latestTimestamp": "2026-02-19T18:18:40.710Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156202803.97423202,
-    "premiumPct": 15.88,
-    "change7dPct": 1.08,
-    "change30dPct": 4.99,
+    "intlVndPerTael": 155750985.329307,
+    "premiumPct": 16.21,
+    "change7dPct": 0.78,
+    "change30dPct": 4.69,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 156113901,
-    "ma30VndPerTael": 155723748,
+    "ma7VndPerTael": 156049356,
+    "ma30VndPerTael": 155708687,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T17:20:54.922Z",
+    "fetchedAt": "2026-02-19T18:18:47.233Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4998.265,
+        "value": 4985.425,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": 0.42,
-        "change5dPct": 1.55,
-        "change20dPct": 1.26,
+        "change1dPct": 0.16,
+        "change5dPct": 1.29,
+        "change20dPct": 1,
         "relationToGold": "context"
       },
       {
@@ -188,14 +188,14 @@
     "geopoliticalHeadlines": [
       "2026-02-19 | torontotelegraph.com | Rio Grande Resources Reports Gold up to 41 . 2 g / t and Silver up to 1 , 435 g / t at Its Winston Project , New Mexico"
     ],
-    "countryActionHeadlines": [
-      "2026-02-19 | financialpost.com | Gold recaptures US$5 , 000 with focus on interest rates",
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-19 | humanevents.com | LARRY KUDLOW : Fed hooey ( 2012 )",
       "2026-02-19 | markets.financialcontent.com | FinancialContent - The Golden Threshold : Gold Stabilizes Above $5 , 000 as Geopolitical Storms and AI Demand Redefine Commodity Markets",
-      "2026-02-19 | akronnewsreporter.com | US stocks slip as oil prices rise on worries of potential US - Iran conflict",
+      "2026-02-19 | cbsnews.com | How much is a 10 - ounce bar of gold worth today ?",
       "2026-02-19 | markets.financialcontent.com | FinancialContent - The Gold Standard : A Deep Dive into Newmont Corporation ( NEM ) in 2026",
       "2026-02-19 | english.aawsat.com | Gold Advances on US – Iran Tensions as Markets Weigh Fed Policy Path",
       "2026-02-19 | fxstreet.com | Gold struggles below $5 , 000 as strong US Dollar caps gains"
-    ],
-    "dollarYieldHeadlines": []
+    ]
   }
 }
