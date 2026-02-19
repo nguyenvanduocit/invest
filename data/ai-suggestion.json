@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T01:35:33.132Z",
+  "generatedAt": "2026-02-19T03:02:19.706Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, trong khi giá thế giới cho thấy dấu hiệu chững lại gần vùng đỉnh; nhà đầu tư nên chờ đợi sự xác nhận xu hướng rõ ràng hơn hoặc đợt điều chỉnh về mức MA7 (VND/lượng) trước khi gia nhập thị trường.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập sân tốt hơn thay vì FOMO đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.25% sau 30 ngày, rủi ro mua đỉp ngắn hạn là rất lớn.",
-      "Động lượng giá thế giới suy yếu: XAUUSD giảm 0.22% ngày 19/02, giao dịch dưới đỉnh 20 ngày trước đó (5327 USD/oz ngày 28/01).",
-      "Lợi suất thực 10 năm Mỹ (1.79%) đang tăng nhẹ ngày (+1.13%), tạo áp lực ngược lên giá vàng thế giới.",
-      "Premium 16.7% hiện tại cao hơn đáng kể so với mức đáy 6.32% trong chuỗi 30 ngày, cho thấy định giá nội địa đã phản ánh quá hưng phấn."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật cao khi mua tại vùng giá này.",
+      "Premium tăng vọt từ 9.9% (22/01) lên 18.66% (17/02), cho thấy giá Việt Nam đã chạy quá nóng so với giá thế giới.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.28% trong 20 ngày qua (xuống 1.79%) đang hỗ trợ giá vàng thế giới, nhưng giá SJC đã phản ứng hết tin tích cực này.",
+      "VIX tăng 14.05% trong 5 ngày cho thấy bất ổn thị trường, nhưng giá vàng thế giới chỉ tăng nhẹ 0.92% cùng kỳ - động lượng yếu."
     ],
     "risks": [
-      "Biên độ dao động ngày cao (2.3%) kèm theo sự thay đổi premium thất thường (từ 6.32% đến 18.66%) có thể gây thua lỗ ngắn hạn lớn khi swing trade.",
-      "VIX ở mức 20.29 cho thấy tâm lý thị trường quốc tế vẫn lo ngại, giá vàng có thể biến động thất thường theo tin tức địa chính trị.",
-      "Dữ liệu vĩ mô (first_principles) bị thiếu cập nhật trong 1-2 ngày gần nhất, có thể bỏ lỡ các tín hiệu đảo chiều quan trọng."
+      "Rủi ro điều chỉnh premium từ mức 16.6% về mức trung bình 13-14% sẽ khiến giá SJC giảm ngay cả khi giá thế giới đi ngang.",
+      "Thời gian phục hồi sau các đợt sụt giảm trước đây rất dài (trung bình 1369 ngày), rủi ro thanh khoản cao nếu mua đỉnh.",
+      "Thiếu tín hiệu địa chính trị cụ thể trong dữ liệu input để duy trì đà tăng giá mạnh mẽ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.25,
-        "unit": "%",
+        "key": "SJC Current Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 12.34,
-        "unit": "% (18.66-6.32)",
+        "key": "Premium Expansion (Jan 22 to Feb 17)",
+        "value": 8.76,
+        "unit": "percentage points",
         "source": "monthly_series_30d"
       },
       {
-        "key": "intl_gold_change_1d",
-        "value": -0.22,
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -6.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.79,
+        "key": "VIX Change 5d",
+        "value": 14.05,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
-        "value": 20.29,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.3,
-        "unit": "%",
+        "key": "Avg Recovery Days",
+        "value": 1369,
+        "unit": "days",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot Change 5d",
+        "value": 0.92,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T01:34:51.459Z",
+    "latestTimestamp": "2026-02-19T03:01:39.374Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155101407.39333194,
-    "premiumPct": 16.7,
-    "change7dPct": 0.36,
-    "change30dPct": 4.25,
+    "intlVndPerTael": 155225897.35174137,
+    "premiumPct": 16.6,
+    "change7dPct": 0.44,
+    "change30dPct": 4.33,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155956559,
-    "ma30VndPerTael": 155687034,
+    "ma7VndPerTael": 155974343,
+    "ma30VndPerTael": 155691184,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T01:35:12.598Z",
+    "fetchedAt": "2026-02-19T03:02:01.049Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4966.535,
+        "value": 4967.425,
         "unit": "USD/oz",
         "date": "2026-02-19",
-        "change1dPct": -0.22,
-        "change5dPct": 0.91,
-        "change20dPct": 0.62,
+        "change1dPct": -0.2,
+        "change5dPct": 0.92,
+        "change20dPct": 0.63,
         "relationToGold": "context"
       },
       {
@@ -185,14 +185,15 @@
       "2026-02-17 | Federal Reserve Speeches | Barr, What Will Artificial Intelligence Mean for the Labor Market and the Economy?",
       "2026-02-17 | ECB Press / Speeches | ECB welcomes extension of Frank Elderson’s term as Vice-Chair of the Supervisory Board"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-19 | smh.com.au | US dollar : Trump has the left door open for Europe to attack"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-19 | smh.com.au | US dollar : Trump has the left door open for Europe to attack",
-      "2026-02-19 | marketscreener.com | Dollar perks up as Fed appears in no rush to cut rates",
-      "2026-02-19 | staradvertiser.com | Gold surges over 2 % on geopolitical jitters | Honolulu Star - Advertiser"
+      "2026-02-19 | markets.financialcontent.com | FinancialContent - Wall Street Edges Toward History : Tech Resurgence Pushes S & P 500 Within Striking Distance of All - Time High",
+      "2026-02-19 | theage.com.au | US dollar : Trump has the left door open for Europe to attack",
+      "2026-02-19 | livemint.com | Gold , silver rates today : Gold prices near $4 , 980 , silver prices rebound to $76 / oz . Key levels to watch out"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-19 | torontotelegraph.com | Lupaka Gold Corp . - Arbitration Award Update",
+      "2026-02-19 | livemint.com | Gold , silver rates today : Gold prices near $4 , 980 , silver prices rebound to $76 / oz . Key levels to watch out"
+    ]
   }
 }
