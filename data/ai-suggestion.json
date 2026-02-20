@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T21:06:26.595Z",
+  "generatedAt": "2026-02-20T22:05:48.900Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư kiên nhẫn chờ điểm mua an toàn thay vì đu đỉnh. Dù xu hướng vĩ mô ủng hộ vàng nhờ lợi suất thực USD giảm 8.63% trong 20 ngày, rủi ro điều chỉnh kỹ thuật là rất lớn.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao, trong khi đà tăng của giá thế giới đã có dấu hiệu chững lại gần vùng 5,100 USD/oz. Nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 là 156.1 triệu VND/lượng (+16%).",
-      "Lợi suất thực USD 10Y giảm mạnh 8.63% trong 20 ngày xuống 1.8%, tạo động lực tăng giá vàng thế giới (xuống mức 5095 USD/oz).",
-      "Biên độ dao động ngày cao (2.28%) và premium biến động mạnh (6.38%-18.72% trong 30 ngày) cho thấy thanh khoản kém và rủi ro cao cho nhà đầu tư ngắn hạn.",
-      "VIX tăng 29.35% trong 20 ngày lên 20.23 điểm cho thấy lo ngại thị trường, nhưng thiếu sự kiện địa chính trị cụ thể để thúc đẩy giá xuyên phá bền vững."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 là 156.1 triệu VND/lượng (+16%), cho thấy rủi ro điều chỉnh là rất lớn.",
+      "Động lượng tăng đang chậm lại: giá SJC chỉ tăng 1.1% trong 7 ngày qua, thấp hơn nhiều so với mức tăng 3.81% của cả 30 ngày, trong khi giá thế giới đã chạm ngưỡng kháng cự tâm lý 5,100 USD/oz.",
+      "Lợi suất thực 10 năm của Mỹ giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) đã là động lực chính cho đợt tăng vừa qua, nhưng VIX tăng 29.35% cho thấy sự bất ổn thị trường có thể gây biến động hai chiều.",
+      "Premium 13.65% hiện tại thấp hơn đỉnh 18.72% ngày 17/02, cho thấy tâm lý nhà đầu tư Việt Nam đã bớt nóng giật so với đỉnh ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do SJC đang ở vùng quá mua (cao hơn MA7 là 156.4 triệu VND/lượng tới 15.7%).",
-      "Premium 13.73% có thể co hẹp nếu giá thế giới giảm, gây thiệt hại cho nhà đầu tư mua đuổi.",
-      "Thiếu dữ liệu sự kiện địa chính trị/chính sách cụ thể làm giảm độ tin cậy của xu hướng tăng hiện tại."
+      "Giá thế giới có thể tiếp tục thiết lập đỉnh mới nếu USD yếu đi hoặc căng thẳng thương mại từ các chính sách thuế quan của Mỹ gia tăng.",
+      "Biên độ dao động ngày lên tới 2.28% cộng với VIX ở mức 20.23 có thể gây thanh khoản sụt giảm hoặc spread mua-bán giãn rộng bất ngờ.",
+      "Rủi ro dữ liệu nhiễu: Các tiêu đề tin tức chủ yếu xoay quanh diễn biến thị trường chứng khoán và thuế quan, thiếu thông tin cụ thể về chính sách vàng nội địa."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_ma30",
-        "value": 15.99,
+        "key": "SJC vs MA30",
+        "value": 15.93,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
-        "value": -8.63,
+        "key": "Gold Spot Price",
+        "value": 5097.44,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.28,
+        "key": "Premium Range 30d",
+        "value": 11.31,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 12.34,
-        "unit": "% (6.38-18.72)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 2.32,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.73,
+        "key": "Daily Volatility",
+        "value": 2.28,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T21:05:44.260Z",
+    "latestTimestamp": "2026-02-20T22:05:07.937Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159150911.3106995,
-    "premiumPct": 13.73,
-    "change7dPct": 1.04,
-    "change30dPct": 3.74,
+    "intlVndPerTael": 159255498.09454578,
+    "premiumPct": 13.65,
+    "change7dPct": 1.1,
+    "change30dPct": 3.81,
     "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 156435180,
-    "ma30VndPerTael": 156130663,
+    "ma7VndPerTael": 156450121,
+    "ma30VndPerTael": 156134150,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T21:06:05.719Z",
+    "fetchedAt": "2026-02-20T22:05:23.998Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -119,12 +113,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.8,
+        "value": 1.79,
         "unit": "%",
-        "date": "2026-02-18",
-        "change1dPct": 0.56,
-        "change5dPct": -2.17,
-        "change20dPct": -8.63,
+        "date": "2026-02-19",
+        "change1dPct": -0.56,
+        "change5dPct": -3.76,
+        "change20dPct": -6.77,
         "relationToGold": "inverse"
       },
       {
@@ -143,7 +137,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-02-18",
+        "date": "2026-02-19",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -152,12 +146,12 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.09,
+        "value": 4.08,
         "unit": "%",
-        "date": "2026-02-18",
-        "change1dPct": 0.99,
-        "change5dPct": -1.68,
-        "change20dPct": -4.88,
+        "date": "2026-02-19",
+        "change1dPct": -0.24,
+        "change5dPct": -2.39,
+        "change20dPct": -4.23,
         "relationToGold": "inverse"
       },
       {
@@ -165,9 +159,9 @@
         "name": "US Treasury Yield 2Y",
         "value": 3.47,
         "unit": "%",
-        "date": "2026-02-18",
-        "change1dPct": 1.17,
-        "change5dPct": 0.58,
+        "date": "2026-02-19",
+        "change1dPct": 0,
+        "change5dPct": -1.42,
         "change20dPct": -3.61,
         "relationToGold": "inverse"
       },
@@ -191,8 +185,22 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-20 | jamaicantimes.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-20 | taiwansun.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-20 | local10.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | finanznachrichten.de | Gold Showing Significant Move Back To The Upside",
+      "2026-02-20 | finanzen.ch | Gold Showing Significant Move Back To The Upside",
+      "2026-02-20 | windsorstar.com | Canadian stocks whipsaw after Trump tariffs struck down"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-20 | jamaicantimes.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-20 | taiwansun.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-20 | local10.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | finanznachrichten.de | Gold Showing Significant Move Back To The Upside",
+      "2026-02-20 | idahopress.com | The Latest : Trump says hell sign an executive order to enact a 10 % global tariff | Us",
+      "2026-02-20 | finanzen.ch | Gold Showing Significant Move Back To The Upside"
+    ],
     "dollarYieldHeadlines": []
   }
 }
