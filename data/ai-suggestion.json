@@ -1,78 +1,85 @@
 {
-  "generatedAt": "2026-02-20T14:17:36.217Z",
+  "generatedAt": "2026-02-20T15:16:05.497Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm mua an toàn thay vì đu đỉnh. Dù xu hướng vĩ mô dài hạn thuận lợi nhờ lợi suất thực USD giảm mạnh 20 ngày qua, rủi ro điều chỉnh kỹ thuật ngắn hạn là rất lớn.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, đòi hỏi nhà đầu tư thận trọng chờ đợt điều chỉnh thay vì đu đỉnh. Dù xu hướng 30 ngày vẫn dương và vĩ mô hỗ trợ (lợi suất thực giảm 8.63%), rủi ro mua cao điểm khi giá thế giới đang đi ngang là quá lớn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 5.48% sau 30 ngày và vượt xa MA30 (155.9 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Biên độ dao động ngày cao (2.31%) và premium đã tăng vọt từ 9.96% lên mức 14.93%, cho thấy thị trường Việt Nam đang định giá quá nóng so với giá thế giới.",
-      "Lợi suất thực USD 10 năm giảm mạnh 8.63% trong 20 ngày qua (xuống 1.8%) tạo động lực tăng giá vàng thế giới, nhưng VIX tăng 16.09% cho thấy sự bất ổn thị trường chưa ổn định."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.96% trong 30 ngày qua, rủi ro điều chỉnh ngắn hạn rất cao.",
+      "Premium 15.5% đang ở vùng cao, dao động mạnh từ 6.38% đến 18.72% trong 30 ngày, cho thấy thị trường Việt Nam đang định giá quá nhiệt so với thế giới.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) là động lực hỗ trợ vàng dài hạn, nhưng giá đã phản ánh yếu tố này.",
+      "Giá thế giới (XAUUSD) đi ngang với biến động thấp trong 7 ngày qua (-0.19%), chưa có đột phá để kéo giá Việt Nam tiếp tục tăng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử khi động lượng mua yếu đi.",
-      "Premium co giãn mạnh (dao động 9.96%-18.72% trong tháng) có thể khiến nhà đầu tư lỗ chênh lệch ngay cả khi giá thế giới đi ngang.",
-      "Thanh khoản có thể giảm khi giá quá cao so với thu nhập trung bình."
+      "Điều chỉnh giá nhanh từ vùng đỉnh lịch sử khi nhà đầu tư chốt lời ồ ạt.",
+      "Giá thế giới quay đầu giảm khiến premium Việt Nam co lại mạnh.",
+      "Thanh khoản giảm nếu giá đi ngang kéo dài trong bối cảnh giá cao."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 30d",
-        "value": 5.48,
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 30 ngày SJC",
+        "value": 4.96,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Premium vs World",
-        "value": 14.93,
+        "key": "Premium hiện tại",
+        "value": 15.5,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "Dao động Premium 30 ngày (Thấp-Cao)",
+        "value": 6.38,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10Y biến động 20 ngày",
         "value": -8.63,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 16.09,
+        "key": "Giá thế giới biến động 7 ngày",
+        "value": -0.19,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.31,
+        "key": "VIX biến động 20 ngày",
+        "value": 29.35,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC vs MA30 Spread",
-        "value": 16.1,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T14:16:10.886Z",
+    "latestTimestamp": "2026-02-20T15:15:18.043Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157484338.2212513,
-    "premiumPct": 14.93,
-    "change7dPct": 0.24,
-    "change30dPct": 5.48,
-    "volatilityDailyPct": 2.31,
-    "ma7VndPerTael": 156035411,
-    "ma30VndPerTael": 155900690,
+    "intlVndPerTael": 156714749.02733344,
+    "premiumPct": 15.5,
+    "change7dPct": -0.25,
+    "change30dPct": 4.96,
+    "volatilityDailyPct": 2.3,
+    "ma7VndPerTael": 155925470,
+    "ma30VndPerTael": 155875037,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T14:16:32.115Z",
+    "fetchedAt": "2026-02-20T15:15:42.648Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5042.095,
+        "value": 5023.595,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 0.92,
-        "change5dPct": 0.18,
-        "change20dPct": 1.21,
+        "change1dPct": 0.55,
+        "change5dPct": -0.19,
+        "change20dPct": 0.84,
         "relationToGold": "context"
       },
       {
@@ -167,12 +174,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 19.62,
+        "value": 20.23,
         "unit": "index",
-        "date": "2026-02-18",
-        "change1dPct": -3.3,
-        "change5dPct": 11.16,
-        "change20dPct": 16.09,
+        "date": "2026-02-19",
+        "change1dPct": 3.11,
+        "change5dPct": -2.83,
+        "change20dPct": 29.35,
         "relationToGold": "direct"
       }
     ],
