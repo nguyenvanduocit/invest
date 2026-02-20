@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T18:13:54.939Z",
+  "generatedAt": "2026-02-20T19:16:50.136Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 6.08%/tháng, nhưng rủi ro điều độ kỹ thuật cao. Vĩ mô ủng hộ giá dài hạn nhờ lợi suất thực USD giảm mạnh (-8.63%/20 ngày) và căng thẳng địa chính trị (vàng xuyên mốc 5,000 USD/oz), tuy nhiên cần chờ điểm nhập an toàn hơn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập trường tốt hơn thay vì mua đuổi. Dù xu hướng trung hạn vẫn được hỗ trợ bởi động lực vĩ mô tích cực, rủi ro điều chỉnh ngắn hạn là rất cao khi giá thế giới đã vượt mốc 5,000 USD/oz.",
     "reasons": [
-      "Đà tăng mạnh: Giá SJC 181 triệu VND/lượng tăng 6.08% sau 30 ngày và nằm trên MA7 (156.1 triệu VND/lượng), cho thấy xu hướng tăng vẫn còn động lượng.",
-      "Vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm sâu 8.63% trong 20 ngày qua (xuống 1.8%), áp lực tài chính giảm giúp giá vàng thế giới vượt mốc 5,071 USD/oz.",
-      "Yếu tố địa chính trị: Căng thẳng Iran-Mỹ đẩy giá vàng thế giới lên mức kỷ lục, VIX tăng 29.35% trong 20 ngày phản ánh lo ngại rủi ro thị trường.",
-      "Biến động cao: Volatility 2.32%/ngày và biên độ dao động premium (9.96% - 18.72%) trong chuỗi 30 ngày cho thấy thị trường đang trong trạng thái投機 (speculative) mạnh."
+      "Giá SJC đang ở phân vị 100% trong 5 năm qua (181,000,000 VND/lượng), cho thấy thị trường đang ở vùng quá mua lịch sử, rủi ro mua đỉnh là rất lớn.",
+      "Động lực tăng chính đến từ lợi suất thực USD giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) và giá vàng thế giới突破 mốc 5,071 USD/oz, tạo xu hướng tăng mạnh (+6.09% trong 30 ngày).",
+      "Biên độ dao động ngày cao (2.32%) và VIX tăng 29.35% trong 20 ngày cho thấy thị trường bất ổn; chênh lệch premium co giãn từ 9.96% lên 18.72% trong 30 ngày phản ánh tâm lý nhà đầu tư Việt Nam biến động mạnh.",
+      "Sự kiện Tòa án Tối cao Mỹ bác bỏ thuế quan và căng thẳng Iran-Mỹ hỗ trợ vàng ngắn hạn, nhưng các tiêu đề tin tức mang tính tin tức thị trường (market noise) hơn là thay đổi chính sách căn bản lâu dài."
     ],
     "risks": [
-      "Mua quá cao (Overbought): Giá đang ở phân vị 100% trong 5 năm qua, rủi ro điều chỉnh kỹ thuật ngắn hạn là rất lớn khi thị trường quá nóng.",
-      "Rủi ro chính sách: Phán quyết Tòa án Tối cao Mỹ bác bỏ thuế quan Trump làm USD suy yếu nhưng cũng có thể giảm nhu cầu trú ẩn an toàn, gây biến động hai chiều.",
-      "Thanh khoản và Spread: Biên độ premium giãn rộng (từ 9.96% lên 14.28%) và biến động cao 2.32%/ngày có thể gây trượt giá khi khớp lệnh lớn."
+      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi động lực tăng nóng (gold spot +1.47% trong 1 ngày) có thể mất hơi.",
+      "Thanh khoản có thể giảm khi giá quá cao, khiến việc thoát hàng trở nên khó khăn nếu thị trường đảo chiều.",
+      "Premium SJC có thể co lại mạnh (như đã thấy giảm từ 18.72% xuống 14.27% gần đây) nếu giá thế giới điều chỉnh, gây thiệt hại cho người nắm giữ vàng vật lý."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d",
-        "value": 6.08,
-        "unit": "%",
+        "key": "SJC Current Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -8.63,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "Gold Spot Price",
+        "value": 5071.19,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 6.09,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "volatility_daily",
+        "key": "Premium Range 30d",
+        "value": 18.72,
+        "unit": "% (max)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Daily Volatility",
         "value": 2.32,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_price",
-        "value": 5071.06,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 9.96,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T18:13:11.891Z",
+    "latestTimestamp": "2026-02-20T19:16:05.195Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158386769.8559041,
-    "premiumPct": 14.28,
+    "intlVndPerTael": 158390925.77935112,
+    "premiumPct": 14.27,
     "change7dPct": 0.82,
-    "change30dPct": 6.08,
+    "change30dPct": 6.09,
     "volatilityDailyPct": 2.32,
-    "ma7VndPerTael": 156164330,
-    "ma30VndPerTael": 155930771,
+    "ma7VndPerTael": 156164924,
+    "ma30VndPerTael": 155930910,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T18:13:30.865Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-20T19:16:27.047Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5071.465,
+        "value": 5069.695,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 1.5,
-        "change5dPct": 0.77,
-        "change20dPct": 1.8,
+        "change1dPct": 1.47,
+        "change5dPct": 0.73,
+        "change20dPct": 1.76,
         "relationToGold": "context"
       },
       {
@@ -192,18 +192,26 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-20 | moneycontrol.com | US Supreme Court ruling may provide further reprieve for a third of India US exports hit by tariff shock",
-      "2026-02-20 | wmur.com | Oil prices jump , gold hits $5 , 000 as tensions ramp up between Iran and US",
-      "2026-02-20 | wlky.com | Oil prices jump , gold hits $5 , 000 as tensions ramp up between Iran and US"
+      "2026-02-20 | odt.co.nz | Good as gold ?",
+      "2026-02-20 | thehindubusinessline.com | Investors returned to gold ETFs in 2nd week after booking profits in 1st week",
+      "2026-02-20 | economictimes.indiatimes.com | Dow Jones down today despite the tariff ruling : Dow Jones crashes today : why is Dow down today despite the tariff ruling ? S & P 500 and Nasdaq outperform on tech rebound",
+      "2026-02-20 | moneycontrol.com | US Supreme Court ruling may provide further reprieve for a third of India US exports hit by tariff shock"
     ],
     "countryActionHeadlines": [
+      "2026-02-20 | odt.co.nz | Good as gold ?",
+      "2026-02-20 | finance.yahoo.com | Here what the Supreme Court tariff ruling means for consumer prices",
+      "2026-02-20 | economictimes.indiatimes.com | Dow Jones down today despite the tariff ruling : Dow Jones crashes today : why is Dow down today despite the tariff ruling ? S & P 500 and Nasdaq outperform on tech rebound",
       "2026-02-20 | moneycontrol.com | Dollar falls after Supreme Court strikes down Trump tariffs",
       "2026-02-20 | nypost.com | Retail and apparel stocks spike after Supreme Court strikes down President Trump tariffs",
-      "2026-02-20 | moneycontrol.com | Emerging markets climb as US Supreme Court strikes down tariffs",
-      "2026-02-20 | idahostatejournal.com | US stocks tick higher after the Supreme Court strikes down Trump sweeping tariffs",
-      "2026-02-20 | rttnews.com | U . S . Recover From Early Weakness After Supreme Court Strikes Down Trump Tariffs",
-      "2026-02-20 | finance.yahoo.com | Gold price today , Friday , February 20 : Gold moves above $5 , 000 again on geopolitical tensions"
+      "2026-02-20 | moneycontrol.com | Emerging markets climb as US Supreme Court strikes down tariffs"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-20 | odt.co.nz | Good as gold ?",
+      "2026-02-20 | economictimes.indiatimes.com | Dow Jones down today despite the tariff ruling : Dow Jones crashes today : why is Dow down today despite the tariff ruling ? S & P 500 and Nasdaq outperform on tech rebound",
+      "2026-02-20 | thehindubusinessline.com | Central banks worldwide to follow dissimilar paths while approaching end of easing cycle , says RBI Governor",
+      "2026-02-20 | idahostatejournal.com | US stocks tick higher after the Supreme Court strikes down Trump sweeping tariffs",
+      "2026-02-20 | wmur.com | Oil prices jump , gold hits $5 , 000 as tensions ramp up between Iran and US",
+      "2026-02-20 | finance.yahoo.com | Gold price today , Friday , February 20 : Gold moves above $5 , 000 again on geopolitical tensions"
+    ]
   }
 }
