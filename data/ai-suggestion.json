@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T04:35:44.799Z",
+  "generatedAt": "2026-02-20T05:26:19.550Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, trong khi giá thế giới đi ngang và động lượng tăng đã giảm. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định premium trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang đỉnh 5 năm (percentile 100%) với premium 15.87% cao hơn đáng kể so với đầu chuỗi (~10%), tạo rủi ro mua đỉnh ngắn hạn dù xu hướng vĩ mô vẫn hỗ trợ vàng nhờ lợi suất thực USD giảm mạnh 20 ngày qua.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.5% sau 30 ngày nhưng giảm 0.68% trong 7 ngày gần nhất cho thấy động lượng tăng đang yếu đi.",
-      "Premium 16% hiện tại cao hơn đáng kể so với mức 9.96% đầu chuỗi dữ liệu (22/01) và biến động mạnh trong biên độ 6.38%-18.72%, cho thấy rủi ro mua đỉnh khi spread giãn quá mức.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) đã hỗ trợ giá vàng tăng trước đó, nhưng giá thế giới XAUUSD 4995 USD/oz chỉ tăng nhẹ 0.28% trong 20 ngày, dấu hiệu đi ngang thiếu định hướng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 4.63% trong 30 ngày gần đây.",
+      "Premium nới rộng từ 9.96% (22/01) lên 15.87% (20/02), cho thấy thị trường Việt Nam đã định giá phần lớn đà tăng.",
+      "Lợi suất thực 10Y USD giảm mạnh -8.63% trong 20 ngày (xuống 1.8%), hỗ trợ giá vàng thế giới nhưng chưa kéo mạnh SJC thêm.",
+      "VIX tăng 16.09% trong 20 ngày cho thấy bất định thị trường, nhưng thiếu sự kiện địa chính trị cụ thể để thúc đẩy đà tăng tiếp."
     ],
     "risks": [
-      "Rủi ro điều chỉnh premium từ 16% về mức trung bình chuỗi (~14%), có thể khiến giá SJC giảm ngay cả khi giá thế giới đi ngang.",
-      "VIX tăng 16.09% trong 20 ngày cho thấy biến động thị trường tài chính đang gia tăng, có thể gây chặn lời hoặc cắt lỗ đột ngột.",
-      "Thiếu tín hiệu địa chính trị hoặc hành động can thiệp của quốc gia trong dữ liệu, khó dự đoán các cú sốc giá bất ngờ."
+      "Mua đỉnh kỹ thuật khi giá ở percentile 100% và premium mở rộng nhanh.",
+      "Thanh khoản cao nhưng biến động 2.3%/ngày có thể gây cháy tài khoản nếu dùng đòn bẩy.",
+      "Thiếu tín hiệu vĩ mô rõ ràng từ Fed/địa chính trị trong 24-48h tới, dễ bị điều chỉnh kỹ thuật."
     ],
     "evidence": [
       {
@@ -26,59 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.5,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_7d",
-        "value": -0.68,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 16,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 6.38,
-        "unit": "%",
+        "key": "premium_change_30d",
+        "value": 5.91,
+        "unit": "% điểm (9.96%→15.87%)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "sjc_change_30d",
+        "value": 4.63,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_change_20d",
         "value": -8.63,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "xauusd_change20d",
-        "value": 0.28,
+        "key": "vix_change_20d",
+        "value": 16.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
-        "value": 16.09,
+        "key": "current_premium",
+        "value": 15.87,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "daily_volatility",
+        "value": 2.3,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T04:35:03.898Z",
+    "latestTimestamp": "2026-02-20T05:25:37.405Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156029059.13871717,
-    "premiumPct": 16,
-    "change7dPct": -0.68,
-    "change30dPct": 4.5,
+    "intlVndPerTael": 156212008.78573206,
+    "premiumPct": 15.87,
+    "change7dPct": -0.57,
+    "change30dPct": 4.63,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155827514,
-    "ma30VndPerTael": 155852181,
+    "ma7VndPerTael": 155853650,
+    "ma30VndPerTael": 155858279,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T04:35:25.217Z",
+    "fetchedAt": "2026-02-20T05:25:58.977Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4995.635,
+        "value": 5002.125,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": -0.01,
-        "change5dPct": -0.74,
-        "change20dPct": 0.28,
+        "change1dPct": 0.12,
+        "change5dPct": -0.61,
+        "change20dPct": 0.41,
         "relationToGold": "context"
       },
       {
@@ -191,7 +186,21 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [
+      "2026-02-20 | fxstreet.com | Pound Sterling struggles near one - month low vs . USD ahead of US data",
+      "2026-02-20 | fxstreet.com | New Zealand Dollar weakens to near 0 . 5950 on RBNZ dovish hold",
+      "2026-02-20 | fxstreet.com | Australian Dollar nears two - week low vs . firmer USD ahead of US data",
+      "2026-02-20 | newzimbabwe.com | Zimbabwe Central Bank chief urges lenders to reduce charges",
+      "2026-02-20 | fxstreet.com | US Dollar Index gains momentum to near 98 . 00 ahead of US GDP and PCE data",
+      "2026-02-20 | fxstreet.com | Japanese Yen remains weak against US Dollar , Japan National CPI cools down"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-20 | kristv.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | kxlh.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | philstar.com | Welcome the Year of the Horse : Strength , prosperity , good fortune in 24k Palawan Gold",
+      "2026-02-20 | wptv.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | turnto23.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | fxstreet.com | Silver Forecast : XAG / USD holds near $78 . 30 , bullish bias intact"
+    ]
   }
 }
