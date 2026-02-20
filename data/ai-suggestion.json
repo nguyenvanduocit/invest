@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T19:16:50.136Z",
+  "generatedAt": "2026-02-20T20:07:20.431Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập trường tốt hơn thay vì mua đuổi. Dù xu hướng trung hạn vẫn được hỗ trợ bởi động lực vĩ mô tích cực, rủi ro điều chỉnh ngắn hạn là rất cao khi giá thế giới đã vượt mốc 5,000 USD/oz.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với rủi ro điều chỉnh kỹ thuật cao, nhưng xu hướng vĩ mô vẫn hỗ trợ vàng dài hạn nhờ lợi suất thực USD giảm mạnh 8.63% trong 20 ngày và bất định thương mại gia tăng.",
     "reasons": [
-      "Giá SJC đang ở phân vị 100% trong 5 năm qua (181,000,000 VND/lượng), cho thấy thị trường đang ở vùng quá mua lịch sử, rủi ro mua đỉnh là rất lớn.",
-      "Động lực tăng chính đến từ lợi suất thực USD giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) và giá vàng thế giới突破 mốc 5,071 USD/oz, tạo xu hướng tăng mạnh (+6.09% trong 30 ngày).",
-      "Biên độ dao động ngày cao (2.32%) và VIX tăng 29.35% trong 20 ngày cho thấy thị trường bất ổn; chênh lệch premium co giãn từ 9.96% lên 18.72% trong 30 ngày phản ánh tâm lý nhà đầu tư Việt Nam biến động mạnh.",
-      "Sự kiện Tòa án Tối cao Mỹ bác bỏ thuế quan và căng thẳng Iran-Mỹ hỗ trợ vàng ngắn hạn, nhưng các tiêu đề tin tức mang tính tin tức thị trường (market noise) hơn là thay đổi chính sách căn bản lâu dài."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 3.39% trong 30 ngày và cao hơn MA30 (156.1 triệu VND/lượng) tới 15.9%, báo hiệu vùng quá mua.",
+      "Premium 14.11% nằm trong biên dao động 30 ngày (11.31%-18.72%), không cực đoan nhưng thanh khoản cao có thể gây trượt giá khi điều chỉnh.",
+      "Lợi suất thực 10Y USD giảm mạnh 8.63% trong 20 ngày xuống 1.8%, tạo đà cho giá vàng thế giới tăng 1.92% cùng kỳ.",
+      "VIX tăng 29.35% trong 20 ngày lên 20.23 điểm phản ánh lo ngại rủi ro; tin tức Tòa án Tối cao Mỹ bác thuế Trump tạo biến động chính sách thương mại."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi động lực tăng nóng (gold spot +1.47% trong 1 ngày) có thể mất hơi.",
-      "Thanh khoản có thể giảm khi giá quá cao, khiến việc thoát hàng trở nên khó khăn nếu thị trường đảo chiều.",
-      "Premium SJC có thể co lại mạnh (như đã thấy giảm từ 18.72% xuống 14.27% gần đây) nếu giá thế giới điều chỉnh, gây thiệt hại cho người nắm giữ vàng vật lý."
+      "Đang ở đỉnh lịch sử 5 năm, rủi ro điều chỉnh kỹ thuật ngắn hạn cao nếu lợi suất thực USD hồi phục.",
+      "Premium có thể co hẹp nhanh nếu giá thế giới tăng trong khi giá SJC đã bão hòa ở mức 181 triệu.",
+      "Thời gian phục hồi trung bình từ đợt sụt giảm tồi tệ nhất là 1369 ngày - rủi ro thanh khoản nếu mua đỉnh."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Current Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "sjc_premium_current",
+        "value": 14.11,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -8.63,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Price",
-        "value": 5071.19,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "SJC Change 30d",
-        "value": 6.09,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Change 20d",
+        "key": "vix_change20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 18.72,
-        "unit": "% (max)",
-        "source": "monthly_series_30d"
+        "key": "sjc_vs_ma30_pct",
+        "value": 15.9,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.32,
+        "key": "gold_spot_change20d",
+        "value": 1.92,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "worst_drawdown_recovery_days",
+        "value": 1369,
+        "unit": "ngày",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T19:16:05.195Z",
+    "latestTimestamp": "2026-02-20T20:06:48.084Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 158390925.77935112,
-    "premiumPct": 14.27,
-    "change7dPct": 0.82,
-    "change30dPct": 6.09,
-    "volatilityDailyPct": 2.32,
-    "ma7VndPerTael": 156164924,
-    "ma30VndPerTael": 155930910,
+    "intlVndPerTael": 158615007.0748452,
+    "premiumPct": 14.11,
+    "change7dPct": 0.7,
+    "change30dPct": 3.39,
+    "volatilityDailyPct": 2.28,
+    "ma7VndPerTael": 156358622,
+    "ma30VndPerTael": 156112800,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T19:16:27.047Z",
+    "fetchedAt": "2026-02-20T20:07:02.034Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5069.695,
+        "value": 5077.675,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 1.47,
-        "change5dPct": 0.73,
-        "change20dPct": 1.76,
+        "change1dPct": 1.63,
+        "change5dPct": 0.89,
+        "change20dPct": 1.92,
         "relationToGold": "context"
       },
       {
@@ -192,26 +186,28 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-20 | odt.co.nz | Good as gold ?",
-      "2026-02-20 | thehindubusinessline.com | Investors returned to gold ETFs in 2nd week after booking profits in 1st week",
-      "2026-02-20 | economictimes.indiatimes.com | Dow Jones down today despite the tariff ruling : Dow Jones crashes today : why is Dow down today despite the tariff ruling ? S & P 500 and Nasdaq outperform on tech rebound",
-      "2026-02-20 | moneycontrol.com | US Supreme Court ruling may provide further reprieve for a third of India US exports hit by tariff shock"
+      "2026-02-20 | proactiveinvestors.co.uk | FTSE 100 Live : united kingdom blue - chips , Wall Street higher as Supreme Court rules Trump tariffs are unlawful",
+      "2026-02-20 | cp24.com | Donald Trump news : President to impose new tariffs",
+      "2026-02-20 | yahoo.com | Disgrace To Our Nation : Trump Rages At Supreme Court Justices After Tariff Ruling",
+      "2026-02-20 | apr.org | Trump tariffs impacting Alabama still in effect despite SCOTUS ruling",
+      "2026-02-20 | proactiveinvestors.co.uk | US Supreme Court rules against Trump tariffs , raising questions for trade policy",
+      "2026-02-20 | postregister.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs"
     ],
     "countryActionHeadlines": [
-      "2026-02-20 | odt.co.nz | Good as gold ?",
-      "2026-02-20 | finance.yahoo.com | Here what the Supreme Court tariff ruling means for consumer prices",
-      "2026-02-20 | economictimes.indiatimes.com | Dow Jones down today despite the tariff ruling : Dow Jones crashes today : why is Dow down today despite the tariff ruling ? S & P 500 and Nasdaq outperform on tech rebound",
-      "2026-02-20 | moneycontrol.com | Dollar falls after Supreme Court strikes down Trump tariffs",
-      "2026-02-20 | nypost.com | Retail and apparel stocks spike after Supreme Court strikes down President Trump tariffs",
-      "2026-02-20 | moneycontrol.com | Emerging markets climb as US Supreme Court strikes down tariffs"
+      "2026-02-20 | proactiveinvestors.co.uk | FTSE 100 Live : united kingdom blue - chips , Wall Street higher as Supreme Court rules Trump tariffs are unlawful",
+      "2026-02-20 | markets.financialcontent.com | FinancialContent - Yields and Uncertainty : The U . S . Treasury Market Navigates a  Stagflation - Lite  Horizon",
+      "2026-02-20 | apr.org | Trump tariffs impacting Alabama still in effect despite SCOTUS ruling",
+      "2026-02-20 | times-standard.com | U . S . Supreme Court strikes down Trump tariffs . Here how theyve affected California – Times - Standard",
+      "2026-02-20 | postregister.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | mykxlg.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-20 | odt.co.nz | Good as gold ?",
-      "2026-02-20 | economictimes.indiatimes.com | Dow Jones down today despite the tariff ruling : Dow Jones crashes today : why is Dow down today despite the tariff ruling ? S & P 500 and Nasdaq outperform on tech rebound",
-      "2026-02-20 | thehindubusinessline.com | Central banks worldwide to follow dissimilar paths while approaching end of easing cycle , says RBI Governor",
-      "2026-02-20 | idahostatejournal.com | US stocks tick higher after the Supreme Court strikes down Trump sweeping tariffs",
-      "2026-02-20 | wmur.com | Oil prices jump , gold hits $5 , 000 as tensions ramp up between Iran and US",
-      "2026-02-20 | finance.yahoo.com | Gold price today , Friday , February 20 : Gold moves above $5 , 000 again on geopolitical tensions"
+      "2026-02-20 | proactiveinvestors.co.uk | FTSE 100 Live : united kingdom blue - chips , Wall Street higher as Supreme Court rules Trump tariffs are unlawful",
+      "2026-02-20 | apr.org | Trump tariffs impacting Alabama still in effect despite SCOTUS ruling",
+      "2026-02-20 | postregister.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | mykxlg.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | proactiveinvestors.com | Nasdaq , S & P 500 higher as Supreme Court rules Trump tariffs are unlawful",
+      "2026-02-20 | marxist.com | 2026 kicks off to the sound of imperialist war drums and class struggle"
     ]
   }
 }
