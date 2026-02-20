@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T07:21:56.324Z",
+  "generatedAt": "2026-02-20T08:14:18.086Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,35 +7,34 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động premium cao, trong khi giá thế giới cho thấy động lượng tăng yếu và USD đang hồi phục; nhà đầu tư không nên mua đuổi mà chờ đợi信 hiệu điều chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định premium.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng 2.3%/ngày, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập khẩu kỹ thuật hơn vì rủi ro điều chỉnh ngắn hạn rất lớn.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn rất lớn khi đã tăng 5.06% chỉ trong 30 ngày qua.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) là động lực chính đẩy giá vàng tăng, nhưng tín hiệu này đã phần nào được định giá hết ở mức giá hiện tại.",
-      "Chỉ số USD Trade Weighted tăng trở lại và đang có tuần tốt nhất trong 4 tháng theo headlines, tạo áp lực bán ngắn hạn lên giá vàng thế giới (đang giao dịch quanh 5022 USD/oz).",
-      "Premium SJC biến động mạnh từ 9.96% lên 18.72% trong chuỗi 30 ngày, hiện ở 15.39% cho thấy thanh khoản thị trường Việt Nam không ổn định, dễ bị sốc điều chỉnh."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 4.73% sau 30 ngày và biên độ dao động cao 2.3%/ngày.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 8.63% trong 20 ngày (xuống 1.8%) tạo nền tảng hỗ trợ vĩ mô tích cực cho giá vàng thế giới.",
+      "Premium 15.71% đang ở mức cao hơn đáng kể so với đầu chuỗi dữ liệu (9.96% ngày 22/01), cho thấy tâm lý FOMO tại thị trường nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá SJC chạm đỉnh lịch sử 181 triệu đồng/lượng và không có sự hỗ trợ đột phá từ giá thế giới.",
-      "Sự kiện địa chính trị và phát ngôn Fed (FOMC minutes 27-28/1) có thể gây biến động bất ngờ 2 chiều cho giá vàng thế giới.",
-      "Thanh khoản thị trường Việt Nam có thể giảm nếu premium tiếp tục duy trì mức cao trên 15%, gây khó khăn cho việc thoát hàng ngắn hạn."
+      "Rủi ro điều chỉnh giá cao do SJC đã tăng liên tục và đang ở vùng giá kỷ lục, biên độ dao động 2.3% cho thấy biến động cực lớn.",
+      "VIX tăng 16.09% trong 20 ngày cho thấy bất ổn thị trường, có thể gây ra các đợt bán tháo ròng dòng tiền mặt.",
+      "Premium nội địa có thể co hẹp nếu giá thế giới tiếp tục tăng nhưng tâm lý nhà đầu tư Việt Nam nguội lạnh."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 4.73,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Spread",
-        "value": 15.39,
-        "unit": "%",
+        "key": "Daily Volatility",
+        "value": 2.3,
+        "unit": "%/day",
         "source": "market_snapshot"
       },
       {
@@ -45,41 +44,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "US Dollar Index Change 20d",
-        "value": -2.06,
+        "key": "Current Premium vs Start Premium",
+        "value": 5.75,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX Change 20d",
+        "value": 16.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC 30-Day Change",
-        "value": 5.06,
-        "unit": "%",
+        "key": "SJC Current Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Gold Spot XAUUSD",
-        "value": 5022.04,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Premium Range 30d",
-        "value": 18.72,
-        "unit": "% max",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T07:21:13.434Z",
+    "latestTimestamp": "2026-02-20T08:13:42.931Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156855603.1614653,
-    "premiumPct": 15.39,
-    "change7dPct": -0.16,
-    "change30dPct": 5.06,
+    "intlVndPerTael": 156419341.14128572,
+    "premiumPct": 15.71,
+    "change7dPct": -0.46,
+    "change30dPct": 4.73,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155945592,
-    "ma30VndPerTael": 155879732,
+    "ma7VndPerTael": 155876513,
+    "ma30VndPerTael": 155863614,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T07:21:31.197Z",
+    "fetchedAt": "2026-02-20T08:14:00.262Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5016.745,
+        "value": 5011.545,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 0.41,
-        "change5dPct": -0.32,
-        "change20dPct": 0.7,
+        "change1dPct": 0.3,
+        "change5dPct": -0.42,
+        "change20dPct": 0.6,
         "relationToGold": "context"
       },
       {
@@ -191,11 +184,12 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-20 | economictimes.indiatimes.com | U . S . imports grew in 2025 , as Trump tariffs reshuffled global trade"
+    ],
     "countryActionHeadlines": [
-      "2026-02-20 | marketscreener.com | Dollar headed for best week in four months as geopolitics loom over markets",
-      "2026-02-20 | freemalaysiatoday.com | Dollar set for best week in four months on hawkish Fed , geopolitics",
-      "2026-02-20 | businesstimes.com.sg | Gold dips as dollar ticks up ; all eyes on inflation data"
+      "2026-02-20 | chimpreports.com | Rwanda Raises Key Rate to 7 . 25 % as Inflation Climbs Above Target",
+      "2026-02-20 | marketscreener.com | Dollar headed for best week in four months as geopolitics loom over markets"
     ],
     "dollarYieldHeadlines": []
   }
