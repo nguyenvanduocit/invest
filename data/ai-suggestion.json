@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T06:20:00.014Z",
+  "generatedAt": "2026-02-20T07:21:56.324Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi lợi suất thực USD tăng mạnh 0.56% tạo áp lực bán ngắn hạn; nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ hoặc tín hiệu phá vỡ rõ ràng hơn.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động premium cao, trong khi giá thế giới cho thấy động lượng tăng yếu và USD đang hồi phục; nhà đầu tư không nên mua đuổi mà chờ đợi信 hiệu điều chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định premium.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá đã tăng 4.97% trong 30 ngày qua.",
-      "Áp lực bán từ vĩ mô tăng lên khi lợi suất thực US 10Y (US Real Yield) tăng mạnh 0.56% lên 1.8%, tương quan nghịch với giá vàng.",
-      "Động lượng tăng yếu đi: giá thế giới (5018 USD/oz) vẫn thấp hơn đỉnh 5327 USD/oz ngày 28/01, cho thấy đà tăng chưa bền vững.",
-      "Biên độ dao động premium 30 ngày lớn (từ 6.38% đến 18.72%) và thanh khoản biến động 2.3%/ngày cảnh báo rủi ro biến động giá cao."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn rất lớn khi đã tăng 5.06% chỉ trong 30 ngày qua.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) là động lực chính đẩy giá vàng tăng, nhưng tín hiệu này đã phần nào được định giá hết ở mức giá hiện tại.",
+      "Chỉ số USD Trade Weighted tăng trở lại và đang có tuần tốt nhất trong 4 tháng theo headlines, tạo áp lực bán ngắn hạn lên giá vàng thế giới (đang giao dịch quanh 5022 USD/oz).",
+      "Premium SJC biến động mạnh từ 9.96% lên 18.72% trong chuỗi 30 ngày, hiện ở 15.39% cho thấy thanh khoản thị trường Việt Nam không ổn định, dễ bị sốc điều chỉnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi động lượng mua suy yếu.",
-      "Lợi suất thực USD tiếp tục tăng cao sẽ gây áp lực giảm giá vàng thế giới.",
-      "Biên độ premium (chênh lệch giá trong nước và thế giới) biến động mạnh, ảnh hưởng chi phí cơ hội của nhà đầu tư Việt Nam."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá SJC chạm đỉnh lịch sử 181 triệu đồng/lượng và không có sự hỗ trợ đột phá từ giá thế giới.",
+      "Sự kiện địa chính trị và phát ngôn Fed (FOMC minutes 27-28/1) có thể gây biến động bất ngờ 2 chiều cho giá vàng thế giới.",
+      "Thanh khoản thị trường Việt Nam có thể giảm nếu premium tiếp tục duy trì mức cao trên 15%, gây khó khăn cho việc thoát hàng ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 1D",
-        "value": 0.56,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "SJC Price Change 30D",
-        "value": 4.97,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Volatility Range 30D",
-        "value": 12.34,
-        "unit": "percentage points (6.38-18.72)",
+        "key": "Premium Spread",
+        "value": 15.39,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -8.63,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Dollar Index Change 20d",
+        "value": -2.06,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC 30-Day Change",
+        "value": 5.06,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot XAUUSD",
+        "value": 5022.04,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Intl Gold Peak vs Current",
-        "value": -5.79,
-        "unit": "% below peak (5327 vs 5018 USD/oz)",
+        "key": "Premium Range 30d",
+        "value": 18.72,
+        "unit": "% max",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Change 20D",
-        "value": 16.09,
-        "unit": "%",
-        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T06:19:17.237Z",
+    "latestTimestamp": "2026-02-20T07:21:13.434Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156724393.29339367,
-    "premiumPct": 15.49,
-    "change7dPct": -0.24,
-    "change30dPct": 4.97,
+    "intlVndPerTael": 156855603.1614653,
+    "premiumPct": 15.39,
+    "change7dPct": -0.16,
+    "change30dPct": 5.06,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155927792,
-    "ma30VndPerTael": 155875579,
+    "ma7VndPerTael": 155945592,
+    "ma30VndPerTael": 155879732,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T06:19:38.363Z",
+    "fetchedAt": "2026-02-20T07:21:31.197Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5017.615,
+        "value": 5016.745,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 0.43,
-        "change5dPct": -0.3,
-        "change20dPct": 0.72,
+        "change1dPct": 0.41,
+        "change5dPct": -0.32,
+        "change20dPct": 0.7,
         "relationToGold": "context"
       },
       {
@@ -186,7 +192,11 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-20 | marketscreener.com | Dollar headed for best week in four months as geopolitics loom over markets",
+      "2026-02-20 | freemalaysiatoday.com | Dollar set for best week in four months on hawkish Fed , geopolitics",
+      "2026-02-20 | businesstimes.com.sg | Gold dips as dollar ticks up ; all eyes on inflation data"
+    ],
     "dollarYieldHeadlines": []
   }
 }
