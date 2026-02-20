@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T01:35:25.047Z",
+  "generatedAt": "2026-02-20T02:59:33.040Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với premium 15.9% cao hơn đáng kể so với mức 9.96% đầu chu kỳ, khiến rủi ro mua đuổi rất lớn. Lợi suất thực 10Y giảm mạnh 8.63% trong 20 ngày là động lực hỗ trợ giá thế giới, nhưng biên an toàn cho nhà đầu tư Việt Nam hiện rất mỏng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với biên độ dao động premium cao, đòi hỏi nhà đầu tư chờ đợi vùng giá tốt hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100), tăng 4.6% trong 30 ngày qua.",
-      "Premium tăng từ 9.96% (22/01) lên 15.9% (20/02), cho thấy thị trường đã định giá quá nhiệt so với giá thế giới.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 8.63% trong 20 ngày là yếu tố vĩ mô tích cực hỗ trợ giá vàng thế giới.",
-      "VIX tăng 16.09% trong 20 ngày cho thấy biến động thị trường còn cao, chưa phải điểm mua an toàn."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật lớn khi mua tại điểm này.",
+      "Premium tăng vọt từ 9.96% (22/01) lên 16% (20/02), cho thấy giá Việt Nam đã chạy quá nóng so với giá thế giới.",
+      "Lợi suất thực 10 năm Mỹ tăng 0.56% trong 1 ngày và VIX tăng 16.09% trong 20 ngày cho thấy dòng tiền có thể dịch chuyển sang USD an toàn thay vì vàng.",
+      "Giá thế giới 4995.65 USD/oz giảm nhẹ 0.74% trong 5 ngày gần đây, thiếu động lực bứt phá ngay lập tức."
     ],
     "risks": [
-      "Rủi ro điều chỉnh premium từ 15.9% về mức trung bình 13-14% sẽ gây mất giá cho dù giá thế giới đi ngang.",
-      "Thời gian phục hồi xấu nhất lên tới 1369 ngày (gần 4 năm) nếu mua sai điểm.",
-      "Giá thế giới dao động mạnh 2.3%/ngày, kết hợp với thanh khoản cao có thể gây sụt giảm nhanh."
+      "Rủi ro điều chỉnh giá khi premium co lại từ mức 16-18% về vùng 12-13% như lịch sử 30 ngày qua.",
+      "Thanh khoản cao nhưng biến động 2.3%/ngày có thể gây sốc tài khoản ngắn hạn.",
+      "Dữ liệu vĩ mô cho thấy Fed có thể giữ lãi suất cao (hawkish), gây áp lực lên giá vàng thế giới."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "premium_expansion_30d",
-        "value": 5.94,
-        "unit": "percentage points",
+        "value": 6.04,
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_change_20d",
-        "value": -8.63,
+        "key": "sjc_current_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_change_1d",
+        "value": 0.56,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
         "key": "vix_change_20d",
         "value": 16.09,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "worst_recovery_days",
-        "value": 1369,
-        "unit": "days",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 4.6,
+        "key": "intl_gold_change_5d",
+        "value": -0.74,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "current_premium",
-        "value": 15.9,
+        "key": "daily_volatility",
+        "value": 2.3,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T01:34:45.588Z",
+    "latestTimestamp": "2026-02-20T02:59:05.302Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156171695.45375907,
-    "premiumPct": 15.9,
-    "change7dPct": -0.59,
-    "change30dPct": 4.6,
+    "intlVndPerTael": 156031403.83414158,
+    "premiumPct": 16,
+    "change7dPct": -0.68,
+    "change30dPct": 4.51,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155847891,
-    "ma30VndPerTael": 155856935,
+    "ma7VndPerTael": 155827849,
+    "ma30VndPerTael": 155852259,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T01:35:07.263Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-20T02:59:16.388Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4999.795,
+        "value": 4995.835,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 0.07,
-        "change5dPct": -0.66,
-        "change20dPct": 0.36,
+        "change1dPct": -0.01,
+        "change5dPct": -0.74,
+        "change20dPct": 0.28,
         "relationToGold": "context"
       },
       {
@@ -185,8 +185,23 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-20 | smh.com.au | Zenith tightens grip on WA gold play with savvy land grab",
+      "2026-02-20 | marketscreener.com | Dollar set for best week in four months on hawkish Fed , geopolitics"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-20 | scmp.com | Gold volatile run set to continue as investors eye next breakout",
+      "2026-02-20 | marketscreener.com | Dollar set for best week in four months on hawkish Fed , geopolitics",
+      "2026-02-20 | economictimes.indiatimes.com | US Market | Big fund managers bet against Fed cut hopes",
+      "2026-02-20 | thebftonline.com | Conflicting policies , confused investors , the weak dollar"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-20 | scmp.com | Gold volatile run set to continue as investors eye next breakout",
+      "2026-02-20 | ksby.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | lex18.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | katc.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far",
+      "2026-02-20 | wisn.com | Gold and silver prices soar , sparking renewed interest in precious metals",
+      "2026-02-20 | wtxl.com | Latest economic numbers : Slow hiring , and not much impact from tariffs so far"
+    ]
   }
 }
