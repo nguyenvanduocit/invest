@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T22:05:48.900Z",
+  "generatedAt": "2026-02-20T23:08:51.360Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao, trong khi đà tăng của giá thế giới đã có dấu hiệu chững lại gần vùng 5,100 USD/oz. Nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn thay vì mua đuổi.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn, trong khi giá thế giới tăng nhưng động lực vĩ mô đang phân kỳ khi lợi suất thực giảm nhưng kỳ vọng lạm phát cũng giảm mạnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 là 156.1 triệu VND/lượng (+16%), cho thấy rủi ro điều chỉnh là rất lớn.",
-      "Động lượng tăng đang chậm lại: giá SJC chỉ tăng 1.1% trong 7 ngày qua, thấp hơn nhiều so với mức tăng 3.81% của cả 30 ngày, trong khi giá thế giới đã chạm ngưỡng kháng cự tâm lý 5,100 USD/oz.",
-      "Lợi suất thực 10 năm của Mỹ giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) đã là động lực chính cho đợt tăng vừa qua, nhưng VIX tăng 29.35% cho thấy sự bất ổn thị trường có thể gây biến động hai chiều.",
-      "Premium 13.65% hiện tại thấp hơn đỉnh 18.72% ngày 17/02, cho thấy tâm lý nhà đầu tư Việt Nam đã bớt nóng giật so với đỉnh ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (156.1 triệu VND/lượng) tới 15.9%, rủi ro điều chỉnh kỹ thuật cao.",
+      "Động lực vĩ mô phân kỳ: Lợi suất thực 10Y giảm mạnh 20 ngày qua (-6.77%) hỗ trợ vàng, nhưng kỳ vọng lạm phát breakeven cũng giảm (-1.30%) và VIX tăng 29.35% cho thấy rủi ro thị trường.",
+      "Premium 13.66% đang ở mức hợp lý so với trung bình 30 ngày (14.5%), không có tín hiệu bất thường nhưng thanh khoản tại mức giá đỉnh cần thận trọng."
     ],
     "risks": [
-      "Giá thế giới có thể tiếp tục thiết lập đỉnh mới nếu USD yếu đi hoặc căng thẳng thương mại từ các chính sách thuế quan của Mỹ gia tăng.",
-      "Biên độ dao động ngày lên tới 2.28% cộng với VIX ở mức 20.23 có thể gây thanh khoản sụt giảm hoặc spread mua-bán giãn rộng bất ngờ.",
-      "Rủi ro dữ liệu nhiễu: Các tiêu đề tin tức chủ yếu xoay quanh diễn biến thị trường chứng khoán và thuế quan, thiếu thông tin cụ thể về chính sách vàng nội địa."
+      "Giá đang ở vùng quá mua với percentile 100% trong 5 năm, rủi ro chốt lời ngắn hạn cao.",
+      "VIX tăng 29.35% trong 20 ngày có thể gây áp lực bán tài sản rủi ro bao gồm vàng.",
+      "Khoảng cách giá SJC với MA7 (156.4 triệu) quá lớn (+15.7%), có thể hồi về mức trung bình."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC vs MA30",
-        "value": 15.93,
+        "key": "sjc_premium_vs_ma30",
+        "value": 15.9,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Price",
-        "value": 5097.44,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_20d_change",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "vix_20d_change",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 11.31,
+        "key": "current_premium",
+        "value": 13.66,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "avg_premium_30d",
+        "value": 14.5,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Daily Volatility",
+        "key": "volatility_daily",
         "value": 2.28,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "intl_gold_30d_change",
+        "value": 2.32,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T22:05:07.937Z",
+    "latestTimestamp": "2026-02-20T23:08:10.264Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159255498.09454578,
-    "premiumPct": 13.65,
+    "intlVndPerTael": 159243265.19978198,
+    "premiumPct": 13.66,
     "change7dPct": 1.1,
-    "change30dPct": 3.81,
+    "change30dPct": 3.8,
     "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 156450121,
-    "ma30VndPerTael": 156134150,
+    "ma7VndPerTael": 156448373,
+    "ma30VndPerTael": 156133742,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +89,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T22:05:23.998Z",
+    "fetchedAt": "2026-02-20T23:08:31.755Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -124,12 +129,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.29,
+        "value": 2.28,
         "unit": "%",
-        "date": "2026-02-19",
-        "change1dPct": 0,
-        "change5dPct": -1.29,
-        "change20dPct": -2.14,
+        "date": "2026-02-20",
+        "change1dPct": -0.44,
+        "change5dPct": -0.44,
+        "change20dPct": -1.3,
         "relationToGold": "direct"
       },
       {
@@ -185,22 +190,15 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-20 | jamaicantimes.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
-      "2026-02-20 | taiwansun.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
       "2026-02-20 | local10.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-20 | finanznachrichten.de | Gold Showing Significant Move Back To The Upside",
-      "2026-02-20 | finanzen.ch | Gold Showing Significant Move Back To The Upside",
-      "2026-02-20 | windsorstar.com | Canadian stocks whipsaw after Trump tariffs struck down"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-20 | jamaicantimes.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
-      "2026-02-20 | taiwansun.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
-      "2026-02-20 | local10.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-20 | finanznachrichten.de | Gold Showing Significant Move Back To The Upside",
-      "2026-02-20 | idahopress.com | The Latest : Trump says hell sign an executive order to enact a 10 % global tariff | Us",
-      "2026-02-20 | finanzen.ch | Gold Showing Significant Move Back To The Upside"
-    ],
-    "dollarYieldHeadlines": []
+      "2026-02-20 | cbsnews.com | How much tax do I pay if I sell gold ?",
+      "2026-02-20 | krmg.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | proactiveinvestors.co.uk | FTSE 100 Live : united kingdom blue - chips , Wall Street higher as Supreme Court rules Trump tariffs are unlawful",
+      "2026-02-20 | proactiveinvestors.com | Nasdaq , S & P 500 higher as Supreme Court rules Trump tariffs are unlawful",
+      "2026-02-20 | marxist.com | 2026 kicks off to the sound of imperialist war drums and class struggle"
+    ]
   }
 }
