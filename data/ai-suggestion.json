@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T12:11:51.021Z",
+  "generatedAt": "2026-02-20T13:27:15.597Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động premium cao, trong khi xu hướng tăng của giá thế giới có dấu hiệu chững lại gần kháng cự tâm lý 5000 USD/oz; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận đột phá trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với premium 15.21% cao hơn đáng kể so với mức 9.96% đầu chu kỳ, trong khi giá thế giới đang đi ngang; rủi ro điều chỉnh premium cao hơn lợi thế tăng giá ngắn hạn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 5.08% sau 30 ngày, rủi ro mua đỉp cao khi không có đà tăng đột phá.",
-      "Động lượng tăng giá thế giới chững lại: giá thế giới 5023 USD/oz chỉ tăng nhẹ 0.76% trong 20 ngày qua, cho thấy thị trường đang tích lũy.",
-      "Premium 15.37% hiện tại cao hơn đáng kể so với mức 9.96% đầu chuỗi dữ liệu (22/01), phản ánh giá Việt Nam đã chạy trước giá thế giới.",
-      "Lợi suất thực 10 năm giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) là động lực hỗ trợ vàng đã diễn ra, có thể đã được định giá hết ở mức giá hiện tại."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (155.9 triệu VND/lượng) tới 16%, cho thấy thị trường đã mua quá mức.",
+      "Premium tăng từ 9.96% (22/01) lên 15.21% (20/02), tương đương mở rộng ~53% trong 30 ngày, tạo rủi ro co hẹp khoảng cách nếu giá thế giới không tiếp tục tăng mạnh.",
+      "Lợi suất thực 10Y Mỹ giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) đã được giá vàng thế giới phản ánh với mức tăng 0.99% cùng kỳ, đà hỗ trợ vĩ mô đang yếu dần.",
+      "VIX tăng 16.09% trong 20 ngày nhưng giá vàng thế giới chỉ tăng nhẹ 0.99%, cho thấy động lượng tăng giá yếu trước các tin tức tích cực."
     ],
     "risks": [
-      "Rủi ro điều chỉnh premium: Premium đã từng chạm 18.72% (17/02) và có thể co về mức 13-14% nếu giá thế giới đi ngang, kéo giá SJC giảm dù giá thế giới không đổi.",
-      "Thiếu tín hiệu địa chính trị cấp thiết trong dữ liệu đầu vào để duy trì đà tăng giá thoát hiểm (safe-haven) mạnh mẽ hơn.",
-      "VIX tăng 16.09% trong 20 ngày cho thấy biến động thị trường tài chính đang gia tăng, có thể gây chặn lời ở tài sản rủi ro bao gồm vàng."
+      "Premium 15.21% có thể co về mức trung bình 13-14% nếu giá thế giới đi ngang, gây mất giá cho người mua tại mức cao.",
+      "Giá SJC không tăng trong 7 ngày qua (change7dPct: 0%) dù giá thế giới biến động, dấu hiệu phân kỳ tiêu cực ngắn hạn.",
+      "Sự kiện US-Iran và các bài báo về 'dollar advances' cho thấy USD có thể hồi phục, gây áp lực lên giá vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 5.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "current_premium",
-        "value": 15.37,
+        "key": "Premium mở rộng 30 ngày",
+        "value": 53,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Giá SJC trên MA30",
+        "value": 16.1,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 0.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_20d_change",
+        "key": "Lợi suất thực 10Y giảm 20 ngày",
         "value": -8.63,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "VIX tăng 20 ngày",
         "value": 16.09,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 9.96,
-        "unit": "% (low)",
-        "source": "monthly_series_30d"
+        "key": "Giá thế giới tăng 20 ngày",
+        "value": 0.99,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Change 7 ngày SJC",
+        "value": 0,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T12:10:59.830Z",
+    "latestTimestamp": "2026-02-20T13:26:35.118Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156890382.5499816,
-    "premiumPct": 15.37,
-    "change7dPct": -0.13,
-    "change30dPct": 5.08,
+    "intlVndPerTael": 157106702.95671782,
+    "premiumPct": 15.21,
+    "change7dPct": 0,
+    "change30dPct": 5.23,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155950560,
-    "ma30VndPerTael": 155880892,
+    "ma7VndPerTael": 155981463,
+    "ma30VndPerTael": 155888102,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T12:11:21.519Z",
+    "fetchedAt": "2026-02-20T13:26:52.413Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5019.625,
+        "value": 5031.225,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 0.47,
-        "change5dPct": -0.26,
-        "change20dPct": 0.76,
+        "change1dPct": 0.7,
+        "change5dPct": -0.03,
+        "change20dPct": 0.99,
         "relationToGold": "context"
       },
       {
@@ -186,7 +186,17 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [
+      "2026-02-20 | spacewar.com | European stocks rebound , oil prices ease after US - Iran volatility",
+      "2026-02-20 | investinglive.com | USDJPY on track to revisit the intervention level as Japanese Yen lacks bullish catalysts",
+      "2026-02-20 | timesofindia.indiatimes.com | Forex reserves rise $8 . 66 billion to new all - time high of $725 . 72 billion",
+      "2026-02-20 | omanobserver.om | Gold heads for weekly loss as dollar advances",
+      "2026-02-20 | tribune.net.ph | Market welcomes BSP rate cut ; Peso over P58",
+      "2026-02-20 | marketscreener.com | Sterling nears one - month low as investors bet on BoE rate cuts"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-20 | chennaionline.com | Gold Prices Rise Amid Global Tensions , Dollar Pressure – Chennaionline",
+      "2026-02-20 | omanobserver.om | Gold heads for weekly loss as dollar advances"
+    ]
   }
 }
