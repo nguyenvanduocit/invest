@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T16:12:56.740Z",
+  "generatedAt": "2026-02-20T17:15:30.797Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng thay vì FOMO. Dù xu hướng vĩ mô nền tảng tích cực nhờ lợi suất thực giảm và căng thẳng địa chính trị, nhưng rủi ro điều chỉnh kỹ thuật là rất cao.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.32%/ngày, xu hướng tăng mạnh 6.07%/tháng nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 5.62% sau 30 ngày, cảnh báo vùng quá mua cần thời gian củng cố.",
-      "Lợi suất thực Mỹ 10 năm giảm sâu 8.63% trong 20 ngày (xuống 1.8%) và căng thẳng Iran-Mỹ đẩy giá thế giới lên vùng 5,000 USD/oz, tạo nền tảng hỗ trợ vĩ mô.",
-      "Biên độ dao động ngày cao (2.31%) và giá SJC lệch xa MA7 (156 triệu VND/lượng) cho thấy thị trường đang biến động mạnh, chưa có điểm cân bằng ổn định."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 6.07% sau 30 ngày và nằm trên MA7 (156.2 triệu) lẫn MA30 (155.9 triệu).",
+      "Premium 14.29% ở mức trung bình của chuỗi 30 ngày (dao động 6.38%-18.72%), không có dấu hiệu bất thường cực đoan so với đỉnh 18.72% ngày 17/02.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 8.63% trong 20 ngày (xuống 1.8%) và DXY giảm 2.06% là động lực hỗ trợ vàng thế giới tăng 1.79% trong 20 ngày.",
+      "VIX tăng 29.35% trong 20 ngày (lên 20.23) cho thấy tâm lý thị trường lo ngại, hỗ trợ nhu cầu trú ẩn vào vàng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do SJC đang ở đỉnh lịch sử 5 năm và tăng quá nhanh trong ngắn hạn (5.62%/tháng).",
-      "Premium 14.77% có thể bị nén nếu giá thế giới tiếp tục tăng nhưng cầu nội địa yếu đi, làm giảm hiệu quả đầu tư so với vàng thế giới.",
-      "Thanh khoản có thể bị sụt giảm nếu nhà đầu tư chốt lời đồng loạt ở vùng giá kỷ lục này."
+      "Giá ở percentile 100% trong 5 năm kèm volatility 2.32%/ngày, rủi ro điều chỉnh kỹ thuật cao khi mua đuổi.",
+      "Premium có thể giảm từ 14.29% về mức 10-12% nếu giá thế giới tiếp tục tăng mạnh, làm giảm hiệu suất đầu tư vàng SJC.",
+      "Dữ liệu vĩ mô thiếu sự kiện địa chính trị và hành động quốc gia cụ thể, độ tin cậy tín hiệu giảm."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 5.62,
+        "key": "sjc_change_30d",
+        "value": 6.07,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -8.63,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "sjc_current_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "SJC vs MA7 Deviation",
-        "value": 15.96,
+        "key": "premium_current",
+        "value": 14.29,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.31,
+        "key": "premium_range_30d",
+        "value": 6.38,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Intl Gold Price",
-        "value": 5049.15,
-        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "us_real_yield_10y_change20d",
+        "value": -8.63,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "dxy_change20d",
+        "value": -2.06,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "vix_change20d",
         "value": 29.35,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T16:11:57.585Z",
+    "latestTimestamp": "2026-02-20T17:14:24.103Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 157702388.64902863,
-    "premiumPct": 14.77,
-    "change7dPct": 0.38,
-    "change30dPct": 5.62,
-    "volatilityDailyPct": 2.31,
-    "ma7VndPerTael": 156066561,
-    "ma30VndPerTael": 155907959,
+    "intlVndPerTael": 158371765.3043938,
+    "premiumPct": 14.29,
+    "change7dPct": 0.81,
+    "change30dPct": 6.07,
+    "volatilityDailyPct": 2.32,
+    "ma7VndPerTael": 156162186,
+    "ma30VndPerTael": 155930271,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T16:12:14.679Z",
+    "fetchedAt": "2026-02-20T17:14:31.038Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5051.115,
+        "value": 5071.115,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 1.1,
-        "change5dPct": 0.36,
-        "change20dPct": 1.39,
+        "change1dPct": 1.5,
+        "change5dPct": 0.76,
+        "change20dPct": 1.79,
         "relationToGold": "context"
       },
       {
@@ -184,17 +191,8 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-20 | wcvb.com | Oil prices jump , gold hits $5 , 000 as tensions ramp up between Iran and US"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-20 | desiblitz.com | Gold Boom Leaves united kingdom South Asian Jewellers Busier Than Ever",
-      "2026-02-20 | marketscreener.com | South African rand edges up after hotter than expected US inflation data",
-      "2026-02-20 | finance.yahoo.com | Dow Jones , S & P 500 edge lower as investors digest inflation , growth data",
-      "2026-02-20 | londonlovesbusiness.com | Gold Holds Near $5 , 000 : What Investors Should Know - London Business News",
-      "2026-02-20 | investopedia.com | Stock Market Today : Stocks Mixed Following GDP , Inflation Data ; Oil Prices Steady Around 6 - Month High",
-      "2026-02-20 | zerohedge.com | ECB Quietly Prepares Global Liquidity Backstop As Euro Debt Wave Builds"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
