@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-19T23:10:01.369Z",
+  "generatedAt": "2026-02-20T00:23:07.458Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập sân tốt hơn thay vì đuổi đỉnh. Dù lợi suất thực USD giảm mạnh 20 ngày qua hỗ trợ giá vàng dài hạn, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 30 ngày đã chững lại, trong khi lợi suất thực USD hồi phục tạo áp lực giảm lên giá vàng thế giới; nhà đầu tư nên chờ đợi信 hiệu điều chỉnh rõ ràng hơn hoặc sự xác nhận phá vỡ đỉnh mới trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 4.64% sau 30 ngày và nằm trên MA7/MA30 (155.9 triệu VND/lượng), tín hiệu thị trường đã quá mua.",
-      "Biên độ dao động ngày cao 2.26% kèm theo 4 lần drawdown trong lịch sử (lần tệ nhất -41.26%) cho thấy rủi ro biến động cực lớn nếu thị trường đảo chiều.",
-      "Lợi suất thực USD 10Y giảm mạnh 8.63% trong 20 ngày qua (xuống 1.8%) là động lực hỗ trợ vàng, nhưng giá đã phản ánh phần lớn kỳ vọng này.",
-      "Premium 15.8% hiện tại cao hơn đáng kể so với mức 9.9-11.25% đầu chuỗi dữ liệu 30 ngày, cho thấy giá nội địa đã mở rộng quá mức so với giá thế giới."
+      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5Y: 100%), rủi ro mua đỉp cao khi đà tăng 30 ngày (+4.45%) đã chững lại và giảm 0.74% trong 7 ngày gần nhất.",
+      "Lợi suất thực USD 10 năm hồi phục mạnh (+0.56%/ngày lên mức 1.8%) tạo áp lực giảm lên giá vàng thế giới, đối nghịch với xu hướng giảm 20 ngày (-8.63%) trước đó.",
+      "Premium 16.07% đang ở vùng cao so với trung bình 30 ngày (12-16%), cho thấy thị trường nội địa đã định giá phần lớn rủi ro tăng giá.",
+      "VIX tăng 16.09% trong 20 ngày cho thấy bất ổn thị trường còn đó, nhưng giá vàng thế giới không tăng theo (change20dPct chỉ +0.15%), tín hiệu phân kỳ cảnh giác."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật từ vùng đỉnh 5 năm với biên độ dao động 2.26%/ngày có thể gây thua lỗ ngắn hạn lớn.",
-      "VIX tăng 16.09% trong 20 ngày cho thấy biến động thị trường tài chính đang gia tăng, có thể gây chảy vốn từ vàng để cover margin.",
-      "Premium co lại từ đỉnh 18.66% về 15.8% nếu giá thế giới không tăng tương ứng sẽ làm xói mòn lợi nhuận nhà đầu tư nội địa."
+      "Rủi ro điều chỉnh kỹ thuật từ vùng đỉnh lịch sử 181 triệu đồng/lượng nếu không có tin tức hỗ trợ đột phá.",
+      "Lợi suất thực USD tiếp tục hồi phục có thể gây áp lực giảm lên giá vàng thế giới, kéo theo giảm giá vàng nội địa.",
+      "Thanh khoản cao nhưng biến động ngày 2.3% có thể gây sốc tài khoản ngắn hạn cho nhà đầu tư đòn bẩy."
     ],
     "evidence": [
       {
@@ -28,52 +28,58 @@
       },
       {
         "key": "sjc_change_30d",
-        "value": 4.64,
+        "value": 4.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.26,
-        "unit": "%/ngày",
+        "key": "sjc_change_7d",
+        "value": -0.74,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
-        "value": -8.63,
+        "key": "premium_current",
+        "value": 16.07,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 9.9,
+        "key": "us_real_yield_change_1d",
+        "value": 0.56,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "macro_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "vix_change_20d",
         "value": 16.09,
         "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "worst_drawdown",
-        "value": -41.26,
+        "key": "gold_spot_change_20d",
+        "value": 0.15,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-19T23:09:20.137Z",
+    "latestTimestamp": "2026-02-20T00:22:34.170Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 156309851.53204545,
-    "premiumPct": 15.8,
-    "change7dPct": -0.56,
-    "change30dPct": 4.64,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 155940000,
-    "ma30VndPerTael": 155943188,
+    "intlVndPerTael": 155942675.83678436,
+    "premiumPct": 16.07,
+    "change7dPct": -0.74,
+    "change30dPct": 4.45,
+    "volatilityDailyPct": 2.3,
+    "ma7VndPerTael": 155815174,
+    "ma30VndPerTael": 155849301,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-19T23:09:42.256Z",
+    "fetchedAt": "2026-02-20T00:22:46.868Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5007.295,
+        "value": 4989.225,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": 0.22,
-        "change5dPct": -0.51,
-        "change20dPct": 0.51,
+        "change1dPct": -0.14,
+        "change5dPct": -0.87,
+        "change20dPct": 0.15,
         "relationToGold": "context"
       },
       {
@@ -178,15 +184,22 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build",
       "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
-      "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies",
-      "2026-02-18 | ECB Press / Speeches | Piero Cipollone: Digital euro"
+      "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-20 | prnewswire.com | i - 80 Gold Reports Fourth Quarter and Full Year 2025 Results ; Continues to Advance Development Plan",
+      "2026-02-19 | fxstreet.com | Forex Today : US Dollar near four - week high ahead of core PCE , GDP and PMI data",
+      "2026-02-19 | investmentexecutive.com | S & P / TSX composite rises nearly 500 points , U . S . market gains tempered by Fed minutes",
+      "2026-02-19 | cbsnews.com | Gold vs dividend stocks : Which makes more sense for retirement income ?",
+      "2026-02-19 | myjoyonline.com | Stability built on a fragile foundation  CDD warns in Mahama first - year economic review",
+      "2026-02-19 | markets.financialcontent.com | FinancialContent - Gold Shatters $5 , 000 : Geopolitics and  Dollar Decoupling  Fuel Historic Rally"
+    ]
   }
 }
