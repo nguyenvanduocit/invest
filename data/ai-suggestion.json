@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T00:23:07.458Z",
+  "generatedAt": "2026-02-20T01:35:25.047Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 30 ngày đã chững lại, trong khi lợi suất thực USD hồi phục tạo áp lực giảm lên giá vàng thế giới; nhà đầu tư nên chờ đợi信 hiệu điều chỉnh rõ ràng hơn hoặc sự xác nhận phá vỡ đỉnh mới trước khi vào lệnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với premium 15.9% cao hơn đáng kể so với mức 9.96% đầu chu kỳ, khiến rủi ro mua đuổi rất lớn. Lợi suất thực 10Y giảm mạnh 8.63% trong 20 ngày là động lực hỗ trợ giá thế giới, nhưng biên an toàn cho nhà đầu tư Việt Nam hiện rất mỏng.",
     "reasons": [
-      "Giá SJC 181 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5Y: 100%), rủi ro mua đỉp cao khi đà tăng 30 ngày (+4.45%) đã chững lại và giảm 0.74% trong 7 ngày gần nhất.",
-      "Lợi suất thực USD 10 năm hồi phục mạnh (+0.56%/ngày lên mức 1.8%) tạo áp lực giảm lên giá vàng thế giới, đối nghịch với xu hướng giảm 20 ngày (-8.63%) trước đó.",
-      "Premium 16.07% đang ở vùng cao so với trung bình 30 ngày (12-16%), cho thấy thị trường nội địa đã định giá phần lớn rủi ro tăng giá.",
-      "VIX tăng 16.09% trong 20 ngày cho thấy bất ổn thị trường còn đó, nhưng giá vàng thế giới không tăng theo (change20dPct chỉ +0.15%), tín hiệu phân kỳ cảnh giác."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100), tăng 4.6% trong 30 ngày qua.",
+      "Premium tăng từ 9.96% (22/01) lên 15.9% (20/02), cho thấy thị trường đã định giá quá nhiệt so với giá thế giới.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 8.63% trong 20 ngày là yếu tố vĩ mô tích cực hỗ trợ giá vàng thế giới.",
+      "VIX tăng 16.09% trong 20 ngày cho thấy biến động thị trường còn cao, chưa phải điểm mua an toàn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật từ vùng đỉnh lịch sử 181 triệu đồng/lượng nếu không có tin tức hỗ trợ đột phá.",
-      "Lợi suất thực USD tiếp tục hồi phục có thể gây áp lực giảm lên giá vàng thế giới, kéo theo giảm giá vàng nội địa.",
-      "Thanh khoản cao nhưng biến động ngày 2.3% có thể gây sốc tài khoản ngắn hạn cho nhà đầu tư đòn bẩy."
+      "Rủi ro điều chỉnh premium từ 15.9% về mức trung bình 13-14% sẽ gây mất giá cho dù giá thế giới đi ngang.",
+      "Thời gian phục hồi xấu nhất lên tới 1369 ngày (gần 4 năm) nếu mua sai điểm.",
+      "Giá thế giới dao động mạnh 2.3%/ngày, kết hợp với thanh khoản cao có thể gây sụt giảm nhanh."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.45,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "premium_expansion_30d",
+        "value": 5.94,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -0.74,
+        "key": "us_real_yield_change_20d",
+        "value": -8.63,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 16.07,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "us_real_yield_change_1d",
-        "value": 0.56,
-        "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
         "key": "vix_change_20d",
         "value": 16.09,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 0.15,
+        "key": "worst_recovery_days",
+        "value": 1369,
+        "unit": "days",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_change_30d",
+        "value": 4.6,
         "unit": "%",
-        "source": "macro_context"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "current_premium",
+        "value": 15.9,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T00:22:34.170Z",
+    "latestTimestamp": "2026-02-20T01:34:45.588Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 155942675.83678436,
-    "premiumPct": 16.07,
-    "change7dPct": -0.74,
-    "change30dPct": 4.45,
+    "intlVndPerTael": 156171695.45375907,
+    "premiumPct": 15.9,
+    "change7dPct": -0.59,
+    "change30dPct": 4.6,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 155815174,
-    "ma30VndPerTael": 155849301,
+    "ma7VndPerTael": 155847891,
+    "ma30VndPerTael": 155856935,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T00:22:46.868Z",
+    "fetchedAt": "2026-02-20T01:35:07.263Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4989.225,
+        "value": 4999.795,
         "unit": "USD/oz",
         "date": "2026-02-20",
-        "change1dPct": -0.14,
-        "change5dPct": -0.87,
-        "change20dPct": 0.15,
+        "change1dPct": 0.07,
+        "change5dPct": -0.66,
+        "change20dPct": 0.36,
         "relationToGold": "context"
       },
       {
@@ -193,13 +187,6 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-20 | prnewswire.com | i - 80 Gold Reports Fourth Quarter and Full Year 2025 Results ; Continues to Advance Development Plan",
-      "2026-02-19 | fxstreet.com | Forex Today : US Dollar near four - week high ahead of core PCE , GDP and PMI data",
-      "2026-02-19 | investmentexecutive.com | S & P / TSX composite rises nearly 500 points , U . S . market gains tempered by Fed minutes",
-      "2026-02-19 | cbsnews.com | Gold vs dividend stocks : Which makes more sense for retirement income ?",
-      "2026-02-19 | myjoyonline.com | Stability built on a fragile foundation  CDD warns in Mahama first - year economic review",
-      "2026-02-19 | markets.financialcontent.com | FinancialContent - Gold Shatters $5 , 000 : Geopolitics and  Dollar Decoupling  Fuel Historic Rally"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
