@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T09:08:53.593Z",
+  "generatedAt": "2026-02-21T10:06:56.524Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao (2.27%) và giá đã vượt xa MA30. Lợi suất thực USD giảm mạnh là động lực hỗ trợ, nhưng nhà đầu tư mới nên chờ đợi vùng giá tốt hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao 2.27%/ngày, trong khi xu hướng tăng của giá thế giới đang gặp vùng kháng cự kỹ thuật quanh 5100 USD/oz. Dù lợi suất thực Mỹ giảm mạnh hỗ trợ giá vàng dài hạn, rủi ro điều chỉnh ngắn hạn là rất lớn khi đà tăng đã chững lại.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tăng 3.8% sau 30 ngày và nằm trên MA30 (156.2 triệu VND/lượng), cho thấy xu hướng tăng nhưng đang ở vùng cực kỳ quá mua.",
-      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và chỉ số USD giảm 2.06%, tạo điều kiện thuận lợi cho giá vàng thế giới tăng lên 5098.58 USD/oz.",
-      "Biên độ dao động ngày cao 2.27% và premium biến động từ 11.22% đến 18.62% trong 30 ngày qua cho thấy thanh khoản thị trường căng thẳng, rủi ro trượt giá lớn khi vào lệnh."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm ẩn rủi ro mua đỉnh cao độ.",
+      "Động lượng tăng chậm lại: Giá thế giới 5098.63 USD/oz vẫn thấp hơn đỉnh 30 ngày trước đó (5327.18 USD/oz ngày 28/01).",
+      "Biên độ dao động ngày cao 2.27% kết hợp với đà hồi phục VIX (+29.35% trong 20 ngày) cho thấy thị trường bất ổn, dễ tạo bẫy thanh khoản.",
+      "Lợi suất thực Mỹ giảm sâu 6.77% trong 20 ngày là động lực tăng chính, nhưng yếu tố này đã phần nào được định giá ở mức giá hiện tại."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi giá SJC đã tăng liên tục và biên độ dao động (volatility) đang ở mức 2.27%/ngày.",
-      "Sự kiện chính sách (FOMC minutes, phát ngôn ECB) có thể gây biến động bất ngờ, trong khi dữ liệu địa chính trị không có điểm nhấn rõ ràng để hỗ trợ đà tăng vọt.",
-      "Premium 13.56% hiện tại thấp hơn đỉnh 18.62% ngày 17/02, cho thấy tâm lý投机đã hạ nhiệt, giá SJC có thể đi ngang hoặc giảm ngay cả khi giá thế giới tăng."
+      "Rủi ro điều chỉnh kỹ thuật mạnh từ vùng đỉnh lịch sử khi thanh khoản thấp.",
+      "Biên độ dao động premium 11-19% trong 30 ngày qua cho thấy chênh lệch giá Việt Nam rất biến động, có thể co hẹp bất ngờ.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể để duy trì đà tăng safe-haven."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 3.8,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_volatility_daily",
+        "key": "Volatility Daily",
         "value": 2.27,
-        "unit": "%",
+        "unit": "%/day",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "World Gold Peak 30D",
+        "value": 5327.18,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Current World Gold",
+        "value": 5098.63,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "US Real Yield Change 20D",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "usd_index_change_20d",
-        "value": -2.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "intl_gold_price",
-        "value": 5098.58,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 7.4,
-        "unit": "% (18.62-11.22)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20D",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30D",
+        "value": 18.38,
+        "unit": "% (max)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T09:08:03.379Z",
+    "latestTimestamp": "2026-02-21T10:05:53.854Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159380153.2612421,
+    "intlVndPerTael": 159381658.1044322,
     "premiumPct": 13.56,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580386,
-    "ma30VndPerTael": 156265168,
+    "ma7VndPerTael": 156580601,
+    "ma30VndPerTael": 156265218,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T09:08:25.124Z",
+    "fetchedAt": "2026-02-21T10:06:06.641Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,7 +186,14 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-21 | prokerala.com | Gold surges 0 . 23 pc during week due to rising safe haven demand",
+      "2026-02-21 | mwnation.com | Where is gold glitter ? - Nation Online",
+      "2026-02-21 | namibian.com.na | Foreign reserves increase to N$51 . 9 billion",
+      "2026-02-21 | finance.yahoo.com | LPL Research : 8 reasons why the SCOTUS tariff win isnt a total victory",
+      "2026-02-21 | manilatimes.net | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-21 | moneycontrol.com | Silver price today rallies newar 9 % on Comex ; key signals investors should track"
+    ],
     "dollarYieldHeadlines": []
   }
 }
