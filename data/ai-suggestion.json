@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T15:06:33.506Z",
+  "generatedAt": "2026-02-21T16:06:59.809Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 3.8% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ vùng giá tốt hơn thay vì đu đỉnh. Dù xu hướng vĩ mô dài hạn vẫn hỗ trợ vàng nhờ lợi suất thực Mỹ giảm mạnh, nhưng rủi ro điều chỉnh ngắn hạn là rất lớn khi giá thế giới đã tăng hơn 2% chỉ trong 1 ngày.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (156.3 triệu VND/lượng) tới 15.8%, tín hiệu quá mua rõ ràng cần thời gian củng cố.",
-      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) là động lực hỗ trợ vàng, nhưng giá đã phản ánh hết tin tích cực này.",
-      "VIX tăng 29.35% trong 20 ngày lên mức 20.23 cho thấy thị trường tài chính đang lo ngại, hỗ trợ nhu cầu trú ẩn an toàn trong ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.3 triệu VND/lượng), cho thấy thị trường đang ở vùng quá mua.",
+      "Biên độ dao động ngày cao (2.27%) kết hợp với VIX tăng 29.35% trong 20 ngày cho thấy tâm lý thị trường bất ổn, rủi ro biến động giá lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày xuống 1.79% là động lực tăng giá cơ bản, nhưng giá vàng thế giới đã phản ứng mạnh (+2.02% trong 1 ngày) và có thể cần điều chỉnh.",
+      "Premium 13.56% hiện tại thấp hơn đỉnh 18.62% ngày 17/02, cho thấy giá trong nước chưa theo kịp đà tăng của giá thế giới trong phiên gần nhất."
     ],
     "risks": [
-      "Mua tại đỉnh giá lịch sử (percentile 100% 5 năm) đối mặt rủi ro điều chỉnh sâu khi thị trường quá mua.",
-      "Biên độ dao động 2.27%/ngày tương đương ~4.1 triệu VND/lượng, rủi ro biến động ngắn hạn rất cao.",
-      "Premium 13.56% có thể co hẹp nếu giá thế giới điều chỉnh, làm giảm hiệu quả đầu tư so với vàng quốc tế."
+      "Rủi ro chốt lời ngắn hạn rất cao khi giá đang ở vùng đỉnh lịch sử và đã tăng 3.8% trong 30 ngày.",
+      "Biên độ dao động 2.27%/ngày có thể gây sốc tài khoản nếu nhập lệnh sai thời điểm.",
+      "Giá thế giới tăng quá nóng (xuất hiện chữ số 5000 USD/oz) dễ kích hoạt đợt bán lời kỹ thuật."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5-Year",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 Premium",
-        "value": 15.8,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "MA30 giá SJC",
+        "value": 156265172,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10Y thay đổi 20 ngày",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "Giá vàng thế giới XAUUSD",
+        "value": 5097.435,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biến động VIX 20 ngày",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
+        "key": "Biên độ dao động ngày",
         "value": 2.27,
         "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 30d",
-        "value": 3.8,
-        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T15:05:52.863Z",
+    "latestTimestamp": "2026-02-21T16:06:10.978Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159380830.6594957,
+    "intlVndPerTael": 159380291.11663198,
     "premiumPct": 13.56,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580483,
-    "ma30VndPerTael": 156265190,
+    "ma7VndPerTael": 156580406,
+    "ma30VndPerTael": 156265172,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T15:06:14.386Z",
+    "fetchedAt": "2026-02-21T16:06:32.156Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -179,16 +180,24 @@
     "policyHeadlines": [
       "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build",
       "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
+      "2026-02-19 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
-      "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
-      "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
+      "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
+    "countryActionHeadlines": [
+      "2026-02-21 | baystreet.ca | Baystreet . ca - Stocks Back on Upward Track",
+      "2026-02-21 | ibtimes.co.in | Gold rises 0 . 23 % on safe - haven demand ; silver jumps over 4 %",
+      "2026-02-21 | baystreet.ca | Baystreet . ca - This is Why Analysts are Now Calling for $10 , 000 Gold",
       "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | newsghana.com.gh | AngloGold Ashanti Posts Record US$2 . 9bn Free Cash Flow as Obuasi Drives 20 % Output Surge"
+      "2026-02-21 | arkansasonline.com | Stocks edge higher as Supreme Court rejects tariffs | The Arkansas Democrat - Gazette",
+      "2026-02-21 | bostonglobe.com | Charting the global economy : Trump tariffs struck down by Supreme Court"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-21 | theguardian.com | Is the united kingdom golden era of free museum entry coming to an end ? | Museums",
+      "2026-02-21 | newsghana.com.gh | Gold Doubled , Digital Surged : Ghana Economy Has More Than One Engine Now",
+      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs"
     ]
   }
 }
