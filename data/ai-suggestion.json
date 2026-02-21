@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T07:14:34.663Z",
+  "generatedAt": "2026-02-21T08:07:33.299Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh từ lợi suất thực USD giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động premium cao và không có sự kiện địa chính trị cấp thiết hỗ trợ.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày. Vĩ mô ủng hộ giá (Lợi suất thực USD giảm mạnh -6.77%), tuy nhiên nhà đầu tư mới nên chờ hồi về vùng hỗ trợ thay vì đuổi đỉnh.",
     "reasons": [
-      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày qua (xuống mức 1.79%) là động lực chính thúc đẩy giá vàng thế giới tăng 2.32% trong cùng kỳ, tạo xu hướng tăng cơ bản.",
-      "Giá SJC ở mức 181,000,000 VND/lượng đang vượt xa MA30 (156,265,212 VND/lượng) khoảng 15.8%, cho thấy thị trường đang ở trạng thái quá mua kéo dài.",
-      "Premium dao động mạnh từ 11.22% lên đỉnh 18.62% trong 30 ngày (biên độ gần 7.4 điểm phần trăm) cho thấy thanh khoản nội địa không ổn định, rủi ro chốt lời nhanh của nhà đầu tư là hiện hữu."
+      "Động lượng tăng giá mạnh: Giá SJC tăng 3.8% trong 30 ngày qua, từ 173.3 triệu lên mức đỉnh 181 triệu VND/lượng (nguồn: monthly_series_30d).",
+      "Hỗ trợ vĩ mô từ Mỹ: Lợi suất thực 10 năm của Mỹ giảm sâu 6.77% trong 20 ngày (xuống 1.79%), áp lực giảm lãi suất và USD yếu (DXY giảm 2.06%) là động lực chính đẩy giá vàng (nguồn: first_principles_context).",
+      "Biên độ dao động cực cao: Volatility đạt 2.27%/ngày kết hợp với VIX tăng 29.35% cho thấy thị trường đang bất ổn, rủi ro 'chốt lời' gây giảm giá nhanh là hiện hữu (nguồn: market_snapshot, first_principles_context).",
+      "Phân tích kỹ thuật 30 ngày: Giá thế giới có lúc giảm sâu về 4687 USD/oz (02-02) trước khi phục hồi lên 5098 USD/oz, cho thấy thanh khoản thấp và biến động ngắn hạn rất dữ dội (nguồn: monthly_series_30d)."
     ],
     "risks": [
-      "Đang ở đỉnh 5 năm (percentile 100%), rủi ro điều chỉnh giảm sâu nếu dữ liệu lạm phát Mỹ thay đổi bất ngờ.",
-      "Premium co giãn thất thường (từ 18.62% giảm xuống 13.56% gần đây) có thể khiến giá nội địa giảm nhanh hơn giá thế giới.",
-      "VIX tăng 29.35% trong 20 ngày nhưng thiếu tin tức địa chính trị cụ thể, biến động có thể mang tính tạm thời."
+      "Rủi ro mua đỉnh kỹ thuật: Giá đang ở phân vị 100% trong 5 năm qua, khả năng điều chỉnh giảm sau đợt tăng nóng là rất cao.",
+      "Biên độ dao động lớn: Với mức dao động 2.27%/ngày, nhà đầu tư có thể chịu lỗ ngắn hạn đáng kể nếu mua đúng thời điểm điều chỉnh.",
+      "Premium co giãn: Chênh lệch giá đã từng đạt đỉnh 18.62% và hiện về 13.57%, có thể tiếp tục thu hẹp nếu giá thế giới tăng nhanh hơn giá trong nước."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 15.8,
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 30 ngày",
+        "value": 3.8,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change_20d",
+        "key": "Phân vị giá 5 năm",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực Mỹ (20d)",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 7.4,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX (20d)",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "current_premium",
-        "value": 13.56,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Giá thế giới thấp nhất 30d",
+        "value": 4687.14,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Giá thế giới hiện tại",
+        "value": 5098.54,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T07:13:20.348Z",
+    "latestTimestamp": "2026-02-21T08:06:43.573Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159381478.6736073,
-    "premiumPct": 13.56,
+    "intlVndPerTael": 159378805.65447178,
+    "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580576,
-    "ma30VndPerTael": 156265212,
+    "ma7VndPerTael": 156580194,
+    "ma30VndPerTael": 156265123,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T07:14:08.284Z",
+    "fetchedAt": "2026-02-21T08:07:05.001Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -180,13 +187,6 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-21 | thehindubusinessline.com | How Indian consumers are investing in gold via varied means",
-      "2026-02-21 | altoonamirror.com | Wall Street keeps calm after SCOTUS strikes down tariffs | News , Sports , Jobs",
-      "2026-02-21 | manilatimes.net | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | moneycontrol.com | Silver price today rallies newar 9 % on Comex ; key signals investors should track",
-      "2026-02-21 | moneycontrol.com | Gold price today surged 2 . 65 % on Comex , is now the time to invest ?",
-      "2026-02-21 | newsx.com | Gold Rates Today : Precious Metal Touched New High , Prices Surge in India and Globally – Check City - Wise and Country - Wise Rates"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
