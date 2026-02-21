@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T16:06:59.809Z",
+  "generatedAt": "2026-02-21T17:07:15.236Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ vùng giá tốt hơn thay vì đu đỉnh. Dù xu hướng vĩ mô dài hạn vẫn hỗ trợ vàng nhờ lợi suất thực Mỹ giảm mạnh, nhưng rủi ro điều chỉnh ngắn hạn là rất lớn khi giá thế giới đã tăng hơn 2% chỉ trong 1 ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%), thanh khoản cao điểm là thời điểm không thuận lợi để mua vào mới. Lợi suất thực USD giảm mạnh là động lực tăng dài hạn, nhưng nhà đầu tư nên chờ đợi hồi điều chỉnh kỹ thuật hoặc giảm premium để tham gia an toàn hơn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.3 triệu VND/lượng), cho thấy thị trường đang ở vùng quá mua.",
-      "Biên độ dao động ngày cao (2.27%) kết hợp với VIX tăng 29.35% trong 20 ngày cho thấy tâm lý thị trường bất ổn, rủi ro biến động giá lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày xuống 1.79% là động lực tăng giá cơ bản, nhưng giá vàng thế giới đã phản ứng mạnh (+2.02% trong 1 ngày) và có thể cần điều chỉnh.",
-      "Premium 13.56% hiện tại thấp hơn đỉnh 18.62% ngày 17/02, cho thấy giá trong nước chưa theo kịp đà tăng của giá thế giới trong phiên gần nhất."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn rất lớn.",
+      "Biên độ dao động ngày cao 2.27% và giá cách xa MA7 (156.58 triệu) cho thấy thị trường đang quá mua và có thể điều chỉnh kỹ thuật bất cứ lúc nào.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% là tín hiệu vĩ mô tích cực hỗ trợ xu hướng tăng dài hạn của vàng thế giới."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn rất cao khi giá đang ở vùng đỉnh lịch sử và đã tăng 3.8% trong 30 ngày.",
-      "Biên độ dao động 2.27%/ngày có thể gây sốc tài khoản nếu nhập lệnh sai thời điểm.",
-      "Giá thế giới tăng quá nóng (xuất hiện chữ số 5000 USD/oz) dễ kích hoạt đợt bán lời kỹ thuật."
+      "Rủi ro điều chỉnh giá ngắn hạn từ vùng đỉnh lịch sử 181 triệu đồng.",
+      "Premium 13.57% có thể co hẹp nếu giá thế giới tiếp tục tăng nhưng giá trong nước đứng yên.",
+      "Thanh khoản giảm sau các đợt FOMO mua đỉn"
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Spot Price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 giá SJC",
-        "value": 156265172,
-        "unit": "VND/lượng",
+        "key": "5-Year Percentile",
+        "value": 100,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y thay đổi 20 ngày",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới XAUUSD",
-        "value": 5097.435,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Biến động VIX 20 ngày",
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Biên độ dao động ngày",
-        "value": 2.27,
-        "unit": "%/ngày",
+        "key": "Premium vs World Price",
+        "value": 13.57,
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.27,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot XAUUSD",
+        "value": 5097.435,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T16:06:10.978Z",
+    "latestTimestamp": "2026-02-21T17:06:33.740Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159380291.11663198,
-    "premiumPct": 13.56,
+    "intlVndPerTael": 159378267.6745943,
+    "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580406,
-    "ma30VndPerTael": 156265172,
+    "ma7VndPerTael": 156580117,
+    "ma30VndPerTael": 156265105,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T16:06:32.156Z",
+    "fetchedAt": "2026-02-21T17:06:55.269Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -186,18 +185,7 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-21 | baystreet.ca | Baystreet . ca - Stocks Back on Upward Track",
-      "2026-02-21 | ibtimes.co.in | Gold rises 0 . 23 % on safe - haven demand ; silver jumps over 4 %",
-      "2026-02-21 | baystreet.ca | Baystreet . ca - This is Why Analysts are Now Calling for $10 , 000 Gold",
-      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | arkansasonline.com | Stocks edge higher as Supreme Court rejects tariffs | The Arkansas Democrat - Gazette",
-      "2026-02-21 | bostonglobe.com | Charting the global economy : Trump tariffs struck down by Supreme Court"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-21 | theguardian.com | Is the united kingdom golden era of free museum entry coming to an end ? | Museums",
-      "2026-02-21 | newsghana.com.gh | Gold Doubled , Digital Surged : Ghana Economy Has More Than One Engine Now",
-      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
