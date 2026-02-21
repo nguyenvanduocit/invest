@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T21:05:38.763Z",
+  "generatedAt": "2026-02-21T22:04:52.707Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,28 +7,22 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi lợi suất thực USD giảm mạnh tạo động lực hỗ trợ; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng thay vì mua đuổi ở vùng giá cao.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng đã chững lại, trong khi xu hướng vĩ mô tích cực từ việc lợi suất thực USD giảm mạnh 6.77% vẫn hỗ trợ giá thế giới tăng tiếp.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 2.29% trong 30 ngày nhưng giao dịch sideway quanh mức 181 triệu trong 10 phiên gần nhất.",
-      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06%, tạo đà hỗ trợ vàng thế giới tăng 2.32% trong cùng kỳ.",
-      "Premium SJC đang ở 13.56%, nằm trong biên dao động 11-19% của 30 ngày qua, không có dấu hiệu bùng nổ hay bất thường cực đoan.",
-      "VIX tăng 29.35% trong 20 ngày (lên 20.23) cho thấy tâm lý thị trường lo ngại, nhưng thiếu sự kiện địa chính trị cụ thể để thúc đẩy đợt tăng mới."
+      "Giá SJC 181 triệu VND/lượng đang giao dịch ở mức cao nhất lịch sử (percentile 5y: 100%), rủi ro mua đỉp ngắn hạn rất lớn khi giá đã tăng 2.29% trong 30 ngày qua.",
+      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) tạo động lực tăng фундаментальный mạnh cho giá vàng thế giới, giải thích đà tăng từ 4865 lên 5098 USD/oz.",
+      "Biên độ dao động premium 11-19% trong 30 ngày qua cho thấy thanh khoản thị trường Việt Nam bình thường, không có tín hiệu bất thường để hành động ngược dòng.",
+      "VIX tăng 29.35% trong 20 ngày (lên 20.23 điểm) cho thấy tâm lý thị trường quốc tế lo ngại, hỗ trợ nhu cầu trú ẩn an toàn vào vàng."
     ],
     "risks": [
-      "Mua đuổi tại đỉnh giá 181 triệu VND/lượng (percentile 100%) rủi ro điều chỉnh cao nếu USD hồi phục.",
-      "Biên độ dao động 2.24%/ngày và premium có thể dao động từ 11-19% tạo rủi ro biến động ngắn hạn cho nhà đầu tư.",
-      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia, độ tin cậy dự báo giảm, thị trường có thể đi ngang."
+      "Mua đỉnh kỹ thuật: Giá đang ở percentile 100% trong 5 năm, khả năng điều chỉnh ngắn hạn cao sau đà tăng 2.29%/tháng.",
+      "Rủi ro thanh khoản: Premium 13.57% cao hơn mức đáy 6.29% ngày 28/01, cho thấy giá Việt Nam đã định giá phần lớn đà tăng thế giới.",
+      "Dữ liệu sự kiện địa chính trị trống: Không có tin tức geopoliticalHeadlines để xác nhận xu hướng an toàn, giảm độ tin cậy dự báo."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_price_change_30d",
-        "value": 2.29,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -39,7 +33,7 @@
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
+        "key": "gold_intl_change_30d",
         "value": 2.32,
         "unit": "%",
         "source": "first_principles_context"
@@ -51,29 +45,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "current_premium",
-        "value": 13.56,
+        "key": "premium_range_30d",
+        "value": 6.29,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "current_sjc_price",
+        "key": "sjc_price_latest",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
+      },
+      {
+        "key": "intl_gold_latest",
+        "value": 5098.63,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T21:04:50.039Z",
+    "latestTimestamp": "2026-02-21T22:04:17.514Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159381573.39057586,
-    "premiumPct": 13.56,
+    "intlVndPerTael": 159376997.2793462,
+    "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 2.29,
     "volatilityDailyPct": 2.24,
-    "ma7VndPerTael": 156828011,
-    "ma30VndPerTael": 156383940,
+    "ma7VndPerTael": 156828031,
+    "ma30VndPerTael": 156383944,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T21:05:11.753Z",
+    "fetchedAt": "2026-02-21T22:04:32.110Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -186,7 +186,13 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-21 | slguardian.org | Sri Lanka T - Bill Yields Plunge Below Policy Rate Amid Liquidity Surge – Sri Lanka Guardian",
+      "2026-02-21 | ibtimes.co.in | Gold rises 0 . 23 % on safe - haven demand ; silver jumps over 4 %",
+      "2026-02-21 | baystreet.ca | Baystreet . ca - This is Why Analysts are Now Calling for $10 , 000 Gold",
+      "2026-02-21 | baystreet.ca | Baystreet . ca - Stocks Back on Upward Track",
+      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs"
+    ],
     "dollarYieldHeadlines": []
   }
 }
