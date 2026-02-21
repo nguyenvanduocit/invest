@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T00:21:18.317Z",
+  "generatedAt": "2026-02-21T01:34:40.806Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,28 +7,21 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày và giá đã vượt xa MA30 gần 16%.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao (2.27%/ngày) và thanh khoản thấp trong bối cảnh vĩ mô nhiều nhiễu động.",
     "reasons": [
-      "Động lượng tăng giá mạnh: Giá SJC 181 triệu VND/lượng đang cao hơn đáng kể so với MA30 (156.2 triệu VND/lượng), tương ứng khoảng 15.9% và tăng 3.8% trong 30 ngày qua.",
-      "Yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% tạo đà đẩy giá thế giới lên vùng cao 5098 USD/oz.",
-      "Thanh khoản và sự kiện: Tin tức Tòa án Tối cao Mỹ bác bỏ thuế quan Trump giúp USD ổn định, giảm áp lực bán tháo nhưng cũng hạn chế đà tăng giá vàng thêm.",
-      "Premium trong ngưỡng bình thường: Mức chênh lệch 13.57% là hợp lý so với dao động 11-18% trong 30 ngày qua, không có dấu hiệu sốt ảo cục bộ."
+      "Động lượng tăng giá mạnh: Giá SJC hiện tại 181 triệu VND/lượng cao hơn đáng kể so với MA30 (156.3 triệu VND/lượng), tương ứng tăng +15.8% chỉ trong khoảng 1 tháng.",
+      "Đà tăng vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh -6.77% trong 20 ngày (xuống 1.79%) và VIX tăng +29.35% tạo đà đẩy giá vàng thế giới lên vùng cao 5098 USD/oz.",
+      "Biên độ dao động rộng trong 30 ngày gần đây (premium dao động 6.29%-18.62%) cho thấy thị trường Việt Nam đang trong trạng thái投機 (speculative) cao, khó dự đoán điểm cân bằng ngắn hạn."
     ],
     "risks": [
-      "Rủi ro mua đỉnh kỹ thuật: Giá đang ở phân vị 100% trong 5 năm (181 triệu VND), khả năng điều chỉnh giảm sau khi tăng liên tục là rất cao.",
-      "Biến động cực đại: Volatility 2.27%/ngày cho thấy thị trường đang rung lắc mạnh, nhà đầu tư ngắn hạn dễ bị 'chặt' lỗ.",
-      "Xuất hiện phân kỳ: Trong các ngày gần đây (18-21/02), giá thế giới tăng từ 4980 lên 5098 USD/oz nhưng giá SJC đứng yên ở 181 triệu, cho thấy sức mua nội địa đang yếu đi."
+      "Rủi ro điều chỉnh kỹ thuật sâu: Giá đang ở mức percentile 100% trong 5 năm, vùng giá chưa từng thấy, dễ xảy ra hiện tượng chốt lời ồ ạt.",
+      "Premium co giãn thất thường: Chênh lệch giá đã từng co về 6.29% (ngày 28/01) rồi giãn lên 18.62% (ngày 17/02), nhà đầu tư có thể bị thiệt hại lớn nếu mua đỉnh premium.",
+      "Dữ liệu sự kiện vĩ mô không rõ ràng: Các headline về 'Trump tariffs' và bài phát biểu ECB/Fed không cung cấp định hướng chính sách cụ thể, giảm độ tin cậy của phân tích."
     ],
     "evidence": [
       {
         "key": "sjc_price_vs_ma30",
-        "value": 15.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_30d_pct",
-        "value": 3.8,
+        "value": 15.8,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -39,41 +32,47 @@
         "source": "market_snapshot"
       },
       {
+        "key": "us_real_yield_20d_change",
+        "value": -6.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_20d_change",
+        "value": 29.35,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 12.33,
+        "unit": "percentage_points",
+        "source": "monthly_series_30d"
+      },
+      {
         "key": "daily_volatility",
         "value": 2.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change_20d",
-        "value": -6.77,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 29.35,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.57,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "gold_spot_price",
+        "value": 5098.58,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T00:20:35.838Z",
+    "latestTimestamp": "2026-02-21T01:33:57.235Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159378508.37448138,
-    "premiumPct": 13.57,
+    "intlVndPerTael": 159380211.09173447,
+    "premiumPct": 13.56,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580151,
-    "ma30VndPerTael": 156265113,
+    "ma7VndPerTael": 156580394,
+    "ma30VndPerTael": 156265169,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T00:20:52.778Z",
+    "fetchedAt": "2026-02-21T01:34:18.411Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,7 +184,14 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-21 | utahindependent.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-21 | japanherald.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-21 | argentinastar.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-21 | californiatelegraph.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-21 | nigeriasun.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
+      "2026-02-21 | castanetkamloops.net | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs"
+    ],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
       "2026-02-21 | castanetkamloops.net | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
