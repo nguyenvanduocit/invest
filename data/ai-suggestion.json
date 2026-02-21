@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T12:07:59.601Z",
+  "generatedAt": "2026-02-21T13:18:41.103Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,67 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày và không có tín hiệu sự kiện địa chính trị cấp thiết nào trong dữ liệu đầu vào để hỗ trợ đà phá giá tiếp tục.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động 2.27%/ngày và premium co giãn thất thường, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.27 triệu VND/lượng), tín hiệu quá mua rõ ràng.",
-      "Động lượng tăng giá 30 ngày (+3.8%) và 7 ngày (+1.1%) vẫn dương, đi kèm biên độ dao động cao 2.27%/ngày cho thấy thanh khoản thị trường đang hoạt động mạnh.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% trong 20 ngày (lên 20.23) là động lực vĩ mô hỗ trợ giá vàng thế giới tăng.",
-      "Premium 13.57% hiện tại nằm trong biên độ dao động phổ biến của chuỗi 30 ngày (11-18%), không có dấu hiệu bất thường đòi hỏi hành động đặc biệt."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (156.3 triệu VND/lượng) tới 15.7% - vùng quá mua kỹ thuật.",
+      "Động lượng tăng giá mạnh 7 ngày gần nhất (+1.1%) và 30 ngày (+3.8%) cho thấy xu hướng ngắn hạn vẫn tích cực, được hỗ trợ bởi lợi suất thực Mỹ giảm sâu -6.77% trong 20 ngày.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm về 1.79% và VIX tăng +29.35% trong 20 ngày tạo đòn bẩy фундаментальный cho vàng thế giới tăng lên vùng 5098 USD/oz.",
+      "Premium SJC 13.57% hiện ở mức hợp lý so với trung bình chuỗi 30 ngày (14.3%), không có dấu hiệu thao túng cực đoan, cho thấy thị trường nội địa vẫn hoạt động bình thường."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở vùng hiếm (percentile 100%) và đã tăng liên tục không điều chỉnh.",
-      "Biên độ dao động 2.27%/ngày tương đương hơn 4 triệu VND/lượng, nhà đầu tư ngắn hạn có thể đối mặt với biến động tài khoản lớn.",
-      "Dữ liệu vĩ mô thiếu tin tức địa chính trị cụ thể (geopoliticalHeadlines rỗng), đà tăng có thể chững lại nếu không có tác nhân mới."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đã tăng quá nhanh và đang ở vùng đỉnh 5 năm, biên độ dao động 2.27%/ngày có thể gây mất cân bằng danh mục.",
+      "Sự kiện Tòa án Tối cao Mỹ bác bỏ thuế quan Trump (21/02) đang tạo tín hiệu hỗn hợp cho thị trường, có thể gây biến động bất ngờ.",
+      "Thiếu dữ liệu vĩ mô mới nhất (first_principles healthy: false) làm giảm độ tin cậy dự báo xu hướng dài hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_premium_current",
+        "value": 13.57,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 15.87,
-        "unit": "million VND/lượng",
+        "key": "sjc_change_30d",
+        "value": 3.8,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "sjc_vs_ma30_deviation",
+        "value": 15.7,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change_20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Daily Volatility",
-        "value": 2.27,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Current Premium",
-        "value": 13.57,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "intl_gold_usd",
+        "value": 5098.48,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T12:07:07.986Z",
+    "latestTimestamp": "2026-02-21T13:18:03.012Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159376913.19068432,
+    "intlVndPerTael": 159376991.96519282,
     "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156579923,
-    "ma30VndPerTael": 156265060,
+    "ma7VndPerTael": 156579935,
+    "ma30VndPerTael": 156265062,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T12:07:29.419Z",
+    "fetchedAt": "2026-02-21T13:18:17.290Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -179,8 +185,21 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-21 | ncregister.com | Lenten Traditions You Should Know From Europe and Africa"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-21 | arkansasonline.com | Stocks edge higher as Supreme Court rejects tariffs | The Arkansas Democrat - Gazette",
+      "2026-02-21 | bostonglobe.com | Charting the global economy : Trump tariffs struck down by Supreme Court",
+      "2026-02-21 | hindustantimes.com | Donald Trump answers a Supreme Court rebuke with new tariff threats",
+      "2026-02-21 | livemint.com | Can the US - Iran war buzz fuel gold price to a new peak after the US Supreme Court decision on Trump tariffs ?",
+      "2026-02-21 | tribune.com.pk | Gold prices in Pakistan Today - February 21 , 2026",
+      "2026-02-21 | prokerala.com | Gold surges 0 . 23 pc during week due to rising safe haven demand"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-21 | newsghana.com.gh | AngloGold Ashanti Posts Record US$2 . 9bn Free Cash Flow as Obuasi Drives 20 % Output Surge",
+      "2026-02-21 | arkansasonline.com | Stocks edge higher as Supreme Court rejects tariffs | The Arkansas Democrat - Gazette",
+      "2026-02-21 | fool.com | Why I Cant Stop Buying This 6 %- Yielding Passive Income Powerhouse"
+    ]
   }
 }
