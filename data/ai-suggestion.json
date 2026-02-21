@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T06:13:18.141Z",
+  "generatedAt": "2026-02-21T07:14:34.663Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,24 +7,35 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động 2.27%/ngày và premium đã co lại từ đỉnh 18.6% về 13.56%. Nhà đầu tư nên chờ đợi điểm nhập an toàn hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh từ lợi suất thực USD giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động premium cao và không có sự kiện địa chính trị cấp thiết hỗ trợ.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (156.3 triệu VND/lượng) tới 15.8% - rủi ro điều chỉnh kỹ thuật rất cao.",
-      "Động lượng tăng giá +3.8%/30 ngày và +1.1%/7 ngày cho thấy xu hướng tăng còn nguyên động lực ngắn hạn.",
-      "Premium 13.56% đang ở mức hợp lý, giảm từ đỉnh 18.62% (17/02) - không có dấu hiệu căng thẳng cực đoan cần chạy đua mua vào.",
-      "First-principles hỗ trợ: Lợi suất thực Mỹ 10Y giảm mạnh -6.77%/20 ngày (xuống 1.79%) và VIX tăng +29.35%/20 ngày (lên 20.23) tạo đà cho giá vàng thế giới tăng +2.32%/20 ngày."
+      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày qua (xuống mức 1.79%) là động lực chính thúc đẩy giá vàng thế giới tăng 2.32% trong cùng kỳ, tạo xu hướng tăng cơ bản.",
+      "Giá SJC ở mức 181,000,000 VND/lượng đang vượt xa MA30 (156,265,212 VND/lượng) khoảng 15.8%, cho thấy thị trường đang ở trạng thái quá mua kéo dài.",
+      "Premium dao động mạnh từ 11.22% lên đỉnh 18.62% trong 30 ngày (biên độ gần 7.4 điểm phần trăm) cho thấy thanh khoản nội địa không ổn định, rủi ro chốt lời nhanh của nhà đầu tư là hiện hữu."
     ],
     "risks": [
-      "Rủi ro mua đỉnh ngắn hạn cao: giá đang cách xa MA30 15.8% với biên độ dao động 2.27%/ngày có thể gây thanh lý nhanh.",
-      "Sự kiện pháp lý Mỹ (Tòa án Tối cao bác thuế Trump) làm USD hồi nhẹ và thị trường ổn định, có thể giảm nhu cầu trú ẩn đột ngột.",
-      "Thiếu dữ liệu địa chính trị cụ thể trong input nên không đánh giá được rủi ro đen tăng đột biến."
+      "Đang ở đỉnh 5 năm (percentile 100%), rủi ro điều chỉnh giảm sâu nếu dữ liệu lạm phát Mỹ thay đổi bất ngờ.",
+      "Premium co giãn thất thường (từ 18.62% giảm xuống 13.56% gần đây) có thể khiến giá nội địa giảm nhanh hơn giá thế giới.",
+      "VIX tăng 29.35% trong 20 ngày nhưng thiếu tin tức địa chính trị cụ thể, biến động có thể mang tính tạm thời."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "sjc_price_vs_ma30",
+        "value": 15.8,
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_change_20d",
+        "value": -6.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 7.4,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
       },
       {
         "key": "percentile_5y",
@@ -33,53 +44,29 @@
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d_pct",
-        "value": 3.8,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vnd",
-        "value": 156265204,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 13.56,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_peak_feb",
-        "value": 18.62,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_10y_change20d",
-        "value": -6.77,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change20d",
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "current_premium",
+        "value": 13.56,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T06:12:43.727Z",
+    "latestTimestamp": "2026-02-21T07:13:20.348Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159381239.84930378,
+    "intlVndPerTael": 159381478.6736073,
     "premiumPct": 13.56,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580541,
-    "ma30VndPerTael": 156265204,
+    "ma7VndPerTael": 156580576,
+    "ma30VndPerTael": 156265212,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +77,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T06:12:55.584Z",
+    "fetchedAt": "2026-02-21T07:14:08.284Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -192,12 +179,14 @@
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-21 | thisdaylive.com | Tackling Inflation with Monetary Policy Tools , Structural Reforms – THISDAYLIVE",
-      "2026-02-21 | economictimes.indiatimes.com | Dollar dips after Supreme Court rules against Trump tariffs",
-      "2026-02-21 | thebusinessjournal.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | santamariatimes.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs"
-    ],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-21 | thehindubusinessline.com | How Indian consumers are investing in gold via varied means",
+      "2026-02-21 | altoonamirror.com | Wall Street keeps calm after SCOTUS strikes down tariffs | News , Sports , Jobs",
+      "2026-02-21 | manilatimes.net | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-21 | moneycontrol.com | Silver price today rallies newar 9 % on Comex ; key signals investors should track",
+      "2026-02-21 | moneycontrol.com | Gold price today surged 2 . 65 % on Comex , is now the time to invest ?",
+      "2026-02-21 | newsx.com | Gold Rates Today : Precious Metal Touched New High , Prices Surge in India and Globally – Check City - Wise and Country - Wise Rates"
+    ]
   }
 }
