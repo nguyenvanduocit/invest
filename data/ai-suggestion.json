@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-20T23:08:51.360Z",
+  "generatedAt": "2026-02-21T00:21:18.317Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn, trong khi giá thế giới tăng nhưng động lực vĩ mô đang phân kỳ khi lợi suất thực giảm nhưng kỳ vọng lạm phát cũng giảm mạnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày và giá đã vượt xa MA30 gần 16%.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (156.1 triệu VND/lượng) tới 15.9%, rủi ro điều chỉnh kỹ thuật cao.",
-      "Động lực vĩ mô phân kỳ: Lợi suất thực 10Y giảm mạnh 20 ngày qua (-6.77%) hỗ trợ vàng, nhưng kỳ vọng lạm phát breakeven cũng giảm (-1.30%) và VIX tăng 29.35% cho thấy rủi ro thị trường.",
-      "Premium 13.66% đang ở mức hợp lý so với trung bình 30 ngày (14.5%), không có tín hiệu bất thường nhưng thanh khoản tại mức giá đỉnh cần thận trọng."
+      "Động lượng tăng giá mạnh: Giá SJC 181 triệu VND/lượng đang cao hơn đáng kể so với MA30 (156.2 triệu VND/lượng), tương ứng khoảng 15.9% và tăng 3.8% trong 30 ngày qua.",
+      "Yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% tạo đà đẩy giá thế giới lên vùng cao 5098 USD/oz.",
+      "Thanh khoản và sự kiện: Tin tức Tòa án Tối cao Mỹ bác bỏ thuế quan Trump giúp USD ổn định, giảm áp lực bán tháo nhưng cũng hạn chế đà tăng giá vàng thêm.",
+      "Premium trong ngưỡng bình thường: Mức chênh lệch 13.57% là hợp lý so với dao động 11-18% trong 30 ngày qua, không có dấu hiệu sốt ảo cục bộ."
     ],
     "risks": [
-      "Giá đang ở vùng quá mua với percentile 100% trong 5 năm, rủi ro chốt lời ngắn hạn cao.",
-      "VIX tăng 29.35% trong 20 ngày có thể gây áp lực bán tài sản rủi ro bao gồm vàng.",
-      "Khoảng cách giá SJC với MA7 (156.4 triệu) quá lớn (+15.7%), có thể hồi về mức trung bình."
+      "Rủi ro mua đỉnh kỹ thuật: Giá đang ở phân vị 100% trong 5 năm (181 triệu VND), khả năng điều chỉnh giảm sau khi tăng liên tục là rất cao.",
+      "Biến động cực đại: Volatility 2.27%/ngày cho thấy thị trường đang rung lắc mạnh, nhà đầu tư ngắn hạn dễ bị 'chặt' lỗ.",
+      "Xuất hiện phân kỳ: Trong các ngày gần đây (18-21/02), giá thế giới tăng từ 4980 lên 5098 USD/oz nhưng giá SJC đứng yên ở 181 triệu, cho thấy sức mua nội địa đang yếu đi."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price_vs_ma30",
+        "value": 15.86,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_30d_pct",
+        "value": 3.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "daily_volatility",
+        "value": 2.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_ma30",
-        "value": 15.9,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_20d_change",
+        "key": "us_real_yield_change_20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
         "key": "current_premium",
-        "value": 13.66,
+        "value": 13.57,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "avg_premium_30d",
-        "value": 14.5,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.28,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_30d_change",
-        "value": 2.32,
-        "unit": "%",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-20T23:08:10.264Z",
+    "latestTimestamp": "2026-02-21T00:20:35.838Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159243265.19978198,
-    "premiumPct": 13.66,
+    "intlVndPerTael": 159378508.37448138,
+    "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
-    "volatilityDailyPct": 2.28,
-    "ma7VndPerTael": 156448373,
-    "ma30VndPerTael": 156133742,
+    "volatilityDailyPct": 2.27,
+    "ma7VndPerTael": 156580151,
+    "ma30VndPerTael": 156265113,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-20T23:08:31.755Z",
+    "fetchedAt": "2026-02-21T00:20:52.778Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -193,12 +188,12 @@
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-20 | local10.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-20 | cbsnews.com | How much tax do I pay if I sell gold ?",
-      "2026-02-20 | krmg.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-20 | proactiveinvestors.co.uk | FTSE 100 Live : united kingdom blue - chips , Wall Street higher as Supreme Court rules Trump tariffs are unlawful",
-      "2026-02-20 | proactiveinvestors.com | Nasdaq , S & P 500 higher as Supreme Court rules Trump tariffs are unlawful",
-      "2026-02-20 | marxist.com | 2026 kicks off to the sound of imperialist war drums and class struggle"
+      "2026-02-21 | castanetkamloops.net | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-21 | timesleader.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-20 | marketscreener.com | Weekly market update : The return of tariff chaos ?",
+      "2026-02-20 | marketscreener.com | Weekly market update : The return of tariff chaos ?",
+      "2026-02-20 | marketscreener.com | Weekly market update : The return of tariff chaos ?",
+      "2026-02-20 | marketscreener.com | Weekly market update : The return of tariff chaos ?"
     ]
   }
 }
