@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T18:07:54.004Z",
+  "generatedAt": "2026-02-21T19:08:52.548Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,57 +7,57 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày và không có động lực vĩ mô mới đủ mạnh để đẩy giá cao hơn trong ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư nên chờ đợi điểm nhập khẩu tốt hơn thay vì đu theo đỉnh giá.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA7 (156.6 triệu) và MA30 (156.3 triệu), cho thấy thị trường đã mua quá mức (overbought) trong ngắn hạn.",
-      "Động lượng tăng giá đang mất hơi: giá thế giới tăng chậm lại +2.32%/20 ngày so với đà tăng trước đó, trong khi lợi suất thực Mỹ (US Real Yield 10Y) vẫn duy trì ở mức dương 1.79% gây áp lực lên giá vàng.",
-      "Biên độ dao động ngày cao (2.27%) kết hợp với VIX tăng mạnh +29.35%/20 ngày cho thấy thị trường bất ổn, dễ xảy ra các đợt chốt lời ngắn hạn đẩy giá giảm sâu.",
-      "Premium 13.57% hiện tại thấp hơn đỉnh 18.62% ngày 17/02, cho thấy tâm lý nhà đầu tư Việt Nam đang thận trọng hơn dù giá thế giới vẫn neo cao."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.3 triệu VND/lượng) và MA7 (156.6 triệu VND/lượng), cho thấy thị trường đang trong vùng quá mua.",
+      "Động lượng tăng giá 30 ngày (+3.8%) và 7 ngày (+1.1%) khá mạnh, nhưng độ biến động ngày cao (2.27%) báo hiệu rủi ro dao động lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06% đang tạo nền tảng vĩ mô tích cực hỗ trợ giá vàng thế giới tăng +2.32% trong 20 ngày.",
+      "Premium 13.57% hiện tại cao hơn mức thấp 11.22% đầu chuỗi dữ liệu nhưng thấp hơn đỉnh 18.62% ngày 17/02, cho thấy chênh lệch đang trong vùng bình thường không cực đoan."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi thị trường đã tích lũy lợi nhuận lớn (+3.8%/tháng).",
-      "Lợi suất thực Mỹ (1.79%) và Fed Funds Rate (3.64%) duy trì ở mức cao có thể gây áp lực bán tháo nếu dữ liệu vĩ mô Mỹ tích cực hơn dự báo.",
-      "Thanh khoản có thể giảm mạnh nếu giá đi ngang kéo dài, khiến nhà đầu tư bị giam vốn ở mức giá cao."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở vùng đỉnh 5 năm và đã tăng liên tục, có thể hồi về vùng MA7 (~156.6 triệu VND/lượng).",
+      "Biến động ngày 2.27% kết hợp VIX tăng 29.35% trong 20 ngày cho thấy thị trường đang bất ổn, dễ gây sốc thanh khoản.",
+      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, giảm độ tin cậy của đà tăng hiện tại."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 30d",
-        "value": 3.8,
-        "unit": "%",
+        "key": "sjc_vs_ma30",
+        "value": 15.85,
+        "unit": "million VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.27,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_20d_change",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "vix_20d_change",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Current vs Peak 30d",
-        "value": 13.57,
+        "key": "premium_range_30d",
+        "value": 11.22,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 20d",
+        "key": "gold_spot_20d_change",
         "value": 2.32,
         "unit": "%",
         "source": "first_principles_context"
@@ -65,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T18:06:37.455Z",
+    "latestTimestamp": "2026-02-21T19:08:09.876Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159378866.29833943,
+    "intlVndPerTael": 159379892.86772794,
     "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580202,
-    "ma30VndPerTael": 156265125,
+    "ma7VndPerTael": 156580349,
+    "ma30VndPerTael": 156265159,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T18:06:59.036Z",
+    "fetchedAt": "2026-02-21T19:08:31.553Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -187,6 +187,11 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-21 | forbes.com | Tax Breaks : The High - Stakes Gold Medal Lessons Edition",
+      "2026-02-21 | theguardian.com | Is the united kingdom golden era of free museum entry coming to an end ? | Museums",
+      "2026-02-21 | newsghana.com.gh | Gold Doubled , Digital Surged : Ghana Economy Has More Than One Engine Now",
+      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs"
+    ]
   }
 }
