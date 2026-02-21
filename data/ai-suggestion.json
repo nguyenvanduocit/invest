@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T19:08:52.548Z",
+  "generatedAt": "2026-02-21T20:05:38.369Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng, nhà đầu tư nên chờ đợi điểm nhập khẩu tốt hơn thay vì đu theo đỉnh giá.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ đợt điều chỉnh thay vì đu đỉnh. Dù first-principles hỗ trợ vàng nhờ lợi suất thực USD giảm mạnh 6.77% trong 20 ngày, rủi ro chốt lời ngắn hạn là rất cao.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.3 triệu VND/lượng) và MA7 (156.6 triệu VND/lượng), cho thấy thị trường đang trong vùng quá mua.",
-      "Động lượng tăng giá 30 ngày (+3.8%) và 7 ngày (+1.1%) khá mạnh, nhưng độ biến động ngày cao (2.27%) báo hiệu rủi ro dao động lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06% đang tạo nền tảng vĩ mô tích cực hỗ trợ giá vàng thế giới tăng +2.32% trong 20 ngày.",
-      "Premium 13.57% hiện tại cao hơn mức thấp 11.22% đầu chuỗi dữ liệu nhưng thấp hơn đỉnh 18.62% ngày 17/02, cho thấy chênh lệch đang trong vùng bình thường không cực đoan."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (156.4 triệu VND/lượng) tới 15.7% trong bối cảnh biến động ngày lên 2.24%.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày xuống 1.79%, tạo động lực tăng cơ bản cho giá vàng thế giới (xuống 5098 USD/oz).",
+      "Premium 13.56% hiện tại thấp hơn đỉnh 18.62% ngày 17/02, cho thấy tâm lý FOMO đã hạ nhiệt và thị trường đang trong pha phân phối.",
+      "VIX tăng 29.35% trong 20 ngày lên 20.23 điểm cho thấy bất ổn thị trường vẫn còn, hỗ trợ nhu cầu trú ẩn an toàn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở vùng đỉnh 5 năm và đã tăng liên tục, có thể hồi về vùng MA7 (~156.6 triệu VND/lượng).",
-      "Biến động ngày 2.27% kết hợp VIX tăng 29.35% trong 20 ngày cho thấy thị trường đang bất ổn, dễ gây sốc thanh khoản.",
-      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, giảm độ tin cậy của đà tăng hiện tại."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đã tăng quá nhanh (+15.7% so với MA30 VND/lượng) và nằm ở vùng quá mua lịch sử.",
+      "Biên độ dao động ngày 2.24% kết hợp với drawdown tồi tệ 41.26% trong quá khứ cho thấy rủi ro giảm giá có thể rất lớn.",
+      "Sự kiện Tòa án Tối cao Mỹ bác thuế quan có thể làm giảm nhu cầu trú ẩn an toàn đột ngột."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price vs MA30",
+        "value": 15.7,
+        "unit": "% above MA",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 15.85,
-        "unit": "million VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_20d_change",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.22,
-        "unit": "%",
+        "key": "Premium Range 30d",
+        "value": 11.91,
+        "unit": "% min",
         "source": "monthly_series_30d"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.27,
+        "key": "Daily Volatility",
+        "value": 2.24,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "gold_spot_20d_change",
-        "value": 2.32,
-        "unit": "%",
+        "key": "Gold Spot Price",
+        "value": 5097.44,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T19:08:09.876Z",
+    "latestTimestamp": "2026-02-21T20:04:41.004Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159379892.86772794,
-    "premiumPct": 13.57,
+    "intlVndPerTael": 159381280.17434973,
+    "premiumPct": 13.56,
     "change7dPct": 1.1,
-    "change30dPct": 3.8,
-    "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580349,
-    "ma30VndPerTael": 156265159,
+    "change30dPct": 2.29,
+    "volatilityDailyPct": 2.24,
+    "ma7VndPerTael": 156827969,
+    "ma30VndPerTael": 156383930,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T19:08:31.553Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-21T20:05:00.028Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -185,8 +185,16 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-21 | presstelegram.com | Supreme Court tariff ruling draws quick reactions as uncertainty for ports of LA , Long Beach remains – Press Telegram",
+      "2026-02-21 | pjmedia.com | PR Fallout of the Tariff Decision : How Trump Can Still Win the PR War"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-21 | ibtimes.co.in | Gold rises 0 . 23 % on safe - haven demand ; silver jumps over 4 %",
+      "2026-02-21 | baystreet.ca | Baystreet . ca - This is Why Analysts are Now Calling for $10 , 000 Gold",
+      "2026-02-21 | baystreet.ca | Baystreet . ca - Stocks Back on Upward Track",
+      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs"
+    ],
     "dollarYieldHeadlines": [
       "2026-02-21 | forbes.com | Tax Breaks : The High - Stakes Gold Medal Lessons Edition",
       "2026-02-21 | theguardian.com | Is the united kingdom golden era of free museum entry coming to an end ? | Museums",
