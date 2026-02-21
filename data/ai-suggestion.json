@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T14:07:42.924Z",
+  "generatedAt": "2026-02-21T15:06:33.506Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi xu hướng vĩ mô vẫn tích cực nhờ lợi suất thực giảm mạnh và USD yếu đi. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật hoặc bình ổn premium trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 3.8% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn cao khi giá đã tăng 3.8% trong 30 ngày gần nhất.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và USD Index giảm 2.06% tạo đà hỗ trợ vàng thế giới tăng 2.32% cùng kỳ.",
-      "Premium chênh lệch 13.57% hiện tại thấp hơn đỉnh 18.62% ngày 17/02, cho thấy thị trường Việt Nam đang định giá hợp lý hơn và không trong trạng thái sốt ảo cực đoan.",
-      "Biên độ dao động ngày 2.27% và VIX tăng 29.35% trong 20 ngày cho thấy thị trường biến động mạnh, cần thận trọng với điểm vào"
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (156.3 triệu VND/lượng) tới 15.8%, tín hiệu quá mua rõ ràng cần thời gian củng cố.",
+      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) là động lực hỗ trợ vàng, nhưng giá đã phản ánh hết tin tích cực này.",
+      "VIX tăng 29.35% trong 20 ngày lên mức 20.23 cho thấy thị trường tài chính đang lo ngại, hỗ trợ nhu cầu trú ẩn an toàn trong ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua (percentile 100% 5 năm) và không có sự kiện địa chính trị cấp bách nào trong dữ liệu đầu vào.",
-      "Dữ liệu vĩ mô thiếu thông tin hành động quốc gia (countryActionHeadlines rỗng) và sự kiện địa chính trị không liên quan trực tiếp đến vàng, độ tin cậy giảm.",
-      "VIX tăng 29.35% cho thấy tâm lý thị trường lo ngại, có thể gây ra đợt bán tháo tài sản rủi ro bao gồm vàng nếu tình hình xấu đi"
+      "Mua tại đỉnh giá lịch sử (percentile 100% 5 năm) đối mặt rủi ro điều chỉnh sâu khi thị trường quá mua.",
+      "Biên độ dao động 2.27%/ngày tương đương ~4.1 triệu VND/lượng, rủi ro biến động ngắn hạn rất cao.",
+      "Premium 13.56% có thể co hẹp nếu giá thế giới điều chỉnh, làm giảm hiệu quả đầu tư so với vàng quốc tế."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5-Year",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "MA30 Premium",
+        "value": 15.8,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "usd_index_change_20d",
-        "value": -2.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_spot_change_20d",
-        "value": 2.32,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_premium_current",
-        "value": 13.57,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_premium_peak_feb",
-        "value": 18.62,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_volatility_daily",
+        "key": "Daily Volatility",
         "value": 2.27,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 3.8,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T14:06:54.200Z",
+    "latestTimestamp": "2026-02-21T15:05:52.863Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159377055.10983852,
-    "premiumPct": 13.57,
+    "intlVndPerTael": 159380830.6594957,
+    "premiumPct": 13.56,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156579944,
-    "ma30VndPerTael": 156265064,
+    "ma7VndPerTael": 156580483,
+    "ma30VndPerTael": 156265190,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T14:07:15.149Z",
+    "fetchedAt": "2026-02-21T15:06:14.386Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,15 +184,11 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-21 | dailypost.co.uk | I bought £10 mystery bag from Pret and contents left me floored",
-      "2026-02-21 | cnn.com | Analysis : GDP growth , trade deficit figures blow a hole in Trump rosy narrative",
-      "2026-02-21 | therealdeal.com | The Daily Dirt : Mamdani Revives Property Tax Promise"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-21 | newsghana.com.gh | AngloGold Ashanti Posts Record US$2 . 9bn Free Cash Flow as Obuasi Drives 20 % Output Surge",
-      "2026-02-21 | arkansasonline.com | Stocks edge higher as Supreme Court rejects tariffs | The Arkansas Democrat - Gazette"
+      "2026-02-21 | newstribune.com | Wall Street keeps calm after Supreme Court strikes down Trump tariffs",
+      "2026-02-21 | newsghana.com.gh | AngloGold Ashanti Posts Record US$2 . 9bn Free Cash Flow as Obuasi Drives 20 % Output Surge"
     ]
   }
 }
