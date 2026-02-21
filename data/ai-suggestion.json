@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T05:20:32.207Z",
+  "generatedAt": "2026-02-21T06:13:18.141Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư chờ đợi vùng giá tốt hơn thay vì đu đỉnh. Dù vĩ mô ủng hộ vàng nhờ lợi suất thực USD giảm mạnh, rủi ro điều chỉnh kỹ thuật là rất lớn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động 2.27%/ngày và premium đã co lại từ đỉnh 18.6% về 13.56%. Nhà đầu tư nên chờ đợi điểm nhập an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.26 triệu VND/lượng), cho thấy thị trường đang ở vùng quá mua.",
-      "Biên độ dao động ngày cao (2.27%) và premium đã có lúc vọt lên 18.62% (ngày 17/02), cho thấy thanh khoản và tâm lý nhà đầu tư Việt Nam đang rất biến động, rủi ro mua đỉng là hiện hữu.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và USD Index giảm 2.06% là động lực chính đẩy giá thế giới tăng, nhưng tin tức Tòa án Tối cao Mỹ chặn thuế quan mới có thể làm giảm nhu cầu trú ẩn an toàn ngắn hạn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (156.3 triệu VND/lượng) tới 15.8% - rủi ro điều chỉnh kỹ thuật rất cao.",
+      "Động lượng tăng giá +3.8%/30 ngày và +1.1%/7 ngày cho thấy xu hướng tăng còn nguyên động lực ngắn hạn.",
+      "Premium 13.56% đang ở mức hợp lý, giảm từ đỉnh 18.62% (17/02) - không có dấu hiệu căng thẳng cực đoan cần chạy đua mua vào.",
+      "First-principles hỗ trợ: Lợi suất thực Mỹ 10Y giảm mạnh -6.77%/20 ngày (xuống 1.79%) và VIX tăng +29.35%/20 ngày (lên 20.23) tạo đà cho giá vàng thế giới tăng +2.32%/20 ngày."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử khi động lực mua yếu đi.",
-      "Premium co hẹp nhanh chóng từ mức 18% về 13.57% gây thiệt hại cho nhà đầu tư mua giá cao.",
-      "Thanh khoản thấp và biên độ mua-bán rộng gây khó khăn khi cần thoát hàng."
+      "Rủi ro mua đỉnh ngắn hạn cao: giá đang cách xa MA30 15.8% với biên độ dao động 2.27%/ngày có thể gây thanh lý nhanh.",
+      "Sự kiện pháp lý Mỹ (Tòa án Tối cao bác thuế Trump) làm USD hồi nhẹ và thị trường ổn định, có thể giảm nhu cầu trú ẩn đột ngột.",
+      "Thiếu dữ liệu địa chính trị cụ thể trong input nên không đánh giá được rủi ro đen tăng đột biến."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 15.85,
-        "unit": "triệu VND/lượng",
+        "key": "change_30d_pct",
+        "value": 3.8,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
+        "key": "ma30_vnd",
+        "value": 156265204,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
+        "value": 13.56,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_peak_feb",
         "value": 18.62,
-        "unit": "% max",
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "us_real_yield_10y_change20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.27,
+        "key": "vix_change20d",
+        "value": 29.35,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.57,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T05:19:23.188Z",
+    "latestTimestamp": "2026-02-21T06:12:43.727Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159377065.1129507,
-    "premiumPct": 13.57,
+    "intlVndPerTael": 159381239.84930378,
+    "premiumPct": 13.56,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156579945,
-    "ma30VndPerTael": 156265065,
+    "ma7VndPerTael": 156580541,
+    "ma30VndPerTael": 156265204,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T05:20:13.528Z",
+    "fetchedAt": "2026-02-21T06:12:55.584Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -180,19 +193,11 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-21 | thisdaylive.com | Tackling Inflation with Monetary Policy Tools , Structural Reforms – THISDAYLIVE",
       "2026-02-21 | economictimes.indiatimes.com | Dollar dips after Supreme Court rules against Trump tariffs",
       "2026-02-21 | thebusinessjournal.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | santamariatimes.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | afghanistansun.com | Wall Street advances , shrugs off SC ruling on Trump tariffs",
-      "2026-02-21 | sierraleonetimes.com | Wall Street advances , shrugs off SC ruling on Trump tariffs"
+      "2026-02-21 | santamariatimes.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-21 | economictimes.indiatimes.com | Gold gains over 1 % on soft US data , Trump fresh tariff move",
-      "2026-02-21 | economictimes.indiatimes.com | Dollar dips after Supreme Court rules against Trump tariffs",
-      "2026-02-21 | timesofindia.indiatimes.com | Led by foreign currency assets , forex reserves rise $8 . 6bn , hit high of $725 . 7bn",
-      "2026-02-21 | thebusinessjournal.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | santamariatimes.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
-      "2026-02-21 | littleapplepost.com | Wall Street keeps calm after Supreme Court ruling on Trump tariffs"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
