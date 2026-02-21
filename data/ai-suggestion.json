@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T02:55:19.543Z",
+  "generatedAt": "2026-02-21T03:46:29.088Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có sự kiện địa chính trị cấp thiết nào hỗ trợ.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro mua đỉp cao khi biên độ dao động 2.27%/ngày và VIX tăng +29.35% cho thấy thị trường đang bất ổn. Nên chờ hồi điều chỉnh về vùng hỗ trợ thay vì đu mua.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cho thấy thị trường đã định giá rất cao.",
-      "Động lượng tăng giá 30 ngày (+3.8%) và 7 ngày (+1.1%) vẫn dương, giá hiện tại cao hơn MA7 (156.6 triệu VND/lượng) và MA30 (156.3 triệu VND/lượng).",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% trong 20 ngày là động lực vĩ mô hỗ trợ giá vàng thế giới.",
-      "Premium 13.57% nằm trong biên độ dao động phổ biến của 30 ngày qua (11-18%), không có dấu hiệu bong bóng local cực đoan."
+      "Giá SJC 181,000,000 VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh cao hơn lợi ích tiềm năng ngắn hạn.",
+      "Biên độ dao động ngày 2.27% kết hợp VIX tăng +29.35% (20 ngày) cho thấy thị trường đang trong giai đoạn biến động cao, dễ bị điều chỉnh.",
+      "Lợi suất thực 10Y giảm mạnh -6.77% (20 ngày) đã đẩy giá vàng tăng +2.32% (20 ngày), đà tăng này có thể đã phản ánh hết tin tích cực.",
+      "Premium 13.57% hiện tại thấp hơn đỉnh 18.62% (17/02), cho thấy tâm lý FOMO đã hạ nhiệt và giá có thể đi ngang hoặc điều chỉnh."
     ],
     "risks": [
-      "Rủi ro mua đỉnh ngắn hạn rất cao khi giá đang ở percentile 100% trong 5 năm và biến động ngày lên tới 2.27%.",
-      "Thiếu tin tức địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, confidence bị giới hạn do tín hiệu vĩ mô có thể là nhiễu ngắn hạn.",
-      "Lịch sử drawdown tồi tệ là -41.26% với thời gian phục hồi trung bình rất dài (1369 ngày), nhà đầu tư mới cần thận trọng."
+      "Giá thế giới có thể tiếp tục thiết lập đỉnh mới nếu USD Index tiếp tục giảm (đã giảm -2.06% trong 20 ngày).",
+      "Biên độ 2.27%/ngày có thể tạo ra cơ hội giao dịch ngắn hạn nhưng cũng dễ gây lỗ nếu không quản lý rủi ro chặt.",
+      "Dữ liệu vĩ mô thiếu cập nhật (healthy: false) và không có thông tin hành động quốc gia, giảm độ tin cậy dự báo."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
+        "key": "sjc_change_30d",
         "value": 3.8,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA7",
-        "value": 156580084,
-        "unit": "VND/lượng",
+        "key": "volatility_daily",
+        "value": 2.27,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -6.77,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 20d",
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.27,
+        "key": "us_real_yield_10y_change_20d",
+        "value": -6.77,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
+        "key": "gold_spot_change_20d",
+        "value": 2.32,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "current_premium",
         "value": 13.57,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Worst Historical Drawdown",
-        "value": -41.26,
+        "key": "peak_premium_feb",
+        "value": 18.62,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T02:54:51.337Z",
+    "latestTimestamp": "2026-02-21T03:45:47.598Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159378038.85340297,
+    "intlVndPerTael": 159377554.01505902,
     "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580084,
-    "ma30VndPerTael": 156265097,
+    "ma7VndPerTael": 156580015,
+    "ma30VndPerTael": 156265081,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T02:54:56.537Z",
+    "fetchedAt": "2026-02-21T03:46:09.269Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,8 +191,16 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-21 | understandingwar.org | Foreign Policy : Putin Sells a False Win to Trump",
+      "2026-02-21 | livemint.com | What does the US Supreme Court decision on Trump tariffs mean for the Indian stock market , gold , and silver rates ?"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-21 | santamariatimes.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs",
+      "2026-02-21 | littleapplepost.com | Wall Street keeps calm after Supreme Court ruling on Trump tariffs",
+      "2026-02-21 | jcpost.com | Wall Street keeps calm after Supreme Court ruling on Trump tariffs",
+      "2026-02-21 | whdh.com | Wall Street keeps calm after the Supreme Court strikes down Trump tariffs - Boston News , Weather , Sports"
+    ]
   }
 }
