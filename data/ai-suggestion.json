@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T11:06:01.370Z",
+  "generatedAt": "2026-02-21T12:07:59.601Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,67 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi lợi suất thực USD giảm sâu và giá thế giới đã tăng hơn +2% chỉ trong 1 ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.8%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày và không có tín hiệu sự kiện địa chính trị cấp thiết nào trong dữ liệu đầu vào để hỗ trợ đà phá giá tiếp tục.",
     "reasons": [
-      "Động lượng tăng giá mạnh: Giá SJC 181 triệu VND/lượng đang cao hơn đáng kể so với MA30 (156.3 triệu VND/lượng), tương ứng tăng +15.8% trong chu kỳ 30 ngày gần nhất.",
-      "Đà tăng vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh -6.77% trong 20 ngày (xuống 1.79%) và VIX tăng +29.35% là động lực chính đẩy giá vàng thế giới lên cao.",
-      "Biến động premium cao: Chênh lệch giá SJC so với thế giới dao động mạnh trong khoảng 11.22% - 18.62% trong 30 ngày qua, hiện ở mức 13.56%, cho thấy tâm lý thị trường Việt Nam không ổn định."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.27 triệu VND/lượng), tín hiệu quá mua rõ ràng.",
+      "Động lượng tăng giá 30 ngày (+3.8%) và 7 ngày (+1.1%) vẫn dương, đi kèm biên độ dao động cao 2.27%/ngày cho thấy thanh khoản thị trường đang hoạt động mạnh.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% trong 20 ngày (lên 20.23) là động lực vĩ mô hỗ trợ giá vàng thế giới tăng.",
+      "Premium 13.57% hiện tại nằm trong biên độ dao động phổ biến của chuỗi 30 ngày (11-18%), không có dấu hiệu bất thường đòi hỏi hành động đặc biệt."
     ],
     "risks": [
-      "Mua quá cao (Overbought): Giá đang ở phân vị 100% trong 5 năm (181 triệu VND/lượng), rủi ro điều chỉnh giảm sâu là rất lớn nếu động lực vĩ mô suy yếu.",
-      "Biến động ngắn hạn cực đoan: Giá thế giới tăng vọt +2.02% chỉ trong 1 ngày và biến động ngày của SJC lên tới 2.27%, dễ gây cháy tài khoản nhà đầu tư đòn bẩy.",
-      "Tin tức nhiễu: Các tiêu đề địa chính trị (Trump tariffs, US-Iran) mang tính suy diễn nhiều hơn là sự kiện thực tế, có thể đảo chiều nhanh."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở vùng hiếm (percentile 100%) và đã tăng liên tục không điều chỉnh.",
+      "Biên độ dao động 2.27%/ngày tương đương hơn 4 triệu VND/lượng, nhà đầu tư ngắn hạn có thể đối mặt với biến động tài khoản lớn.",
+      "Dữ liệu vĩ mô thiếu tin tức địa chính trị cụ thể (geopoliticalHeadlines rỗng), đà tăng có thể chững lại nếu không có tác nhân mới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 15.8,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "SJC Price vs MA30",
+        "value": 15.87,
+        "unit": "million VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.22,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "intl_gold_1d_change",
-        "value": 2.02,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_volatility_daily",
+        "key": "SJC Daily Volatility",
         "value": 2.27,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Current Premium",
+        "value": 13.57,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T11:05:19.779Z",
+    "latestTimestamp": "2026-02-21T12:07:07.986Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159381847.5383693,
-    "premiumPct": 13.56,
+    "intlVndPerTael": 159376913.19068432,
+    "premiumPct": 13.57,
     "change7dPct": 1.1,
     "change30dPct": 3.8,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 156580628,
-    "ma30VndPerTael": 156265224,
+    "ma7VndPerTael": 156579923,
+    "ma30VndPerTael": 156265060,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +78,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T11:05:41.362Z",
+    "fetchedAt": "2026-02-21T12:07:29.419Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,14 +179,8 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026",
       "2026-02-18 | ECB Press / Speeches | Isabel Schnabel: Fiscal challenges amid geopolitical uncertainty and ageing societies"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-21 | rediff.com | Trump tariffs junked : What it means for Indian companies"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-21 | pajhwok.com | Indian rice prices surge , gold declines in Kabul",
-      "2026-02-21 | livemint.com | Can the US - Iran war buzz fuel gold price to a new peak after the US Supreme Court decision on Trump tariffs ?",
-      "2026-02-21 | tribune.com.pk | Gold prices in Pakistan Today - February 21 , 2026"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
