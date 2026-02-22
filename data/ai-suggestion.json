@@ -1,78 +1,79 @@
 {
-  "generatedAt": "2026-02-22T21:06:57.641Z",
+  "generatedAt": "2026-02-22T22:05:10.585Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh được hỗ trợ bởi lợi suất thực USD giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và các tín hiệu cảnh báo từ truyền thống tài chính xuất hiện.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập sân tốt hơn thay vì FOMO đuổi đỉnh. Dù vĩ mô ủng hộ dài hạn nhờ lợi suất thực USD giảm mạnh, rủi ro điều giá ngắn hạn đang tích tụ khi giá liên tục trượt trên MA7.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (156.36 triệu VND/lượng) tới 15.7%.",
-      "Động lực tăng đến từ vĩ mô: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35%, hỗ trợ vàng thế giới tăng lên vùng 5098 USD/oz.",
-      "Biên độ dao động ngày cao (2.22%) và sự xuất hiện các bài phân tích 'Gold sheds its safe-haven status' cảnh báo giai đoạn cuối của đà tăng động lượng (momentum play)."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 2.33% sau 30 ngày và giao dịch trên MA7 (157.1 triệu VND/lượng) và MA30 (156.4 triệu VND/lượng).",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06%, tạo đà tăng nền tảng cho giá vàng thế giới lên 5098.47 USD/oz.",
+      "Biên độ dao động ngày cao (2.22%) và premium đã co lại từ đỉnh 18.73% (17/02) về 13.67% hiện tại, cho thấy áp lực bán chốt lợi nhuận cục bộ đang hiện diện.",
+      "VIX tăng 29.35% trong 20 ngày lên mức 20.23 điểm, phản ánh tâm lý thị trường lo ngại, thường hỗ trợ giá vàng nhưng cũng đi kèm biến động lớn."
     ],
     "risks": [
-      "Rủi ro mua đỉnh cao khi giá đã tăng liên tục và chênh lệch premium biến động mạnh (từ 6.39% lên 18.73% trong tháng).",
-      "Vàng thế giới đang ở kháng cự mạnh 5098-5327 USD/oz, nếu lợi suất thực USD hồi phục có thể gây áp lực bán tháo.",
-      "Thị trường thiếu dữ liệu hành động can thiệp từ Ngân hàng Nhà nước (Country Actions), thanh khoản có thể giảm bất ngờ."
+      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi thị trường quá mua (overbought) trên khung ngày.",
+      "Biên độ dao động cao (2.22%/ngày) có thể kích hoạt các lệnh cắt lỗ hoặc bán hoảng loạn nếu giá thế giới quay đầu.",
+      "Premium SJC có thể tiếp tục nới rộng nếu giá thế giới giảm nhanh, làm gia tăng tổn thất cho nhà đầu tư mua đuổi."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change",
+        "key": "us_real_yield_10y_change_20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX 20d Change",
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Price",
-        "value": 5098.47,
-        "unit": "USD/oz",
+        "key": "sjc_volatility_daily",
+        "value": 2.22,
+        "unit": "%/day",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current_vs_peak_feb",
+        "value": 13.67,
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "SJC vs MA30 Deviation",
-        "value": 15.7,
-        "unit": "%",
+        "key": "ma7_sjc_vnd",
+        "value": 157157202,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.22,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "gold_spot_world",
+        "value": 5098.47,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T21:06:15.475Z",
+    "latestTimestamp": "2026-02-22T22:04:27.570Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159230915.07938215,
+    "intlVndPerTael": 159230817.3260662,
     "premiumPct": 13.67,
     "change7dPct": 2.12,
     "change30dPct": 2.33,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157157216,
-    "ma30VndPerTael": 156361415,
+    "ma7VndPerTael": 157157202,
+    "ma30VndPerTael": 156361412,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T21:06:35.100Z",
+    "fetchedAt": "2026-02-22T22:04:48.765Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,18 +185,8 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-22 | tsn.ca | Tough decision : Crosby misses Canada gold - medal OT loss with injury",
-      "2026-02-22 | finance.yahoo.com | 5 Critical Factors That Could End Gold 7 - Month Green Streak",
-      "2026-02-22 | morningstar.com | Gold sheds its safe - haven status . Is it just another momentum play now ?"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-22 | finance.yahoo.com | 5 Critical Factors That Could End Gold 7 - Month Green Streak",
-      "2026-02-22 | morningstar.com | Gold sheds its safe - haven status . Is it just another momentum play now ?",
-      "2026-02-22 | watoday.com.au | Markets today : Trump tariffs sets up ASX for uncertain start",
-      "2026-02-22 | understandingwar.org | Vladimir Putin bluff must be called | Newsroom",
-      "2026-02-22 | tynmagazine.com | The dollar game - TyN Magazine"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
