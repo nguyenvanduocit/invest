@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T14:08:24.876Z",
+  "generatedAt": "2026-02-22T15:06:53.135Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng chậm lại, trong khi xu hướng tăng vĩ mô dài hạn vẫn còn sức mạnh nhờ lợi suất thực giảm mạnh.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao, trong khi xu hướng tăng của giá thế giới đã chững lại gần mức 5,100 USD/oz; nhà đầu tư nên chờ đợi hồi correction về vùng hỗ trợ gần MA7 (156.7 triệu VND/lượng) hoặc xác nhận phá vỡ đỉnh cũ trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 5y: 100%), cao hơn đáng kể so với MA30 (156.2 triệu VND/lượng) - rủi ro điều chỉnh kỹ thuật cao.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày qua xuống 1.79%, tạo động lực tăng fundamentals cho giá vàng thế giới.",
-      "Premium 13.67% ở mức hợp lý so với trung bình 30 ngày (khoảng 14-15%), không có tín hiệu bất thường cần bán tháo.",
-      "Động lượng tăng 30 ngày (2.29%) thấp hơn biến động ngày (2.26%), cho thấy thị trường đang đi ngang tích lũy thay vì tăng mạnh."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (156.7 triệu VND/lượng) tới 15.5%, rủi ro mua đỉp ngắn hạn rất lớn.",
+      "Động lượng tăng giá thế giới chững lại: giá thế giới 5098.59 USD/oz chỉ tăng nhẹ 1.28% trong 5 ngày gần nhất, chưa xác nhận phá vỡ mạnh.",
+      "Lợi suất thực 10 năm Mỹ giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) đã phần nào được định giá vào giá vàng hiện tại, hạn chế động lực tăng tiếp theo.",
+      "Biên độ dao động ngày cao (2.26%) cộng với premium biến động mạnh (6.39% - 18.73% trong 30 ngày) cho thấy thị trường bất ổn, không phù hợp để MUA đuổi."
     ],
     "risks": [
-      "Mua tại đỉnh lịch sử 181 triệu VND/lượng khi percentile 5 năm đạt 100% - rủi ro điều chỉnh ngắn hạn cao.",
-      "VIX tăng 29.35% trong 20 ngày (lên 20.23) có thể gây biến động thanh khoản bất ngờ.",
-      "Dữ liệu sự kiện địa chính trị không đủ rõ ràng để hỗ trợ thesis tăng giá mạnh hơn."
+      "Rủi ro điều chỉnh giá sâu về vùng MA7 (~156.7 triệu VND/lượng) nếu giá thế giới không duy trì trên 5,000 USD/oz.",
+      "Premium SJC (hiện 13.67%) có thể co hẹp nhanh nếu nhà đầu tư chốt lời ồ ạt, làm giảm hiệu quả đầu tư даже khi giá thế giới đi ngang.",
+      "VIX tăng 29.35% trong 20 ngày cho thấy biến động thị trường tài chính đang gia tăng, có thể gây thanh lý tài sản rủi ro bao gồm vàng."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30_vnd",
-        "value": 156240695,
+        "key": "Giá SJC hiện tại",
+        "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_pct",
+        "key": "MA7 giá SJC",
+        "value": 156684227,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium hiện tại",
         "value": 13.67,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "Giá thế giới XAUUSD",
+        "value": 5098.59,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Biến động giá thế giới 20 ngày",
+        "value": 2.32,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực US 10Y giảm 20 ngày",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "VIX tăng 20 ngày",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 2.29,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "volatility_daily_pct",
-        "value": 2.26,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T14:07:51.240Z",
+    "latestTimestamp": "2026-02-22T15:06:01.193Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159235713.73656905,
+    "intlVndPerTael": 159234680.61206698,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.29,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156684374,
-    "ma30VndPerTael": 156240695,
+    "ma7VndPerTael": 156684227,
+    "ma30VndPerTael": 156240661,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T14:08:06.139Z",
+    "fetchedAt": "2026-02-22T15:06:22.611Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,15 +191,14 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-22 | finanznachrichten.de | Fuerte Metals Corp .: Fuerte Announces a Positive Preliminary Economic Assessment for the Coffee Gold Project ; Positioning the Company as one of Canada Next Gold Producers"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
       "2026-02-22 | finance.yahoo.com | What Federal Reserve Chair nominee Kevin Warsh could do to Bitcoin price",
       "2026-02-22 | fingerlakes1.com | DiNapoli warns Hochul budget faces long - term risks despite short - term surplus",
       "2026-02-22 | theguardian.com | Trump trade war risks undermining hopes of hefty US interest rate cuts | Graeme Wearden"
     ],
     "dollarYieldHeadlines": [
+      "2026-02-22 | finance.yahoo.com | Hedge fund billionaire Ray Dalio warned that the US is heading into  very dark times . How to protect your portfolio",
       "2026-02-22 | finance.yahoo.com | What Federal Reserve Chair nominee Kevin Warsh could do to Bitcoin price",
       "2026-02-22 | forbes.com | Gold At Record Highs : A Poor Short - Term Inflation Hedge"
     ]
