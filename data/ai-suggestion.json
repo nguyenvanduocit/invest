@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T13:19:24.386Z",
+  "generatedAt": "2026-02-22T14:08:24.876Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +2.29%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có động lực vĩ mô mới đủ mạnh để đẩy giá cao hơn trong ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng chậm lại, trong khi xu hướng tăng vĩ mô dài hạn vẫn còn sức mạnh nhờ lợi suất thực giảm mạnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.2 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "Động lực tăng giá từ vĩ mô đang suy yếu: Lợi suất thực 10 năm USD giảm mạnh -6.77%/20 ngày (xu hướng cũ) nhưng giá vàng thế giới 2 ngày gần đây đi ngang, thiếu đà tăng mới.",
-      "Biên độ dao động ngày cao (2.26%) kết hợp với VIX tăng +29.35%/20 ngày cho thấy thị trường đang bất ổn, thanh khoản có thể bị ảnh hưởng."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 5y: 100%), cao hơn đáng kể so với MA30 (156.2 triệu VND/lượng) - rủi ro điều chỉnh kỹ thuật cao.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày qua xuống 1.79%, tạo động lực tăng fundamentals cho giá vàng thế giới.",
+      "Premium 13.67% ở mức hợp lý so với trung bình 30 ngày (khoảng 14-15%), không có tín hiệu bất thường cần bán tháo.",
+      "Động lượng tăng 30 ngày (2.29%) thấp hơn biến động ngày (2.26%), cho thấy thị trường đang đi ngang tích lũy thay vì tăng mạnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều, đặc biệt khi premium đã co lại từ 18.7% xuống 13.67% trong 5 ngày.",
-      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, khó kỳ vọng động lực tăng giá đột biến.",
-      "Thời gian phục hồi sau các đợt sụt giảm trước đây rất dài (trung bình 1369 ngày), rủi ro giữ ở đỉnh giá là rất lớn."
+      "Mua tại đỉnh lịch sử 181 triệu VND/lượng khi percentile 5 năm đạt 100% - rủi ro điều chỉnh ngắn hạn cao.",
+      "VIX tăng 29.35% trong 20 ngày (lên 20.23) có thể gây biến động thanh khoản bất ngờ.",
+      "Dữ liệu sự kiện địa chính trị không đủ rõ ràng để hỗ trợ thesis tăng giá mạnh hơn."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 Price",
-        "value": 156240688,
+        "key": "ma30_vnd",
+        "value": 156240695,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
+        "key": "premium_pct",
         "value": 13.67,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "vix_change20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Avg Recovery Days",
-        "value": 1369,
-        "unit": "days",
+        "key": "change30d_pct",
+        "value": 2.29,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily_pct",
+        "value": 2.26,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T13:18:49.233Z",
+    "latestTimestamp": "2026-02-22T14:07:51.240Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159235491.9958204,
+    "intlVndPerTael": 159235713.73656905,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.29,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156684343,
-    "ma30VndPerTael": 156240688,
+    "ma7VndPerTael": 156684374,
+    "ma30VndPerTael": 156240695,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T13:19:00.582Z",
+    "fetchedAt": "2026-02-22T14:08:06.139Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,8 +191,17 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-22 | finanznachrichten.de | Fuerte Metals Corp .: Fuerte Announces a Positive Preliminary Economic Assessment for the Coffee Gold Project ; Positioning the Company as one of Canada Next Gold Producers"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-22 | finance.yahoo.com | What Federal Reserve Chair nominee Kevin Warsh could do to Bitcoin price",
+      "2026-02-22 | fingerlakes1.com | DiNapoli warns Hochul budget faces long - term risks despite short - term surplus",
+      "2026-02-22 | theguardian.com | Trump trade war risks undermining hopes of hefty US interest rate cuts | Graeme Wearden"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-22 | finance.yahoo.com | What Federal Reserve Chair nominee Kevin Warsh could do to Bitcoin price",
+      "2026-02-22 | forbes.com | Gold At Record Highs : A Poor Short - Term Inflation Hedge"
+    ]
   }
 }
