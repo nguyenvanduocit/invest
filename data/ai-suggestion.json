@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T17:07:28.795Z",
+  "generatedAt": "2026-02-22T18:08:21.825Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.26%/ngày, trong khi xu hướng tăng của giá thế giới đang bị cản quanh đỉnh 5098 USD/oz; nhà đầu tư nên chờ đợi xác nhận xu hướng hoặc hồi chỉnh về vùng hỗ trợ tốt hơn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh được hỗ trợ bởi lợi suất thực USD giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có sự kiện địa chính trị cấp thiết nào trong dữ liệu.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn cao.",
-      "Động lượng tăng chậm lại: giá thế giới 30 ngày chỉ tăng 2.32% trong khi VIX tăng mạnh 29.35%, cho thấy thị trường đang lo ngại.",
-      "Lợi suất thực 10Y giảm mạnh -6.77% trong 20 ngày đang hỗ trợ vàng, nhưng giá đã phản ánh phần lớn kỳ vọng này.",
-      "Premium 13.67% ở mức hợp lý trong 30 ngày qua (dao động 11-19%), không có tín hiệu bất thường để đánh bắt đáy hoặc bán khống."
+      "Lợi suất thực Mỹ 10 năm (US Real Yield) giảm mạnh 6.77% trong 20 ngày qua (xuống mức 1.79%), tạo động lực chính đẩy giá vàng thế giới tăng 2.32% trong cùng kỳ.",
+      "Giá vàng SJC ở mức 181,000,000 VND/lượng đang cao hơn đáng kể so với MA30 (156,240,648 VND/lượng), cho thấy xu hướng tăng mạnh nhưng đã ở vùng quá mua.",
+      "VIX tăng 29.35% trong 20 ngày qua (lên 20.23 điểm) phản ánh tâm lý lo âu thị trường, hỗ trợ nhu cầu trú ẩn vào vàng."
     ],
     "risks": [
-      "Giá thế giới phá vỡ kháng cự 5100 USD/oz và tiếp tục tăng mạnh do USD yếu (DXY giảm -2.06% 20 ngày).",
-      "Biên độ dao động 2.26%/ngày có thể gây áp lực thanh khoản lớn cho nhà đầu tư dùng đòn bẩy.",
-      "VIX tăng 29.35% trong 20 ngày phản ánh bất ổn thị trường, có thể gây biến động hai chiều bất ngờ."
+      "Giá đang ở phân vị 100% trong 5 năm (đỉnh lịch sử), rủi ro chốt lời ngắn hạn rất cao khi giá vượt xa đường trung bình động 30 ngày.",
+      "Biên độ dao động ngày cao (2.26%) cộng với premium biến động mạnh (6.39% - 18.73%) trong tháng qua cho thấy thanh khoản và rủi ro giao dịch lớn.",
+      "Dữ liệu sự kiện vĩ mô (policyHeadlines) không chứa thông tin khẩn cấp, giới hạn độ tin cậy của đà tăng tiếp theo."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5y_percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_price_change_30d",
-        "value": 2.28,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_change_20d",
-        "value": 2.32,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "us_real_yield_change20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "usd_index_change_20d",
-        "value": -2.06,
+        "key": "vix_change20d",
+        "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
-        "value": 29.35,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "ma30_vnd",
+        "value": 156240648,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 12.34,
+        "unit": "% (18.73-6.39)",
+        "source": "monthly_series_30d"
       },
       {
         "key": "daily_volatility",
         "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.67,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T17:06:46.482Z",
+    "latestTimestamp": "2026-02-22T18:07:32.612Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159232452.58600962,
+    "intlVndPerTael": 159234314.27136537,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
-    "change30dPct": 2.28,
+    "change30dPct": 2.29,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156683908,
-    "ma30VndPerTael": 156240586,
+    "ma7VndPerTael": 156684174,
+    "ma30VndPerTael": 156240648,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T17:07:02.426Z",
+    "fetchedAt": "2026-02-22T18:07:54.169Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -192,14 +185,11 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-22 | wbkb11.com | Coffee prices , tariffs and the state of the economy | Hot off the Wire podcast"
+      "2026-02-22 | timesofindia.indiatimes.com | Gold , silver rate outlook : Will Trump tariffs and Middle East tensions drive next leg of rally ?",
+      "2026-02-22 | tynmagazine.com | The dollar game - TyN Magazine",
+      "2026-02-22 | si.com | Wild Quinn Hughes Sets united states Olympic Record in Gold Medal Game"
     ],
-    "countryActionHeadlines": [
-      "2026-02-22 | yalibnan.com | From  buy America  to  bye America , Wall Street exodus gathers pace , despite weakening dollar – Ya Libnan",
-      "2026-02-22 | finance.yahoo.com | What Federal Reserve Chair nominee Kevin Warsh could do to Bitcoin price",
-      "2026-02-22 | fingerlakes1.com | DiNapoli warns Hochul budget faces long - term risks despite short - term surplus",
-      "2026-02-22 | theguardian.com | Trump trade war risks undermining hopes of hefty US interest rate cuts | Graeme Wearden"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
