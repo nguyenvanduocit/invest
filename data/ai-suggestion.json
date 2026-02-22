@@ -1,84 +1,78 @@
 {
-  "generatedAt": "2026-02-22T20:05:22.207Z",
+  "generatedAt": "2026-02-22T21:06:57.641Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng chậm lại, trong khi xu hướng vĩ mô tích cực từ lợi suất thực giảm mạnh hỗ trợ giá thế giới tiếp tục đi lên.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh được hỗ trợ bởi lợi suất thực USD giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và các tín hiệu cảnh báo từ truyền thống tài chính xuất hiện.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang giao dịch trên MA7 (157 triệu) và MA30 (156 triệu), xác nhận xu hướng tăng mạnh nhưng đã đi ngang 8 ngày liên tiếp từ 14/02.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06%, tạo động lực tăng cơ bản cho giá vàng thế giới lên 5098 USD/oz.",
-      "VIX tăng 29.35% trong 20 ngày lên mức 20.23 kết hợp căng thẳng thuế quan Trump và chiến tranh Nga-Ukraine hỗ trợ nhu cầu trú ẩn an toàn."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (156.36 triệu VND/lượng) tới 15.7%.",
+      "Động lực tăng đến từ vĩ mô: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35%, hỗ trợ vàng thế giới tăng lên vùng 5098 USD/oz.",
+      "Biên độ dao động ngày cao (2.22%) và sự xuất hiện các bài phân tích 'Gold sheds its safe-haven status' cảnh báo giai đoạn cuối của đà tăng động lượng (momentum play)."
     ],
     "risks": [
-      "Mua tại đỉnh lịch sử percentile 100% với rủi ro điều chỉnh ngắn hạn khi giá đã đi ngang kéo dài và không có dữ liệu lạm phát/kim ngạch Việt Nam cụ thể.",
-      "Premium 13.67% dao động mạnh trong 30 ngày (6.39%-18.73%), thanh khoản có thể giảm nếu chênh lệch thu hẹp đột ngột.",
-      "Thiếu tín hiệu rõ ràng từ chính sách tiền tệ Việt Nam và dữ liệu vĩ mô trong nước để đánh giá chính xác cầu nội địa."
+      "Rủi ro mua đỉnh cao khi giá đã tăng liên tục và chênh lệch premium biến động mạnh (từ 6.39% lên 18.73% trong tháng).",
+      "Vàng thế giới đang ở kháng cự mạnh 5098-5327 USD/oz, nếu lợi suất thực USD hồi phục có thể gây áp lực bán tháo.",
+      "Thị trường thiếu dữ liệu hành động can thiệp từ Ngân hàng Nhà nước (Country Actions), thanh khoản có thể giảm bất ngờ."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "SJC Spot Price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_pct",
-        "value": 2.33,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change20d",
+        "key": "US Real Yield 10Y Change",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "dxy_change20d",
-        "value": -2.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change20d",
+        "key": "VIX 20d Change",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 6.39,
-        "unit": "%",
+        "key": "Gold Spot Price",
+        "value": 5098.47,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "world_gold",
-        "value": 5098.61,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "SJC vs MA30 Deviation",
+        "value": 15.7,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.22,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T20:04:42.620Z",
+    "latestTimestamp": "2026-02-22T21:06:15.475Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159235240.585535,
+    "intlVndPerTael": 159230915.07938215,
     "premiumPct": 13.67,
-    "change7dPct": 2.13,
+    "change7dPct": 2.12,
     "change30dPct": 2.33,
     "volatilityDailyPct": 2.22,
-    "ma7VndPerTael": 157157834,
-    "ma30VndPerTael": 156361559,
+    "ma7VndPerTael": 157157216,
+    "ma30VndPerTael": 156361415,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T20:05:03.883Z",
+    "fetchedAt": "2026-02-22T21:06:35.100Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,15 +185,17 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-22 | watoday.com.au | Markets today : Trump tariffs sets up ASX for uncertain start",
-      "2026-02-22 | forbes.com | Russia - Ukraine War : 1 . 2 Million Russian Casualties , No U . S . Troops"
+      "2026-02-22 | tsn.ca | Tough decision : Crosby misses Canada gold - medal OT loss with injury",
+      "2026-02-22 | finance.yahoo.com | 5 Critical Factors That Could End Gold 7 - Month Green Streak",
+      "2026-02-22 | morningstar.com | Gold sheds its safe - haven status . Is it just another momentum play now ?"
     ],
-    "countryActionHeadlines": [
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-22 | finance.yahoo.com | 5 Critical Factors That Could End Gold 7 - Month Green Streak",
+      "2026-02-22 | morningstar.com | Gold sheds its safe - haven status . Is it just another momentum play now ?",
       "2026-02-22 | watoday.com.au | Markets today : Trump tariffs sets up ASX for uncertain start",
-      "2026-02-22 | timesofindia.indiatimes.com | Gold , silver rate outlook : Will Trump tariffs and Middle East tensions drive next leg of rally ?",
-      "2026-02-22 | tynmagazine.com | The dollar game - TyN Magazine",
-      "2026-02-22 | yalibnan.com | From  buy America  to  bye America , Wall Street exodus gathers pace , despite weakening dollar – Ya Libnan"
-    ],
-    "dollarYieldHeadlines": []
+      "2026-02-22 | understandingwar.org | Vladimir Putin bluff must be called | Newsroom",
+      "2026-02-22 | tynmagazine.com | The dollar game - TyN Magazine"
+    ]
   }
 }
