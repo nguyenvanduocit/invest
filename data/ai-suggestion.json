@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T06:16:34.836Z",
+  "generatedAt": "2026-02-22T07:16:53.790Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,67 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +2.28%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có tín hiệu vĩ mô khẩn cấp mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn, trong khi xu hướng tăng của giá thế giới đang bị cân bằng bởi lợi suất thực USD giảm mạnh. Nên chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (156.2 triệu VND/lượng) tới 15.8%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng giá 30 ngày (+2.28%) và 7 ngày (+1.1%) vẫn dương, đi kèm biên độ dao động ngày lớn (2.26%) cho thấy thanh khoản và sự quan tâm nhà đầu tư cao.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% là động lực hỗ trợ vàng từ kênh đầu tư quốc tế.",
-      "Giá thế giới (5098 USD/oz) đang tăng vọt, nhưng premium SJC co giãn linh hoạt trong khoảng 12-19% cho thấy thị trường nội địa vẫn hoạt động bình thường, không bị đứt gãy."
+      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm, cho thấy rủi ro mua đỉp là rất cao so với lịch sử.",
+      "Biên độ dao động ngày lên tới 2.26% kết hợp với đỉnh giá lịch sử báo hiệu thị trường đang trong giai đoạn phân kỳ mạnh, chưa có xác nhận xu hướng ổn định.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) đang tạo động lực hỗ trợ cho giá vàng thế giới tiếp tục tăng điểm.",
+      "Giá thế giới (5098.52 USD/oz) đang giao dịch trên MA7 và MA30, duy trì xu hướng tăng kỹ thuật ngắn hạn."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cực lớn khi giá đang tại đỉnh 5 năm và chênh lệch so với MA30 quá xa.",
-      "Biên độ dao động 2.26%/ngày cho thấy thị trường biến động mạnh, nhà đầu tư có thể bị 'lỡn' sóng nếu dùng đòn bẩy.",
-      "Dữ liệu vĩ mô thiếu các tiêu đề tin tức cụ thể về hành động quốc gia hoặc chính sách lãi suất mới, giảm độ tin cậy của xu hướng tăng dài hạn."
+      "Mua đỉnh lịch sử khi giá ở percentile 100%, khả năng điều chỉnh kỹ thuật cao.",
+      "Biên độ dao động premium 6.39%-18.73% trong 30 ngày cho thấy thanh khoản và chênh lệch giá có thể biến động thất thường.",
+      "VIX tăng 29.35% trong 20 ngày phản ánh bất định thị trường, có thể gây ra các đợt chốt lời nhanh."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC vs MA30 Deviation",
-        "value": 15.8,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "sjc_current_price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "daily_volatility",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change_20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
+        "key": "intl_gold_price",
+        "value": 5098.52,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 6.39,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Premium Range 30d",
-        "value": 12.01,
-        "unit": "%",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T06:15:46.474Z",
+    "latestTimestamp": "2026-02-22T07:16:11.229Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159232859.2148191,
+    "intlVndPerTael": 159232262.38866326,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.28,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156683967,
-    "ma30VndPerTael": 156240600,
+    "ma7VndPerTael": 156683881,
+    "ma30VndPerTael": 156240580,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T06:16:08.198Z",
+    "fetchedAt": "2026-02-22T07:16:32.624Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -180,9 +186,17 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-22 | moneycontrol.com | US - Iran tensions , tariff fallout and China reopening to shape commodities next week"
+      "2026-02-22 | batemansbaypost.com.au | Trump new tariff call may narrow Aussie export edge",
+      "2026-02-22 | bordermail.com.au | Trump new tariff call may narrow Aussie export edge",
+      "2026-02-22 | tenterfieldstar.com.au | Trump new tariff call may narrow Aussie export edge",
+      "2026-02-22 | bendigoadvertiser.com.au | Trump new tariff call may narrow Aussie export edge",
+      "2026-02-22 | dungogchronicle.com.au | Trump new tariff call may narrow Aussie export edge",
+      "2026-02-22 | manningrivertimes.com.au | Trump new tariff call may narrow Aussie export edge"
     ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-22 | moneycontrol.com | US - Iran tensions , tariff fallout and China reopening to shape commodities next week",
+      "2026-02-22 | webpronews.com | Trump Unleashes Sweeping New Tariffs Hours After Supreme Court Hands Him Broad Trade Authority"
+    ]
   }
 }
