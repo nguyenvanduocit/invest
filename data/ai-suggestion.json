@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T05:25:47.074Z",
+  "generatedAt": "2026-02-22T06:16:34.836Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,30 +7,36 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +2.28%/30d, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao (2.26%) và chưa có tín hiệu vĩ mô đủ mạnh để xác nhận xu hướng tăng tiếp theo.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +2.28%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có tín hiệu vĩ mô khẩn cấp mới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cao xa MA30 (156.2 triệu VND/lượng) đến 15.9%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng 7 ngày (+1.1%) và 30 ngày (+2.28%) cho thấy xu hướng ngắn hạn vẫn tích cực nhưng đang chậm lại so với đợt tăng mạnh cuối tháng 1.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% là hỗ trợ vĩ mô tích cực, nhưng lạm phát kỳ vọng lại giảm 1.3% trong cùng kỳ.",
-      "Premium 13.67% hiện tại tuy không cực đoan nhưng biến động mạnh trong 30 ngày (dao động từ 6.39% đến 18.73%) cho thấy thanh khoản thị trường nội địa không ổn định."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (156.2 triệu VND/lượng) tới 15.8%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng giá 30 ngày (+2.28%) và 7 ngày (+1.1%) vẫn dương, đi kèm biên độ dao động ngày lớn (2.26%) cho thấy thanh khoản và sự quan tâm nhà đầu tư cao.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% là động lực hỗ trợ vàng từ kênh đầu tư quốc tế.",
+      "Giá thế giới (5098 USD/oz) đang tăng vọt, nhưng premium SJC co giãn linh hoạt trong khoảng 12-19% cho thấy thị trường nội địa vẫn hoạt động bình thường, không bị đứt gãy."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi giá vượt quá xa đường trung bình động 30 ngày.",
-      "Biên độ dao động ngày 2.26% kết hợp với lịch sử drawdown tồi tệ -41.26% cho thấy rủi ro biến động cực lớn.",
-      "Thiếu dữ liệu hành động can thiệp giá từ Ngân hàng Nhà nước hoặc chính sách tiền tệ mới nhất để đánh giá rủi ro chính sách."
+      "Rủi ro chốt lời ngắn hạn cực lớn khi giá đang tại đỉnh 5 năm và chênh lệch so với MA30 quá xa.",
+      "Biên độ dao động 2.26%/ngày cho thấy thị trường biến động mạnh, nhà đầu tư có thể bị 'lỡn' sóng nếu dùng đòn bẩy.",
+      "Dữ liệu vĩ mô thiếu các tiêu đề tin tức cụ thể về hành động quốc gia hoặc chính sách lãi suất mới, giảm độ tin cậy của xu hướng tăng dài hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs 5Y Percentile",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30 Deviation",
-        "value": 15.9,
+        "key": "SJC vs MA30 Deviation",
+        "value": 15.8,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
         "key": "US Real Yield 10Y Change 20d",
@@ -45,35 +51,23 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d (Low-High)",
-        "value": 6.39,
+        "key": "Premium Range 30d",
+        "value": 12.01,
         "unit": "%",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "Worst Historical Drawdown",
-        "value": -41.26,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.26,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T05:25:04.360Z",
+    "latestTimestamp": "2026-02-22T06:15:46.474Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159232653.40192705,
+    "intlVndPerTael": 159232859.2148191,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.28,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156683937,
-    "ma30VndPerTael": 156240593,
+    "ma7VndPerTael": 156683967,
+    "ma30VndPerTael": 156240600,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +78,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T05:25:24.526Z",
+    "fetchedAt": "2026-02-22T06:16:08.198Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [

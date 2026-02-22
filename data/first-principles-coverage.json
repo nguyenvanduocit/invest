@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-22T05:25:24.601Z",
+  "checkedAt": "2026-02-22T06:16:08.271Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-22T05:25:24.526Z",
+  "dataFetchedAt": "2026-02-22T06:16:08.198Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -24,7 +24,7 @@
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
@@ -35,7 +35,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gdelt_country_actions (HTTP 429); gdelt_dollar_yields (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
