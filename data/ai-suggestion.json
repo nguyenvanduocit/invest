@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T12:08:04.090Z",
+  "generatedAt": "2026-02-22T13:19:24.386Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,21 +7,39 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh được hỗ trợ bởi lợi suất thực USD giảm sâu, tạo ra rủi ro điều chỉnh kỹ thuật ngắn hạn cao hơn cơ hội tăng tức thì.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +2.29%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có động lực vĩ mô mới đủ mạnh để đẩy giá cao hơn trong ngắn hạn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 2.29% sau 30 ngày và nằm trên MA7 (156.7 triệu VND/lượng).",
-      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% là động lực vĩ mô chính đẩy giá vàng thế giới tăng 2.32% (20 ngày).",
-      "Premium 13.67% hiện tại thấp hơn đỉnh 18.73% (ngày 17/02), cho thấy tâm lý nhà đầu tư Việt Nam đã hạ nhiệt bớt so với đỉnh sợ hãi gần đây."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (156.2 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
+      "Động lực tăng giá từ vĩ mô đang suy yếu: Lợi suất thực 10 năm USD giảm mạnh -6.77%/20 ngày (xu hướng cũ) nhưng giá vàng thế giới 2 ngày gần đây đi ngang, thiếu đà tăng mới.",
+      "Biên độ dao động ngày cao (2.26%) kết hợp với VIX tăng +29.35%/20 ngày cho thấy thị trường đang bất ổn, thanh khoản có thể bị ảnh hưởng."
     ],
     "risks": [
-      "Rủi ro mua đỉnh kỹ thuật cao khi giá đang ở phân vị 100% trong 5 năm và biến động ngày ở mức 2.26%.",
-      "Sự kiện địa chính trị không có dữ liệu cụ thể trong input, làm giảm độ tin cậy của đà tăng giá.",
-      "Dữ liệu vĩ mô (first_principles) có trạng thái 'healthy: false', có thể chứa thông tin không đồng bộ hoặc thiếu."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều, đặc biệt khi premium đã co lại từ 18.7% xuống 13.67% trong 5 ngày.",
+      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, khó kỳ vọng động lực tăng giá đột biến.",
+      "Thời gian phục hồi sau các đợt sụt giảm trước đây rất dài (trung bình 1369 ngày), rủi ro giữ ở đỉnh giá là rất lớn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Spot Price",
+        "value": 181000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 Price",
+        "value": 156240688,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium vs World",
+        "value": 13.67,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -38,35 +56,17 @@
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Premium Current",
-        "value": 13.67,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Premium Peak 30d",
-        "value": 18.73,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "SJC Price vs MA7",
-        "value": 181000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 Value",
-        "value": 156684343,
-        "unit": "VND/lượng",
+        "key": "Avg Recovery Days",
+        "value": 1369,
+        "unit": "days",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T12:07:22.674Z",
+    "latestTimestamp": "2026-02-22T13:18:49.233Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159235492.3081313,
+    "intlVndPerTael": 159235491.9958204,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.29,
@@ -83,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T12:07:44.286Z",
+    "fetchedAt": "2026-02-22T13:19:00.582Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,12 +185,7 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-22 | thenationonlineng.net | FX reforms : Oil prices rally brightens naira , external reserve prospects",
-      "2026-02-22 | livemint.com | Tariff Ruling Lifts Emerging Assets as BlackRock ETF Hits Record",
-      "2026-02-22 | scmp.com | Opinion | Why the Fed credibility crisis will hit emerging markets harder",
-      "2026-02-22 | jamaica-gleaner.com | WARNING LIGHTS"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
