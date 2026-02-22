@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T09:09:04.112Z",
+  "generatedAt": "2026-02-22T10:06:05.144Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,66 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, yêu cầu nhà đầu tư kiên nhẫn chờ điểm nhập trường an toàn hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm mua an toàn thay vì đu đỉnh. Dù động lực vĩ mô tích cực từ lợi suất thực USD giảm mạnh 6.77% và VIX tăng cao, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm qua, rủi ro điều chỉnh kỹ thuật cao khi mua tại vùng giá này.",
-      "Động lượng tăng giảm rõ rệt: tăng 1.1% trong 7 ngày so với 2.29% của 30 ngày, cho thấy phe mua đang mất đà.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) đã phản ánh vào giá, hạn chế động lực tăng tiếp theo.",
-      "VIX tăng 29.35% trong 20 ngày cho thấy thị trường tài chính căng thẳng, có thể gây áp lực chốt lời tài sản rủi ro."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 2.29% sau 30 ngày và cao xa MA30 (156.2 triệu VND/lượng).",
+      "Động lực tăng đến từ lợi suất thực USD (US Real Yield 10Y) giảm mạnh 6.77% trong 20 ngày và chỉ số VIX tăng 29.35%, hỗ trợ giá vàng thế giới.",
+      "Biên độ dao động ngày cao (2.26%) và premium biến động mạnh (6.39%-18.73%) trong 30 ngày qua cho thấy thanh khoản thị trường căng thẳng, dễ gây sụt giảm nhanh."
     ],
     "risks": [
-      "Giá thế giới phá vỡ đỉnh cũ và tiếp tục tăng mạnh do căng thẳng địa chính trị Mỹ-Iran.",
-      "Tỷ giá VND/USD biến động làm thay đổi giá quy đổi và biên độ premium.",
-      "Dữ liệu vĩ mô 'healthy: false' có thể thiếu thông tin rủi ro ngầm."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá xa đường trung bình động MA7 (156.7 triệu VND/lượng).",
+      "Tin tức Tòa án Tối cao Mỹ bác bỏ thuế quan Trump (SCOTUS rebuffs tariffs) có thể khiến USD hồi phục ngắn hạn, gây áp lực giảm giá vàng.",
+      "Thị trường thiếu dữ liệu địa chính trị cụ thể, giá tăng có thể chỉ phản ánh tâm lý sợ hãi (FOMO) thay vì nền tảng cơ bản vững chắc."
     ],
     "evidence": [
       {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change7d_vs_change30d",
-        "value": -1.19,
-        "unit": "percentage points",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change20d",
+        "key": "us_real_yield_10y_change_20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "vix_change_20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_current_price",
-        "value": 181000000,
-        "unit": "VND/lượng",
+        "key": "sjc_premium_range_30d",
+        "value": 6.39,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "sjc_price_vs_ma30",
+        "value": 181,
+        "unit": "million VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_pct",
-        "value": 13.67,
+        "key": "volatility_daily",
+        "value": 2.26,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "us_iran_tension_risk",
-        "value": 1,
-        "unit": "headline_flag",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T09:08:20.717Z",
+    "latestTimestamp": "2026-02-22T10:05:21.124Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159234113.45544794,
+    "intlVndPerTael": 159235574.7582125,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.29,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156684146,
-    "ma30VndPerTael": 156240642,
+    "ma7VndPerTael": 156684354,
+    "ma30VndPerTael": 156240690,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +77,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T09:08:42.421Z",
+    "fetchedAt": "2026-02-22T10:05:42.701Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -187,6 +180,7 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-22 | scmp.com | Opinion | Why the Fed credibility crisis will hit emerging markets harder",
       "2026-02-22 | jamaica-gleaner.com | WARNING LIGHTS",
       "2026-02-22 | sharecast.com | US open : Stocks rise despite weak GDP and firm inflation as Supreme Court strikes down Trump tariffs",
       "2026-02-22 | moneycontrol.com | US - Iran tensions , tariff fallout and China reopening to shape commodities next week",
