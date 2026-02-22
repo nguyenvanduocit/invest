@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T10:06:05.144Z",
+  "generatedAt": "2026-02-22T11:06:17.681Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm mua an toàn thay vì đu đỉnh. Dù động lực vĩ mô tích cực từ lợi suất thực USD giảm mạnh 6.77% và VIX tăng cao, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập trường tốt hơn thay vì FOMO đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 2.29% sau 30 ngày và cao xa MA30 (156.2 triệu VND/lượng).",
-      "Động lực tăng đến từ lợi suất thực USD (US Real Yield 10Y) giảm mạnh 6.77% trong 20 ngày và chỉ số VIX tăng 29.35%, hỗ trợ giá vàng thế giới.",
-      "Biên độ dao động ngày cao (2.26%) và premium biến động mạnh (6.39%-18.73%) trong 30 ngày qua cho thấy thanh khoản thị trường căng thẳng, dễ gây sụt giảm nhanh."
+      "Giá SJC 181 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 là 156.2 triệu VND/lượng (+15.9%).",
+      "Động lượng tăng đang chững lại: giá hiện tại 181 triệu VND/lượng bằng với đỉnh cũ cách đây 10 ngày (2026-02-09), cho thấy áp lực bán ngắn hạn.",
+      "Lợi suất thực 10Y của Mỹ giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) là động lực hỗ trợ vàng thế giới tăng 2.32% cùng kỳ, nhưng phần lớn đã được định giá.",
+      "Biên độ dao động ngày cao (2.26%) kèm rủi ro sụt giảm tồi tệ nhất trong quá khứ lên tới 41.26% báo hiệu thị trường đang ở trạng thái rủi ro cao."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá xa đường trung bình động MA7 (156.7 triệu VND/lượng).",
-      "Tin tức Tòa án Tối cao Mỹ bác bỏ thuế quan Trump (SCOTUS rebuffs tariffs) có thể khiến USD hồi phục ngắn hạn, gây áp lực giảm giá vàng.",
-      "Thị trường thiếu dữ liệu địa chính trị cụ thể, giá tăng có thể chỉ phản ánh tâm lý sợ hãi (FOMO) thay vì nền tảng cơ bản vững chắc."
+      "Mua đuổi đỉnh khi giá ở percentile 100% có rủi ro điều chỉnh kỹ thuật cao nếu lợi suất thực Mỹ hồi phục.",
+      "Thanh khoản có thể giảm nếu giá sideway quá lâu trong vùng 181 triệu VND/lượng.",
+      "VIX tăng 29.35% trong 20 ngày cho thấy biến động thị trường tài chính đang mở rộng, có thể gây chặn bước sóng ngắn của vàng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 100,
-        "unit": "%",
+        "key": "SJC Price vs MA30",
+        "value": 15.9,
+        "unit": "% above MA",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "5-Year Percentile Rank",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_premium_range_30d",
-        "value": 6.39,
+        "key": "Gold Spot Change 20d",
+        "value": 2.32,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 181,
-        "unit": "million VND/lượng",
+        "key": "Daily Volatility",
+        "value": 2.26,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.26,
+        "key": "Current Premium",
+        "value": 13.67,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T10:05:21.124Z",
+    "latestTimestamp": "2026-02-22T11:05:29.896Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159235574.7582125,
+    "intlVndPerTael": 159231004.08799252,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
-    "change30dPct": 2.29,
+    "change30dPct": 2.28,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156684354,
-    "ma30VndPerTael": 156240690,
+    "ma7VndPerTael": 156683702,
+    "ma30VndPerTael": 156240538,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T10:05:42.701Z",
+    "fetchedAt": "2026-02-22T11:05:51.363Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -179,13 +186,7 @@
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-22 | scmp.com | Opinion | Why the Fed credibility crisis will hit emerging markets harder",
-      "2026-02-22 | jamaica-gleaner.com | WARNING LIGHTS",
-      "2026-02-22 | sharecast.com | US open : Stocks rise despite weak GDP and firm inflation as Supreme Court strikes down Trump tariffs",
-      "2026-02-22 | moneycontrol.com | US - Iran tensions , tariff fallout and China reopening to shape commodities next week",
-      "2026-02-22 | finance.yahoo.com | Dollar Weakens as SCOTUS Rebuffs President Trump Tariffs"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
