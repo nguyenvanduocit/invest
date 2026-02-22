@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T19:09:21.101Z",
+  "generatedAt": "2026-02-22T20:05:22.207Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh từ lợi suất thực giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có sự kiện địa chính trị cấp thiết nào hỗ trợ.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 181 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng chậm lại, trong khi xu hướng vĩ mô tích cực từ lợi suất thực giảm mạnh hỗ trợ giá thế giới tiếp tục đi lên.",
     "reasons": [
-      "Động lực tăng mạnh từ vĩ mô: Lợi suất thực Mỹ 10 năm giảm sâu 6.77% trong 20 ngày qua (xuống mức 1.79%), tạo đà đẩy giá vàng thế giới tăng 2.32% cùng kỳ.",
-      "Thanh khoản và rủi ro cao: Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm, đi kèm biên độ dao động ngày 2.26% và số lần sụt giảm tồi tệ nhất lên tới 41.26%.",
-      "Áp lực mua đỉnh: Mặc dù xu hướng tăng 30 ngày là +2.28%, nhưng chênh lệch premium 13.67% cho thấy giá nội địa đã phản ứng quá mức so với biến động thế giới."
+      "Giá SJC 181 triệu VND/lượng đang giao dịch trên MA7 (157 triệu) và MA30 (156 triệu), xác nhận xu hướng tăng mạnh nhưng đã đi ngang 8 ngày liên tiếp từ 14/02.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06%, tạo động lực tăng cơ bản cho giá vàng thế giới lên 5098 USD/oz.",
+      "VIX tăng 29.35% trong 20 ngày lên mức 20.23 kết hợp căng thẳng thuế quan Trump và chiến tranh Nga-Ukraine hỗ trợ nhu cầu trú ẩn an toàn."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở mức kỷ lục (All-time high) và biên độ dao động (volatility) tăng mạnh.",
-      "Sự vắng mặt của các tiêu đề địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào làm giảm độ tin cậy của đà tăng dài hạn.",
-      "Lãi suất Fed Funds vẫn维持在 3.64% có thể hạn chế động lực tăng giá vàng nếu lợi suất thực đảo chiều tăng trở lại."
+      "Mua tại đỉnh lịch sử percentile 100% với rủi ro điều chỉnh ngắn hạn khi giá đã đi ngang kéo dài và không có dữ liệu lạm phát/kim ngạch Việt Nam cụ thể.",
+      "Premium 13.67% dao động mạnh trong 30 ngày (6.39%-18.73%), thanh khoản có thể giảm nếu chênh lệch thu hẹp đột ngột.",
+      "Thiếu tín hiệu rõ ràng từ chính sách tiền tệ Việt Nam và dữ liệu vĩ mô trong nước để đánh giá chính xác cầu nội địa."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "change30d_pct",
+        "value": 2.33,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Current",
-        "value": 1.79,
+        "key": "dxy_change20d",
+        "value": -2.06,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 2.32,
+        "key": "vix_change20d",
+        "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 2.28,
+        "key": "premium_range_30d",
+        "value": 6.39,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.26,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Current Premium",
-        "value": 13.67,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "world_gold",
+        "value": 5098.61,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T19:08:35.371Z",
+    "latestTimestamp": "2026-02-22T20:04:42.620Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159233540.67723244,
+    "intlVndPerTael": 159235240.585535,
     "premiumPct": 13.67,
-    "change7dPct": 1.1,
-    "change30dPct": 2.28,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156684064,
-    "ma30VndPerTael": 156240623,
+    "change7dPct": 2.13,
+    "change30dPct": 2.33,
+    "volatilityDailyPct": 2.22,
+    "ma7VndPerTael": 157157834,
+    "ma30VndPerTael": 156361559,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +89,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T19:08:56.872Z",
+    "fetchedAt": "2026-02-22T20:05:03.883Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -190,8 +190,16 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-22 | watoday.com.au | Markets today : Trump tariffs sets up ASX for uncertain start",
+      "2026-02-22 | forbes.com | Russia - Ukraine War : 1 . 2 Million Russian Casualties , No U . S . Troops"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-22 | watoday.com.au | Markets today : Trump tariffs sets up ASX for uncertain start",
+      "2026-02-22 | timesofindia.indiatimes.com | Gold , silver rate outlook : Will Trump tariffs and Middle East tensions drive next leg of rally ?",
+      "2026-02-22 | tynmagazine.com | The dollar game - TyN Magazine",
+      "2026-02-22 | yalibnan.com | From  buy America  to  bye America , Wall Street exodus gathers pace , despite weakening dollar – Ya Libnan"
+    ],
     "dollarYieldHeadlines": []
   }
 }
