@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-22T18:08:21.825Z",
+  "generatedAt": "2026-02-22T19:09:21.101Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh được hỗ trợ bởi lợi suất thực USD giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có sự kiện địa chính trị cấp thiết nào trong dữ liệu.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh từ lợi suất thực giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có sự kiện địa chính trị cấp thiết nào hỗ trợ.",
     "reasons": [
-      "Lợi suất thực Mỹ 10 năm (US Real Yield) giảm mạnh 6.77% trong 20 ngày qua (xuống mức 1.79%), tạo động lực chính đẩy giá vàng thế giới tăng 2.32% trong cùng kỳ.",
-      "Giá vàng SJC ở mức 181,000,000 VND/lượng đang cao hơn đáng kể so với MA30 (156,240,648 VND/lượng), cho thấy xu hướng tăng mạnh nhưng đã ở vùng quá mua.",
-      "VIX tăng 29.35% trong 20 ngày qua (lên 20.23 điểm) phản ánh tâm lý lo âu thị trường, hỗ trợ nhu cầu trú ẩn vào vàng."
+      "Động lực tăng mạnh từ vĩ mô: Lợi suất thực Mỹ 10 năm giảm sâu 6.77% trong 20 ngày qua (xuống mức 1.79%), tạo đà đẩy giá vàng thế giới tăng 2.32% cùng kỳ.",
+      "Thanh khoản và rủi ro cao: Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm, đi kèm biên độ dao động ngày 2.26% và số lần sụt giảm tồi tệ nhất lên tới 41.26%.",
+      "Áp lực mua đỉnh: Mặc dù xu hướng tăng 30 ngày là +2.28%, nhưng chênh lệch premium 13.67% cho thấy giá nội địa đã phản ứng quá mức so với biến động thế giới."
     ],
     "risks": [
-      "Giá đang ở phân vị 100% trong 5 năm (đỉnh lịch sử), rủi ro chốt lời ngắn hạn rất cao khi giá vượt xa đường trung bình động 30 ngày.",
-      "Biên độ dao động ngày cao (2.26%) cộng với premium biến động mạnh (6.39% - 18.73%) trong tháng qua cho thấy thanh khoản và rủi ro giao dịch lớn.",
-      "Dữ liệu sự kiện vĩ mô (policyHeadlines) không chứa thông tin khẩn cấp, giới hạn độ tin cậy của đà tăng tiếp theo."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở mức kỷ lục (All-time high) và biên độ dao động (volatility) tăng mạnh.",
+      "Sự vắng mặt của các tiêu đề địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào làm giảm độ tin cậy của đà tăng dài hạn.",
+      "Lãi suất Fed Funds vẫn维持在 3.64% có thể hạn chế động lực tăng giá vàng nếu lợi suất thực đảo chiều tăng trở lại."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "SJC Price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5y_percentile",
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
-        "value": 29.35,
+        "key": "US Real Yield 10Y Current",
+        "value": 1.79,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "ma30_vnd",
-        "value": 156240648,
-        "unit": "VND/lượng",
+        "key": "Gold Spot Change 20d",
+        "value": 2.32,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 2.28,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 12.34,
-        "unit": "% (18.73-6.39)",
-        "source": "monthly_series_30d"
+        "key": "Daily Volatility",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.26,
+        "key": "Current Premium",
+        "value": 13.67,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-22T18:07:32.612Z",
+    "latestTimestamp": "2026-02-22T19:08:35.371Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159234314.27136537,
+    "intlVndPerTael": 159233540.67723244,
     "premiumPct": 13.67,
     "change7dPct": 1.1,
-    "change30dPct": 2.29,
+    "change30dPct": 2.28,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 156684174,
-    "ma30VndPerTael": 156240648,
+    "ma7VndPerTael": 156684064,
+    "ma30VndPerTael": 156240623,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +89,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-22T18:07:54.169Z",
+    "fetchedAt": "2026-02-22T19:08:56.872Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,11 +190,7 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-22 | timesofindia.indiatimes.com | Gold , silver rate outlook : Will Trump tariffs and Middle East tensions drive next leg of rally ?",
-      "2026-02-22 | tynmagazine.com | The dollar game - TyN Magazine",
-      "2026-02-22 | si.com | Wild Quinn Hughes Sets united states Olympic Record in Gold Medal Game"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
