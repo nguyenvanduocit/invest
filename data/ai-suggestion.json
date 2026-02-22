@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-21T23:06:05.983Z",
+  "generatedAt": "2026-02-22T00:21:20.328Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi lợi suất thực USD giảm mạnh tạo đà hỗ trợ vĩ mô. Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh từ lợi suất thực giảm sâu, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động 2.26%/ngày và premium co lại từ đỉnh 18.73%. Nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ gần MA7 (~156.7 triệu VND/lượng) hoặc tín hiệu ổn định giá thế giới.",
     "reasons": [
-      "Giá SJC 181 triệu VND/lượng đang ở phân vị 100% trong 5 năm (percentile5y: 100), cho thấy rủi ro mua đỉnh ngắn hạn rất cao.",
-      "Lợi suất thực USD 10 năm giảm mạnh 6.77% trong 20 ngày (từ first_principles) xuống 1.79%, tạo động lực tăng cơ bản cho vàng thế giới.",
-      "Đồng USD suy yếu (DXY giảm 2.06% trong 20 ngày) và VIX tăng 29.35% cho thấy sentiment ủng hộ vàng nhưng đã phần nào phản ánh vào giá.",
-      "Giá thế giới tăng 2.32% trong 20 ngày nhưng giá SJC đã tăng trước đó, khiến premium co giãn từ 18.62% (17/02) về 13.56% hiện tại."
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) tạo động lực đẩy giá vàng thế giới tăng 2.32% cùng kỳ, hỗ trợ xu hướng tăng cơ bản.",
+      "Giá SJC 181 triệu VND/lượng đang vượt xa MA30 (156.2 triệu VND/lượng) tới 15.9%, cho thấy thị trường đang ở vùng quá mua kỹ thuật ngắn hạn.",
+      "Premium giảm từ đỉnh 18.73% (17/02) xuống 13.67% hiện tại cho thấy áp lực mua nội địa đã hạ nhiệt, giá Việt Nam bắt đầu đồng bộ lại với giá thế giới.",
+      "VIX tăng 29.35% trong 20 ngày lên mức 20.23 chỉ ra biến động thị trường tài chính cao, có thể gây thanh khoản bất ngờ trên thị trường vàng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá giao dịch quá xa MA7 (181 triệu vs 156.8 triệu VND/lượng).",
-      "Premium 13.56% vẫn cao hơn mức thấp nhất 6.29% trong chuỗi dữ liệu, có thể tiếp tục nén hẹp nếu giá thế giới tăng mạnh hơn giá nội địa.",
-      "Thiếu dữ liệu hành động can thiệp của Ngân hàng Nhà nước hoặc các quốc gia trong giai đoạn này."
+      "Đang ở mức giá cao nhất 5 năm (percentile 100%), rủi ro chốt lời ngắn hạn rất lớn.",
+      "Biên độ dao động 2.26%/ngày tương đương ~4 triệu VND/lượng, nhà đầu tư vay margin có thể bị gọi vốn nếu đảo chiều.",
+      "Thiếu dữ liệu hành động can thiệp giá từ Ngân hàng Nhà nước (countryActionHeadlines trống) nên không lường trước được rủi ro chính sách."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjc_price",
         "value": 181000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5Y Percentile",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 13.56,
+        "key": "premium_current",
+        "value": 13.67,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "premium_30d_high",
+        "value": 18.73,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
         "value": -6.77,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "USD Index Change 20d",
-        "value": -2.06,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "VIX Change 20d",
+        "key": "vix_change20d",
         "value": 29.35,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "Intl Gold Change 20d",
-        "value": 2.32,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "ma7_vnd",
+        "value": 156684202,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "Price vs MA7 Gap",
-        "value": 15.43,
-        "unit": "%",
+        "key": "volatility_daily",
+        "value": 2.26,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-21T23:05:21.188Z",
+    "latestTimestamp": "2026-02-22T00:20:17.666Z",
     "sjcVndPerTael": 181000000,
-    "intlVndPerTael": 159381679.36104557,
-    "premiumPct": 13.56,
+    "intlVndPerTael": 159234504.46871173,
+    "premiumPct": 13.67,
     "change7dPct": 1.1,
     "change30dPct": 2.29,
-    "volatilityDailyPct": 2.24,
-    "ma7VndPerTael": 156828026,
-    "ma30VndPerTael": 156383943,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 156684202,
+    "ma30VndPerTael": 156240655,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-21T23:05:34.534Z",
+    "fetchedAt": "2026-02-22T00:20:39.357Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -195,8 +195,6 @@
       "2026-02-21 | foreignpolicy.com | 4 Years of Russia - Ukraine War and Its Global Geopolitical Impact"
     ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-21 | forbes.com | Tax Breaks : The High - Stakes Gold Medal Lessons Edition"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
