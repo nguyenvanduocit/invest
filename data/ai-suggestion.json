@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T12:13:51.490Z",
+  "generatedAt": "2026-02-23T13:31:54.881Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, trong bối cảnh giá thế giới tăng mạnh do bất ổn thuế quan Mỹ nhưng áp lực bán chốt lợi nhuận là rất lớn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng khoảng cách quá lớn so với MA7 (17.3%) báo hiệu rủi ro điều chỉnh kỹ thuật cao. Nhà đầu tư nên chờ hồi điều chỉnh về vùng hỗ trợ gần MA7 (157.4 triệu VND/lượng) hoặc xác nhận phá đỉnh thế giới bền vững trước khi tham gia.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 3.15% sau 7 ngày, rủi ro điều chỉnh kỹ thuật ngắn hạn rất cao.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% hỗ trợ giá vàng thế giới tăng 3.12% trong 5 ngày qua.",
-      "Sự kiện Tòa án Tối cao Mỹ chặn thuế quan Trump tạo bất định địa chính trị, đẩy giá vàng thế giới lên mức cao 3 tuần (5149.72 USD/oz).",
-      "Premium 14.76% nằm trong biên độ dao động phổ biến của 30 ngày qua (11.31% - 18.71%), không có tín hiệu bất thường cần can thiệp."
+      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (157.4 triệu VND/lượng) tới 17.3% - khoảng cách quá lớn báo hiệu rủi ro điều chỉnh kỹ thuật ngắn hạn.",
+      "Động lượng tăng 7 ngày (3.15%) tập trung vào cuối chuỗi dữ liệu, trong khi giá thế giới đã chạm đỉnh mới 5149.8 USD/oz cần thời gian xác nhận.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và USD Index giảm 2.06% tạo đà hỗ trợ vĩ mô cho vàng, nhưng VIX tăng 29.35% cho thấy bất ổn thị trường có thể gây biến động hai chiều.",
+      "Premium 14.76% nằm trong biên dao động 30 ngày (11.31%-18.71%), không cực đoan nhưng thanh khoản ở đỉnh lịch sử có thể gặp khó khi thị trường điều chỉnh."
     ],
     "risks": [
-      "Mua tại đỉnh giá lịch sử (percentile 100%) với khả năng điều chỉnh giảm sâu nếu tin tức địa chính trị hạ nhiệt.",
-      "Biên độ dao động ngày cao (2.26%) và số lần giảm giá trong quá khứ lên tới 41.26% cho thấy rủi ro biến động cực lớn.",
-      "Thời gian phục hồi sau các đợt giảm giá trung bình lên tới 1369 ngày, thanh khoản có thể bị giam lâu nếu mua sai điểm."
+      "Rủi ro chốt lời ngắn hạn cao khi giá cách xa MA7 tới 17.3% và VIX tăng 29.35% trong 20 ngày qua.",
+      "Dữ liệu vĩ mô thiếu cập nhật (USD Index, Fed Funds, Treasury ngày 13-19/2) có thể bỏ lỡ tín hiệu chính sách mới từ Fed.",
+      "Premium có thể co hẹp nếu giá thế giới tiếp tục tăng mà giá Việt Nam điều chỉnh chậm, gây thiệt hại cho người mua ở đỉnh."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 100,
-        "unit": "%",
+        "key": "sjc_price",
+        "value": 184600000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 3.15,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "intl_gold_price",
+        "value": 5149.8,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "us_real_yield_change_20d",
-        "value": -6.77,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 29.35,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "intl_gold_change_5d",
-        "value": 3.12,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
+        "key": "premium_pct",
         "value": 14.76,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.26,
+        "key": "price_vs_ma7_gap",
+        "value": 17.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "worst_drawdown",
-        "value": 41.26,
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -6.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change20d",
+        "value": 29.35,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "change7d_pct",
+        "value": 3.15,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T12:13:03.857Z",
+    "latestTimestamp": "2026-02-23T13:30:41.070Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 160859577.03003183,
+    "intlVndPerTael": 160861981.62080678,
     "premiumPct": 14.76,
     "change7dPct": 3.15,
     "change30dPct": 3.36,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157413439,
-    "ma30VndPerTael": 156442178,
+    "ma7VndPerTael": 157413783,
+    "ma30VndPerTael": 156442258,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T12:13:25.537Z",
+    "fetchedAt": "2026-02-23T13:31:02.259Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5148.395,
+        "value": 5148.675,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 1,
-        "change5dPct": 3.12,
-        "change20dPct": 2.74,
+        "change1dPct": 1.01,
+        "change5dPct": 3.13,
+        "change20dPct": 2.75,
         "relationToGold": "context"
       },
       {
@@ -184,28 +184,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
       "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build",
       "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
-      "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
-      "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
+      "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-23 | leaderlive.co.uk | Gold prices rise and dollar dips after Trump declares 15 % global tariff",
-      "2026-02-23 | rhyljournal.co.uk | Gold prices rise and dollar dips after Trump declares 15 % global tariff",
-      "2026-02-23 | idahopress.com | US futures slip and world markets are mixed after the Supreme Court nixes Trump tariffs",
-      "2026-02-23 | lancashiretelegraph.co.uk | Gold prices rise and dollar dips after Trump declares 15 % global tariff",
-      "2026-02-23 | penarthtimes.co.uk | Gold prices rise and dollar dips after Trump declares 15 % global tariff",
-      "2026-02-23 | marketscreener.com | Mib Accelerates Toward 46 , 900 ; Enel Leads the Rally"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-23 | idahopress.com | US futures slip and world markets are mixed after the Supreme Court nixes Trump tariffs",
-      "2026-02-23 | theglobeandmail.com | Gold climbs to 3 - week high as U . S . tariff ruling stokes uncertainty",
-      "2026-02-23 | geo.tv | Gold climbs to three - week high as US tariff ruling stokes uncertainty",
-      "2026-02-23 | thedailystar.net | Gold climbs to 3 - week high as US tariff ruling stokes uncertainty",
-      "2026-02-23 | econotimes.com | Asian Currencies Rise as US Dollar Weakens Amid Trump Tariff Uncertainty and Fed Outlook"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
