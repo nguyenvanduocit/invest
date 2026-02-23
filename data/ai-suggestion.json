@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T17:26:09.748Z",
+  "generatedAt": "2026-02-23T18:26:34.509Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,66 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 4.28%/tuần, nhưng rủi ro mua đỉp cao hơn lợi ích ngắn hạn khi premium đã co lại từ đỉnh 18.71% về 13.51%. Nên chờ hồi chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định giá thế giới trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro mua đỉp ngắn hạn là rất lớn khi biên độ dao động lên tới 2.29%/ngày.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (157.67 triệu) và MA30 (156.5 triệu), tín hiệu quá mua rõ ràng ở mức percentile 100% 5 năm.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06% đã đẩy giá thế giới lên 5206 USD/oz, nhưng động lực này đã phần nào được định giá.",
-      "Premium SJC co về 13.51% từ đỉnh 18.71% (17/02), cho thấy thị trường nội địa đang định giá lại mức giá cao và thanh khoản có thể đang thắt chặt."
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (157.7 triệu) và MA30 (156.5 triệu), xác nhận xu hướng tăng mạnh nhưng báo hiệu vùng quá mua ngắn hạn.",
+      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và giá vàng thế giới tăng 4.24% trong 5 ngày gần nhất.",
+      "Premium 13.48% đang ổn định trong biên độ 30 ngày (6.37%-18.71%), cho thấy tâm lý thị trường Việt Nam không hoảng loạn dù giá tăng."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Rủi ro điều chỉnh kỹ thuật sâu khi giá cách xa MA7 tới 17% và biến động ngày ở mức cao 2.29%.",
-      "Sự kiện vĩ mô mập mờ: Tin tức về thuế quan Trump và bài phát biểu của Fed (Waller) có thể gây biến động hai chiều khó lường cho giá thế giới.",
-      "Thanh khoản giảm: Việc premium giảm khi giá thế giới tăng có thể báo hiệu cầu nội địa yếu đi ở mức giá hiện tại."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá đang ở mức cao nhất 5 năm (percentile 100%) và đã tăng 4.32% chỉ trong 7 ngày.",
+      "Biên độ dao động 2.29%/ngày tương đương hơn 4 triệu VND/lượng, đòi hỏi nhà đầu tư có khả năng chịu đựng biến động lớn.",
+      "Thiếu tín hiệu địa chính trị cấp bách hoặc hành động can thiệp của quốc gia cụ thể trong dữ liệu đầu vào."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA7",
-        "value": 17.09,
+        "key": "sjc_price",
+        "value": 184600000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Premium Change",
-        "value": -5.2,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
+        "key": "change7d_pct",
+        "value": 4.32,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 20d Change",
+        "key": "volatility_daily",
+        "value": 2.29,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_change20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot 20d Change",
-        "value": 3.98,
+        "key": "intl_gold_change5d",
+        "value": 4.24,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC 5Y Percentile",
-        "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
+        "key": "premium_range_low",
+        "value": 6.37,
+        "unit": "%",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.29,
+        "key": "premium_range_high",
+        "value": 18.71,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T17:25:16.654Z",
+    "latestTimestamp": "2026-02-23T18:25:54.895Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162623717.01570994,
-    "premiumPct": 13.51,
-    "change7dPct": 4.28,
-    "change30dPct": 4.49,
+    "intlVndPerTael": 162676554.6025328,
+    "premiumPct": 13.48,
+    "change7dPct": 4.32,
+    "change30dPct": 4.52,
     "volatilityDailyPct": 2.29,
-    "ma7VndPerTael": 157665459,
-    "ma30VndPerTael": 156500982,
+    "ma7VndPerTael": 157673007,
+    "ma30VndPerTael": 156502744,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T17:25:38.249Z",
+    "fetchedAt": "2026-02-23T18:26:16.461Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5210.615,
+        "value": 5204.105,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 2.22,
-        "change5dPct": 4.37,
-        "change20dPct": 3.98,
+        "change1dPct": 2.09,
+        "change5dPct": 4.24,
+        "change20dPct": 3.85,
         "relationToGold": "context"
       },
       {
@@ -171,22 +183,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
       "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build",
       "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
-      "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
-      "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area"
+      "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-23 | newsghana.com.gh | Ghana Cuts Debt by GH¢82bn and Hits 3 . 8 % Inflation in Sweeping 2025 Turnaround",
-      "2026-02-23 | timesherald.com | US stocks dip after Trump ramps up his tariffs",
-      "2026-02-23 | economictimes.indiatimes.com | Will BTC USD Bitcoin surpass gold : BTC USD price today drops to $66 , 000 : Why Robert Kiyosaki bought more BTC USD during crypto crash and said it will be better than gold ?",
-      "2026-02-23 | 247wallst.com | AAPD 3 . 43 % Yield Looks Great Until You See the 40 % Hangover",
-      "2026-02-23 | livemint.com | Gold rate today jumps 2 %! SIP vs lumpsum : How to make the most of the rise in yellow metal prices ? Explained",
-      "2026-02-23 | journalrecord.com | US businesses await refunds after Supreme Court overturns trump tariffs"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
