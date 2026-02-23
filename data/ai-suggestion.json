@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T21:22:02.195Z",
+  "generatedAt": "2026-02-23T22:16:30.976Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,42 +7,24 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực cao (percentile 5 năm 100%) với đà tăng mạnh 7.15% trong 7 ngày, tuy nhiên premium đã giảm từ đỉnh 18.71% xuống 13.31% và lợi suất thực USD tăng vọt 0.56%, tạo tín hiệu mixed buộc nhà đầu tư nên chờ xác nhận thay vì FOMO đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184.6 triệu/lượng (percentile 5 năm 100%) với đà tăng mạnh 7.11% trong 7 ngày, tạo áp lực điều chỉnh kỹ thuật ngắn hạn. Tuy nhiên, xu hướng vĩ mô nền tảng vẫn tích cực nhờ lợi suất thực USD giảm 7.69% trong 20 ngày qua, hỗ trợ giá vàng duy trì ở mức cao.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (159.3 triệu) và MA30 (156.8 triệu), tương ứng tăng 15.9% và 17.7% so với trung bình ngắn hạn - tín hiệu quá mua rõ rệt.",
-      "Premium SJC đã giảm từ đỉnh 18.71% (17/02) xuống 13.31% (23/02), cho thấy áp lực mua nội địa đang giảm nhiệt dù giá thế giới tiếp tục tăng.",
-      "Lợi suất thực USD 10 năm tăng 0.56% lên 1.8% và VIX giảm 5.64% xuống 19.09, cho thấy khẩu vị rủi ro cải thiện và áp lực tăng giá vàng có thể giảm.",
-      "Giá thế giới XAUUSD 5230 USD/oz đã tăng 4.79% trong 5 ngày và 4.4% trong 20 ngày, đà tăng ngắn hạn rất mạnh nhưng cần cẩn trọng hồi điều chỉnh."
+      "Giá SJC 184.6 triệu/lượng đang vượt xa MA7 (159.3 triệu) và MA30 (156.8 triệu), tăng quá nóng +7.11% sau 7 ngày, rủi ro điều chỉnh kỹ thuật cao khi percentile 5N đạt 100%.",
+      "Động lượng vĩ mô tích cực: Lợi suất thực US 10Y giảm mạnh 20 ngày qua (-7.69%) và giá vàng thế giới tăng +4.71% trong 5 ngày lên 5228 USD/oz, tạo nền tảng hỗ trợ xu hướng tăng dài hạn.",
+      "Premium SJC ở mức 13.04% là hợp lý so với chuỗi 30 ngày (dao động 6.37%-18.71%), không có dấu hiệu bong bóng premium bất thường cần cảnh báo.",
+      "VIX index tăng 18.65% trong 20 ngày (lên 19.09 điểm) cho thấy tâm lý thị trường vẫn thận trọng, hỗ trợ nhu cầu trú ẩn an toàn vào vàng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở percentile 100% trong 5 năm và vượt MA7 tới 15.9%.",
-      "Lợi suất thực USD tăng mạnh 0.56% có thể gây áp lực giảm lên giá vàng nếu xu hướng này tiếp tục.",
-      "Dữ liệu vĩ mô thiếu sự kiện địa chính trị và hành động quốc gia quan trọng, độ tin cậy phân tích giảm."
+      "Mua tại đỉnh lịch sử (percentile 100%) khi thị trường đang nóng với biến động ngày 2.26% có nguy cơ điều chỉnh ngắn hạn.",
+      "Lạm phát kỳ vọng US 10Y giảm -2.59% trong 20 ngày có thể làm suy yếu động lực tăng giá vàng nếu kéo dài.",
+      "Không có sự kiện địa chính trị cấp thiết nào trong dữ liệu đầu vào để thúc đẩy đợt tăng giá khẩn cấp thêm."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "sjc_price_latest",
         "value": 184600000,
         "unit": "VND/lượng",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "sjc_vs_ma7_pct",
-        "value": 15.9,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_current",
-        "value": 13.31,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_peak_feb",
-        "value": 18.71,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
         "key": "percentile_5y",
@@ -51,35 +33,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "change_7d_pct",
+        "value": 7.11,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "ma7_vnd",
+        "value": 159255517,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -7.69,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_change_1d",
-        "value": 0.56,
+        "key": "intl_gold_change5d",
+        "value": 4.71,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "xauusd_change_5d",
-        "value": 4.79,
+        "key": "vix_change20d",
+        "value": 18.65,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "premium_current",
+        "value": 13.04,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T21:19:08.983Z",
-    "sjcVndPerTael": 164543041.875,
-    "intlVndPerTael": 163384666.91533077,
-    "premiumPct": 0,
-    "change7dPct": 7.15,
-    "change30dPct": 4.97,
+    "latestTimestamp": "2026-02-23T22:15:52.295Z",
+    "sjcVndPerTael": 184600000,
+    "intlVndPerTael": 163308430.0176538,
+    "premiumPct": 13.04,
+    "change7dPct": 7.11,
+    "change30dPct": 4.93,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 159264498,
-    "ma30VndPerTael": 156768718,
+    "ma7VndPerTael": 159255517,
+    "ma30VndPerTael": 156766622,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T21:21:44.225Z",
+    "fetchedAt": "2026-02-23T22:16:14.035Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5231.475,
+        "value": 5227.605,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 2.63,
-        "change5dPct": 4.79,
-        "change20dPct": 4.4,
+        "change1dPct": 2.55,
+        "change5dPct": 4.71,
+        "change20dPct": 4.32,
         "relationToGold": "context"
       },
       {
@@ -130,12 +130,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.28,
+        "value": 2.26,
         "unit": "%",
-        "date": "2026-02-20",
-        "change1dPct": -0.44,
+        "date": "2026-02-23",
+        "change1dPct": -0.88,
         "change5dPct": -0.44,
-        "change20dPct": -1.3,
+        "change20dPct": -2.59,
         "relationToGold": "direct"
       },
       {
