@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T20:14:27.814Z",
+  "generatedAt": "2026-02-23T21:22:02.195Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184.6 triệu đồng/lượng (percentile 5 năm 100%) sau đợt tăng nóng 7.02% trong 7 ngày, đòi hỏi nhà đầu tư kiên nhẫn chờ tín hiệu củng cố thay vì đu đỉnh. Dù động lực tăng từ lợi suất thực USD giảm mạnh (-6.77% trong 20 ngày) và lo ngại thuế quan là tích cực, biên độ dao động cao (2.26%) cảnh báo rủi ro điều chỉnh ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở vùng cực cao (percentile 5 năm 100%) với đà tăng mạnh 7.15% trong 7 ngày, tuy nhiên premium đã giảm từ đỉnh 18.71% xuống 13.31% và lợi suất thực USD tăng vọt 0.56%, tạo tín hiệu mixed buộc nhà đầu tư nên chờ xác nhận thay vì FOMO đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 184.6 triệu đồng/lượng đang vượt xa MA7 (159.2 triệu) và MA30 (156.8 triệu), tín hiệu tăng nhiệt quá mức cần thời gian củng cố.",
-      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 20 ngày qua (-6.77%) và giá vàng thế giới xuyên mốc 5,200 USD/oz hỗ trợ xu hướng tăng.",
-      "Biên độ dao động ngày cao (2.26%) kết hợp percentile 100% trong 5 năm cảnh báo rủi ro biến động lớn cho người mua đuổi.",
-      "Premium 13.13% đang ở mức hợp lý so với trung bình 30 ngày (14-15%), không có dấu hiệu căng thẳng cực đoan."
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (159.3 triệu) và MA30 (156.8 triệu), tương ứng tăng 15.9% và 17.7% so với trung bình ngắn hạn - tín hiệu quá mua rõ rệt.",
+      "Premium SJC đã giảm từ đỉnh 18.71% (17/02) xuống 13.31% (23/02), cho thấy áp lực mua nội địa đang giảm nhiệt dù giá thế giới tiếp tục tăng.",
+      "Lợi suất thực USD 10 năm tăng 0.56% lên 1.8% và VIX giảm 5.64% xuống 19.09, cho thấy khẩu vị rủi ro cải thiện và áp lực tăng giá vàng có thể giảm.",
+      "Giá thế giới XAUUSD 5230 USD/oz đã tăng 4.79% trong 5 ngày và 4.4% trong 20 ngày, đà tăng ngắn hạn rất mạnh nhưng cần cẩn trọng hồi điều chỉnh."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đã tăng 7.02% chỉ trong 7 ngày và đang ở mức cao nhất lịch sử.",
-      "Biên độ dao động 2.26%/ngày có thể gây sốc tài khoản nếu nhập lệnh sai điểm.",
-      "Căng thẳng thương mại từ thuế quan Trump có thể gây biến động bất ngờ hai chiều cho thị trường."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở percentile 100% trong 5 năm và vượt MA7 tới 15.9%.",
+      "Lợi suất thực USD tăng mạnh 0.56% có thể gây áp lực giảm lên giá vàng nếu xu hướng này tiếp tục.",
+      "Dữ liệu vĩ mô thiếu sự kiện địa chính trị và hành động quốc gia quan trọng, độ tin cậy phân tích giảm."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 184600000,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 7 ngày",
-        "value": 7.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá vàng thế giới",
-        "value": 5223.72,
-        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (Biến động 20 ngày)",
-        "value": -6.77,
+        "key": "sjc_vs_ma7_pct",
+        "value": 15.9,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 159235912,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biên độ dao động ngày",
-        "value": 2.26,
+        "key": "premium_current",
+        "value": 13.31,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Vị thế percentile 5 năm",
+        "key": "premium_peak_feb",
+        "value": 18.71,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Chỉ số VIX",
-        "value": 19.09,
-        "unit": "điểm",
+        "key": "us_real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_change_1d",
+        "value": 0.56,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "xauusd_change_5d",
+        "value": 4.79,
+        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T20:13:26.378Z",
-    "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 163171200.60312504,
-    "premiumPct": 13.13,
-    "change7dPct": 7.02,
-    "change30dPct": 4.84,
+    "latestTimestamp": "2026-02-23T21:19:08.983Z",
+    "sjcVndPerTael": 164543041.875,
+    "intlVndPerTael": 163384666.91533077,
+    "premiumPct": 0,
+    "change7dPct": 7.15,
+    "change30dPct": 4.97,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 159235912,
-    "ma30VndPerTael": 156762048,
+    "ma7VndPerTael": 159264498,
+    "ma30VndPerTael": 156768718,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,41 +90,41 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T20:13:43.629Z",
+    "fetchedAt": "2026-02-23T21:21:44.225Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5221.715,
+        "value": 5231.475,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 2.44,
-        "change5dPct": 4.59,
-        "change20dPct": 4.21,
+        "change1dPct": 2.63,
+        "change5dPct": 4.79,
+        "change20dPct": 4.4,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 117.5258,
+        "value": 117.9917,
         "unit": "index",
-        "date": "2026-02-13",
-        "change1dPct": -0.01,
-        "change5dPct": -0.6,
-        "change20dPct": -2.06,
+        "date": "2026-02-20",
+        "change1dPct": -0.21,
+        "change5dPct": 0.39,
+        "change20dPct": -1.01,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.79,
+        "value": 1.8,
         "unit": "%",
-        "date": "2026-02-19",
-        "change1dPct": -0.56,
-        "change5dPct": -3.76,
-        "change20dPct": -6.77,
+        "date": "2026-02-20",
+        "change1dPct": 0.56,
+        "change5dPct": 0,
+        "change20dPct": -7.69,
         "relationToGold": "inverse"
       },
       {
@@ -143,7 +143,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-02-19",
+        "date": "2026-02-20",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -154,21 +154,21 @@
         "name": "US Treasury Yield 10Y",
         "value": 4.08,
         "unit": "%",
-        "date": "2026-02-19",
-        "change1dPct": -0.24,
-        "change5dPct": -2.39,
+        "date": "2026-02-20",
+        "change1dPct": 0,
+        "change5dPct": -0.24,
         "change20dPct": -4.23,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.47,
+        "value": 3.48,
         "unit": "%",
-        "date": "2026-02-19",
-        "change1dPct": 0,
-        "change5dPct": -1.42,
-        "change20dPct": -3.61,
+        "date": "2026-02-20",
+        "change1dPct": 0.29,
+        "change5dPct": 0.29,
+        "change20dPct": -3.6,
         "relationToGold": "inverse"
       },
       {
@@ -192,21 +192,7 @@
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-23 | markets.financialcontent.com | FinancialContent - Prudence Over Pivot : Waller Signals March Pause as Labor Market Resilience Challenges Fed Glide Path",
-      "2026-02-23 | tribtoday.com | US stocks drop after Trump ramps up his tariffs and worries flare about potential AI losers | News , Sports , Jobs",
-      "2026-02-23 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Barrier as Tariff Turmoil and Geopolitical Strife Ignite Global Safe - Haven Frenzy",
-      "2026-02-23 | miningmx.com | Lebanon gold sale mooted to end financial crisis",
-      "2026-02-23 | proactiveinvestors.com | Tariffs , tech earnings and economic data in focus as markets enter busy week",
-      "2026-02-23 | fxstreet.com | Dow Jones slides below 49 , 000 as tariff chaos returns"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-23 | dailypioneer.com | Days that dazed the tariff Don",
-      "2026-02-23 | tribtoday.com | US stocks drop after Trump ramps up his tariffs and worries flare about potential AI losers | News , Sports , Jobs",
-      "2026-02-23 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Barrier as Tariff Turmoil and Geopolitical Strife Ignite Global Safe - Haven Frenzy",
-      "2026-02-23 | fxstreet.com | Dow Jones slides below 49 , 000 as tariff chaos returns",
-      "2026-02-23 | investing.com | Gold Blasts as Tariff Chaos Engulfs Markets : 5 Plays for the Safe - Haven Surge",
-      "2026-02-23 | fxstreet.com | Is BTC headed for deeper losses below $65K amid tariff jitters ?"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
