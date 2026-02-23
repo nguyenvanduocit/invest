@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T07:26:03.679Z",
+  "generatedAt": "2026-02-23T08:15:05.185Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, đòi hỏi nhà đầu tư thận trọng chờ điểm nhập sân tốt hơn thay vì FOMO đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 2.88%/tuần, nhưng rủi ro mua đỉp cao do biên độ dao động lớn và sự bất định từ chính sách thuế quan Mỹ.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tiềm ẩn rủi ro điều chỉnh kỹ thuật mạnh.",
-      "Biên độ dao động ngày cao (2.26%) và giá đã tăng nhanh 2.98% trong 7 ngày gần nhất, thanh khoản rủi ro lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và VIX tăng 29.35% là động lực hỗ trợ giá vàng thế giới tăng 2.84% trong 5 ngày, nhưng chưa kéo giá SJC tăng tương xứng."
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (157.35 triệu) và MA30 (156.43 triệu), xác nhận xu hướng tăng mạnh nhưng đã bão hòa.",
+      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10Y giảm mạnh 6.77% trong 20 ngày và USD Index giảm 2.06%, hỗ trợ giá vàng thế giới tăng lên 5136 USD/oz.",
+      "VIX tăng 29.35% trong 20 ngày và tin tức về phán quyết thuế quan Trump gây bất định, thúc đẩy nhu cầu trú ẩn an toàn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá từ vùng đỉnh lịch sử khi động lượng mua yếu đi.",
-      "Biên độ dao động premium 6.37%-18.71% trong 30 ngày cho thấy sự thiếu ổn định trong định giá nội địa.",
-      "Thiếu tín hiệu địa chính trị cụ thể trong dữ liệu đầu vào có thể làm giảm động lực tăng giá dài hạn."
+      "Giá đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật là rất lớn khi volatility đang ở 2.26%/ngày.",
+      "Premium 15.06% cao hơn mức thấp nhất trong tháng (6.37%), có thể giảm nếu giá thế giới tiếp tục chạy nhanh hơn giá nội địa.",
+      "Dữ liệu vĩ mô thiếu cập nhật trong 3-4 ngày gần đây (Fed Funds, Treasury ngày 19/2), có thể bỏ lỡ tín hiệu đảo chiều lãi suất mới nhất."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 184600000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_7d",
-        "value": 2.98,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.26,
+        "key": "change7d_pct",
+        "value": 2.88,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "us_real_yield_change20d",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
+        "key": "vix_change20d",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 12.34,
-        "unit": "% (18.71-6.37)",
-        "source": "monthly_series_30d"
+        "key": "premium_current",
+        "value": 15.06,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_5d",
-        "value": 2.84,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "intl_gold_price",
+        "value": 5136.14,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T07:25:23.151Z",
+    "latestTimestamp": "2026-02-23T08:14:34.679Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 160625498.02093717,
-    "premiumPct": 14.93,
-    "change7dPct": 2.98,
-    "change30dPct": 3.19,
+    "intlVndPerTael": 160435383.22764108,
+    "premiumPct": 15.06,
+    "change7dPct": 2.88,
+    "change30dPct": 3.08,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157375802,
-    "ma30VndPerTael": 156433396,
+    "ma7VndPerTael": 157352840,
+    "ma30VndPerTael": 156428038,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T07:25:44.683Z",
+    "fetchedAt": "2026-02-23T08:14:48.739Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5134.115,
+        "value": 5137.525,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 0.72,
-        "change5dPct": 2.84,
-        "change20dPct": 2.46,
+        "change1dPct": 0.79,
+        "change5dPct": 2.91,
+        "change20dPct": 2.53,
         "relationToGold": "context"
       },
       {
@@ -184,8 +184,28 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area",
       "2026-02-18 | Federal Reserve Monetary Policy Press Releases | Minutes of the Federal Open Market Committee, January 27–28, 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-23 | theguardian.com | Were hungry , there are no job : a South African township desperate gold rush | South Africa",
+      "2026-02-23 | union-bulletin.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | thestar.com.my | Gold climbs to 3 - week high as US tariff ruling stokes uncertainty",
+      "2026-02-23 | finance.yahoo.com | Dollar dips as court ruling upends US tariff wall",
+      "2026-02-23 | wsls.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-23 | marketscreener.com | EMERGING MARKETS - Asia FX gains as tariff concerns hurt dollar ; AI - led stocks hit records",
+      "2026-02-23 | union-bulletin.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | thestar.com.my | Gold climbs to 3 - week high as US tariff ruling stokes uncertainty",
+      "2026-02-23 | howestreet.com | Conflicting Data , Conflicting Results",
+      "2026-02-23 | wsls.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | clickondetroit.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-23 | union-bulletin.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | thestar.com.my | Gold climbs to 3 - week high as US tariff ruling stokes uncertainty",
+      "2026-02-23 | wsls.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | clickondetroit.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | investinglive.com | investingLive Asia - Pacific FX news wrap : USD and crypto slammed lower",
+      "2026-02-23 | moneycontrol.com | Silver ETFs jump over 6 %, gold ETFs gain 2 % as Trump tariff ruling , softer dollar lift bullion"
+    ]
   }
 }
