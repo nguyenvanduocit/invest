@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T13:31:54.881Z",
+  "generatedAt": "2026-02-23T14:21:00.571Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,41 +7,22 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng khoảng cách quá lớn so với MA7 (17.3%) báo hiệu rủi ro điều chỉnh kỹ thuật cao. Nhà đầu tư nên chờ hồi điều chỉnh về vùng hỗ trợ gần MA7 (157.4 triệu VND/lượng) hoặc xác nhận phá đỉnh thế giới bền vững trước khi tham gia.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184.6 triệu đồng/lượng (percentile 5 năm 100%) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (157.4 triệu VND/lượng) tới 17.3% - khoảng cách quá lớn báo hiệu rủi ro điều chỉnh kỹ thuật ngắn hạn.",
-      "Động lượng tăng 7 ngày (3.15%) tập trung vào cuối chuỗi dữ liệu, trong khi giá thế giới đã chạm đỉnh mới 5149.8 USD/oz cần thời gian xác nhận.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và USD Index giảm 2.06% tạo đà hỗ trợ vĩ mô cho vàng, nhưng VIX tăng 29.35% cho thấy bất ổn thị trường có thể gây biến động hai chiều.",
-      "Premium 14.76% nằm trong biên dao động 30 ngày (11.31%-18.71%), không cực đoan nhưng thanh khoản ở đỉnh lịch sử có thể gặp khó khi thị trường điều chỉnh."
+      "Động lượng tăng giá mạnh trong 7 ngày qua (+3.32%) được hỗ trợ bởi lợi suất thực Mỹ giảm sâu 6.77% trong 20 ngày và VIX tăng 29.35%, phản ánh lo ngại rủi ro vĩ mô từ thuế quan Trump 15%.",
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (157.45 triệu VND/lượng) và MA30 (156.45 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua kéo dài.",
+      "Premium 14.57% nằm trong biên dao động 30 ngày (6.37% - 18.71%), không có dấu hiệu bất thường cực đoan so với đỉnh premium 18.71% ngày 17/02."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá cách xa MA7 tới 17.3% và VIX tăng 29.35% trong 20 ngày qua.",
-      "Dữ liệu vĩ mô thiếu cập nhật (USD Index, Fed Funds, Treasury ngày 13-19/2) có thể bỏ lỡ tín hiệu chính sách mới từ Fed.",
-      "Premium có thể co hẹp nếu giá thế giới tiếp tục tăng mà giá Việt Nam điều chỉnh chậm, gây thiệt hại cho người mua ở đỉnh."
+      "Đang ở mức giá cao nhất lịch sử (percentile 100% 5 năm), rủi ro mua đỉnh và điều chỉnh ngắn hạn rất cao khi thị trường rung lắc mạnh 2.27%/ngày.",
+      "Sự kiện thuế quan Trump gây biến động hai chiều; Tòa án Tối cao đã bác bỏ một số thuế quan, tạo bất định chính sách lớn.",
+      "Lịch sử cho thấy thời gian phục hồi sau đợt sụt giảm tồi tệ lên tới 1369 ngày, cần thận trọng với vốn."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "sjc_price_latest",
         "value": 184600000,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_price",
-        "value": 5149.8,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_pct",
-        "value": 14.76,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "price_vs_ma7_gap",
-        "value": 17.3,
-        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -51,35 +32,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "change_7d_pct",
+        "value": 3.32,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily_pct",
+        "value": 2.27,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_20d_change",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "vix_20d_change_pct",
         "value": 29.35,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "change7d_pct",
-        "value": 3.15,
+        "key": "premium_range_30d",
+        "value": 6.37,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T13:30:41.070Z",
+    "latestTimestamp": "2026-02-23T14:20:10.652Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 160861981.62080678,
-    "premiumPct": 14.76,
-    "change7dPct": 3.15,
-    "change30dPct": 3.36,
-    "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 157413783,
-    "ma30VndPerTael": 156442258,
+    "intlVndPerTael": 161120632.8737719,
+    "premiumPct": 14.57,
+    "change7dPct": 3.32,
+    "change30dPct": 3.52,
+    "volatilityDailyPct": 2.27,
+    "ma7VndPerTael": 157450733,
+    "ma30VndPerTael": 156450880,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T13:31:02.259Z",
+    "fetchedAt": "2026-02-23T14:20:29.453Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5148.675,
+        "value": 5159.915,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 1.01,
-        "change5dPct": 3.13,
-        "change20dPct": 2.75,
+        "change1dPct": 1.23,
+        "change5dPct": 3.35,
+        "change20dPct": 2.97,
         "relationToGold": "context"
       },
       {
@@ -191,8 +184,27 @@
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks",
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-23 | forbes.com | Forbes Daily : Trump Sets 15 % Global Tariff After Supreme Court Ruling",
+      "2026-02-23 | forbes.com | Worse  Than 2008 Urgent Fed Financial Crisis Warning Predicted To Blow Up The Bitcoin Price",
+      "2026-02-23 | investing.com | Gold : Weekly Hammer Signals Buyers in Control as New Upside Targets Come Into View",
+      "2026-02-23 | wwno.org | Trump to raise global tariffs . And , most say the state of the union is weak , poll says",
+      "2026-02-23 | waer.org | Trump to raise global tariffs . And , most say the state of the union is weak , poll says",
+      "2026-02-23 | wesa.fm | Trump to raise global tariffs . And , most say the state of the union is weak , poll says"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-23 | journalrecord.com | US businesses await refunds after Supreme Court overturns trump tariffs",
+      "2026-02-23 | forbes.com | Worse  Than 2008 Urgent Fed Financial Crisis Warning Predicted To Blow Up The Bitcoin Price",
+      "2026-02-23 | rigzone.com | Analysts Examine What Tariff Decision Means for Oil",
+      "2026-02-23 | thezimbabwemail.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | zerohedge.com | US equity futures are lower ; President Trump raises the blanket tariff rate to 15 % from 10 % over the weekend - Newsquawk US Opening News",
+      "2026-02-23 | news.az | Dollar weakness more cyclical than structural"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-23 | investing.com | Gold : Weekly Hammer Signals Buyers in Control as New Upside Targets Come Into View",
+      "2026-02-23 | thezimbabwemail.com | US futures , bitcoin fall and Asian markets are mixed after the Supreme Court nixes Trump tariffs",
+      "2026-02-23 | zerohedge.com | US equity futures are lower ; President Trump raises the blanket tariff rate to 15 % from 10 % over the weekend - Newsquawk US Opening News",
+      "2026-02-23 | orovillemr.com | US futures slip and after Supreme Court nixes Trump tariffs"
+    ]
   }
 }
