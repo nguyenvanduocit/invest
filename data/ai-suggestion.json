@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-23T16:19:56.169Z",
+  "generatedAt": "2026-02-23T17:26:09.748Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,66 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.29%/ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 4.28%/tuần, nhưng rủi ro mua đỉp cao hơn lợi ích ngắn hạn khi premium đã co lại từ đỉnh 18.71% về 13.51%. Nên chờ hồi chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định giá thế giới trước khi vào lệnh.",
     "reasons": [
-      "Động lượng tăng rất mạnh: Giá thế giới tăng 4.43% trong 5 ngày và giá SJC tăng 4.32% trong 7 ngày, xung lượng tăng giá chưa hạ nhiệt.",
-      "Hỗ trợ vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và chỉ số USD giảm 2.06%, tạo đòn bẩy đẩy giá vàng lên cao.",
-      "Xu hướng kỹ thuật xác nhận: Giá thế giới (5,208 USD/oz) và giá SJC (184.6 triệu VND/lượng) đều đang giao dịch cao hơn đáng kể so với MA7 và MA30."
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (157.67 triệu) và MA30 (156.5 triệu), tín hiệu quá mua rõ ràng ở mức percentile 100% 5 năm.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 6.77% trong 20 ngày (xuống 1.79%) và DXY giảm 2.06% đã đẩy giá thế giới lên 5206 USD/oz, nhưng động lực này đã phần nào được định giá.",
+      "Premium SJC co về 13.51% từ đỉnh 18.71% (17/02), cho thấy thị trường nội địa đang định giá lại mức giá cao và thanh khoản có thể đang thắt chặt."
     ],
     "risks": [
-      "Rủi ro mua đỉnh cực cao: Giá đang ở phân vị 100% trong 5 năm qua, khả năng sinh lời ngắn hạn thấp và rủi ro điều chỉnh giảm giá ngay lập tức.",
-      "Biến động thất thường: Độ dao động ngày lên tới 2.29%, cộng hưởng với việc premium co giãn từ 6.37% lên 18.71% trong tháng qua cho thấy thị trường bất ổn.",
-      "Thiếu tín hiệu địa chính trị rõ ràng trong dữ liệu đầu vào, đà tăng có thể chỉ dựa trên động lực kỹ thuật ngắn hạn dễ đảo chiều."
+      "Mua đỉnh lịch sử: Rủi ro điều chỉnh kỹ thuật sâu khi giá cách xa MA7 tới 17% và biến động ngày ở mức cao 2.29%.",
+      "Sự kiện vĩ mô mập mờ: Tin tức về thuế quan Trump và bài phát biểu của Fed (Waller) có thể gây biến động hai chiều khó lường cho giá thế giới.",
+      "Thanh khoản giảm: Việc premium giảm khi giá thế giới tăng có thể báo hiệu cầu nội địa yếu đi ở mức giá hiện tại."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
+        "key": "SJC Price vs MA7",
+        "value": 17.09,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": 4.32,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "SJC Premium Change",
+        "value": -5.2,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "World Gold Change 5d",
-        "value": 4.43,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield Change 20d",
+        "key": "US Real Yield 20d Change",
         "value": -6.77,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot 20d Change",
+        "value": 3.98,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC 5Y Percentile",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       },
       {
         "key": "Daily Volatility",
         "value": 2.29,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Current Premium",
-        "value": 13.47,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Current World Price",
-        "value": 5208.29,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-23T16:19:13.567Z",
+    "latestTimestamp": "2026-02-23T17:25:16.654Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162689192.60437298,
-    "premiumPct": 13.47,
-    "change7dPct": 4.32,
-    "change30dPct": 4.53,
+    "intlVndPerTael": 162623717.01570994,
+    "premiumPct": 13.51,
+    "change7dPct": 4.28,
+    "change30dPct": 4.49,
     "volatilityDailyPct": 2.29,
-    "ma7VndPerTael": 157674813,
-    "ma30VndPerTael": 156503165,
+    "ma7VndPerTael": 157665459,
+    "ma30VndPerTael": 156500982,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +77,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-23T16:19:35.253Z",
+    "fetchedAt": "2026-02-23T17:25:38.249Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5213.665,
+        "value": 5210.615,
         "unit": "USD/oz",
         "date": "2026-02-23",
-        "change1dPct": 2.28,
-        "change5dPct": 4.43,
-        "change20dPct": 4.05,
+        "change1dPct": 2.22,
+        "change5dPct": 4.37,
+        "change20dPct": 3.98,
         "relationToGold": "context"
       },
       {
@@ -185,7 +179,14 @@
       "2026-02-19 | ECB Press / Speeches | Piero Cipollone: The digital euro: enhancing payments in the euro area"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-23 | newsghana.com.gh | Ghana Cuts Debt by GH¢82bn and Hits 3 . 8 % Inflation in Sweeping 2025 Turnaround",
+      "2026-02-23 | timesherald.com | US stocks dip after Trump ramps up his tariffs",
+      "2026-02-23 | economictimes.indiatimes.com | Will BTC USD Bitcoin surpass gold : BTC USD price today drops to $66 , 000 : Why Robert Kiyosaki bought more BTC USD during crypto crash and said it will be better than gold ?",
+      "2026-02-23 | 247wallst.com | AAPD 3 . 43 % Yield Looks Great Until You See the 40 % Hangover",
+      "2026-02-23 | livemint.com | Gold rate today jumps 2 %! SIP vs lumpsum : How to make the most of the rise in yellow metal prices ? Explained",
+      "2026-02-23 | journalrecord.com | US businesses await refunds after Supreme Court overturns trump tariffs"
+    ],
     "dollarYieldHeadlines": []
   }
 }
