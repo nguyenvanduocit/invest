@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-23T09:19:46.813Z",
+  "checkedAt": "2026-02-23T10:19:54.289Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-23T09:19:46.738Z",
+  "dataFetchedAt": "2026-02-23T10:19:54.215Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -26,7 +26,7 @@
       },
       {
         "id": "gdelt_country_actions",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_dollar_yields",
@@ -42,7 +42,7 @@
   ],
   "warnings": [
     "Stale factors: US Dollar Trade Weighted Index (2026-02-13)",
-    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (The operation timed out.)"
+    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
