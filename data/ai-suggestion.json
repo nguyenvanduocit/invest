@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T11:17:43.920Z",
+  "generatedAt": "2026-02-24T12:15:03.418Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 184.6 triệu VND/lượng đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7 ngày (+6.05%), rủi ro mua đỉnh cao khi giá đã vượt xa MA7 (159.8 triệu) và thanh khoản có thể thấp.",
+    "thesis": "Giá SJC 184.6 triệu VND/lượng đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 5.86% trong 7 ngày, nhưng lợi suất thực Mỹ 10Y nhảy vọt +0.56% lên 1.8% tạo áp lực ngược, khuyến nghị chờ xác nhận xu hướng sau đợt điều chỉnh kỹ thuật.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng vượt xa MA7 (159.8 triệu) và MA30 (157.5 triệu), tín hiệu quá mua ngắn hạn rõ ràng.",
-      "Premium 13.61% nằm trong biên dao động 30 ngày (5.85%-18.13%), không cực đoan nhưng cho thấy tâm lý hưng phấn.",
-      "Lợi suất thực 10Y giảm 7.69% (20 ngày) xuống 1.8%, hỗ trợ giá vàng thế giới tăng từ 4687 USD/oz (02/02) lên 5176 USD/oz.",
-      "Tariff 10% của Trump và VIX tăng 18.65% (20 ngày) tạo bất định vĩ mô, thúc đẩy nhu cầu trú ẩn."
+      "Giá SJC 184.6 triệu VND/lượng ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (159.8 triệu VND/lượng) 15.5% báo hiệu vùng quá mua kỹ thuật ngắn hạn.",
+      "Lợi suất thực Mỹ 10Y tăng mạnh +0.56% lên 1.8% và VIX giảm -5.64% xuống 19.09 cho thấy rủi ro ngắn hạn giảm, làm giảm hấp dẫn holding vàng.",
+      "Động lượng tăng 7 ngày (+5.86%) quá nhanh so với biến động ngày (2.3%), rủi ro điều chỉnh sinh lời cao.",
+      "Premium 13.81% nằm trong vùng trung bình 30 ngày (10.77%-18.13%), không có tín hiệu bất thường cầu nội địa."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: percentile 5Y = 100%, rủi ro điều chỉnh ngay khi động lượng yếu đi.",
-      "Biến động cao 2.3%/ngày và thời gian phục hồi xấu nhất lên đến 1369 ngày nếu mua sai điểm.",
-      "Lãi suất Fed Funds vẫn ở 3.64%, nếu lợi suất thực bật tăng lại sẽ gây áp lực giảm lên giá vàng."
+      "Rủi ro điều chỉnh kỹ thuật sâu sau khi tăng 5.86% trong 7 ngày, giá có thể về vùng MA7 (~159.8 triệu VND/lượng).",
+      "Lợi suất thực Mỹ tiếp tục tăng sẽ gây áp lực giảm lên giá vàng thế giới, kéo theo giá SJC.",
+      "Thanh khoản giảm nếu nhà đầu tư chốt lời sau đợt tăng giá mạnh."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 184600000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": 6.05,
+        "key": "change_7d_pct",
+        "value": 5.86,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change_1d",
+        "value": 0.56,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change_1d",
+        "value": -5.64,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
         "key": "premium_current",
-        "value": 13.61,
+        "value": 13.81,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd",
-        "value": 159800930,
+        "key": "premium_range_30d",
+        "value": 10.77,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "ma7_vnd_per_tael",
+        "value": 159759458,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "real_yield_change_20d",
-        "value": -7.69,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 18.65,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "sjc_current_price",
+        "value": 184600000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T11:16:44.543Z",
+    "latestTimestamp": "2026-02-24T12:14:13.866Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162485052.24109372,
-    "premiumPct": 13.61,
-    "change7dPct": 6.05,
-    "change30dPct": 3.89,
+    "intlVndPerTael": 162194748.84770098,
+    "premiumPct": 13.81,
+    "change7dPct": 5.86,
+    "change30dPct": 3.71,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 159800930,
-    "ma30VndPerTael": 157477322,
+    "ma7VndPerTael": 159759458,
+    "ma30VndPerTael": 157467645,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T11:17:06.111Z",
+    "fetchedAt": "2026-02-24T12:14:23.954Z",
     "healthy": false,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": null,
+        "value": 5167.335,
         "unit": "USD/oz",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-24",
+        "change1dPct": -1.15,
+        "change5dPct": 5.94,
+        "change20dPct": -0.22,
         "relationToGold": "context"
       },
       {
@@ -193,22 +191,10 @@
       "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-24 | timesfreepress.com | US stocks drop after Trump ramps up his tariffs and investors dump potential AI losers",
-      "2026-02-24 | japanherald.com | Gold bars worth donated anonymously to fix Osaka aging water pipes",
-      "2026-02-24 | southwalesargus.co.uk | Trump new global tariffs come into effect at lower - than - feared 10 %",
-      "2026-02-24 | marketscreener.com | European Midday Briefing : Shares Fall ; Tariff , AI Uncertainty Continues to Cloud Markets",
-      "2026-02-24 | newzealandstar.com | Gold bars worth donated anonymously to fix Osaka aging water pipes",
-      "2026-02-24 | northkoreatimes.com | Gold bars worth donated anonymously to fix Osaka aging water pipes"
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-24 | finance.yahoo.com | Gold Pulls Back After Four - Day Ascent as Asian Traders Return"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-24 | timesfreepress.com | US stocks drop after Trump ramps up his tariffs and investors dump potential AI losers",
-      "2026-02-24 | southwalesargus.co.uk | Trump new global tariffs come into effect at lower - than - feared 10 %",
-      "2026-02-24 | somersetcountygazette.co.uk | Trump new global tariffs come into effect at lower - than - feared 10 %",
-      "2026-02-24 | lebanondemocrat.com | Asian markets mixed as traders weigh AI and tariffs outlook",
-      "2026-02-24 | theargus.co.uk | Trump new global tariffs come into effect at lower - than - feared 10 %",
-      "2026-02-24 | morningstar.com | This award - winning hedge fund manager is betting on gold and against Treasurys in a new era of capital scarcity"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
