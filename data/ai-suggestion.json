@@ -1,85 +1,79 @@
 {
-  "generatedAt": "2026-02-24T03:01:17.947Z",
+  "generatedAt": "2026-02-24T04:37:24.567Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184.6 triệu VND/lượng (percentile 5 năm 100%) với động lượng tăng mạnh 7 ngày qua (+6.31%), nhưng rủi ro điều chỉnh kỹ thuật rất lớn khi biên độ dao động lên tới 2.3%/ngày và giá thế giới đã có dấu hiệu giảm nhẹ phiên gần nhất.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 5.87% trong 7 ngày, tạo áp lực điều chỉnh kỹ thuật ngắn hạn; tuy nhiên xu hướng trung hạn vẫn tích cực nhờ lợi suất thực Mỹ giảm 7.69% trong 20 ngày và lo ngại thuế quan.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (159.86 triệu) và MA30 (157.49 triệu), cho thấy thị trường đang ở trạng thái quá mua (overbought) ngắn hạn.",
-      "Động lượng tăng 7 ngày đạt 6.31% kết hợp với volatility 2.3%/ngày báo hiệu thanh khoản cao nhưng biến động thất thường, rủi ro chốt lời nhanh.",
-      "Giá thế giới XAUUSD giảm 0.73% phiên gần nhất về 5189 USD/oz dù vẫn tăng 6.4% trong 5 ngày, cho thấy áp lực bán ngắn hạn xuất hiện.",
-      "Premium 13.33% nằm trong vùng trung bình của chuỗi 30 ngày (dao động 5.85%-18.13%), không quá cao nhưng cho thấy giá nội địa đã phản giá đủ mức tăng của thế giới."
+      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (159.8 triệu) tới 15.5% sau đợt tăng 5.87% trong 7 ngày qua.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 7.69% trong 20 ngày xuống 1.8%, giảm chi phí cơ hội nắm giữ vàng và hỗ trợ giá thế giới tăng 5.94% trong 5 ngày.",
+      "Premium 13.8% nằm trong biên dao động 30 ngày (10.77%-18.13%), không có dấu hiệu căng thẳng cực đoan so với đỉnh 18.13% ngày 17/02.",
+      "VIX tăng 18.65% trong 20 ngày lên 19.09 kết hợp tin tức thuế quan Trump tạo nền tảng an toàn cho vàng trung hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở mức cao nhất 5 năm (percentile 100%), dễ xảy ra hiện tượng chốt lời ồ ạt.",
-      "Biên độ dao động 2.3%/ngày tương đương ~4.2 triệu VND/lượng, nhà đầu tư ngắn hạn có thể bị 'đu đỉnh' nếu mua sai điểm.",
-      "Lợi suất thực USD 10 năm vẫn ở 1.8% và Fed Funds 3.64%, áp lực lãi suất cao có thể kìm hãm đà tăng giá vàng thế giới."
+      "Rủi ro điều chỉnh kỹ thuật ngắn hạn cao khi giá quá mua ở mức percentile 100% và đã tăng 5.87% chỉ trong 7 ngày.",
+      "Lạm phát kỳ vọng Mỹ (breakeven 10Y) giảm 2.59% trong 20 ngày, có thể làm suy yếu động lực tăng giá nếu không có sự kiện địa chính trị mới.",
+      "Biến động ngày 2.3% và lịch sử hồi phục xấu nhất 1369 ngày cho thấy rủi ro thanh khoản nếu thị trường đảo chiều."
     ],
     "evidence": [
       {
-        "key": "sjc_price_latest",
-        "value": 184600000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_7d",
-        "value": 6.31,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 13.33,
+        "key": "change_7d_pct",
+        "value": 5.87,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_change_1d",
-        "value": -0.73,
+        "key": "us_real_yield_10y_change_20d",
+        "value": -7.69,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "xauusd_change_5d",
-        "value": 6.4,
+        "key": "premium_vs_30d_high",
+        "value": 13.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change_20d",
+        "value": 18.65,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "gold_spot_change_5d",
+        "value": 5.94,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "price_vs_ma7_premium",
+        "value": 15.5,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T03:00:32.372Z",
+    "latestTimestamp": "2026-02-24T04:36:58.867Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162884327.34571022,
-    "premiumPct": 13.33,
-    "change7dPct": 6.31,
-    "change30dPct": 4.15,
+    "intlVndPerTael": 162212093.745585,
+    "premiumPct": 13.8,
+    "change7dPct": 5.87,
+    "change30dPct": 3.72,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 159857969,
-    "ma30VndPerTael": 157490631,
+    "ma7VndPerTael": 159761936,
+    "ma30VndPerTael": 157468223,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T03:00:54.756Z",
+    "fetchedAt": "2026-02-24T04:37:06.917Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5189.655,
+        "value": 5167.315,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -0.73,
-        "change5dPct": 6.4,
-        "change20dPct": 0.21,
+        "change1dPct": -1.15,
+        "change5dPct": 5.94,
+        "change20dPct": -0.22,
         "relationToGold": "context"
       },
       {
@@ -192,14 +186,12 @@
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-24 | moneycontrol.com | Gold price today dips marginally to $5 , 197 on Comex ; what should investors track ?",
       "2026-02-24 | theage.com.au | Russia - Ukraine war : Putin is sending his country broke",
-      "2026-02-24 | premium.bisnis.com | Top Stock Picks as Gold Price Prospects Remain Bright",
-      "2026-02-24 | marketscreener.com | Dollar languishes as Asia markets reopen to renewed tariff turmoil",
       "2026-02-24 | thebusinessjournal.com | US stocks drop after Trump ramps up his tariffs and investors dump potential AI losers",
-      "2026-02-24 | iraq-businessnews.com | Central Bank of Iraq Warns of Currency - Related Fraud Schemes | Iraq Business News",
-      "2026-02-24 | smh.com.au | Russia - Ukraine war : Putin is sending his country broke"
-    ],
-    "dollarYieldHeadlines": []
+      "2026-02-24 | smallcapnetwork.com | Tariff Turbulence and AI Anxiety Rattle Markets as Small Caps Feel the Pressure North America Closes Lower on February 23 , 2026"
+    ]
   }
 }
