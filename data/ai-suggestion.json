@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T14:23:04.540Z",
+  "generatedAt": "2026-02-24T15:21:49.561Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao (2.32%/ngày), đòi hỏi nhà đầu tư thận trọng chờ tín hiệu hồi mức thay vì đu đỉnh. Dù xu hướng trung hạn tích cực nhờ lợi suất thực Mỹ giảm (-7.69% trong 20 ngày), nhưng giá thế giới vừa giảm mạnh -2.13% trong phiên gần nhất cần thời gian để xác nhận đáy.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 5.31% trong 7 ngày, tuy nhiên thanh khoản thấp và sự vắng mặt của tin tức địa chính trị cấp bách khiến rủi ro mua đuổi là rất lớn. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~159.6 triệu VND/lượng) hoặc xác nhận xu hướng rõ ràng hơn trước khi hành động.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (157.4 triệu VND/lượng), rủi ro điều chỉnh ngắn hạn rất lớn.",
-      "Động lượng tăng 7 ngày quá mạnh (+4.75%) kết hợp với biến động cao (2.32%/ngày) thường báo hiệu thị trường quá mua cần nghỉ ngơi.",
-      "Lợi suất thực Mỹ 10Y giảm sâu -7.69% trong 20 ngày qua (xuống 1.8%) là động lực hỗ trợ vàng trung hạn, nhưng giá vàng thế giới đã giảm -2.13% phiên gần nhất cho thấy áp lực chốt lời.",
-      "Premium 15.02% nằm trong biên độ dao động phổ biến của 30 ngày qua (10.77% - 18.13%), không có tín hiệu bất thường về căng thẳng cung cầu cục bộ."
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (159.6 triệu) và MA30 (157.4 triệu), tín hiệu quá mua kỹ thuật ngắn hạn sau đà tăng 5.31% trong 7 ngày.",
+      "VIX tăng mạnh 30.09% trong 20 ngày lên mức 21.01 cho thấy lo ngại thị trường, nhưng thiếu tin tức địa chính trị cụ thể để thúc đẩy giá vàng leo thang bền vững.",
+      "Lợi suất thực Mỹ 10N tăng lên 1.8% và Fed Funds giữ nguyên 3.64% tạo áp lực dồn tiền vào USD, hạn chế động lực tăng giá vàng thế giới dài hạn.",
+      "Premium 14.41% nằm trong biên dao động 30 ngày (5.85%-18.13%), không có tín hiệu bất thường nhưng cho thấy giá Việt Nam đã phản ứng đủ so với thế giới."
     ],
     "risks": [
-      "Rủi ro mua đỉnh ngắn hạn rất cao khi giá đang ở percentile 100% trong 5 năm và tăng hơn 4.75% chỉ trong 7 ngày.",
-      "Thị trường thế giới đang điều chỉnh (giảm -2.13% phiên 24/02) có thể kéo giá SJC giảm theo trong các phiên tới.",
-      "Biên độ dao động 2.32%/ngày tương đương khoảng 4.2 triệu VND/lượng, nhà đầu tư cần chấp nhận biến động giá lớn."
+      "Rủi ro điều chỉnh giá sâu nếu các ngân hàng trung ương bán vàng can thiệp hoặc dòng tiền đảo chiều sau đợt tăng nóng.",
+      "Thanh khoản thị trường có thể giảm đột ngột khi nhà đầu tư chốt lời tại vùng giá kỷ lục 5 năm.",
+      "Biến động ngày 2.31% cộng với drawdown tồi tệ 41.26% trong lịch sử cho thấy rủi ro giảm giá là hiện hữu."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "Giá SJC hiện tại",
+        "value": 184600000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Đỉnh 5 năm (Percentile)",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 17.2,
+        "key": "Thay đổi 7 ngày",
+        "value": 5.31,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.32,
-        "unit": "%/ngày",
+        "key": "MA7 giá SJC",
+        "value": 159638299,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
-        "value": -7.69,
+        "key": "VIX chỉ số sợ hãi",
+        "value": 21.01,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biến động VIX 20 ngày",
+        "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_1d",
-        "value": -2.13,
+        "key": "Lợi suất thực Mỹ 10 năm",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 4.75,
+        "key": "Premium giá SJC",
+        "value": 14.41,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 10.77,
-        "unit": "%",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T14:22:27.345Z",
+    "latestTimestamp": "2026-02-24T15:21:02.071Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 160499283.03925917,
-    "premiumPct": 15.02,
-    "change7dPct": 4.75,
-    "change30dPct": 2.62,
-    "volatilityDailyPct": 2.32,
-    "ma7VndPerTael": 159517248,
-    "ma30VndPerTael": 157411129,
+    "intlVndPerTael": 161346638.96236676,
+    "premiumPct": 14.41,
+    "change7dPct": 5.31,
+    "change30dPct": 3.17,
+    "volatilityDailyPct": 2.31,
+    "ma7VndPerTael": 159638299,
+    "ma30VndPerTael": 157439374,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T14:22:43.504Z",
+    "fetchedAt": "2026-02-24T15:21:23.269Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5116.505,
+        "value": 5140.305,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -2.13,
-        "change5dPct": 4.9,
-        "change20dPct": -1.2,
+        "change1dPct": -1.67,
+        "change5dPct": 5.39,
+        "change20dPct": -0.74,
         "relationToGold": "context"
       },
       {
@@ -168,36 +174,32 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 19.09,
+        "value": 21.01,
         "unit": "index",
-        "date": "2026-02-20",
-        "change1dPct": -5.64,
-        "change5dPct": -7.33,
-        "change20dPct": 18.65,
+        "date": "2026-02-23",
+        "change1dPct": 10.06,
+        "change5dPct": -0.9,
+        "change20dPct": 30.09,
         "relationToGold": "direct"
       }
     ],
     "policyHeadlines": [
+      "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve",
       "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
-      "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build",
-      "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg"
+      "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-24 | newsx.com | Gold Surpasses US Dollar , Becomes World Largest Reserve Asset : Central Banks Now Hold $6 Trillion Worth 36 , 000 Tonnes Of Gold , Yellow Metal Leads After 30 Years",
+      "2026-02-24 | 247wallst.com | You Could Have Captured Gold 73 % Surge For Only 0 . 18 %",
+      "2026-02-24 | cityam.com | Jamie Dimon warns of financial crisis - style AI bubble reckoning",
       "2026-02-24 | newsghana.com.gh | Ghana Record Low Inflation Opens a Strategic Window for Business",
       "2026-02-24 | thebftonline.com | Inflation collapse and a strong Cedi : Opportunity or illusion for the real economy ?",
-      "2026-02-24 | marketscreener.com | Sterling lingers near one - month low ahead of BoE Bailey",
-      "2026-02-24 | rttnews.com | Gold Slips From Three - week High On Firm Dollar",
-      "2026-02-24 | businessinsider.com | Stocks and the Economy Are Seeing a Dangerous Disconnect , Mark Zandi Warns"
+      "2026-02-24 | marketscreener.com | Sterling lingers near one - month low ahead of BoE Bailey"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-24 | newsghana.com.gh | Ghana Record Low Inflation Opens a Strategic Window for Business",
-      "2026-02-24 | investopedia.com | Stock Market Today : Futures Little Changed After Indexes Tumble on Tariff Uncertainty , AI Disruption Concerns ; AMD Stock Soars on Meta Chips Deal",
-      "2026-02-24 | thebftonline.com | Inflation collapse and a strong Cedi : Opportunity or illusion for the real economy ?",
-      "2026-02-24 | financialmirror.com | Trump 15 % tariff threat could hurt dollar credibility"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
