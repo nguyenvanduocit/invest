@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T20:10:27.163Z",
+  "generatedAt": "2026-02-24T21:12:05.207Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,67 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động cao 2.27%/ngày, trong khi giá thế giới giảm 1.5% và VIX tăng vọt 30% trong 20 ngày cho thấy thị trường đang trong trạng thái bất định cao độ, không phù hợp để mua đuổi hay bán tháo vội vàng.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản thấp và biến động cao khiến rủi ro mua đuôi là rất lớn; nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật trước khi tham gia.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (160.5 triệu) và MA30 (157.6 triệu) khoảng 15-17%, cho thấy đã mua đuổi.",
-      "Giá thế giới XAUUSD giảm 1.5% trong ngày xuống 5149 USD/oz, kết hợp tin tức 'Gold Price Crashes $61' cho thấy động lượng ngắn hạn đang yếu đi.",
-      "VIX tăng 30.09% trong 20 ngày lên mức 21.01 cho thấy lo ngại thị trường tăng, nhưng lợi suất thực 10Y vẫn dương 1.8% gây áp lực lên vàng.",
-      "Premium 14.19% nằm trong biên dao động 30 ngày (5.85%-18.13%), không cực đoan nhưng thanh khoản có thể bị ảnh hưởng khi giá biến động mạnh 2.27%/ngày."
+      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (157.6 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua.",
+      "Động lượng tăng nóng trong 7 ngày qua (+3.56%) kết hợp với biến động ngày cao (2.27%) và VIX tăng 30.09% trong 20 ngày cho thấy tâm lý thị trường đang hoảng loạn và thiếu ổn định.",
+      "Premium 14.02% nằm trong biên dao động 30 ngày (5.85% - 18.13%), không có tín hiệu bất thường nhưng cho thấy giá Việt Nam đã phản ứng đủ so với đợt tăng giá thế giới.",
+      "Lợi suất thực 10Y của Mỹ tăng nhẹ (+0.56%) lên 1.8% và USD Index ổn định tạo áp lực ngắn hạn lên giá vàng thế giới, giảm khả năng tăng tiếp trong phiên tới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở percentile 100% trong 5 năm, xa MA7 và MA30.",
-      "Lợi suất thực USD 1.8% và Fed Funds 3.64% duy trì áp lực lên giá vàng thế giới, hạn chế đà tăng.",
-      "Biên độ dao động 2.27%/ngày tương đương ~4.2 triệu VND/lượng có thể gây thua lỗ ngắn hạn lớn nếu điểm vào không tốt."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi thị trường đã tăng quá nóng và chạm đỉnh lịch sử.",
+      "Biến động giá cao (2.27%/ngày) có thể gây thua lỗ nhanh nếu thị trường đảo chiều.",
+      "Thông tin về việc Kevin Warsh được đề cử làm Fed Chair có thể gây biến động lớn cho giá tài sản rủi ro và USD."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma7_premium",
-        "value": 15.04,
+        "key": "SJC Price vs MA30",
+        "value": 27.01,
+        "unit": "million VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 7d",
+        "value": 3.56,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_1d",
-        "value": -1.5,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "Premium Range 30d",
+        "value": 5.85,
+        "unit": "% (min)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "US Real Yield 10Y Change 1d",
+        "value": 0.56,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.27,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 5.85,
-        "unit": "%",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T20:09:53.652Z",
+    "latestTimestamp": "2026-02-24T21:11:26.312Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 161658676.99624932,
-    "premiumPct": 14.19,
-    "change7dPct": 3.4,
-    "change30dPct": 2.41,
+    "intlVndPerTael": 161899266.27997893,
+    "premiumPct": 14.02,
+    "change7dPct": 3.56,
+    "change30dPct": 2.56,
     "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 160462907,
-    "ma30VndPerTael": 157581051,
+    "ma7VndPerTael": 160497277,
+    "ma30VndPerTael": 157589070,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +78,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T20:10:08.230Z",
+    "fetchedAt": "2026-02-24T21:11:47.829Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5149.145,
+        "value": 5156.675,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -1.5,
-        "change5dPct": 5.57,
-        "change20dPct": -0.57,
+        "change1dPct": -1.36,
+        "change5dPct": 5.72,
+        "change20dPct": -0.42,
         "relationToGold": "context"
       },
       {
@@ -185,19 +179,18 @@
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Decoupling : Gold Pierces $5 , 180 as WTI Crude Stumbles Amid Global Trade Volatility",
+      "2026-02-24 | coloradohometownweekly.com | Supreme Court ruling against Trump tariffs no end to policy chaos"
+    ],
     "countryActionHeadlines": [
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Decoupling : Gold Pierces $5 , 180 as WTI Crude Stumbles Amid Global Trade Volatility",
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - The  Warsh Shock : Nomination of Kevin Warsh as Fed Chair Signals Aggressive Balance Sheet Pivot and 2026 Rate Normalization",
       "2026-02-24 | finance.yahoo.com | Stocks Set to Open Lower Amid Tariff Uncertainty , Nvidia Earnings and U . S . Economic Data Awaited",
       "2026-02-24 | cbsnews.com | What is the highest gold price in history ? Here how it changed over the past year .",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Divide : Fed Minutes Reveal  Neutral Hold  as Markets Pivot to July Rate Cut",
       "2026-02-24 | marketscreener.com | Gold slips from three - week high on dollar strength , profit - taking",
-      "2026-02-24 | marketscreener.com | Stocks bounce back amid investor unease about AI , tariffs",
-      "2026-02-24 | economictimes.indiatimes.com | Gold Price Crashes $61 to $5174 : Gold silver price today erase gains amid AI speculation and $1 . 1 trillion market cap loss – what driving gold and silver lower today and will this momentum continue ?"
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Divide : Fed Minutes Reveal  Neutral Hold  as Markets Pivot to July Rate Cut"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-24 | californiatelegraph.com | iTrustCapital Launches Crypto Treasury Accounts For Businesses , Trusts , & Non - Profits",
-      "2026-02-24 | cbsnews.com | What is the highest gold price in history ? Here how it changed over the past year .",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - Fear Returns to Wall Street : VIX Hits 2026 Peak as  Software - mageddon  and New Tariffs Rattle Markets"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
