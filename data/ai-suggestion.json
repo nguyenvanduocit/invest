@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T17:24:15.659Z",
+  "generatedAt": "2026-02-24T18:21:09.477Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 184.6 triệu/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+5.71%), trong khi giá thế giới vừa điều chỉnh giảm 1.27% và VIX tăng vọt 10% báo hiệu rủi ro chốt lời ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184.6 triệu đồng/lượng (percentile 5 năm 100%) sau đợt tăng mạnh 5.79% trong 7 ngày, tạo áp lực chốt lời ngắn hạn khi VIX tăng vọt 30% nhưng động lực tăng giá thế giới đang bị kháng cự ở vùng 5163 USD/oz.",
     "reasons": [
-      "Giá SJC 184.6 triệu/lượng đang vượt xa MA7 (159.7 triệu) và MA30 (157.5 triệu), tín hiệu quá mua rõ ràng ở mức đỉnh 5 năm (percentile 100%).",
-      "Giá thế giới XAUUSD giảm 1.27% xuống 5161 USD/oz sau khi chạm đỉnh, cho thấy áp lực chốt lời đang hiện diện.",
-      "VIX tăng đột biến +10.06% lên 21.01 điểm, phản ánh tâm lý thị trường lo âu, thường đi kèm biến động hai chiều mạnh.",
-      "Premium 13.97% nằm trong biên dao động 30 ngày (10.77%-18.13%), không quá cực đoan nhưng thanh khoản có thể bị ảnh hưởng khi giá cao."
+      "Giá SJC 184.6 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5N: 100%), cao hơn MA7 (159.7 triệu) và MA30 (157.5 triệu) khoảng 15.6-17.2%, báo hiệu vùng quá mua ngắn hạn.",
+      "Động lượng tăng quá nóng trong 7 ngày qua (+5.79%) so với biến động ngày trung bình (2.3%), rủi ro điều chỉnh kỹ thuật cao sau khi giá thế giới giảm 1.26% xuống 5163.85 USD/oz.",
+      "VIX tăng đột biến +30.09% trong 20 ngày lên mức 21.01 điểm cho thấy lo ngại thị trường, nhưng đồng thời lợi suất thực 10 năm (1.8%) và USD index (117.99) vẫn ở mức cao gây áp lực ngược lên giá vàng thế giới.",
+      "Premium 13.89% nằm trong biên dao động 30 ngày (5.85%-18.13%), không cực đoan nhưng thanh khoản có thể giảm khi nhà đầu tư chờ đợi điều chỉnh."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu nếu giá thế giới không giữ được hỗ trợ 5000 USD/oz.",
-      "Thanh khoản giảm tại mức đỉnh lịch sử, khó thoát hàng nhanh nếu thị trường đảo chiều.",
-      "Biến động ngày ở mức 2.3% cộng với VIX cao làm tăng rủi ro giao dịch ngắn hạn."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ 4900-5000 USD/oz do áp lực chốt lời và USD mạnh.",
+      "Thanh khoản thấp ở mức giá đỉnh lịch sử có thể gây trượt giá khi bán gấp.",
+      "Biến động hai chiều lớn (volatility 2.3%/ngày) khi thị trường định giá lại tác động thuế quan và tin tức AI."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 184600000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": 5.71,
+        "key": "sjc_change_7d",
+        "value": 5.79,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_change_1d",
-        "value": -1.27,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_1d",
-        "value": 10.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_level",
-        "value": 21.01,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_current",
-        "value": 13.97,
+        "key": "sjc_vs_ma7_premium",
+        "value": 15.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_sjc",
-        "value": 159727512,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "intl_gold_1d_change",
+        "value": -1.26,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change_20d",
+        "value": 30.09,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 5.85,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T17:23:36.377Z",
+    "latestTimestamp": "2026-02-24T18:20:25.951Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 161971126.85296333,
-    "premiumPct": 13.97,
-    "change7dPct": 5.71,
-    "change30dPct": 3.57,
+    "intlVndPerTael": 162087844.09786874,
+    "premiumPct": 13.89,
+    "change7dPct": 5.79,
+    "change30dPct": 3.64,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 159727512,
-    "ma30VndPerTael": 157460191,
+    "ma7VndPerTael": 159744186,
+    "ma30VndPerTael": 157464081,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T17:23:57.830Z",
+    "fetchedAt": "2026-02-24T18:20:48.899Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5161.015,
+        "value": 5161.885,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -1.27,
-        "change5dPct": 5.81,
-        "change20dPct": -0.34,
+        "change1dPct": -1.26,
+        "change5dPct": 5.83,
+        "change20dPct": -0.32,
         "relationToGold": "context"
       },
       {
@@ -191,12 +185,17 @@
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
       "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
+    "geopoliticalHeadlines": [
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - Fear Returns to Wall Street : VIX Hits 2026 Peak as  Software - mageddon  and New Tariffs Rattle Markets"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-24 | cbsnews.com | What is the highest gold price in history ? Here how it changed over the past year .",
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Divide : Fed Minutes Reveal  Neutral Hold  as Markets Pivot to July Rate Cut",
+      "2026-02-24 | marketscreener.com | Gold slips from three - week high on dollar strength , profit - taking",
+      "2026-02-24 | marketscreener.com | Stocks bounce back amid investor unease about AI , tariffs",
       "2026-02-24 | economictimes.indiatimes.com | Gold Price Crashes $61 to $5174 : Gold silver price today erase gains amid AI speculation and $1 . 1 trillion market cap loss – what driving gold and silver lower today and will this momentum continue ?",
-      "2026-02-24 | livemint.com | Gold , silver rates today : Comex gold drops $116 / oz ; silver falls $2 / oz on profit booking , firm US dollar",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - Gold Safe - Haven Surge : Bullion Smashes $5 , 400 Barrier Amid Greenland and Iran Tensions"
-    ]
+      "2026-02-24 | dawn.com | Gold falls from three - week high on profit - booking - Business"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
