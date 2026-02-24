@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T15:21:49.561Z",
+  "generatedAt": "2026-02-24T16:24:09.774Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 5.31% trong 7 ngày, tuy nhiên thanh khoản thấp và sự vắng mặt của tin tức địa chính trị cấp bách khiến rủi ro mua đuổi là rất lớn. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~159.6 triệu VND/lượng) hoặc xác nhận xu hướng rõ ràng hơn trước khi hành động.",
+    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với động lượng tăng mạnh 5.38%/tuần, nhưng thanh khoản thấp và thiếu tín hiệu vĩ mô rõ ràng khiến rủi ro mua đuổi là rất lớn.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA7 (159.6 triệu) và MA30 (157.4 triệu), tín hiệu quá mua kỹ thuật ngắn hạn sau đà tăng 5.31% trong 7 ngày.",
-      "VIX tăng mạnh 30.09% trong 20 ngày lên mức 21.01 cho thấy lo ngại thị trường, nhưng thiếu tin tức địa chính trị cụ thể để thúc đẩy giá vàng leo thang bền vững.",
-      "Lợi suất thực Mỹ 10N tăng lên 1.8% và Fed Funds giữ nguyên 3.64% tạo áp lực dồn tiền vào USD, hạn chế động lực tăng giá vàng thế giới dài hạn.",
-      "Premium 14.41% nằm trong biên dao động 30 ngày (5.85%-18.13%), không có tín hiệu bất thường nhưng cho thấy giá Việt Nam đã phản ứng đủ so với thế giới."
+      "Giá SJC 184.6 triệu VND/lượng đang vượt xa MA30 (157.4 triệu VND/lượng) tới 17.2%, cho thấy thị trường đang ở trạng thái kịch trần (overbought) kỹ thuật.",
+      "VIX tăng mạnh 30.09% trong 20 ngày qua lên mức 21.01 chỉ báo sự bất ổn thị trường, hỗ trợ tâm lý trú ẩn vào vàng.",
+      "Lợi suất thực Mỹ 10 năm giảm 7.69% trong 20 ngày (xuống 1.8%) là động lực hỗ trợ giá vàng thế giới tăng 5.44% trong 5 ngày gần nhất.",
+      "Premium 14.34% nằm trong biên dao động 30 ngày (10.77% - 18.13%), không có dấu hiệu bong bóng địa phương cực đoan."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu nếu các ngân hàng trung ương bán vàng can thiệp hoặc dòng tiền đảo chiều sau đợt tăng nóng.",
-      "Thanh khoản thị trường có thể giảm đột ngột khi nhà đầu tư chốt lời tại vùng giá kỷ lục 5 năm.",
-      "Biến động ngày 2.31% cộng với drawdown tồi tệ 41.26% trong lịch sử cho thấy rủi ro giảm giá là hiện hữu."
+      "Giá đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật là rất lớn nếu động lượng suy yếu.",
+      "Tin tức địa chính trị và chính sách trong dữ liệu chủ yếu là nhiễu (gold digger, AI bubble), không có sự kiện trọng tâm để duy trì đà tăng.",
+      "Biến động ngày cao (2.31%) cộng với chênh lệch giá mua-bán rộng tiềm ẩn rủi ro thanh khoản khi thoát hàng."
     ],
     "evidence": [
       {
@@ -27,31 +27,13 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Đỉnh 5 năm (Percentile)",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Thay đổi 7 ngày",
-        "value": 5.31,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 giá SJC",
-        "value": 159638299,
+        "key": "MA30 giá SJC",
+        "value": 157442993,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX chỉ số sợ hãi",
-        "value": 21.01,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Biến động VIX 20 ngày",
+        "key": "VIX thay đổi 20 ngày",
         "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
@@ -63,23 +45,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium giá SJC",
-        "value": 14.41,
+        "key": "Giá vàng thế giới thay đổi 5 ngày",
+        "value": 5.44,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Percentile 5 năm",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Biên độ dao động premium 30 ngày",
+        "value": 7.36,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T15:21:02.071Z",
+    "latestTimestamp": "2026-02-24T16:22:40.078Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 161346638.96236676,
-    "premiumPct": 14.41,
-    "change7dPct": 5.31,
-    "change30dPct": 3.17,
+    "intlVndPerTael": 161455207.01188207,
+    "premiumPct": 14.34,
+    "change7dPct": 5.38,
+    "change30dPct": 3.24,
     "volatilityDailyPct": 2.31,
-    "ma7VndPerTael": 159638299,
-    "ma30VndPerTael": 157439374,
+    "ma7VndPerTael": 159653809,
+    "ma30VndPerTael": 157442993,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T15:21:23.269Z",
+    "fetchedAt": "2026-02-24T16:22:59.015Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5140.305,
+        "value": 5142.885,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -1.67,
-        "change5dPct": 5.39,
-        "change20dPct": -0.74,
+        "change1dPct": -1.62,
+        "change5dPct": 5.44,
+        "change20dPct": -0.69,
         "relationToGold": "context"
       },
       {
@@ -191,14 +185,17 @@
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
       "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-24 | coinweek.com | Classic US Coins : Looking at Gold Like a Copper Collector",
+      "2026-02-24 | boredpanda.com | Woman Thought She Was Supporting Her Partner , Turns Out She Was Being Tested As A Gold Digger"
+    ],
     "countryActionHeadlines": [
-      "2026-02-24 | newsx.com | Gold Surpasses US Dollar , Becomes World Largest Reserve Asset : Central Banks Now Hold $6 Trillion Worth 36 , 000 Tonnes Of Gold , Yellow Metal Leads After 30 Years",
+      "2026-02-24 | businesstoday.in | Gold should outperform silver going forward in 2026 ... Kunal Shah on geopolitical tensions , tariff risks",
       "2026-02-24 | 247wallst.com | You Could Have Captured Gold 73 % Surge For Only 0 . 18 %",
+      "2026-02-24 | newsx.com | Gold Surpasses US Dollar , Becomes World Largest Reserve Asset : Central Banks Now Hold $6 Trillion Worth 36 , 000 Tonnes Of Gold , Yellow Metal Leads After 30 Years",
       "2026-02-24 | cityam.com | Jamie Dimon warns of financial crisis - style AI bubble reckoning",
       "2026-02-24 | newsghana.com.gh | Ghana Record Low Inflation Opens a Strategic Window for Business",
-      "2026-02-24 | thebftonline.com | Inflation collapse and a strong Cedi : Opportunity or illusion for the real economy ?",
-      "2026-02-24 | marketscreener.com | Sterling lingers near one - month low ahead of BoE Bailey"
+      "2026-02-24 | thebftonline.com | Inflation collapse and a strong Cedi : Opportunity or illusion for the real economy ?"
     ],
     "dollarYieldHeadlines": []
   }
