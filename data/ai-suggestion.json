@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T07:23:27.574Z",
+  "generatedAt": "2026-02-24T08:15:21.658Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,40 +7,40 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng +6.04%/tuần; rủi ro điều chỉnh kỹ thuật cao hơn cơ hội tăng tiếp trong ngắn hạn, nhà đầu tư nên chờ nhịp hồi về vùng hỗ trợ.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua (+5.94%), nhưng thanh khoản vĩ mô yếu và rủi ro điều chỉnh kỹ thuật cao sau khi phá đỉnh. Nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ gần MA7VND (~159.8 triệu/lượng) hoặc xác nhận tích sản phân tán.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (159.8 triệu) tới 15.5% cho thấy động lượng tăng quá nóng cần nghỉ.",
-      "Đà tăng 7 ngày qua quá mạnh (+6.04%) so với biến động ngày trung bình (2.3%), xác suất điều chỉnh kỹ thuật ngắn hạn rất cao.",
-      "Premium 13.62% nằm trong vùng dao động 30 ngày (5.85%-18.13%), không có tín hiệu bất thường nhưng cũng không hấp dẫn để mua đuổi.",
-      "VIX giảm 7.33% trong 5 ngày và lợi suất thực 10Y neo ở 1.8%, áp lực địa chính trị/thị trường không đủ mạnh để đẩy giá tiếp."
+      "Giá SJC 184.6 triệu/lượng đang vượt xa MA7VND (159.8 triệu) và MA30VND (157.5 triệu), khoảng cách +15.5% so với MA7 cho thấy thị trường bị mua quá mức ngắn hạn.",
+      "Đỉnh 5 năm (percentile 100%) và tăng 5.94% trong 7 ngày là tín hiệu cảnh báo rủi ro chốt lời cao; lịch sử cho thấy các đợt hồi phục trung bình mất 1369 ngày sau đỉnh.",
+      "Premium 13.73% nằm trong biên dao động 30 ngày qua (5.85%-18.13%), không cực đoan nhưng cho thấy giá nội địa đã định giá đầy đủ đà tăng thế giới.",
+      "Lợi suất thực USD 10N tăng 0.56 điểm phần trăm lên 1.8% tạo áp lực ngược lên vàng thế giới; VIX giảm 5.64% cho thấy tâm lý sợ hãi hạ nhiệt, giảm nhu cầu trú ẩn."
     ],
     "risks": [
-      "Đỉnh lịch sử 5 năm: Mua lúc percentile 100% mang rủi ro điều chỉnh cao, có thể hồi về MA7 (~160 triệu VND/lượng).",
-      "Thanh khoản cao điểm: Biến động ngày 2.3% kết hợp đà tăng 6%/tuần cho thấy thị trường đang sôi động, dễ xảy ra chốt lời dồn dập.",
-      "Tín hiệu vĩ mô hỗ trợ yếu: Lạm phát kỳ vọng giảm (-2.59% trong 20 ngày), không tạo động lực mới cho vàng."
+      "Điều chỉnh kỹ thuật sâu về vùng MA7VND (159.8 triệu/lượng), tương đương giảm ~13.5% từ giá hiện tại nếu động lượng đảo chiều.",
+      "Thanh khoản vĩ mô yếu (healthy: false) và thiếu sự kiện địa chính trị cấp thiết khiến đà tăng thiếu nền tảng vững chắc, dễ bị đảo ngược.",
+      "Rủi ro Fed duy trì lãi suất cao (Fed Funds 3.64%) lâu hơn kỳ vọng sẽ củng cố USD và gây áp lực lên giá vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price_vs_ma7_pct",
+        "value": 15.55,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change7d_pct",
+        "value": 5.94,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 6.04,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_vs_ma7_premium",
-        "value": 15.5,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.3,
+        "key": "premium_current",
+        "value": 13.73,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -51,35 +51,35 @@
         "source": "monthly_series_30d"
       },
       {
-        "key": "vix_change_5d",
-        "value": -7.33,
+        "key": "us_real_yield_10y_change1d",
+        "value": 0.56,
+        "unit": "percentage_point",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change1d",
+        "value": -5.64,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "breakeven_change_20d",
-        "value": -2.59,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "avg_recovery_days",
+        "value": 1369,
+        "unit": "days",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T07:22:42.180Z",
+    "latestTimestamp": "2026-02-24T08:14:39.254Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162466821.54745477,
-    "premiumPct": 13.62,
-    "change7dPct": 6.04,
-    "change30dPct": 3.88,
+    "intlVndPerTael": 162312955.1836984,
+    "premiumPct": 13.73,
+    "change7dPct": 5.94,
+    "change30dPct": 3.78,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 159798325,
-    "ma30VndPerTael": 157476714,
+    "ma7VndPerTael": 159776344,
+    "ma30VndPerTael": 157471585,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T07:23:03.812Z",
+    "fetchedAt": "2026-02-24T08:15:01.638Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5170.425,
+        "value": 5173.475,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -1.09,
-        "change5dPct": 6.01,
-        "change20dPct": -0.16,
+        "change1dPct": -1.04,
+        "change5dPct": 6.07,
+        "change20dPct": -0.1,
         "relationToGold": "context"
       },
       {
@@ -192,10 +192,15 @@
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-24 | businessday.co.za | Gold slips away from three - week high as traders take profits",
+      "2026-02-24 | marketscreener.com | South African rand steady ahead of central bank data"
+    ],
     "dollarYieldHeadlines": [
-      "2026-02-24 | digitaljournal.com | Asian markets mixed as traders weigh AI and tariffs outlook",
-      "2026-02-24 | bssnews.net | Asian markets mixed as traders weigh AI and tariffs outlook"
+      "2026-02-24 | abcnews.com | Trump State of the Union will seek to calm voter economic concerns ahead of midterm elections",
+      "2026-02-24 | economictimes.indiatimes.com | Earnings revival set to lift Indian markets in FY27 : Manish Gunwani",
+      "2026-02-24 | mymotherlode.com | Trump State of the Union will seek to calm voter economic concerns ahead of midterm elections",
+      "2026-02-24 | marketscreener.com | FTSE 100 to slip after Wall Street slump"
     ]
   }
 }
