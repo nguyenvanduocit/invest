@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T06:22:56.724Z",
+  "generatedAt": "2026-02-24T07:23:27.574Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng áp lực chốt lời ngắn hạn đang xuất hiện khi giá thế giới điều chỉnh nhẹ và lợi suất thực USD hồi phục.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng +6.04%/tuần; rủi ro điều chỉnh kỹ thuật cao hơn cơ hội tăng tiếp trong ngắn hạn, nhà đầu tư nên chờ nhịp hồi về vùng hỗ trợ.",
     "reasons": [
-      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 6.14% chỉ trong 7 ngày gần đây.",
-      "Đà tăng bị hãm lại khi giá thế giới XAUUSD giảm 0.97% xuống 5176.73 USD/oz và lợi suất thực 10 năm USD tăng mạnh 0.56 điểm phần trăm.",
-      "Biên độ dao động ngày cao (2.3%) cho thấy thị trường biến động mạnh, rủi ro mua đỉp ngắn hạn là đáng kể."
+      "Giá SJC 184.6 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (159.8 triệu) tới 15.5% cho thấy động lượng tăng quá nóng cần nghỉ.",
+      "Đà tăng 7 ngày qua quá mạnh (+6.04%) so với biến động ngày trung bình (2.3%), xác suất điều chỉnh kỹ thuật ngắn hạn rất cao.",
+      "Premium 13.62% nằm trong vùng dao động 30 ngày (5.85%-18.13%), không có tín hiệu bất thường nhưng cũng không hấp dẫn để mua đuổi.",
+      "VIX giảm 7.33% trong 5 ngày và lợi suất thực 10Y neo ở 1.8%, áp lực địa chính trị/thị trường không đủ mạnh để đẩy giá tiếp."
     ],
     "risks": [
-      "Áp lực chốt lời nhanh sau đợt tăng giá nóng, giá có thể điều chỉnh về vùng hỗ trợ gần MA7 (159.8 triệu VND/lượng).",
-      "Rủi ro vĩ mô từ các chính sách thuế quan mới của Mỹ gây bất ổn cho thị trường tài chính và đồng USD.",
-      "Dữ liệu first-principles không hoàn chỉnh (healthy: false), có thể bỏ sót các tín hiệu quan trọng từ chính sách Fed."
+      "Đỉnh lịch sử 5 năm: Mua lúc percentile 100% mang rủi ro điều chỉnh cao, có thể hồi về MA7 (~160 triệu VND/lượng).",
+      "Thanh khoản cao điểm: Biến động ngày 2.3% kết hợp đà tăng 6%/tuần cho thấy thị trường đang sôi động, dễ xảy ra chốt lời dồn dập.",
+      "Tín hiệu vĩ mô hỗ trợ yếu: Lạm phát kỳ vọng giảm (-2.59% trong 20 ngày), không tạo động lực mới cho vàng."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
-        "value": 184600000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_change_7d",
+        "value": 6.04,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "7-Day Change",
-        "value": 6.14,
+        "key": "sjc_vs_ma7_premium",
+        "value": 15.5,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "XAUUSD Spot",
-        "value": 5176.73,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y Change 1D",
-        "value": 0.56,
-        "unit": "percentage points",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Daily Volatility",
+        "key": "daily_volatility",
         "value": 2.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World Price",
-        "value": 13.51,
+        "key": "premium_range_30d",
+        "value": 5.85,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "vix_change_5d",
+        "value": -7.33,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "breakeven_change_20d",
+        "value": -2.59,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T06:22:13.307Z",
+    "latestTimestamp": "2026-02-24T07:22:42.180Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162628193.31953764,
-    "premiumPct": 13.51,
-    "change7dPct": 6.14,
-    "change30dPct": 3.99,
+    "intlVndPerTael": 162466821.54745477,
+    "premiumPct": 13.62,
+    "change7dPct": 6.04,
+    "change30dPct": 3.88,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 159821378,
-    "ma30VndPerTael": 157482093,
+    "ma7VndPerTael": 159798325,
+    "ma30VndPerTael": 157476714,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T06:22:34.736Z",
+    "fetchedAt": "2026-02-24T07:23:03.812Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5176.725,
+        "value": 5170.425,
         "unit": "USD/oz",
         "date": "2026-02-24",
-        "change1dPct": -0.97,
-        "change5dPct": 6.13,
-        "change20dPct": -0.03,
+        "change1dPct": -1.09,
+        "change5dPct": 6.01,
+        "change20dPct": -0.16,
         "relationToGold": "context"
       },
       {
@@ -184,19 +191,11 @@
       "2026-02-19 | ECB Press / Speeches | Frank Elderson: Interview with Bloomberg",
       "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-24 | bostonglobe.com | Supreme Court ruling against Trump tariffs is unlikely to mean an end to trade policy chaos",
-      "2026-02-24 | bssnews.net | Asian markets mixed as traders weigh AI and tariffs outlook",
-      "2026-02-24 | allafrica.com | Sudan War Paralyses Gum Arabic Market in El Obeid As Production Falls and Exports Stall"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-24 | vindy.com | US stocks drop after Trump ramps up his tariffs and worries flare about potential AI losers | News , Sports , Jobs",
-      "2026-02-24 | freemalaysiatoday.com | Gold falls from 3 - week high on profit - booking , firm dollar",
-      "2026-02-24 | thenationonlineng.net | CBN mops up dollars to slowdown Naira appreciation - The Nation Newspaper",
-      "2026-02-24 | english.news.cn | ECB chief stresses independence of central bank under political pressure - Xinhua",
-      "2026-02-24 | investinglive.com | investingLive Asia - Pacific FX news wrap : Tariff uncertainty persists , China rises",
-      "2026-02-24 | sharecast.com | US close : Stocks sharply lower after Trump raises global tariff rate"
-    ],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
+      "2026-02-24 | digitaljournal.com | Asian markets mixed as traders weigh AI and tariffs outlook",
+      "2026-02-24 | bssnews.net | Asian markets mixed as traders weigh AI and tariffs outlook"
+    ]
   }
 }
