@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T18:21:09.477Z",
+  "generatedAt": "2026-02-24T19:22:41.462Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184.6 triệu đồng/lượng (percentile 5 năm 100%) sau đợt tăng mạnh 5.79% trong 7 ngày, tạo áp lực chốt lời ngắn hạn khi VIX tăng vọt 30% nhưng động lực tăng giá thế giới đang bị kháng cự ở vùng 5163 USD/oz.",
+    "thesis": "Giá SJC 184.6 triệu/lượng đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 5.51%/tuần, nhưng thanh khoản vĩ mô yếu và VIX tăng vọt báo hiệu rủi ro điều chỉnh ngắn hạn cao, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 184.6 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5N: 100%), cao hơn MA7 (159.7 triệu) và MA30 (157.5 triệu) khoảng 15.6-17.2%, báo hiệu vùng quá mua ngắn hạn.",
-      "Động lượng tăng quá nóng trong 7 ngày qua (+5.79%) so với biến động ngày trung bình (2.3%), rủi ro điều chỉnh kỹ thuật cao sau khi giá thế giới giảm 1.26% xuống 5163.85 USD/oz.",
-      "VIX tăng đột biến +30.09% trong 20 ngày lên mức 21.01 điểm cho thấy lo ngại thị trường, nhưng đồng thời lợi suất thực 10 năm (1.8%) và USD index (117.99) vẫn ở mức cao gây áp lực ngược lên giá vàng thế giới.",
-      "Premium 13.89% nằm trong biên dao động 30 ngày (5.85%-18.13%), không cực đoan nhưng thanh khoản có thể giảm khi nhà đầu tư chờ đợi điều chỉnh."
+      "Giá SJC VND/lượng (184.6M) đang vượt xa MA7 (159.7M) và MA30 (157.4M) tới 15.6%, cho thấy thị trường đang ở trạng thái quá mua (overbought) ngắn hạn.",
+      "VIX tăng vọt +10.06%/ngày và +30.09%/20 ngày lên mức 21.01 cho thấy tâm lý thị trường tài chính lo âu, có thể gây áp lực chốt lời nhanh trên thị trường vàng.",
+      "Lợi suất thực US 10Y (1.8%) và Fed Funds (3.64%) vẫn dương và cao, tạo áp lực chi phí cơ hội lên vàng, hạn chế đà tăng bền vững từ dòng tiền thông minh.",
+      "Premium 14.19% hiện tại cao hơn đáng kể so với mức đáy 5.85% trong chuỗi 30 ngày, gợi ý nhà đầu tư Việt đang FOMO mua đuổi."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ 4900-5000 USD/oz do áp lực chốt lời và USD mạnh.",
-      "Thanh khoản thấp ở mức giá đỉnh lịch sử có thể gây trượt giá khi bán gấp.",
-      "Biến động hai chiều lớn (volatility 2.3%/ngày) khi thị trường định giá lại tác động thuế quan và tin tức AI."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi thị trường quá mua, có thể test lại vùng MA7 (~159.7M VND/lượng).",
+      "Dữ liệu first-principles thiếu Gold Spot XAUUSD trực tiếp và các headline địa chính trị chứa nhiều nhiễu (quảng cáo, tin không liên quan), làm giảm độ tin cậy phân tích.",
+      "Chính sách tiền tệ từ các phát ngôn Fed (Waller, Cook) về AI và lao động có thể gây biến động bất ngờ cho USD."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price vs MA7 Deviation",
+        "value": 15.64,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 5.79,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_vs_ma7_premium",
-        "value": 15.6,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_1d_change",
-        "value": -1.26,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20d",
         "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
+        "key": "US Real Yield 10Y",
         "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
+        "key": "Premium Range 30d (Low-High)",
         "value": 5.85,
         "unit": "%",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Change 7d",
+        "value": 5.51,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Fed Funds Rate",
+        "value": 3.64,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-24T18:20:25.951Z",
+    "latestTimestamp": "2026-02-24T19:21:59.335Z",
     "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 162087844.09786874,
-    "premiumPct": 13.89,
-    "change7dPct": 5.79,
-    "change30dPct": 3.64,
-    "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 159744186,
-    "ma30VndPerTael": 157464081,
+    "intlVndPerTael": 161663874.37616104,
+    "premiumPct": 14.19,
+    "change7dPct": 5.51,
+    "change30dPct": 3.37,
+    "volatilityDailyPct": 2.31,
+    "ma7VndPerTael": 159683619,
+    "ma30VndPerTael": 157449949,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-24T18:20:48.899Z",
+    "fetchedAt": "2026-02-24T19:22:20.548Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5161.885,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-02-24",
-        "change1dPct": -1.26,
-        "change5dPct": 5.83,
-        "change20dPct": -0.32,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
@@ -178,24 +180,22 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026",
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve",
       "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
-      "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal",
-      "2026-02-20 | ECB Press / Speeches | Christine Lagarde: The order that took centuries to build"
+      "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - Fear Returns to Wall Street : VIX Hits 2026 Peak as  Software - mageddon  and New Tariffs Rattle Markets"
+      "2026-02-24 | thenewsherald.com | Supreme Court ruling against Trump tariffs no end to policy chaos",
+      "2026-02-24 | markets.businessinsider.com | Miata Intersects 11 . 3 m at 3 . 58 g / t Gold and Further Expands Jons Trend Footprint at the Sela Creek Gold Project , Suriname",
+      "2026-02-24 | broomfieldenterprise.com | Supreme Court ruling against Trump tariffs no end to policy chaos"
     ],
-    "countryActionHeadlines": [
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
       "2026-02-24 | cbsnews.com | What is the highest gold price in history ? Here how it changed over the past year .",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Divide : Fed Minutes Reveal  Neutral Hold  as Markets Pivot to July Rate Cut",
-      "2026-02-24 | marketscreener.com | Gold slips from three - week high on dollar strength , profit - taking",
-      "2026-02-24 | marketscreener.com | Stocks bounce back amid investor unease about AI , tariffs",
-      "2026-02-24 | economictimes.indiatimes.com | Gold Price Crashes $61 to $5174 : Gold silver price today erase gains amid AI speculation and $1 . 1 trillion market cap loss – what driving gold and silver lower today and will this momentum continue ?",
-      "2026-02-24 | dawn.com | Gold falls from three - week high on profit - booking - Business"
-    ],
-    "dollarYieldHeadlines": []
+      "2026-02-24 | markets.financialcontent.com | FinancialContent - Fear Returns to Wall Street : VIX Hits 2026 Peak as  Software - mageddon  and New Tariffs Rattle Markets"
+    ]
   }
 }
