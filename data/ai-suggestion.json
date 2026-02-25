@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T14:21:47.116Z",
+  "generatedAt": "2026-02-25T15:21:38.929Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,34 +7,33 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản thấp và biến động cao (2.3%) khiến rủi ro mua đuối là đáng kể, nhà đầu tư nên chờ hồi điều chỉnh về vùng hỗ trợ MA7 (161 triệu VND/lượng) trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 185.3 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 4.23% trong 7 ngày, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.3%/ngày.",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu VND/lượng) và MA30 (158.1 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua (overbought) ngắn hạn với khoảng cách 15.1% so với trung bình 7 ngày.",
-      "Động lượng tăng giá 7 ngày qua rất mạnh (+4.08%), cao hơn đáng kể so với xu hướng 30 ngày (+3.08%), đi kèm biến động ngày lớn (2.3%), báo hiệu sự thiếu ổn định và rủi ro điều chỉnh kỹ thuật.",
-      "VIX tăng mạnh 20 ngày qua (+30.09%) lên mức 21.01 chỉ thị sự lo ngại thị trường, nhưng lợi suất thực 10 năm (1.77%) và giá vàng thế giới (5183 USD/oz) không có sự biến động cực đoan tương ứng, gợi ý đợt tăng giá Việt Nam có thể mang tính cục bộ và tâm lý hơn là dựa trên nền tảng vĩ mô.",
-      "Premium 13.56% nằm trong biên dao động 30 ngày qua (5.56% - 17.8%), không cực đoan nhưng cho thấy nhà đầu tư Việt Nam đang trả giá cao hơn mức trung bình lịch sử để sở hữu vàng vật chất."
+      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), tín hiệu quá mua rõ ràng ở vùng giá kỷ lục.",
+      "Động lượng vĩ mô tích cực: Giá vàng thế giới突破 mốc 5.191 USD/oz, lợi suất thực Mỹ giảm 7.81% trong 20 ngày (xuống 1.77%) tạo đà đẩy giá vàng.",
+      "Premium 13.4% đang ở mức hợp lý so với trung bình chuỗi dữ liệu (10%-17.8%), không có dấu hiệu投机 cực đoan ở mức chênh lệch này."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá thoát khỏi trạng thái quá mua, có thể test lại MA7 ở vùng 161 triệu VND/lượng.",
-      "Biến động ngày ở mức 2.3% tương đương dao động ~4.3 triệu VND/lượng mỗi ngày, đòi hỏi nhà đầu tư có khả năng chịu đựng biên độ giá lớn.",
-      "Dữ liệu sự kiện vĩ mô (phát ngôn Fed, Trump) không có tín hiệu bất ổn cấp bách, rủi ro giảm giá nếu các yếu tố lo ngại (VIX) hạ nhiệt."
+      "Rủi ro điều chỉnh ngắn hạn cao khi giá đang ở percentile 100% trong 5 năm và đã tăng 4.23% chỉ trong 7 ngày.",
+      "Biên độ dao động 2.3%/ngày tương đương 4.2 triệu đồng/lượng cho thấy thanh khoản và biến động giá rất lớn.",
+      "Dữ liệu vĩ mô thiếu sự kiện địa chính trị cụ thể và hành động can thiệp của quốc gia, độ tin cậy thông tin hạn chế."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma7",
-        "value": 15.1,
-        "unit": "% above MA7",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_price_latest",
+        "key": "sjc_price",
         "value": 185300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d_pct",
-        "value": 4.08,
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_7d",
+        "value": 4.23,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -45,41 +44,41 @@
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
+        "key": "premium_pct",
+        "value": 13.4,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_20d",
-        "value": 30.09,
+        "key": "intl_gold",
+        "value": 5191.43,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "us_real_yield_change20d",
+        "value": -7.81,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_current",
-        "value": 13.56,
-        "unit": "%",
+        "key": "ma7_vnd",
+        "value": 161097945,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_price",
-        "value": 5183.83,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T14:21:03.736Z",
+    "latestTimestamp": "2026-02-25T15:21:01.607Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163170845.3452354,
-    "premiumPct": 13.56,
-    "change7dPct": 4.08,
-    "change30dPct": 3.08,
+    "intlVndPerTael": 163409946.8399257,
+    "premiumPct": 13.4,
+    "change7dPct": 4.23,
+    "change30dPct": 3.23,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161063788,
-    "ma30VndPerTael": 158057843,
+    "ma7VndPerTael": 161097945,
+    "ma30VndPerTael": 158065814,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T14:21:21.360Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-25T15:21:17.561Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5183.715,
+        "value": 5188.955,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 0.77,
-        "change5dPct": 4.14,
-        "change20dPct": -4.27,
+        "change1dPct": 0.88,
+        "change5dPct": 4.25,
+        "change20dPct": -4.18,
         "relationToGold": "context"
       },
       {
@@ -174,12 +173,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 21.01,
+        "value": 19.55,
         "unit": "index",
-        "date": "2026-02-23",
-        "change1dPct": 10.06,
-        "change5dPct": -0.9,
-        "change20dPct": 30.09,
+        "date": "2026-02-24",
+        "change1dPct": -6.95,
+        "change5dPct": -3.65,
+        "change20dPct": 19.57,
         "relationToGold": "direct"
       }
     ],
@@ -192,21 +191,13 @@
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-25 | 1039wvbo.com | Trump awarded these medals during his State of the Union address",
-      "2026-02-25 | bloomberg.com | China Gold Rush Comes to Xi Tariff - Free Paradise",
-      "2026-02-25 | grandforksherald.com | Fedorchak : A simple standard for secure elections"
+      "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady",
+      "2026-02-25 | wbay.com | Here is everyone Trump awarded a medal to during the State of the Union"
     ],
-    "countryActionHeadlines": [
-      "2026-02-25 | finance.yahoo.com | Best high - yield savings interest rates today , February 25 , 2026 ( Earn up to 4 % APY )",
-      "2026-02-25 | livemint.com | Gold Rate Today LIVE : MCX gold price rises above ₹1 . 6 lakh per 10 gm , MCX silver rate jumps 2 % to ₹2 . 67 lakh per kg"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
-      "2026-02-25 | fox61.com | FULL TRANSCRIPT : What President Trump said in the longest ever State of the Union address",
-      "2026-02-25 | morningstar.com | 10 Stocks the Best Fund Managers Have Been Buying Recently",
-      "2026-02-25 | sandiegouniontribune.com | Read the complete transcript of Trump 2026 State of the Union",
-      "2026-02-25 | deccanchronicle.com | Apparel And Jewellery Retailers To Clock Double - Digit Growth In FY27",
-      "2026-02-25 | redlandsdailyfacts.com | Read the complete transcript of Trump 2026 State of the Union",
-      "2026-02-25 | kiiitv.com | FULL TRANSCRIPT : What President Trump said in the longest ever State of the Union address"
+      "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady",
+      "2026-02-25 | fortune.com | Current price of gold : February 25 , 2026"
     ]
   }
 }
