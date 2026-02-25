@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T18:24:00.129Z",
+  "generatedAt": "2026-02-25T19:24:09.494Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +4.55%/tuần, nhưng rủi ro mua đỉp cao do giá đã vượt xa MA7 (15%) và biên độ dao động lớn. Nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 khoảng 161.1 triệu/lượng trước khi tham gia.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản thấp và thiếu sự kiện vĩ mô cấp thiết khiến rủi ro mua đuôi cao. Nhà đầu tư nên chờ đợt điều chỉnh về vùng hỗ trợ MA7 (161.1 triệu VND/lượng) hoặc xác nhận xu hướng rõ ràng hơn.",
     "reasons": [
-      "Giá SJC 185.3 triệu/lượng đang vượt xa MA7 (161.2 triệu/lượng) tới 14.9% và MA30 (158.1 triệu/lượng) tới 17.2%, cho thấy thị trường đang ở trạng thái quá mua ngắn hạn.",
-      "Động lượng tăng mạnh trong 7 ngày qua (+4.55%) nhưng biến động ngày cao (2.31%) và giá đang ở percentile 100% trong 5 năm, rủi ro điều chỉnh rất lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh -7.81% trong 20 ngày xuống 1.77% và giá vàng thế giới tăng +4.61% trong 5 ngày, hỗ trợ xu hướng tăng dài hạn nhưng đã phản ánh vào giá.",
-      "Premium 13.05% nằm trong biên dao động 30 ngày (5.56%-17.8%), không cực đoan nhưng thanh khoản cao có thể gây trượt giá khi điều chỉnh."
+      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), tăng 4.31% sau 7 ngày và 3.3% sau 30 ngày, cho thấy động lượng tăng mạnh nhưng đã ở vùng quá mua.",
+      "Vị thế percentile 5 năm ở mức 100% cảnh báo giá đang tại đỉnh lịch sử, rủi ro điều chỉnh ngắn hạn rất lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm 7.81% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 4.48% trong 5 ngày là động lực hỗ trợ, nhưng VIX giảm 6.95% cho thấy tâm lý sợ hãi đang hạ nhiệt.",
+      "Premium 13.31% nằm trong biên dao động 30 ngày (5.56%-17.8%), không có tín hiệu bất thường cực đoan về cầu nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá ở đỉnh 5 năm và vượt xa đường trung bình động, nhà đầu tư FOMO dễ bị chốt lỗ.",
-      "Biên độ dao động ngày 2.31% kết hợp với chênh lệch mua-bán rộng có thể gây thiệt hại lớn nếu giao dịch ngắn hạn sai điểm.",
-      "Thiếu tín hiệu địa chính trị rõ ràng trong dữ liệu, đà tăng có thể mất động lực khi các yếu tố vĩ mô ổn định."
+      "Mua đỉnh lịch sử: Giá ở phân vị 100% trong 5 năm, rủi ro điều chỉnh sâu nếu động lượng yếu đi.",
+      "Biến động cao: Độ biến động ngày 2.3% có thể gây sốc tài khoản ngắn hạn.",
+      "Dữ liệu vĩ mô thiếu: Không có sự kiện địa chính trị hay hành động quốc gia cụ thể để duy trì đà tăng xung lượng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma7_pct",
-        "value": 14.9,
-        "unit": "%",
+        "key": "sjc_price",
+        "value": 185300000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 100,
-        "unit": "percentile",
+        "key": "ma7_price",
+        "value": 161115314,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
         "key": "change7d_pct",
-        "value": 4.55,
+        "value": 4.31,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily_pct",
-        "value": 2.31,
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "premium_pct",
+        "value": 13.31,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_change20d",
         "value": -7.81,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_change5d_pct",
-        "value": 4.61,
+        "key": "intl_gold_change5d",
+        "value": 4.48,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 5.56,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "ma7_vnd_per_tael",
-        "value": 161169695,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T18:23:12.249Z",
+    "latestTimestamp": "2026-02-25T19:23:29.529Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163912193.4407279,
-    "premiumPct": 13.05,
-    "change7dPct": 4.55,
-    "change30dPct": 3.54,
-    "volatilityDailyPct": 2.31,
-    "ma7VndPerTael": 161169695,
-    "ma30VndPerTael": 158082555,
+    "intlVndPerTael": 163531530.36389664,
+    "premiumPct": 13.31,
+    "change7dPct": 4.31,
+    "change30dPct": 3.3,
+    "volatilityDailyPct": 2.3,
+    "ma7VndPerTael": 161115314,
+    "ma30VndPerTael": 158069866,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T18:23:33.766Z",
+    "fetchedAt": "2026-02-25T19:23:51.070Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5206.965,
+        "value": 5200.405,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 1.23,
-        "change5dPct": 4.61,
-        "change20dPct": -3.84,
+        "change1dPct": 1.1,
+        "change5dPct": 4.48,
+        "change20dPct": -3.97,
         "relationToGold": "context"
       },
       {
@@ -193,6 +193,9 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-25 | wvgazettemail.com | How to Diversify Your IRA With Physical Gold and Silver",
+      "2026-02-25 | graphic.com.gh | Ghana targets 15 months of import cover by 2028 under new gold - backed reserve plan"
+    ]
   }
 }
