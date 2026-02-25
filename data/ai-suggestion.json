@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T05:30:55.357Z",
+  "generatedAt": "2026-02-25T06:25:23.488Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản có thể thấp và rủi ro điều chỉnh ngắn hạn cao khi VIX tăng 30% trong 20 ngày. Nên chờ đợi điểm nhập trường tốt hơn thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều độchn gia tăng khi VIX nhảy vọt 10% và lợi suất thực USD giảm sâu 7.81% trong 20 ngày - tín hiệu ngược chiều có thể đảo chiều bất cứ lúc nào.",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), tăng 4.3% sau 7 ngày - động lượng quá mạnh có thể gây quá mua ngắn hạn.",
-      "Premium 13.32% nằm trong biên dao động 30 ngày qua (5.56%-17.8%), không cực đoan nhưng cho thấy thị trường Việt Nam đã định giá cao tương xứng đà tăng thế giới.",
-      "Lợi suất thực Mỹ 1.77% giảm 7.81% trong 20 ngày và VIX tăng 30.09% cùng kỳ hỗ trợ giá vàng thế giới, nhưng Fed Funds vẫn giữ 3.64% - môi trường lãi suất thực dương vẫn là lực cản dài hạn.",
-      "VIX 21.01 điểm tăng 10% trong 1 ngày cho thấy lo ngại thị trường tăng đột biến, có thể gây biến động hai chiều cho vàng ngắn hạn."
+      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), xác nhận xu hướng tăng mạnh ngắn hạn nhưng báo hiệu vùng quá mua.",
+      "VIX tăng vọt 10.06% lên 21.01 điểm cho thấy lo ngại thị trường gia tăng, thường hỗ trợ vàng ngắn hạn nhưng đi kèm biến động cao.",
+      "Lợi suất thực 10Y giảm mạnh 7.81% trong 20 ngày xuống 1.77%, giảm chi phí cơ hội giữ vàng - động lực tăng giá chính.",
+      "Premium 13.34% nằm trong biên dao động 30 ngày (5.56%-17.8%), không cực đoan nhưng thanh khoản cao cần theo dõi."
     ],
     "risks": [
-      "Mua đỉnh ngắn hạn khi giá ở percentile 100% trong 5 năm và đã tăng 4.3% chỉ trong 7 ngày.",
-      "Rủi ro điều chỉnh nếu các phát ngôn về thuế quan của Mỹ (tariffs) không diễn ra như kỳ vọng hoặc Fed tín hiệu giữ lãi suất cao lâu hơn.",
-      "Biến động ngày 2.3% có thể gây áp lực tâm lý cho nhà đầu tư cá nhân nếu thị trường điều chỉnh."
+      "Đỉnh lịch sử 5 năm (percentile 100%) với drawdown tồi nhất 41.26% - rủi ro điều chỉnh sâu nếu động lượng yếu đi.",
+      "Biến động ngày 2.3% kết hợp VIX tăng đột biến có thể gây sụt giảm nhanh trong phiên.",
+      "Thiếu sự kiện địa chính trị cụ thể và headline chính sách không có tín hiệu rõ ràng - động lực tăng có thể không bền vững."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd",
-        "value": 161112924,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change7d_pct",
-        "value": 4.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
         "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 13.32,
+        "key": "change_7d",
+        "value": 4.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 5.56,
-        "unit": "% (min)",
-        "source": "monthly_series_30d"
+        "key": "premium_vs_intl",
+        "value": 13.34,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
+        "key": "vix_level",
+        "value": 21.01,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change_1d",
+        "value": 10.06,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_10y",
         "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_20d",
-        "value": 30.09,
+        "key": "real_yield_change_20d",
+        "value": -7.81,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T05:30:14.152Z",
+    "latestTimestamp": "2026-02-25T06:24:43.492Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163514797.5716003,
-    "premiumPct": 13.32,
-    "change7dPct": 4.3,
-    "change30dPct": 3.29,
+    "intlVndPerTael": 163483910.2578874,
+    "premiumPct": 13.34,
+    "change7dPct": 4.28,
+    "change30dPct": 3.27,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161112924,
-    "ma30VndPerTael": 158069309,
+    "ma7VndPerTael": 161108511,
+    "ma30VndPerTael": 158068279,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T05:30:33.186Z",
+    "fetchedAt": "2026-02-25T06:25:01.458Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5197.605,
+        "value": 5192.325,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 1.04,
-        "change5dPct": 4.42,
-        "change20dPct": -4.02,
+        "change1dPct": 0.94,
+        "change5dPct": 4.32,
+        "change20dPct": -4.12,
         "relationToGold": "context"
       },
       {
@@ -191,18 +191,8 @@
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-25 | 1460kltc.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | wflanews.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | 1025thebull.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | theage.com.au | Aureka uncovers high - grade silver twist at Victorian gold play",
-      "2026-02-25 | gazette-news.co.uk | Donald Trump says countries are  happy  with tariffs as he vows to keep them",
-      "2026-02-25 | leaderlive.co.uk | Donald Trump says countries are  happy  with tariffs as he vows to keep them"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-25 | econotimes.com | Asian Markets Rally as AI Stocks Surge ; Yen and BOJ Rate Outlook in Focus",
-      "2026-02-25 | marketscreener.com | Japan government taps academics Asada , Sato for BOJ board"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
