@@ -1,35 +1,46 @@
 {
-  "generatedAt": "2026-02-25T16:26:52.332Z",
+  "generatedAt": "2026-02-25T17:24:03.580Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh +4.49%/tuần, nhưng rủi ro mua đỉp ngắn hạn rất lớn khi biên độ dao động 2.31%/ngày và không có tín hiệu giảm phát từ vĩ mô. Nên chờ hồi điều chỉnh về vùng hỗ trợ MA7 (~161.1 triệu VND/lượng) hoặc ổn định biên độ trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với động lượng tăng mạnh +4.68%/7 ngày, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.31%/ngày và không có driver địa chính trị cấp thiết nào trong dữ liệu đầu vào.",
     "reasons": [
       "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA30 (158.1 triệu VND/lượng) tới 17.2%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
-      "Động lượng tăng rất mạnh: Giá thế giới tăng +4.59% trong 5 ngày gần nhất, xung lực phá ngưỡng 5,000 USD/oz.",
-      "Vĩ mô ủng hộ xu hướng tăng dài hạn: Lợi suất thực 10Y Mỹ giảm mạnh -7.81% trong 20 ngày (xuống 1.77%), áp lực tài chính giảm giúp vàng tăng giá.",
-      "Premium 13.11% nằm trong vùng trung bình của chuỗi dữ liệu (dao động 5.56%-17.8%), không có tín hiệu bất thường cực đoan của thị trường nội địa."
+      "Lợi suất thực USD 10 năm giảm mạnh -7.81% trong 20 ngày qua (xuống 1.77%) là động lực hỗ trợ giá vàng thế giới tăng +4.78% trong 5 ngày gần nhất.",
+      "Biên độ dao động ngày cao (2.31%) kết hợp với việc giá đang ở mức cao nhất lịch sử 5 năm (percentile 100%) cho thấy thị trường đang trong trạng thái投 cơ (speculative) cao."
     ],
     "risks": [
-      "Rủi ro điều chỉnh ngắn hạn cao khi VIX vẫn ở mức 19.55 và giá đang ở mức cao nhất 5 năm (percentile 100%), dễ xảy ra chốt lời.",
-      "Biên độ dao động ngày 2.31% cho thấy thanh khoản co giãn kém, nhà đầu tư cá nhân dễ bị 'bẫy' FOMO.",
-      "Thiếu sự kiện địa chính trị cấp bách trong dữ liệu input để duy trì xung lực tăng phi mã, confidence giảm nếu chỉ dựa vào đà kỹ thuật."
+      "Rủi ro điều chỉnh giá sâu khi thị trường đã tăng quá nóng (change7dPct 4.68%) và không có tin tức địa chính trị trọng đại để duy trì đà tăng.",
+      "Dữ liệu vĩ mô đầu vào bị thiếu (healthy: false) và các tiêu đề tin tức không chứa sự kiện khủng hoảng cụ thể, có thể là tín hiệu nhiễu.",
+      "Premium 12.91% đang ở mức trung bình, nếu giá thế giới giảm, giá trong nước có thể giảm nhanh theo."
     ],
     "evidence": [
       {
-        "key": "sjc_price_latest",
-        "value": 185300000,
-        "unit": "VND/lượng",
+        "key": "sjc_price_vs_ma30",
+        "value": 17.2,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30_vnd",
-        "value": 158079463,
-        "unit": "VND/lượng",
+        "key": "change_7d_pct",
+        "value": 4.68,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_20d_change",
+        "value": -7.81,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.31,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -39,47 +50,29 @@
         "source": "market_snapshot"
       },
       {
-        "key": "change7d_pct",
-        "value": 4.49,
-        "unit": "%",
+        "key": "current_sjc_price",
+        "value": 185300000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
-        "value": -7.81,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_spot_usd",
-        "value": 5205.82,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_pct",
-        "value": 13.11,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.31,
+        "key": "current_premium",
+        "value": 12.91,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T16:26:08.207Z",
+    "latestTimestamp": "2026-02-25T17:23:24.065Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163819421.960062,
-    "premiumPct": 13.11,
-    "change7dPct": 4.49,
-    "change30dPct": 3.49,
+    "intlVndPerTael": 164110174.8042188,
+    "premiumPct": 12.91,
+    "change7dPct": 4.68,
+    "change30dPct": 3.67,
     "volatilityDailyPct": 2.31,
-    "ma7VndPerTael": 161156442,
-    "ma30VndPerTael": 158079463,
+    "ma7VndPerTael": 161197978,
+    "ma30VndPerTael": 158089154,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T16:26:28.857Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-25T17:23:42.470Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5205.815,
+        "value": 5215.585,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 1.2,
-        "change5dPct": 4.59,
-        "change20dPct": -3.87,
+        "change1dPct": 1.39,
+        "change5dPct": 4.78,
+        "change20dPct": -3.69,
         "relationToGold": "context"
       },
       {
@@ -192,18 +185,17 @@
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-25 | juniorminingnetwork.com | NeoTerrex Minerals Expands Copper - Gold - Silver Discoveries at Gravitas",
-      "2026-02-25 | wbaltv.com | Golden age : Trump presses forward despite polling"
+      "2026-02-25 | rttnews.com | Tech Stocks May Help Lead Extended Upward Move On Wall Street",
+      "2026-02-25 | juniorminingnetwork.com | NeoTerrex Minerals Expands Copper - Gold - Silver Discoveries at Gravitas"
     ],
     "countryActionHeadlines": [
+      "2026-02-25 | marketpulse.com | EUR / USD : Trapped at 1 . 1800 as Euro Area inflation cools significantly … what next ?",
+      "2026-02-25 | rttnews.com | Tech Stocks May Help Lead Extended Upward Move On Wall Street",
       "2026-02-25 | ibtimes.co.uk | How Neobanks Handle International Sanctions Risk for Business Clients",
       "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady",
       "2026-02-25 | english.news.cn | Rwanda , IFAD sign 78 . 5 mln USD financing deal to improve agriculture - Xinhua",
-      "2026-02-25 | cityam.com | Yen weakens after Takaichi selects dovish candidates for BOJ",
-      "2026-02-25 | upi.com | Supreme Court tariff ruling clarifies Trump trade authority"
+      "2026-02-25 | cityam.com | Yen weakens after Takaichi selects dovish candidates for BOJ"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
