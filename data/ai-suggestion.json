@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T03:01:52.495Z",
+  "generatedAt": "2026-02-25T04:38:29.186Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng. Nên chờ đợi hồi phục hoặc xác nhận xu hướng thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.3%. Nhà đầu tư không nên mua đuổi tại vùng giá 185.3 triệu/lượng này mà chờ đợi信 hiệu ổn định hoặc điều chỉnh về vùng hỗ trợ gần MA7 (161 triệu VND/lượng).",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.05 triệu) và MA30 (158.05 triệu), tăng 4.02% sau 7 ngày - cho thấy thị trường đang ở trạng thái quá mua ngắn hạn.",
-      "VIX tăng 30.09% trong 20 ngày qua (đạt 21.01) kết hợp lợi suất thực 10Y giảm 7.81% (xuống 1.77%) hỗ trợ giá vàng nhưng tín hiệu đã phần nào được định giá.",
-      "Premium 13.63% nằm trong biên dao động 30 ngày (5.56%-17.8%), không cực đoan nhưng giá thế giới đã tăng mạnh từ đáy 4687 USD/oz (02-02) lên 5180 USD/oz."
+      "Giá SJC 185.3 triệu VND/lượng đang nằm rất xa so với MA7 (161.1 triệu VND/lượng) và MA30 (158.1 triệu VND/lượng), cho thấy thị trường đang ở trạng thái quá mua (overbought) ngắn hạn.",
+      "Đà tăng quá nóng trong 7 ngày qua (+4.05%) kết hợp với biên độ dao động ngày cao (2.3%) báo hiệu rủi ro biến động và chốt lời có thể xảy ra bất cứ lúc nào.",
+      "VIX tăng mạnh 20 ngày qua (+30.09% lên mức 21.01) kết hợp với lợi suất thực 10 năm giảm (-7.81%) đang hỗ trợ giá vàng thế giới, nhưng các headline chính sách Fed chưa có tín hiệu cắt giảm lãi suất rõ ràng.",
+      "Premium 13.6% đang ở mức hợp lý so với trung bình chuỗi dữ liệu (dao động 5.56%-17.8%), không có dấu hiệu căng thẳng cực đoan cần nhập hàng gấp."
     ],
     "risks": [
-      "Đang ở mức giá cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật cao nếu lợi suất thực USD hồi phục.",
-      "Biên độ dao động ngày 2.3% cho thấy biến động lớn, nhà đầu tư FOMO có thể bị thiệt hại nếu thị trường đảo chiều.",
-      "Thiếu dữ liệu địa chính trị và hành động quốc gia cụ thể trong 30 ngày qua, tín hiệu vĩ mô có thể nhiễu."
+      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá không duy trì được đà tăng, về lại vùng MA7 (~161 triệu VND/lượng) tương đương mức giảm ~13% từ giá hiện tại.",
+      "Biên độ dao động 2.3%/ngày rất lớn, nhà đầu tư mua ngay có thể đối mặt với variance âm đáng kể trong ngắn hạn.",
+      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu input, đà tăng hiện tại có thể chủ yếu do động lượng kỹ thuật và dễ bị đảo chiều khi thị trường Mỹ ổn định."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá SJC hiện tại",
         "value": 185300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
+        "key": "Khoảng cách giá - MA7",
+        "value": 24243276,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": 4.02,
-        "unit": "%",
+        "key": "Biên độ dao động ngày",
+        "value": 2.3,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 13.63,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma7_vs_current_gap",
-        "value": 15.15,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 30.09,
-        "unit": "%",
+        "key": "VIX Index",
+        "value": 21.01,
+        "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_10y",
+        "key": "Lợi suất thực US 10Y",
         "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_low_to_high_30d",
-        "value": 10.53,
+        "key": "Premium SJC",
+        "value": 13.6,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T03:01:09.107Z",
+    "latestTimestamp": "2026-02-25T04:37:55.174Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163074581.8199913,
-    "premiumPct": 13.63,
-    "change7dPct": 4.02,
-    "change30dPct": 3.01,
+    "intlVndPerTael": 163121398.3213667,
+    "premiumPct": 13.6,
+    "change7dPct": 4.05,
+    "change30dPct": 3.04,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161050036,
-    "ma30VndPerTael": 158054635,
+    "ma7VndPerTael": 161056724,
+    "ma30VndPerTael": 158056195,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T03:01:30.596Z",
+    "fetchedAt": "2026-02-25T04:38:06.644Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5188.675,
+        "value": 5180.915,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 0.87,
-        "change5dPct": 4.24,
-        "change20dPct": -4.18,
+        "change1dPct": 0.72,
+        "change5dPct": 4.09,
+        "change20dPct": -4.33,
         "relationToGold": "context"
       },
       {
@@ -192,6 +187,13 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-25 | ktvh.com | Watch Live : President Donald Trump delivers State of the Union address",
+      "2026-02-25 | orlandosentinel.com | Were winning so much . Trump State of the Union seeks to calm economic jitters ahead of midterms – Orlando Sentinel",
+      "2026-02-25 | finanzen.ch | Australian Market Extends Early Gains In Mid - market",
+      "2026-02-25 | finanzen.ch | Asian Markets Track Wall Street Higher",
+      "2026-02-25 | sun-sentinel.com | Were winning so much . Trump State of the Union seeks to calm economic jitters ahead of midterms – Sun Sentinel",
+      "2026-02-25 | goulburnpost.com.au | As midterms loom , Trump seeks State of the Union reset"
+    ]
   }
 }
