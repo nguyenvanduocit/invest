@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T00:23:07.655Z",
+  "generatedAt": "2026-02-25T01:34:55.321Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,22 +7,28 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 184.6 triệu/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 3.3% trong 7 ngày, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.3%/ngày và VIX tăng vọt.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản cao và rủi ro điều chỉnh kỹ thuật đang gia tăng. Nhà đầu tư nên chờ đợi信 hiệu hồi chỉnh về vùng hỗ trợ cận MA7 (~161 triệu VND/lượng) hoặc xác nhận phá đỉnh bền vững trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC (184.6 triệu VND/lượng) đang vượt xa MA7 (160.9 triệu VND/lượng) tới 14.7%, tín hiệu quá mua ngắn hạn rõ rệt.",
-      "VIX tăng 30.09% trong 20 ngày qua lên mức 21.01 cho thấy tâm lý thị trường lo âu, thường đi kèm biến động giá hai chiều mạnh.",
-      "Lợi suất thực Mỹ (1.77%) giảm 7.81% trong 20 ngày là động lực hỗ trợ vàng, nhưng giá thế giới (5145 USD/oz) đã giảm 5% cùng kỳ, tín hiệu phân kỳ.",
-      "Premium 13.98% đang ở mức ổn định so với trung bình chuỗi 30 ngày (13.8%), không có tín hiệu bong bóng premium nội địa."
+      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), tăng 4.07% sau 7 ngày và 3.07% sau 30 ngày, cho thấy động lượng tăng mạnh nhưng đã ở vùng quá mua.",
+      "Premium 13.57% nằm trong biên dao động 30 ngày (5.56%-17.8%), không cực đoan; giá thế giới quay đầu giảm 4.24% trong 20 ngày qua dù tăng ngắn hạn 4.18%/5 ngày.",
+      "VIX tăng 30.09% trong 20 ngày lên mức 21.01 chỉ thị lo ngại rủi ro thị trường, kết hợp lợi suất thực 10Y giảm mạnh 7.81% trong 20 ngày xuống 1.77% - hỗ trợ vàng trung hạn.",
+      "Lãi suất Fed Funds hiệu quả 3.64% và lợi suất Treasury 10Y 4.03% giảm tương ứng 4.95% và 4.72% trong 20 ngày, giảm chi phí nắm giữ vàng."
     ],
     "risks": [
-      "Đang ở mức giá cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh và điều chỉnh giảm là cực lớn.",
-      "Biên độ dao động 2.3%/ngày tương đương hơn 4 triệu VND/lượng, có thể gây thanh khoản cạn nếu thị trường đảo chiều.",
-      "Dự báo Kevin Warsh làm Fed Chair có thể gây sốc chính sách lãi suất/bảng cân đối, làm giảm giá vàng."
+      "Đỉnh lịch sử 5 năm (percentile 100%) với 4 lần drawdown, lần tệ nhất -41.26% và thời gian phục hồi trung bình 1369 ngày - rủi ro mua đỉnh cực cao.",
+      "Biến động ngày 2.3% kết hợp giá thế giới giảm 4.24% trong 20 ngày có thể gây hồi chỉnh nhanh nếu động lượng yếu đi.",
+      "Thiếu sự kiện địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu, giảm độ tin cậy xu hướng tăng bền vững."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma7",
-        "value": 14.7,
+        "key": "sjc_price_latest",
+        "value": 185300000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_pct",
+        "value": 13.57,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -33,47 +39,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_20d",
+        "key": "ma7_vnd",
+        "value": 161061708,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change7d_pct",
+        "value": 4.07,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -7.81,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change20d",
         "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.77,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 13.98,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_change_20d",
-        "value": -5,
+        "key": "intl_gold_change20d",
+        "value": -4.24,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T00:22:33.957Z",
-    "sjcVndPerTael": 184600000,
-    "intlVndPerTael": 161956700.09897664,
-    "premiumPct": 13.98,
-    "change7dPct": 3.3,
-    "change30dPct": 2.31,
+    "latestTimestamp": "2026-02-25T01:34:08.181Z",
+    "sjcVndPerTael": 185300000,
+    "intlVndPerTael": 163156287.60504252,
+    "premiumPct": 13.57,
+    "change7dPct": 4.07,
+    "change30dPct": 3.07,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 160890339,
-    "ma30VndPerTael": 158017372,
+    "ma7VndPerTael": 161061708,
+    "ma30VndPerTael": 158057358,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T00:22:49.207Z",
+    "fetchedAt": "2026-02-25T01:34:29.586Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5144.305,
+        "value": 5185.375,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 0.01,
-        "change5dPct": 3.35,
-        "change20dPct": -5,
+        "change1dPct": 0.81,
+        "change5dPct": 4.18,
+        "change20dPct": -4.24,
         "relationToGold": "context"
       },
       {
@@ -186,15 +192,7 @@
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-24 | finance.yahoo.com | Dollar Retreats and Gold Soars on Concern Over US Trade Policies",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Decoupling : Gold Pierces $5 , 180 as WTI Crude Stumbles Amid Global Trade Volatility",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - The  Warsh Shock : Nomination of Kevin Warsh as Fed Chair Signals Aggressive Balance Sheet Pivot and 2026 Rate Normalization"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-24 | investinglive.com | USD / CAD probes for a one - month high , Keystone XL could be revived",
-      "2026-02-24 | markets.financialcontent.com | FinancialContent - The Great Decoupling : Gold Pierces $5 , 180 as WTI Crude Stumbles Amid Global Trade Volatility",
-      "2026-02-24 | californiatelegraph.com | iTrustCapital Launches Crypto Treasury Accounts For Businesses , Trusts , & Non - Profits"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
