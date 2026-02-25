@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T19:24:09.494Z",
+  "generatedAt": "2026-02-25T20:11:57.893Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản thấp và thiếu sự kiện vĩ mô cấp thiết khiến rủi ro mua đuôi cao. Nhà đầu tư nên chờ đợt điều chỉnh về vùng hỗ trợ MA7 (161.1 triệu VND/lượng) hoặc xác nhận xu hướng rõ ràng hơn.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động lớn 2.27%/ngày, rủi ro mua đuổi rất cao. Dù xu hướng vĩ mô hỗ trợ vàng nhờ lợi suất thực giảm và USD yếu, nhưng giá đã tăng quá nhanh (+4.32% trong 7 ngày) và cần giai đoạn điều chỉnh hoặc tích lũy trước khi tham gia.",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), tăng 4.31% sau 7 ngày và 3.3% sau 30 ngày, cho thấy động lượng tăng mạnh nhưng đã ở vùng quá mua.",
-      "Vị thế percentile 5 năm ở mức 100% cảnh báo giá đang tại đỉnh lịch sử, rủi ro điều chỉnh ngắn hạn rất lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm 7.81% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 4.48% trong 5 ngày là động lực hỗ trợ, nhưng VIX giảm 6.95% cho thấy tâm lý sợ hãi đang hạ nhiệt.",
-      "Premium 13.31% nằm trong biên dao động 30 ngày (5.56%-17.8%), không có tín hiệu bất thường cực đoan về cầu nội địa."
+      "Giá SJC 185.3 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (158.2 triệu VND/lượng) 17.2% và tăng mạnh 4.32% chỉ trong 7 ngày gần đây.",
+      "Biên độ dao động ngày cao (2.27%) cho thấy thị trường đang nóng, cộng với rủi ro giảm giá tồi nhất trong quá khứ là -41.26% cảnh báo sự thận trọng khi mua ở vùng giá cực đại.",
+      "Yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh 7.81% trong 20 ngày (xuống 1.77%) và USD Index giảm 1.01% trong 20 ngày, tạo đà cho giá vàng thế giới tăng 4.56% trong 5 ngày.",
+      "Tin tức địa chính trị về việc các ngân hàng trung ương đẩy mạnh phi đô la hóa và mua vàng (ví dụ Ghana mua 3 tấn/tuần) hỗ trợ tâm lý dài hạn, nhưng không đủ để biện minh cho việc MUA ngay ở đỉnh giá ngắn hạn."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Giá ở phân vị 100% trong 5 năm, rủi ro điều chỉnh sâu nếu động lượng yếu đi.",
-      "Biến động cao: Độ biến động ngày 2.3% có thể gây sốc tài khoản ngắn hạn.",
-      "Dữ liệu vĩ mô thiếu: Không có sự kiện địa chính trị hay hành động quốc gia cụ thể để duy trì đà tăng xung lượng."
+      "Rủi ro điều chỉnh kỹ thuật sâu sau khi tăng quá nóng (+4.32%/7 ngày) và vượt quá xa đường trung bình động.",
+      "Thanh khoản có thể giảm nếu giá đi ngang hoặc giảm nhẹ, gây khó khăn cho việc thoát hàng ngắn hạn.",
+      "Premium 13.14% hiện tại cao hơn mức thấp nhất 5.56% (ngày 28/01) nhưng thấp hơn đỉnh 17.8% (ngày 17/02), có thể co hẹp nếu giá thế giới giảm."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "SJC Spot Price",
         "value": 185300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_price",
-        "value": 161115314,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change7d_pct",
-        "value": 4.31,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "Percentile 5 Year",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_pct",
-        "value": 13.31,
+        "key": "SJC Change 7d",
+        "value": 4.32,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.77,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "MA30 SJC",
+        "value": 158189322,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "real_yield_change20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -7.81,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_change5d",
-        "value": 4.48,
+        "key": "Gold Spot Change 5d",
+        "value": 4.56,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 2.27,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T19:23:29.529Z",
+    "latestTimestamp": "2026-02-25T20:11:14.347Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163531530.36389664,
-    "premiumPct": 13.31,
-    "change7dPct": 4.31,
-    "change30dPct": 3.3,
-    "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161115314,
-    "ma30VndPerTael": 158069866,
+    "intlVndPerTael": 163776445.3227402,
+    "premiumPct": 13.14,
+    "change7dPct": 4.32,
+    "change30dPct": 2.04,
+    "volatilityDailyPct": 2.27,
+    "ma7VndPerTael": 162129454,
+    "ma30VndPerTael": 158189322,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T19:23:51.070Z",
+    "fetchedAt": "2026-02-25T20:11:35.917Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5200.405,
+        "value": 5204.525,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 1.1,
-        "change5dPct": 4.48,
-        "change20dPct": -3.97,
+        "change1dPct": 1.18,
+        "change5dPct": 4.56,
+        "change20dPct": -3.89,
         "relationToGold": "context"
       },
       {
@@ -191,11 +185,18 @@
       "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-25 | wvgazettemail.com | How to Diversify Your IRA With Physical Gold and Silver",
-      "2026-02-25 | graphic.com.gh | Ghana targets 15 months of import cover by 2028 under new gold - backed reserve plan"
-    ]
+    "geopoliticalHeadlines": [
+      "2026-02-25 | knopnews2.com | Here is everyone Trump awarded a medal to during the State of the Union",
+      "2026-02-25 | businessworld.in | Gold To Hit $5 , 000 As Central Banks Accelerate De - dollarisation : MOFSL"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-25 | businessworld.in | Gold To Hit $5 , 000 As Central Banks Accelerate De - dollarisation : MOFSL",
+      "2026-02-25 | 247wallst.com | What Retirees Should Watch Before Buying Into AMZA 7 . 51 % Yield This Year",
+      "2026-02-25 | myjoyonline.com | Govt to purchase 3 tonnes of gold weekly in push for 15 - month import cover - Ato Forson",
+      "2026-02-25 | upi.com | Supreme Court tariff ruling clarifies Trump trade authority",
+      "2026-02-25 | marketpulse.com | EUR / USD : Trapped at 1 . 1800 as Euro Area inflation cools significantly … what next ?",
+      "2026-02-25 | rttnews.com | Tech Stocks May Help Lead Extended Upward Move On Wall Street"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
