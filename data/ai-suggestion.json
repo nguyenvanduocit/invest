@@ -1,27 +1,34 @@
 {
-  "generatedAt": "2026-02-25T15:21:38.929Z",
+  "generatedAt": "2026-02-25T16:26:52.332Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 185.3 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 4.23% trong 7 ngày, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.3%/ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh +4.49%/tuần, nhưng rủi ro mua đỉp ngắn hạn rất lớn khi biên độ dao động 2.31%/ngày và không có tín hiệu giảm phát từ vĩ mô. Nên chờ hồi điều chỉnh về vùng hỗ trợ MA7 (~161.1 triệu VND/lượng) hoặc ổn định biên độ trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu) và MA30 (158.1 triệu), tín hiệu quá mua rõ ràng ở vùng giá kỷ lục.",
-      "Động lượng vĩ mô tích cực: Giá vàng thế giới突破 mốc 5.191 USD/oz, lợi suất thực Mỹ giảm 7.81% trong 20 ngày (xuống 1.77%) tạo đà đẩy giá vàng.",
-      "Premium 13.4% đang ở mức hợp lý so với trung bình chuỗi dữ liệu (10%-17.8%), không có dấu hiệu投机 cực đoan ở mức chênh lệch này."
+      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA30 (158.1 triệu VND/lượng) tới 17.2%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
+      "Động lượng tăng rất mạnh: Giá thế giới tăng +4.59% trong 5 ngày gần nhất, xung lực phá ngưỡng 5,000 USD/oz.",
+      "Vĩ mô ủng hộ xu hướng tăng dài hạn: Lợi suất thực 10Y Mỹ giảm mạnh -7.81% trong 20 ngày (xuống 1.77%), áp lực tài chính giảm giúp vàng tăng giá.",
+      "Premium 13.11% nằm trong vùng trung bình của chuỗi dữ liệu (dao động 5.56%-17.8%), không có tín hiệu bất thường cực đoan của thị trường nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh ngắn hạn cao khi giá đang ở percentile 100% trong 5 năm và đã tăng 4.23% chỉ trong 7 ngày.",
-      "Biên độ dao động 2.3%/ngày tương đương 4.2 triệu đồng/lượng cho thấy thanh khoản và biến động giá rất lớn.",
-      "Dữ liệu vĩ mô thiếu sự kiện địa chính trị cụ thể và hành động can thiệp của quốc gia, độ tin cậy thông tin hạn chế."
+      "Rủi ro điều chỉnh ngắn hạn cao khi VIX vẫn ở mức 19.55 và giá đang ở mức cao nhất 5 năm (percentile 100%), dễ xảy ra chốt lời.",
+      "Biên độ dao động ngày 2.31% cho thấy thanh khoản co giãn kém, nhà đầu tư cá nhân dễ bị 'bẫy' FOMO.",
+      "Thiếu sự kiện địa chính trị cấp bách trong dữ liệu input để duy trì xung lực tăng phi mã, confidence giảm nếu chỉ dựa vào đà kỹ thuật."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "sjc_price_latest",
         "value": 185300000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "ma30_vnd",
+        "value": 158079463,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
@@ -32,53 +39,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": 4.23,
+        "key": "change7d_pct",
+        "value": 4.49,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_pct",
-        "value": 13.4,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold",
-        "value": 5191.43,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_change20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -7.81,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "ma7_vnd",
-        "value": 161097945,
-        "unit": "VND/lượng",
+        "key": "gold_spot_usd",
+        "value": 5205.82,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_pct",
+        "value": 13.11,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.31,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T15:21:01.607Z",
+    "latestTimestamp": "2026-02-25T16:26:08.207Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163409946.8399257,
-    "premiumPct": 13.4,
-    "change7dPct": 4.23,
-    "change30dPct": 3.23,
-    "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161097945,
-    "ma30VndPerTael": 158065814,
+    "intlVndPerTael": 163819421.960062,
+    "premiumPct": 13.11,
+    "change7dPct": 4.49,
+    "change30dPct": 3.49,
+    "volatilityDailyPct": 2.31,
+    "ma7VndPerTael": 161156442,
+    "ma30VndPerTael": 158079463,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T15:21:17.561Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-25T16:26:28.857Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5188.955,
+        "value": 5205.815,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 0.88,
-        "change5dPct": 4.25,
-        "change20dPct": -4.18,
+        "change1dPct": 1.2,
+        "change5dPct": 4.59,
+        "change20dPct": -3.87,
         "relationToGold": "context"
       },
       {
@@ -183,21 +184,26 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President",
       "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026",
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve",
       "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
-      "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
-      "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
+      "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady",
-      "2026-02-25 | wbay.com | Here is everyone Trump awarded a medal to during the State of the Union"
+      "2026-02-25 | juniorminingnetwork.com | NeoTerrex Minerals Expands Copper - Gold - Silver Discoveries at Gravitas",
+      "2026-02-25 | wbaltv.com | Golden age : Trump presses forward despite polling"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
+    "countryActionHeadlines": [
+      "2026-02-25 | ibtimes.co.uk | How Neobanks Handle International Sanctions Risk for Business Clients",
       "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady",
-      "2026-02-25 | fortune.com | Current price of gold : February 25 , 2026"
+      "2026-02-25 | english.news.cn | Rwanda , IFAD sign 78 . 5 mln USD financing deal to improve agriculture - Xinhua",
+      "2026-02-25 | cityam.com | Yen weakens after Takaichi selects dovish candidates for BOJ",
+      "2026-02-25 | upi.com | Supreme Court tariff ruling clarifies Trump trade authority"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-25 | markets.financialcontent.com | FinancialContent - Gold Smashes $5 , 000 Milestone as Federal Reserve Defies Political Heat to Hold Rates Steady"
     ]
   }
 }
