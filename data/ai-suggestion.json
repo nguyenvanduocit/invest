@@ -1,79 +1,72 @@
 {
-  "generatedAt": "2026-02-25T10:19:58.553Z",
+  "generatedAt": "2026-02-25T11:18:56.165Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật cao khi VIX nhảy vọt 10% và lợi suất thực USD giảm sâu 7.81% trong 20 ngày - tín hiệu ngắn hạn đã quá mua.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 7 ngày qua (+3.66%), trong khi xu hướng thế giới đi ngang và VIX tăng vọt báo hiệu rủi ro chốt lời ngắn hạn.",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng cao hơn MA7 (161.0 triệu) và MA30 (158.1 triệu), cho thấy xu hướng tăng rất mạnh nhưng đã vượt xa đường trung bình động.",
-      "VIX tăng vọt 10.06% lên 21.01 điểm trong 1 ngày, kèm theo tăng 30.09% trong 20 ngày, báo hiệu tâm lý thị trường lo ngại có thể kích hoạt chốt lời.",
-      "Lợi suất thực USD 10Y giảm mạnh 7.81% trong 20 ngày xuống 1.77%, hỗ trợ vàng nhưng khả năng đã phản ánh hết vào giá hiện tại.",
-      "Premium 13.66% nằm trong biên độ dao động 30 ngày qua (5.56%-17.8%), không có tín hiệu bất thường cực đoan."
+      "Giá SJC 185.3 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA7 (160.97 triệu VND/lượng) tới 15.1%, báo hiệu vùng quá mua kỹ thuật.",
+      "Đà tăng 7 ngày (3.66%) gấp gần 1.4 lần tăng cả 30 ngày (2.66%), cho thấy động lượng tăng nóng cần điều chỉnh về kỹ thuật.",
+      "VIX tăng vọt 30.09% trong 20 ngày lên mức 21.01 điểm, kết hợp lợi suất thực 10Y giảm 7.81% cho thấy thị trường tài chính đang bất ổn, có thể gây áp lực chốt lời trên vàng."
     ],
     "risks": [
-      "Đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật rất lớn nếu dữ liệu vĩ mô xấu xuất hiện.",
-      "Biến động ngày 2.3% kết hợp VIX tăng đột biến có thể gây sụt giảm nhanh trong ngắn hạn.",
-      "Thời gian phục hồi trung bình sau đợt sụt giảm tồi t nhất là 1369 ngày - rủi ro thanh khoản nếu mua đỉnh."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu thị trường chứng khoán toàn cầu suy giảm mạnh theo VIX.",
+      "Premium 14.02% cao hơn mức trung bình 30 ngày (~14%), giảm khả năng sinh lời ngắn hạn nếu giá thế giới đi ngang.",
+      "Thái Lan bất ngờ cắt lãi suất 25 bps có thể gây biến động bất ngờ cho thị trường tài sản khu vực."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma7",
-        "value": 15.2,
-        "unit": "% cao hơn MA7",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Percentile 5 năm",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_1d",
-        "value": 10.06,
+        "key": "Giá SJC hiện tại",
+        "value": 185300000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá SJC so với MA7",
+        "value": 15.1,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX thay đổi 20 ngày",
+        "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "Lợi suất thực 10Y thay đổi 20 ngày",
         "value": -7.81,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_premium_range_30d",
-        "value": 5.56,
+        "key": "Premium trung bình 30 ngày",
+        "value": 14.02,
         "unit": "%",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 2.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "worst_drawdown_recovery",
-        "value": 1369,
-        "unit": "ngày",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T10:19:20.893Z",
+    "latestTimestamp": "2026-02-25T11:17:31.808Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163025054.53008983,
-    "premiumPct": 13.66,
-    "change7dPct": 3.99,
-    "change30dPct": 2.98,
+    "intlVndPerTael": 162510632.9885772,
+    "premiumPct": 14.02,
+    "change7dPct": 3.66,
+    "change30dPct": 2.66,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161042961,
-    "ma30VndPerTael": 158052984,
+    "ma7VndPerTael": 160969472,
+    "ma30VndPerTael": 158035836,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +77,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T10:19:34.402Z",
-    "healthy": false,
+    "fetchedAt": "2026-02-25T11:17:40.323Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5179.435,
+        "value": 5156.925,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 0.69,
-        "change5dPct": 4.06,
-        "change20dPct": -4.35,
+        "change1dPct": 0.25,
+        "change5dPct": 3.61,
+        "change20dPct": -4.77,
         "relationToGold": "context"
       },
       {
@@ -186,20 +179,23 @@
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-25 | radiosunny.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | z107fm.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | mix923fm.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | foxsportsabq.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech",
-      "2026-02-25 | z105.iheart.com | President Trump Touts  Golden Age  Of America In State Of The Union Speech"
+      "2026-02-25 | abcnews4.com | Top moments and takeaways from Trump State of the Union",
+      "2026-02-25 | knpr.org | Read Trump 2026 State of the Union address",
+      "2026-02-25 | publicradiotulsa.org | Read Trump 2026 State of the Union address",
+      "2026-02-25 | kacu.org | 5 takeaways from Trump State of the Union address",
+      "2026-02-25 | nbc16.com | Top moments and takeaways from Trump State of the Union",
+      "2026-02-25 | kiro7.com | Trump boasts in State of the Union that US is  winning so much"
     ],
     "countryActionHeadlines": [
+      "2026-02-25 | investorschronicle.co.uk | Were not at the top yet : £50bn gold boss - Investor Chronicle",
       "2026-02-25 | scmp.com | China yuan strengthens to near 3 - year high as US dollar uncertainty grows",
       "2026-02-25 | businesstimes.com.sg | Thai central bank unexpectedly cuts policy rate by 25 bps",
       "2026-02-25 | emirates247.com | Wall Street Rises as Cooling Gold Prices Signal Shifting Investor Mood",
       "2026-02-25 | dailynews.co.tz | The Dollar Weakens , Falling Below 40 % of Global Reserves , and BRICS Advance in Alternative Systems",
-      "2026-02-25 | marketscreener.com | Markets Eye Japan PM BOJ Picks for Hints on Rate Path -- Update",
-      "2026-02-25 | actionforex.com | No Need to Fear the Yield in Japan"
+      "2026-02-25 | marketscreener.com | Markets Eye Japan PM BOJ Picks for Hints on Rate Path -- Update"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-25 | finance.yahoo.com | Robert Kiyosaki warns biggest stock market plunge still coming and  now imminent . How to shatterproof your nest - egg now"
+    ]
   }
 }
