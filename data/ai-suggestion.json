@@ -1,72 +1,85 @@
 {
-  "generatedAt": "2026-02-25T11:18:56.165Z",
+  "generatedAt": "2026-02-25T12:14:04.792Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 7 ngày qua (+3.66%), trong khi xu hướng thế giới đi ngang và VIX tăng vọt báo hiệu rủi ro chốt lời ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.3%. Nhà đầu tư nên chờ đợi hồi chỉnh về vùng hỗ trợ gần MA7 (~161 triệu VND/lượng) thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA7 (160.97 triệu VND/lượng) tới 15.1%, báo hiệu vùng quá mua kỹ thuật.",
-      "Đà tăng 7 ngày (3.66%) gấp gần 1.4 lần tăng cả 30 ngày (2.66%), cho thấy động lượng tăng nóng cần điều chỉnh về kỹ thuật.",
-      "VIX tăng vọt 30.09% trong 20 ngày lên mức 21.01 điểm, kết hợp lợi suất thực 10Y giảm 7.81% cho thấy thị trường tài chính đang bất ổn, có thể gây áp lực chốt lời trên vàng."
+      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA7 (161.1 triệu VND/lượng) khoảng 15%, tín hiệu quá mua rõ ràng trên dữ liệu 30 ngày.",
+      "Động lượng tăng 7 ngày (4.05%) mạnh gấp đôi động lượng 30 ngày (3.04%), cho thấy tăng tốc ngắn hạn nhưng có nguy cơ cạn kiệt.",
+      "VIX tăng 30.09% trong 20 ngày qua lên mức 21.01 chỉ báo lo ngại thị trường, hỗ trợ nhu cầu trú ẩn vào vàng ngắn hạn.",
+      "Lợi suất thực Mỹ 10 năm giảm 7.81% (xuống 1.77%) trong 20 ngày, tạo đòn bẩy thuận lợi cho giá vàng thế giới tăng lên 5182 USD/oz."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu thị trường chứng khoán toàn cầu suy giảm mạnh theo VIX.",
-      "Premium 14.02% cao hơn mức trung bình 30 ngày (~14%), giảm khả năng sinh lời ngắn hạn nếu giá thế giới đi ngang.",
-      "Thái Lan bất ngờ cắt lãi suất 25 bps có thể gây biến động bất ngờ cho thị trường tài sản khu vực."
+      "Rủi ro điều chỉnh giá cao khi mua tại vùng giá kỷ lục (percentile 100%), khả năng hồi về MA7 là khoảng trống 24 triệu VND/lượng.",
+      "Biên độ dao động ngày 2.3% rất lớn, có thể gây thanh lý tài khoản đòn bẩy hoặc tâm lý hoảng loạn nếu giá quay đầu.",
+      "Premium 13.6% đang ở mức cao trong chuỗi 30 ngày (dao động 10.46%-17.8%), có thể co hẹp nếu giá thế giới giảm."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 185300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá SJC so với MA7",
-        "value": 15.1,
+        "key": "ma7_price",
+        "value": 161056698,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change7d_pct",
+        "value": 4.05,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX thay đổi 20 ngày",
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change20d",
         "value": 30.09,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực 10Y thay đổi 20 ngày",
-        "value": -7.81,
+        "key": "us_real_yield_10y",
+        "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium trung bình 30 ngày",
-        "value": 14.02,
-        "unit": "%",
+        "key": "intl_gold_spot",
+        "value": 5182.26,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T11:17:31.808Z",
+    "latestTimestamp": "2026-02-25T12:13:23.642Z",
     "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 162510632.9885772,
-    "premiumPct": 14.02,
-    "change7dPct": 3.66,
-    "change30dPct": 2.66,
+    "intlVndPerTael": 163121212.60780075,
+    "premiumPct": 13.6,
+    "change7dPct": 4.05,
+    "change30dPct": 3.04,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 160969472,
-    "ma30VndPerTael": 158035836,
+    "ma7VndPerTael": 161056698,
+    "ma30VndPerTael": 158056189,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T11:17:40.323Z",
+    "fetchedAt": "2026-02-25T12:13:44.737Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5156.925,
+        "value": 5182.055,
         "unit": "USD/oz",
         "date": "2026-02-25",
-        "change1dPct": 0.25,
-        "change5dPct": 3.61,
-        "change20dPct": -4.77,
+        "change1dPct": 0.74,
+        "change5dPct": 4.11,
+        "change20dPct": -4.3,
         "relationToGold": "context"
       },
       {
@@ -179,23 +192,23 @@
       "2026-02-21 | ECB Press / Speeches | Christine Lagarde: Interview with Wall Street Journal"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-25 | abcnews4.com | Top moments and takeaways from Trump State of the Union",
-      "2026-02-25 | knpr.org | Read Trump 2026 State of the Union address",
-      "2026-02-25 | publicradiotulsa.org | Read Trump 2026 State of the Union address",
-      "2026-02-25 | kacu.org | 5 takeaways from Trump State of the Union address",
-      "2026-02-25 | nbc16.com | Top moments and takeaways from Trump State of the Union",
-      "2026-02-25 | kiro7.com | Trump boasts in State of the Union that US is  winning so much"
+      "2026-02-25 | dailysabah.com | Trump attempts to paint rosy picture in rambling State of Union",
+      "2026-02-25 | northwalespioneer.co.uk | Takeaways from Trump State of the Union address",
+      "2026-02-25 | investegate.co.uk | Amundi Physical Metals plc : united kingdom Final Terms | Company Announcement",
+      "2026-02-25 | penarthtimes.co.uk | Takeaways from Trump State of the Union address",
+      "2026-02-25 | harwichandmanningtreestandard.co.uk | Takeaways from Trump State of the Union address | Harwich and Manningtree Standard",
+      "2026-02-25 | clactonandfrintongazette.co.uk | Takeaways from Trump State of the Union address | Clacton and Frinton Gazette"
     ],
     "countryActionHeadlines": [
+      "2026-02-25 | finance.yahoo.com | Best high - yield savings interest rates today , February 25 , 2026 ( Earn up to 4 % APY )",
+      "2026-02-25 | livemint.com | Gold Rate Today LIVE : MCX gold price rises above ₹1 . 6 lakh per 10 gm , MCX silver rate jumps 2 % to ₹2 . 67 lakh per kg",
       "2026-02-25 | investorschronicle.co.uk | Were not at the top yet : £50bn gold boss - Investor Chronicle",
-      "2026-02-25 | scmp.com | China yuan strengthens to near 3 - year high as US dollar uncertainty grows",
-      "2026-02-25 | businesstimes.com.sg | Thai central bank unexpectedly cuts policy rate by 25 bps",
-      "2026-02-25 | emirates247.com | Wall Street Rises as Cooling Gold Prices Signal Shifting Investor Mood",
-      "2026-02-25 | dailynews.co.tz | The Dollar Weakens , Falling Below 40 % of Global Reserves , and BRICS Advance in Alternative Systems",
-      "2026-02-25 | marketscreener.com | Markets Eye Japan PM BOJ Picks for Hints on Rate Path -- Update"
+      "2026-02-25 | scmp.com | China yuan strengthens to near 3 - year high as US dollar uncertainty grows"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-25 | finance.yahoo.com | Robert Kiyosaki warns biggest stock market plunge still coming and  now imminent . How to shatterproof your nest - egg now"
+      "2026-02-25 | livemint.com | Gold Rate Today LIVE : MCX gold price rises above ₹1 . 6 lakh per 10 gm , MCX silver rate jumps 2 % to ₹2 . 67 lakh per kg",
+      "2026-02-25 | cbn.com | Trump Marathon Speech Touts Record on Economy , Immigration , Stopping Wars ; Democrats Target Family Economic Woes",
+      "2026-02-25 | yasstribune.com.au | Trump hails  golden age  as US voters sour on economy"
     ]
   }
 }
