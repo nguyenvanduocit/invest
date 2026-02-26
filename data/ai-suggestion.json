@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T01:35:05.756Z",
+  "generatedAt": "2026-02-26T02:59:47.411Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật cao khi giá thế giới vẫn thấp hơn đỉnh 30 ngày và lợi suất thực USD đang tăng trở lại.",
+    "thesis": "Giá vàng SJC ở đỉnh lịch sử 5 năm (185 triệu đồng/lượng) với động lượng tăng chậm lại, trong khi giá thế giới điều chỉnh từ 5327 USD/oz về 5185 USD/oz và lợi suất thực Mỹ tăng tạo áp lực ngắn hạn.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (158 triệu VND/lượng) tới 17%, báo hiệu vùng quá mua.",
-      "Đà tăng 7 ngày qua rất mạnh (+3.91%) nhưng giá thế giới hiện tại (5182 USD/oz) vẫn thấp hơn đỉnh 30 ngày (5327 USD/oz), cho thấy động lực chính đến từ co giãn premium nội địa.",
-      "Lợi suất thực 10Y USD tăng mạnh +0.56% lên 1.78%, áp lực nghịch đảo lên giá vàng thế giới đang quay trở lại."
+      "Giá SJC 185 triệu đồng/lượng nằm trên MA7 (161.9 triệu) và MA30 (158 triệu), nhưng percentile 5 năm đạt 100% cho thấy vùng giá quá mua cực đoan cần thận trọng.",
+      "Giá thế giới giảm từ đỉnh 5327.18 USD/oz (28/01) về 5185.78 USD/oz, giảm khoảng 2.7% trong 30 ngày, tạo áp lực điều chỉnh kỹ thuật lên giá nội địa.",
+      "Lợi suất thực 10 năm Mỹ tăng 0.56 điểm phần trăm lên 1.78% trong ngày, tạo áp lực ngược chiều lên giá vàng ngắn hạn."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu khi giá quay về test MA7 (161.9 triệu VND/lượng) hoặc thấp hơn.",
-      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng thế giới, kéo theo áp lực lên giá nội địa.",
-      "Premium 13.5% có thể co hẹp nếu giá thế giới phục hồi nhưng tâm lý nhà đầu tư Việt Nam nguội lạnh."
+      "Rủi ro điều chỉnh kỹ thuật từ vùng đỉnh 185 triệu đồng/lượng khi percentile 5 năm đạt 100%.",
+      "Lợi suất thực Mỹ tăng mạnh (1.78%) có thể khiến dòng vốn chảy sang trái phiếu thay vì vàng.",
+      "Giá thế giới nếu phá vỡ dưới 4940 USD/oz (đáy 30 ngày) sẽ kéo giá SJC giảm sâu."
     ],
     "evidence": [
       {
@@ -26,59 +26,53 @@
         "source": "market_snapshot"
       },
       {
+        "key": "intl_gold_price",
+        "value": 5185.78,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "premium_pct",
+        "value": 13.43,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
         "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": 3.91,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vnd",
-        "value": 158031596,
+        "key": "ma7_vnd",
+        "value": 161912153,
         "unit": "VND/lượng",
         "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 13.5,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_peak_30d",
-        "value": 5327.18,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       },
       {
         "key": "us_real_yield_10y",
         "value": 1.78,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "real_yield_change_1d",
-        "value": 0.56,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "intl_peak_30d",
+        "value": 5327.18,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T01:34:25.970Z",
+    "latestTimestamp": "2026-02-26T02:58:44.423Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162989906.3685161,
-    "premiumPct": 13.5,
-    "change7dPct": 3.91,
-    "change30dPct": 1.63,
+    "intlVndPerTael": 163091528.76051313,
+    "premiumPct": 13.43,
+    "change7dPct": 3.98,
+    "change30dPct": 1.7,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161897636,
-    "ma30VndPerTael": 158031596,
+    "ma7VndPerTael": 161912153,
+    "ma30VndPerTael": 158034983,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T01:34:47.519Z",
+    "fetchedAt": "2026-02-26T02:59:05.917Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5183.815,
+        "value": 5185.075,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.36,
-        "change5dPct": 3.75,
-        "change20dPct": -3.62,
+        "change1dPct": 0.39,
+        "change5dPct": 3.78,
+        "change20dPct": -3.6,
         "relationToGold": "context"
       },
       {
@@ -190,8 +184,14 @@
       "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-26 | bjreview.com | The golden reshaping -- Beijing Review"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-26 | bjreview.com | The golden reshaping -- Beijing Review",
+      "2026-02-26 | investmentnews.com | Rethinking Diversification ? Why Gold Role in Portfolios Is Growing More Strategic",
+      "2026-02-26 | livemint.com | Gold , silver rates today : Gold prices fall back to $5 , 200 / oz , silver price near $90 . What next ?"
+    ]
   }
 }
