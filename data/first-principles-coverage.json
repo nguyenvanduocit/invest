@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-26T18:15:51.963Z",
+  "checkedAt": "2026-02-26T19:18:47.014Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-26T18:15:51.886Z",
+  "dataFetchedAt": "2026-02-26T19:18:46.939Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,9 +9,10 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
+    "availableFactors": 6,
     "missingFactors": [
-      "US Breakeven Inflation 10Y"
+      "US Dollar Trade Weighted Index",
+      "US Treasury Yield 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
@@ -21,12 +22,16 @@
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "us_breakeven_10y",
-        "error": "HTTP 502"
+        "id": "usd_index_trade_weighted",
+        "error": "HTTP 504"
+      },
+      {
+        "id": "us_treasury_10y",
+        "error": "HTTP 504"
       },
       {
         "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_country_actions",
@@ -34,19 +39,19 @@
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Breakeven Inflation 10Y",
+    "Missing required factors: US Dollar Trade Weighted Index, US Treasury Yield 10Y",
     "Not enough geopolitical events (0/3)",
     "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: us_breakeven_10y (HTTP 502); gdelt_geopolitics (HTTP 429); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: usd_index_trade_weighted (HTTP 504); us_treasury_10y (HTTP 504); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
