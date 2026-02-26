@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T22:08:40.636Z",
+  "generatedAt": "2026-02-26T23:09:31.064Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức cao kỷ lục 5 năm (percentile 100%) với đà tăng 7 ngày gần 2.1%, nhưng thanh khoản thấp và thiếu tín hiệu vĩ mô địa chính trị rõ ràng khiến việc đuổi đỉnh rủi ro cao. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật trước khi mua vào.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức cao kỷ lục (percentile 100% trong 5 năm) với đà tăng chững lại, trong khi lợi suất thực USD giảm mạnh tạo động lực hỗ trợ nhưng chưa đủ để phá vỡ vùng kháng cự kỹ thuật hiện tại.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất trong 5 năm (percentile 100%) và cao hơn đáng kể so với MA30 (157.9 triệu VND/lượng), báo hiệu thị trường đang ở trạng thái quá mua.",
-      "Đà tăng 7 ngày qua (+2.07%) và biến động ngày cao (2.26%) cho thấy thanh khoản mỏng, rủi ro điều chỉnh ngắn hạn lớn.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày qua (xuống 1.77%) đang hỗ trợ giá vàng thế giới tăng (+3.78% trong 5 ngày), tạo nền tảng vĩ mô tích cực nhưng chưa đủ để phá vỡ ngưỡng kháng cự mạnh của vàng Việt Nam.",
-      "Premium 12.85% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (13-14%), không có tín hiệu bong bóng premium."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (157.9 triệu VND/lượng) và MA7 (162.4 triệu VND/lượng), cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Lợi suất thực USD 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) tạo đà hỗ trợ vàng thế giới tăng từ vùng 4865 USD/oz ngày 31/01 lên 5183 USD/oz hiện tại.",
+      "Động lượng tăng chậm lại: giá SJC chỉ tăng 2.05% trong 7 ngày gần đây so với biến động ngày 2.26%, và premium thu hẹp từ 17.66% (ngày 05/02) về 12.87% hiện tại."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá: Giá đang ở đỉnh 5 năm, xa MA30, khả năng hồi về hỗ trợ cao.",
-      "Thiếu sự kiện địa chính trị: Không có tin tức địa chính trị hay hành động quốc gia nào trong dữ liệu đầu vào để thúc đẩy đà tăng bứt phá.",
-      "Dữ liệu vĩ mô nhiễu: Các tiêu đề tin tức (policyHeadlines) chủ yếu là thủ tục hành chính (ECB, Fed minutes) không tác động trực tiếp đến giá vàng ngắn hạn."
+      "Rủi ro điều chỉnh kỹ thuật khi giá giao dịch quá xa MA30 (chênh lệch ~16.6%) ở mức percentile 100% lịch sử.",
+      "Dữ liệu vĩ mô thiếu tín hiệu giá vàng spot XAUUSD trực tiếp và không có sự kiện địa chính trị cấp thiết nào để duy trì đà tăng đột phá.",
+      "VIX giảm 8.61% trong 5 ngày cho thấy tâm lý lo ngại thị trường dịu đi, có thể giảm nhu cầu trú ẩn an toàn."
     ],
     "evidence": [
       {
@@ -27,53 +26,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 2.07,
+        "key": "sjc_vs_ma30_deviation",
+        "value": 16.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 16.6,
-        "unit": "triệu VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_change_20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -6.84,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "gold_spot_change_5d",
-        "value": 3.78,
+        "key": "intl_gold_change_feb",
+        "value": 6.55,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "current_premium",
-        "value": 12.85,
+        "key": "premium_contraction",
+        "value": -4.79,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "vix_change5d",
+        "value": -8.61,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 2.26,
+        "key": "sjc_change30d",
+        "value": -2.7,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T22:07:58.767Z",
+    "latestTimestamp": "2026-02-26T23:09:00.402Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 163052552.74291447,
-    "premiumPct": 12.85,
-    "change7dPct": 2.07,
-    "change30dPct": -2.68,
+    "intlVndPerTael": 163015982.31841692,
+    "premiumPct": 12.87,
+    "change7dPct": 2.05,
+    "change30dPct": -2.7,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 162393812,
-    "ma30VndPerTael": 157887619,
+    "ma7VndPerTael": 162388588,
+    "ma30VndPerTael": 157886400,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T22:08:20.376Z",
+    "fetchedAt": "2026-02-26T23:09:14.019Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5185.255,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-02-26",
-        "change1dPct": 0.39,
-        "change5dPct": 3.78,
-        "change20dPct": -3.6,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
@@ -185,10 +186,11 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-26 | tennesseedaily.com | Earthwise Announces Planning Underway for 1 , 000 Meter Drill Program at Talon Zone , Iron Range Gold Project , BC",
+      "2026-02-26 | proactiveinvestors.com | Resolution Minerals advances Horse Heaven Gold & Antimony project in Idaho"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-26 | peakoil.com | THE Silver & Gold Thread ( merged ) : Economics & Finance - Page 31 - Peak Oil News and Message Boards"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
