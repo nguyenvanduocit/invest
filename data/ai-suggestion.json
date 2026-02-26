@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T11:17:37.476Z",
+  "generatedAt": "2026-02-26T12:15:04.188Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi giá thế giới đã có dấu hiệu chững lại và chênh lệch premium đang giãn rộng.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản thấp và thiếu sự kiện vĩ mô cấp thiết khiến rủi ro mua đuổi cao, nên chờ xác nhận hoặc điều chỉnh về mức hỗ trợ gần MA7.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), vượt xa MA30 (158 triệu VND/lượng) tới 16.4% cảnh báo vùng quá mua.",
-      "Đà tăng quá nóng trong ngắn hạn: tăng 3.77% chỉ trong 7 ngày gần đây, cao hơn nhiều so với mức tăng 1.49% của cả 30 ngày, kèm biên độ dao động ngày 2.3%.",
-      "Chênh lệch premium giãn rộng lên 13.05% (tương đương ~21.2 triệu VND/lượng) so với mức 5.65% đầu chuỗi dữ liệu, cho thấy thị trường nội địa đang định giá quá lạc quan so với thế giới.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.32% trong 20 ngày (xuống 1.78%) và VIX tăng 19.57% là động lực hỗ trợ vàng, nhưng giá thế giới (XAUUSD) lại giảm 3.86% cùng kỳ, tạo ra sự phân kỳ tiêu cực."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (161.8 triệu) và MA30 (158 triệu) một khoảng lớn, cho thấy thị trường đã tăng nóng.",
+      "Đà tăng 7 ngày (3.64%) mạnh hơn đáng kể so với 30 ngày (1.37%), kết hợp với giá thế giới tăng 5 ngày (3.43%) cho thấy động lượng ngắn hạn tích cực nhưng cần cẩn trọng đảo chiều.",
+      "Lợi suất thực 10Y giảm mạnh 20 ngày qua (-6.32%) xuống 1.78% và VIX tăng 20 ngày (+19.57%) lên 19.55 là nền tảng vĩ mô hỗ trợ vàng, nhưng không có tin tức địa chính trị cấp bách nào trong dữ liệu để thúc đẩy đợt tăng tiếp theo.",
+      "Premium 13.19% nằm trong biên dao động 30 ngày (11.98%-17.9%), không cực đoan nhưng cho thấy giá nội địa đã phản ứng đủ so với thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử khi động lượng mua cạn kiệt, đặc biệt nếu giá thế giới không phục hồi.",
-      "Premium co hẹp nhanh chóng nếu Ngân hàng Nhà nước can thiệp bình ổn hoặc nhà đầu tư chốt lời ồ ạt.",
-      "Thiếu tín hiệu địa chính trị cấp thiết trong dữ liệu input nên đà tăng có thể chỉ là tâm lý ngắn hạn, giảm độ tin cậy của xu hướng dài hạn."
+      "Mua đỉnh ngắn hạn khi giá đang ở percentile 100% và cách xa MA7/MA30, rủi ro điều chỉnh kỹ thuật cao.",
+      "Dữ liệu địa chính trị không liên quan (tin thể thao/giải trí), thiếu tín hiệu hành động quốc gia, có thể dẫn đến phân tích thiếu chiều sâu về cú sốc cung cầu.",
+      "Biên độ dao động ngày 2.3% khá lớn, thanh khoản có thể thấp khiến việc thoát vị trí khó khăn nếu thị trường đảo chiều."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_deviation",
-        "value": 16.44,
+        "key": "Premium vs World",
+        "value": 13.19,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 13.05,
+        "key": "Change 7D vs 30D",
+        "value": 3.64,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_start",
-        "value": 5.65,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "change7d_vs_change30d",
-        "value": 2.53,
-        "unit": "x",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_20d_change",
+        "key": "US Real Yield 10Y Change 20D",
         "value": -6.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "xauusd_20d_change",
-        "value": -3.86,
+        "key": "VIX Change 20D",
+        "value": 19.57,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "MA7 Price",
+        "value": 161836142,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "World Gold Change 5D",
+        "value": 3.43,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T11:16:59.334Z",
+    "latestTimestamp": "2026-02-26T12:14:15.955Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162762377.0136647,
-    "premiumPct": 13.05,
-    "change7dPct": 3.77,
-    "change30dPct": 1.49,
+    "intlVndPerTael": 162559454.5898391,
+    "premiumPct": 13.19,
+    "change7dPct": 3.64,
+    "change30dPct": 1.37,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161865131,
-    "ma30VndPerTael": 158024012,
+    "ma7VndPerTael": 161836142,
+    "ma30VndPerTael": 158017248,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T11:17:14.872Z",
+    "fetchedAt": "2026-02-26T12:14:37.586Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5171.215,
+        "value": 5167.885,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.12,
-        "change5dPct": 3.5,
-        "change20dPct": -3.86,
+        "change1dPct": 0.06,
+        "change5dPct": 3.43,
+        "change20dPct": -3.92,
         "relationToGold": "context"
       },
       {
@@ -185,7 +191,14 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-26 | eveningnews24.co.uk | I attended Winter Paralympic Flame lighting for 2026 games",
+      "2026-02-26 | sunny943.com | This Day in Top 40 History : February 26",
+      "2026-02-26 | northwalespioneer.co.uk | I attended Winter Paralympic Flame lighting for 2026 games",
+      "2026-02-26 | oxfordmail.co.uk | I attended Winter Paralympic Flame lighting for 2026 games",
+      "2026-02-26 | sloughobserver.co.uk | I attended Winter Paralympic Flame lighting for 2026 games",
+      "2026-02-26 | worcesternews.co.uk | I attended Winter Paralympic Flame lighting for 2026 games"
+    ],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
