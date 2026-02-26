@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T07:23:37.339Z",
+  "generatedAt": "2026-02-26T08:15:41.705Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 7 ngày qua (+4.01%), trong khi giá thế giới vẫn thấp hơn đỉnh cũ; rủi ro điều chỉnh kỹ thuật cao hơn cơ hội tăng ngay lập tức.",
+    "thesis": "Giá SJC đang giao dịch ở mức cao kỷ lục 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản có thể thấp và rủi ro điều chỉnh kỹ thuật là đáng kể khi không có tin tức vĩ mô cấp thiết.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA7 (161.9 triệu) tới 14.2% cho thấy động lượng tăng quá nhanh trong ngắn hạn.",
-      "Đà tăng 7 ngày (+4.01%) vượt xa biến động trung bình ngày (2.3%), báo hiệu thị trường quá mua (overbought) và có khả năng đi ngang/hồi điều chỉnh.",
-      "Premium 13.4% đang ở mức hợp lý trong dải dao động 30 ngày qua (11.98% - 17.9%), không có tín hiệu bùng nổ cầu nội địa đặc biệt nào để đẩy giá tiếp tục tăng vọt.",
-      "Lợi suất thực USD 10 năm giảm mạnh 20 ngày qua (-6.32%) là động lực hỗ trợ vàng, nhưng giá thế giới (5187 USD/oz) vẫn thấp hơn đỉnh đầu tháng 1 (5327 USD/oz) khoảng 2.6%."
+      "Giá SJC 184.5 triệu VND/lượng đang vượt xa MA30 (158 triệu VND/lượng) tới 16.7%, tín hiệu quá mua ngắn hạn rõ rệt.",
+      "Đà tăng 7 ngày (4.02%) rất mạnh nhưng biến động ngày cao (2.3%), cho thấy thị trường thiếu ổn định.",
+      "Premium 13.08% nằm trong vùng trung bình của 30 ngày qua (dao động 11-18%), không có tín hiệu bất thường cực đoan để MUA gấp.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 20 ngày qua (-6.32%) đang hỗ trợ giá vàng thế giới, nhưng VIX giảm 6.95% cho thấy lo ngại rủi ro đang hạ nhiệt."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở vùng đỉnh 5 năm và P/E định giá so với giá thế giới đã mở rộng nhanh trong 7 ngày.",
-      "Thiếu sự kiện địa chính trị cấp bách trong dữ liệu input để duy trì đà tăng vọt; các headline về Trump/tariff chưa tạo tín hiệu rõ ràng.",
-      "VIX giảm 6.95% cho thấy tâm lý sợ hãi đang hạ nhiệt, có thể làm giảm nhu cầu trú ẩn an toàn vào vàng ngắn hạn."
+      "Mua đỉnh ngắn hạn khi giá đang ở phân vị 100% trong 5 năm qua, khả năng điều chỉnh cao.",
+      "Biến động ngày 2.3% kết hợp với spread mua-bán rộng có thể gây thua lỗ nhanh cho nhà đầu tư lướt sóng.",
+      "Dữ liệu sự kiện vĩ mô và địa chính trị trong 2 ngày qua không có yếu tố gây sốc, đà tăng có thể chỉ là động lượng kỹ thuật."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_vs_ma30",
+        "value": 16.7,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_7d_pct",
+        "value": 4.02,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA7 Premium",
-        "value": 14.25,
+        "key": "premium_current",
+        "value": 13.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": 4.01,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Intl Gold vs Jan Peak",
-        "value": -2.63,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -6.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 1d",
+        "key": "vix_change1d",
         "value": -6.95,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium 30d Range",
-        "value": 11.98,
+        "key": "volatility_daily",
+        "value": 2.3,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T07:22:47.745Z",
-    "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 163141793.359465,
-    "premiumPct": 13.4,
-    "change7dPct": 4.01,
-    "change30dPct": 1.73,
+    "latestTimestamp": "2026-02-26T08:14:27.479Z",
+    "sjcVndPerTael": 184500000,
+    "intlVndPerTael": 163162208.9793052,
+    "premiumPct": 13.08,
+    "change7dPct": 4.02,
+    "change30dPct": 1.74,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161919334,
-    "ma30VndPerTael": 158036659,
+    "ma7VndPerTael": 161922250,
+    "ma30VndPerTael": 158037339,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T07:23:09.334Z",
+    "fetchedAt": "2026-02-26T08:15:18.313Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5186.945,
+        "value": 5189.325,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.42,
-        "change5dPct": 3.82,
-        "change20dPct": -3.57,
+        "change1dPct": 0.47,
+        "change5dPct": 3.86,
+        "change20dPct": -3.52,
         "relationToGold": "context"
       },
       {
@@ -186,16 +186,12 @@
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-26 | mirror.co.uk | War film based on best - selling book streaming on BBC iPlayer now",
-      "2026-02-26 | sanantoniopost.com | US court ruling on tariffs positive for India , Rupees likely to be cushioned : Report",
-      "2026-02-26 | smallwarsjournal.com | Ghaleb Krame",
-      "2026-02-26 | ksl.com | Trump hails  golden age  in State of the Union as voters sour on economy",
-      "2026-02-26 | northernminer.com | Omai Gold weighs Wenot  superpit  potential as drills hunt for growth"
+      "2026-02-26 | timesofoman.com | US court ruling on tariffs positive for India , rupee likely to be cushioned : Report"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-26 | sanantoniopost.com | US court ruling on tariffs positive for India , Rupees likely to be cushioned : Report",
-      "2026-02-26 | ksl.com | Trump hails  golden age  in State of the Union as voters sour on economy"
-    ]
+    "countryActionHeadlines": [
+      "2026-02-26 | news.tuoitre.vn | S . Korea central bank holds rates , adopts dot - plot path signalling extended pause",
+      "2026-02-26 | businesstimes.com.sg | South Korea central bank holds policy rates steady as expected"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
