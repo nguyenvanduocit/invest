@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T08:15:41.705Z",
+  "generatedAt": "2026-02-26T09:18:18.048Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở mức cao kỷ lục 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản có thể thấp và rủi ro điều chỉnh kỹ thuật là đáng kể khi không có tin tức vĩ mô cấp thiết.",
+    "thesis": "Giá SJC 184 triệu VND/lượng đang ở đỉnh 5 năm (percentile 100%) với biên độ dao động rộng 2.3%/ngày; xu hướng tăng ngắn hạn vẫn còn nhưng rủi ro điều chỉnh kỹ thuật cao khi lợi suất thực USD tăng đột biến, nhà đầu tư nên chờ vùng giá tốt hơn hoặc xác nhận đột phá.",
     "reasons": [
-      "Giá SJC 184.5 triệu VND/lượng đang vượt xa MA30 (158 triệu VND/lượng) tới 16.7%, tín hiệu quá mua ngắn hạn rõ rệt.",
-      "Đà tăng 7 ngày (4.02%) rất mạnh nhưng biến động ngày cao (2.3%), cho thấy thị trường thiếu ổn định.",
-      "Premium 13.08% nằm trong vùng trung bình của 30 ngày qua (dao động 11-18%), không có tín hiệu bất thường cực đoan để MUA gấp.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 20 ngày qua (-6.32%) đang hỗ trợ giá vàng thế giới, nhưng VIX giảm 6.95% cho thấy lo ngại rủi ro đang hạ nhiệt."
+      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (158 triệu VND/lượng) tới 16.4%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Premium 12.92% nằm trong vùng trung bình của 30 ngày qua (dao động 11.98%-17.9%), không có tín hiệu bất thường cực đoan.",
+      "Lợi suất thực USD 10Y tăng mạnh +0.56%/ngày lên 1.78%, tạo áp lực nghịch chiều lên giá vàng thế giới trong ngắn hạn.",
+      "VIX ở 19.55 (+19.57% trong 20 ngày) và tin tức US-Iran talks ngày 26/02 đang tạo nhu cầu safe-haven, hỗ trợ giá không giảm sâu."
     ],
     "risks": [
-      "Mua đỉnh ngắn hạn khi giá đang ở phân vị 100% trong 5 năm qua, khả năng điều chỉnh cao.",
-      "Biến động ngày 2.3% kết hợp với spread mua-bán rộng có thể gây thua lỗ nhanh cho nhà đầu tư lướt sóng.",
-      "Dữ liệu sự kiện vĩ mô và địa chính trị trong 2 ngày qua không có yếu tố gây sốc, đà tăng có thể chỉ là động lượng kỹ thuật."
+      "Đỉnh giá 5 năm (percentile 100%) với biến động 2.3%/ngày có thể kích hoạt chốt lời ồ ạt bất cứ lúc nào.",
+      "Lợi suất thực USD tăng vọt có thể làm vàng thế giới điều chỉnh, kéo theo SJC giảm dù premium có thể nới rộng.",
+      "Dữ liệu vĩ mô first_principles không hoàn chỉnh (healthy: false), thiếu tín hiệu chính sách rõ ràng từ Fed/ECB."
     ],
     "evidence": [
       {
         "key": "sjc_price_vs_ma30",
-        "value": 16.7,
+        "value": 16.4,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_7d_pct",
-        "value": 4.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
         "key": "premium_current",
-        "value": 13.08,
+        "value": 12.92,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
-        "value": -6.32,
+        "key": "premium_30d_range",
+        "value": 11.98,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "vix_change1d",
-        "value": -6.95,
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_change_1d",
+        "value": 0.56,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "vix_change_20d",
+        "value": 19.57,
+        "unit": "%",
+        "source": "macro_context"
       },
       {
         "key": "volatility_daily",
         "value": 2.3,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "change7d_pct",
+        "value": 3.89,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T08:14:27.479Z",
-    "sjcVndPerTael": 184500000,
-    "intlVndPerTael": 163162208.9793052,
-    "premiumPct": 13.08,
-    "change7dPct": 4.02,
-    "change30dPct": 1.74,
+    "latestTimestamp": "2026-02-26T09:17:30.680Z",
+    "sjcVndPerTael": 184000000,
+    "intlVndPerTael": 162951332.27901042,
+    "premiumPct": 12.92,
+    "change7dPct": 3.89,
+    "change30dPct": 1.61,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161922250,
-    "ma30VndPerTael": 158037339,
+    "ma7VndPerTael": 161892125,
+    "ma30VndPerTael": 158030310,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T08:15:18.313Z",
+    "fetchedAt": "2026-02-26T09:17:51.784Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5189.325,
+        "value": 5179.605,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.47,
-        "change5dPct": 3.86,
-        "change20dPct": -3.52,
+        "change1dPct": 0.28,
+        "change5dPct": 3.67,
+        "change20dPct": -3.7,
         "relationToGold": "context"
       },
       {
@@ -178,20 +184,19 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President",
       "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026",
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve",
-      "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
-      "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
+      "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-26 | timesofoman.com | US court ruling on tariffs positive for India , rupee likely to be cushioned : Report"
+      "2026-02-26 | fxstreet.com | Gold holds gains amid safe - haven demand ahead of US - Iran talks",
+      "2026-02-26 | dailydispatch.co.za | BUDGET 2026| Foot - and - mouth and mining output undermine stronger GDP , Godongwana warns",
+      "2026-02-26 | miningmx.com | SA mining baffled as Godongwana fails to address energy tariffs"
     ],
-    "countryActionHeadlines": [
-      "2026-02-26 | news.tuoitre.vn | S . Korea central bank holds rates , adopts dot - plot path signalling extended pause",
-      "2026-02-26 | businesstimes.com.sg | South Korea central bank holds policy rates steady as expected"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
