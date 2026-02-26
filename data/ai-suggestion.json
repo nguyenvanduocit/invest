@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T20:11:42.918Z",
+  "generatedAt": "2026-02-26T21:12:04.950Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 7 ngày mạnh 2.28%, nhưng thanh khoản vĩ mô đang thắt chặt do lợi suất thực USD tăng và Fed Funds giữ nguyên 3.64%, gây áp lực điều chỉnh ngắn hạn.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 7 ngày gần 2.36%, nhưng thanh khoản vĩ mô đang thắt chặt do lợi suất thực USD tăng và Fed chưa có tín hiệu cắt giảm lãi suất, khiến rủi ro điều chỉnh ngắn hạn cao hơn cơ hội tăng tiếp.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh cao khi đã tăng 2.28% trong 7 ngày gần nhất.",
-      "Áp lực vĩ mô tăng: Lợi suất thực US 10Y tăng 0.56% lên 1.78% và Fed Funds giữ nguyên 3.64%, thường gây áp lực giảm lên giá vàng thế giới.",
-      "Động lượng kỹ thuật yếu dần: Giá thế giới 5195 USD/oz vẫn thấp hơn đỉnh 30 ngày (5310 USD/oz), cho thấy đà tăng của SJC chủ yếu do yếu tố nội tại/premium.",
-      "Premium 12.62% đang ở mức hợp lý trong dải dao động 30 ngày (11.98%-17.90%), không có tín hiệu bão hòa cực đoan."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.9 triệu) tới 16.5%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Lợi suất thực USD 10 năm tăng mạnh 0.56% lên 1.78% trong ngày, tạo áp lực bán vàng vì chi phí cơ hội giữ vàng tăng cao.",
+      "Lãi suất Fed Funds vẫn neo ở 3.64% không đổi 20 ngày qua, đồng thời chính sách thuế quan mới của Trump đang gây bất định, chưa có tín hiệu rõ ràng cho đà tăng bền vững.",
+      "Premium 12.53% đang ở mức hợp lý trong dải giao động 30 ngày (11.98%-17.9%), không có tín hiệu bất thường để đánh canh bạc."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật mạnh từ vùng đỉnh 5 năm nếu thanh khoản thị trường giảm.",
-      "Lợi suất thực USD tiếp tục tăng có thể làm giảm hấp dẫn của vàng trên thị trường quốc tế.",
-      "VIX giảm 8.29% cho thấy tâm lý rủi ro dịu đi, có thể giảm nhu cầu trú ẩn an toàn."
+      "Đỉnh giá lịch sử kèm biến động ngày 2.26% có thể kích hoạt chốt lời ồ ạt nếu giá thế giới điều chỉnh.",
+      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng như tài sản trú ẩn.",
+      "Thời gian phục hồi trung bình từ đợt sụt giảm tồi tệ nhất là 1369 ngày - rủi ro dài hạn nếu mua sai điểm."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 184000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 12.62,
+        "key": "sjc_vs_ma30_premium",
+        "value": 16.5,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.78,
+        "key": "us_real_yield_10y_change_1d",
+        "value": 0.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Fed Funds Rate",
+        "key": "fed_funds_rate",
         "value": 3.64,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot XAUUSD",
-        "value": 5194.975,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "sjc_change_7d",
+        "value": 2.36,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "30D High XAUUSD",
-        "value": 5310.53,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "volatility_daily",
+        "value": 2.26,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 17.93,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "current_premium",
+        "value": 12.53,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T20:11:05.753Z",
+    "latestTimestamp": "2026-02-26T21:11:25.943Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 163382542.31170315,
-    "premiumPct": 12.62,
-    "change7dPct": 2.28,
-    "change30dPct": -2.48,
+    "intlVndPerTael": 163515555.97965693,
+    "premiumPct": 12.53,
+    "change7dPct": 2.36,
+    "change30dPct": -2.4,
     "volatilityDailyPct": 2.26,
-    "ma7VndPerTael": 162440954,
-    "ma30VndPerTael": 157898619,
+    "ma7VndPerTael": 162459956,
+    "ma30VndPerTael": 157903053,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T20:11:27.229Z",
+    "fetchedAt": "2026-02-26T21:11:47.450Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5194.975,
+        "value": 5196.795,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.58,
-        "change5dPct": 3.98,
-        "change20dPct": -3.42,
+        "change1dPct": 0.62,
+        "change5dPct": 4.01,
+        "change20dPct": -3.38,
         "relationToGold": "context"
       },
       {
@@ -191,8 +185,14 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-26 | forward.com | How artist David Roberts captured the spirit of the Jewish holy land – The Forward"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-26 | marketscreener.com | Odds of early Warsh - led Fed rate cuts slide with bullish outlook",
+      "2026-02-26 | reason.com | 4 economic myths powering Trump new tariff push",
+      "2026-02-26 | zerohedge.com | Even Banks Now Bow To A Golden Master"
+    ],
     "dollarYieldHeadlines": []
   }
 }
