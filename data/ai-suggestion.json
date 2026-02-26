@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T19:19:03.670Z",
+  "generatedAt": "2026-02-26T20:11:42.918Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động cao, trong khi giá thế giới có xu hướng giảm nhẹ 20 ngày qua; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng thay vì mua đuổi.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 7 ngày mạnh 2.28%, nhưng thanh khoản vĩ mô đang thắt chặt do lợi suất thực USD tăng và Fed Funds giữ nguyên 3.64%, gây áp lực điều chỉnh ngắn hạn.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (158 triệu VND/lượng) tới 16.4% cho thấy thị trường đã mua quá mức ngắn hạn.",
-      "Giá thế giới giảm 3.58% trong 20 ngày qua (từ mức đỉnh ~5215 USD/oz về 5186 USD/oz) trong khi giá SJC vẫn tăng 1.7% trong 30 ngày, tạo sự lệch pha về động lượng.",
-      "Biên độ dao động ngày cao 2.3% kết hợp với premium dao động mạnh 11.98%-17.9% trong 30 ngày qua cho thấy thanh khoản thấp và rủi ro điều chỉnh lớn.",
-      "Lợi suất thực 10Y Mỹ tăng mạnh 0.56%/ngày lên 1.78% tạo áp lực giảm lên giá vàng thế giới, đối trọng với kỳ vọng lạm phát tăng nhẹ."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh cao khi đã tăng 2.28% trong 7 ngày gần nhất.",
+      "Áp lực vĩ mô tăng: Lợi suất thực US 10Y tăng 0.56% lên 1.78% và Fed Funds giữ nguyên 3.64%, thường gây áp lực giảm lên giá vàng thế giới.",
+      "Động lượng kỹ thuật yếu dần: Giá thế giới 5195 USD/oz vẫn thấp hơn đỉnh 30 ngày (5310 USD/oz), cho thấy đà tăng của SJC chủ yếu do yếu tố nội tại/premium.",
+      "Premium 12.62% đang ở mức hợp lý trong dải dao động 30 ngày (11.98%-17.90%), không có tín hiệu bão hòa cực đoan."
     ],
     "risks": [
-      "Dữ liệu vĩ mô thiếu US Dollar Index và một số chỉ số quan trọng, giảm độ tin cậy phân tích.",
-      "Premium co giãn mạnh có thể khiến giá SJC giảm sâu hơn giá thế giới khi thị trường điều chỉnh.",
-      "VIX giảm 8.29%/ngày cho thấy tâm lý rủi ro đang cải thiện, có thể giảm nhu cầu trú ẩn vào vàng."
+      "Rủi ro điều chỉnh kỹ thuật mạnh từ vùng đỉnh 5 năm nếu thanh khoản thị trường giảm.",
+      "Lợi suất thực USD tiếp tục tăng có thể làm giảm hấp dẫn của vàng trên thị trường quốc tế.",
+      "VIX giảm 8.29% cho thấy tâm lý rủi ro dịu đi, có thể giảm nhu cầu trú ẩn an toàn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_ma30",
-        "value": 16.4,
+        "key": "Premium vs World",
+        "value": 12.62,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_20d",
-        "value": -3.58,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 1.7,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.3,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 5.92,
-        "unit": "% (11.98-17.9)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_10y",
+        "key": "US Real Yield 10Y",
         "value": 1.78,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_1d",
-        "value": -8.29,
+        "key": "Fed Funds Rate",
+        "value": 3.64,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot XAUUSD",
+        "value": 5194.975,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "30D High XAUUSD",
+        "value": 5310.53,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX Index",
+        "value": 17.93,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T19:18:25.713Z",
+    "latestTimestamp": "2026-02-26T20:11:05.753Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 163102305.02507177,
-    "premiumPct": 12.81,
-    "change7dPct": 3.98,
-    "change30dPct": 1.7,
-    "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161913692,
-    "ma30VndPerTael": 158035343,
+    "intlVndPerTael": 163382542.31170315,
+    "premiumPct": 12.62,
+    "change7dPct": 2.28,
+    "change30dPct": -2.48,
+    "volatilityDailyPct": 2.26,
+    "ma7VndPerTael": 162440954,
+    "ma30VndPerTael": 157898619,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,33 +90,30 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T19:18:46.939Z",
+    "fetchedAt": "2026-02-26T20:11:27.229Z",
     "healthy": false,
-    "missingFactors": [
-      "US Dollar Trade Weighted Index",
-      "US Treasury Yield 10Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5186.045,
+        "value": 5194.975,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.41,
-        "change5dPct": 3.8,
-        "change20dPct": -3.58,
+        "change1dPct": 0.58,
+        "change5dPct": 3.98,
+        "change20dPct": -3.42,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": null,
+        "value": 117.9917,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-20",
+        "change1dPct": -0.21,
+        "change5dPct": 0.39,
+        "change20dPct": -1.01,
         "relationToGold": "inverse"
       },
       {
@@ -155,12 +152,12 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": null,
+        "value": 4.04,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-24",
+        "change1dPct": 0.25,
+        "change5dPct": -0.25,
+        "change20dPct": -4.27,
         "relationToGold": "inverse"
       },
       {
