@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T14:21:45.511Z",
+  "generatedAt": "2026-02-26T15:18:36.351Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.3%/ngày, khiến rủi ro mua đuổi rất cao. Dù xu hướng ngắn hạn tích cực nhờ lợi suất thực giảm, nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~161.8 triệu VND/lượng) để có điểm nhập an toàn hơn.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng động lực vĩ mô đang phân kỳ khi lợi suất thực USD tăng và VIX giảm, khiến rủi ro điều chỉnh ngắn hạn cao hơn cơ hội tăng tiếp.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (158 triệu VND/lượng) tới 16.4% trong khi giá thế giới chỉ tăng nhẹ, cho thấy rủi ro mua đuổi là rất lớn.",
-      "Động lượng tăng yếu dần: giá thế giới (XAUUSD) giảm 3.97% trong 20 ngày qua dù có phục hồi ngắn hạn 3.38% trong 5 ngày gần nhất, tín hiệu kỹ thuật chưa xác nhận xu hướng tăng vững chắc.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.32% trong 20 ngày (xuống 1.78%) đang hỗ trợ giá vàng, nhưng VIX giảm 6.95% cho thấy tâm lý sợ hãi đang hạ nhiệt, giảm động lực mua vàng phòng thủ.",
-      "Biên độ dao động ngày cao (2.3%) kết hợp với chênh lệch giá mua-bán rộng tại vùng đỉnh có thể gây thiệt hại lớn nếu thị trường điều chỉnh ngay sau khi mua."
+      "Giá SJC 184 triệu VND/lượng đang vượt xa MA7 (161.8 triệu) và MA30 (158 triệu), tương ứng mức cao hơn 13.8% và 16.5%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Lợi suất thực US 10Y tăng mạnh +0.56%/ngày lên 1.78%, tạo áp lực nghịch biến lên giá vàng thế giới (xuống -0.2% ngày).",
+      "Premium 13.44% đang ở mức ổn định so với trung bình 30 ngày qua (dao động 11-18%), không có tín hiệu bùng nổ đột biến để đẩy giá SJC cao hơn.",
+      "VIX giảm 8.29% xuống 17.93 chỉ thị rủi ro thị trường hạ nhiệt, làm giảm nhu cầu trú ẩn an toàn vào vàng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu về vùng MA7 (~161.8 triệu VND/lượng) khi động lượng tăng cạn kiệt, gây lỗ ngắn hạn cho người mua đuổi.",
-      "Sự thiếu rõ ràng trong các tiêu đề tin tức vĩ mô (nhiều tin về khai thác mỏ, ít tin về chính sách lãi suất/căng thẳng địa chính trị) làm giảm độ tin cậy của các yếu tố first-principles.",
-      "Biên độ dao động premium 13-18% trong 30 ngày qua cho thấy thanh khoản thị trường Việt Nam không ổn định, rủi ro trượt giá khi cần bán gấp."
+      "Đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật rất lớn nếu dòng tiền đảo chiều.",
+      "Lợi suất thực USD tiếp tục tăng sẽ gây áp lực bán tháo vàng tài chính quốc tế, kéo theo tâm lý thị trường Việt Nam.",
+      "Thiếu sự kiện địa chính trị cấp thiết trong dữ liệu input để duy trì đà tăng vọt."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
-        "unit": "%",
+        "key": "Giá SJC hiện tại",
+        "value": 184000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC vs MA30 Premium",
+        "key": "Khoảng cách giá SJC vs MA30",
         "value": 16.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -6.32,
+        "key": "Percentile 5 năm",
+        "value": 100,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "XAUUSD Change 20d",
-        "value": -3.97,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 2.3,
-        "unit": "%/day",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 1d",
-        "value": -6.95,
+        "key": "Lợi suất thực US 10Y",
+        "value": 1.78,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 5.65,
-        "unit": "%-pts (5.65 to 17.9)",
-        "source": "monthly_series_30d"
+        "key": "Thay đổi lợi suất thực 1 ngày",
+        "value": 0.56,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC hiện tại",
+        "value": 13.44,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Index",
+        "value": 17.93,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Thay đổi giá SJC 7 ngày",
+        "value": 3.41,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T14:20:57.785Z",
+    "latestTimestamp": "2026-02-26T15:18:00.624Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162483623.52730143,
-    "premiumPct": 13.24,
-    "change7dPct": 3.59,
-    "change30dPct": 1.32,
+    "intlVndPerTael": 162204994.26753968,
+    "premiumPct": 13.44,
+    "change7dPct": 3.41,
+    "change30dPct": 1.15,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161825309,
-    "ma30VndPerTael": 158014720,
+    "ma7VndPerTael": 161785505,
+    "ma30VndPerTael": 158005432,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T14:21:19.175Z",
+    "fetchedAt": "2026-02-26T15:18:16.370Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5165.235,
+        "value": 5154.625,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0,
-        "change5dPct": 3.38,
-        "change20dPct": -3.97,
+        "change1dPct": -0.2,
+        "change5dPct": 3.17,
+        "change20dPct": -4.17,
         "relationToGold": "context"
       },
       {
@@ -168,12 +174,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 19.55,
+        "value": 17.93,
         "unit": "index",
-        "date": "2026-02-24",
-        "change1dPct": -6.95,
-        "change5dPct": -3.65,
-        "change20dPct": 19.57,
+        "date": "2026-02-25",
+        "change1dPct": -8.29,
+        "change5dPct": -8.61,
+        "change20dPct": 9.66,
         "relationToGold": "direct"
       }
     ],
@@ -185,19 +191,13 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-26 | finanznachrichten.de | Klondike Gold Corp .: Klondike Gold Closes $3 , 086 , 959 Non - brokered Financing to Expand 2026 Drill Programs",
-      "2026-02-26 | torontotelegraph.com | Rocky Shore Gold Closes Final Tranche of Oversubscribed Non - Brokered Private Placement",
-      "2026-02-26 | juniorminingnetwork.com | Great Pacific Gold - Updated 5 , 000 Metre Drill Program at Sinivit - Kavasuki",
-      "2026-02-26 | economictimes.indiatimes.com | Gold rate prediction : Gold Price Prediction : Gold rate to fall big in March ? Details here"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
+      "2026-02-26 | zerohedge.com | Fed Independence Is Sacred ... Or So Weve Been Told",
       "2026-02-26 | actionforex.com | Market Upbeat Mood Hindering Dollar",
       "2026-02-26 | fxstreet.com | EUR / GBP gains as united kingdom political uncertainty , BoE easing weigh on Pound",
       "2026-02-26 | northcountrypublicradio.org | Tariffs cost American shoppers . Theyre unlikely to get that money back",
-      "2026-02-26 | houstonpublicmedia.org | Tariffs cost American shoppers . Theyre unlikely to get that money back",
-      "2026-02-26 | marketscreener.com | Fed Bostic Says People Have Begun to Doubt Fed Independence",
-      "2026-02-26 | finanznachrichten.de | Pound Slides Amid BoE Rate Cut Speculations"
+      "2026-02-26 | houstonpublicmedia.org | Tariffs cost American shoppers . Theyre unlikely to get that money back"
     ],
     "dollarYieldHeadlines": []
   }
