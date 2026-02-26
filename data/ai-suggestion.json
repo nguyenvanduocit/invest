@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-25T23:10:38.407Z",
+  "generatedAt": "2026-02-26T00:19:26.365Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,52 +7,52 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.27%/ngày và không có driver vĩ mô khẩn cấp nào trong các headline gần đây.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.3%. Nhà đầu tư không nên mua đuổi tại vùng giá 185 triệu đồng/lượng này mà chờ đợi tín hiệu ổn định hoặc điều chỉnh về vùng hỗ trợ gần MA7 (~161.8 triệu).",
     "reasons": [
-      "Giá SJC 185.3 triệu VND/lượng đang vượt xa MA30 (158.2 triệu VND/lượng) tới 17.1%, tín hiệu quá mua rõ ràng trên khung 1 tháng.",
-      "Động lượng tăng 7 ngày (3.85%) rất mạnh, cao hơn đáng kể so với tăng tích lũy 30 ngày (1.57%), cho thấy dòng tiền đang đẩy giá nóng.",
-      "Lợi suất thực 10Y giảm mạnh 20 ngày qua (-6.32%) xuống 1.78% là hỗ trợ vĩ mô tích cực, giúp giữ giá sàn thế giới quanh 5179 USD/oz.",
-      "Premium 13.66% đang ở mức ổn định trong dải giao dịch 30 ngày qua (11.88% - 17.8%), không có tín hiệu khan hiếm cục bộ bất thường."
+      "Giá SJC 185 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), cách xa MA7 14.3% và MA30 17.1%, báo hiệu vùng quá mua kỹ thuật nguy hiểm.",
+      "Động lượng tăng 7 ngày qua rất mạnh (+3.72%) nhưng biến động ngày cao (2.3%) cho thấy thị trường bất ổn; giá thế giới đã giảm nhẹ 1 ngày gần nhất (-0.62% USD/oz).",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 20 ngày qua (-6.32%) là động lực hỗ trợ vàng dài hạn, nhưng ngắn hạn VIX vẫn ở mức 19.55 cho thấy tâm lý thị trường chưa thực sự bình ổn.",
+      "Premium 13.71% đang ở mức hợp lý trong chuỗi 30 ngày qua (dao động 11.98%-17.9%), không có tín hiệu bất thường về chênh lệch cung cầu nội địa."
     ],
     "risks": [
-      "Đang ở mức giá cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh và điều chỉnh ngắn hạn cực lớn.",
-      "Biên độ dao động ngày 2.27% rất cao, nhà đầu tư ngắn hạn có thể bị quét stoploss dễ dàng.",
-      "VIX giảm 6.95% xuống 19.55 cho thấy sự sợ hãi đang hạ nhiệt, có thể làm giảm nhu cầu trú ẩn vào vàng."
+      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh do giá cách quá xa đường trung bình động MA7 (161.8 triệu VND/lượng).",
+      "Thiếu sự kiện địa chính trị hoặc hành động can thiệp quốc gia cụ thể trong dữ liệu đầu vào, khả năng hồi phục nhanh sau điều chỉnh là thấp.",
+      "Biên độ dao động ngày 2.3% có thể gây thanh khoản tài khoản nhà đầu tư dùng đòn bẩy trong ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 17.1,
+        "key": "sjc_price_percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_price_vs_ma7",
+        "value": 14.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d_vs_30d",
-        "value": 2.45,
-        "unit": "percentage points",
+        "key": "change_7d_pct",
+        "value": 3.72,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "daily_volatility",
+        "value": 2.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change_20d",
         "value": -6.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
         "key": "current_premium",
-        "value": 13.66,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5y_percentile",
-        "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.27,
+        "value": 13.71,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -65,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-25T23:09:47.791Z",
-    "sjcVndPerTael": 185300000,
-    "intlVndPerTael": 163030520.48953655,
-    "premiumPct": 13.66,
-    "change7dPct": 3.85,
-    "change30dPct": 1.57,
-    "volatilityDailyPct": 2.27,
-    "ma7VndPerTael": 162022893,
-    "ma30VndPerTael": 158164458,
+    "latestTimestamp": "2026-02-26T00:18:45.739Z",
+    "sjcVndPerTael": 185000000,
+    "intlVndPerTael": 162688996.20290512,
+    "premiumPct": 13.71,
+    "change7dPct": 3.72,
+    "change30dPct": 1.45,
+    "volatilityDailyPct": 2.3,
+    "ma7VndPerTael": 161854648,
+    "ma30VndPerTael": 158021566,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-25T23:10:06.021Z",
+    "fetchedAt": "2026-02-26T00:19:07.071Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5179.755,
+        "value": 5174.645,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.29,
-        "change5dPct": 3.67,
-        "change20dPct": -3.7,
+        "change1dPct": 0.19,
+        "change5dPct": 3.57,
+        "change20dPct": -3.8,
         "relationToGold": "context"
       },
       {
@@ -185,17 +185,8 @@
       "2026-02-23 | ECB Press / Speeches | Christine Lagarde: Turning size into scale: Europe’s new growth model",
       "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-25 | fxstreet.com | Chart Analysis AUD / USD - 2026 - 02 - 25 17 : 01"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-25 | fxstreet.com | Chart Analysis AUD / USD - 2026 - 02 - 25 17 : 01",
-      "2026-02-25 | fxstreet.com | Forex Today : Australian Dollar surges to two - week highs after strong CPI data",
-      "2026-02-25 | fxstreet.com | Fed Musalem : Looking forward to learning what Warsh priorities might be",
-      "2026-02-25 | markets.financialcontent.com | FinancialContent - The Great Thaw Delayed : Home Depot Warns of  Frozen  Housing Market as Interest Rates Stifle Growth",
-      "2026-02-25 | cnbc.com | How to squeeze a more yield from idle cash in return for a bit of risk",
-      "2026-02-25 | markets.financialcontent.com | FinancialContent - The Warsh Pivot : What Kevin Warsh Fed Chair Nomination Means for Markets in 2026"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
