@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T13:31:39.189Z",
+  "generatedAt": "2026-02-26T14:21:45.511Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 100% percentile 5 năm với premium 13% và biến động cao, khiến rủi ro mua đuổi rất lớn. Dù xu hướng vĩ mô hỗ trợ vàng nhờ lợi suất thực USD giảm 6.32% trong 20 ngày, nhà đầu tư nên chờ hồi chỉnh về vùng hỗ trợ kỹ thuật trước khi vào lệnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với biên độ dao động lớn 2.3%/ngày, khiến rủi ro mua đuổi rất cao. Dù xu hướng ngắn hạn tích cực nhờ lợi suất thực giảm, nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~161.8 triệu VND/lượng) để có điểm nhập an toàn hơn.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang cao hơn MA7 (161.9 triệu) tới 13.6% và nằm ở percentile 100% trong 5 năm, tín hiệu quá mua rõ ràng.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 6.32% trong 20 ngày xuống 1.78%, tạo động lực tăng nền tảng cho giá vàng thế giới.",
-      "Premium 13.03% đang nới rộng so với mức 5.65% đầu chuỗi dữ liệu (28/01), phản ánh tâm lý FOMO tại thị trường Việt Nam.",
-      "VIX tăng 19.57% trong 20 ngày cho thấy sự bất ổn thị trường vẫn còn, hỗ trợ nhu cầu trú ẩn an toàn."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (158 triệu VND/lượng) tới 16.4% trong khi giá thế giới chỉ tăng nhẹ, cho thấy rủi ro mua đuổi là rất lớn.",
+      "Động lượng tăng yếu dần: giá thế giới (XAUUSD) giảm 3.97% trong 20 ngày qua dù có phục hồi ngắn hạn 3.38% trong 5 ngày gần nhất, tín hiệu kỹ thuật chưa xác nhận xu hướng tăng vững chắc.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.32% trong 20 ngày (xuống 1.78%) đang hỗ trợ giá vàng, nhưng VIX giảm 6.95% cho thấy tâm lý sợ hãi đang hạ nhiệt, giảm động lực mua vàng phòng thủ.",
+      "Biên độ dao động ngày cao (2.3%) kết hợp với chênh lệch giá mua-bán rộng tại vùng đỉnh có thể gây thiệt hại lớn nếu thị trường điều chỉnh ngay sau khi mua."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá thế giới không duy trì được mức 5,100-5,200 USD/oz.",
-      "Thanh khoản thoát ở mức giá đỉnh 184 triệu có thể gặp khó khăn nếu thị trường sốt ẩm hạ nhiệt.",
-      "Biến động ngày 2.3% có thể gây áp lực tài chính lớn cho nhà đầu tư sử dụng đòn bẩy."
+      "Rủi ro điều chỉnh kỹ thuật sâu về vùng MA7 (~161.8 triệu VND/lượng) khi động lượng tăng cạn kiệt, gây lỗ ngắn hạn cho người mua đuổi.",
+      "Sự thiếu rõ ràng trong các tiêu đề tin tức vĩ mô (nhiều tin về khai thác mỏ, ít tin về chính sách lãi suất/căng thẳng địa chính trị) làm giảm độ tin cậy của các yếu tố first-principles.",
+      "Biên độ dao động premium 13-18% trong 30 ngày qua cho thấy thanh khoản thị trường Việt Nam không ổn định, rủi ro trượt giá khi cần bán gấp."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "percentile_5y",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_change",
-        "value": 7.38,
-        "unit": "percentage_points",
-        "source": "monthly_series_30d"
+        "key": "SJC vs MA30 Premium",
+        "value": 16.45,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_price_vs_ma7",
-        "value": 13.67,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_20d_change",
-        "value": 19.57,
+        "key": "XAUUSD Change 20d",
+        "value": -3.97,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
+        "key": "Daily Volatility",
         "value": 2.3,
-        "unit": "%",
+        "unit": "%/day",
         "source": "market_snapshot"
       },
       {
-        "key": "current_sjc_price",
-        "value": 184000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "VIX Change 1d",
+        "value": -6.95,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 5.65,
+        "unit": "%-pts (5.65 to 17.9)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T13:30:52.415Z",
+    "latestTimestamp": "2026-02-26T14:20:57.785Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162788866.52807432,
-    "premiumPct": 13.03,
-    "change7dPct": 3.78,
-    "change30dPct": 1.51,
+    "intlVndPerTael": 162483623.52730143,
+    "premiumPct": 13.24,
+    "change7dPct": 3.59,
+    "change30dPct": 1.32,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161868916,
-    "ma30VndPerTael": 158024895,
+    "ma7VndPerTael": 161825309,
+    "ma30VndPerTael": 158014720,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T13:31:13.839Z",
+    "fetchedAt": "2026-02-26T14:21:19.175Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5168.475,
+        "value": 5165.235,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.07,
-        "change5dPct": 3.45,
-        "change20dPct": -3.91,
+        "change1dPct": 0,
+        "change5dPct": 3.38,
+        "change20dPct": -3.97,
         "relationToGold": "context"
       },
       {
@@ -185,8 +185,20 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-26 | finanznachrichten.de | Klondike Gold Corp .: Klondike Gold Closes $3 , 086 , 959 Non - brokered Financing to Expand 2026 Drill Programs",
+      "2026-02-26 | torontotelegraph.com | Rocky Shore Gold Closes Final Tranche of Oversubscribed Non - Brokered Private Placement",
+      "2026-02-26 | juniorminingnetwork.com | Great Pacific Gold - Updated 5 , 000 Metre Drill Program at Sinivit - Kavasuki",
+      "2026-02-26 | economictimes.indiatimes.com | Gold rate prediction : Gold Price Prediction : Gold rate to fall big in March ? Details here"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-26 | actionforex.com | Market Upbeat Mood Hindering Dollar",
+      "2026-02-26 | fxstreet.com | EUR / GBP gains as united kingdom political uncertainty , BoE easing weigh on Pound",
+      "2026-02-26 | northcountrypublicradio.org | Tariffs cost American shoppers . Theyre unlikely to get that money back",
+      "2026-02-26 | houstonpublicmedia.org | Tariffs cost American shoppers . Theyre unlikely to get that money back",
+      "2026-02-26 | marketscreener.com | Fed Bostic Says People Have Begun to Doubt Fed Independence",
+      "2026-02-26 | finanznachrichten.de | Pound Slides Amid BoE Rate Cut Speculations"
+    ],
     "dollarYieldHeadlines": []
   }
 }
