@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-26T16:20:13.862Z",
+  "generatedAt": "2026-02-26T17:24:34.873Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 7 ngày rất mạnh 3.86%, nhưng thanh khoản vĩ mô đang thắt chặt do lợi suất thực USD tăng vọt 1.78% và BOJ chuyển sang chính sách hawkish, tạo rủi ro điều chỉnh kỹ thuật ngắn hạn trước khi xu hướng tăng dài hạn được thiết lập lại.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 7 ngày qua (+3.87%), trong khi giá thế giới lại đi ngang/yếu; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 5Y: 100%) và vượt xa MA30 (158 triệu VND/lượng) tới 16.4%, báo hiệu vùng quá mua kỹ thuật ngắn hạn.",
-      "Động lượng tăng 7 ngày mạnh 3.86% nhưng giá thế giới tuần này đã giảm từ đỉnh 5215 USD/oz (23/02) xuống 5180 USD/oz (26/02), cho thấy áp lực chốt lời đang xuất hiện.",
-      "Lợi suất thực US 10Y tăng mạnh 20 ngày qua (+6.32% thay đổi tuyệt đối lên mức 1.78%) và VIX giảm 8.61% trong 5 ngày, tín hiệu rủi ro giảm và chi phí cơ hội giữ vàng tăng.",
-      "Premium SJC 12.95% đang ở mức hợp lý so với trung bình 14-15% trong 30 ngày qua, không tạo đệm an toàn khi thị trường điều chỉnh."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn rất xa so với MA30 (158 triệu VND/lượng) báo hiệu vùng quá mua kỹ thuật.",
+      "Động lực tăng giá đến từ yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ 10 năm giảm mạnh 6.32% trong 20 ngày qua (xuống 1.78%) và VIX vẫn ở mức cao (17.93) hỗ trợ vàng thế giới.",
+      "Giá vàng thế giới (XAUUSD) có biểu hiện phân kỳ khi giảm 3.69% trong 20 ngày qua, trong khi giá SJC vẫn tăng, cho thấy đà tăng nội địa có thể không bền vững nếu không có sự dẫn dắt từ thị trường quốc tế."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ ngắn hạn 5080 USD/oz (đáy 21/02), kéo SJC về vùng 175-178 triệu VND/lượng.",
-      "Thanh khoản thị trường thắt chặt nhanh hơn dự kiến do BOJ tín hiệu tăng lãi suất và Fed duy trì rates cao, gây áp lực lên giá tài sản rủi ro.",
-      "Dữ liệu vĩ mô thiếu cập nhật địa chính trị và không có thông tin về can thiệp của Ngân hàng Nhà nước, độ tin cậy giảm."
+      "Rủi ro điều chỉnh giá ngắn hạn cao do giá chạy quá xa MA7 (161.9 triệu VND/lượng) và biến động ngày lớn (2.3%).",
+      "Premium 12.93% có thể bị thu hẹp nếu giá thế giới tiếp tục đi ngang trong khi giá nội địa không duy trì được đà tăng.",
+      "Thiếu tín hiệu địa chính trị cấp thiết trong dữ liệu đầu vào, đà tăng có thể chỉ là phản ứng ngắn hạn với biến động thị trường."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_intl",
-        "value": 12.95,
+        "key": "SJC Change 7d",
+        "value": 3.87,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 3.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_price_vs_ma30",
+        "key": "SJC vs MA30",
         "value": 16.44,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.78,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_high_feb",
-        "value": 5215.66,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "vix_change_5d",
-        "value": -8.61,
+        "key": "Gold Spot Change 20d",
+        "value": -3.69,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Index",
+        "value": 17.93,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Current Premium",
+        "value": 12.93,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-26T16:19:29.403Z",
+    "latestTimestamp": "2026-02-26T17:24:05.227Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162911111.79391256,
-    "premiumPct": 12.95,
-    "change7dPct": 3.86,
-    "change30dPct": 1.59,
+    "intlVndPerTael": 162929512.42682654,
+    "premiumPct": 12.93,
+    "change7dPct": 3.87,
+    "change30dPct": 1.6,
     "volatilityDailyPct": 2.3,
-    "ma7VndPerTael": 161886379,
-    "ma30VndPerTael": 158028970,
+    "ma7VndPerTael": 161889008,
+    "ma30VndPerTael": 158029583,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-26T16:19:51.085Z",
+    "fetchedAt": "2026-02-26T17:24:16.767Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5182.215,
+        "value": 5180.265,
         "unit": "USD/oz",
         "date": "2026-02-26",
-        "change1dPct": 0.33,
-        "change5dPct": 3.72,
-        "change20dPct": -3.65,
+        "change1dPct": 0.3,
+        "change5dPct": 3.68,
+        "change20dPct": -3.69,
         "relationToGold": "context"
       },
       {
@@ -192,11 +185,7 @@
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-26 | markets.financialcontent.com | FinancialContent - Bank of Japan Hawkish Pivot : Takata and Ueda Signal Upcoming Rate Hikes",
-      "2026-02-26 | markets.financialcontent.com | FinancialContent - Gold and Silver Near Historic Peaks Amid Policy Shifts and Geopolitical Tension",
-      "2026-02-26 | zerohedge.com | Fed Independence Is Sacred ... Or So Weve Been Told"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
