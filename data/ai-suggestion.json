@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T06:18:44.708Z",
+  "generatedAt": "2026-02-27T07:19:58.939Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,46 +7,34 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với biên độ dao động lớn, trong khi xu hướng tăng của giá thế giới đang bị kháng cự mạnh quanh 5200 USD/oz; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận phá vỡ rõ ràng hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng 7 ngày mạnh (+1.99%), nhưng thanh khoản thấp và không có tín hiệu vĩ mô đặc biệt hỗ trợ đà phá đỉnh tiếp theo, nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~162.1 triệu VND/lượng) sẽ an toàn hơn.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100) và giảm 2.42% trong 30 ngày qua, rủi ro mua đỉp cao khi thị trường đã chạy mạnh.",
-      "Giá thế giới XAUUSD tăng mạnh 7.2% trong 20 ngày nhưng đang gặp kháng cự kỹ thuật quanh 5200 USD/oz, cần thời gian củng cố trước khi tiếp tục xu hướng.",
-      "Lợi suất thực Mỹ 10 năm giảm sâu 6.84% trong 20 ngày (xuống 1.77%) đang hỗ trợ vàng, nhưng VIX giảm 8.61% cho thấy lo ngại rủi ro đang lắng xuống, giảm động lực đẩy giá ngắn hạn.",
-      "Premium SJC đang ổn định ở 12.71%, thấp hơn đỉnh 18.07% ngày 17/02, cho thấy tâm lý thị trường Việt Nam không quá sốt sắng."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn rất lớn dù xu hướng trung hạn vẫn tăng.",
+      "Đà tăng 7 ngày gần đây (+1.99%) mạnh nhưng biến động ngày cao (2.15%) cho thấy thị trường đang rung lắc mạnh, chưa ổn định.",
+      "Premium 13.1% đang thấp hơn mức đỉnh 18.07% ngày 17/02, cho thấy tâm lý nhà đầu tư Việt chưa cuồng nhiệt đuổi đỉnh, vẫn trong tầm kiểm soát.",
+      "Lợi suất thực 10Y Mỹ giảm mạnh 20 ngày qua (-6.84%) về 1.77% là động lực hỗ trợ vàng thế giới tăng +6.86% 20 ngày qua, nhưng tín hiệu này đã phần nào được định giá."
     ],
     "risks": [
-      "Giá thế giới phá vỡ kháng cự 5200-5215 USD/oz và tiếp tục tăng mạnh do căng thẳng Iran-Mỹ, nhà đầu tư CHỜ sẽ bỏ lỡ đà tăng.",
-      "Biên độ dao động ngày 2.15% cộng với đà hồi phục từ mức giảm 41.26% trong quá khứ cho thấy thị trường có thể biến động thất thường.",
-      "Dữ liệu vĩ mô thiếu cập nhật mới nhất (USD Index, Fed Funds) có thể gây nhiễu tín hiệu phân tích."
+      "Giá thế giới (XAUUSD) tiếp tục phá đỉnh trên 5200 USD/oz do USD yếu hoặc địa chính trị bất ngờ leo thang, kéo giá SJC vượt 185-190 triệu.",
+      "Thanh khoản thấp tại vùng giá kỷ lục có thể gây trượt giá khi cần bán gấp (bid-ask spread giãn).",
+      "Dữ liệu sự kiện vĩ mô/tin tức không có tín hiệu đặc biệt, rủi ro nhiễu cao khi dự báo ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": -2.42,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_change_20d",
-        "value": 7.2,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_change_20d",
-        "value": -6.84,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 12.71,
+        "key": "change_7d",
+        "value": 1.99,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -57,23 +45,41 @@
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_level",
-        "value": 5198.17,
-        "unit": "USD/oz",
+        "key": "premium_current",
+        "value": 13.1,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_30d_high",
+        "value": 18.07,
+        "unit": "%",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "ma7_vnd",
+        "value": 162144837,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -6.84,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T06:18:11.476Z",
+    "latestTimestamp": "2026-02-27T07:19:19.567Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 163249669.95203793,
-    "premiumPct": 12.71,
-    "change7dPct": 2.34,
-    "change30dPct": -2.42,
+    "intlVndPerTael": 162688981.81574833,
+    "premiumPct": 13.1,
+    "change7dPct": 1.99,
+    "change30dPct": -2.76,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162224935,
-    "ma30VndPerTael": 157678240,
+    "ma7VndPerTael": 162144837,
+    "ma30VndPerTael": 157659550,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T06:18:15.559Z",
+    "fetchedAt": "2026-02-27T07:19:34.269Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5197.115,
+        "value": 5180.585,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 0.23,
-        "change5dPct": 1.96,
-        "change20dPct": 7.2,
+        "change1dPct": -0.09,
+        "change5dPct": 1.63,
+        "change20dPct": 6.86,
         "relationToGold": "context"
       },
       {
@@ -186,16 +192,21 @@
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-27 | livemint.com | Silver rate today jumped over ₹8 , 000 amid uncertainty around Iran - US talks , firm dollar - Key levels to watch",
-      "2026-02-27 | newsx.com | Gold Rates Today : Profit Booking Seen On MCX Of India As Global Cues Keep Prices Elevated - Check City - Wise Rates and Find Out Where Gold Is Cheapest"
+      "2026-02-27 | finance.yahoo.com | Inter Parfums ( IPAR ) Q4 2025 Earnings Transcript",
+      "2026-02-27 | economictimes.indiatimes.com | Bitcoin slips to $67 , 000 , Ethereum near $2 , 018 as cautious mood weighs on crypto market"
     ],
     "countryActionHeadlines": [
-      "2026-02-27 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Nvidia Slide Shows Investor Lukewarm Reception of Strong Earnings | AI ...",
-      "2026-02-27 | livemint.com | Silver rate today jumped over ₹8 , 000 amid uncertainty around Iran - US talks , firm dollar - Key levels to watch",
-      "2026-02-27 | livemint.com | Gold rate rises on MCX as US - Iran talks end without a deal ; experts highlight key levels to watch",
-      "2026-02-27 | fxstreet.com | Gold consolidates below $5 , 200 amid Fed stance and geopolitical risks",
-      "2026-02-27 | fxstreet.com | NZD / USD rises to near 0 . 6000 while investors seek fresh cues on Fed policy outlook"
+      "2026-02-27 | jamaicaobserver.com | NHT HOUSING SPEND FALLS TO DECADE LOW AS CONTRIBUTIONS HIT RECORD",
+      "2026-02-27 | sanantoniopost.com | Wall Street shoots higher Wednesday , all indices gain",
+      "2026-02-27 | philippinetimes.com | Wall Street shoots higher Wednesday , all indices gain",
+      "2026-02-27 | timesfreepress.com | For the first time since 2022 , average US long - term mortgage rate dips below 6 %",
+      "2026-02-27 | economictimes.indiatimes.com | US mortgage rate dips below 6 % but economists dont expect a housing boom",
+      "2026-02-27 | milwaukeesun.com | Wall Street shoots higher Wednesday , all indices gain"
     ],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-27 | sakshipost.com | Gold and Silver Prices Rise Today , February 27 : Check 24K , 22K and 18K City - Wise Rates in Hyderabad , Chennai , Kolkata and More !",
+      "2026-02-27 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Nvidia Slide Shows Investor Lukewarm Reception of Strong Earnings | AI ...",
+      "2026-02-27 | livemint.com | Silver rate today jumped over ₹8 , 000 amid uncertainty around Iran - US talks , firm dollar - Key levels to watch"
+    ]
   }
 }
