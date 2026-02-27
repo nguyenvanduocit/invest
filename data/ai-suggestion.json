@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T21:07:48.638Z",
+  "generatedAt": "2026-02-27T22:06:00.539Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,34 +7,39 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+3.19%), trong khi premium đã giảm về mức thấp nhất trong 30 ngày (11.36%) cho thấy động lực tăng chính đến từ giá thế giới hơn là cầu nội địa.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.13%/ngày.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu VND/lượng) tới 16.7% và nằm ở percentile 100% trong 5 năm, báo hiệu vùng quá mua cần điều chỉnh.",
-      "Premium giảm mạnh từ đỉnh 18.07% (17/02) xuống 11.36% (27/02), cho thấy nhà đầu tư Việt Nam đang thận trọng dù giá thế giới tăng.",
-      "Lợi suất thực Mỹ 10 năm giảm sâu 6.84% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng mạnh 8.58% cùng kỳ là động lực tăng cơ bản hợp lý.",
-      "VIX tăng 10.37% trong 20 ngày lên mức 18.63 kết hợp với tin tức về lo ngại chiến tranh và lạm phát đang hỗ trợ giá vàng ngắn hạn."
+      "Giá SJC 184,000,000 VND/lượng đang vượt xa MA30 (157,699,518 VND/lượng) tới 16.7%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
+      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày qua xuống 1.74%, đẩy giá thế giới tăng 8.58% cùng kỳ.",
+      "Premium giảm từ đỉnh 18.07% (17/02) xuống 11.01% hiện tại, cho thấy giá Việt Nam đang tăng chậm hơn giá thế giới và dần hợp lý hóa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá tăng quá nhanh 3.19% trong 7 ngày và biến động ngày ở mức 2.12%.",
-      "Drawdown tồi t nhất trong dữ liệu lên tới 41.26% với thời gian phục hồi trung bình 1369 ngày - rủi ro mua đỉnh lịch sử là thực tế.",
-      "Dữ liệu sự kiện địa chính trị và chính sách không đủ rõ ràng để xác nhận xu hướng dài hạn, có thể là nhiễu ngắn hạn."
+      "Mua tại đỉnh giá mới 184 triệu đồng (percentile 100% 5 năm) với rủi ro điều chỉnh giảm cao do biên độ dao động 2.13%/ngày.",
+      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào để hỗ trợ đà tăng bứt phá tiếp theo.",
+      "Thời gian phục hồi trung bình từ sụt giảm là 1369 ngày, thanh khoản rủi ro cao nếu thị trường đảo chiều."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 16.7,
+        "key": "sjc_price",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_30d_change",
-        "value": -6.71,
-        "unit": "%",
+        "key": "premium_change",
+        "value": -6.06,
+        "unit": "% (từ 18.07 xuống 11.01)",
         "source": "monthly_series_30d"
       },
       {
         "key": "us_real_yield_20d_change",
-        "value": -6.84,
+        "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -45,35 +50,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "%",
+        "key": "price_vs_ma30",
+        "value": 16.7,
+        "unit": "% trên MA30",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
-        "value": 10.37,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "worst_drawdown",
-        "value": 41.26,
-        "unit": "%",
+        "key": "daily_volatility",
+        "value": 2.13,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T21:07:21.249Z",
+    "latestTimestamp": "2026-02-27T22:05:18.546Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 165230134.2343067,
-    "premiumPct": 11.36,
-    "change7dPct": 3.19,
-    "change30dPct": -0.93,
-    "volatilityDailyPct": 2.12,
-    "ma7VndPerTael": 163191616,
-    "ma30VndPerTael": 157681955,
+    "intlVndPerTael": 165753173.4743861,
+    "premiumPct": 11.01,
+    "change7dPct": 3.52,
+    "change30dPct": -0.61,
+    "volatilityDailyPct": 2.13,
+    "ma7VndPerTael": 163266885,
+    "ma30VndPerTael": 157699518,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T21:07:28.095Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-27T22:05:40.218Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -113,12 +112,12 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.77,
+        "value": 1.74,
         "unit": "%",
-        "date": "2026-02-25",
-        "change1dPct": -0.56,
-        "change5dPct": -1.67,
-        "change20dPct": -6.84,
+        "date": "2026-02-26",
+        "change1dPct": -1.69,
+        "change5dPct": -2.79,
+        "change20dPct": -8.42,
         "relationToGold": "inverse"
       },
       {
@@ -137,7 +136,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-02-25",
+        "date": "2026-02-26",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -146,23 +145,23 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.05,
+        "value": 4.02,
         "unit": "%",
-        "date": "2026-02-25",
-        "change1dPct": 0.25,
-        "change5dPct": -0.98,
-        "change20dPct": -4.48,
+        "date": "2026-02-26",
+        "change1dPct": -0.74,
+        "change5dPct": -1.47,
+        "change20dPct": -5.63,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.45,
+        "value": 3.42,
         "unit": "%",
-        "date": "2026-02-25",
-        "change1dPct": 0.58,
-        "change5dPct": -0.58,
-        "change20dPct": -2.27,
+        "date": "2026-02-26",
+        "change1dPct": -0.87,
+        "change5dPct": -1.44,
+        "change20dPct": -3.93,
         "relationToGold": "inverse"
       },
       {
@@ -185,22 +184,8 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-27 | finance.yahoo.com | Trump Secret Weapon in the Rare Earth War",
-      "2026-02-27 | thetimes.com | Nottingham attacks inquiry : did police botch the  golden hour  search ?"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-27 | fool.com | This Gold ETF Is Outshining Its Peers in 2026",
-      "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | springfieldnewssun.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | wwaytv3.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | finance.yahoo.com | Best high - yield savings interest rates today , February 27 , 2026 ( up to 4 % APY return )"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-27 | timesfreepress.com | Forbes editor criticizes Trump tariffs , celebrates US companies in UTC lecture",
-      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?",
-      "2026-02-27 | cbsnews.com | What is the smallest gold bar you can buy ?"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
