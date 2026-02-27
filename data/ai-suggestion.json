@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T07:19:58.939Z",
+  "generatedAt": "2026-02-27T08:13:11.115Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,67 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng 7 ngày mạnh (+1.99%), nhưng thanh khoản thấp và không có tín hiệu vĩ mô đặc biệt hỗ trợ đà phá đỉnh tiếp theo, nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~162.1 triệu VND/lượng) sẽ an toàn hơn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi xu hướng tăng trung hạn vẫn còn nhờ động lực từ lợi suất thực USD giảm mạnh.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp ngắn hạn rất lớn dù xu hướng trung hạn vẫn tăng.",
-      "Đà tăng 7 ngày gần đây (+1.99%) mạnh nhưng biến động ngày cao (2.15%) cho thấy thị trường đang rung lắc mạnh, chưa ổn định.",
-      "Premium 13.1% đang thấp hơn mức đỉnh 18.07% ngày 17/02, cho thấy tâm lý nhà đầu tư Việt chưa cuồng nhiệt đuổi đỉnh, vẫn trong tầm kiểm soát.",
-      "Lợi suất thực 10Y Mỹ giảm mạnh 20 ngày qua (-6.84%) về 1.77% là động lực hỗ trợ vàng thế giới tăng +6.86% 20 ngày qua, nhưng tín hiệu này đã phần nào được định giá."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (157.66 triệu VND/lượng), cho thấy thị trường đã định giá đầy đủ đà tăng.",
+      "Động lực vĩ mô tích cực: Lợi suất thực USD 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 6.83% cùng kỳ, hỗ trợ xu hướng tăng cơ bản.",
+      "Biên độ dao động premium hẹp trong tháng qua (12.56% - 18.07%) cho thấy thị trường nội địa đang ổn định, không có biến động thanh khoản bất thường.",
+      "Lợi suất trái phiếu Mỹ 2 năm (3.45%) thấp hơn lãi suất quỹ liên bang (3.64%) cho thấy thị trường đang định giá cắt giảm lãi suất trong tương lai, hỗ trợ vàng dài hạn."
     ],
     "risks": [
-      "Giá thế giới (XAUUSD) tiếp tục phá đỉnh trên 5200 USD/oz do USD yếu hoặc địa chính trị bất ngờ leo thang, kéo giá SJC vượt 185-190 triệu.",
-      "Thanh khoản thấp tại vùng giá kỷ lục có thể gây trượt giá khi cần bán gấp (bid-ask spread giãn).",
-      "Dữ liệu sự kiện vĩ mô/tin tức không có tín hiệu đặc biệt, rủi ro nhiễu cao khi dự báo ngắn hạn."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá giao dịch quá xa đường trung bình động 7 ngày và 30 ngày.",
+      "VIX giảm 8.61% trong 5 ngày cho thấy khẩu vị rủi ro thị trường tài chính đang tăng, có thể hút dòng tiền khỏi vàng an toàn.",
+      "Dữ liệu sự kiện vĩ mô/tin tức địa chính trị trong giai đoạn này khá yên ắng (chủ yếu là tin hành chính), thiếu chất xúc tác mạnh để đẩy giá phá vỡ đỉnh cũ."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 184000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": 1.99,
+        "key": "us_real_yield_10y_change_20d",
+        "value": -6.84,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.15,
+        "key": "gold_spot_change_20d",
+        "value": 6.83,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_current",
-        "value": 13.1,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_30d_high",
-        "value": 18.07,
-        "unit": "%",
+        "key": "sjc_premium_range_30d",
+        "value": 5.51,
+        "unit": "% (12.56-18.07)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "ma7_vnd",
-        "value": 162144837,
-        "unit": "VND/lượng",
+        "key": "sjc_vs_ma30",
+        "value": 16.69,
+        "unit": "% (184M vs 157.66M VND)",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
-        "value": -6.84,
+        "key": "vix_change_5d",
+        "value": -8.61,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T07:19:19.567Z",
+    "latestTimestamp": "2026-02-27T08:12:36.979Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162688981.81574833,
+    "intlVndPerTael": 162685983.24499056,
     "premiumPct": 13.1,
-    "change7dPct": 1.99,
+    "change7dPct": 1.98,
     "change30dPct": -2.76,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162144837,
-    "ma30VndPerTael": 157659550,
+    "ma7VndPerTael": 162144408,
+    "ma30VndPerTael": 157659450,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +78,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T07:19:34.269Z",
+    "fetchedAt": "2026-02-27T08:12:49.748Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5180.585,
+        "value": 5179.115,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": -0.09,
-        "change5dPct": 1.63,
-        "change20dPct": 6.86,
+        "change1dPct": -0.12,
+        "change5dPct": 1.6,
+        "change20dPct": 6.83,
         "relationToGold": "context"
       },
       {
@@ -191,22 +179,12 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-27 | finance.yahoo.com | Inter Parfums ( IPAR ) Q4 2025 Earnings Transcript",
-      "2026-02-27 | economictimes.indiatimes.com | Bitcoin slips to $67 , 000 , Ethereum near $2 , 018 as cautious mood weighs on crypto market"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-27 | jamaicaobserver.com | NHT HOUSING SPEND FALLS TO DECADE LOW AS CONTRIBUTIONS HIT RECORD",
-      "2026-02-27 | sanantoniopost.com | Wall Street shoots higher Wednesday , all indices gain",
-      "2026-02-27 | philippinetimes.com | Wall Street shoots higher Wednesday , all indices gain",
-      "2026-02-27 | timesfreepress.com | For the first time since 2022 , average US long - term mortgage rate dips below 6 %",
-      "2026-02-27 | economictimes.indiatimes.com | US mortgage rate dips below 6 % but economists dont expect a housing boom",
-      "2026-02-27 | milwaukeesun.com | Wall Street shoots higher Wednesday , all indices gain"
+      "2026-02-27 | theheraldghana.com | Western Region Council Of State Rep caught up in US$214 million rot at GOLDBOD"
     ],
     "dollarYieldHeadlines": [
-      "2026-02-27 | sakshipost.com | Gold and Silver Prices Rise Today , February 27 : Check 24K , 22K and 18K City - Wise Rates in Hyderabad , Chennai , Kolkata and More !",
-      "2026-02-27 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Nvidia Slide Shows Investor Lukewarm Reception of Strong Earnings | AI ...",
-      "2026-02-27 | livemint.com | Silver rate today jumped over ₹8 , 000 amid uncertainty around Iran - US talks , firm dollar - Key levels to watch"
+      "2026-02-27 | sakshipost.com | Gold and Silver Prices Rise Today , February 27 : Check 24K , 22K and 18K City - Wise Rates in Hyderabad , Chennai , Kolkata and More !"
     ]
   }
 }
