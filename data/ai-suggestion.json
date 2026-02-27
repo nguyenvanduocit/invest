@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T19:14:44.973Z",
+  "generatedAt": "2026-02-27T20:07:50.023Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+3.24%), tạo rủi ro điều chỉnh kỹ thuật ngắn hạn dù xu hướng vĩ mô vẫn tích cực khi lợi suất thực USD giảm mạnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+3%), trong khi lợi suất thực USD giảm mạnh là động lực tăng dài hạn nhưng ngắn hạn cần cảnh giác điều chỉnh kỹ thuật.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu) và MA7 (162.4 triệu), tín hiệu quá mua rõ ràng ở mức đỉnh 5 năm (percentile 100%).",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 8.25% cùng kỳ, tạo nền tảng vĩ mô tích cực.",
-      "Premium SJC đang ở mức thấp nhất trong 30 ngày (11.73% so với đỉnh 18.07% ngày 17/02), cho thấy giá Việt Nam chưa tăng quá nóng so với thế giới."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.7 triệu) tới 16.7% - vùng quá mua cần cảnh giác.",
+      "Động lực vĩ mô mạnh: Lợi suất thực USD 10Y giảm sâu 6.84% trong 20 ngày (xuống 1.77%), giá vàng thế giới tăng 8.33% trong 20 ngày lên 5251 USD/oz.",
+      "Premium giảm từ đỉnh 18.07% (17/02) xuống 11.56% hiện tại, cho thấy giá SJC tăng chậm hơn giá thế giới và thanh khoản có thể đang thắt chặt.",
+      "VIX tăng 10.37% trong 20 ngày lên 18.63 kết hợp tin tức 'lo ngại chiến tranh' và 'Iran Nuclear Deal' hỗ trợ vàng nhưng đã phần nào được định giá."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá tăng vọt 3.24% trong 7 ngày và biến động ngày ở mức 2.16%.",
-      "Dữ liệu sự kiện vĩ mô (ECB, địa chính trị) không có tin tức trọng yếu trực tiếp tác động giá vàng, giảm độ tin cậy dự báo.",
-      "VIX tăng 10.37% trong 20 ngày cho thấy biến động thị trường tài chính đang gia tăng."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá lệch quá xa MA30 (16.7%) và tăng 3% chỉ trong 7 ngày.",
+      "Premium thấp (11.56%) so với trung bình 14-16% trong tháng có thể do thanh khoản yếu hoặc áp lực bán chốt lời.",
+      "Dữ liệu sự kiện địa chính trị từ các nguồn không chuyên (collider.com, idahopress.com) có độ tin cậy thấp, có thể là nhiễu."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 16.6,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "sjc_vs_ma30_deviation",
+        "value": 16.7,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 8.25,
+        "key": "gold_spot_change20d",
+        "value": 8.33,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_current_vs_30d_high",
-        "value": 11.73,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "change_7d_pct",
-        "value": 3.24,
+        "key": "premium_current",
+        "value": 11.56,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
+        "key": "premium_30d_high",
+        "value": 18.07,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "vix_change20d",
         "value": 10.37,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_change7d",
+        "value": 3,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T19:14:22.610Z",
+    "latestTimestamp": "2026-02-27T20:07:25.240Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 164682388.5047515,
-    "premiumPct": 11.73,
-    "change7dPct": 3.24,
-    "change30dPct": -1.57,
-    "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 162429609,
-    "ma30VndPerTael": 157725997,
+    "intlVndPerTael": 164929336.8861302,
+    "premiumPct": 11.56,
+    "change7dPct": 3,
+    "change30dPct": -1.11,
+    "volatilityDailyPct": 2.12,
+    "ma7VndPerTael": 163148645,
+    "ma30VndPerTael": 157671928,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T19:14:27.464Z",
+    "fetchedAt": "2026-02-27T20:07:32.020Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5247.725,
+        "value": 5251.565,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 1.2,
-        "change5dPct": 2.95,
-        "change20dPct": 8.25,
+        "change1dPct": 1.28,
+        "change5dPct": 3.02,
+        "change20dPct": 8.33,
         "relationToGold": "context"
       },
       {
@@ -184,8 +191,21 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-02-27 | collider.com | Jury Duty  Season 2 Trades Courtroom Chaos for Corporate Warfare in New Look at  Company Retreat  [ Exclusive ]"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-27 | idahopress.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
+      "2026-02-27 | journal-news.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
+      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?",
+      "2026-02-27 | nvdaily.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
+      "2026-02-27 | forbes.com | Gold And Silver Surge As U . S .- Iran Nuclear Deal Lags",
+      "2026-02-27 | dailyadvance.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?",
+      "2026-02-27 | cbsnews.com | What is the smallest gold bar you can buy ?",
+      "2026-02-27 | markets.financialcontent.com | FinancialContent - The  Warsh Shock : Kevin Warsh Nominated as Fed Chair , Signaling a Radical Shift to  Sound Money"
+    ]
   }
 }
