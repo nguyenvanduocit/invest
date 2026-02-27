@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T08:13:11.115Z",
+  "generatedAt": "2026-02-27T09:15:21.883Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,67 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi xu hướng tăng trung hạn vẫn còn nhờ động lực từ lợi suất thực USD giảm mạnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức cao kỷ lục 100% trong 5 năm qua với biên độ dao động lớn, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập khẩu kỹ thuật tốt hơn thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 (157.66 triệu VND/lượng), cho thấy thị trường đã định giá đầy đủ đà tăng.",
-      "Động lực vĩ mô tích cực: Lợi suất thực USD 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 6.83% cùng kỳ, hỗ trợ xu hướng tăng cơ bản.",
-      "Biên độ dao động premium hẹp trong tháng qua (12.56% - 18.07%) cho thấy thị trường nội địa đang ổn định, không có biến động thanh khoản bất thường.",
-      "Lợi suất trái phiếu Mỹ 2 năm (3.45%) thấp hơn lãi suất quỹ liên bang (3.64%) cho thấy thị trường đang định giá cắt giảm lãi suất trong tương lai, hỗ trợ vàng dài hạn."
+      "Giá SJC 184 triệu VND/lượng đang ở phân vị 100% trong 5 năm (percentile5y), đồng thời giảm 2.83% trong 30 ngày qua cho thấy động lượng tăng đã suy yếu tạm thời.",
+      "Biên độ dao động ngày cao 2.15% kết hợp với mức giá cách xa MA30 (157.66 triệu VND/lượng) 16.7% cho thấy rủi ro điều chỉnh kỹ thuật là lớn.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) đã hỗ trợ giá vàng tăng gần đây, nhưng VIX giảm 8.61% trong 5 ngày cho thấy tâm lý sợ hãi đang hạ nhiệt, giảm động lực mua an toàn.",
+      "Premium 13.18% hiện tại thấp hơn đỉnh 18.07% ngày 17/02, cho thấy thị trường Việt Nam đang định giá hợp lý hơn và không có hiện tượng sốt vàng cục bộ."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá giao dịch quá xa đường trung bình động 7 ngày và 30 ngày.",
-      "VIX giảm 8.61% trong 5 ngày cho thấy khẩu vị rủi ro thị trường tài chính đang tăng, có thể hút dòng tiền khỏi vàng an toàn.",
-      "Dữ liệu sự kiện vĩ mô/tin tức địa chính trị trong giai đoạn này khá yên ắng (chủ yếu là tin hành chính), thiếu chất xúc tác mạnh để đẩy giá phá vỡ đỉnh cũ."
+      "Rủi ro điều chỉnh giá sâu nếu giá thế giới không duy trì được trên 5176 USD/oz và lợi suất thực Mỹ quay đầu tăng.",
+      "Biên độ dao động 2.15%/ngày có thể gây áp lực chốt lời ngắn hạn lớn cho nhà đầu tư mua tại vùng giá cao.",
+      "Thiếu tín hiệu địa chính trị hoặc hành động can thiệp của quốc gia mạnh trong dữ liệu đầu vào, giảm khả năng dự đoán biến động bất ngờ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "Change 30d",
+        "value": -2.83,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 157655699,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_20d",
-        "value": 6.83,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_premium_range_30d",
-        "value": 5.51,
-        "unit": "% (12.56-18.07)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "sjc_vs_ma30",
-        "value": 16.69,
-        "unit": "% (184M vs 157.66M VND)",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_5d",
+        "key": "VIX Change 5d",
         "value": -8.61,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Current",
+        "value": 13.18,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Volatility Daily",
+        "value": 2.15,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T08:12:36.979Z",
+    "latestTimestamp": "2026-02-27T09:14:37.366Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162685983.24499056,
-    "premiumPct": 13.1,
-    "change7dPct": 1.98,
-    "change30dPct": -2.76,
+    "intlVndPerTael": 162573457.38635743,
+    "premiumPct": 13.18,
+    "change7dPct": 1.91,
+    "change30dPct": -2.83,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162144408,
-    "ma30VndPerTael": 157659450,
+    "ma7VndPerTael": 162128333,
+    "ma30VndPerTael": 157655699,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T08:12:49.748Z",
+    "fetchedAt": "2026-02-27T09:14:58.772Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5179.115,
+        "value": 5177.755,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": -0.12,
-        "change5dPct": 1.6,
-        "change20dPct": 6.83,
+        "change1dPct": -0.14,
+        "change5dPct": 1.58,
+        "change20dPct": 6.8,
         "relationToGold": "context"
       },
       {
@@ -172,19 +184,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
+      "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025",
       "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025",
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President",
-      "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026",
-      "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
-      "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
+      "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-27 | theheraldghana.com | Western Region Council Of State Rep caught up in US$214 million rot at GOLDBOD"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-02-27 | sakshipost.com | Gold and Silver Prices Rise Today , February 27 : Check 24K , 22K and 18K City - Wise Rates in Hyderabad , Chennai , Kolkata and More !"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
