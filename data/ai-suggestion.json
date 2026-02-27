@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T16:11:58.778Z",
+  "generatedAt": "2026-02-27T17:12:12.498Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử (percentile 100% trong 5 năm) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản có thể thấp và rủi ro điều chỉnh ngắn hạn cao khi biên độ dao động lớn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng 7 ngày rất mạnh, nhưng rủi ro điều chỉnh kỹ thuật là lớn; nhà đầu tư không nên mua đuổi tại vùng giá này.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu VND/lượng) tới 16.7%, cho thấy thị trường đã mua quá mức trong ngắn hạn (overbought).",
-      "Động lượng tăng giá 7 ngày qua rất mạnh (+3.27%) kết hợp với lợi suất thực Mỹ giảm sâu 6.84% trong 20 ngày, tạo đà đẩy giá vàng thế giới lên cao.",
-      "Premium 11.7% đang ở vùng thấp nhất trong 30 ngày qua (so với đỉnh 18.07% ngày 17/02), cho thấy giá SJC tăng chủ yếu do giá thế giới kéo lên chứ không phải sốt cục bộ."
+      "Giá SJC 184 triệu VND/lượng đang vượt xa MA7 (162 triệu) và MA30 (158 triệu), cho thấy thị trường đã tăng quá nóng trong ngắn hạn (change7dPct +3.01%).",
+      "Đỉnh giá hiện tại nằm ở percentile 100% trong 5 năm, là vùng giá chưa từng có, không có dữ liệu lịch sử về kháng cự phía trên.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 7.95% cùng kỳ là động lực chính đẩy giá, nhưng dòng tin tức vĩ mô không có sự kiện địa chính trị cấp bách.",
+      "Premium giảm từ đỉnh 18.07% (17/02) xuống 11.97% hiện tại cho thấy giá SJC tăng chậm hơn giá thế giới, thanh khoản có thể đang gặp áp lực."
     ],
     "risks": [
-      "Giá đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro chốt lời ngắn hạn rất lớn khi thị trường điều chỉnh.",
-      "Biên độ dao động ngày cao (2.16%) cho thấy thị trường biến động mạnh, nhà đầu tư mượn margin có thể bị gọi vốn.",
-      "Dữ liệu vĩ mô (first principles) bị thiếu một số chỉ số và tin tức địa chính trị không đáng kể, có thể dẫn đến đánh giá thiếu chính xác về cú sốc bên ngoài."
+      "Mua đuổi tại đỉnh lịch sử (All-time high) khi biến động ngày lên tới 2.15% có nguy cơ bị 'giam' nếu thị trường điều chỉnh.",
+      "Thiếu sự kiện địa chính trị hoặc hành động can thiệp của quốc gia trong dữ liệu đầu vào, đà tăng có thể mất động lực bất cứ lúc nào.",
+      "Lãi suất Fed Funds vẫn ở mức 3.64%, nếu lợi suất thực Mỹ đảo chiều tăng sẽ gây áp lực lớn lên giá vàng."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 184000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Khoảng cách giá so với MA30",
-        "value": 16.7,
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium hiện tại",
-        "value": 11.7,
+        "key": "change_7d",
+        "value": 3.01,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y (thay đổi 20 ngày)",
+        "key": "premium_current",
+        "value": 11.97,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới XAUUSD (thay đổi 20 ngày)",
-        "value": 8.31,
+        "key": "intl_gold_change20d",
+        "value": 7.95,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Độ biến động ngày",
-        "value": 2.16,
-        "unit": "%",
+        "key": "ma7_vnd",
+        "value": 162379059,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5 năm",
-        "value": 100,
+        "key": "volatility_daily",
+        "value": 2.15,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T16:11:27.272Z",
+    "latestTimestamp": "2026-02-27T17:11:32.029Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 164731950.34446347,
-    "premiumPct": 11.7,
-    "change7dPct": 3.27,
-    "change30dPct": -1.54,
-    "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 162436689,
-    "ma30VndPerTael": 157727649,
+    "intlVndPerTael": 164328535.48572758,
+    "premiumPct": 11.97,
+    "change7dPct": 3.01,
+    "change30dPct": -1.78,
+    "volatilityDailyPct": 2.15,
+    "ma7VndPerTael": 162379059,
+    "ma30VndPerTael": 157714202,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T16:11:40.109Z",
+    "fetchedAt": "2026-02-27T17:11:53.573Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5250.905,
+        "value": 5233.335,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 1.27,
-        "change5dPct": 3.01,
-        "change20dPct": 8.31,
+        "change1dPct": 0.93,
+        "change5dPct": 2.67,
+        "change20dPct": 7.95,
         "relationToGold": "context"
       },
       {
@@ -184,16 +191,8 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-27 | finanznachrichten.de | Advanced Gold Exploration Inc .: Advanced Gold Acquires 100 % Interest in Silver Belle Nevada CRD Claims",
-      "2026-02-27 | juniorminingnetwork.com | Mogotes Metals Secures Option to Acquire Advanced Beskauga Copper - Gold - Silver Project",
-      "2026-02-27 | juniorminingnetwork.com | GoldHaven Resources Expands Magno Project to Over 37 , 200 Hectares with Strategic Cassiar Claims Acquisition"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-27 | marketscreener.com | Gold poised for seventh monthly gain on geopolitical worries , softer US yields",
-      "2026-02-27 | kob.com | US stocks slump and oil prices jump as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | marketscreener.com | Inflation Bites Back"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
