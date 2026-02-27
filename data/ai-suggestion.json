@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T12:10:58.646Z",
+  "generatedAt": "2026-02-27T13:26:21.059Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại sau đợt hồi phục kỹ thuật; thanh khoản thị trường và tín hiệu vĩ mô chưa đủ mạnh để phá vỡ đỉnh cũ trong ngắn hạn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium đã co hẹp về mức thấp nhất trong 30 ngày qua.",
     "reasons": [
-      "Giá SJC 184 triệu đồng/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá đã tăng 2.17% trong 7 ngày gần nhất.",
-      "Động lượng tăng giá thế giới chững lại khi XAUUSD chỉ tăng nhẹ 0.05% trong ngày, dù vẫn duy trì mức hỗ trợ tốt trên MA7.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) tạo nền tảng hỗ trợ giá vàng dài hạn, ngăn đà điều chỉnh sâu.",
-      "Premium SJC thu hẹp từ đỉnh 18.07% (17/02) về 12.9% hiện tại, cho thấy tâm lý FOMO thị trường đã hạ nhiệt, giá trong nước đi ngang chờ tín hiệu mới."
+      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu VND/lượng) tới 16.7%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
+      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày qua (xuống 1.77%), tạo đà cho giá vàng thế giới tăng 8.01%.",
+      "Premium giảm xuống mức 11.93%, thấp nhất trong chuỗi dữ liệu 30 ngày (so với đỉnh 18.07% ngày 17/02), cho thấy giá Việt Nam đang tăng chậm hơn giá thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật khi giá thế giới tăng quá nhanh 7.01% trong 20 ngày và gặp kháng cự tâm lý quanh 5200 USD/oz.",
-      "Thanh khoản và tin tức vĩ mô 24-48h qua khá trầm lắng (chỉ có tin ECB routine), thị trường có thể đi ngang tích lũy thiếu định hướng rõ ràng.",
-      "VIX giảm 8.61% trong 5 ngày cho thấy lo ngại rủi ro thị trường giảm, có thể làm giảm nhu cầu trú ẩn an toàn vào vàng ngắn hạn."
+      "Mua tại đỉnh giá lịch sử (percentile 100% 5 năm) rủi ro điều chỉnh cao nếu thị trường chốt lời.",
+      "VIX giảm 8.61% trong 5 ngày cho thấy tâm lý sợ hãi đang hạ nhiệt, có thể làm giảm nhu cầu trú ẩn an toàn.",
+      "Biên độ dao động ngày 2.15% tiềm ẩn rủi ro biến động giá lớn trong ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium vs World",
+        "value": 11.93,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 2.17,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 12.9,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_30d_high",
-        "value": 18.07,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "xauusd_change_20d",
-        "value": 7.01,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_current",
-        "value": 1.77,
+        "key": "Gold Spot Change 20d",
+        "value": 8.01,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change_5d",
-        "value": -8.61,
+        "key": "MA30 VND",
+        "value": 157716164,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Low 30d",
+        "value": 11.93,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium High 30d",
+        "value": 18.07,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T12:10:28.914Z",
+    "latestTimestamp": "2026-02-27T13:25:53.203Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162979175.5041986,
-    "premiumPct": 12.9,
-    "change7dPct": 2.17,
-    "change30dPct": -2.58,
+    "intlVndPerTael": 164387406.14779317,
+    "premiumPct": 11.93,
+    "change7dPct": 3.05,
+    "change30dPct": -1.74,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162186293,
-    "ma30VndPerTael": 157669223,
+    "ma7VndPerTael": 162387469,
+    "ma30VndPerTael": 157716164,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T12:10:39.061Z",
+    "fetchedAt": "2026-02-27T13:26:00.978Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5187.655,
+        "value": 5235.995,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 0.05,
-        "change5dPct": 1.77,
-        "change20dPct": 7.01,
+        "change1dPct": 0.98,
+        "change5dPct": 2.72,
+        "change20dPct": 8.01,
         "relationToGold": "context"
       },
       {
@@ -192,7 +191,11 @@
       "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "countryActionHeadlines": [
+      "2026-02-27 | scmp.com | As the yuan sizzles , China central bank deploys double - barrelled policy tweak",
+      "2026-02-27 | news.az | Gold edges higher amid ongoing US - Iran standoff",
+      "2026-02-27 | thestar.com.my | China encourages dollar buying to slow surging yuan"
+    ],
     "dollarYieldHeadlines": []
   }
 }
