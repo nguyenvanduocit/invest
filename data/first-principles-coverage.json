@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-02-26T23:09:14.099Z",
+  "checkedAt": "2026-02-27T00:21:50.457Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-02-26T23:09:14.019Z",
+  "dataFetchedAt": "2026-02-27T00:21:50.381Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,39 +9,27 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
+    "geopoliticalCount": 9,
     "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "dollarYieldCount": 11,
     "sourceFailures": [
-      {
-        "id": "gold_spot_xauusd",
-        "error": "Malformed Stooq daily CSV payload"
-      },
       {
         "id": "gdelt_country_actions",
         "error": "HTTP 429"
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "Failed to parse JSON"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (Failed to parse JSON)"
+    "Source failures: gdelt_country_actions (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
