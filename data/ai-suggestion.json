@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T18:12:15.680Z",
+  "generatedAt": "2026-02-27T19:14:44.973Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 7 ngày qua (+3.06%), trong khi xu hướng 30 ngày vẫn âm (-1.73%). Lợi suất thực USD giảm mạnh và căng thẳng địa chính trị hỗ trợ giá dài hạn, nhưng rủi ro điều chỉnh ngắn hạn là rất lớn khi giá vượt xa MA30.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+3.24%), tạo rủi ro điều chỉnh kỹ thuật ngắn hạn dù xu hướng vĩ mô vẫn tích cực khi lợi suất thực USD giảm mạnh.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (157.7 triệu VND/lượng) tới 16.7%, báo hiệu vùng quá mua.",
-      "Động lượng tăng nóng 7 ngày qua (+3.06%) đối lập với xu hướng giảm 30 ngày (-1.73%), cho thấy biến động bất ổn và rủi ro đảo chiều.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) và căng thẳng Mỹ-Iran là động lực tăng giá cơ bản, nhưng đã được phản ánh vào giá.",
-      "Premium SJC đang ở mức thấp nhất trong 30 ngày (11.92%), thấp hơn đáng kể so với đỉnh 18.07% ngày 17/02, cho thấy giá nội đang chạy chậm hơn giá thế giới."
+      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu) và MA7 (162.4 triệu), tín hiệu quá mua rõ ràng ở mức đỉnh 5 năm (percentile 100%).",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) và giá vàng thế giới tăng 8.25% cùng kỳ, tạo nền tảng vĩ mô tích cực.",
+      "Premium SJC đang ở mức thấp nhất trong 30 ngày (11.73% so với đỉnh 18.07% ngày 17/02), cho thấy giá Việt Nam chưa tăng quá nóng so với thế giới."
     ],
     "risks": [
-      "Giá ở mức cực trị (percentile 100%), rủi ro chốt lời ngắn hạn cao nếu dữ liệu việc làm Mỹ (sắp công bố) tốt hơn kỳ vọng.",
-      "Thị trường phản ứng tiêu cực với dữ liệu PPI 'nóng' (Dow giảm 600 điểm), có thể gây áp lực bán ròng lên tài sản rủi ro kể cả vàng.",
-      "Biến động ngày cao (2.15%) và VIX tăng 10.37% trong 20 ngày cảnh báo sự bất ổn thị trường chung."
+      "Rủi ro chốt lời ngắn hạn cao khi giá tăng vọt 3.24% trong 7 ngày và biến động ngày ở mức 2.16%.",
+      "Dữ liệu sự kiện vĩ mô (ECB, địa chính trị) không có tin tức trọng yếu trực tiếp tác động giá vàng, giảm độ tin cậy dự báo.",
+      "VIX tăng 10.37% trong 20 ngày cho thấy biến động thị trường tài chính đang gia tăng."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 100,
+        "key": "sjc_price_vs_ma30",
+        "value": 16.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 16.7,
-        "unit": "% above",
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d vs 30d",
-        "value": 3.06,
-        "unit": "% vs -1.73%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_20d_change",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium vs 30d High",
-        "value": 11.92,
-        "unit": "% vs 18.07%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "VIX Change 20d",
-        "value": 10.37,
+        "key": "intl_gold_20d_change",
+        "value": 8.25,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 7.99,
+        "key": "premium_current_vs_30d_high",
+        "value": 11.73,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "change_7d_pct",
+        "value": 3.24,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_20d_change",
+        "value": 10.37,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T18:11:28.513Z",
+    "latestTimestamp": "2026-02-27T19:14:22.610Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 164406813.6338761,
-    "premiumPct": 11.92,
-    "change7dPct": 3.06,
-    "change30dPct": -1.73,
-    "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162390241,
-    "ma30VndPerTael": 157716811,
+    "intlVndPerTael": 164682388.5047515,
+    "premiumPct": 11.73,
+    "change7dPct": 3.24,
+    "change30dPct": -1.57,
+    "volatilityDailyPct": 2.16,
+    "ma7VndPerTael": 162429609,
+    "ma30VndPerTael": 157725997,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T18:11:49.966Z",
+    "fetchedAt": "2026-02-27T19:14:27.464Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5235.195,
+        "value": 5247.725,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 0.96,
-        "change5dPct": 2.7,
-        "change20dPct": 7.99,
+        "change1dPct": 1.2,
+        "change5dPct": 2.95,
+        "change20dPct": 8.25,
         "relationToGold": "context"
       },
       {
@@ -185,22 +184,8 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-27 | grandforksherald.com | Opinion : After State of Union , it obvious : America back - Grand Forks Herald | Grand Forks , East Grand Forks news , weather & sports",
-      "2026-02-27 | marketscreener.com | FTSE 100 hits high ; oil jumps on US - Iran tension",
-      "2026-02-27 | fxstreet.com | Dow Jones drops 600 points as hot PPI data rattles markets",
-      "2026-02-27 | fxstreet.com | Will Pound Sterling defend key 1 . 3450 support ahead of US jobs data ?",
-      "2026-02-27 | newsday.com | Tensions between son of Iran last shah and Kurdish dissidents show cracks in Iranian opposition",
-      "2026-02-27 | baltimoresun.com | What to know about latest fighting between Afghanistan and Pakistan"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-27 | cbsnews.com | What is the smallest gold bar you can buy ?",
-      "2026-02-27 | markets.financialcontent.com | FinancialContent - The  Warsh Shock : Kevin Warsh Nominated as Fed Chair , Signaling a Radical Shift to  Sound Money",
-      "2026-02-27 | thezimbabwemail.com | Zimbabwe Central Bank Introduces New ZiG Notes , Pushes Towards Monetary Stability",
-      "2026-02-27 | finanzen.ch | U . S . Stocks Extending Yesterday Pullback Amid Inflation , AI Concerns",
-      "2026-02-27 | actionforex.com | Weekly Gold ( XAU / USD ) Forecast : US - Iran Standoff Trumps US PPI , Setting Stage for $5300 / oz",
-      "2026-02-27 | marketscreener.com | Gold poised for seventh monthly gain on geopolitical worries , softer US yields"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
