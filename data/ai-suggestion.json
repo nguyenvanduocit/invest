@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T10:13:33.572Z",
+  "generatedAt": "2026-02-27T11:13:16.271Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,34 +7,22 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà hồi phục mạnh 1.87% tuần qua, nhưng xu hướng 30 ngày vẫn giảm -2.87% và thanh khoản thấp dịp cuối tháng; chờ xác nhận phá vỡ kháng cự MA30 (157.7 triệu/lượng) hoặc tín hiệu điều chỉnh từ đỉnh trước khi vào lệnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng chậm lại, trong khi giá thế giới đã quay đầu giảm nhẹ; rủi ro điều chỉnh ngắn hạn cao hơn cơ hội tăng đột biến.",
     "reasons": [
-      "Giá SJC 184 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.7 triệu/lượng) tới 16.7%, rủi ro mua đỉp cao khi đà tăng quá nhanh.",
-      "Lợi suất thực 10Y Mỹ giảm mạnh -6.84% trong 20 ngày (xuống 1.77%) và căng thẳng Mỹ-Iran hỗ trợ giá vàng thế giới tăng +6.65% trong 20 ngày, tạo động lực tăng cơ bản.",
-      "Premium 13.23% đang ở mức hợp lý so với trung bình 30 ngày (14.1%), không quá cao hay thấp, chưa có tín hiệu bất thường để đánh bắt đáy hay bán đỉnh.",
-      "Biến động ngày 2.15% và VIX ở 17.93 cho thấy thị trường chưa ổn định, cần chờ thêm dữ liệu."
+      "Giá SJC 184 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tiềm năng tăng giá kỹ thuật hạn chế.",
+      "Động lượng tăng giá thế giới suy yếu: XAUUSD giảm 0.19% ngày và giá thế giới quy đổi VND (162.6 triệu) thấp hơn đỉnh 30 ngày (166.8 triệu).",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) là yếu tố hỗ trợ đã phần nào được định giá trong đợt tăng vừa qua.",
+      "Premium 13.16% đang ở mức hợp lý so với trung bình 30 ngày (14.1%), không có tín hiệu bất thường về áp lực cung cầu nội địa."
     ],
     "risks": [
-      "Mua đỉnh lịch sử khi giá ở percentile 100% và cao xa MA30, rủi ro điều chỉnh kỹ thuật sâu.",
-      "Đà tăng 7 ngày qua (+1.87%) có thể là hồi phục tạm thời trong xu hướng giảm 30 ngày (-2.87%), bẫy tăng giả.",
-      "Thiếu dữ liệu chính sách Mỹ cụ thể trong 24h qua, tin tức ECB ít tác động trực tiếp đến giá vàng Việt Nam."
+      "Giá SJC cao hơn MA7 (162.1 triệu) tới 13.5% và cao hơn MA30 (157.7 triệu) tới 16.7%, rủi ro điều chỉnh về mức trung bình ngắn hạn.",
+      "VIX giảm 8.61% trong 5 ngày xuống 17.93 điểm cho thấy tâm lý sợ hãi toàn cầu dịu đi, có thể giảm nhu cầu trú ẩn an toàn.",
+      "Dữ liệu sự kiện vĩ mô không có tin tức trọng yếu về chính sách lãi suất hoặc địa chính trị cấp bách, thị trường có thể đi ngang."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_7d",
-        "value": 1.87,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": -2.87,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -45,41 +33,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_20d",
-        "value": 6.65,
+        "key": "intl_gold_change_1d",
+        "value": -0.19,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_change_20d",
+        "key": "us_real_yield_10y_change_20d",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.23,
-        "unit": "%",
-        "source": "market_snapshot"
       },
       {
         "key": "vix_level",
         "value": 17.93,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_premium_current",
+        "value": 13.16,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_price_latest",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T10:12:58.532Z",
+    "latestTimestamp": "2026-02-27T11:12:34.228Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162501176.69377676,
-    "premiumPct": 13.23,
-    "change7dPct": 1.87,
-    "change30dPct": -2.87,
+    "intlVndPerTael": 162604148.76931164,
+    "premiumPct": 13.16,
+    "change7dPct": 1.93,
+    "change30dPct": -2.81,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162118007,
-    "ma30VndPerTael": 157653290,
+    "ma7VndPerTael": 162132718,
+    "ma30VndPerTael": 157656722,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T10:13:10.740Z",
+    "fetchedAt": "2026-02-27T11:12:55.698Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5170.355,
+        "value": 5175.445,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": -0.29,
-        "change5dPct": 1.43,
-        "change20dPct": 6.65,
+        "change1dPct": -0.19,
+        "change5dPct": 1.53,
+        "change20dPct": 6.76,
         "relationToGold": "context"
       },
       {
@@ -191,17 +185,10 @@
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President",
       "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026"
     ],
-    "geopoliticalHeadlines": [
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": [
       "2026-02-27 | news.az | Gold edges higher amid ongoing US - Iran standoff"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-27 | news.az | Gold edges higher amid ongoing US - Iran standoff",
-      "2026-02-27 | thestar.com.my | China encourages dollar buying to slow surging yuan",
-      "2026-02-27 | investing.com | USD / JPY Outlook : Global Growth Fears Challenge Carry Trade Rally",
-      "2026-02-27 | investing.com | Why the Gold Rally Isnt Over Yet | Investing . com",
-      "2026-02-27 | fxstreet.com | USD : Confidence erosion limits upside – Commerzbank",
-      "2026-02-27 | zerohedge.com | Crude steady as Geneva talks end with no deal ; PBoC cuts FX Risk Reserve Ratio - Newsquawk EU Market Open"
-    ],
-    "dollarYieldHeadlines": []
+    ]
   }
 }
