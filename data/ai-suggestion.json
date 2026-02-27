@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T05:24:36.014Z",
+  "generatedAt": "2026-02-27T06:18:44.708Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+2.12%), tạo rủi ro điều chỉnh kỹ thuật ngắn hạn cao dù xu hướng vĩ mô nền tảng vẫn tích cực nhờ lợi suất thực Mỹ giảm sâu.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với biên độ dao động lớn, trong khi xu hướng tăng của giá thế giới đang bị kháng cự mạnh quanh 5200 USD/oz; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận phá vỡ rõ ràng hơn trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 5Y: 100%), cao hơn MA30 (157.67 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua nguy hiểm.",
-      "Đà tăng 7 ngày (+2.12%) ngược chiều với xu hướng 30 ngày (-2.63%), cho thấy động lượng tăng vọt bốc (spike) thay vì xu hướng bền vững.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) là động lực hỗ trợ giá vàng thế giới tăng 7.01% cùng kỳ, nhưng giá đã phản ánh hết tin tốt này.",
-      "Premium 12.95% đang ở mức hợp lý so với trung bình 30 ngày (14.4%), không có tín hiệu bất thường về áp lực cung cầu nội địa."
+      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100) và giảm 2.42% trong 30 ngày qua, rủi ro mua đỉp cao khi thị trường đã chạy mạnh.",
+      "Giá thế giới XAUUSD tăng mạnh 7.2% trong 20 ngày nhưng đang gặp kháng cự kỹ thuật quanh 5200 USD/oz, cần thời gian củng cố trước khi tiếp tục xu hướng.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 6.84% trong 20 ngày (xuống 1.77%) đang hỗ trợ vàng, nhưng VIX giảm 8.61% cho thấy lo ngại rủi ro đang lắng xuống, giảm động lực đẩy giá ngắn hạn.",
+      "Premium SJC đang ổn định ở 12.71%, thấp hơn đỉnh 18.07% ngày 17/02, cho thấy tâm lý thị trường Việt Nam không quá sốt sắng."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá giao dịch trên biên độ dao động bình quân (volatility 2.15%) và ở vùng giá chưa từng có.",
-      "Thiếu sự kiện địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào để duy trì đà tăng vọt (spike) hiện tại.",
-      "VIX giảm 8.61% trong 5 ngày cho thấy tâm lý sợ hãi thị trường đang hạ nhiệt, giảm nhu cầu trú ẩn an toàn."
+      "Giá thế giới phá vỡ kháng cự 5200-5215 USD/oz và tiếp tục tăng mạnh do căng thẳng Iran-Mỹ, nhà đầu tư CHỜ sẽ bỏ lỡ đà tăng.",
+      "Biên độ dao động ngày 2.15% cộng với đà hồi phục từ mức giảm 41.26% trong quá khứ cho thấy thị trường có thể biến động thất thường.",
+      "Dữ liệu vĩ mô thiếu cập nhật mới nhất (USD Index, Fed Funds) có thể gây nhiễu tín hiệu phân tích."
     ],
     "evidence": [
       {
@@ -27,53 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 2.12,
+        "key": "sjc_change_30d",
+        "value": -2.42,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_premium",
-        "value": 16.6,
+        "key": "intl_gold_change_20d",
+        "value": 7.2,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "us_real_yield_change_20d",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_20d_change",
-        "value": 7.01,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_5d_change",
-        "value": -8.61,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_premium_current",
-        "value": 12.95,
+        "key": "current_premium",
+        "value": 12.71,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.15,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "intl_gold_level",
+        "value": 5198.17,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T05:24:10.763Z",
+    "latestTimestamp": "2026-02-27T06:18:11.476Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162901929.95980504,
-    "premiumPct": 12.95,
-    "change7dPct": 2.12,
-    "change30dPct": -2.63,
+    "intlVndPerTael": 163249669.95203793,
+    "premiumPct": 12.71,
+    "change7dPct": 2.34,
+    "change30dPct": -2.42,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162175258,
-    "ma30VndPerTael": 157666649,
+    "ma7VndPerTael": 162224935,
+    "ma30VndPerTael": 157678240,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T05:24:17.524Z",
+    "fetchedAt": "2026-02-27T06:18:15.559Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5187.845,
+        "value": 5197.115,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 0.05,
-        "change5dPct": 1.77,
-        "change20dPct": 7.01,
+        "change1dPct": 0.23,
+        "change5dPct": 1.96,
+        "change20dPct": 7.2,
         "relationToGold": "context"
       },
       {
@@ -185,8 +185,17 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-27 | livemint.com | Silver rate today jumped over ₹8 , 000 amid uncertainty around Iran - US talks , firm dollar - Key levels to watch",
+      "2026-02-27 | newsx.com | Gold Rates Today : Profit Booking Seen On MCX Of India As Global Cues Keep Prices Elevated - Check City - Wise Rates and Find Out Where Gold Is Cheapest"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-27 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Nvidia Slide Shows Investor Lukewarm Reception of Strong Earnings | AI ...",
+      "2026-02-27 | livemint.com | Silver rate today jumped over ₹8 , 000 amid uncertainty around Iran - US talks , firm dollar - Key levels to watch",
+      "2026-02-27 | livemint.com | Gold rate rises on MCX as US - Iran talks end without a deal ; experts highlight key levels to watch",
+      "2026-02-27 | fxstreet.com | Gold consolidates below $5 , 200 amid Fed stance and geopolitical risks",
+      "2026-02-27 | fxstreet.com | NZD / USD rises to near 0 . 6000 while investors seek fresh cues on Fed policy outlook"
+    ],
     "dollarYieldHeadlines": []
   }
 }
