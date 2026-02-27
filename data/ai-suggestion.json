@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T11:13:16.271Z",
+  "generatedAt": "2026-02-27T12:10:58.646Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 184 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng chậm lại, trong khi giá thế giới đã quay đầu giảm nhẹ; rủi ro điều chỉnh ngắn hạn cao hơn cơ hội tăng đột biến.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại sau đợt hồi phục kỹ thuật; thanh khoản thị trường và tín hiệu vĩ mô chưa đủ mạnh để phá vỡ đỉnh cũ trong ngắn hạn.",
     "reasons": [
-      "Giá SJC 184 triệu đồng/lượng đang ở mức cao nhất trong 5 năm (percentile 100%), tiềm năng tăng giá kỹ thuật hạn chế.",
-      "Động lượng tăng giá thế giới suy yếu: XAUUSD giảm 0.19% ngày và giá thế giới quy đổi VND (162.6 triệu) thấp hơn đỉnh 30 ngày (166.8 triệu).",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) là yếu tố hỗ trợ đã phần nào được định giá trong đợt tăng vừa qua.",
-      "Premium 13.16% đang ở mức hợp lý so với trung bình 30 ngày (14.1%), không có tín hiệu bất thường về áp lực cung cầu nội địa."
+      "Giá SJC 184 triệu đồng/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá đã tăng 2.17% trong 7 ngày gần nhất.",
+      "Động lượng tăng giá thế giới chững lại khi XAUUSD chỉ tăng nhẹ 0.05% trong ngày, dù vẫn duy trì mức hỗ trợ tốt trên MA7.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày (xuống 1.77%) tạo nền tảng hỗ trợ giá vàng dài hạn, ngăn đà điều chỉnh sâu.",
+      "Premium SJC thu hẹp từ đỉnh 18.07% (17/02) về 12.9% hiện tại, cho thấy tâm lý FOMO thị trường đã hạ nhiệt, giá trong nước đi ngang chờ tín hiệu mới."
     ],
     "risks": [
-      "Giá SJC cao hơn MA7 (162.1 triệu) tới 13.5% và cao hơn MA30 (157.7 triệu) tới 16.7%, rủi ro điều chỉnh về mức trung bình ngắn hạn.",
-      "VIX giảm 8.61% trong 5 ngày xuống 17.93 điểm cho thấy tâm lý sợ hãi toàn cầu dịu đi, có thể giảm nhu cầu trú ẩn an toàn.",
-      "Dữ liệu sự kiện vĩ mô không có tin tức trọng yếu về chính sách lãi suất hoặc địa chính trị cấp bách, thị trường có thể đi ngang."
+      "Rủi ro điều chỉnh kỹ thuật khi giá thế giới tăng quá nhanh 7.01% trong 20 ngày và gặp kháng cự tâm lý quanh 5200 USD/oz.",
+      "Thanh khoản và tin tức vĩ mô 24-48h qua khá trầm lắng (chỉ có tin ECB routine), thị trường có thể đi ngang tích lũy thiếu định hướng rõ ràng.",
+      "VIX giảm 8.61% trong 5 ngày cho thấy lo ngại rủi ro thị trường giảm, có thể làm giảm nhu cầu trú ẩn an toàn vào vàng ngắn hạn."
     ],
     "evidence": [
       {
@@ -27,14 +27,26 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_premium",
-        "value": 16.7,
+        "key": "sjc_change_7d",
+        "value": 2.17,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_1d",
-        "value": -0.19,
+        "key": "premium_current",
+        "value": 12.9,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_30d_high",
+        "value": 18.07,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "xauusd_change_20d",
+        "value": 7.01,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -45,35 +57,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
-        "value": 17.93,
-        "unit": "index",
+        "key": "us_real_yield_10y_current",
+        "value": 1.77,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 13.16,
+        "key": "vix_change_5d",
+        "value": -8.61,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_price_latest",
-        "value": 184000000,
-        "unit": "VND/lượng",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T11:12:34.228Z",
+    "latestTimestamp": "2026-02-27T12:10:28.914Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162604148.76931164,
-    "premiumPct": 13.16,
-    "change7dPct": 1.93,
-    "change30dPct": -2.81,
+    "intlVndPerTael": 162979175.5041986,
+    "premiumPct": 12.9,
+    "change7dPct": 2.17,
+    "change30dPct": -2.58,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162132718,
-    "ma30VndPerTael": 157656722,
+    "ma7VndPerTael": 162186293,
+    "ma30VndPerTael": 157669223,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T11:12:55.698Z",
+    "fetchedAt": "2026-02-27T12:10:39.061Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5175.445,
+        "value": 5187.655,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": -0.19,
-        "change5dPct": 1.53,
-        "change20dPct": 6.76,
+        "change1dPct": 0.05,
+        "change5dPct": 1.77,
+        "change20dPct": 7.01,
         "relationToGold": "context"
       },
       {
@@ -187,8 +193,6 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-27 | news.az | Gold edges higher amid ongoing US - Iran standoff"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
