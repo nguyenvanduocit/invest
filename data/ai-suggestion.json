@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T15:15:35.935Z",
+  "generatedAt": "2026-02-27T16:11:58.778Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động lên tới 2.15%; nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử (percentile 100% trong 5 năm) với đà tăng mạnh 7 ngày qua, nhưng thanh khoản có thể thấp và rủi ro điều chỉnh ngắn hạn cao khi biên độ dao động lớn.",
     "reasons": [
-      "Giá SJC 184,000,000 VND/lượng đang vượt xa MA30 (157,720,282 VND/lượng) tới 16.6% và nằm ở phân vị 100% trong 5 năm, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
-      "Động lượng tăng giá 7 ngày qua rất mạnh (+3.13%) kết hợp với giá thế giới tăng +8.06% trong 20 ngày (lên 5,238.33 USD/oz), được hỗ trợ bởi lợi suất thực Mỹ giảm sâu -6.84% xuống 1.77%.",
-      "Biên độ dao động ngày cao (2.15%) và premium giảm từ đỉnh 18.07% (17/02) xuống 11.85% cho thấy thanh khoản đang được cải thiện nhưng biến động giá vẫn rất lớn, không phù hợp để mua đuổi."
+      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu VND/lượng) tới 16.7%, cho thấy thị trường đã mua quá mức trong ngắn hạn (overbought).",
+      "Động lượng tăng giá 7 ngày qua rất mạnh (+3.27%) kết hợp với lợi suất thực Mỹ giảm sâu 6.84% trong 20 ngày, tạo đà đẩy giá vàng thế giới lên cao.",
+      "Premium 11.7% đang ở vùng thấp nhất trong 30 ngày qua (so với đỉnh 18.07% ngày 17/02), cho thấy giá SJC tăng chủ yếu do giá thế giới kéo lên chứ không phải sốt cục bộ."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu sau khi tăng nóng 3.13% trong 7 ngày, đặc biệt khi giá đang ở mức cao nhất lịch sử 5 năm.",
-      "Premium 11.85% thấp hơn trung bình giai đoạn gần đây (13-18%), có thể hẹp thêm nếu giá thế giới tiếp tục chạy nóng trong khi giá Việt Nam điều chỉnh.",
-      "VIX tăng +10.37% trong 20 ngày lên 18.63 điểm cho thấy biến động thị trường tài chính đang gia tăng, có thể gây chảy vốn từ vàng về tài sản rủi ro nếu tình hình ổn định."
+      "Giá đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro chốt lời ngắn hạn rất lớn khi thị trường điều chỉnh.",
+      "Biên độ dao động ngày cao (2.16%) cho thấy thị trường biến động mạnh, nhà đầu tư mượn margin có thể bị gọi vốn.",
+      "Dữ liệu vĩ mô (first principles) bị thiếu một số chỉ số và tin tức địa chính trị không đáng kể, có thể dẫn đến đánh giá thiếu chính xác về cú sốc bên ngoài."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 16.6,
+        "key": "Giá SJC hiện tại",
+        "value": 184000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Khoảng cách giá so với MA30",
+        "value": 16.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change7d_pct",
-        "value": 3.13,
+        "key": "Premium hiện tại",
+        "value": 11.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 2.15,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_current",
-        "value": 11.85,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_20d_change",
-        "value": 8.06,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_20d_change",
+        "key": "Lợi suất thực Mỹ 10Y (thay đổi 20 ngày)",
         "value": -6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
-        "value": 10.37,
+        "key": "Giá vàng thế giới XAUUSD (thay đổi 20 ngày)",
+        "value": 8.31,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Độ biến động ngày",
+        "value": 2.16,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T15:14:49.198Z",
+    "latestTimestamp": "2026-02-27T16:11:27.272Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 164510922.57850844,
-    "premiumPct": 11.85,
-    "change7dPct": 3.13,
-    "change30dPct": -1.67,
-    "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162405114,
-    "ma30VndPerTael": 157720282,
+    "intlVndPerTael": 164731950.34446347,
+    "premiumPct": 11.7,
+    "change7dPct": 3.27,
+    "change30dPct": -1.54,
+    "volatilityDailyPct": 2.16,
+    "ma7VndPerTael": 162436689,
+    "ma30VndPerTael": 157727649,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T15:15:17.531Z",
+    "fetchedAt": "2026-02-27T16:11:40.109Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5238.495,
+        "value": 5250.905,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 1.03,
-        "change5dPct": 2.77,
-        "change20dPct": 8.06,
+        "change1dPct": 1.27,
+        "change5dPct": 3.01,
+        "change20dPct": 8.31,
         "relationToGold": "context"
       },
       {
@@ -191,12 +185,15 @@
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
     "geopoliticalHeadlines": [
-      "2026-02-27 | finanznachrichten.de | Delta Resources Limited : Delta Identifies Three Significant Gold Anomalies From the 2024 - 25 I - Zone Sector Till Survey and Reports Drill Results From the Latest Regional Exploration Drill Program",
-      "2026-02-27 | timesofindia.indiatimes.com | Pakistan - Afganistan War : Why Pakistan and Afghanistan are fighting : History of Kabul – Islamabad standoff and the  graveyard of empire narrative",
-      "2026-02-27 | thenationalnews.com | There will be chao : Pakistan declares  open war  on Afghanistan after deadly strikes",
+      "2026-02-27 | finanznachrichten.de | Advanced Gold Exploration Inc .: Advanced Gold Acquires 100 % Interest in Silver Belle Nevada CRD Claims",
+      "2026-02-27 | juniorminingnetwork.com | Mogotes Metals Secures Option to Acquire Advanced Beskauga Copper - Gold - Silver Project",
+      "2026-02-27 | juniorminingnetwork.com | GoldHaven Resources Expands Magno Project to Over 37 , 200 Hectares with Strategic Cassiar Claims Acquisition"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-27 | marketscreener.com | Gold poised for seventh monthly gain on geopolitical worries , softer US yields",
+      "2026-02-27 | kob.com | US stocks slump and oil prices jump as worries about AI , inflation and possible war hit Wall Street",
       "2026-02-27 | marketscreener.com | Inflation Bites Back"
     ],
-    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
