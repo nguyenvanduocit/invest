@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T13:26:21.059Z",
+  "generatedAt": "2026-02-27T14:15:57.367Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium đã co hẹp về mức thấp nhất trong 30 ngày qua.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.15%. Nhà đầu tư không nên mua đuổi tại vùng giá 184 triệu đồng/lượng này mà chờ đợi tín hiệu hồi phục về mức cân bằng hoặc điều chỉnh sâu hơn.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang vượt xa MA30 (157.7 triệu VND/lượng) tới 16.7%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
-      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 6.84% trong 20 ngày qua (xuống 1.77%), tạo đà cho giá vàng thế giới tăng 8.01%.",
-      "Premium giảm xuống mức 11.93%, thấp nhất trong chuỗi dữ liệu 30 ngày (so với đỉnh 18.07% ngày 17/02), cho thấy giá Việt Nam đang tăng chậm hơn giá thế giới."
+      "Giá SJC 184 triệu đồng đang vượt xa MA30 (157.7 triệu đồng) tới 16.7%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
+      "Đà tăng kỹ thuật ngắn hạn mạnh với change7dPct đạt 2.89%, nhưng xu hướng trung hạn vẫn là giảm (change30dPct -1.9%).",
+      "Lợi suất thực Mỹ (1.77%) và Fed Funds (3.64%) vẫn duy trì ở mức dương cao, tạo áp lực phân tích cơ bản lên giá vàng thế giới.",
+      "Premium 12.11% đang ở mức thấp hơn so với trung bình chuỗi 30 ngày (thường thấy 13-16%), cho thấy giá Việt Nam chưa tăng quá nóng so với thế giới."
     ],
     "risks": [
-      "Mua tại đỉnh giá lịch sử (percentile 100% 5 năm) rủi ro điều chỉnh cao nếu thị trường chốt lời.",
-      "VIX giảm 8.61% trong 5 ngày cho thấy tâm lý sợ hãi đang hạ nhiệt, có thể làm giảm nhu cầu trú ẩn an toàn.",
-      "Biên độ dao động ngày 2.15% tiềm ẩn rủi ro biến động giá lớn trong ngắn hạn."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở phân vị 100% trong 5 năm qua.",
+      "Biên độ dao động 2.15%/ngày có thể gây mất thanh khoản hoặc trượt giá khi giao dịch.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input khiến độ tin cậy về đà tăng dài hạn bị giới hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
+        "key": "Giá SJC hiện tại",
         "value": 184000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 11.93,
+        "key": "Khoảng cách giá so với MA30",
+        "value": 16.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
+        "key": "Đà tăng 7 ngày",
+        "value": 2.89,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Phân vị 5 năm",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -6.84,
+        "key": "Lợi suất thực Mỹ 10 năm",
+        "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 8.01,
+        "key": "Biên độ dao động ngày",
+        "value": 2.15,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "MA30 VND",
-        "value": 157716164,
-        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Low 30d",
-        "value": 11.93,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Premium High 30d",
-        "value": 18.07,
-        "unit": "%",
+        "key": "Giá vàng thế giới",
+        "value": 5226.09,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T13:25:53.203Z",
+    "latestTimestamp": "2026-02-27T14:15:13.067Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 164387406.14779317,
-    "premiumPct": 11.93,
-    "change7dPct": 3.05,
-    "change30dPct": -1.74,
+    "intlVndPerTael": 164126438.1605076,
+    "premiumPct": 12.11,
+    "change7dPct": 2.89,
+    "change30dPct": -1.9,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162387469,
-    "ma30VndPerTael": 157716164,
+    "ma7VndPerTael": 162350188,
+    "ma30VndPerTael": 157707465,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T13:26:00.978Z",
+    "fetchedAt": "2026-02-27T14:15:34.875Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5235.995,
+        "value": 5225.265,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 0.98,
-        "change5dPct": 2.72,
-        "change20dPct": 8.01,
+        "change1dPct": 0.77,
+        "change5dPct": 2.51,
+        "change20dPct": 7.78,
         "relationToGold": "context"
       },
       {
@@ -183,18 +178,16 @@
       }
     ],
     "policyHeadlines": [
+      "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025",
       "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025",
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
-      "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President",
-      "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026"
+      "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [
-      "2026-02-27 | scmp.com | As the yuan sizzles , China central bank deploys double - barrelled policy tweak",
-      "2026-02-27 | news.az | Gold edges higher amid ongoing US - Iran standoff",
-      "2026-02-27 | thestar.com.my | China encourages dollar buying to slow surging yuan"
+      "2026-02-27 | scmp.com | As the yuan sizzles , China central bank deploys double - barrelled policy tweak"
     ],
     "dollarYieldHeadlines": []
   }
