@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-27T00:22:07.960Z",
+  "generatedAt": "2026-02-27T01:35:39.226Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử (percentile 100% 5 năm) với đà tăng 7 ngày gần 2.2%, nhưng thanh khoản vĩ mô đang thắt chặt do lợi suất thực USD tăng và lạm phát kỳ vọng giảm, gây áp lực điều chỉnh ngắn hạn trước khi xu hướng xác định lại.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 184 triệu/lượng (percentile 5 năm 100%) với đà tăng 7 ngày mạnh 1.99%, nhưng thanh khoản vĩ mô đang thắt chặt do lợi suất thực USD tăng và VIX giảm, khiến rủi ro điều chỉnh ngắn hạn cao hơn tiềm năng tăng.",
     "reasons": [
-      "Giá SJC 184 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.7 triệu VND/lượng) tới 16.6%, báo hiệu vùng quá mua kỹ thuật cần thời gian củng cố.",
-      "Lợi suất thực USD 10Y (1.77%) tăng mạnh 20 ngày qua (giảm âm tức tăng dương) kết hợp lạm phát kỳ vọng giảm (Breakeven 10Y giảm 3.39% 20 ngày) tạo áp lực giảm lên giá vàng thế giới.",
-      "Premium SJC 12.9% đang ở vùng thấp hơn so với trung bình chuỗi 30 ngày (14-16%), cho thấy tâm lý nhà đầu tư Việt Nam thận trọng dù giá thế giới hồi phục.",
-      "VIX giảm 8.29% trong ngày cho thấy lo ngại rủi ro ngắn hạn đã giảm, giảm động lực trú ẩn vào vàng."
+      "Giá SJC 184 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cao hơn MA30 là 157.6 triệu/lượng tới 16.7%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng tăng ngắn hạn mạnh với change7dPct đạt +1.99%, giá hiện đứng trên MA7 (162.1 triệu/lượng) thể hiện xu hướng tăng còn hiệu lực.",
+      "Lợi suất thực US 10 năm (1.77%) tăng mạnh 20 ngày (+6.84%) và VIX giảm 8.29% xuống 17.93 điểm, dòng tiền đang rời tài sản trú ẩn để tìm kiếm lợi nhuận rủi ro cao hơn.",
+      "Premium 13.09% nằm trong biên độ dao động 30 ngày (12.14%-18.07%), không có tín hiệu bất thường về áp lực cung cầu nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá phá vỡ dưới MA7 (162.2 triệu VND/lượng) do thanh khoản thị trường thấp.",
-      "Diễn biến bất ngờ từ chính sách thương mại Mỹ (tin về thuế Section 122) có thể gây biến động USD ảnh hưởng ngược lên giá vàng.",
-      "Dữ liệu vĩ mô 'healthy: false' cho thấy một số chỉ số có thể thiếu cập nhật đồng bộ, làm giảm độ tin cậy của phân tích tổng hợp."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá ở vùng đỉnh 5 năm (percentile 100%) và đã tăng 1.99% trong 7 ngày.",
+      "Lợi suất thực USD tăng (1.77%, +6.84% 20 ngày) gây áp lực giảm lên giá vàng thế giới, có thể kéo theo giảm giá nội địa.",
+      "Biến động ngày 2.15% cho thấy thị trường đang rung lắc mạnh, nhà đầu tư MUA lúc này dễ bị 'đu đỉnh' nếu thị trường điều chỉnh."
     ],
     "evidence": [
       {
@@ -27,59 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 12.9,
+        "key": "sjc_vs_ma30_premium",
+        "value": 16.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 16.6,
+        "key": "change_7d_pct",
+        "value": 1.99,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.77,
+        "key": "us_real_yield_10y_change_20d",
+        "value": 6.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_20d_change",
-        "value": -6.84,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_breakeven_20d_change",
-        "value": -3.39,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_1d_change",
+        "key": "vix_change_1d",
         "value": -8.29,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 2.17,
+        "key": "volatility_daily_pct",
+        "value": 2.15,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "current_premium_pct",
+        "value": 13.09,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-27T00:21:39.697Z",
+    "latestTimestamp": "2026-02-27T01:34:40.367Z",
     "sjcVndPerTael": 184000000,
-    "intlVndPerTael": 162977403.6214781,
-    "premiumPct": 12.9,
-    "change7dPct": 2.17,
-    "change30dPct": -2.58,
+    "intlVndPerTael": 162696747.6994621,
+    "premiumPct": 13.09,
+    "change7dPct": 1.99,
+    "change30dPct": -2.75,
     "volatilityDailyPct": 2.15,
-    "ma7VndPerTael": 162186040,
-    "ma30VndPerTael": 157669164,
+    "ma7VndPerTael": 162145946,
+    "ma30VndPerTael": 157659809,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-27T00:21:50.381Z",
+    "fetchedAt": "2026-02-27T01:35:01.602Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5193.995,
+        "value": 5181.025,
         "unit": "USD/oz",
         "date": "2026-02-27",
-        "change1dPct": 0.17,
-        "change5dPct": 1.89,
-        "change20dPct": 7.14,
+        "change1dPct": -0.08,
+        "change5dPct": 1.64,
+        "change20dPct": 6.87,
         "relationToGold": "context"
       },
       {
@@ -191,18 +185,8 @@
       "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
       "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-26 | wallstreet-online.de | Aura Signed the Agreement to Relocate Road at Borborema Mine , Unlocking an additional 670 Koz of gold in Mineral Reserves , totaling 1 . 5 Moz",
-      "2026-02-26 | foreignpolicy.com | Trump Use of Section 122 Tariffs Is Illegal"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-02-26 | rttnews.com | Nasdaq Pulls Back Sharply As Nvidia Slumps But Dow Inches Higher",
-      "2026-02-26 | finanznachrichten.de | Lundin Mining Corporation : Lundin Mining Increases Existing Credit Facility to US$4 . 5 Billion",
-      "2026-02-26 | markets.financialcontent.com | FinancialContent - Global Markets Shaken as Beijing Triggers  Stealth Sell - off  of US Treasuries",
-      "2026-02-26 | zerohedge.com | Tech weakness hits indices as NVDA slumps - Newsquawk US Market Wrap",
-      "2026-02-26 | finanznachrichten.de | EV Nickel Inc .: EV Nickel Announces Maiden Mineral Resource Estimate for Gemini North Nickel Zone",
-      "2026-02-26 | nrn.com | Operational improvements lead to robust 2025 for Shake Shack"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
