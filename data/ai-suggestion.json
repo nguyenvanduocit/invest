@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T21:04:59.123Z",
+  "generatedAt": "2026-02-28T22:04:52.990Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,56 +7,57 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 6.82%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi lợi suất thực USD giảm sâu -8.42% trong 20 ngày qua đã được giá phản ánh hết.",
+    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với động lượng tăng mạnh 6.83%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có sự kiện địa chính trị cấp thiết nào hỗ trợ.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (158.1 triệu VND/lượng) đến 18.3%, cho thấy thị trường đang ở vùng quá mua kỹ thuật ngắn hạn.",
-      "Lợi suất thực 10Y USD giảm mạnh -8.42% trong 20 ngày và VIX tăng 10.37% cùng kỳ là động lực vĩ mô đã đẩy giá tăng, nhưng có thể đã được định giá đầy đủ.",
-      "Premium 12.78% ở mức ổn định trong dải giao dịch 30 ngày (11.54%-18.03%), không có dấu hiệu căng thẳng cực đoan cần chạy vào vàng SJC ngay lập tức."
+      "Động lượng tăng giá mạnh: Giá SJC 187 triệu VND/lượng đang cao hơn đáng kể so với MA30 (158.1 triệu VND/lượng), tương ứng tăng 18.3% sau 30 ngày.",
+      "Điều kiện vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và DXY giảm 1.01%, tạo đà đẩy giá vàng thế giới lên vùng cao 5278 USD/oz.",
+      "Thanh khoản và sự quan tâm tăng: VIX tăng 10.37% trong 20 ngày cho thấy thị trường tài chính biến động, dòng tiền có xu hướng tìm đến vàng.",
+      "Premium thị trường ổn định: Mức premium 12.78% nằm trong biên độ dao động trung bình của 30 ngày qua (11.54% - 18.03%), không có dấu hiệu căng thẳng cực đoan."
     ],
     "risks": [
-      "Đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh sâu nếu dữ liệu vĩ mô Mỹ thay đổi bất ngờ.",
-      "Đà tăng 3.52%/tuần với biến động 2.12%/ngày có thể gây áp lực chốt lời ngắn hạn.",
-      "Dữ liệu sự kiện vĩ mô (ECB, Afghanistan) có độ nhiễu cao, không tác động trực tiếp đến giá vàng."
+      "Mua quá mức (Overbought): Giá đang ở mức percentile 100% trong 5 năm, rủi ro chốt lời ngắn hạn rất cao.",
+      "Biến động giá lớn: Volatility daily đạt 2.12%, nhà đầu tư ngắn hạn có thể đối mặt với dao động giá tiêu cực.",
+      "Thiếu chất xúc tác địa chính trị: Không có tin tức geopoliticalHeadlines hay countryActionHeadlines nào trong dữ liệu đầu vào để duy trì đà tăng vọt."
     ],
     "evidence": [
       {
         "key": "sjc_price_vs_ma30",
-        "value": 18.3,
+        "value": 18.28,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_pct",
-        "value": 6.82,
+        "key": "gold_world_price_change_20d",
+        "value": 8.58,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "us_real_yield_change_20d",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_20d_change",
+        "key": "vix_change_20d",
         "value": 10.37,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.54,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
+        "key": "sjc_premium_current",
+        "value": 12.78,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
+        "key": "sjc_percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "daily_volatility",
         "value": 2.12,
         "unit": "%",
         "source": "market_snapshot"
@@ -64,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T21:04:21.042Z",
+    "latestTimestamp": "2026-02-28T22:04:11.733Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165808534.20853895,
+    "intlVndPerTael": 165813213.60590696,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
-    "change30dPct": 6.82,
+    "change30dPct": 6.83,
     "volatilityDailyPct": 2.12,
-    "ma7VndPerTael": 164126309,
-    "ma30VndPerTael": 158106068,
+    "ma7VndPerTael": 164126977,
+    "ma30VndPerTael": 158106224,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T21:04:42.204Z",
+    "fetchedAt": "2026-02-28T22:04:33.234Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,17 +185,8 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [
-      "2026-02-27 | csmonitor.com | How Afghanistan - Pakistan relations deteriorated into  open war"
-    ],
-    "countryActionHeadlines": [
-      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
-      "2026-02-27 | columbian.com | U . S . stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
-      "2026-02-27 | fool.com | This Gold ETF Is Outshining Its Peers in 2026",
-      "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
