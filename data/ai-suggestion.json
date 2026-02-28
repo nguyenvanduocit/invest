@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T07:09:27.387Z",
+  "generatedAt": "2026-02-28T08:06:10.603Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,33 +7,32 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày gần nhất, nhưng rủi ro mua đuổi là rất lớn khi biên độ dao động lên tới 2.16%/ngày và không có tín hiệu giảm nhiệt từ lợi suất thực USD.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.16%/ngày.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.75 triệu VND/lượng) tới 18.5%, báo hiệu thị trường đã quá mua.",
-      "Động lượng tăng giá ngắn hạn rất mạnh với change7dPct đạt +3.52%, kéo giá xuyên qua MA7 (163.32 triệu VND/lượng) mà không có sự điều chỉnh đáng kể.",
-      "Lợi suất thực Mỹ 10 năm (US Real Yield 10Y) giảm mạnh 8.42% trong 20 ngày (xuống 1.74%), tạo đòn bẩy tài chính hỗ trợ giá vàng thế giới tăng 8.58% (change20dPct) cùng kỳ.",
-      "VIX tăng 10.37% trong 20 ngày lên mức 18.63 kết hợp tin tức địa chính trị về căng thẳng Afghanistan-Pakistan duy trì nhu cầu trú ẩn an toàn."
+      "Đà tăng mạnh ngắn hạn: Giá thế giới tăng 8.58% trong 20 ngày và giá SJC tăng 3.52% trong 7 ngày, đẩy giá lên mức kỷ lục 187 triệu/lượng.",
+      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và VIX tăng 10.37% hỗ trợ giá vàng tăng.",
+      "Xu hướng kỹ thuật: Giá SJC 187 triệu đang cao hơn đáng kể so với MA30 là 157.75 triệu/lượng, xác nhận xu hướng tăng nhưng báo hiệu vùng quá mua."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật cao khi giá lệch quá xa MA30 và biến động ngày lên tới 2.16%, nhà đầu tư FOMO dễ bị 'đu đỉnh' với mức sụt giảm tồi tệ nhất trong quá khứ là -41.26%.",
-      "Premium 12.78% hiện tại thấp hơn đỉnh 18.03% (ngày 17/02), cho thấy giá SJC tăng chậm hơn giá thế giới; nếu giá thế giới điều chỉnh, premium có thể nới rộng làm giảm hiệu quả bán ra.",
-      "Thiếu tín hiệu chính sách Mỹ rõ ràng trong dữ liệu (chỉ có tin tức ECB), giới hạn khả năng đánh giá tác động đồng USD lên giá vàng dài hạn."
+      "Rủi ro mua đỉnh: Giá đang ở phân vị 100% trong 5 năm, khả năng sinh lời ngắn hạn thấp và rủi ro điều chỉnh sâu.",
+      "Biên độ dao động cao: Volatility 2.16%/ngày tương đương biến động ~4 triệu/lượng mỗi phiên, nguy cơ thanh khoản kém nếu thị trường đảo chiều.",
+      "Premium co hẹp: Chênh lệch giá giảm từ 18.03% (17/2) xuống 12.78% cho thấy tâm lý thị trường Việt Nam thận trọng hơn so với đà tăng thế giới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 187000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_deviation",
-        "value": 18.55,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change7d_pct",
+        "key": "change7d_sjc",
         "value": 3.52,
         "unit": "%",
         "source": "market_snapshot"
@@ -41,18 +40,12 @@
       {
         "key": "volatility_daily",
         "value": 2.16,
-        "unit": "%/ngày",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "us_real_yield_change20d",
         "value": -8.42,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_spot_change20d",
-        "value": 8.58,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -63,23 +56,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.54,
+        "key": "ma30_sjc",
+        "value": 157752938,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
+        "value": 12.78,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T07:08:53.954Z",
+    "latestTimestamp": "2026-02-28T08:05:37.790Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165810202.7066538,
+    "intlVndPerTael": 165808573.1642471,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
-    "change30dPct": -0.61,
+    "change30dPct": -0.62,
     "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 163321908,
-    "ma30VndPerTael": 157752992,
+    "ma7VndPerTael": 163321676,
+    "ma30VndPerTael": 157752938,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +89,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T07:09:04.023Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-28T08:05:46.922Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -202,11 +201,6 @@
       "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
       "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
-      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
-      "2026-02-27 | timesfreepress.com | Forbes editor criticizes Trump tariffs , celebrates US companies in UTC lecture",
-      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
