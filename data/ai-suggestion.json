@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T10:05:04.381Z",
+  "generatedAt": "2026-02-28T11:04:10.767Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,66 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.16%/ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 187 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 3.52% trong 7 ngày, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium đã co hẹp về 12.78% và thanh khoản có thể thấp.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (157.7 triệu VND/lượng) tới 18.5%, tín hiệu quá mua rõ ràng cần thời gian củng cố.",
-      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và giá vàng thế giới tăng 8.58% cùng kỳ, hỗ trợ xu hướng dài hạn.",
-      "Premium 12.78% đang ở mức hợp lý so với trung bình 30 ngày qua (dao động 11.54%-18.03%), không có dấu hiệu thao túng cực đoan."
+      "Giá SJC 187,000,000 VND/lượng đang giao dịch vượt xa MA30 (157,752,954 VND/lượng) tới 18.5%, tín hiệu quá mua ở vùng cực đoan.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và giá thế giới tăng lên 5,277.87 USD/oz là động lực hỗ trợ xu hướng tăng cơ bản.",
+      "Premium co hẹp từ đỉnh 18.03% (17/02) xuống 12.78%, cho thấy giá Việt Nam đang chạy theo giá thế giới thay vì đầu cơ nội địa đẩy giá."
     ],
     "risks": [
-      "Đang nằm ở percentile 100% (đỉnh 5 năm), rủi ro mua đỉnh và điều chỉnh ngắn hạn rất cao nếu động lực USD/Treasury Yield đảo chiều.",
-      "Biên độ dao động ngày 2.16% cho thấy thanh khoản và biến động lớn, nhà đầu tư vốn mỏng dễ bị washout.",
-      "Dữ liệu VIX tăng 10.37% trong 20 ngày cho thấy sự bất ổn thị trường có thể gây bán tháo rủi ro để cover margin."
+      "Đang ở mức giá cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh và điều chỉnh ngắn hạn rất cao nếu giá thế giới quay đầu.",
+      "VIX tăng 10.37% trong 20 ngày và lo ngại về lạm phát/địa chính trị có thể gây biến động bất ngờ hai chiều.",
+      "Dữ liệu first-principles thiếu Gold Spot XAUUSD trực tiếp và không có sự kiện địa chính trị cụ thể, giảm độ tin cậy dự báo."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 187000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 Price",
-        "value": 157753087,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
-        "value": 100,
+        "key": "sjc_price_vs_ma30",
+        "value": 18.5,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 8.58,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "world_price_latest",
+        "value": 5277.87,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Daily Volatility",
-        "value": 2.16,
-        "unit": "%/ngày",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Current Premium",
+        "key": "premium_current",
         "value": 12.78,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change20d",
+        "value": 10.37,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T10:04:21.294Z",
+    "latestTimestamp": "2026-02-28T11:03:48.269Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165813032.6503592,
+    "intlVndPerTael": 165809042.51769912,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
-    "change30dPct": -0.61,
+    "change30dPct": -0.62,
     "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 163322313,
-    "ma30VndPerTael": 157753087,
+    "ma7VndPerTael": 163321743,
+    "ma30VndPerTael": 157752954,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +77,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T10:04:42.880Z",
+    "fetchedAt": "2026-02-28T11:03:52.730Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5263.825,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-02-27",
-        "change1dPct": 1.52,
-        "change5dPct": 3.26,
-        "change20dPct": 8.58,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
@@ -185,12 +181,14 @@
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
+    "countryActionHeadlines": [
       "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
+      "2026-02-27 | columbian.com | U . S . stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
       "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
-      "2026-02-27 | timesfreepress.com | Forbes editor criticizes Trump tariffs , celebrates US companies in UTC lecture",
-      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?"
-    ]
+      "2026-02-27 | fool.com | This Gold ETF Is Outshining Its Peers in 2026",
+      "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
+      "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
+    ],
+    "dollarYieldHeadlines": []
   }
 }
