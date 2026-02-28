@@ -1,78 +1,78 @@
 {
-  "generatedAt": "2026-02-28T16:06:03.864Z",
+  "generatedAt": "2026-02-28T17:05:09.278Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.16%/ngày. Lợi suất thực USD giảm mạnh là động lực hỗ trợ, nhưng nhà đầu tư nên chờ đợi vùng giá tốt hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 187 triệu đồng/lượng (percentile 5 năm 100%), thanh khoản mua vào lúc này rất rủi ro. Dù xu hướng vĩ mô tích cực với lợi suất thực USD giảm mạnh 8.42% trong 20 ngày, nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (163.3 triệu VND/lượng) hoặc giảm premium trước khi tham gia.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn đáng kể so với MA30 là 157.75 triệu VND/lượng (+18.6%), báo hiệu vùng quá mua.",
-      "Động lượng tăng trưởng ngắn hạn rất mạnh với change7dPct đạt +3.52%, tương thích với đà tăng của giá thế giới (+8.58% trong 20 ngày) và lợi suất thực Mỹ giảm sâu (-8.42% trong 20 ngày).",
-      "Premium 12.78% đang ở mức hợp lý và thấp hơn đỉnh 18.03% vào ngày 17/02, cho thấy thị trường Việt Nam không bị sốt ảo cục bộ mà đi sát xu hướng thế giới."
+      "Giá SJC 187 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (157.8 triệu VND/lượng) tới 18.5%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng vĩ mô rất tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày qua và giá vàng thế giới tăng 8.58% (20 ngày), tạo nền tảng tăng giá dài hạn.",
+      "Premium 12.78% hiện tại thấp hơn đỉnh 18.03% (ngày 17/02), cho thấy thị trường Việt Nam đang định giá hợp lý hơn nhưng vẫn có rủi ro thu hẹp nếu giá thế giới điều chỉnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do biến động ngày lớn (2.16%) và giá đang ở đỉnh 5 năm; nhà đầu tư MUA lúc này dễ bị 'đu đỉnh' nếu thị trường consolidates.",
-      "Xu hướng 30 ngày âm (-0.61%) cho thấy đà tăng hiện tại mới chỉ bù lại đà giảm trước đó, chưa chắc chắn đã thiết lập xu hướng tăng dài hạn mới.",
-      "VIX tăng 10.37% trong 20 ngày cho thấy bất ổn thị trường tài chính, có thể gây ra đợt bán tháo ròng các tài sản rủi ro bao gồm vàng để cover margin."
+      "Rủi ro mua đỉnh ngắn hạn rất cao khi giá đã tăng 3.52% chỉ trong 7 ngày và biến động ngày ở mức 2.16%.",
+      "Sự kiện địa chính trị (xung đột Afghanistan-Pakistan) và VIX tăng 10.37% có thể gây ra các đợt biến động giá thất thường.",
+      "Thiếu dữ liệu hành động can thiệp giá từ các quốc gia (countryActionHeadlines trống) khiến confidence không đạt mức Rất cao."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 100,
-        "unit": "percentile",
+        "key": "SJC Spot Price",
+        "value": 187000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_world",
+        "key": "5-Year Price Percentile",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 Support Level",
+        "value": 163321880,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change (20d)",
+        "value": -8.42,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Gold Spot Change (20d)",
+        "value": 8.58,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Current Premium",
         "value": 12.78,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 3.52,
+        "key": "VIX Change (20d)",
+        "value": 10.37,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
-        "value": -8.42,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_world_change_20d",
-        "value": 8.58,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_volatility_daily",
-        "value": 2.16,
-        "unit": "%/day",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_vs_ma30",
-        "value": 18.6,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T16:05:22.140Z",
+    "latestTimestamp": "2026-02-28T17:04:34.940Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165810622.73715273,
+    "intlVndPerTael": 165810001.01661623,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
     "change30dPct": -0.61,
     "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 163321968,
-    "ma30VndPerTael": 157753006,
+    "ma7VndPerTael": 163321880,
+    "ma30VndPerTael": 157752985,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T16:05:43.193Z",
+    "fetchedAt": "2026-02-28T17:04:45.277Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,8 +184,15 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-27 | csmonitor.com | How Afghanistan - Pakistan relations deteriorated into  open war"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
+      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
+      "2026-02-27 | timesfreepress.com | Forbes editor criticizes Trump tariffs , celebrates US companies in UTC lecture",
+      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?"
+    ]
   }
 }
