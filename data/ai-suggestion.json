@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T05:14:13.394Z",
+  "generatedAt": "2026-02-28T06:08:56.538Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,51 +7,57 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.52%/tuần, nhưng rủi ro mua đuổi là rất lớn khi biên độ dao động 2.16% cao hơn lợi suất 30 ngày (-0.61%). Nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~163.3 triệu VND/lượng) thay vì mua vội ở vùng giá 187 triệu.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao và không có đòn bẩy vĩ mô mới đủ mạnh để duy trì đà tăng tiếp.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 là 157.8 triệu VND/lượng tới +18.5%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng giá vàng thế giới rất mạnh (+8.58% trong 20 ngày tới 5277.99 USD/oz), được hỗ trợ bởi lợi suất thực Mỹ giảm sâu -8.42% xuống 1.74%.",
-      "Premium SJC đang ở 12.78%, thấp hơn mức đỉnh 18.03% trong chuỗi 30 ngày, cho thấy giá Việt Nam tăng hợp lý theo giá thế giới chứ không bị đẩy giá phi lý.",
-      "VIX tăng +10.37% trong 20 ngày lên 18.63 điểm kết hợp lo ngại địa chính trị (xung đột Afghanistan-Pakistan) tạo nền tảng hỗ trợ giá dài hạn."
+      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (157.75 triệu VND/lượng) tới 18.6%, tạo ra vùng quá mua kỹ thuật đáng kể trong ngắn hạn.",
+      "Đà tăng chủ yếu do yếu tố kỹ thuật thế giới (XAUUSD tăng 8.58% trong 20 ngày) và lợi suất thực Mỹ giảm mạnh (từ mức cao hơn về 1.74%, giảm 8.42% trong 20 ngày), nhưng đà này đang chững lại.",
+      "Premium 12.78% đang ở mức hợp lý so với trung bình 30 ngày qua (dao động 11.54%-18.03%), không có tín hiệu bất thường về căng thẳng cung cầu nội địa.",
+      "VIX tăng 10.37% trong 20 ngày cho thấy lo ngại thị trường, nhưng các tiêu đề địa chính trị (Afghanistan-Pakistan) chưa đủ trọng lực để thúc đẩy dòng tiền khủng vào vàng an toàn."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đã tăng +3.52% chỉ trong 7 ngày và biến động ngày lên tới 2.16%.",
-      "Nếu giá thế giới điều chỉnh về vùng hỗ trợ kỹ thuật, giá SJC có thể giảm mạnh về mức MA7 (~163.3 triệu VND/lượng), tương đương giảm ~12.7% từ giá hiện tại.",
-      "Dữ liệu vĩ mô từ ECB và Fed không có tín hiệu thay đổi chính sách đột ngột, thiếu chất xúc tác mới để đẩy giá vượt qua đỉnh hiện tại."
+      "Rủi ro điều chỉnh giảm sâu sau khi chạm đỉnh 5 năm (percentile 100%), đặc biệt nếu giá thế giới quay đầu.",
+      "Biên độ dao động ngày 2.16% rất cao, nhà đầu tư ngắn hạn có thể bị 'chặt' nếu mua đuổi.",
+      "Dữ liệu vĩ mô thiếu cập nhật (DXY ngày 20/02, Fed Funds không đổi) có thể bỏ sót các biến động chính sách mới nhất."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price_vs_ma30",
+        "value": 18.6,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 12.78,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_20d",
+        "key": "us_real_yield_20d_change",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_world_change_20d",
+        "key": "xauusd_20d_change",
         "value": 8.58,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_vs_ma30_premium",
-        "value": 18.55,
+        "key": "volatility_daily",
+        "value": 2.16,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "vix_change_20d",
+        "key": "premium_current",
+        "value": 12.78,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_20d_change",
         "value": 10.37,
         "unit": "%",
         "source": "first_principles_context"
@@ -59,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T05:13:33.850Z",
+    "latestTimestamp": "2026-02-28T06:08:27.420Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165812759.9604018,
+    "intlVndPerTael": 165809298.8713918,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
     "change30dPct": -0.61,
     "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 163322274,
-    "ma30VndPerTael": 157753077,
+    "ma7VndPerTael": 163321779,
+    "ma30VndPerTael": 157752962,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T05:13:48.486Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-28T06:08:31.690Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -182,14 +188,7 @@
     "geopoliticalHeadlines": [
       "2026-02-27 | csmonitor.com | How Afghanistan - Pakistan relations deteriorated into  open war"
     ],
-    "countryActionHeadlines": [
-      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
-      "2026-02-27 | columbian.com | U . S . stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
-      "2026-02-27 | fool.com | This Gold ETF Is Outshining Its Peers in 2026",
-      "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
       "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
       "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
