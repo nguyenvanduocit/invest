@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T02:48:52.773Z",
+  "generatedAt": "2026-02-28T03:37:23.250Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,32 +7,27 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 187 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng trong 7 ngày qua (+3.52%), tạo rủi ro điều chỉnh kỹ thuật cao dù xu hướng vĩ mô nền tảng vẫn tích cực nhờ lợi suất thực Mỹ giảm mạnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 187 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.16%/ngày.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (157.75 triệu VND/lượng) tới 18.5%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 8.42% trong 20 ngày xuống 1.74%, động lực hỗ trợ giá vàng thế giới tăng 8.58% cùng kỳ.",
-      "Premium 12.78% đang ở mức hợp lý, thấp hơn đỉnh 18.03% ngày 17/02, không áp lực bán tháo đặc biệt từ chênh lệch giá."
+      "Động lượng tăng giá mạnh trong ngắn hạn: Giá thế giới tăng 8.58% trong 20 ngày (từ ~4865 lên 5278 USD/oz), kéo giá SJC tăng 3.52% trong 7 ngày qua và hiện giao dịch trên cả MA7 (163.3 triệu) và MA30 (157.8 triệu VND/lượng).",
+      "Đồng USD suy yếu và lợi suất thực giảm hỗ trợ giá vàng: Chỉ số USD giảm 1.01% trong 20 ngày, lợi suất thực 10 năm giảm mạnh 8.42% (xuống 1.74%), tạo đà tăng cho vàng thế giới.",
+      "Biên độ dao động cao (2.16%/ngày) cho thấy thanh khoản tốt nhưng biến động lớn, phù hợp với giao dịch ngắn hạn thay vì mua đuổi.",
+      "Premium 12.78% ở mức hợp lý so với chuỗi 30 ngày (dao động 11.54%-18.03%), không có dấu hiệu bất thường cần cảnh báo."
     ],
     "risks": [
-      "Đang ở mức giá cao nhất lịch sử (percentile 100% 5 năm), rủi ro sinh lời thấp và biến động lớn khi chốt lời.",
-      "Biến động ngày 2.16% kết hợp tăng 3.52% trong 7 ngày cho thấy thị trường sôi động, dễ xảy ra điều chỉnh ngược.",
-      "VIX tăng 10.37% trong 20 ngày phản ánh lo ngại thị trường về chiến tranh và lạm phát, có thể gây bán tháo tài sản rủi ro."
+      "Giá đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro điều chỉnh kỹ thuật rất cao nếu mua đuổi tại điểm này.",
+      "VIX tăng 10.37% trong 20 ngày cho thấy tâm lý thị trường lo ngại, có thể gây ra các đợt chốt lời bất ngờ.",
+      "Sự kiện địa chính trị (quan hệ Afghanistan-Pakistan căng thẳng) có thể gây biến động giá thất thường."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 18.5,
-        "unit": "%",
+        "key": "sjc_price",
+        "value": 187000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
-        "value": -8.42,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_intl_20d_change",
+        "key": "intl_gold_20d_change",
         "value": 8.58,
         "unit": "%",
         "source": "first_principles_context"
@@ -44,35 +39,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 12.78,
+        "key": "us_real_yield_10y_20d_change",
+        "value": -8.42,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "usd_index_20d_change",
+        "value": -1.01,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.16,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
         "key": "percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
-        "value": 10.37,
+        "key": "premium_current",
+        "value": 12.78,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T02:48:17.533Z",
+    "latestTimestamp": "2026-02-28T03:36:51.173Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165813388.9065939,
+    "intlVndPerTael": 165812111.8505146,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
-    "change30dPct": -0.62,
+    "change30dPct": -0.61,
     "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 163321670,
-    "ma30VndPerTael": 157752937,
+    "ma7VndPerTael": 163322181,
+    "ma30VndPerTael": 157753056,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T02:48:33.920Z",
-    "healthy": true,
+    "fetchedAt": "2026-02-28T03:36:58.644Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -195,11 +202,6 @@
       "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
       "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
     ],
-    "dollarYieldHeadlines": [
-      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
-      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
-      "2026-02-27 | timesfreepress.com | Forbes editor criticizes Trump tariffs , celebrates US companies in UTC lecture",
-      "2026-02-27 | cbsnews.com | Can gold bars lose their value ?"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
