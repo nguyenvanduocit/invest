@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T20:05:24.799Z",
+  "generatedAt": "2026-02-28T21:04:59.123Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,46 +7,28 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 6.82%/tháng, nhưng rủi ro điều chỉnh kỹ thuật rất lớn khi biên độ dao động cao (2.12%/ngày) và không có đợt hồi điều đáng kể.",
+    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 6.82%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi lợi suất thực USD giảm sâu -8.42% trong 20 ngày qua đã được giá phản ánh hết.",
     "reasons": [
-      "Đà tăng mạnh: Giá SJC 187 triệu VND/lượng vượt xa MA30 (158.1 triệu) và tăng 6.82% sau 30 ngày, cho thấy xu hướng tăng ngắn hạn rất mạnh.",
-      "Động lực vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và giá vàng thế giới tăng 8.58% cùng kỳ, hỗ trợ giá vàng.",
-      "Thanh khoản cao: Biên độ dao động ngày 2.12% và thay đổi 7 ngày là 3.52% cho thấy thị trường sôi động nhưng cũng biến động mạnh."
+      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (158.1 triệu VND/lượng) đến 18.3%, cho thấy thị trường đang ở vùng quá mua kỹ thuật ngắn hạn.",
+      "Lợi suất thực 10Y USD giảm mạnh -8.42% trong 20 ngày và VIX tăng 10.37% cùng kỳ là động lực vĩ mô đã đẩy giá tăng, nhưng có thể đã được định giá đầy đủ.",
+      "Premium 12.78% ở mức ổn định trong dải giao dịch 30 ngày (11.54%-18.03%), không có dấu hiệu căng thẳng cực đoan cần chạy vào vàng SJC ngay lập tức."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Giá đang ở phân vị 100% trong 5 năm, rủi ro điều chỉnh kỹ thuật là rất lớn cho người mua mới.",
-      "Biến động giá cao: Với biên độ 2.12%/ngày và premium dao động từ 11.54% đến 18.03% trong tháng, nhà đầu tư có thể chịu thua lỗ ngắn hạn lớn.",
-      "Dữ liệu vĩ mô thiếu tin cậy: Không có tiêu đề tin tức địa chính trị hay hành động quốc gia nào, giảm độ tin cậy của phân tích first-principles (healthy: false)."
+      "Đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh sâu nếu dữ liệu vĩ mô Mỹ thay đổi bất ngờ.",
+      "Đà tăng 3.52%/tuần với biến động 2.12%/ngày có thể gây áp lực chốt lời ngắn hạn.",
+      "Dữ liệu sự kiện vĩ mô (ECB, Afghanistan) có độ nhiễu cao, không tác động trực tiếp đến giá vàng."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 187000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_30d",
-        "value": 6.82,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vs_current_gap",
+        "key": "sjc_price_vs_ma30",
         "value": 18.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
+        "key": "change30d_pct",
+        "value": 6.82,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 2.12,
-        "unit": "%/ngày",
         "source": "market_snapshot"
       },
       {
@@ -56,8 +38,8 @@
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 8.58,
+        "key": "vix_20d_change",
+        "value": 10.37,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -66,19 +48,31 @@
         "value": 11.54,
         "unit": "%",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 2.12,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T20:04:45.742Z",
+    "latestTimestamp": "2026-02-28T21:04:21.042Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165808680.6066036,
+    "intlVndPerTael": 165808534.20853895,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
     "change30dPct": 6.82,
     "volatilityDailyPct": 2.12,
-    "ma7VndPerTael": 164126330,
-    "ma30VndPerTael": 158106073,
+    "ma7VndPerTael": 164126309,
+    "ma30VndPerTael": 158106068,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T20:05:06.932Z",
+    "fetchedAt": "2026-02-28T21:04:42.204Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -190,8 +184,17 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-02-27 | csmonitor.com | How Afghanistan - Pakistan relations deteriorated into  open war"
+    ],
+    "countryActionHeadlines": [
+      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
+      "2026-02-27 | columbian.com | U . S . stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
+      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
+      "2026-02-27 | fool.com | This Gold ETF Is Outshining Its Peers in 2026",
+      "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
+      "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
+    ],
     "dollarYieldHeadlines": []
   }
 }
