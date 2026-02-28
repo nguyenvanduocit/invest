@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-28T11:04:10.767Z",
+  "generatedAt": "2026-02-28T12:07:29.896Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,35 +7,47 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 187 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 3.52% trong 7 ngày, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ premium đã co hẹp về 12.78% và thanh khoản có thể thấp.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.52%/tuần, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 2.16% và giá đã vượt xa MA30 tới 18.6%.",
     "reasons": [
-      "Giá SJC 187,000,000 VND/lượng đang giao dịch vượt xa MA30 (157,752,954 VND/lượng) tới 18.5%, tín hiệu quá mua ở vùng cực đoan.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và giá thế giới tăng lên 5,277.87 USD/oz là động lực hỗ trợ xu hướng tăng cơ bản.",
-      "Premium co hẹp từ đỉnh 18.03% (17/02) xuống 12.78%, cho thấy giá Việt Nam đang chạy theo giá thế giới thay vì đầu cơ nội địa đẩy giá."
+      "Động lượng tăng giá mạnh: Giá thế giới tăng +8.58% trong 20 ngày (USD/oz), kéo giá SJC lên mức kỷ lục 187 triệu VND/lượng.",
+      "Hỗ trợ vĩ mô tích cực: Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh -8.42% trong 20 ngày qua, tạo đà đẩy giá vàng tăng.",
+      "Đồng thuận kỹ thuật: Giá SJC hiện tại (187tr) đang nằm trên cả MA7 (163.3tr) và MA30 (157.8tr), xác nhận xu hướng tăng."
     ],
     "risks": [
-      "Đang ở mức giá cao nhất trong 5 năm (percentile 100%), rủi ro mua đỉnh và điều chỉnh ngắn hạn rất cao nếu giá thế giới quay đầu.",
-      "VIX tăng 10.37% trong 20 ngày và lo ngại về lạm phát/địa chính trị có thể gây biến động bất ngờ hai chiều.",
-      "Dữ liệu first-principles thiếu Gold Spot XAUUSD trực tiếp và không có sự kiện địa chính trị cụ thể, giảm độ tin cậy dự báo."
+      "Mua quá cao (Overbought): Giá đang ở phân vị 100% trong 5 năm, rủi ro điều chỉnh giảm sâu là rất lớn.",
+      "Biên độ dao động cao: Volatility 2.16%/ngày cho thấy thị trường bất ổn, nhà đầu tư dễ bị 'lùa gà'.",
+      "Premium co hẹp: Chênh lệch giá giảm từ 18.03% xuống 12.78%, cho thấy người mua Việt đang thận trọng dù giá thế giới tăng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 18.5,
+        "key": "sjc_price",
+        "value": 187000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "change20d_intl",
+        "value": 8.58,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_change20d",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "world_price_latest",
-        "value": 5277.87,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "volatility_daily",
+        "value": 2.16,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
         "key": "premium_current",
@@ -44,29 +56,23 @@
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
+        "key": "ma30_vnd",
+        "value": 157753096,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change20d",
-        "value": 10.37,
-        "unit": "%",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-02-28T11:03:48.269Z",
+    "latestTimestamp": "2026-02-28T12:07:07.641Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165809042.51769912,
+    "intlVndPerTael": 165813319.7916277,
     "premiumPct": 12.78,
     "change7dPct": 3.52,
-    "change30dPct": -0.62,
+    "change30dPct": -0.61,
     "volatilityDailyPct": 2.16,
-    "ma7VndPerTael": 163321743,
-    "ma30VndPerTael": 157752954,
+    "ma7VndPerTael": 163322354,
+    "ma30VndPerTael": 157753096,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -77,21 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-02-28T11:03:52.730Z",
+    "fetchedAt": "2026-02-28T12:07:12.350Z",
     "healthy": false,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": null,
+        "value": 5263.825,
         "unit": "USD/oz",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-02-27",
+        "change1dPct": 1.52,
+        "change5dPct": 3.26,
+        "change20dPct": 8.58,
         "relationToGold": "context"
       },
       {
@@ -181,14 +185,7 @@
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case",
-      "2026-02-27 | columbian.com | U . S . stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | livemint.com | Gold nears one - month high , set for seventh straight monthly rise",
-      "2026-02-27 | fool.com | This Gold ETF Is Outshining Its Peers in 2026",
-      "2026-02-27 | rockymounttelegram.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street",
-      "2026-02-27 | krmg.com | US stocks sink and oil prices rise as worries about AI , inflation and possible war hit Wall Street"
-    ],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
