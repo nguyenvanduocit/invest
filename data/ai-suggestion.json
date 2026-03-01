@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-01T04:40:06.860Z",
+  "generatedAt": "2026-03-01T05:26:20.334Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,65 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.73%/ngày. Nhà đầu tư không nên FOMO mua đuổi tại vùng giá 187 triệu/lượng này.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro mua đỉp cao hơn lợi ích khi giá đã vượt xa MA7/MA30 và premium giãn rộng.",
     "reasons": [
-      "Giá SJC 187 triệu/lượng đang vượt xa MA30 (158.08 triệu/lượng) tới 18.3%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
-      "Động lượng tăng giá mạnh 6.83% trong 30 ngày và 3.52% trong 7 ngày gần đây cho thấy thanh khoản đang bùng nổ.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 8.42% trong 20 ngày (xuống mức 1.74%) là động lực vĩ mô hỗ trợ giá vàng tăng.",
-      "Premium 12.8% đang ổn định, không có dấu hiệu biến động bất thường so với trung bình chu kỳ gần đây."
+      "Giá SJC 187 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 6.83% sau 30 ngày và vượt xa MA30 (158.08 triệu VND/lượng) đến 18.3%.",
+      "Động lượng vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) và giá vàng thế giới tăng 8.58% trong 20 ngày, tạo nền tảng tăng giá.",
+      "Premium giãn rộng từ 12.54% (31/1) lên đỉnh 18.05% (17/2) trước khi co về 12.8%, cho thấy thị trường Việt Nam đã định giá quá nhiệt trong ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do giá đang ở mức cao nhất 5 năm (percentile 100%) và biến động ngày lớn (1.73%).",
-      "Sự thiếu vắng các sự kiện địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào làm giảm độ tin cậy của đà tăng dài hạn.",
-      "VIX tăng 10.37% trong 20 ngày cho thấy thị trường tài chính đang lo ngại, có thể gây áp lực chốt lời bất ngờ."
+      "Rủi ro điều chỉnh kỹ thuật cao khi giá vượt biên độ dao động 1.73%/ngày và không có sự kiện địa chính trị cấp bách nào trong dữ liệu để duy trì đà tăng.",
+      "Mua đỉnh lịch sử với drawdown tồi nhất là -41.26% và thời gian phục hồi trung bình lên đến 1369 ngày."
     ],
     "evidence": [
       {
-        "key": "sjcVndPerTael",
-        "value": 187000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30dPct",
-        "value": 6.83,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatilityDailyPct",
-        "value": 1.73,
-        "unit": "%/ngày",
+        "key": "sjc_vs_ma30_premium",
+        "value": 18.3,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "us_real_yield_20d_change",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
-        "value": 10.37,
+        "key": "intl_gold_20d_change",
+        "value": 8.58,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "ma30VndPerTael",
-        "value": 158081821,
-        "unit": "VND/lượng",
+        "key": "vn_premium_range_30d",
+        "value": 12.54,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "worst_drawdown",
+        "value": -41.26,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-01T04:39:24.792Z",
+    "latestTimestamp": "2026-03-01T05:25:44.110Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165787305.91577813,
+    "intlVndPerTael": 165784751.25532657,
     "premiumPct": 12.8,
     "change7dPct": 3.52,
     "change30dPct": 6.83,
     "volatilityDailyPct": 1.73,
-    "ma7VndPerTael": 164101610,
-    "ma30VndPerTael": 158081821,
+    "ma7VndPerTael": 164101245,
+    "ma30VndPerTael": 158081736,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +76,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-01T04:39:46.499Z",
+    "fetchedAt": "2026-03-01T05:26:05.288Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,7 +177,12 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-03-01 | finance.yahoo.com | Stocks Settle Lower as Bank Shares Tumble and Tech Stocks Fall",
+      "2026-03-01 | si.com | Saturday Shutout : No . 12 Southern Miss Dominates Louisiana Tech , Secures Series Win",
+      "2026-03-01 | fool.com | 2 Top Cryptocurrencies to Buy With $100 Right Now",
+      "2026-03-01 | sbs.com.au | In pictures : The 2026 Sydney Mardi Gras"
+    ],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
