@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-01T03:04:07.349Z",
+  "generatedAt": "2026-03-01T04:40:06.860Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 6.83%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.73%/ngày và thanh khoản hồi phục trung bình mất gần 4 năm.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.73%/ngày. Nhà đầu tư không nên FOMO mua đuổi tại vùng giá 187 triệu/lượng này.",
     "reasons": [
-      "Động lượng tăng giá mạnh: Giá thế giới tăng 8.58% trong 20 ngày (XAUUSD), kéo giá SJC vượt MA30 (158.08 triệu/lượng) lên mức 187 triệu/lượng.",
-      "Yếu tố vĩ mô hỗ trợ: Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 8.42% trong 20 ngày xuống 1.74%, áp lực tài chính giảm giúp vàng tăng giá.",
-      "Cung cầu vĩ mô căng thẳng: Tin tức địa chính trị về cuộc tấn công Iran-Mỹ đẩy kỳ vọng giá dầu và vàng tăng cao, VIX tăng 10.37% trong 20 ngày."
+      "Giá SJC 187 triệu/lượng đang vượt xa MA30 (158.08 triệu/lượng) tới 18.3%, tín hiệu quá mua rõ ràng trên khung 30 ngày.",
+      "Động lượng tăng giá mạnh 6.83% trong 30 ngày và 3.52% trong 7 ngày gần đây cho thấy thanh khoản đang bùng nổ.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) giảm mạnh 8.42% trong 20 ngày (xuống mức 1.74%) là động lực vĩ mô hỗ trợ giá vàng tăng.",
+      "Premium 12.8% đang ổn định, không có dấu hiệu biến động bất thường so với trung bình chu kỳ gần đây."
     ],
     "risks": [
-      "Mua quá cao (Overbought): Giá SJC đang ở phân vị 100% trong 5 năm qua, rủi ro điều chỉnh giảm ngắn hạn là rất lớn.",
-      "Biên độ dao động cao: Volatility 1.73%/ngày và đợt giảm sâu nhất tới 41.26% cho thấy thị trường đang trong trạng thái投機 (speculative) cực đoan.",
-      "Rủi ro thanh khoản: Thời gian hồi phục trung bình sau các đợt giảm giá lên tới 1369 ngày, nhà đầu tư mới tham gia ở đỉnh giá này đối mặt rủi ro bị 'giam vốn' dài hạn."
+      "Rủi ro điều chỉnh giá cao do giá đang ở mức cao nhất 5 năm (percentile 100%) và biến động ngày lớn (1.73%).",
+      "Sự thiếu vắng các sự kiện địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào làm giảm độ tin cậy của đà tăng dài hạn.",
+      "VIX tăng 10.37% trong 20 ngày cho thấy thị trường tài chính đang lo ngại, có thể gây áp lực chốt lời bất ngờ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_percentile",
+        "key": "sjcVndPerTael",
+        "value": 187000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change30dPct",
+        "value": 6.83,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile5y",
         "value": 100,
-        "unit": "percentile (5y)",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 18.3,
-        "unit": "million VND/lượng (premium over MA)",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_change",
-        "value": -8.42,
-        "unit": "% (20d change)",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "gold_spot_change",
-        "value": 8.58,
-        "unit": "% (20d change)",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "volatility_daily",
+        "key": "volatilityDailyPct",
         "value": 1.73,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -8.42,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "worst_drawdown",
-        "value": 41.26,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "recovery_time",
-        "value": 1369,
-        "unit": "days",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change",
-        "value": 10.37,
-        "unit": "% (20d change)",
         "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change20d",
+        "value": 10.37,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "ma30VndPerTael",
+        "value": 158081821,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-01T03:03:30.837Z",
+    "latestTimestamp": "2026-03-01T04:39:24.792Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 165784749.37066373,
+    "intlVndPerTael": 165787305.91577813,
     "premiumPct": 12.8,
     "change7dPct": 3.52,
     "change30dPct": 6.83,
     "volatilityDailyPct": 1.73,
-    "ma7VndPerTael": 164101244,
-    "ma30VndPerTael": 158081736,
+    "ma7VndPerTael": 164101610,
+    "ma30VndPerTael": 158081821,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-01T03:03:50.332Z",
+    "fetchedAt": "2026-03-01T04:39:46.499Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -190,21 +185,8 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-01 | afr.com | US attack on Iran : Crypto markets hedge Iran war risks with 24 / 7 oil and gold trading",
-      "2026-03-01 | afr.com | Oil , gold , defence stocks tipped to surge after Iran strikes",
-      "2026-03-01 | theshillongtimes.com | Gold , silver prices likely to surge as war escalatesThe Shillong Times",
-      "2026-03-01 | lbc.co.uk | Brit Awards : Palestine and Peter Mandelson mentions censored"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-01 | newsghana.com.gh | Oil Could Hit US$100 as Iran War Rattles Global Markets",
-      "2026-03-01 | newsghana.com.gh | Ghana Gold Reserve Bet Aligns With a Global Central Bank Rush",
-      "2026-03-01 | finance.yahoo.com | The Rate Cut Nobody Saw Coming : The Bond Market Is Not Waiting for the Fed",
-      "2026-02-27 | proactiveinvestors.com | Gold back in outperformance mode , silver surge adds to bullish case"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-01 | newsghana.com.gh | Oil Could Hit US$100 as Iran War Rattles Global Markets",
-      "2026-03-01 | tennesseedaily.com | Best Gold IRA Companies March 2026 Announced ( Best Places to Buy Gold in US Ranked )"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
