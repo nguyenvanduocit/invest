@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-02T00:20:19.243Z",
+  "generatedAt": "2026-03-02T01:35:15.449Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn; nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ gần MA7 (~164.2 triệu VND/lượng).",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.31%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao (1.7%/ngày) và không có đợt hồi điều đáng kể.",
     "reasons": [
-      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (158.07 triệu) đến 18.3%, cho thấy thị trường đang ở trạng thái quá mua kéo dài.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) là động lực chính thúc đẩy giá vàng thế giới tăng 15.02% cùng kỳ.",
-      "Premium giảm từ đỉnh 18.45% (17/02) xuống 11.33% cho thấy giá SJC tăng chậm lại so với giá thế giới, thanh khoản có thể đang căng thẳng."
+      "Giá SJC 188.6 triệu VND/lượng đang vượt xa MA30 (158 triệu VND/lượng) tới 19.3%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
+      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10 năm giảm mạnh -8.42% trong 20 ngày và giá vàng thế giới tăng +14.29% cùng kỳ, tạo nền tảng tăng giá dài hạn.",
+      "Premium 13.27% đang ổn định trong biên độ 30 ngày (11.93%-18.45%), cho thấy tâm lý thị trường Việt Nam chưa hoảng loạn mua vào mức cực đoan."
     ],
     "risks": [
-      "Đang ở mức giá cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh giảm sâu là rất lớn.",
-      "Biên độ dao động ngày cao (1.72%) cộng với VIX tăng 10.37% trong 20 ngày báo hiệu thị trường biến động mạnh.",
-      "Không có dữ liệu sự kiện địa chính trị hay hành động quốc gia cụ thể, khả năng tin tức nhiễu cao."
+      "Rủi ro điều chỉnh giá cao do giá đang ở mức cao nhất trong 5 năm (percentile 100%) mà chưa có đợt giảm sâu để củng cố.",
+      "Biên độ dao động 1.7%/ngày tương đương ~3.2 triệu VND/lượng, nhà đầu tư ngắn hạn dễ bị quét lỗ.",
+      "Dữ liệu sự kiện vĩ mô (ECB, Địa chính trị) không có tin tức đột biến, thiếu chất xúc tác để đẩy giá tăng đột biến thêm."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 187000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vnd",
-        "value": 158071270,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
+        "key": "sjc_price_vs_ma30",
+        "value": 19.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change20d",
+        "key": "change30d_pct",
+        "value": 9.31,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_20d_change",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change20d",
-        "value": 15.02,
+        "key": "intl_gold_20d_change",
+        "value": 14.29,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
         "key": "premium_current",
-        "value": 11.33,
+        "value": 13.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_peak_feb",
-        "value": 18.45,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       },
       {
-        "key": "vix_change20d",
-        "value": 10.37,
+        "key": "daily_volatility",
+        "value": 1.7,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-02T00:19:43.288Z",
-    "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 167972736.69466007,
-    "premiumPct": 11.33,
-    "change7dPct": 2.88,
-    "change30dPct": 10.28,
-    "volatilityDailyPct": 1.72,
-    "ma7VndPerTael": 164219209,
-    "ma30VndPerTael": 158071270,
+    "latestTimestamp": "2026-03-02T01:34:35.776Z",
+    "sjcVndPerTael": 188600000,
+    "intlVndPerTael": 166499655.64474657,
+    "premiumPct": 13.27,
+    "change7dPct": 1.97,
+    "change30dPct": 9.31,
+    "volatilityDailyPct": 1.7,
+    "ma7VndPerTael": 164008769,
+    "ma30VndPerTael": 158022168,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-02T00:20:04.833Z",
+    "fetchedAt": "2026-03-02T01:34:57.284Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5361.355,
+        "value": 5327.325,
         "unit": "USD/oz",
         "date": "2026-03-02",
-        "change1dPct": 1.85,
-        "change5dPct": 2.56,
-        "change20dPct": 15.02,
+        "change1dPct": 1.21,
+        "change5dPct": 1.91,
+        "change20dPct": 14.29,
         "relationToGold": "context"
       },
       {
