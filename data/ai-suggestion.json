@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-02T12:11:36.214Z",
+  "generatedAt": "2026-03-02T13:27:56.106Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.81%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.73%/ngày và giá đã vượt xa MA30 (158 triệu VND/lượng).",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 11.09%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là cực lớn khi biên độ dao động 1.74%/ngày và không có tín hiệu sự kiện vĩ mô đặc biệt để thúc đẩy đà tăng tiếp.",
     "reasons": [
-      "Động lượng tăng giá rất mạnh: Giá thế giới tăng 15.72% trong 20 ngày (lên 5391 USD/oz), kéo giá SJC tăng 10.81% trong 30 ngày lên 190.9 triệu VND/lượng.",
-      "Đồng thuận vĩ mô ủng hộ: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% (xuống 1.74%) và VIX tăng 10.37% cho thấy tâm lý rủi ro hỗ trợ vàng.",
-      "Xu hướng kỹ thuật ngắn hạn tích cực: Giá SJC hiện tại (190.9 triệu) đang nằm trên cả MA7 (164.3 triệu) và MA30 (158 triệu), cho thấy xu hướng tăng còn nguyên vẹn."
+      "Đà tăng quá nóng: Giá thế giới tăng 15.99% trong 20 ngày gần nhất (first_principles), đi kèm lợi suất thực USD giảm mạnh 8.42%, tạo đợt tăng giá cơ bản rất mạnh nhưng ngắn hạn quá tốc.",
+      "Phân tích kỹ thuật 30 ngày cho thấy xu hướng tăng rõ ràng từ 4865 USD/oz (01/02) lên 5405 USD/oz (02/03), giá hiện tại 190.9 triệu VND/lượng vượt xa MA30 (158.1 triệu VND/lượng) đến 20.7%.",
+      "Premium 12.82% đang ở mức hợp lý so với trung bình chuỗi dữ liệu (dao động 11.93%-18.45%), không có dấu hiệu thao túng cực đoan, cho thấy thị trường Việt Nam đang phản ánh đúng đà tăng thế giới.",
+      "VIX tăng 10.37% trong 20 ngày cho thấy tâm lý thị trường tài chính đang lo âu, hỗ trợ nhu cầu nắm giữ vàng."
     ],
     "risks": [
-      "Rủi ro mua đỉnh cực cao: Giá đang ở phân vị 100% trong 5 năm qua, khả năng hồi điều về vùng MA7 (164 triệu VND) là hiện hữu.",
-      "Thanh khoản và biến động: Biên độ dao động 1.73%/ngày rất lớn, nhà đầu tư ngắn hạn dễ bị 'lọc' nếu dùng đòn bẩy.",
-      "Thiếu tín hiệu sự kiện rõ ràng: Các headline chính sách (ECB) và địa chính trị không có tin tức trọng đại nào thúc đẩy giá, đà tăng có thể chỉ là kỹ thuật."
+      "Rủi ro điều chỉnh kỹ thuật cao: Giá đang ở vùng quá mua (percentile 100% trong 5 năm), bất kỳ hồi phục lợi suất thực USD nào cũng có thể gây chốt lời ồ ạt.",
+      "Biên độ dao động 1.74%/ngày tương đương ~3.3 triệu VND/lượng, nhà đầu tư ngắn hạn có thể bị quét stop-loss liên tục.",
+      "Dữ liệu sự kiện vĩ mô (policyHeadlines, geopoliticalHeadlines) không chứa tin tức cấp thiết, thiếu chất xúc tác để xác nhận đột phá, confidence bị giảm do dữ liệu nhiễu."
     ],
     "evidence": [
       {
@@ -26,53 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 5391.39,
+        "key": "Giá thế giới (XAU/USD)",
+        "value": 5405.16,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Biến động 30 ngày (SJC)",
-        "value": 10.81,
+        "key": "Thay đổi 30 ngày (SJC)",
+        "value": 11.09,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (Thay đổi 20 ngày)",
+        "key": "Lợi suất thực Mỹ 10N (thay đổi 20 ngày)",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Phân vị giá 5 năm",
-        "value": 100,
-        "unit": "percentile",
+        "key": "Biên độ dao động ngày",
+        "value": 1.74,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "MA30 (SJC)",
-        "value": 158098138,
+        "value": 158112516,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biên độ dao động ngày",
-        "value": 1.73,
+        "key": "VIX (thay đổi 20 ngày)",
+        "value": 10.37,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Percentile 5 năm",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-02T12:10:55.665Z",
+    "latestTimestamp": "2026-03-02T13:27:08.234Z",
     "sjcVndPerTael": 190900000,
-    "intlVndPerTael": 168778778.03416583,
-    "premiumPct": 13.11,
-    "change7dPct": 3.37,
-    "change30dPct": 10.81,
-    "volatilityDailyPct": 1.73,
-    "ma7VndPerTael": 164334358,
-    "ma30VndPerTael": 158098138,
+    "intlVndPerTael": 169210103.20100012,
+    "premiumPct": 12.82,
+    "change7dPct": 3.63,
+    "change30dPct": 11.09,
+    "volatilityDailyPct": 1.74,
+    "ma7VndPerTael": 164395976,
+    "ma30VndPerTael": 158112516,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-02T12:11:16.873Z",
+    "fetchedAt": "2026-03-02T13:27:29.348Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5393.915,
+        "value": 5406.605,
         "unit": "USD/oz",
         "date": "2026-03-02",
-        "change1dPct": 2.47,
-        "change5dPct": 3.18,
-        "change20dPct": 15.72,
+        "change1dPct": 2.71,
+        "change5dPct": 3.42,
+        "change20dPct": 15.99,
         "relationToGold": "context"
       },
       {
