@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-03-01T23:05:32.101Z",
+  "generatedAt": "2026-03-02T00:20:19.243Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng rất mạnh 9.81%/tháng, được thúc đẩy bởi cú sốc địa chính trị Mỹ-Iran làm tăng nhu cầu trú ẩn. Tuy nhiên, rủi ro điều chỉnh kỹ thuật là rất lớn khi giá đã vượt xa MA30 (VND/lượng) tới 18%, nhà đầu tư nên chờ đợi hồi phục về vùng hỗ trợ cận MA7 thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn; nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ gần MA7 (~164.2 triệu VND/lượng).",
     "reasons": [
-      "Đà tăng mạnh kết hợp vĩ mô thuận lợi: Giá thế giới tăng 14.91% trong 20 ngày (XAUUSD), lợi suất thực Mỹ giảm sâu 8.42% (20 ngày) và rủi ro chiến tranh Mỹ-Iran leo thang tạo đà đẩy giá.",
-      "Động lượng kỹ thuật dương: Giá SJC 187 triệu VND/lượng đang nằm trên MA7 (164.67 triệu VND/lượng) và MA30 (158.58 triệu VND/lượng), xu hướng ngắn hạn hoàn toàn tích cực.",
-      "Biên độ dao động cao: Volatility 1.71%/ngày và VIX ở mức 18.63 cho thấy thị trường đang rung lắc mạnh, phù hợp với giao dịch swing nhưng rủi ro với định giá mua giữ lâu dài ở vùng đỉnh."
+      "Giá SJC 187 triệu VND/lượng đang vượt xa MA30 (158.07 triệu) đến 18.3%, cho thấy thị trường đang ở trạng thái quá mua kéo dài.",
+      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) là động lực chính thúc đẩy giá vàng thế giới tăng 15.02% cùng kỳ.",
+      "Premium giảm từ đỉnh 18.45% (17/02) xuống 11.33% cho thấy giá SJC tăng chậm lại so với giá thế giới, thanh khoản có thể đang căng thẳng."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Giá đang ở phân vị 100% trong 5 năm qua, rủi ro điều chỉnh giảm sâu là rất lớn nếu tin tức địa chính trị hạ nhiệt.",
-      "Áp lực hồi về giá trị thực: Giá SJC (187 triệu) đang cao hơn giá thế giới quy đổi (167.8 triệu) tới 11.43%, premium có thể co hẹp nếu giá thế giới đi ngang.",
-      "Sự kiện đen swan: Chiến tranh Mỹ-Iran có tính chất bất ngờ cao, các tin tức lật ngược tình thế (ngừng bắn, thương lượng) có thể khiến giá vàng sốc giảm nhanh."
+      "Đang ở mức giá cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh giảm sâu là rất lớn.",
+      "Biên độ dao động ngày cao (1.72%) cộng với VIX tăng 10.37% trong 20 ngày báo hiệu thị trường biến động mạnh.",
+      "Không có dữ liệu sự kiện địa chính trị hay hành động quốc gia cụ thể, khả năng tin tức nhiễu cao."
     ],
     "evidence": [
       {
@@ -26,21 +26,9 @@
         "source": "market_snapshot"
       },
       {
-        "key": "intl_price_converted",
-        "value": 167816179,
+        "key": "ma30_vnd",
+        "value": 158071270,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 9.81,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "price_vs_ma30_pct",
-        "value": 17.92,
-        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -56,29 +44,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "xauusd_change20d",
-        "value": 14.91,
+        "key": "gold_spot_change20d",
+        "value": 15.02,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "geopolitical_risk_event",
-        "value": 1,
-        "unit": "US-Israel vs Iran War",
-        "source": "geopoliticalHeadlines"
+        "key": "premium_current",
+        "value": 11.33,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_peak_feb",
+        "value": 18.45,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "vix_change20d",
+        "value": 10.37,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-01T23:04:53.285Z",
+    "latestTimestamp": "2026-03-02T00:19:43.288Z",
     "sjcVndPerTael": 187000000,
-    "intlVndPerTael": 167816179.36468193,
-    "premiumPct": 11.43,
-    "change7dPct": 2.43,
-    "change30dPct": 9.81,
-    "volatilityDailyPct": 1.71,
-    "ma7VndPerTael": 164670673,
-    "ma30VndPerTael": 158581272,
+    "intlVndPerTael": 167972736.69466007,
+    "premiumPct": 11.33,
+    "change7dPct": 2.88,
+    "change30dPct": 10.28,
+    "volatilityDailyPct": 1.72,
+    "ma7VndPerTael": 164219209,
+    "ma30VndPerTael": 158071270,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-01T23:05:12.619Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-02T00:20:04.833Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5356.105,
+        "value": 5361.355,
         "unit": "USD/oz",
         "date": "2026-03-02",
-        "change1dPct": 1.75,
-        "change5dPct": 2.46,
-        "change20dPct": 14.91,
+        "change1dPct": 1.85,
+        "change5dPct": 2.56,
+        "change20dPct": 15.02,
         "relationToGold": "context"
       },
       {
@@ -190,25 +190,8 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
       "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-01 | kmxt.org | 3 American soldiers killed as U . S .- Israeli war against Iran continues into 2nd day",
-      "2026-03-01 | mining.com | Investors seek harbour in gold as US and Israel strike Iran",
-      "2026-03-01 | dailybulletin.com | Iran vows revenge after the killing of its top leader and trades strikes with Israel in widening war",
-      "2026-03-01 | houstonpublicmedia.org | 3 American soldiers killed as U . S .- Israeli war against Iran continues into 2nd day",
-      "2026-03-01 | ibtimes.co.uk | Surviving WW3 in the Safest Countries During US , Israel Vs Iran Wars",
-      "2026-03-01 | northcountrypublicradio.org | 3 American soldiers killed as U . S .- Israeli war against Iran continues into 2nd day"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-01 | el-balad.com | Iran Strikes Reduce Likelihood of Fed Rate Cuts – Barron",
-      "2026-03-01 | abc.net.au | Market live updates : Iran strikes set to rattle markets as oil and gold prices jump , Wall Street banks fall"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-01 | mining.com | Investors seek harbour in gold as US and Israel strike Iran",
-      "2026-03-01 | investingnews.com | Banyan Gold Provides Update on Pre - Existing Underlying Royalty Purchase , AurMac Project , Yukon , Canada",
-      "2026-03-01 | abc.net.au | Market live updates : Iran strikes set to rattle markets as oil and gold prices jump , Wall Street banks fall",
-      "2026-03-01 | finance.yahoo.com | Dollar Surges as Traders Brace for War Impact",
-      "2026-03-01 | torontotelegraph.com | Banyan Gold Provides Update on Pre - Existing Underlying Royalty Purchase , AurMac Project , Yukon , Canada",
-      "2026-03-01 | finanznachrichten.de | Banyan Gold Corp .: Banyan Gold Provides Update on Pre - Existing Underlying Royalty Purchase , AurMac Project , Yukon , Canada"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
