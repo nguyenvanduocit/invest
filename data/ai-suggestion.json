@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-02T22:08:25.810Z",
+  "generatedAt": "2026-03-02T23:06:43.401Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.4%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động 1.68%/ngày; nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.83%/tháng, nhưng rủi ro điều chỉnh kỹ thuật rất lớn khi biên độ dao động 1.68%/ngày; nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ cận MA7 (~165 triệu/lượng) để tích sản.",
     "reasons": [
-      "Giá SJC 190.9 triệu VND/lượng đang vượt xa MA30 (158.5 triệu VND/lượng) tới hơn 20%, tín hiệu quá mua rõ ràng trong ngắn hạn.",
-      "Động lượng vĩ mô tích cực: Lợi suất thực Mỹ 10Y giảm mạnh -8.99% trong 20 ngày và giá vàng thế giới tăng +14.18% cùng kỳ, tạo nền tảng tăng giá dài hạn.",
-      "Biên độ dao động ngày cao 1.68% kết hợp với việc giá đang ở mức cao nhất 5 năm cho thấy thị trường sôi động nhưng rủi ro biến động lớn."
+      "Động lượng tăng rất mạnh: Giá thế giới tăng +8.03% trong 20 ngày và +3.9% trong 5 ngày, kéo giá SJC lên mức kỷ lục 190.9 triệu/lượng.",
+      "Điều kiện vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh -8.99% trong 20 ngày (xuống 1.72%) và VIX tăng +13.88% đến mức 19.86, hỗ trợ vàng.",
+      "Premium 14.12% nằm trong vùng ổn định của 30 ngày qua (11.93%-18.45%), không có dấu hiệu căng thẳng cực đoan về thanh khoản.",
+      "Dữ liệu vĩ mô first-principles bị thiếu (healthy: false), không có thông tin hành động quốc gia hay chính sách Fed mới, giới hạn độ tin cậy phân tích."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi đà tăng quá nóng (+3.26% chỉ trong 7 ngày).",
-      "Thanh khoản có thể giảm nếu thị trường đi ngang sau đợt tăng nóng, gây khó khăn cho việc thoát hàng ngắn hạn.",
-      "Thiếu tín hiệu sự kiện địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào để duy trì đà tăng vọt."
+      "Mua đỉnh lịch sử: Giá đang ở phân vị 100% trong 5 năm, rủi ro điều chỉnh giảm ngắn hạn rất cao.",
+      "Biến động tăng vọt: Volatility 1.68%/ngày kết hợp với đà tăng 9.83%/tháng cho thấy thị trường đang nóng, dễ xảy ra chốt lời ồ ạt.",
+      "Sự kiện địa chính trị Iran: Tin tức chiến tranh có thể gây biến động hai chiều thất thường, khó dự đoán."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 20.43,
+        "key": "sjc_price_latest",
+        "value": 190900000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change30d_pct",
+        "value": 9.83,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 9.4,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_change_20d",
-        "value": 14.18,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_change_20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -8.99,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "5y_percentile",
+        "key": "vix_level",
+        "value": 19.86,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_current",
+        "value": 14.12,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "daily_volatility",
-        "value": 1.68,
+        "key": "intl_gold_20d_change",
+        "value": 8.03,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "current_sjc_price",
-        "value": 190900000,
-        "unit": "VND/lượng",
+        "key": "daily_volatility",
+        "value": 1.68,
+        "unit": "%/ngày",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-02T22:07:50.003Z",
+    "latestTimestamp": "2026-03-02T23:06:04.309Z",
     "sjcVndPerTael": 190900000,
-    "intlVndPerTael": 166630714.81555024,
-    "premiumPct": 14.56,
-    "change7dPct": 3.26,
-    "change30dPct": 9.4,
+    "intlVndPerTael": 167285777.1323062,
+    "premiumPct": 14.12,
+    "change7dPct": 3.67,
+    "change30dPct": 9.83,
     "volatilityDailyPct": 1.68,
-    "ma7VndPerTael": 164816025,
-    "ma30VndPerTael": 158512278,
+    "ma7VndPerTael": 164909605,
+    "ma30VndPerTael": 158534113,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-02T22:08:11.255Z",
+    "fetchedAt": "2026-03-02T23:06:25.768Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5322.165,
+        "value": 5344.585,
         "unit": "USD/oz",
-        "date": "2026-03-02",
-        "change1dPct": 1.11,
-        "change5dPct": 1.81,
-        "change20dPct": 14.18,
+        "date": "2026-03-03",
+        "change1dPct": 0.42,
+        "change5dPct": 3.9,
+        "change20dPct": 8.03,
         "relationToGold": "context"
       },
       {
@@ -123,12 +130,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.25,
+        "value": 2.29,
         "unit": "%",
-        "date": "2026-02-27",
-        "change1dPct": -1.32,
-        "change5dPct": -1.32,
-        "change20dPct": -4.26,
+        "date": "2026-03-02",
+        "change1dPct": 1.78,
+        "change5dPct": 1.33,
+        "change20dPct": -2.97,
         "relationToGold": "direct"
       },
       {
@@ -184,7 +191,12 @@
       "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025",
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-03-02 | vtcng.com | Energy prices soar on Iran war fallout , stocks mostly fall",
+      "2026-03-02 | cheknews.ca | Oil prices leap on worries about war in the Middle East , while US stocks trim their sharp losses",
+      "2026-03-02 | bozemandailychronicle.com | US stocks erase sharp losses , while oil prices leap on worries about Iran war",
+      "2026-03-02 | markets.financialcontent.com | FinancialContent - Inflationary Alarm Bells : ISM Price Spike and Geopolitical Turmoil Reshape 2026 Rate Outlook"
+    ],
     "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
