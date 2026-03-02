@@ -1,85 +1,84 @@
 {
-  "generatedAt": "2026-03-02T16:13:21.738Z",
+  "generatedAt": "2026-03-02T17:17:32.719Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro mua đỉp cao do giá đã tăng 8.68% trong 30 ngày qua. Lợi suất thực USD giảm mạnh hỗ trợ giá vàng dài hạn, tuy nhiên nhà đầu tư nên chờ hồi điều chỉnh về vùng hỗ trợ gần MA7 (163.87 triệu VND/lượng) để tham gia an toàn hơn.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 8.89%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động cao (1.7%) và giá đã vượt xa MA30 (20.8%). Nhà đầu tư không nên mua đuổi mà chờ đợi信 hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ gần MA7 (~163.9 triệu VND/lượng).",
     "reasons": [
-      "Giá SJC 190.9 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.99 triệu VND/lượng) tới 20.8% indicating xu hướng tăng mạnh nhưng đã quá mua.",
-      "Động lượng tăng giá nhanh: tăng 8.68% trong 30 ngày và 1.38% trong 7 ngày gần đây, đi kèm biến động ngày cao 1.7%.",
-      "Lợi suất thực USD 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) là động lực hỗ trợ vàng tăng giá từ góc độ first-principles.",
-      "VIX tăng 13.88% trong 20 ngày (lên 19.86) cho thấy tâm lý thị trường lo ngại, hỗ trợ nhu cầu trú ẩn vào vàng."
+      "Động lượng tăng giá mạnh: Giá thế giới tăng 13.63% trong 20 ngày và giá SJC tăng 8.89% sau 30 ngày, cho thấy xu hướng tăng ngắn hạn rất tích cực.",
+      "Môi trường vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh 8.42% (xuống 1.74%) và VIX tăng 13.88% (lên 19.86) hỗ trợ giá vàng tăng nhờ yếu tố an toàn và chi phí cơ hội giảm.",
+      "Cảnh báo vùng quá mua: Giá SJC 190.9 triệu VND đang cao hơn MA30 (158 triệu VND) tới 20.8% và đang ở mức cao nhất trong 5 năm (percentile 100%), rủi ro điều chỉnh ngắn hạn rất cao."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do mua quá mức (overbought) khi giá cách xa MA7 và MA30, có thể hồi về vùng 184-185 triệu VND/lượng.",
-      "Premium 15.32% đang ở mức cao, nếu giá thế giới điều chỉnh thì chênh lệch này có thể co hẹp lại gây thiệt hại cho nhà đầu tư nội địa.",
-      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, confidence bị giới hạn do không có driver tin tức rõ ràng."
+      "Điều chỉnh kỹ thuật sắc bén: Khi giá lệch quá xa đường trung bình động và biên độ dao động ngày lên tới 1.7%, khả năng chốt lời ngắn hạn gây giảm giá nhanh là lớn.",
+      "Rủi ro thông tin nhiễu: Các tiêu đề về xung đột Iran/Middle East trong dữ liệu đầu vào đến từ các nguồn không chính thống (breitbart, moroccoworldnews), cần thận trọng trước khi định giá dựa trên tin tức này.",
+      "Thanh khoản và Spread: Tại mức đỉnh giá lịch sử, thanh khoản có thể giảm và chênh lệch giá Mua-Bán có thể giãn rộng, gây khó khăn cho việc thoát vị thế nhanh."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá SJC hiện tại",
         "value": 190900000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_30d",
-        "value": 8.68,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma30_vnd",
-        "value": 157990010,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change20d",
+        "key": "Lợi suất thực Mỹ 10N biến động 20 ngày",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "Giá thế giới biến động 20 ngày",
+        "value": 13.63,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX biến động 20 ngày",
         "value": 13.88,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_pct",
-        "value": 15.32,
+        "key": "Giá SJC biến động 30 ngày",
+        "value": 8.89,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
+        "key": "Phân vị giá 5 năm",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Chênh lệch giá SJC so với MA30",
+        "value": 20.82,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biên độ dao động ngày",
         "value": 1.7,
-        "unit": "%/ngày",
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-02T16:12:36.473Z",
+    "latestTimestamp": "2026-03-02T17:16:46.502Z",
     "sjcVndPerTael": 190900000,
-    "intlVndPerTael": 165534926.6745118,
-    "premiumPct": 15.32,
-    "change7dPct": 1.38,
-    "change30dPct": 8.68,
+    "intlVndPerTael": 165859284.57489833,
+    "premiumPct": 15.1,
+    "change7dPct": 1.58,
+    "change30dPct": 8.89,
     "volatilityDailyPct": 1.7,
-    "ma7VndPerTael": 163870950,
-    "ma30VndPerTael": 157990010,
+    "ma7VndPerTael": 163917287,
+    "ma30VndPerTael": 158000822,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-02T16:12:58.173Z",
+    "fetchedAt": "2026-03-02T17:17:07.923Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5299.485,
+        "value": 5296.445,
         "unit": "USD/oz",
         "date": "2026-03-02",
-        "change1dPct": 0.68,
-        "change5dPct": 1.38,
-        "change20dPct": 13.69,
+        "change1dPct": 0.62,
+        "change5dPct": 1.32,
+        "change20dPct": 13.63,
         "relationToGold": "context"
       },
       {
@@ -193,6 +192,11 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-03-02 | moroccoworldnews.com | US - Iran Conflict : Bitcoin Falls 1 % to $66 , 700 in 24 Hours , Oil Spikes 6 %",
+      "2026-03-02 | republicanherald.com | Stocks slip and oil prices leap as war in Middle East raises worries",
+      "2026-03-02 | breitbart.com | Energy prices soar , stock markets slide on Iran war fallout",
+      "2026-03-02 | fortmorgantimes.com | Stocks slip and oil prices leap as war in Middle East raises worries"
+    ]
   }
 }
