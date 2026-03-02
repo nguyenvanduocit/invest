@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-02T20:09:32.863Z",
+  "checkedAt": "2026-03-02T21:10:40.102Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-02T20:09:32.785Z",
+  "dataFetchedAt": "2026-03-02T21:10:40.025Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,33 +16,15 @@
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 0,
-    "dollarYieldCount": 0,
-    "sourceFailures": [
-      {
-        "id": "gdelt_geopolitics",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_country_actions",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "The operation timed out."
-      }
-    ],
+    "geopoliticalCount": 9,
+    "countryActionCount": 15,
+    "dollarYieldCount": 12,
+    "sourceFailures": [],
     "healthy": false
   },
-  "hardFailures": [
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
-  ],
+  "hardFailures": [],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-20)",
-    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
+    "Stale factors: US Dollar Trade Weighted Index (2026-02-20)"
   ],
-  "canProceedToIntegration": false
+  "canProceedToIntegration": true
 }
