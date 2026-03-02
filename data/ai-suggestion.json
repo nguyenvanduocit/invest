@@ -1,79 +1,85 @@
 {
-  "generatedAt": "2026-03-02T15:15:57.831Z",
+  "generatedAt": "2026-03-02T16:13:21.738Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh +9.55%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.7%/ngày. Dòng tiền vĩ mô hỗ trợ tốt (lợi suất thực USD giảm -8.42%), tuy nhiên nhà đầu tư mới nên tránh mua đuổi tại vùng giá kỷ lục 190.9 triệu/lượng này.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh, nhưng rủi ro mua đỉp cao do giá đã tăng 8.68% trong 30 ngày qua. Lợi suất thực USD giảm mạnh hỗ trợ giá vàng dài hạn, tuy nhiên nhà đầu tư nên chờ hồi điều chỉnh về vùng hỗ trợ gần MA7 (163.87 triệu VND/lượng) để tham gia an toàn hơn.",
     "reasons": [
-      "Giá SJC 190.9 triệu VND/lượng đang vượt xa MA30 (158 triệu VND/lượng) tới +20.9%, tín hiệu quá mua rõ ràng trên biểu đồ ngày.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh -8.42% trong 20 ngày qua xuống 1.74%, tạo động lực tài chính vững chắc cho giá vàng thế giới tăng +14.41%.",
-      "Premium 14.31% đang ổn định trong biên độ 30 ngày (11.93%-18.45%), không có dấu hiệu thao túng cực đoan, cho thấy thị trường Việt Nam hoạt động bình thường.",
-      "VIX tăng +13.88% lên mức 19.86 cho thấy tâm lý thị trường lo ngại rủi ro, hỗ trợ nhu cầu trú ẩn vào vàng ngắn hạn."
+      "Giá SJC 190.9 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (157.99 triệu VND/lượng) tới 20.8% indicating xu hướng tăng mạnh nhưng đã quá mua.",
+      "Động lượng tăng giá nhanh: tăng 8.68% trong 30 ngày và 1.38% trong 7 ngày gần đây, đi kèm biến động ngày cao 1.7%.",
+      "Lợi suất thực USD 10 năm giảm mạnh 8.42% trong 20 ngày (xuống 1.74%) là động lực hỗ trợ vàng tăng giá từ góc độ first-principles.",
+      "VIX tăng 13.88% trong 20 ngày (lên 19.86) cho thấy tâm lý thị trường lo ngại, hỗ trợ nhu cầu trú ẩn vào vàng."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn rất cao khi giá đang ở mức cao nhất 5 năm (percentile 100%) và đã tăng gần 10% chỉ trong 1 tháng.",
-      "Biên độ dao động 1.7%/ngày tương đương ~3.2 triệu VND/lượng, nhà đầu tư cần dự phòng biên độ giá rộng.",
-      "Thiếu tín hiệu sự kiện địa chính trị cụ thể trong dữ liệu đầu vào, đà tăng có thể chững lại nếu không có tin tức kích thích mới."
+      "Rủi ro điều chỉnh giá cao do mua quá mức (overbought) khi giá cách xa MA7 và MA30, có thể hồi về vùng 184-185 triệu VND/lượng.",
+      "Premium 15.32% đang ở mức cao, nếu giá thế giới điều chỉnh thì chênh lệch này có thể co hẹp lại gây thiệt hại cho nhà đầu tư nội địa.",
+      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, confidence bị giới hạn do không có driver tin tức rõ ràng."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
+        "key": "sjc_price",
         "value": 190900000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30d",
-        "value": 9.55,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "change_30d",
+        "value": 8.68,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "ma30_vnd",
+        "value": 157990010,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
         "value": -8.42,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 14.41,
+        "key": "vix_change20d",
+        "value": 13.88,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium vs World Price",
-        "value": 14.31,
+        "key": "premium_pct",
+        "value": 15.32,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Daily Volatility",
+        "key": "volatility_daily",
         "value": 1.7,
-        "unit": "%",
+        "unit": "%/ngày",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-02T15:15:17.922Z",
+    "latestTimestamp": "2026-03-02T16:12:36.473Z",
     "sjcVndPerTael": 190900000,
-    "intlVndPerTael": 166998581.08360863,
-    "premiumPct": 14.31,
-    "change7dPct": 2.19,
-    "change30dPct": 9.55,
+    "intlVndPerTael": 165534926.6745118,
+    "premiumPct": 15.32,
+    "change7dPct": 1.38,
+    "change30dPct": 8.68,
     "volatilityDailyPct": 1.7,
-    "ma7VndPerTael": 164060304,
-    "ma30VndPerTael": 158034192,
+    "ma7VndPerTael": 163870950,
+    "ma30VndPerTael": 157990010,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-02T15:15:39.028Z",
+    "fetchedAt": "2026-03-02T16:12:58.173Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5333.145,
+        "value": 5299.485,
         "unit": "USD/oz",
         "date": "2026-03-02",
-        "change1dPct": 1.32,
-        "change5dPct": 2.02,
-        "change20dPct": 14.41,
+        "change1dPct": 0.68,
+        "change5dPct": 1.38,
+        "change20dPct": 13.69,
         "relationToGold": "context"
       },
       {
@@ -178,12 +184,12 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025",
       "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025",
-      "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament",
-      "2026-02-25 | ECB Press / Speeches | ECB adopts opinion on appointment of its future Vice-President"
+      "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
