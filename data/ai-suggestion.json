@@ -1,77 +1,85 @@
 {
-  "generatedAt": "2026-03-03T00:21:47.524Z",
+  "generatedAt": "2026-03-03T01:35:44.703Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày qua (+10.09%), cộng hưởng rủi ro địa chính trị từ xung đột Iran. Tuy nhiên, biên độ dao động cao (1.7%) và giá vượt xa MA30 (19.7%) khuyến nghị nhà đầu tư chờ điều chỉnh về vùng hỗ trợ cận MA7 thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.49%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi biên độ dao động 1.71% và premium co về 11.96%. Nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ MA7 (~165.9 triệu VND/lượng) hoặc xác nhận xu hướng rõ ràng hơn.",
     "reasons": [
-      "Đà tăng quá nóng: Giá SJC 190.9 triệu VND/lượng đang vượt xa MA30 (159.4 triệu VND/lượng) tới 19.7% và tăng 10.09% trong 30 ngày, tín hiệu mua quá mức (overbought) rõ rệt.",
-      "Rủi ro địa chính trị leo thang: Tin tức về xung đột Iran (Iran war fallout) đẩy giá vàng thế giới lên 5356 USD/oz và VIX tăng 13.88% trong 20 ngày, tạo đà tăng nhưng cũng làm tăng biên độ dao động.",
-      "Động lực vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh 8.99% trong 20 ngày (xuống 1.72%) và kỳ vọng lạm phát tăng 1.33% trong 5 ngày, hỗ trợ xu hướng tăng dài hạn của vàng."
+      "Giá SJC 189.4 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 10.49% sau 30 ngày và vượt xa MA30 (159.4 triệu VND/lượng) 18.7% - rủi ro điều chỉnh kỹ thuật rất cao.",
+      "Động lượng tăng giá được hỗ trợ bởi vĩ mô: Lợi suất thực Mỹ 10 năm giảm mạnh 8.99% trong 20 ngày (xuống 1.72%) và giá vàng thế giới tăng 8.67% lên 5376 USD/oz, tạo nền tảng tăng giá vững chắc.",
+      "Premium chênh lệch VN-Thế giới giảm từ đỉnh 17.83% (17/02) xuống 11.96% hiện tại, cho thấy thị trường Việt Nam đang định giá lại và không nên kỳ vọng biên lợi nhuận từ co giãn premium.",
+      "VIX tăng 13.88% trong 20 ngày lên mức 19.86 cho thấy lo ngại rủi ro thị trường tăng, có thể gây áp lực chốt lời ngắn hạn nhưng hỗ trợ vàng dài hạn."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu: Với mức giá ở phân vị 100% 5 năm và biến động 1.7%/ngày, rủi ro chốt lời ngắn hạn (pullback) về vùng MA7 (165.8 triệu VND/lượng) là rất lớn.",
-      "Thanh khoản và trượt giá: Premium 13.26% là bình thường nhưng chênh lệch giá mua-bán có thể giãn ra khi thị trường biến động mạnh do tin tức chiến sự."
+      "Rủi ro điều chỉnh giá cao khi mua ở đỉnh 189.4 triệu VND/lượng - mức cao nhất lịch sử, với biên độ dao động 1.71%/ngày có thể gây thua lỗ ngắn hạn đáng kể.",
+      "Thiếu tín hiệu địa chính trị hoặc hành động quốc gia cụ thể trong dữ liệu đầu vào, độ tin cậy dự báo giảm và có thể xuất hiện biến động bất ngờ từ tin tức chưa được phản ánh.",
+      "Lịch sử drawdown tồi nhất 41.26% và thời gian phục hồi trung bình 1369 ngày cho thấy rủi ro dài hạn nếu mua sai điểm vào."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 190900000,
+        "key": "sjc_price",
+        "value": 189400000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 Distance",
-        "value": 19.7,
+        "key": "change30d_pct",
+        "value": 10.49,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -8.99,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "VIX Change 20d",
-        "value": 13.88,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Gold World Price",
-        "value": 5356.34,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Volatility Daily",
-        "value": 1.7,
+        "key": "premium_current",
+        "value": 11.96,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "ma7_vnd",
+        "value": 165914693,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change20d",
+        "value": -8.99,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "intl_gold_usd",
+        "value": 5376.365,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change20d",
+        "value": 13.88,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-03T00:21:06.170Z",
-    "sjcVndPerTael": 190900000,
-    "intlVndPerTael": 168556671.55846202,
-    "premiumPct": 13.26,
-    "change7dPct": 3.91,
-    "change30dPct": 10.09,
-    "volatilityDailyPct": 1.7,
-    "ma7VndPerTael": 165827082,
-    "ma30VndPerTael": 159374743,
+    "latestTimestamp": "2026-03-03T01:34:57.487Z",
+    "sjcVndPerTael": 189400000,
+    "intlVndPerTael": 169169946.59494326,
+    "premiumPct": 11.96,
+    "change7dPct": 4.29,
+    "change30dPct": 10.49,
+    "volatilityDailyPct": 1.71,
+    "ma7VndPerTael": 165914693,
+    "ma30VndPerTael": 159395186,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -82,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-03T00:21:26.858Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-03T01:35:19.078Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5354.095,
+        "value": 5376.365,
         "unit": "USD/oz",
         "date": "2026-03-03",
-        "change1dPct": 0.6,
-        "change5dPct": 4.09,
-        "change20dPct": 8.22,
+        "change1dPct": 1.02,
+        "change5dPct": 4.52,
+        "change20dPct": 8.67,
         "relationToGold": "context"
       },
       {
@@ -183,28 +191,8 @@
       "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025",
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-03 | rttnews.com | Gold Pulls Back Off Best Levels But Remains Notably Higher",
-      "2026-03-03 | sanfordherald.com | Energy prices soar on Iran war fallout , stocks mostly fall",
-      "2026-03-03 | 12news.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
-      "2026-03-02 | dailyreckoning.com | The Iran War vs . Your Portfolio - The Daily Reckoning",
-      "2026-03-02 | kgw.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-03 | 12news.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
-      "2026-03-02 | kgw.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
-      "2026-03-02 | latimes.com | Stocks erase sharp losses , while oil prices leap on Iran war concerns",
-      "2026-03-02 | whas11.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
-      "2026-03-02 | whdh.com | US stocks erase sharp losses , while oil prices leap on worries about Iran war - Boston News , Weather , Sports",
-      "2026-03-02 | finance.yahoo.com | Stock Market Today , March 2 : Energy and Defense Stocks Surge on Middle East Conflict"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-03 | rttnews.com | Gold Pulls Back Off Best Levels But Remains Notably Higher",
-      "2026-03-03 | sanfordherald.com | Energy prices soar on Iran war fallout , stocks mostly fall",
-      "2026-03-03 | 12news.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
-      "2026-03-02 | kgw.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
-      "2026-03-02 | latimes.com | Stocks erase sharp losses , while oil prices leap on Iran war concerns",
-      "2026-03-02 | whas11.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
