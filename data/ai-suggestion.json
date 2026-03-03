@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-03T13:26:51.069Z",
+  "generatedAt": "2026-03-03T14:17:54.013Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh 6.24%/tháng, nhưng động lực tăng vọt bị cảnh báo bởi biến động ngày 1.81% và rủi ro điều chỉnh kỹ thuật sau khi giá thế giới giảm 2.87% trong phiên mới nhất.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +6.17%/tháng, nhưng động năng ngắn hạn đã suy yếu do giá thế giới điều chỉnh -3.15% trong phiên cuối. Nhà đầu tư không nên mua đuổi ở vùng giá cao 188.2 triệu/lượng, thay vào đó chờ đợi hồi phục kỹ thuật hoặc tín hiệu ổn định từ thị trường quốc tế.",
     "reasons": [
-      "Giá SJC 188.2 triệu VND/lượng đang vượt xa MA30 (159.2 triệu VND/lượng) tới 18.2%, tín hiệu quá mua rõ ràng cần thời gian củng cố.",
-      "Lợi suất thực Mỹ 10Y giảm mạnh 8.99% trong 20 ngày (xuống 1.72%) và VIX tăng 13.88% là động lực vĩ mô tích cực hỗ trợ xu hướng tăng dài hạn.",
-      "Xung đột Iran leo thang (tin ngày 03/03) đẩy biến động lên cao, giá thế giới giảm 2.87% phiên mới nhất cho thấy phân hóa mạnh, không phù hợp để đuổi đỉnh."
+      "Giá SJC 188.2 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (159.2 triệu/lượng) tới 18.2%, báo hiệu vùng quá mua kỹ thuật.",
+      "Thị trường thế giới điều chỉnh mạnh -3.15% trong ngày 03/03 (từ 5330.95 xuống 5165.47 USD/oz), tạo áp lực giảm giá trực tiếp lên vàng SJC.",
+      "Lợi suất thực 10 năm Mỹ giảm sâu -8.99% trong 20 ngày (xuống 1.72%) và VIX tăng +13.88% là động lực hỗ trợ vàng dài hạn, nhưng chưa đủ để bù đắp rủi ro điều chỉnh ngắn hạn.",
+      "Premium 15.78% nằm trong biên dao động 30 ngày (11.35%-17.83%), không có tín hiệu bất thường nhưng cũng không hấp dẫn để tham gia mới."
     ],
     "risks": [
-      "Giá đang ở mức cao nhất 5 năm (percentile 100), rủi ro điều chỉnh sâu nếu động lực địa chính trị dịu đi.",
-      "Premium 15.7% dao động mạnh trong tháng (11.35%-17.83%), thanh khoản có thể bị ảnh hưởng nếu chênh lệch giãn thêm.",
-      "Lịch sử cho thấy thời gian phục hồi sau sụt giảm tồi tệ lên đến 1369 ngày, rủi ro dài hạn nếu mua đỉnh."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới tiếp tục phá vỡ hỗ trợ kỹ thuật 5100 USD/oz, kéo giá SJC về vùng MA7 (~165 triệu/lượng).",
+      "Thanh khoản có thể giảm nếu nhà đầu tư chốt lời sau đà tăng +6.17% trong 30 ngày qua.",
+      "Dữ liệu vĩ mô thiếu cập nhật (Fed Funds, DXY, Treasury tính đến 27/02) có thể gây nhiễu tín hiệu phân tích."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 18.2,
+        "key": "sjc_price_latest",
+        "value": 188200000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_sjc",
-        "value": 6.24,
+        "key": "change_30d_sjc",
+        "value": 6.17,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change1d",
-        "value": -2.87,
+        "key": "ma30_sjc",
+        "value": 159174534,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "intl_gold_1d_change",
+        "value": -3.15,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "us_real_yield_20d_change",
         "value": -8.99,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "vix_20d_change",
         "value": 13.88,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.35,
+        "key": "premium_current",
+        "value": 15.78,
         "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 100,
-        "unit": "percentile",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-03T13:26:11.511Z",
+    "latestTimestamp": "2026-03-03T14:16:52.273Z",
     "sjcVndPerTael": 188200000,
-    "intlVndPerTael": 162664844.47968844,
-    "premiumPct": 15.7,
-    "change7dPct": 0.28,
-    "change30dPct": 6.24,
+    "intlVndPerTael": 162550382.64776006,
+    "premiumPct": 15.78,
+    "change7dPct": 0.21,
+    "change30dPct": 6.17,
     "volatilityDailyPct": 1.81,
-    "ma7VndPerTael": 164985393,
-    "ma30VndPerTael": 159178349,
+    "ma7VndPerTael": 164969041,
+    "ma30VndPerTael": 159174534,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-03T13:26:33.066Z",
+    "fetchedAt": "2026-03-03T14:17:13.654Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5169.265,
+        "value": 5154.745,
         "unit": "USD/oz",
         "date": "2026-03-03",
-        "change1dPct": -2.87,
-        "change5dPct": 0.49,
-        "change20dPct": 4.49,
+        "change1dPct": -3.15,
+        "change5dPct": 0.21,
+        "change20dPct": 4.19,
         "relationToGold": "context"
       },
       {
@@ -177,28 +184,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times",
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
-      "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025",
-      "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025"
+      "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-03 | finanznachrichten.de | Great Pacific Gold Corp .: Great Pacific Gold Intercepts 58 . 9m at 2 . 5 g / t AuEq",
-      "2026-03-03 | finanznachrichten.de | Rua Gold Inc .: RUA GOLD Files 43 - 101 Technical Reports for the Reefton and Glamorgan Projects in New Zealand",
-      "2026-03-03 | juniorminingnetwork.com | Great Pacific Gold Intercepts 58 . 9m at 2 . 5 g / t AuEq - First Kavasuki Drill Results",
-      "2026-03-03 | investopedia.com | Stock Market Today : Futures Plunge as Iran War Escalates ; Oil Jumps Further",
-      "2026-03-03 | therwandan.com | Rwanda Condemns  One - Sided  Sanctions as DRC Hails U . S . Action Against RDF"
-    ],
+    "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-03-03 | naroomanewsonline.com.au | Stock rout deepens , energy prices spark inflation fears",
-      "2026-03-03 | al-monitor.com | Global markets turmoil intensifies on Iran war",
-      "2026-03-03 | finance.yahoo.com | Google searches for  cant sell house  at all - time high expert warns of housing crash  worse than 2008 . Do this now",
-      "2026-03-03 | economictimes.indiatimes.com | US Stocks Today | Wall Street futures slide as Middle East conflict stokes inflation worries",
-      "2026-03-03 | theglobeandmail.com | Business Brief : War and the world economy",
-      "2026-03-03 | myjoyonline.com | Global markets on edge as US - Israeli strikes on Iran send gold and oil prices to record highs"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
