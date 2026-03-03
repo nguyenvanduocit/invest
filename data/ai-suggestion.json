@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-03T04:35:21.515Z",
+  "generatedAt": "2026-03-03T05:24:06.316Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,34 +7,34 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 10.43%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.7%/ngày.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +10.14%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.7%/ngày. Vĩ mô ủng hộ xu hướng tăng dài hạn nhờ lợi suất thực USD giảm mạnh, tuy nhiên nhà đầu tư nên chờ hồi phục về mức hỗ trợ cận MA7 (~165.8 triệu VND/lượng) thay vì đuổi đỉnh.",
     "reasons": [
-      "Động lượng tăng giá rất mạnh: Giá thế giới tăng 8.58% trong 20 ngày qua (tương đương từ ~4945 lên 5372 USD/oz), đẩy giá SJC vượt xa MA30 (159.4 triệu VND/lượng) lên 189.4 triệu VND/lượng.",
-      "Điều kiện vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh 8.99% trong 20 ngày (xuống mức 1.72%) và VIX tăng 13.88% tạo nhu cầu trú ẩn, hỗ trợ đà tăng của vàng.",
-      "Premium 12.02% đang ở mức hợp lý so với trung bình chuỗi dữ liệu (11-18%), không có dấu hiệu bong bóng nội địa.",
-      "Giá SJC 189.4 triệu VND/lượng đang giao dịch trên MA7 (165.9 triệu VND/lượng) với khoảng cách rất lớn, xác nhận xu hướng tăng ngắn hạn."
+      "Động lượng tăng rất mạnh: Giá thế giới tăng +8.3% trong 20 ngày qua (từ ~4945 lên 5358 USD/oz), kéo giá SJC tăng +10.14% sau 30 ngày và hiện đang giao dịch trên MA7 và MA30.",
+      "Vĩ mô (First-principles) tích cực: Lợi suất thực Mỹ 10 năm (US Real Yield) giảm sâu -8.99% trong 20 ngày (xuống mức 1.72%), tạo đòn bẩy lớn cho giá vàng tăng trưởng.",
+      "Biên độ dao động ngày (Volatility) đạt 1.7%, kết hợp với việc giá đang ở phân vị 100% trong 5 năm qua, cho thấy thị trường đang ở trạng thái quá mua (overbought) và dễ xảy ra chốt lời ngắn hạn.",
+      "Premium SJC đang ổn định ở mức 12.35%, thấp hơn đỉnh 17.83% trong chuỗi dữ liệu, cho thấy tâm lý thị trường Việt Nam chưa hoảng loạn quá mức."
     ],
     "risks": [
-      "Rủi ro mua đỉnh kỹ thuật cao: Giá đang ở phân vị 100% trong 5 năm (percentile 5y: 100), khả năng điều chỉnh giảm sau đợt tăng 10.43%/tháng là rất lớn.",
-      "Biên độ dao động ngày cao (1.7%) cho thấy thị trường biến động mạnh, nhà đầu tư ngắn hạn có thể bị 'đu đỉnh' nếu không quản lý rủi ro tốt.",
-      "Thiếu tín hiệu sự kiện vĩ mô rõ ràng từ dữ liệu policy/geopolitical headlines (chỉ có tin ECB ít liên quan), giảm độ tin cậy vào đà tăng dài hạn."
+      "Rủi ro điều chỉnh kỹ thuật (Pullback) cao: Với percentile 100% và biến động 1.7%/ngày, giá có thể giảm nhanh về vùng hỗ trợ MA7 (165.8 triệu VND/lượng) bất cứ lúc nào.",
+      "Thiếu tín hiệu sự kiện rõ ràng: Các headline chính sách (ECB) và địa chính trị trong dữ liệu không chứa đựng thông tin trọng yếu tác động trực tiếp đến giá vàng, làm giảm độ tin cậy của đà tăng hiện tại.",
+      "Thanh khoản và hồi phục: Lịch sử cho thấy lần suy giảm tồi tệ nhất là -41.26% và mất trung bình 1369 ngày để hồi phục, rủi ro dài hạn là rất lớn nếu mua đỉnh."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "Giá vàng SJC hiện tại",
         "value": 189400000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 5372.72,
-        "unit": "USD/oz",
+        "key": "Giá vàng thế giới quy đổi",
+        "value": 168637843,
+        "unit": "VND/lượng",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Tăng trưởng 30 ngày (SJC)",
-        "value": 10.43,
+        "key": "Biên độ dao động ngày",
+        "value": 1.7,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -45,41 +45,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "VIX (Biến động 20 ngày)",
-        "value": 13.88,
-        "unit": "%",
+        "key": "Giá vàng thế giới (XAUUSD) hiện tại",
+        "value": 5357.705,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
-        "key": "Phân vị 5 năm",
+        "key": "MA7 giá SJC",
+        "value": 165838678,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Phân vị giá 5 năm",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 (SJC)",
-        "value": 159391933,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium hiện tại",
-        "value": 12.02,
+        "key": "Thay đổi giá SJC 30 ngày",
+        "value": 10.14,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-03T04:34:39.089Z",
+    "latestTimestamp": "2026-03-03T05:23:18.659Z",
     "sjcVndPerTael": 189400000,
-    "intlVndPerTael": 169072350.0664665,
-    "premiumPct": 12.02,
-    "change7dPct": 4.23,
-    "change30dPct": 10.43,
+    "intlVndPerTael": 168586754.63518825,
+    "premiumPct": 12.35,
+    "change7dPct": 3.96,
+    "change30dPct": 10.14,
     "volatilityDailyPct": 1.7,
-    "ma7VndPerTael": 165900750,
-    "ma30VndPerTael": 159391933,
+    "ma7VndPerTael": 165838678,
+    "ma30VndPerTael": 159377449,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-03T04:35:00.493Z",
+    "fetchedAt": "2026-03-03T05:23:40.082Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5371.665,
+        "value": 5357.705,
         "unit": "USD/oz",
         "date": "2026-03-03",
-        "change1dPct": 0.93,
-        "change5dPct": 4.43,
-        "change20dPct": 8.58,
+        "change1dPct": 0.67,
+        "change5dPct": 4.16,
+        "change20dPct": 8.3,
         "relationToGold": "context"
       },
       {
@@ -184,12 +184,12 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times",
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025",
-      "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025",
-      "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament"
+      "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
