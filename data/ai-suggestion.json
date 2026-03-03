@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-03T12:11:38.449Z",
+  "generatedAt": "2026-03-03T13:26:51.069Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với động lượng tăng mạnh 30 ngày qua, nhưng tín hiệu ngắn hạn đã quá mua khi giá cắt xuống dưới MA7 VND. Lợi suất thực USD giảm mạnh hỗ trợ xu hướng tăng dài hạn, tuy nhiên rủi ro điều chỉnh kỹ thuật đang gia tăng.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh 6.24%/tháng, nhưng động lực tăng vọt bị cảnh báo bởi biến động ngày 1.81% và rủi ro điều chỉnh kỹ thuật sau khi giá thế giới giảm 2.87% trong phiên mới nhất.",
     "reasons": [
-      "Giá SJC 188.2 triệu VND/lượng đang giao dịch dưới MA7 (185 triệu VND/lượng) và cao hơn đáng kể so với MA30 (159.2 triệu VND/lượng), cho thấy động lượng tăng mạnh nhưng đang có dấu hiệu điều chỉnh ngắn hạn.",
-      "Lợi suất thực USD 10Y giảm mạnh 8.99% trong 20 ngày qua xuống 1.72%, tạo động lực hỗ trợ giá vàng tăng dài hạn.",
-      "Giá thế giới giảm -2.62% trong ngày về 5174.58 USD/oz, kéo premium Việt Nam nới rộng lên 15.58%, cho thấy tâm lý thị trường nội địa đang thận trọng."
+      "Giá SJC 188.2 triệu VND/lượng đang vượt xa MA30 (159.2 triệu VND/lượng) tới 18.2%, tín hiệu quá mua rõ ràng cần thời gian củng cố.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 8.99% trong 20 ngày (xuống 1.72%) và VIX tăng 13.88% là động lực vĩ mô tích cực hỗ trợ xu hướng tăng dài hạn.",
+      "Xung đột Iran leo thang (tin ngày 03/03) đẩy biến động lên cao, giá thế giới giảm 2.87% phiên mới nhất cho thấy phân hóa mạnh, không phù hợp để đuổi đỉnh."
     ],
     "risks": [
-      "Giá đang ở mức cao nhất 5 năm (percentile 100%), rủi ro chốt lời ngắn hạn rất lớn khi biến động ngày đạt 1.8%.",
-      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia trong input, độ tin cậy đánh giá xu hướng bị giới hạn.",
-      "Premium dao động mạnh trong khoảng 11-18% trong 30 ngày qua, có thể gây thua lỗ chênh lệch nếu mua đỉnh premium."
+      "Giá đang ở mức cao nhất 5 năm (percentile 100), rủi ro điều chỉnh sâu nếu động lực địa chính trị dịu đi.",
+      "Premium 15.7% dao động mạnh trong tháng (11.35%-17.83%), thanh khoản có thể bị ảnh hưởng nếu chênh lệch giãn thêm.",
+      "Lịch sử cho thấy thời gian phục hồi sau sụt giảm tồi tệ lên đến 1369 ngày, rủi ro dài hạn nếu mua đỉnh."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 188200000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma7_vnd",
-        "value": 165009971,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 6.35,
+        "key": "sjc_price_vs_ma30",
+        "value": 18.2,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
+        "key": "change30d_sjc",
+        "value": 6.24,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.72,
+        "key": "intl_gold_change1d",
+        "value": -2.87,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_change20d",
+        "key": "us_real_yield_10y_change20d",
         "value": -8.99,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_pct",
-        "value": 15.58,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_gold_1d_change",
-        "value": -2.62,
+        "key": "vix_change20d",
+        "value": 13.88,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 11.35,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-03T12:10:52.745Z",
+    "latestTimestamp": "2026-03-03T13:26:11.511Z",
     "sjcVndPerTael": 188200000,
-    "intlVndPerTael": 162836897.38617706,
-    "premiumPct": 15.58,
-    "change7dPct": 0.39,
-    "change30dPct": 6.35,
-    "volatilityDailyPct": 1.8,
-    "ma7VndPerTael": 165009971,
-    "ma30VndPerTael": 159184084,
+    "intlVndPerTael": 162664844.47968844,
+    "premiumPct": 15.7,
+    "change7dPct": 0.28,
+    "change30dPct": 6.24,
+    "volatilityDailyPct": 1.81,
+    "ma7VndPerTael": 164985393,
+    "ma30VndPerTael": 159178349,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-03T12:11:14.421Z",
+    "fetchedAt": "2026-03-03T13:26:33.066Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5182.855,
+        "value": 5169.265,
         "unit": "USD/oz",
         "date": "2026-03-03",
-        "change1dPct": -2.62,
-        "change5dPct": 0.76,
-        "change20dPct": 4.76,
+        "change1dPct": -2.87,
+        "change5dPct": 0.49,
+        "change20dPct": 4.49,
         "relationToGold": "context"
       },
       {
@@ -190,8 +184,21 @@
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025",
       "2026-02-26 | ECB Press / Speeches | Financial statements of the ECB for 2025"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-03-03 | finanznachrichten.de | Great Pacific Gold Corp .: Great Pacific Gold Intercepts 58 . 9m at 2 . 5 g / t AuEq",
+      "2026-03-03 | finanznachrichten.de | Rua Gold Inc .: RUA GOLD Files 43 - 101 Technical Reports for the Reefton and Glamorgan Projects in New Zealand",
+      "2026-03-03 | juniorminingnetwork.com | Great Pacific Gold Intercepts 58 . 9m at 2 . 5 g / t AuEq - First Kavasuki Drill Results",
+      "2026-03-03 | investopedia.com | Stock Market Today : Futures Plunge as Iran War Escalates ; Oil Jumps Further",
+      "2026-03-03 | therwandan.com | Rwanda Condemns  One - Sided  Sanctions as DRC Hails U . S . Action Against RDF"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-03-03 | naroomanewsonline.com.au | Stock rout deepens , energy prices spark inflation fears",
+      "2026-03-03 | al-monitor.com | Global markets turmoil intensifies on Iran war",
+      "2026-03-03 | finance.yahoo.com | Google searches for  cant sell house  at all - time high expert warns of housing crash  worse than 2008 . Do this now",
+      "2026-03-03 | economictimes.indiatimes.com | US Stocks Today | Wall Street futures slide as Middle East conflict stokes inflation worries",
+      "2026-03-03 | theglobeandmail.com | Business Brief : War and the world economy",
+      "2026-03-03 | myjoyonline.com | Global markets on edge as US - Israeli strikes on Iran send gold and oil prices to record highs"
+    ]
   }
 }
