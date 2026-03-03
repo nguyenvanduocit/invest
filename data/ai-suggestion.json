@@ -1,85 +1,77 @@
 {
-  "generatedAt": "2026-03-02T23:06:43.401Z",
+  "generatedAt": "2026-03-03T00:21:47.524Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +9.83%/tháng, nhưng rủi ro điều chỉnh kỹ thuật rất lớn khi biên độ dao động 1.68%/ngày; nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ cận MA7 (~165 triệu/lượng) để tích sản.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng quá nóng trong 30 ngày qua (+10.09%), cộng hưởng rủi ro địa chính trị từ xung đột Iran. Tuy nhiên, biên độ dao động cao (1.7%) và giá vượt xa MA30 (19.7%) khuyến nghị nhà đầu tư chờ điều chỉnh về vùng hỗ trợ cận MA7 thay vì đuổi đỉnh.",
     "reasons": [
-      "Động lượng tăng rất mạnh: Giá thế giới tăng +8.03% trong 20 ngày và +3.9% trong 5 ngày, kéo giá SJC lên mức kỷ lục 190.9 triệu/lượng.",
-      "Điều kiện vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh -8.99% trong 20 ngày (xuống 1.72%) và VIX tăng +13.88% đến mức 19.86, hỗ trợ vàng.",
-      "Premium 14.12% nằm trong vùng ổn định của 30 ngày qua (11.93%-18.45%), không có dấu hiệu căng thẳng cực đoan về thanh khoản.",
-      "Dữ liệu vĩ mô first-principles bị thiếu (healthy: false), không có thông tin hành động quốc gia hay chính sách Fed mới, giới hạn độ tin cậy phân tích."
+      "Đà tăng quá nóng: Giá SJC 190.9 triệu VND/lượng đang vượt xa MA30 (159.4 triệu VND/lượng) tới 19.7% và tăng 10.09% trong 30 ngày, tín hiệu mua quá mức (overbought) rõ rệt.",
+      "Rủi ro địa chính trị leo thang: Tin tức về xung đột Iran (Iran war fallout) đẩy giá vàng thế giới lên 5356 USD/oz và VIX tăng 13.88% trong 20 ngày, tạo đà tăng nhưng cũng làm tăng biên độ dao động.",
+      "Động lực vĩ mô thuận lợi: Lợi suất thực Mỹ 10 năm giảm mạnh 8.99% trong 20 ngày (xuống 1.72%) và kỳ vọng lạm phát tăng 1.33% trong 5 ngày, hỗ trợ xu hướng tăng dài hạn của vàng."
     ],
     "risks": [
-      "Mua đỉnh lịch sử: Giá đang ở phân vị 100% trong 5 năm, rủi ro điều chỉnh giảm ngắn hạn rất cao.",
-      "Biến động tăng vọt: Volatility 1.68%/ngày kết hợp với đà tăng 9.83%/tháng cho thấy thị trường đang nóng, dễ xảy ra chốt lời ồ ạt.",
-      "Sự kiện địa chính trị Iran: Tin tức chiến tranh có thể gây biến động hai chiều thất thường, khó dự đoán."
+      "Điều chỉnh kỹ thuật sâu: Với mức giá ở phân vị 100% 5 năm và biến động 1.7%/ngày, rủi ro chốt lời ngắn hạn (pullback) về vùng MA7 (165.8 triệu VND/lượng) là rất lớn.",
+      "Thanh khoản và trượt giá: Premium 13.26% là bình thường nhưng chênh lệch giá mua-bán có thể giãn ra khi thị trường biến động mạnh do tin tức chiến sự."
     ],
     "evidence": [
       {
-        "key": "sjc_price_latest",
+        "key": "SJC Spot Price",
         "value": 190900000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "change30d_pct",
-        "value": 9.83,
+        "key": "MA30 Distance",
+        "value": 19.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -8.99,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "vix_level",
-        "value": 19.86,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_current",
-        "value": 14.12,
+        "key": "VIX Change 20d",
+        "value": 13.88,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "percentile_5y",
+        "key": "Gold World Price",
+        "value": 5356.34,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 8.03,
+        "key": "Volatility Daily",
+        "value": 1.7,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 1.68,
-        "unit": "%/ngày",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-02T23:06:04.309Z",
+    "latestTimestamp": "2026-03-03T00:21:06.170Z",
     "sjcVndPerTael": 190900000,
-    "intlVndPerTael": 167285777.1323062,
-    "premiumPct": 14.12,
-    "change7dPct": 3.67,
-    "change30dPct": 9.83,
-    "volatilityDailyPct": 1.68,
-    "ma7VndPerTael": 164909605,
-    "ma30VndPerTael": 158534113,
+    "intlVndPerTael": 168556671.55846202,
+    "premiumPct": 13.26,
+    "change7dPct": 3.91,
+    "change30dPct": 10.09,
+    "volatilityDailyPct": 1.7,
+    "ma7VndPerTael": 165827082,
+    "ma30VndPerTael": 159374743,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +82,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-02T23:06:25.768Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-03T00:21:26.858Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5344.585,
+        "value": 5354.095,
         "unit": "USD/oz",
         "date": "2026-03-03",
-        "change1dPct": 0.42,
-        "change5dPct": 3.9,
-        "change20dPct": 8.03,
+        "change1dPct": 0.6,
+        "change5dPct": 4.09,
+        "change20dPct": 8.22,
         "relationToGold": "context"
       },
       {
@@ -192,12 +184,27 @@
       "2026-02-26 | ECB Press / Speeches | Christine Lagarde: Hearing of the Committee on Economic and Monetary Affairs of the European Parliament"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-02 | vtcng.com | Energy prices soar on Iran war fallout , stocks mostly fall",
-      "2026-03-02 | cheknews.ca | Oil prices leap on worries about war in the Middle East , while US stocks trim their sharp losses",
-      "2026-03-02 | bozemandailychronicle.com | US stocks erase sharp losses , while oil prices leap on worries about Iran war",
-      "2026-03-02 | markets.financialcontent.com | FinancialContent - Inflationary Alarm Bells : ISM Price Spike and Geopolitical Turmoil Reshape 2026 Rate Outlook"
+      "2026-03-03 | rttnews.com | Gold Pulls Back Off Best Levels But Remains Notably Higher",
+      "2026-03-03 | sanfordherald.com | Energy prices soar on Iran war fallout , stocks mostly fall",
+      "2026-03-03 | 12news.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
+      "2026-03-02 | dailyreckoning.com | The Iran War vs . Your Portfolio - The Daily Reckoning",
+      "2026-03-02 | kgw.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict"
     ],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "countryActionHeadlines": [
+      "2026-03-03 | 12news.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
+      "2026-03-02 | kgw.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
+      "2026-03-02 | latimes.com | Stocks erase sharp losses , while oil prices leap on Iran war concerns",
+      "2026-03-02 | whas11.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
+      "2026-03-02 | whdh.com | US stocks erase sharp losses , while oil prices leap on worries about Iran war - Boston News , Weather , Sports",
+      "2026-03-02 | finance.yahoo.com | Stock Market Today , March 2 : Energy and Defense Stocks Surge on Middle East Conflict"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-03 | rttnews.com | Gold Pulls Back Off Best Levels But Remains Notably Higher",
+      "2026-03-03 | sanfordherald.com | Energy prices soar on Iran war fallout , stocks mostly fall",
+      "2026-03-03 | 12news.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
+      "2026-03-02 | kgw.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict",
+      "2026-03-02 | latimes.com | Stocks erase sharp losses , while oil prices leap on Iran war concerns",
+      "2026-03-02 | whas11.com | US stocks erase sharp losses , while oil prices leap on worries about Iran conflict"
+    ]
   }
 }
