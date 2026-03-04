@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T22:08:02.551Z",
+  "generatedAt": "2026-03-04T23:08:45.250Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng do VIX tăng vọt 31% và giá dầu/xăng tăng áp lực lạm phát. Nhà đầu tư không nên mua đuổi ở vùng giá cao kỷ lục này, tốt nhất là chờ tín hiệu hồi phục về vùng hỗ trợ gần MA7VND (~164 triệu/lượng) hoặc đợi sự rõ ràng hơn về tác động của cuộc chiến Iran.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +4.56%/tháng, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi lợi suất thực USD bật tăng và VIX giảm nhiệt. Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc tín hiệu ổn định thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 184.2 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 4.36% trong 30 ngày và nằm trên MA30VND (159.6 triệu/lượng), cho thấy xu hướng tăng vẫn còn nhưng đã vào vùng quá mua.",
-      "VIX tăng mạnh 30.94% trong 20 ngày lên mức 23.57 kết hợp với tin tức địa chính trị (chiến tranh Iran, dầu khí tăng giá) thường hỗ trợ vàng, nhưng biến động cao cũng đồng nghĩa rủi ro điều chỉnh nhanh.",
-      "Lợi suất thực 10Y Mỹ giảm sâu 8.76% trong 20 ngày xuống 1.77% là động lực tăng giá vàng chính, tuy nhiên lợi suất 2Y và 10Y đang có dấu hiệu hồi phục nhẹ trong 5 ngày qua.",
-      "Premium 14.01% hiện tại thấp hơn đỉnh 18% ngày 17/02 và 17.12% ngày 03/03, cho thấy thị trường Việt Nam đang định giá hợp lý hơn, không quá sôi động cục bộ."
+      "Giá SJC 184.2 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (159.6 triệu VND/lượng) tới 15.4%, báo hiệu vùng quá mua kỹ thuật.",
+      "Lợi suất thực USD 10Y tăng mạnh +0.57%/ngày lên 1.77%, tạo áp lực nghịch biến lên giá vàng thế giới trong ngắn hạn sau đà tăng +7.78%/20 ngày.",
+      "Premium SJC 13.8% đang ở mức hợp lý so với trung bình 30 ngày (13.8%), không có tín hiệu bong bóng địa phương.",
+      "VIX giảm -9.93%/ngày xuống 23.57 cho thấy cơn sợ hãi ngắn hạn hạ nhiệt, giảm động lực đẩy giá vàng lên cao hơn."
     ],
     "risks": [
-      "Giá xăng tăng 30% do chiến tranh Iran có thể khiến lạm phát quay trở lại, khiến Fed duy trì lãi suất cao hơn lâu hơn, gây áp lực lên giá vàng.",
-      "Đang ở vùng giá kỷ lục, rủi ro chốt lời ngắn hạn (correction) rất lớn khi bất kỳ tin tức hòa bình hoặc giảm căng thẳng địa chính trị xuất hiện.",
-      "Biến động ngày (volatility) ở mức 1.71%, kết hợp VIX cao có thể gây sụt giảm nhanh 3-5% trong thời gian ngắn."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 5100 USD/oz và lợi suất thực USD tiếp tục tăng.",
+      "Thanh khoản cao nhưng biến động 1.71%/ngày có thể gây áp lực tâm lý cho nhà đầu tư đu đỉnh.",
+      "Thời gian phục hồi trung bình từ đợt sụt giảm tồi tệ nhất là 1369 ngày - rủi ro dài hạn nếu mua sai điểm."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs 5Y Percentile",
+        "key": "sjc_price",
+        "value": 184200000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 4.36,
+        "key": "change30d_pct",
+        "value": 4.56,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30VND",
-        "value": 24.61,
-        "unit": "triệu VND/lượng",
+        "key": "ma30_vnd",
+        "value": 159599267,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 30.94,
+        "key": "premium_pct",
+        "value": 13.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -8.76,
+        "key": "real_yield_change1d",
+        "value": 0.57,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium vs 30d High Premium",
-        "value": 14.01,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Gas Price Increase (Iran War)",
-        "value": 30,
+        "key": "vix_change1d",
+        "value": -9.93,
         "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-04T22:07:27.349Z",
+    "latestTimestamp": "2026-03-04T23:08:26.415Z",
     "sjcVndPerTael": 184200000,
-    "intlVndPerTael": 161564101.75037628,
-    "premiumPct": 14.01,
-    "change7dPct": -0.89,
-    "change30dPct": 4.36,
+    "intlVndPerTael": 161863995.04240137,
+    "premiumPct": 13.8,
+    "change7dPct": -0.71,
+    "change30dPct": 4.56,
     "volatilityDailyPct": 1.71,
-    "ma7VndPerTael": 163983774,
-    "ma30VndPerTael": 159589270,
+    "ma7VndPerTael": 164026616,
+    "ma30VndPerTael": 159599267,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-04T22:07:41.886Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-04T23:08:29.858Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5141.395,
+        "value": 5151.355,
         "unit": "USD/oz",
-        "date": "2026-03-04",
-        "change1dPct": 1.04,
-        "change5dPct": -0.46,
-        "change20dPct": 3.55,
+        "date": "2026-03-05",
+        "change1dPct": 0.19,
+        "change5dPct": -0.65,
+        "change20dPct": 7.78,
         "relationToGold": "context"
       },
       {
@@ -185,18 +191,8 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-04 | wapt.com | Hegseth says torpedo from US submarine sank Iranian warship",
-      "2026-03-04 | investopedia.com | Bond Yields Rise as Oil Prices Add Inflation Pressure",
-      "2026-03-04 | boredpanda.com | Olympic Hero Jack Hughe Awkward Interaction With Crowd Goes Viral"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-04 | cointelegraph.com | Trump Sends Pro - Bitcoin Fed Chair Nomination to the Senate",
-      "2026-03-04 | newsweek.com | 5 charts showing how Trump Iran war is blowing back on average Americans"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-04 | finance.yahoo.com | Stock markets slump amid Iran war as gas prices jump 30 % to three - year high",
-      "2026-03-04 | baystreet.ca | Baystreet . ca - USD / Canadian Dollar - March FX Monthly Outlook"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
