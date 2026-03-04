@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T18:14:14.263Z",
+  "generatedAt": "2026-03-04T19:16:29.849Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lực tăng bị kìm hãm bởi lợi suất thực USD tăng vọt và rủi ro điều chỉnh ngắn hạn sau đợt chạy sóng.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.44%/tháng, nhưng tín hiệu vĩ mô đang chuyển tiêu cực khi VIX tăng vọt 30.94% và lợi suất thực USD bật tăng 2.33%, gây áp lực điều chỉnh ngắn hạn trước khi xu hướng xác lập lại.",
     "reasons": [
-      "Giá SJC 184.2 triệu VND/lượng đang vượt xa MA30 (159.3 triệu VND/lượng) tới 15.6%, tín hiệu quá mua rõ ràng cần thời gian củng cố.",
-      "Lợi suất thực USD 10 năm tăng mạnh +2.33%/ngày lên 1.76%, tạo áp lực ngược đáng kể lên giá vàng thế giới.",
-      "VIX tăng 30.94% trong 20 ngày lên mức 23.57 cho thấy thị trường tài chính căng thẳng, có thể kích hoạt bán tháo vàng để cover margin.",
-      "Giá thế giới giảm -0.87% trong 5 ngày gần nhất cho thấy động lượng tăng đã yếu đi đáng kể."
+      "Giá SJC 184.2 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá đã tăng 9.44% chỉ trong 30 ngày qua.",
+      "Áp lực điều chỉnh từ vĩ mô: VIX tăng mạnh 30.94% (20 ngày) đi kèm lợi suất thực 10 năm USD tăng 2.33%, tín hiệu thường gây áp lực bán vàng.",
+      "Động lượng suy yếu: Giá SJC giảm 1.45% trong 7 ngày gần nhất, thấp hơn đỉnh tạm thời 190.9 triệu VND/lượng (ngày 02/03).",
+      "Premium 14.28% nằm trong biên dao động 30 ngày (11.51%-18%), không có tín hiệu bất thường để kỳ vọng arbitrage."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu lợi suất thực USD tiếp tục tăng hoặc căng thẳng Iran hạ nhiệt.",
-      "Giá đang ở mức cao nhất 5 năm, điểm mua không thuận lợi về mặt risk/reward cho nhà đầu tư mới.",
-      "Biến động ngày 1.74% có thể gây áp lực tâm lý lớn cho vị thế đòn bẩy."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh nếu dữ liệu lạm phát Mỹ nóng hơn dự kiến khiến Fed giữ lãi suất cao lâu hơn.",
+      "Thanh khoản có thể giảm nếu nhà đầu tư chốt lời sau đà tăng 9.44%/tháng.",
+      "Biến động cao (1.74%/ngày) có thể gây sụt giảm tài khoản nhanh nếu dùng đòn bẩy."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 15.6,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_30d_change",
-        "value": 9.22,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_5y_percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_1d_change",
-        "value": 2.33,
+        "key": "sjc_change_30d",
+        "value": 9.44,
         "unit": "%",
-        "source": "macro_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
+        "key": "sjc_change_7d",
+        "value": -1.45,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change_20d",
         "value": 30.94,
         "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "gold_spot_5d_change",
-        "value": -0.87,
+        "key": "us_real_yield_10y_change_1d",
+        "value": 2.33,
         "unit": "%",
         "source": "macro_context"
       },
       {
-        "key": "current_premium",
-        "value": 14.5,
+        "key": "premium_current",
+        "value": 14.28,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 1.74,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_price_latest",
+        "value": 184200000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-04T18:13:45.692Z",
+    "latestTimestamp": "2026-03-04T19:16:08.228Z",
     "sjcVndPerTael": 184200000,
-    "intlVndPerTael": 160866909.78736797,
-    "premiumPct": 14.5,
-    "change7dPct": -1.65,
-    "change30dPct": 9.22,
+    "intlVndPerTael": 161190047.2841513,
+    "premiumPct": 14.28,
+    "change7dPct": -1.45,
+    "change30dPct": 9.44,
     "volatilityDailyPct": 1.74,
-    "ma7VndPerTael": 164114415,
-    "ma30VndPerTael": 159345978,
+    "ma7VndPerTael": 164160578,
+    "ma30VndPerTael": 159356749,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-04T18:14:01.713Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-04T19:16:11.339Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5119.995,
+        "value": 5129.995,
         "unit": "USD/oz",
         "date": "2026-03-04",
-        "change1dPct": 0.62,
-        "change5dPct": -0.87,
-        "change20dPct": 3.12,
+        "change1dPct": 0.82,
+        "change5dPct": -0.68,
+        "change20dPct": 3.32,
         "relationToGold": "context"
       },
       {
@@ -185,25 +191,8 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-04 | news18.com | Dubai , Playground For The World Super - Rich , Sees Them Flee As Iran War Escalates | World News",
-      "2026-03-04 | bullionvault.com | Gold Steadies as Stocks Rally from Iran War Chaos , But Central - Bank Buying Sinks",
-      "2026-03-04 | thetimes.com | What the Iran war means for petrol prices , savings and mortgages"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-04 | bullionvault.com | Gold Steadies as Stocks Rally from Iran War Chaos , But Central - Bank Buying Sinks",
-      "2026-03-04 | theglobeandmail.com | USDCAD Braces for Volatility as Oil Risk and Key Technical Levels Align",
-      "2026-03-04 | news.az | US dollar surge after Iran war may be short - lived",
-      "2026-03-04 | markets.financialcontent.com | FinancialContent - Bullion Bloodbath : Global Sell - Off Triggers Sharp  Catch - Up  Correction in Gold and Silver ETFs",
-      "2026-03-04 | businessday.co.za | CLARENCE TSHITEREKE | Gold surge on global tensions a windfall for South Africa"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-04 | bullionvault.com | Gold Steadies as Stocks Rally from Iran War Chaos , But Central - Bank Buying Sinks",
-      "2026-03-04 | thetimes.com | What the Iran war means for petrol prices , savings and mortgages",
-      "2026-03-04 | aa.com.tr | Global bond yields hit multi - month highs amid Middle East conflict fuels inflation fears",
-      "2026-03-04 | firstpost.com | When will the Iran war end ? Oil and stock markets may have a clue",
-      "2026-03-04 | markets.financialcontent.com | FinancialContent - Platinum Plummets 9 . 5 % as Iranian Conflict Ignites Global Commodity Rout",
-      "2026-03-04 | zonebourse.com | Bitcoin rebounds as war escalates : Is the safe - haven narrative returning ?"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
