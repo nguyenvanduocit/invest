@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T19:16:29.849Z",
+  "generatedAt": "2026-03-04T20:09:30.628Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 9.44%/tháng, nhưng tín hiệu vĩ mô đang chuyển tiêu cực khi VIX tăng vọt 30.94% và lợi suất thực USD bật tăng 2.33%, gây áp lực điều chỉnh ngắn hạn trước khi xu hướng xác lập lại.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi rủi ro địa chính trị (VIX 23.57) và lợi suất thực giảm hỗ trợ xu hướng dài hạn; trạng thái chờ mua sắm dần (DCA) ở mức điều chỉnh hợp lý hơn là an toàn nhất hiện tại.",
     "reasons": [
-      "Giá SJC 184.2 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉp cao khi giá đã tăng 9.44% chỉ trong 30 ngày qua.",
-      "Áp lực điều chỉnh từ vĩ mô: VIX tăng mạnh 30.94% (20 ngày) đi kèm lợi suất thực 10 năm USD tăng 2.33%, tín hiệu thường gây áp lực bán vàng.",
-      "Động lượng suy yếu: Giá SJC giảm 1.45% trong 7 ngày gần nhất, thấp hơn đỉnh tạm thời 190.9 triệu VND/lượng (ngày 02/03).",
-      "Premium 14.28% nằm trong biên dao động 30 ngày (11.51%-18%), không có tín hiệu bất thường để kỳ vọng arbitrage."
+      "Giá SJC 184.2 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%) và giảm nhẹ 1.08% sau 7 ngày gần như đi ngang, cho thấy áp lực chốt lời ngắn hạn.",
+      "Lợi suất thực Mỹ 10Y giảm mạnh 7.37% trong 20 ngày (xuống 1.76%) và VIX tăng vọt 30.94% lên 23.57 điểm là động lực hỗ trợ giá vàng dài hạn, giữ xu hướng chính là tăng.",
+      "Premium 14.22% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (thấp hơn đỉnh 17.76%), giá thế giới quay lại trên MA7 (161.9 triệu VND/lượng) cho thấy kỹ thuật thế giới đang ổn định."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh nếu dữ liệu lạm phát Mỹ nóng hơn dự kiến khiến Fed giữ lãi suất cao lâu hơn.",
-      "Thanh khoản có thể giảm nếu nhà đầu tư chốt lời sau đà tăng 9.44%/tháng.",
-      "Biến động cao (1.74%/ngày) có thể gây sụt giảm tài khoản nhanh nếu dùng đòn bẩy."
+      "Mua tại đỉnh lịch sử 5 năm rủi ro điều chỉnh sâu nếu thị trường chứng kiến đợt chốt lời mạnh hơn.",
+      "Diễn biến xung đột Trung Đông căng thẳng có thể gây biến động giá bất ngờ hai chiều.",
+      "Thanh khoản thấp hoặc thiếu dữ liệu vĩ mô mới nhất từ Fed/Địa chính trị có thể làm giảm độ tin cậy dự báo."
     ],
     "evidence": [
       {
@@ -27,59 +26,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 9.44,
+        "key": "sjc_change_7d",
+        "value": -1.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -1.45,
+        "key": "us_real_yield_10y_change_20d",
+        "value": -7.37,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_index_value",
+        "value": 23.57,
+        "unit": "index",
+        "source": "first_principles_context"
       },
       {
         "key": "vix_change_20d",
         "value": 30.94,
         "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_1d",
-        "value": 2.33,
-        "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
         "key": "premium_current",
-        "value": 14.28,
+        "value": 14.22,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 1.74,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_price_latest",
-        "value": 184200000,
+        "key": "intl_price_vs_ma7",
+        "value": 161267191,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-04T19:16:08.228Z",
+    "latestTimestamp": "2026-03-04T20:09:06.058Z",
     "sjcVndPerTael": 184200000,
-    "intlVndPerTael": 161190047.2841513,
-    "premiumPct": 14.28,
-    "change7dPct": -1.45,
-    "change30dPct": 9.44,
-    "volatilityDailyPct": 1.74,
-    "ma7VndPerTael": 164160578,
-    "ma30VndPerTael": 159356749,
+    "intlVndPerTael": 161267191.2080007,
+    "premiumPct": 14.22,
+    "change7dPct": -1.08,
+    "change30dPct": 4.17,
+    "volatilityDailyPct": 1.71,
+    "ma7VndPerTael": 163941358,
+    "ma30VndPerTael": 159579373,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-04T19:16:11.339Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-04T20:09:15.062Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5129.995,
+        "value": 5131.685,
         "unit": "USD/oz",
         "date": "2026-03-04",
-        "change1dPct": 0.82,
-        "change5dPct": -0.68,
-        "change20dPct": 3.32,
+        "change1dPct": 0.85,
+        "change5dPct": -0.65,
+        "change20dPct": 3.36,
         "relationToGold": "context"
       },
       {
@@ -191,8 +184,22 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-04 | milwaukeesun.com | This could prove to be Americas Achilles heel in the Iran war"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-04 | globalnews.ca | The Bank of Canada says these are the 3 warning signs for mortgage default - National",
+      "2026-03-04 | markets.financialcontent.com | FinancialContent - The Bessent  Push - Pull : Treasury Secretary Signals New Economic Doctrine Amidst Global Tariff Hikes and Energy Surges",
+      "2026-03-04 | thecable.ng | Nigeria gold reserves now $3 . 5bn , says CBN",
+      "2026-03-04 | keyt.com | US stocks rise , Asian markets get rocked as Middle East conflict intensifies",
+      "2026-03-04 | suncommercial.com | Asian stocks tumble further , oil extends gains as inflation fears grow"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-04 | me.smenet.org | Gold bulls say broader rally is intact despite investor dash for cash - Mining Engineering Online",
+      "2026-03-04 | thecable.ng | Nigeria gold reserves now $3 . 5bn , says CBN",
+      "2026-03-04 | theguardian.com | How will war in the Middle East affect your finances ?",
+      "2026-03-04 | keyt.com | US stocks rise , Asian markets get rocked as Middle East conflict intensifies",
+      "2026-03-04 | dailyforex.com | Gold Analysis 04 / 03 : Price – Gold Continues to See Volatile"
+    ]
   }
 }
