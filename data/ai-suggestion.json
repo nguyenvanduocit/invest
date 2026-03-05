@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T12:12:27.489Z",
+  "generatedAt": "2026-03-05T13:28:42.996Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 4.92%/tháng, nhưng thanh khoản thấp và biến động cao (VIX 23.57) cảnh báo rủi ro điều chỉnh ngắn hạn sau đợt tăng nóng; nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ gần MA7 (~164.5 triệu VND/lượng).",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh +3.74%/tháng, nhưng động lượng ngắn hạn đã yếu đi (-1.49%/7 ngày) và thanh khoản có thể thấp. Vĩ mô ủng hộ vàng dài hạn nhờ lợi suất thực giảm và VIX tăng, nhưng rủi ro điều chỉnh kỹ thuật ở vùng giá cao là rất lớn, nên chờ xác nhận hoặc mua nhỏ giọt thay vì FOMO.",
     "reasons": [
-      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA30 (160.0 triệu VND/lượng) tới 15.4%, tín hiệu quá mua kỹ thuật ngắn hạn.",
-      "VIX tăng vọt 20.56% trong 5 ngày lên mức 23.57, phản ánh lo ngại thị trường có thể gây biến động giá vàng hai chiều.",
-      "Lợi suất thực 10Y giảm mạnh -8.76% trong 20 ngày (xuống 1.77%) là động lực hỗ trợ vàng dài hạn, nhưng giá đã phản ánh phần lớn kỳ vọng này.",
-      "Premium 13.41% đang ở mức hợp lý so với trung bình 30 ngày (khoảng 13-14%), không có tín hiệu bất thường về áp lực cung cầu cục bộ."
+      "Giá SJC 184.7 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (159.98 triệu VND/lượng) tới 15.4% báo hiệu thị trường đã mua quá mức ngắn hạn.",
+      "Động lượng tăng chững lại: Giá thế giới giảm -1.37% trong 5 ngày gần nhất (xuống 5114 USD/oz) và giá SJC giảm -1.49% trong 7 ngày, cho thấy áp lực chốt lời ngắn hạn.",
+      "Vĩ mô ủng hộ dài hạn: Lợi suất thực Mỹ 10 năm giảm mạnh -8.76% trong 20 ngày (xuống 1.77%) và VIX tăng +30.94% trong 20 ngày (lên 23.57 điểm) là động lực hỗ trợ giá vàng.",
+      "Premium 14.7% nằm trong biên độ dao động 11-17% của 30 ngày qua, không có dấu hiệu bất thường cực đoan về chênh lệch cung cầu nội địa."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn khi giá đang ở percentile 100% trong 5 năm và vừa tăng 4.92% chỉ trong 30 ngày.",
-      "Biến động ngày ở mức 1.49% kết hợp với VIX cao có thể gây sụt giảm nhanh nếu thị trường tài sản rủi ro điều chỉnh.",
-      "Thiếu dữ liệu lãi suất Fed Funds hiệu quả làm giảm độ tin cậy đánh giá định hướng chính sách tiền tệ Mỹ."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều, đặc biệt khi thị trường thiếu dữ liệu lãi suất Fed Funds để định hướng rõ ràng.",
+      "Biến động ngày ở mức 1.5% cộng với giá ở percentile 100% có thể gây 'đu đỉnh' cho nhà đầu tư mua đuổi ngắn hạn.",
+      "Không có tiêu đề địa chính trị cụ thể trong dữ liệu đầu vào, nên đà tăng có thể chủ yếu do kỹ thuật và vĩ mô hơn là sự kiện khẩn cấp."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
+        "key": "SJC Price vs 5Y Percentile",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price vs MA30",
         "value": 15.4,
+        "unit": "% above MA",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 7 Days",
+        "value": -1.49,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_30d_change",
-        "value": 4.92,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_5d_change",
-        "value": 20.56,
+        "key": "World Gold Change 5 Days",
+        "value": -1.37,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_20d_change",
+        "key": "US Real Yield 10Y Change 20D",
         "value": -8.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_5y_percentile",
-        "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.41,
+        "key": "VIX Change 20 Days",
+        "value": 30.94,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "ma7_vnd_tael",
-        "value": 164544848,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "daily_volatility",
-        "value": 1.49,
+        "key": "Current Premium vs 30D Range",
+        "value": 14.7,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T12:11:49.488Z",
+    "latestTimestamp": "2026-03-05T13:27:58.056Z",
     "sjcVndPerTael": 184700000,
-    "intlVndPerTael": 162857388.77956402,
-    "premiumPct": 13.41,
-    "change7dPct": -0.37,
-    "change30dPct": 4.92,
-    "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 164544848,
-    "ma30VndPerTael": 160044221,
+    "intlVndPerTael": 161028789.42578796,
+    "premiumPct": 14.7,
+    "change7dPct": -1.49,
+    "change30dPct": 3.74,
+    "volatilityDailyPct": 1.5,
+    "ma7VndPerTael": 164283619,
+    "ma30VndPerTael": 159983267,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T12:12:10.835Z",
+    "fetchedAt": "2026-03-05T13:28:19.467Z",
     "healthy": false,
     "missingFactors": [
       "US Effective Fed Funds Rate"
@@ -99,12 +93,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5170.465,
+        "value": 5114.285,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": 0.57,
-        "change5dPct": -0.29,
-        "change20dPct": 8.18,
+        "change1dPct": -0.53,
+        "change5dPct": -1.37,
+        "change20dPct": 7,
         "relationToGold": "context"
       },
       {
@@ -186,12 +180,12 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times",
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
-      "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
-      "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
+      "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
