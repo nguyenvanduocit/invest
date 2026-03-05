@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T14:18:05.722Z",
+  "generatedAt": "2026-03-05T15:18:14.710Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động năng ngắn hạn đã suy yếu và VIX tăng vọt 31% cho thấy áp lực chốt lời. Nên chờ đợi điều chỉnh về vùng hỗ trợ MA7 (~164.3 triệu VND/lượng) hoặc xác nhận xu hướng trước khi vào lệnh mới.",
+    "thesis": "Giá SJC 184.7 triệu VND/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +3.23%/tháng, nhưng động lượng ngắn hạn đã yếu đi (-1.97%/7 ngày) và thanh khoản thấp khiến rủi ro mua đuổi là rất lớn.",
     "reasons": [
-      "Giá SJC 184.7 triệu VND/lượng đang cao hơn MA30 (159.9 triệu VND/lượng) tới 15.5%, cho thấy thị trường đã tăng quá nóng trong ngắn hạn.",
-      "VIX tăng mạnh 30.94% trong 20 ngày qua lên mức 23.57, phản ánh lo ngại rủi ro thị trường nhưng vàng lại giảm 1.44% trong 7 ngày gần nhất, tín hiệu divergence đáng ngờ.",
-      "Lợi suất thực 10Y Mỹ giảm sâu 8.76% trong 20 ngày (xuống 1.77%) là hỗ trợ vĩ mô tích cực, nhưng giá vàng thế giới đã giảm từ đỉnh 5330 USD/oz (02/03) xuống 5113 USD/oz (05/03).",
-      "Premium 14.65% nằm trong biên dao động 11-18% của 30 ngày qua, không bất thường nhưng thanh khoản có thể bị ảnh hưởng khi giá ở đỉnh lịch sử."
+      "Giá SJC 184.7 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (159.9 triệu VND/lượng) 15.5%, báo hiệu vùng quá mua kỹ thuật.",
+      "Động lượng ngắn hạn suy yếu: giá giảm 1.97% trong 7 ngày gần nhất so với xu hướng tăng chung +3.23% cả tháng.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh +0.57 điểm phần trăm và VIX giảm -10.27%, làm giảm hấp dẫn phòng ngự của vàng trên thị trường quốc tế.",
+      "Lợi suất trái phiếu Mỹ ngắn hạn (2Y) tăng 2.33%/5 ngày lên 3.51%, tạo áp lực ngược lên giá vàng thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz và VIX tiếp tục tăng.",
-      "Thanh khoản thấp ở mức giá đỉnh 5 năm có thể gây trượt giá khi bán tháo.",
-      "Diễn biến xung đột Trung Đông có thể gây biến động hai chiều bất ngờ."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ vùng hỗ trợ 4,940 USD/oz (đáy tháng 2).",
+      "Thanh khoản thấp và biến động 1.51%/ngày có thể gây trượt giá khi giao dịch số lượng lớn.",
+      "Thời gian phục hồi xấu nhất lịch sử lên đến 1,369 ngày nếu mua đúng đỉnh chu kỳ."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 184700000,
-        "unit": "VND/lượng",
+        "key": "SJC Price Percentile 5Y",
+        "value": 100,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 SJC",
-        "value": 159985788,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium vs World",
-        "value": 14.65,
+        "key": "SJC Price vs MA30",
+        "value": 15.5,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "VIX 20d Change",
-        "value": 30.94,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y",
-        "value": 1.77,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold World High 30d",
-        "value": 5330.95,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Gold World Latest",
-        "value": 5113.17,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       },
       {
         "key": "SJC Change 7d",
-        "value": -1.44,
+        "value": -1.97,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 1d",
+        "value": 0.57,
+        "unit": "percentage points",
+        "source": "macro_context"
+      },
+      {
+        "key": "VIX Change 1d",
+        "value": -10.27,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "US Treasury 2Y Change 5d",
+        "value": 2.33,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 6.48,
+        "unit": "% (11.21-17.69)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T14:17:35.216Z",
+    "latestTimestamp": "2026-03-05T15:17:35.277Z",
     "sjcVndPerTael": 184700000,
-    "intlVndPerTael": 161104392.90769,
-    "premiumPct": 14.65,
-    "change7dPct": -1.44,
-    "change30dPct": 3.79,
-    "volatilityDailyPct": 1.5,
-    "ma7VndPerTael": 164294420,
-    "ma30VndPerTael": 159985788,
+    "intlVndPerTael": 160240162.98774403,
+    "premiumPct": 15.26,
+    "change7dPct": -1.97,
+    "change30dPct": 3.23,
+    "volatilityDailyPct": 1.51,
+    "ma7VndPerTael": 164170958,
+    "ma30VndPerTael": 159956980,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T14:17:44.514Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-05T15:17:39.278Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5112.675,
+        "value": 5088.785,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": -0.56,
-        "change5dPct": -1.4,
-        "change20dPct": 6.97,
+        "change1dPct": -1.02,
+        "change5dPct": -1.86,
+        "change20dPct": 6.47,
         "relationToGold": "context"
       },
       {
@@ -174,12 +168,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 23.57,
+        "value": 21.15,
         "unit": "index",
-        "date": "2026-03-03",
-        "change1dPct": 9.93,
-        "change5dPct": 20.56,
-        "change20dPct": 30.94,
+        "date": "2026-03-04",
+        "change1dPct": -10.27,
+        "change5dPct": 17.96,
+        "change20dPct": 13.47,
         "relationToGold": "direct"
       }
     ],
@@ -191,22 +185,8 @@
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-05 | hawaiitelegraph.com | Field Work Identifies New Mineralized Trend and Additional Gold Targets at Golden Rose",
-      "2026-03-05 | sanantoniopost.com | IT , oil and gas sectors show caution amid AI disruptions , West Asia conflict : Kotak Institutional Equities CEO",
-      "2026-03-05 | finance.yahoo.com | With Iran Sending Gold Over $5 , 000 , the Best Gold Stocks and ETFs to Buy Now",
-      "2026-03-05 | actionforex.com | EUR / USD Chart Analysis : Pair Trades Near Yearly Lows"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-05 | dailypost.ng | CBN announces $3 . 5bn gold reserves despite naira freefall against US dollar",
-      "2026-03-05 | bostonglobe.com | Trump war carries economic risk",
-      "2026-03-05 | businesstoday.in | Is gold losing its safe haven status during market crashes ? Here why the yellow metal has fallen 5 % since March 2",
-      "2026-03-05 | freemalaysiatoday.com | US stock futures steady as investors weigh Middle East war fallout",
-      "2026-03-05 | marketscreener.com | ECB accounts show growing inflation undershoot worries before Iran war"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-05 | businesstoday.in | Is gold losing its safe haven status during market crashes ? Here why the yellow metal has fallen 5 % since March 2",
-      "2026-03-05 | freemalaysiatoday.com | US stock futures steady as investors weigh Middle East war fallout"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
