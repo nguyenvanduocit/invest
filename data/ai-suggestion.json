@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T11:13:37.077Z",
+  "generatedAt": "2026-03-05T12:12:27.489Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +4.81%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi VIX nhảy vọt +20.56% trong 5 ngày và lợi suất thực USD tăng trở lại.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 4.92%/tháng, nhưng thanh khoản thấp và biến động cao (VIX 23.57) cảnh báo rủi ro điều chỉnh ngắn hạn sau đợt tăng nóng; nhà đầu tư không nên mua đuổi mà chờ hồi về vùng hỗ trợ gần MA7 (~164.5 triệu VND/lượng).",
     "reasons": [
-      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA30 (160.0 triệu VND/lượng) tới 15.4%, tín hiệu quá mua trong ngắn hạn.",
-      "VIX tăng vọt lên 23.57 (+20.56% trong 5 ngày) cho thấy hoảng loạn thị trường, thường đi kèm đợt bán tháo tài sản (liquidity squeeze) trước khi vàng tăng tiếp.",
-      "Lợi suất thực 10 năm USD tăng +0.57%/ngày lên 1.77%, tạo áp lực ngược lên giá vàng thế giới trong ngắn hạn.",
-      "Premium 13.53% đang ở mức hợp lý so với trung bình 30 ngày (13.5%), không có tín hiệu bong bóng nội địa."
+      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA30 (160.0 triệu VND/lượng) tới 15.4%, tín hiệu quá mua kỹ thuật ngắn hạn.",
+      "VIX tăng vọt 20.56% trong 5 ngày lên mức 23.57, phản ánh lo ngại thị trường có thể gây biến động giá vàng hai chiều.",
+      "Lợi suất thực 10Y giảm mạnh -8.76% trong 20 ngày (xuống 1.77%) là động lực hỗ trợ vàng dài hạn, nhưng giá đã phản ánh phần lớn kỳ vọng này.",
+      "Premium 13.41% đang ở mức hợp lý so với trung bình 30 ngày (khoảng 13-14%), không có tín hiệu bất thường về áp lực cung cầu cục bộ."
     ],
     "risks": [
-      "Điều chỉnh ngắn hạn mạnh nếu VIX tiếp tục tăng cao hơn 25-30, buộc nhà đầu tư bán vàng cover margin call.",
-      "Giá thế giới giảm về vùng hỗ trợ 5050-5100 USD/oz sẽ kéo giá SJC về vùng 180-181 triệu VND/lượng.",
-      "Thanh khoản thấp nếu thị trường sốc hai chiều, biên độ dao động 1.49%/ngày có thể gây cháy tài khoản đòn bẩy."
+      "Rủi ro chốt lời ngắn hạn khi giá đang ở percentile 100% trong 5 năm và vừa tăng 4.92% chỉ trong 30 ngày.",
+      "Biến động ngày ở mức 1.49% kết hợp với VIX cao có thể gây sụt giảm nhanh nếu thị trường tài sản rủi ro điều chỉnh.",
+      "Thiếu dữ liệu lãi suất Fed Funds hiệu quả làm giảm độ tin cậy đánh giá định hướng chính sách tiền tệ Mỹ."
     ],
     "evidence": [
       {
@@ -28,7 +28,7 @@
       },
       {
         "key": "sjc_30d_change",
-        "value": 4.81,
+        "value": 4.92,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -39,31 +39,31 @@
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_1d_change",
-        "value": 0.57,
+        "key": "us_real_yield_20d_change",
+        "value": -8.76,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_current",
-        "value": 13.53,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_5y_percentile",
         "value": 100,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_20d_change",
-        "value": 8.02,
+        "key": "current_premium",
+        "value": 13.41,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
+        "key": "ma7_vnd_tael",
+        "value": 164544848,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "daily_volatility",
         "value": 1.49,
         "unit": "%",
         "source": "market_snapshot"
@@ -71,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T11:13:06.077Z",
+    "latestTimestamp": "2026-03-05T12:11:49.488Z",
     "sjcVndPerTael": 184700000,
-    "intlVndPerTael": 162690057.0933434,
-    "premiumPct": 13.53,
-    "change7dPct": -0.47,
-    "change30dPct": 4.81,
+    "intlVndPerTael": 162857388.77956402,
+    "premiumPct": 13.41,
+    "change7dPct": -0.37,
+    "change30dPct": 4.92,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 164520943,
-    "ma30VndPerTael": 160038643,
+    "ma7VndPerTael": 164544848,
+    "ma30VndPerTael": 160044221,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T11:13:15.684Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-03-05T12:12:10.835Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Effective Fed Funds Rate"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5163.165,
+        "value": 5170.465,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": 0.42,
-        "change5dPct": -0.43,
-        "change20dPct": 8.02,
+        "change1dPct": 0.57,
+        "change5dPct": -0.29,
+        "change20dPct": 8.18,
         "relationToGold": "context"
       },
       {
@@ -141,12 +143,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-03",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -191,23 +193,8 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-05 | cincinnatisun.com | Prolonged West Asia conflict may raise inflation , market volatility in US : Morgan Stanley",
-      "2026-03-05 | cincinnatisun.com | Amid West Asia tensions , Gold may hit USD 6 , 000 / ounce , Nifty near - term returns can remain flat : Report",
-      "2026-03-05 | newyorktelegraph.com | Amid West Asia tensions , Gold may hit USD 6 , 000 / ounce , Nifty near - term returns can remain flat : Report"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-05 | actionforex.com | GBP / USD : Market Not Expecting BoE Rate Cut in March",
-      "2026-03-05 | newyorktelegraph.com | India forex reserves drop by $2 . 11 billion to $723 . 608 billion in week that ended Feb 20",
-      "2026-03-05 | nigeriasun.com | World Insights : Middle East war pushes up oil prices , disturbing global economy",
-      "2026-03-05 | nigeriasun.com | India forex reserves drop by $2 . 11 billion to $723 . 608 billion in week that ended Feb 20",
-      "2026-03-05 | londonlovesbusiness.com | US dollar index ( DXY ) below 100 points - London Business News",
-      "2026-03-05 | batonrougepost.com | India forex reserves drop by $2 . 11 billion to $723 . 608 billion in week that ended Feb 20"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-05 | marketscreener.com | ECB Nagel says long Iran war would push up inflation",
-      "2026-03-05 | newyorktelegraph.com | India forex reserves drop by $2 . 11 billion to $723 . 608 billion in week that ended Feb 20",
-      "2026-03-05 | pr-inside.com | Physical Gold IRA : IRA Gold Investment Guide Released for 2026"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
