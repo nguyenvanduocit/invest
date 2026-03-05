@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T01:35:06.589Z",
+  "generatedAt": "2026-03-05T02:58:34.150Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +5.05%/30 ngày, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi giá thế giới giảm nhẹ và VIX tăng vọt. Nên chờ đợi vùng giá tốt hơn hoặc tín hiệu xác nhận xu hướng thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +5.32%/30 ngày, nhưng áp lực điều chỉnh kỹ thuật đang xuất hiện khi VIX tăng vọt và lợi suất thực USD hồi phục, khuyến nghị chờ đợi vùng giá tốt hơn trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 184.2 triệu VND/lượng đang giao dịch cao hơn đáng kể so với MA30 (160.05 triệu VND/lượng), khoảng cách +15.1% cho thấy thị trường có thể ở vùng quá mua ngắn hạn.",
-      "VIX tăng mạnh +20.56%/5 ngày lên mức 23.57 điểm, phản ánh lo ngại rủi ro địa chính trị từ các cuộc tấn công tại Iran, thường hỗ trợ vàng nhưng cũng gây biến động lớn.",
-      "Lợi suất thực 10Y giảm sâu -8.76%/20 ngày xuống 1.77%, tạo nền tảng vĩ mô tích cực cho vàng dài hạn nhưng đã phản ánh phần lớn vào giá.",
-      "Premium 12.96% đang ở mức hợp lý trong biên độ dao động 30 ngày (11.21%-17.69%), không có dấu hiệu căng thẳng cực đoan của thị trường nội địa."
+      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA30 (160.1 triệu VND/lượng) tới 15.4%, tín hiệu quá mua kỹ thuật ngắn hạn.",
+      "VIX tăng mạnh +20.56%/5 ngày lên mức 23.57 điểm, phản ánh lo ngại thị trường có thể gây biến động giá vàng ngược chiều.",
+      "Lợi suất thực 10 năm USD hồi phục +0.57%/ngày lên 1.77%, tạo áp lực giảm lên giá vàng thế giới sau đà tăng +8.6%/20 ngày.",
+      "Premium SJC giảm từ đỉnh 17.69% (17/02) về 12.98%, cho thấy tâm lý FOMO đã hạ nhiệt và giá Việt Nam đang đi theo giá thế giới chặt chẽ hơn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở mức cao nhất 5 năm (percentile 100%) và đã tăng liên tục.",
-      "Biến động ngày 1.5% kết hợp với VIX cao có thể gây sụt giảm nhanh nếu tin tức địa chính trị xấu đi hoặc cải thiện đột ngột.",
-      "Thời gian phục hồi xấu nhất lịch sử lên đến 1369 ngày cho thấy rủi ro khi mua đỉnh là rất lớn."
+      "Rủi ro điều chỉnh sâu nếu dữ liệu vĩ mô Mỹ tiếp tục nóng khiến lợi suất thực USD duy trì mức cao.",
+      "Biến động ngày ở mức 1.5% có thể gây thanh lý tài khoản đòn bẩy cao.",
+      "Thiếu dữ liệu lãi suất Fed Funds và sự kiện địa chính trị cụ thể làm giảm độ tin cậy dự báo xu hướng dài hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 184200000,
+        "key": "SJC Spot Price",
+        "value": 184700000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30_vnd",
-        "value": 160051072,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change30d_pct",
-        "value": 5.05,
+        "key": "Premium vs World",
+        "value": 12.98,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 100,
+        "key": "Price vs MA30",
+        "value": 15.4,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "30D Change",
+        "value": 5.32,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 12.96,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_level",
+        "key": "VIX Index",
         "value": 23.57,
         "unit": "index",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "vix_change5d",
+        "key": "VIX 5D Change",
         "value": 20.56,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "real_yield_10y",
+        "key": "US Real Yield 10Y",
         "value": 1.77,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
+      },
+      {
+        "key": "Gold Spot 20D Change",
+        "value": 8.6,
+        "unit": "%",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T01:34:25.789Z",
-    "sjcVndPerTael": 184200000,
-    "intlVndPerTael": 163062921.09488034,
-    "premiumPct": 12.96,
-    "change7dPct": -0.24,
-    "change30dPct": 5.05,
+    "latestTimestamp": "2026-03-05T02:57:51.534Z",
+    "sjcVndPerTael": 184700000,
+    "intlVndPerTael": 163477181.55683312,
+    "premiumPct": 12.98,
+    "change7dPct": 0.01,
+    "change30dPct": 5.32,
     "volatilityDailyPct": 1.5,
-    "ma7VndPerTael": 164574209,
-    "ma30VndPerTael": 160051072,
+    "ma7VndPerTael": 164633389,
+    "ma30VndPerTael": 160064881,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,22 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T01:34:47.465Z",
+    "fetchedAt": "2026-03-05T02:58:13.137Z",
     "healthy": false,
     "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y"
+      "US Effective Fed Funds Rate"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5173.855,
+        "value": 5190.555,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": 0.63,
-        "change5dPct": -0.22,
-        "change20dPct": 8.25,
+        "change1dPct": 0.96,
+        "change5dPct": 0.1,
+        "change20dPct": 8.6,
         "relationToGold": "context"
       },
       {
@@ -166,12 +165,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.51,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-03",
+        "change1dPct": 1.15,
+        "change5dPct": 2.33,
+        "change20dPct": -1.68,
         "relationToGold": "inverse"
       },
       {
@@ -194,19 +193,8 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-05 | newzealandstar.com | U . S . stock markets post gains as attacks on Iran intensify",
-      "2026-03-05 | austinglobe.com | U . S . stock markets post gains as attacks on Iran intensify",
-      "2026-03-05 | nigeriasun.com | U . S . stock markets post gains as attacks on Iran intensify",
-      "2026-03-05 | afr.net | Actions like Operation Epic Fury often come with unintended consequences . What does a post - Ayatollah Khomeini Iran look like ?",
-      "2026-03-05 | clevelandstar.com | U . S . stock markets post gains as attacks on Iran intensify"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-05 | el-balad.com | États - unis – Canada : How Middle East Bombings Rekindle Inflation Fears and Economic Ripples"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-04 | zerohedge.com | Stocks rise and Dollar eases while focus remains on Middle East - Newsquawk US Market Wrap",
-      "2026-03-04 | bursa.ro | War fuels confusion in the markets"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
