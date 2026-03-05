@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T05:22:13.554Z",
+  "generatedAt": "2026-03-05T06:17:34.701Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh kỹ thuật và rủi ro biến động cao (VIX 23.57) khuyến nghị nhà đầu tư chờ điểm nhập tốt hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua (+4.15%), nhưng động lượng đang yếu đi do áp lực chốt lời ngắn hạn và rủi ro điều chỉnh kỹ thuật. Biến động VIX tăng vọt 30.94% trong 20 ngày và căng thẳng Trung Đông hỗ trợ sàn giá, tuy nhiên vị thế MUA an toàn hơn khi thị trường hồi phục về vùng hỗ trợ gần MA7 (164.3 triệu VND/lượng).",
     "reasons": [
-      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA30 (160 triệu VND/lượng) tới 15.4%, đồng thời đứng ở percentile 100% trong 5 năm, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng vĩ mô hỗ trợ vàng khi lợi suất thực Mỹ 10Y giảm mạnh 8.76% trong 20 ngày qua và VIX tăng 30.94% cùng kỳ, phản ánh tâm lý rủi ro cao.",
-      "Premium 13.36% đang ở mức hợp lý so với biên độ dao động 11.21%-17.69% trong 30 ngày qua, không có dấu hiệu bất thường cần cảnh báo."
+      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA30 (160 triệu VND/lượng) tới 15.4% trong 30 ngày, tín hiệu mua quá mức (overbought) ngắn hạn cần điều chỉnh.",
+      "VIX tăng mạnh 30.94% trong 20 ngày lên mức 23.57, phản ánh lo ngại thị trường về xung đột Trung Đông, tạo sức mua trú ẩn an toàn (safe-haven) hỗ trợ giá vàng.",
+      "Lợi suất thực Mỹ 10 năm giảm sâu 8.76% trong 20 ngày xuống 1.77%, giảm chi phí cơ hội nắm giữ vàng, là động lực vĩ mô tích cực dài hạn.",
+      "Premium SJC đang ở 14.25%, thấp hơn đỉnh 17.69% (17/02) và 16.81% (03/03), cho thấy giá trong nước chưa ly kỳ quá mức so với biến động thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh lịch sử khi biến động ngày ở mức 1.5%.",
-      "Dữ liệu sự kiện địa chính trị và hành động quốc gia trống, thiếu tín hiệu hỗ trợ đà tăng tiếp theo.",
-      "VIX tăng vọt 9.93% trong 1 ngày có thể gây thanh khoản căng thẳng ngắn hạn."
+      "Giá thế giới giảm 1.11% trong 5 ngày gần nhất có thể kéo giá SJC điều chỉnh về test MA7 (164.3 triệu VND/lượng).",
+      "Rủi ro thanh khoản: SJC đang ở mức cao nhất percentile 5 năm (100%), dễ xảy ra sóng chốt lời ngắn hạn nếu tin tức địa chính trị hạ nhiệt.",
+      "Dữ liệu sự kiện vĩ mô chưa có tín hiệu rõ ràng từ Fed (chỉ có bài phát biểu về thanh khoản), thiếu thông tin để đánh giá xu hướng lãi suất tương lai."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma30",
-        "value": 15.4,
+        "key": "sjc_price",
+        "value": 184700000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change30d_pct",
+        "value": 4.15,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_5y_percentile",
+        "key": "ma7_vnd",
+        "value": 164373913,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_20d_change",
-        "value": -8.76,
+        "key": "premium_current",
+        "value": 14.25,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "vix_20d_change",
+        "key": "vix_change20d",
         "value": 30.94,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.21,
+        "key": "us_real_yield_10y",
+        "value": 1.77,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.97,
+        "key": "intl_gold_change5d",
+        "value": -1.11,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.36,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T05:21:50.749Z",
+    "latestTimestamp": "2026-03-05T06:17:06.473Z",
     "sjcVndPerTael": 184700000,
-    "intlVndPerTael": 162934669.7342008,
-    "premiumPct": 13.36,
-    "change7dPct": -0.32,
-    "change30dPct": 4.97,
-    "volatilityDailyPct": 1.5,
-    "ma7VndPerTael": 164555888,
-    "ma30VndPerTael": 160046797,
+    "intlVndPerTael": 161660845.96550152,
+    "premiumPct": 14.25,
+    "change7dPct": -1.1,
+    "change30dPct": 4.15,
+    "volatilityDailyPct": 1.49,
+    "ma7VndPerTael": 164373913,
+    "ma30VndPerTael": 160004336,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T05:21:57.040Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-05T06:17:13.388Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5171.485,
+        "value": 5127.525,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": 0.59,
-        "change5dPct": -0.27,
-        "change20dPct": 8.2,
+        "change1dPct": -0.27,
+        "change5dPct": -1.11,
+        "change20dPct": 7.28,
         "relationToGold": "context"
       },
       {
@@ -184,8 +191,20 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-05 | marketscreener.com | EMEA Morning Briefing : Traders Assess Middle East Conflict"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-05 | marketscreener.com | India central bank revives heavy pre - market intervention to rescue oil - hit rupee",
+      "2026-03-05 | economictimes.indiatimes.com | Rupee slides to 92 - plus as West Asia crisis fires up safe - haven dollar demand ; RBI likely to step in : Naveen Mathur",
+      "2026-03-05 | freemalaysiatoday.com | US dollar rally pauses as market sentiment turns a little more upbeat",
+      "2026-03-05 | marketscreener.com | Dollar rally pauses as market sentiment turns a little more upbeat"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-05 | marketscreener.com | EMEA Morning Briefing : Traders Assess Middle East Conflict",
+      "2026-03-05 | allafrica.com | Sudan : War in the Middle East - Warnings of Serious Economic Impacts On Sudan",
+      "2026-03-05 | economictimes.indiatimes.com | Silver , gold ETFs surge up to 5 % as Mideast conflict fuels safe - haven demand . What should investors do ?",
+      "2026-03-05 | thehindubusinessline.com | Joy Alukkas : Billionaire sitting on 16 , 000 kilos of gold says price will rise"
+    ]
   }
 }
