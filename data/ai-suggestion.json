@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T13:28:42.996Z",
+  "generatedAt": "2026-03-05T14:18:05.722Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100) với đà tăng mạnh +3.74%/tháng, nhưng động lượng ngắn hạn đã yếu đi (-1.49%/7 ngày) và thanh khoản có thể thấp. Vĩ mô ủng hộ vàng dài hạn nhờ lợi suất thực giảm và VIX tăng, nhưng rủi ro điều chỉnh kỹ thuật ở vùng giá cao là rất lớn, nên chờ xác nhận hoặc mua nhỏ giọt thay vì FOMO.",
+    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động năng ngắn hạn đã suy yếu và VIX tăng vọt 31% cho thấy áp lực chốt lời. Nên chờ đợi điều chỉnh về vùng hỗ trợ MA7 (~164.3 triệu VND/lượng) hoặc xác nhận xu hướng trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 184.7 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (159.98 triệu VND/lượng) tới 15.4% báo hiệu thị trường đã mua quá mức ngắn hạn.",
-      "Động lượng tăng chững lại: Giá thế giới giảm -1.37% trong 5 ngày gần nhất (xuống 5114 USD/oz) và giá SJC giảm -1.49% trong 7 ngày, cho thấy áp lực chốt lời ngắn hạn.",
-      "Vĩ mô ủng hộ dài hạn: Lợi suất thực Mỹ 10 năm giảm mạnh -8.76% trong 20 ngày (xuống 1.77%) và VIX tăng +30.94% trong 20 ngày (lên 23.57 điểm) là động lực hỗ trợ giá vàng.",
-      "Premium 14.7% nằm trong biên độ dao động 11-17% của 30 ngày qua, không có dấu hiệu bất thường cực đoan về chênh lệch cung cầu nội địa."
+      "Giá SJC 184.7 triệu VND/lượng đang cao hơn MA30 (159.9 triệu VND/lượng) tới 15.5%, cho thấy thị trường đã tăng quá nóng trong ngắn hạn.",
+      "VIX tăng mạnh 30.94% trong 20 ngày qua lên mức 23.57, phản ánh lo ngại rủi ro thị trường nhưng vàng lại giảm 1.44% trong 7 ngày gần nhất, tín hiệu divergence đáng ngờ.",
+      "Lợi suất thực 10Y Mỹ giảm sâu 8.76% trong 20 ngày (xuống 1.77%) là hỗ trợ vĩ mô tích cực, nhưng giá vàng thế giới đã giảm từ đỉnh 5330 USD/oz (02/03) xuống 5113 USD/oz (05/03).",
+      "Premium 14.65% nằm trong biên dao động 11-18% của 30 ngày qua, không bất thường nhưng thanh khoản có thể bị ảnh hưởng khi giá ở đỉnh lịch sử."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều, đặc biệt khi thị trường thiếu dữ liệu lãi suất Fed Funds để định hướng rõ ràng.",
-      "Biến động ngày ở mức 1.5% cộng với giá ở percentile 100% có thể gây 'đu đỉnh' cho nhà đầu tư mua đuổi ngắn hạn.",
-      "Không có tiêu đề địa chính trị cụ thể trong dữ liệu đầu vào, nên đà tăng có thể chủ yếu do kỹ thuật và vĩ mô hơn là sự kiện khẩn cấp."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz và VIX tiếp tục tăng.",
+      "Thanh khoản thấp ở mức giá đỉnh 5 năm có thể gây trượt giá khi bán tháo.",
+      "Diễn biến xung đột Trung Đông có thể gây biến động hai chiều bất ngờ."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs 5Y Percentile",
-        "value": 100,
+        "key": "SJC Spot Price",
+        "value": 184700000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 159985788,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium vs World",
+        "value": 14.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 15.4,
-        "unit": "% above MA",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 7 Days",
-        "value": -1.49,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "World Gold Change 5 Days",
-        "value": -1.37,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20D",
-        "value": -8.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 20 Days",
+        "key": "VIX 20d Change",
         "value": 30.94,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium vs 30D Range",
-        "value": 14.7,
+        "key": "US Real Yield 10Y",
+        "value": 1.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold World High 30d",
+        "value": 5330.95,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Gold World Latest",
+        "value": 5113.17,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Change 7d",
+        "value": -1.44,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T13:27:58.056Z",
+    "latestTimestamp": "2026-03-05T14:17:35.216Z",
     "sjcVndPerTael": 184700000,
-    "intlVndPerTael": 161028789.42578796,
-    "premiumPct": 14.7,
-    "change7dPct": -1.49,
-    "change30dPct": 3.74,
+    "intlVndPerTael": 161104392.90769,
+    "premiumPct": 14.65,
+    "change7dPct": -1.44,
+    "change30dPct": 3.79,
     "volatilityDailyPct": 1.5,
-    "ma7VndPerTael": 164283619,
-    "ma30VndPerTael": 159983267,
+    "ma7VndPerTael": 164294420,
+    "ma30VndPerTael": 159985788,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T13:28:19.467Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate"
-    ],
+    "fetchedAt": "2026-03-05T14:17:44.514Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5114.285,
+        "value": 5112.675,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": -0.53,
-        "change5dPct": -1.37,
-        "change20dPct": 7,
+        "change1dPct": -0.56,
+        "change5dPct": -1.4,
+        "change20dPct": 6.97,
         "relationToGold": "context"
       },
       {
@@ -137,12 +141,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-03",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -187,8 +191,22 @@
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-05 | hawaiitelegraph.com | Field Work Identifies New Mineralized Trend and Additional Gold Targets at Golden Rose",
+      "2026-03-05 | sanantoniopost.com | IT , oil and gas sectors show caution amid AI disruptions , West Asia conflict : Kotak Institutional Equities CEO",
+      "2026-03-05 | finance.yahoo.com | With Iran Sending Gold Over $5 , 000 , the Best Gold Stocks and ETFs to Buy Now",
+      "2026-03-05 | actionforex.com | EUR / USD Chart Analysis : Pair Trades Near Yearly Lows"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-05 | dailypost.ng | CBN announces $3 . 5bn gold reserves despite naira freefall against US dollar",
+      "2026-03-05 | bostonglobe.com | Trump war carries economic risk",
+      "2026-03-05 | businesstoday.in | Is gold losing its safe haven status during market crashes ? Here why the yellow metal has fallen 5 % since March 2",
+      "2026-03-05 | freemalaysiatoday.com | US stock futures steady as investors weigh Middle East war fallout",
+      "2026-03-05 | marketscreener.com | ECB accounts show growing inflation undershoot worries before Iran war"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-05 | businesstoday.in | Is gold losing its safe haven status during market crashes ? Here why the yellow metal has fallen 5 % since March 2",
+      "2026-03-05 | freemalaysiatoday.com | US stock futures steady as investors weigh Middle East war fallout"
+    ]
   }
 }
