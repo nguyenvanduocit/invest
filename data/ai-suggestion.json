@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T00:21:07.684Z",
+  "generatedAt": "2026-03-05T01:35:06.589Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +5.07%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi VIX nhảy vọt +31% và lợi suất thực USD hồi phục, khuyến nghị chờ đợi điểm nhập khẩu an toàn hơn thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +5.05%/30 ngày, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi giá thế giới giảm nhẹ và VIX tăng vọt. Nên chờ đợi vùng giá tốt hơn hoặc tín hiệu xác nhận xu hướng thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 184.2 triệu VND/lượng đang vượt xa MA30 (160.05 triệu VND/lượng) tới 15%, tín hiệu quá mua trong ngắn hạn cần cảnh giác.",
-      "VIX tăng vọt 20.56%/5 ngày lên mức 23.57 chỉ báo lo ngại rủi ro thị trường, có thể gây áp lực chốt lời tài sản rủi ro kể cả vàng.",
-      "Lợi suất thực 10 năm USD tăng 0.57%/ngày lên 1.77%, tạo áp lực ngược lên giá vàng thế giới (đã giảm -0.16%/5 ngày gần đây).",
-      "Premium 12.94% đang ở vùng thấp hơn so với trung bình chuỗi 30 ngày (14-17%), cho thấy giá SJC chưa phản ánh hết cú sốc cung cầu như các đợt trước."
+      "Giá SJC 184.2 triệu VND/lượng đang giao dịch cao hơn đáng kể so với MA30 (160.05 triệu VND/lượng), khoảng cách +15.1% cho thấy thị trường có thể ở vùng quá mua ngắn hạn.",
+      "VIX tăng mạnh +20.56%/5 ngày lên mức 23.57 điểm, phản ánh lo ngại rủi ro địa chính trị từ các cuộc tấn công tại Iran, thường hỗ trợ vàng nhưng cũng gây biến động lớn.",
+      "Lợi suất thực 10Y giảm sâu -8.76%/20 ngày xuống 1.77%, tạo nền tảng vĩ mô tích cực cho vàng dài hạn nhưng đã phản ánh phần lớn vào giá.",
+      "Premium 12.96% đang ở mức hợp lý trong biên độ dao động 30 ngày (11.21%-17.69%), không có dấu hiệu căng thẳng cực đoan của thị trường nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới không giữ được mốc 5,100 USD/oz và VIX tiếp tục leo thang.",
-      "Thanh khoản thoái vốn kém khi đang ở đỉnh 5 năm, drawdown tồi tệ nhất ghi nhận tới -41.26% với thời gian phục hồi trung bình 1,369 ngày.",
-      "Dữ liệu vĩ mô 'healthy: false' và thiếu sự kiện địa chính trị cụ thể làm giảm độ tin cậy của đà tăng giá."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở mức cao nhất 5 năm (percentile 100%) và đã tăng liên tục.",
+      "Biến động ngày 1.5% kết hợp với VIX cao có thể gây sụt giảm nhanh nếu tin tức địa chính trị xấu đi hoặc cải thiện đột ngột.",
+      "Thời gian phục hồi xấu nhất lịch sử lên đến 1369 ngày cho thấy rủi ro khi mua đỉnh là rất lớn."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 184200000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Khoảng cách đỉnh 5 năm",
-        "value": 100,
-        "unit": "percentile",
+        "key": "ma30_vnd",
+        "value": 160051072,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Tăng trưởng 30 ngày",
-        "value": 5.07,
+        "key": "change30d_pct",
+        "value": 5.05,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Biến động thị trường",
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_current",
+        "value": 12.96,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_level",
         "value": 23.57,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Thay đổi VIX 20 ngày",
-        "value": 30.94,
+        "key": "vix_change5d",
+        "value": 20.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y",
+        "key": "real_yield_10y",
         "value": 1.77,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "MA30 SJC",
-        "value": 160052000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC/Thế giới",
-        "value": 12.94,
-        "unit": "%",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T00:20:29.907Z",
+    "latestTimestamp": "2026-03-05T01:34:25.789Z",
     "sjcVndPerTael": 184200000,
-    "intlVndPerTael": 163090755.67345518,
-    "premiumPct": 12.94,
-    "change7dPct": -0.22,
-    "change30dPct": 5.07,
+    "intlVndPerTael": 163062921.09488034,
+    "premiumPct": 12.96,
+    "change7dPct": -0.24,
+    "change30dPct": 5.05,
     "volatilityDailyPct": 1.5,
-    "ma7VndPerTael": 164578186,
-    "ma30VndPerTael": 160052000,
+    "ma7VndPerTael": 164574209,
+    "ma30VndPerTael": 160051072,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,22 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T00:20:52.267Z",
+    "fetchedAt": "2026-03-05T01:34:47.465Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5176.845,
+        "value": 5173.855,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": 0.69,
-        "change5dPct": -0.16,
-        "change20dPct": 8.31,
+        "change1dPct": 0.63,
+        "change5dPct": -0.22,
+        "change20dPct": 8.25,
         "relationToGold": "context"
       },
       {
@@ -141,12 +144,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-03",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -163,12 +166,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.51,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-03",
-        "change1dPct": 1.15,
-        "change5dPct": 2.33,
-        "change20dPct": -1.68,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -191,8 +194,19 @@
       "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026",
       "2026-02-27 | ECB Press / Speeches | Number of counterfeit euro banknotes remains low in 2025"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-05 | newzealandstar.com | U . S . stock markets post gains as attacks on Iran intensify",
+      "2026-03-05 | austinglobe.com | U . S . stock markets post gains as attacks on Iran intensify",
+      "2026-03-05 | nigeriasun.com | U . S . stock markets post gains as attacks on Iran intensify",
+      "2026-03-05 | afr.net | Actions like Operation Epic Fury often come with unintended consequences . What does a post - Ayatollah Khomeini Iran look like ?",
+      "2026-03-05 | clevelandstar.com | U . S . stock markets post gains as attacks on Iran intensify"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-05 | el-balad.com | États - unis – Canada : How Middle East Bombings Rekindle Inflation Fears and Economic Ripples"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-04 | zerohedge.com | Stocks rise and Dollar eases while focus remains on Middle East - Newsquawk US Market Wrap",
+      "2026-03-04 | bursa.ro | War fuels confusion in the markets"
+    ]
   }
 }
