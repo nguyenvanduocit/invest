@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-05T16:18:15.075Z",
+  "generatedAt": "2026-03-05T17:43:29.495Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-2.08% tuần) từ đỉnh lịch sử percentile 5 năm 100%, nhưng xu hướng dài hạn vẫn tích cực nhờ lợi suất thực USD giảm mạnh (-8.76% 20 ngày) và rủi ro địa chính trị tăng cao.",
+    "thesis": "Giá SJC đang điều chỉnh giảm 2.36% sau 7 ngày và nằm ở vùng cực đại 5 năm (percentile 100%), đòi hỏi nhà đầu tư thận trọng chờ xác nhận xu hướng thay vì mua đuổi. Lợi suất thực 10Y đang hồi phục nhẹ và VIX giảm cho thấy áp lực mua避险 tạm thời hạ nhiệt, nên chờ giá hồi về vùng hỗ trợ MA7 (~164.08 triệu VND/lượng) hoặc đợt giảm sâu hơn mới tăng vị thế.",
     "reasons": [
-      "Giá SJC 184.7 triệu VND/lượng đang thấp hơn MA7 (164.1 triệu VND/lượng) và giảm 2.08% sau 7 ngày, cho thấy áp lực chốt lời ngắn hạn sau đợt tăng 3.12% tháng.",
-      "Lợi suất thực Mỹ 10 năm giảm mạnh 8.76% trong 20 ngày (xuống 1.77%) là động lực hỗ trợ vàng dài hạn, dù giá vàng thế giới đã giảm 2.16% trong 5 ngày gần nhất.",
-      "Premium SJC 15.4% nằm trong biên dao động 30 ngày (11.21%-17.69%), không có dấu hiệu bất thường; CBN Nigeria công bố mua 3.5 tỷ USD dự trữ vàng cho thấy nhu cầu dự trữ quốc gia tăng.",
-      "Rủi ro địa chính trị leo thang (thông tin về tấn công Iran, Gulf) và dòng tiền 1.2 tỷ USD đổ vào quỹ GLD hỗ trợ nhu cầu trú ẩn an toàn dài hạn."
+      "Giá SJC 184.7 triệu VND/lượng đang vượt xa MA7 (164.08 triệu VND/lượng) tới 12.6%, cho thấy thị trường đang ở trạng thái mua quá mức ngắn hạn cần điều chỉnh.",
+      "Động lượng giảm 7 ngày gần nhất -2.36% và biến động ngày 1.52% cho thấy áp lực bán đang hiện diện, rủi ro điều chỉnh tiếp tục về vùng 180-181 triệu VND/lượng.",
+      "Lợi suất thực US 10Y tăng mạnh 1 ngày gần nhất (+0.57%) lên 1.77% tạo áp lực giảm lên giá vàng thế giới, kéo theo rủi ro cho giá vàng nội địa.",
+      "Premium 15.72% nằm trong biên dao động 30 ngày (11.21%-17.69%), không có tín hiệu bất thường nhưng cho thấy giá Việt Nam vẫn đắt hơn thế giới mức độ trung bình."
     ],
     "risks": [
-      "Giá đang ở mức cao nhất lịch sử (percentile 5 năm = 100), rủi ro điều chỉnh sâu nếu dữ liệu lạm phát Mỹ nóng hơn dự kiến.",
-      "Thiếu dữ liệu VIX và Fed Funds Rate làm giảm độ tin cậy đánh giá sentiment thị trường và chính sách tiền tệ ngắn hạn.",
-      "Biến động ngày 1.51% cao, nhà đầu tư cần quản lý rủi ro chốt lời/cắt lỗ chặt chẽ."
+      "Giá đang ở percentile 100% trong 5 năm (đỉnh lịch sử), rủi ro điều chỉnh sâu nếu dòng tiền đảo chiều.",
+      "Thiếu dữ liệu Fed Funds Rate và không có sự kiện địa chính trị cấp bách, giảm độ tin cậy dự báo xu hướng tiếp theo.",
+      "Lợi suất thực USD có thể tiếp tục hồi phục nếu dữ liệu kinh tế Mỹ tốt, gây áp lực giảm thêm cho giá vàng."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjc_price",
         "value": 184700000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 7d",
-        "value": -2.08,
+        "key": "change_7d_pct",
+        "value": -2.36,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 SJC",
-        "value": 164144971,
+        "key": "ma7_vnd",
+        "value": 164079924,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC",
-        "value": 15.4,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -8.76,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Change 5d",
-        "value": -2.16,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "5Y Percentile",
+        "key": "percentile_5y",
         "value": 100,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "premium_pct",
+        "value": 15.72,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.77,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_1d_change",
+        "value": 0.57,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix",
+        "value": 21.15,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-05T16:17:34.716Z",
+    "latestTimestamp": "2026-03-05T17:42:50.288Z",
     "sjcVndPerTael": 184700000,
-    "intlVndPerTael": 160058254.8700569,
-    "premiumPct": 15.4,
-    "change7dPct": -2.08,
-    "change30dPct": 3.12,
-    "volatilityDailyPct": 1.51,
-    "ma7VndPerTael": 164144971,
-    "ma30VndPerTael": 159950916,
+    "intlVndPerTael": 159602922.47753745,
+    "premiumPct": 15.72,
+    "change7dPct": -2.36,
+    "change30dPct": 2.82,
+    "volatilityDailyPct": 1.52,
+    "ma7VndPerTael": 164079924,
+    "ma30VndPerTael": 159935739,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,22 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-05T16:17:55.875Z",
+    "fetchedAt": "2026-03-05T17:43:11.469Z",
     "healthy": false,
     "missingFactors": [
-      "US Effective Fed Funds Rate",
-      "VIX Volatility Index"
+      "US Effective Fed Funds Rate"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5073.055,
+        "value": 5059.275,
         "unit": "USD/oz",
         "date": "2026-03-05",
-        "change1dPct": -1.33,
-        "change5dPct": -2.16,
-        "change20dPct": 6.14,
+        "change1dPct": -1.6,
+        "change5dPct": -2.43,
+        "change20dPct": 5.85,
         "relationToGold": "context"
       },
       {
@@ -171,41 +176,25 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": null,
+        "value": 21.15,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-04",
+        "change1dPct": -10.27,
+        "change5dPct": 17.96,
+        "change20dPct": 13.47,
         "relationToGold": "direct"
       }
     ],
     "policyHeadlines": [
+      "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times",
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
-      "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
-      "2026-02-27 | ECB Press / Speeches | ECB Consumer Expectations Survey results – January 2026"
+      "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-05 | benzinga.com | How To Position Through A Shooting War",
-      "2026-03-05 | moneylife.in | Dubai Property in a War Zone : Buy , Sell or Hold ?",
-      "2026-03-05 | news8000.com | They fought in Iraq . Now theyre the Democrat loudest voices against the war in Iran . | National Politics",
-      "2026-03-05 | markets.financialcontent.com | FinancialContent - Amazon ( AMZN ) in 2026 : The Trillion - Dollar Backbone of the Intelligence Era",
-      "2026-03-05 | spacewar.com | Middle East war spirals with fresh strikes on Iran , Gulf",
-      "2026-03-05 | cnbc.com | Iran war : Dubai scrambles to save its reputation as haven for rich"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-05 | markets.financialcontent.com | FinancialContent - Precious Metals Pivot : XAU Index Surges as $1 . 2 Billion Floods into GLD Amid Falling Real Yields",
-      "2026-03-05 | freepressjournal.in | Gold Falls ₹7 , 600 Per 10 Grams , Silver Plunges ₹27 , 700 Per Kg As Profit Booking Hits Bullion Markets",
-      "2026-03-05 | dailypost.ng | CBN announces $3 . 5bn gold reserves despite naira freefall against US dollar",
-      "2026-03-05 | bostonglobe.com | Trump war carries economic risk"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-05 | markets.financialcontent.com | FinancialContent - Precious Metals Pivot : XAU Index Surges as $1 . 2 Billion Floods into GLD Amid Falling Real Yields",
-      "2026-03-05 | freepressjournal.in | Gold Falls ₹7 , 600 Per 10 Grams , Silver Plunges ₹27 , 700 Per Kg As Profit Booking Hits Bullion Markets",
-      "2026-03-05 | businesstoday.in | Is gold losing its safe haven status during market crashes ? Here why the yellow metal has fallen 5 % since March 2"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
