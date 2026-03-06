@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T14:13:30.808Z",
+  "generatedAt": "2026-03-06T15:12:48.117Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 5 năm 100%) với biến động cao; động lượng tăng trung hạn vẫn còn nhưng rủi ro mua đỉh ngắn hạn là lớn khi lợi suất thực USD tăng mạnh.",
+    "thesis": "Giá SJC đang điều chỉnh giảm 1.92% sau khi chạm đỉnh 5 năm (percentile 100%), trong khi VIX tăng mạnh 27.48% tạo tín hiệu rủi ro hỗn hợp. Nên chờ xác nhận hỗ trợ quanh MA7 (163.5 triệu VND/lượng) trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 183.8 triệu VND/lượng đang giao dịch trên MA7 (163.2 triệu) và MA30 (159.9 triệu), duy trì xu hướng tăng trung hạn nhưng đã giảm 3.1% sau 7 ngày.",
-      "Đỉnh giá 190.9 triệu (02-03) tạo ra mức kháng cự tâm lý mạnh; giá hiện cách đỉnh 3.7% cho thấy áp lực chốt lời đang hiện hữu.",
-      "Lợi suất thực USD 10Y tăng mạnh +1.69% trong 5 ngày lên mức 1.8%, tạo áp lực ngược đáng kể lên giá vàng thế giới.",
-      "VIX ở 21.15 (+17.96% trong 5 ngày) cho thấy thị trường tài chính đang lo ngại, hỗ trợ nhu cầu trú ẩn nhưng cũng tăng rủi ro biến động."
+      "Giá SJC 183.8 triệu VND/lượng đang cao hơn MA7 (163.5 triệu VND/lượng) 12.4% và MA30 (160 triệu VND/lượng) 14.9%, cho thấy thị trường đang ở vùng quá mua ngắn hạn cần điều chỉnh.",
+      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75 chỉ số, phản ánh lo ngại rủi ro thị trường nhưng giá vàng lại giảm -1.92% trong 7 ngày, đây là sự phân kỳ bất thường cần thận trọng.",
+      "Premium 13.37% đang ở mức hợp lý trong dải dao động 30 ngày (11.31%-17.79%), không có tín hiệu bất thường về chênh lệch cung cầu nội địa.",
+      "Lợi suất thực 10Y Mỹ tăng 1.69% lên 1.8% tạo áp lực ngược chiều lên vàng, trong khi giá thế giới giảm -2.35% trong 5 ngày gần nhất."
     ],
     "risks": [
-      "Mua đỉnh lịch sử khi percentile 5 năm đang ở mức 100%, rủi ro điều chỉnh sâu nếu thị trường consolidates.",
-      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực bán tháo vàng toàn cầu, kéo theo giảm giá trong nước.",
-      "Biến động ngày cao (1.52%) và sự kiện địa chính trị (Iran, thuế quan Mỹ) có thể gây gap giá bất ngờ."
+      "Giá SJC ở percentile 100% (đỉnh 5 năm) có rủi ro điều chỉnh sâu nếu phá vỡ hỗ trợ MA7 tại 163.5 triệu VND/lượng.",
+      "VIX tăng đột biến 27.48% có thể báo hiệu biến động thị trường rộng hơn, ảnh hưởng thanh khoản vàng.",
+      "Lợi suất thực Mỹ tiếp tục tăng sẽ gây áp lực giảm thêm lên giá vàng thế giới, kéo theo SJC."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 183800000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Thay đổi 7 ngày",
-        "value": -3.1,
+        "key": "SJC Price vs MA7",
+        "value": 12.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 (30 ngày)",
-        "value": 159955678,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 14.75,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.8,
+        "key": "VIX Change 5d",
+        "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Biến động VIX 5 ngày",
-        "value": 17.96,
+        "key": "SJC Change 7d",
+        "value": -1.92,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
+        "value": 1.69,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Đỉnh giá 30 ngày",
-        "value": 190900000,
-        "unit": "VND/lượng",
+        "key": "Premium Current",
+        "value": 13.37,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 11.31,
+        "unit": "%",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Percentile 5Y",
+        "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Intl Gold Change 5d",
+        "value": -2.35,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T14:13:09.352Z",
+    "latestTimestamp": "2026-03-06T15:12:28.145Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 160179352.53785998,
-    "premiumPct": 14.75,
-    "change7dPct": -3.1,
-    "change30dPct": 2.97,
-    "volatilityDailyPct": 1.52,
-    "ma7VndPerTael": 163209511,
-    "ma30VndPerTael": 159955678,
+    "intlVndPerTael": 162130248.7153558,
+    "premiumPct": 13.37,
+    "change7dPct": -1.92,
+    "change30dPct": 4.22,
+    "volatilityDailyPct": 1.54,
+    "ma7VndPerTael": 163488210,
+    "ma30VndPerTael": 160020708,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T14:13:14.824Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-06T15:12:31.409Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5099.155,
+        "value": 5140.265,
         "unit": "USD/oz",
         "date": "2026-03-06",
-        "change1dPct": 0.35,
-        "change5dPct": -3.13,
-        "change20dPct": 2.95,
+        "change1dPct": 1.16,
+        "change5dPct": -2.35,
+        "change20dPct": 3.78,
         "relationToGold": "context"
       },
       {
@@ -168,12 +174,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 21.15,
+        "value": 23.75,
         "unit": "index",
-        "date": "2026-03-04",
-        "change1dPct": -10.27,
-        "change5dPct": 17.96,
-        "change20dPct": 13.47,
+        "date": "2026-03-05",
+        "change1dPct": 12.29,
+        "change5dPct": 27.48,
+        "change20dPct": 9.1,
         "relationToGold": "direct"
       }
     ],
@@ -185,23 +191,8 @@
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times",
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-06 | firstpost.com | Iran war : Why are wealthy Indians moving their money to Singapore ?"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-06 | londonlovesbusiness.com | Dollar set for weekly gain as geopolitics and resilient data lift yields - London Business News",
-      "2026-03-06 | londonlovesbusiness.com | Gold holds near $5 , 100 as safe - haven demand meets inflation headwinds - London Business News",
-      "2026-03-06 | wesa.fm | Pa . and 20 other states sue over Trump new global tariffs",
-      "2026-03-06 | zerohedge.com | US - sanctioned gas tanker reportedly transited the Strait of Hormuz this morning ; US equity futures softer into NFP - Newsquawk US Opening News",
-      "2026-03-06 | freepressjournal.in | Gold Falls ₹1 , 100 To ₹1 . 64 Lakh / 10g , Silver Slips To ₹2 . 71 Lakh / kg",
-      "2026-03-06 | freepressjournal.in | India Forex Reserves Hit $728 . 49 Billion , Rise $4 . 88 Billion To Record High"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-06 | londonlovesbusiness.com | Gold holds near $5 , 100 as safe - haven demand meets inflation headwinds - London Business News",
-      "2026-03-06 | zerohedge.com | US - sanctioned gas tanker reportedly transited the Strait of Hormuz this morning ; US equity futures softer into NFP - Newsquawk US Opening News",
-      "2026-03-06 | freepressjournal.in | Gold Falls ₹1 , 100 To ₹1 . 64 Lakh / 10g , Silver Slips To ₹2 . 71 Lakh / kg",
-      "2026-03-06 | freepressjournal.in | India Forex Reserves Hit $728 . 49 Billion , Rise $4 . 88 Billion To Record High",
-      "2026-03-06 | prokerala.com | India forex reserves surge to all - time high of $728 . 49 billion"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
