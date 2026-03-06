@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T02:58:13.226Z",
+  "generatedAt": "2026-03-06T03:51:32.754Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm ngắn hạn (-2.39%/7 ngày) sau khi chạm đỉnh 5 năm (percentile 100%), nhưng xu hướng trung hạn vẫn tích cực nhờ xung đột Iran leo thang và lợi suất thực USD giảm. Nên chờ xác nhận vùng hỗ trợ kỹ thuật quanh MA7 (163.4 triệu VND/lượng) trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang điều chỉnh giảm 2.24% sau khi chạm đỉnh 5 năm (percentile 100%), trong khi đòn bẩy vĩ mô từ lợi suất thực giảm và VIX cao vẫn hỗ trợ xu hướng dài hạn; nhà đầu tư nên chờ khẳng định hỗ trợ thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC điều chỉnh mạnh -2.39% trong 7 ngày gần nhất từ đỉnh 190.9 triệu VND (2026-03-02), về mức 183.8 triệu VND, cho thấy áp lực chốt lời ngắn hạn.",
-      "Premium SJC đang ở mức 13.9%, thấp hơn đáng kể so với đỉnh 17.79% (2026-02-17), giảm bớt rủi ro mua đắt so với giá thế giới.",
-      "Xung đột Trung Đông (Iran war) đẩy VIX tăng 17.96% trong 5 ngày và Dollar tăng mạnh, gây áp lực ngắn hạn lên giá vàng thế giới.",
-      "Lợi suất thực 10 năm USD giảm sâu -6.25% trong 20 ngày (xuống 1.8%), tạo động lực hỗ trợ giá vàng trung hạn."
+      "Giá SJC 183.8 triệu VND/lượng đang giao dịch trên MA7 (163.4 triệu) và MA30 (160 triệu), nhưng đã giảm 2.24% trong 7 ngày gần nhất so với đỉnh 190.9 triệu.",
+      "Đòn bẩy vĩ mô tích cực: Lợi suất thực Mỹ 10Y giảm mạnh 6.25% trong 20 ngày (xuống 1.8%) và VIX tăng 17.96% trong 5 ngày (lên 21.15) thường hỗ trợ giá vàng.",
+      "Premium 13.73% đang ở mức hợp lý trong biên độ dao động 11.31%-17.79% của chuỗi 30 ngày, không có dấu hiệu bong bóng cục bộ.",
+      "Lợi suất trái phiếu Mỹ 2Y tăng 2.61% trong 5 ngày (lên 3.54%) tạo áp lực ngắn hạn lên giá vàng thế giới, giải thích phần nào đợt điều chỉnh -2.48% của XAUUSD 5 ngày qua."
     ],
     "risks": [
-      "Giá SJC đang ở mức cao nhất 5 năm (percentile 100%), rủi ro điều chỉnh sâu nếu xung đột địa chính trị hạ nhiệt.",
-      "Biến động ngày cao (1.53%) kết hợp với USD Index tăng có thể gây sideway kéo dài.",
-      "Dữ liệu sự kiện vĩ mô chưa có tín hiệu rõ ràng từ Fed, chỉ dựa vào headline địa chính trị có thể nhiễu."
+      "Rủi ro điều chỉnh kỹ thuật sâu hơn nếu giá SJC phá vỡ vùng hỗ trợ gần 181-184 triệu VND/lượng đã xác lập trong tháng 2.",
+      "Thanh khoản thấp hoặc thiếu dữ liệu sự kiện địa chính trị mới có thể gây biến động bất ngờ.",
+      "Dữ liệu vĩ mô cho thấy healthy=false, thiếu tín hiệu hành động từ các ngân hàng trung ương lớn."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 183800000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (7d Change)",
-        "value": -2.39,
+        "key": "change_7d_pct",
+        "value": -2.24,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 13.9,
-        "unit": "%",
+        "key": "percentile_5y",
+        "value": 100,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 163378570,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Index",
-        "value": 21.15,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực 10Y (20d Change)",
+        "key": "us_real_yield_10y_change20d",
         "value": -6.25,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới Spot",
-        "value": 5125.615,
-        "unit": "USD/oz",
+        "key": "vix_change5d",
+        "value": 17.96,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_current",
+        "value": 13.73,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_treasury_2y_change5d",
+        "value": 2.61,
+        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T02:57:41.926Z",
+    "latestTimestamp": "2026-03-06T03:51:11.897Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 161362771.61340687,
-    "premiumPct": 13.9,
-    "change7dPct": -2.39,
-    "change30dPct": 3.73,
+    "intlVndPerTael": 161604225.42679477,
+    "premiumPct": 13.73,
+    "change7dPct": -2.24,
+    "change30dPct": 3.88,
     "volatilityDailyPct": 1.53,
-    "ma7VndPerTael": 163378570,
-    "ma30VndPerTael": 159995125,
+    "ma7VndPerTael": 163413064,
+    "ma30VndPerTael": 160003174,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T02:57:51.447Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-06T03:51:17.466Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5125.615,
+        "value": 5133.105,
         "unit": "USD/oz",
         "date": "2026-03-06",
-        "change1dPct": 0.87,
-        "change5dPct": -2.63,
-        "change20dPct": 3.49,
+        "change1dPct": 1.02,
+        "change5dPct": -2.48,
+        "change20dPct": 3.64,
         "relationToGold": "context"
       },
       {
@@ -185,29 +185,8 @@
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-06 | thejakartapost.com | Stocks set for tough week , oil eyes big gains as Middle East war rages - Markets",
-      "2026-03-06 | oberonreview.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Oberon Review",
-      "2026-03-06 | pilotonline.com | Paralympians try to focus on Milan Cortina Games amid tensions over Iran war , return of Russian flag",
-      "2026-03-06 | juneesoutherncross.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Southern Cross",
-      "2026-03-06 | economictimes.indiatimes.com | Trump new global tariffs face first legal challenge as 24 US states sue to block them",
-      "2026-03-06 | egyptianstreets.com | Egypt Sisi Warns Price Manipulators Can Be Referred to Military Courts"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-06 | thejakartapost.com | Stocks set for tough week , oil eyes big gains as Middle East war rages - Markets",
-      "2026-03-06 | economictimes.indiatimes.com | RBI bond buys help steady yields , offset liquidity drain",
-      "2026-03-06 | livemint.com | Quick money transfer to Dubai ? Central banks are stepping in to help",
-      "2026-03-06 | fool.com.au | If gold is a safe haven , why are ASX 200 gold stocks like Northern Star and Evolution Mining getting smashed this week ?",
-      "2026-03-06 | marketscreener.com | Dollar set for steepest weekly gain in a year as Iran crisis boosts haven bid",
-      "2026-03-06 | tribune.com.pk | FX reserves edge up $87m to $16 . 3b"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-06 | thejakartapost.com | Stocks set for tough week , oil eyes big gains as Middle East war rages - Markets",
-      "2026-03-06 | oberonreview.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Oberon Review",
-      "2026-03-06 | juneesoutherncross.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Southern Cross",
-      "2026-03-06 | shtfplan.com | The Window Is Closing : How the Iran Conflict Just Unleashed a Global Famine Trigger",
-      "2026-03-06 | bluemountainsgazette.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Blue Mountains Gazette",
-      "2026-03-06 | mandurahmail.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Mandurah Mail"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
