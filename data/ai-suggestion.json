@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T18:12:23.767Z",
+  "generatedAt": "2026-03-06T19:14:56.662Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với rủi ro điều chỉnh kỹ thuật ngắn hạn sau đợt tăng mạnh, trong khi xung đột Iran tạo sự hỗ trợ vĩ mô nhưng cũng đẩy lợi suất thực USD tăng lên.",
+    "thesis": "Giá SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi VIX nhảy vọt 27.5% báo hiệu biến động tài chính cao; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 183.8 triệu VND/lượng đang ở phân vị 100% trong 5 năm và giảm 2.03% sau 7 ngày, cho thấy áp lực chốt lời ngắn hạn tại vùng đỉnh.",
-      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75 điểm phản ánh lo ngại địa chính trị về xung đột Iran, thường hỗ trợ giá vàng an toàn.",
-      "Lợi suất thực USD 10 năm tăng 1.69% lên 1.8% và Dollar Index tăng là áp lực ngược lên giá vàng thế giới (xu hướng ngược chiều).",
-      "Premium 13.49% đang ở mức hợp lý trong biên độ dao động 11-18% của 30 ngày qua, không có tín hiệu bất thường để mua gấp hoặc bán tháo."
+      "Giá SJC 183.8 triệu VND/lượng đang nằm trên MA7 (163.6 triệu) và MA30 (160 triệu), nhưng tốc độ tăng chậm lại với change7dPct chỉ -1.57% so với change30dPct mạnh 4.6%.",
+      "VIX tăng vọt 27.48% lên 23.75 điểm trong 5 ngày, cho thấy tâm lý thị trường lo ngại rủi ro, thường đi kèm với thanh khoản vàng co hẹp hoặc chốt lời.",
+      "Lợi suất thực 10 năm của Mỹ tăng 1.69% lên 1.8%, tạo áp lực ngược lên giá vàng thế giới (đã giảm -1.77% trong 5 ngày), có thể kéo premium SJC giãn thêm.",
+      "Premium 12.96% đang ở mức thấp hơn so với đỉnh 17.79% trong chuỗi 30 ngày, cho thấy giá Việt Nam chưa phản ứng quá mức so với thế giới."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực giảm lên giá vàng thế giới và trong nước.",
-      "Điều chỉnh kỹ thuật sâu hơn từ vùng đỉnh lịch sử nếu dữ liệu lạm phát Mỹ nóng hơn kỳ vọng.",
-      "Biến động cao 1.54%/ngày có thể gây thua lỗ ngắn hạn nếu MUA tại giá cao."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua (percentile 5y = 100%).",
+      "Thanh khoản có thể giảm mạnh nếu VIX tiếp tục tăng cao gây ách tắc thị trường.",
+      "Biến động premium có thể đạt tới 17-18% như lịch sử 30 ngày, làm tăng chi phí cơ hội nắm giữ."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 100,
-        "unit": "%",
+        "key": "Giá SJC hiện tại",
+        "value": 183800000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -2.03,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_5d",
+        "key": "VIX 5 ngày",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "Lợi suất thực 10Y 1 ngày",
+        "value": 1.69,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.31,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "current_premium",
-        "value": 13.49,
+        "key": "Premium hiện tại",
+        "value": 12.96,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 1.54,
+        "key": "MA7 giá SJC",
+        "value": 163572140,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động ngày",
+        "value": 1.56,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Giá thế giới 5 ngày",
+        "value": -1.77,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T18:11:46.985Z",
+    "latestTimestamp": "2026-03-06T19:14:37.228Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 161959039.97224924,
-    "premiumPct": 13.49,
-    "change7dPct": -2.03,
-    "change30dPct": 4.11,
-    "volatilityDailyPct": 1.54,
-    "ma7VndPerTael": 163463752,
-    "ma30VndPerTael": 160015001,
+    "intlVndPerTael": 162717758.0051698,
+    "premiumPct": 12.96,
+    "change7dPct": -1.57,
+    "change30dPct": 4.6,
+    "volatilityDailyPct": 1.56,
+    "ma7VndPerTael": 163572140,
+    "ma30VndPerTael": 160040291,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T18:12:08.489Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-06T19:14:40.067Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5143.865,
+        "value": 5170.575,
         "unit": "USD/oz",
         "date": "2026-03-06",
-        "change1dPct": 1.23,
-        "change5dPct": -2.28,
-        "change20dPct": 3.85,
+        "change1dPct": 1.76,
+        "change5dPct": -1.77,
+        "change20dPct": 4.39,
         "relationToGold": "context"
       },
       {
@@ -178,30 +178,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
+      "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro",
+      "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
+      "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
-      "2026-02-24 | Federal Reserve Monetary Policy Press Releases | Minutes of the Board's discount rate meetings on January 20 and 28, 2026",
-      "2026-02-24 | Federal Reserve Speeches | Cook, Opening Remarks for the “AI and Productivity across the Economy” Panel",
-      "2026-02-24 | Federal Reserve Speeches | Waller, Operationalizing AI at the Federal Reserve",
-      "2026-02-23 | Federal Reserve Speeches | Waller, Labor Market Data: Signal or Noise?",
-      "2026-02-19 | Federal Reserve Speeches | Bowman, Opening Remarks"
+      "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-06 | emirates247.com | Dollar Set for Biggest Weekly Gain in Over a Year",
-      "2026-03-06 | markets.financialcontent.com | FinancialContent - Goldman Sachs Tumbles as Geopolitical Tensions and Technical Breakdowns Batter the Financial Giant"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-06 | emirates247.com | Dollar Set for Biggest Weekly Gain in Over a Year",
-      "2026-03-06 | markets.financialcontent.com | FinancialContent - Goldman Sachs Tumbles as Geopolitical Tensions and Technical Breakdowns Batter the Financial Giant",
-      "2026-03-06 | actionforex.com | Week Ahead – US Inflation Data to Offer Distraction Amid Iran War Fallout",
-      "2026-03-06 | rediff.com | India Forex Reserves Surge to a Historic Peak of $728 . 5 Bn",
-      "2026-03-06 | wwnytv.com | New York Attorney General Letitia James joins 23 states in lawsuit to block new Trump tariffs",
-      "2026-03-06 | ifre.com | Prospect of prolonged Iran conflict ignites inflation concerns"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-06 | markets.financialcontent.com | FinancialContent - Goldman Sachs Tumbles as Geopolitical Tensions and Technical Breakdowns Batter the Financial Giant",
-      "2026-03-06 | actionforex.com | Week Ahead – US Inflation Data to Offer Distraction Amid Iran War Fallout",
-      "2026-03-06 | globalsecurity.org | Oil / Black Gold / Texas T",
-      "2026-03-06 | livemint.com | Wall Street : Dow Jones crashes 823 points , S & P 500 and Nasdaq drop 1 . 5 % each on Middle East war , poor jobs data"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
