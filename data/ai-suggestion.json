@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T22:06:28.240Z",
+  "generatedAt": "2026-03-06T23:07:16.974Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang điều chỉnh giảm 2.02% sau đỉnh lịch sử, nhưng thanh khoản thấp và biến động cao khiến điểm mua chưa tối ưu. Nhà đầu tư nên chờ xác nhận vùng hỗ trợ quanh MA7 (163.1 triệu VND/lượng) hoặc ổn định premium dưới 13% trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi dòng tiền vĩ mô đang phân vân giữa rủi ro địa chính trị và áp lực lãi suất thực tăng trở lại.",
     "reasons": [
-      "Giá SJC giảm 2.02% trong 7 ngày từ đỉnh 190.9 triệu VND (03/03), cho thấy động lượng tăng đã suy yếu và đang trong pha điều chỉnh kỹ thuật ngắn hạn.",
-      "VIX tăng mạnh 27.48% lên mức 23.75 chỉ điểm bất ổn thị trường, nhưng lợi suất thực 10 năm (1.82%) cũng tăng 4.6% trong 5 ngày, tạo áp lực ngược lên giá vàng thế giới.",
-      "Giá SJC hiện tại (183.8 triệu VND) vẫn cao hơn đáng kể so với MA7 (163.06 triệu VND/lượng), cho thấy rủi ro điều chỉnh về mức trung bình ngắn hạn vẫn còn.",
-      "Premium dao động rộng từ 11.31% đến 17.79% trong 30 ngày qua, thanh khoản thấp và thiếu sự kiện vĩ mô cấp thiết (không có headlines địa chính trị/hành động quốc gia) không hỗ trợ đà tăng đột phá."
+      "Giá SJC 183.8 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (160.4 triệu) tới 14.6%, báo hiệu vùng giá quá mua cần thời gian củng cố.",
+      "Động lượng tăng suy yếu: Giá thế giới giảm 2.1% trong 5 ngày qua dù VIX tăng vọt 27.48%, cho thấy thanh khoản đang ưu tiên tài sản an toàn khác hoặc chốt lời ngắn hạn.",
+      "Lãi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày lên mức 1.82%, tạo áp lực chi phí cơ hội ngược chiều với đà tăng giá vàng.",
+      "Biên độ dao động premium mở rộng (11.31% - 17.79% trong 30 ngày qua) và VIX tăng cao (23.75 điểm) cho thấy thanh khoản thị trường Việt Nam có thể biến động mạnh hai chiều."
     ],
     "risks": [
-      "Biến động ngày cao (1.53%) và spread mua-bán có thể nới rộng, làm tăng chi phí giao dịch ngắn hạn.",
-      "Lợi suất thực USD tăng vọt (+4.6% trong 5 ngày) có thể tiếp tục gây áp lực giảm lên giá vàng thế giới.",
-      "Thiếu dữ liệu headlines địa chính trị/hành động quốc gia trong input làm giảm độ tin cậy của các yếu tố first-principles; rủi ro nhiễu dữ liệu vĩ mô."
+      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá thế giới mất mốc hỗ trợ 5,000 USD/oz và lãi suất thực Mỹ tiếp tục tăng.",
+      "Thanh khoản thấp tại vùng đỉnh 183-187 triệu VND/lượng có thể khiến chốt lời gặp khó khăn nếu thị trường đảo chiều.",
+      "Căng thẳng Trung Đông leo thang có thể gây sốc giá đột ngột nhưng cũng đi kèm biên độ dao động cực đoan."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 183800000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Thay đổi 7 ngày (SJC)",
-        "value": -2.02,
+        "key": "sjc_price_percentile_5y",
+        "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 163059625,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium hiện tại",
-        "value": 12.9,
+        "key": "sjc_premium_vs_ma30",
+        "value": 14.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 23.75,
-        "unit": "index",
+        "key": "us_real_yield_10y_change_5d",
+        "value": 4.6,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Thay đổi VIX 5 ngày",
+        "key": "vix_change_5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực 10Y Mỹ",
-        "value": 1.82,
+        "key": "gold_spot_change_5d",
+        "value": -2.1,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Thay đổi Lợi suất thực 5 ngày",
-        "value": 4.6,
+        "key": "premium_range_30d",
+        "value": 11.31,
         "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "current_vix_level",
+        "value": 23.75,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T22:06:12.366Z",
+    "latestTimestamp": "2026-03-06T23:06:59.750Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 162795999.03542134,
-    "premiumPct": 12.9,
+    "intlVndPerTael": 162791469.80686542,
+    "premiumPct": 12.91,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.53,
-    "ma7VndPerTael": 163059625,
-    "ma30VndPerTael": 160388793,
+    "ma7VndPerTael": 163058978,
+    "ma30VndPerTael": 160388642,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T22:06:15.136Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-06T23:07:04.283Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -130,12 +124,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.31,
+        "value": 2.35,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 0.87,
-        "change5dPct": 1.32,
-        "change20dPct": -1.7,
+        "date": "2026-03-06",
+        "change1dPct": 1.73,
+        "change5dPct": 4.44,
+        "change20dPct": 1.29,
         "relationToGold": "direct"
       },
       {
@@ -191,8 +185,19 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-06 | naturalnews.com | Middle East conflict sparks global supply chain chaos , threatens South African exports – NaturalNews . com",
+      "2026-03-06 | punchng.com | Trump on US - Iran War : Unconditional Surrender is Only End"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-06 | mauinews.com | More than 20 states sue over new global tariffs Trump imposed after his stinging Supreme Court loss | News , Sports , Jobs",
+      "2026-03-06 | wtae.com | Pennsylvania sues over Trump new global tariffs",
+      "2026-03-06 | thetimes.com | Inflation fears grow as oil prices surge past $90",
+      "2026-03-06 | finance.yahoo.com | The Pound Is Not Sterling . 1 Trade to Make ASAP Amid Middle East Conflict ."
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-06 | investmentnews.com | Gold is back in the spotlight , glinting its way into portfolios and headlines alike",
+      "2026-03-06 | econotimes.com | War Drums in the Middle East : Arthur Hayes Sees Bitcoin Next Big Boost"
+    ]
   }
 }
