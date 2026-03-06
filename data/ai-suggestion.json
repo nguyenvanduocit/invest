@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T04:34:21.210Z",
+  "generatedAt": "2026-03-06T05:21:08.986Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 5 năm 100%) với biến động cao; xu hướng tăng trung hạn còn nguyên nhưng rủi ro mua đuôi ngắn hạn lớn khi giá trên MA7 VND/lượng.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm ngắn hạn (-2.33%/7 ngày) từ đỉnh lịch sử, nhưng xu hướng trung hạn vẫn tích cực. Nhà đầu tư nên chờ đợi vùng giá hỗ trợ tốt hơn hoặc tín hiệu ổn định trước khi vào lệnh mới, thay vì mua đuổi ở mức định giá 100% percentile 5 năm.",
     "reasons": [
-      "Giá SJC 183.8 triệu VND/lượng cao hơn MA7 (163.4 triệu VND/lượng) tới 12.5%, cho thấy thị trường ở vùng quá mua kỹ thuật ngắn hạn.",
-      "Premium 13.76% nằm trong biên độ 30 ngày (11.31%-17.79%), không có tín hiệu bất thường đột biến.",
-      "Lợi suất thực Mỹ 10 năm tăng 1.69% lên 1.8% và VIX giảm 10.27% xuống 21.15 điểm, tạo áp lực giảm lên giá vàng ngắn hạn."
+      "Giá SJC 183.8 triệu VND/lượng đang thấp hơn MA7 (163.4 triệu VND/lượng) và giảm 2.33% sau 7 ngày, cho thấy động lượng ngắn hạn yếu và đang trong nhịp điều chỉnh kỹ thuật.",
+      "Giá thế giới XAUUSD (5,128 USD/oz) giảm 2.57% trong 5 ngày gần nhất, tương quan chặt chẽ với đà giảm của giá vàng trong nước.",
+      "Lợi suất thực Mỹ 10 năm tăng mạnh 1.69% lên mức 1.8%, tạo áp lực bán lên vàng vì chi phí cơ hội nắm giữ tăng cao.",
+      "VIX ở mức 21.15 (+17.96% trong 5 ngày) và căng thẳng Mỹ-Iran theo tin tức ngày 06/03 hỗ trợ nhu cầu trú ẩn an toàn, hạn chế đà giảm sâu của giá vàng."
     ],
     "risks": [
-      "Đang ở đỉnh lịch sử 5 năm (percentile 100%), rủi ro điều chỉnh sâu nếu động lượng yếu đi.",
-      "Biến động ngày cao 1.53%, giá có thể dao động mạnh hai chiều.",
-      "Không có dữ liệu sự kiện địa chính trị trong input, khó đánh giá yếu tố bất ngờ."
+      "Rủi ro mua đỉnh lịch sử: Giá SJC đang ở percentile 100% trong 5 năm (183.8 triệu VND/lượng), thanh khoản cao nhưng biên độ an toàn thấp.",
+      "Biến động premium lớn: Chênh lệch giá dao động từ 11.31% đến 17.79% trong 30 ngày qua, hiện ở 13.84%, có thể gây thua lỗ chênh lệch nếu mua bán sai thời điểm.",
+      "Dữ liệu vĩ mô mâu thuẫn: Lợi suất thực tăng (tác động tiêu cực) nhưng tin địa chính trị căng thẳng (tác động tích cực) có thể khiến giá dao động thất thường."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA7 Gap",
-        "value": 12.5,
+        "key": "Giá SJC hiện tại",
+        "value": 183800000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Thay đổi giá 7 ngày (SJC)",
+        "value": -2.33,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5Y",
+        "key": "MA7 giá SJC",
+        "value": 163391768,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Current",
-        "value": 13.76,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 5128.675,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 1d",
-        "value": 1.69,
+        "key": "Biến động giá thế giới 5 ngày",
+        "value": -2.57,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 1d",
-        "value": -10.27,
+        "key": "Lợi suất thực Mỹ 10 năm",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Change 30d SJC",
-        "value": 3.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Range 30d Low",
-        "value": 11.31,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Premium Range 30d High",
-        "value": 17.79,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "Chỉ số VIX",
+        "value": 21.15,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T04:33:47.577Z",
+    "latestTimestamp": "2026-03-06T05:20:37.726Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 161567422.0998796,
-    "premiumPct": 13.76,
-    "change7dPct": -2.26,
-    "change30dPct": 3.86,
+    "intlVndPerTael": 161455152.19821185,
+    "premiumPct": 13.84,
+    "change7dPct": -2.33,
+    "change30dPct": 3.79,
     "volatilityDailyPct": 1.53,
-    "ma7VndPerTael": 163407806,
-    "ma30VndPerTael": 160001947,
+    "ma7VndPerTael": 163391768,
+    "ma30VndPerTael": 159998204,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -89,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T04:33:50.381Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-06T05:20:51.451Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5133.355,
+        "value": 5128.675,
         "unit": "USD/oz",
         "date": "2026-03-06",
-        "change1dPct": 1.03,
-        "change5dPct": -2.48,
-        "change20dPct": 3.64,
+        "change1dPct": 0.94,
+        "change5dPct": -2.57,
+        "change20dPct": 3.55,
         "relationToGold": "context"
       },
       {
@@ -190,8 +191,22 @@
       "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy",
       "2026-02-27 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-06 | livemint.com | Silver rate today : White metal jumps over 2 . 5 % on MCX on escalating US - Iran war , weak dollar",
+      "2026-03-06 | theglobeandmail.com | CBSA has removed only one senior Iranian official from Canada under federal ban",
+      "2026-03-06 | livemint.com | Gold rallies on West Asia conflict . How long can the bull run last ?"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-06 | livemint.com | Silver rate today : White metal jumps over 2 . 5 % on MCX on escalating US - Iran war , weak dollar",
+      "2026-03-06 | kcby.com | Oregon among states leading lawsuit against Trump new global tariffs",
+      "2026-03-06 | naija247news.com | Naira Falls to N1 , 420 / $ as Dollar Demand Surges - News Analysis",
+      "2026-03-06 | businesstimes.com.sg | Gold steadies as firmer dollar offsets Middle East risk premium",
+      "2026-03-06 | businesstimes.com.sg | Asian stocks drop as war drags on , crude oil falls"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-06 | livemint.com | Silver rate today : White metal jumps over 2 . 5 % on MCX on escalating US - Iran war , weak dollar",
+      "2026-03-06 | nynganobserver.com.au | Michelle Grattan | Would Labor support the Iran war if it were in opposition ? | Nyngan Observer",
+      "2026-03-06 | marketscreener.com | Gold rises 1 % as Middle East conflict spurs safe - haven demand"
+    ]
   }
 }
