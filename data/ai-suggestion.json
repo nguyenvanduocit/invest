@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T16:11:00.482Z",
+  "generatedAt": "2026-03-06T17:13:17.666Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang điều chỉnh từ đỉnh lịch sử (percentile 100) với động lượng giảm 7 ngày gần đây, trong khi VIX tăng mạnh cho thấy sự bất ổn thị trường. Nên chờ xác nhận xu hướng rõ ràng hơn trước khi hành động.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng bị hãm lại bởi lợi suất thực USD hồi phục, tạo ra rủi ro điều chỉnh ngắn hạn dù nền tảng địa chính trị vẫn hỗ trợ.",
     "reasons": [
-      "Giá SJC 183.8 triệu VND/lượng đang thấp hơn MA7 (163.5 triệu VND/lượng) và giảm -2.02% sau 7 ngày, cho thấy động lượng ngắn hạn yếu đi.",
-      "VIX tăng mạnh +27.48% trong 5 ngày lên mức 23.75, phản ánh lo ngại thị trường nhưng chưa đẩy giá vàng tăng thêm.",
-      "Lợi suất thực Mỹ 10 năm tăng +1.69% lên 1.8%, tạo áp lực ngược lên giá vàng thế giới trong ngắn hạn.",
-      "Premium 13.48% đang ở mức hợp lý so với trung bình 30 ngày (12-18%), không có tín hiệu bất thường để giao dịch chênh lệch."
+      "Giá SJC 183.8 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (160 triệu VND/lượng) tới 14.9%, báo hiệu vùng quá mua kỹ thuật.",
+      "Lợi suất thực USD 10Y tăng mạnh 1.69% lên 1.8% và VIX nhảy 27.5% trong 5 ngày tạo áp lực bán chốt lợi nhuận, giải thích đà giảm 2.16% của giá SJC trong 7 ngày qua.",
+      "Premium 13.64% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (13.6%), không có tín hiệu bất thường về căng thẳng nguồn cung nội địa.",
+      "Lợi suất T-bond 2Y tăng 2.61% (5 ngày) phản ánh kỳ vọng chính sách tiền tệ thắt chặt lại, áp lực ngược lên giá vàng thế giới."
     ],
     "risks": [
-      "Giá đang ở percentile 5 năm mức 100%, rủi ro điều chỉnh sâu nếu động lượng tiếp tục suy yếu.",
-      "Lợi suất thực Mỹ tăng nhanh có thể khiến vàng thế giới giảm thêm, kéo theo giá Việt Nam.",
-      "Dữ liệu sự kiện vĩ mô không có tin tức địa chính trị hay hành động quốc gia cụ thể để hỗ trợ xu hướng."
+      "Điều chỉnh kỹ thuật sâu hơn khi giá giao dịch xa MA7 (163.4 triệu VND/lượng) và MA30.",
+      "Rủi ro thanh khoản nếu VIX tiếp tục leo thang khiến nhà đầu tư bán tài sản rủi ro để giữ USD mặt.",
+      "Căng thẳng Trung Đông leo thang có thể gây biến động bất ngờ hai chiều."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 183800000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_7d_pct",
-        "value": -2.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma7_vnd",
-        "value": 163464554,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_5d_change",
+        "key": "sjc_premium_vs_ma30",
+        "value": 14.9,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y_change_5d",
+        "value": 1.69,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change_5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_pct",
-        "value": 13.48,
+        "key": "sjc_change_7d",
+        "value": -2.16,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_30d_change",
-        "value": 6.48,
+        "key": "current_premium",
+        "value": 13.64,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "us_treasury_2y_change_5d",
+        "value": 2.61,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T16:10:39.820Z",
+    "latestTimestamp": "2026-03-06T17:12:53.089Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 161964657.5126921,
-    "premiumPct": 13.48,
-    "change7dPct": -2.02,
-    "change30dPct": 4.11,
+    "intlVndPerTael": 161737294.45769256,
+    "premiumPct": 13.64,
+    "change7dPct": -2.16,
+    "change30dPct": 3.97,
     "volatilityDailyPct": 1.54,
-    "ma7VndPerTael": 163464554,
-    "ma30VndPerTael": 160015188,
+    "ma7VndPerTael": 163432074,
+    "ma30VndPerTael": 160007609,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T16:10:43.843Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-06T17:13:01.732Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5143.645,
+        "value": 5136.175,
         "unit": "USD/oz",
         "date": "2026-03-06",
-        "change1dPct": 1.23,
-        "change5dPct": -2.28,
-        "change20dPct": 3.85,
+        "change1dPct": 1.08,
+        "change5dPct": -2.43,
+        "change20dPct": 3.7,
         "relationToGold": "context"
       },
       {
@@ -184,15 +178,33 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro",
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
-      "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times",
-      "2026-03-02 | ECB Press / Speeches | President Lagarde launches EuroSteps Walking Challenge at event promoting women’s financial literacy"
+      "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-06 | theguardian.com | Hungary seizes millions of euros in cash and gold from Ukrainian convoy",
+      "2026-03-06 | globalsecurity.org | Oil / Black Gold / Texas T",
+      "2026-03-06 | livemint.com | Wall Street : Dow Jones crashes 823 points , S & P 500 and Nasdaq drop 1 . 5 % each on Middle East war , poor jobs data",
+      "2026-03-06 | manilatimes.net | Remolona : Rate hike on table if oil surges | The Manila Times"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-06 | livemint.com | Wall Street : Dow Jones crashes 823 points , S & P 500 and Nasdaq drop 1 . 5 % each on Middle East war , poor jobs data",
+      "2026-03-06 | globalnews.ca | Stock markets plummet as oil nears $90 amid Iran war , U . S . job losses - National",
+      "2026-03-06 | economictimes.indiatimes.com | Why true diversification lies beyond just gold and silver",
+      "2026-03-06 | investopedia.com | Jobs Report Live : Labor Market Weakness Stresses Dual Mandate , Fed Official Says",
+      "2026-03-06 | newsx.com | Gold Rate Today , March 6 : Delhi , Mumbai , Chennai , Kolkata , Hyderabad And Other Cities - Check 24K & 22K Prices Across India"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-06 | globalsecurity.org | Oil / Black Gold / Texas T",
+      "2026-03-06 | livemint.com | Wall Street : Dow Jones crashes 823 points , S & P 500 and Nasdaq drop 1 . 5 % each on Middle East war , poor jobs data",
+      "2026-03-06 | economictimes.indiatimes.com | Why true diversification lies beyond just gold and silver",
+      "2026-03-06 | investopedia.com | Jobs Report Live : Labor Market Weakness Stresses Dual Mandate , Fed Official Says",
+      "2026-03-06 | newsx.com | Gold Rate Today , March 6 : Delhi , Mumbai , Chennai , Kolkata , Hyderabad And Other Cities - Check 24K & 22K Prices Across India",
+      "2026-03-06 | markets.financialcontent.com | FinancialContent - Diverging Destinies : Big Banks Face a High - Stakes Q1 2026 as the  Goldilock Era Fades"
+    ]
   }
 }
