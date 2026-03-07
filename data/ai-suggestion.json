@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T18:06:08.794Z",
+  "generatedAt": "2026-03-07T19:05:55.256Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,34 +7,34 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng ngắn hạn đã yếu đi (-2.02% tuần qua) và thanh khoản có thể thấp cuối tuần. Nên chờ hồi chỉnh về vùng hỗ trợ kỹ thuật thay vì đu đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng đã suy yếu (-2.02% tuần gần nhất) và VIX tăng vọt báo hiệu rủi ro chốt lời ngắn hạn; nhà đầu tư nên chờ đợt điều chỉnh để vào giá tốt hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cách xa MA30 (160 triệu VND/lượng) tới 15.6%, rủi ro điều chỉnh kỹ thuật cao.",
-      "Động lượng ngắn hạn đã giảm tốc: thay đổi 7 ngày là -2.02% so với đà tăng 30 ngày là +7.02%, cho thấy áp lực bán chốt lợi nhuận đang xuất hiện.",
-      "VIX tăng mạnh +27.48% trong 5 ngày lên mức 23.75 chỉ thị thị trường tài chính căng thẳng, thường hỗ trợ vàng nhưng cũng có thể gây biến động 2 chiều bất ngờ.",
-      "Lợi suất thực 10 năm Mỹ tăng 4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới (xuống -2.1% trong 5 ngày)."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh là rất lớn khi đã tăng 7.02% chỉ trong 30 ngày qua.",
+      "Động lượng ngắn hạn đã suy yếu rõ rệt với change7dPct = -2.02%, cho thấy áp lực bán chốt lời đang xuất hiện sau đợt tăng nóng.",
+      "VIX tăng vọt +27.48% trong 5 ngày lên mức 23.75, phản ánh tâm lý thị trường bất ổn, thường dẫn đến biến động hai chiều mạnh và thanh khoản có thể bị rút khỏi vàng để bù đắp margin tài sản rủi ro khác.",
+      "Lợi suất thực 10 năm USD tăng mạnh +4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới khi chi phí cơ hội nắm giữ vàng tăng lên."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ 5,100 USD/oz và premium SJC co lại từ mức 13.89%.",
-      "Biến động cao (1.49%/ngày) có thể gây kích lệnh nếu giao dịch đòn bẩy hoặc mua đuổi.",
-      "Dữ liệu vĩ mô thiếu cập nhật (healthy: false) và không có tin địa chính trị cụ thể, độ tin cậy phân tích giảm."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ vùng hỗ trợ 5065 USD/oz (đã thấy ngày 05/03) và VND mạnh lên khiến premium co hẹp.",
+      "Premium 13.89% hiện cao hơn mức thấp nhất 11.55% trong chuỗi 30 ngày, có thể co về mức 12-13% nếu giá thế giới giảm, làm trầm trọng thêm khoản lỗ cho người mua nội địa.",
+      "Sự kiện địa chính trị (Iran) có thể gây biến động bất ngờ hai chiều, khó dự đoán direction ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d vs 30d",
+        "key": "SJC Change 7d",
         "value": -2.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price vs MA30",
-        "value": 15.6,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -51,29 +51,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 5d",
-        "value": -2.1,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Premium SJC",
+        "key": "Current Premium vs 30d Low",
         "value": 13.89,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "World Gold Low 30d",
+        "value": 4945.18,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T18:05:50.115Z",
+    "latestTimestamp": "2026-03-07T19:05:33.103Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162434808.75477675,
+    "intlVndPerTael": 162430396.99872038,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697972,
-    "ma30VndPerTael": 160033079,
+    "ma7VndPerTael": 162697342,
+    "ma30VndPerTael": 160032932,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T18:05:53.378Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-07T19:05:38.737Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -185,8 +185,21 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-07 | dailymail.co.uk | US submarine captain gave Iran crew two warnings to abandon ship before killing at least 87 when he torpedoed it",
+      "2026-03-07 | tribuneindia.com | TVK chief Vijay makes string of promises for women , gold for marriage , monthly aid of Rs 2 , 500"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-07 | philstar.com | Oil , rice pressures may push inflation higher",
+      "2026-03-07 | finance.yahoo.com | President Donald Trump Finally Has a New Incoming Fed Chair -- but Jerome Powell Can Still Prove to Be a Thorn in His Side",
+      "2026-03-07 | pmnewsnigeria.com | Naira slides for second week , hits N1 , 393 against dollar",
+      "2026-03-07 | warsawvoice.pl | The Warsaw Voice",
+      "2026-03-07 | actionforex.com | Oil Crisis Roils Global Markets : DOW Tumbles , Dollar Index Eyes Reversal , EUR / CAD Dives",
+      "2026-03-07 | thehindubusinessline.com | Gold price will continue to rise as central banks continue to diversify into non - dollar reserves : SBI Research"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-07 | independent.co.uk | He loves only gold … why Trump Iran war means it the only safe place for your money",
+      "2026-03-07 | deccanchronicle.com | Dubai Gold Market Shows Resilience Amid Global Volatility"
+    ]
   }
 }
