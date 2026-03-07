@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T10:05:01.608Z",
+  "generatedAt": "2026-03-07T11:05:36.845Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 185 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng mạnh 7.02%/tháng, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng khi VIX nhảy vọt 27.48% và lợi suất thực USD tăng đột biến 4.6%/tuần gây áp lực nghịch chiều lên vàng thế giới.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 185 triệu đồng/lượng (percentile 5 năm 100%) với đà tăng quá nóng +7.02%/tháng, cần thời gian củng cố kỹ thuật trước khi tiếp tục xu hướng tăng dài hạn được hỗ trợ bởi căng thẳng địa chính trị Iran.",
     "reasons": [
-      "Giá SJC 185,000,000 VND/lượng đang ở mức cao nhất lịch sử (percentile 5y: 100%), cách xa MA30 (160,033,069 VND/lượng) tới 15.6%, báo hiệu vùng quá mua kỹ thuật.",
-      "Áp lực vĩ mô tăng: Lợi suất thực USD 10Y tăng mạnh 4.6% trong 5 ngày và VIX nhảy vọt 27.48% phản ánh bất ổn thị trường, thường gây biến động hai chiều mạnh cho vàng.",
-      "Premium 13.89% đang ở mức hợp lý trong dải dao động 30 ngày (11.55%-18.05%), không có tín hiệu bất thường cần can thiệp gấp."
+      "Giá SJC 185 triệu VND/lượng đang vượt xa MA7 (162.7 triệu) và MA30 (160 triệu) hơn 13-14%, tín hiệu quá mua ở vùng cực đoan cần điều chỉnh kỹ thuật.",
+      "VIX tăng mạnh +27.48% trong 5 ngày lên mức 23.75 điểm, phản ánh lo ngại thị trường về cuộc chiến Iran, hỗ trợ vàng dài hạn nhưng gây biến động ngắn hạn.",
+      "Lợi suất thực 10Y Mỹ tăng +4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới trong ngắn hạn.",
+      "Premium 13.89% nằm trong biên dao động 30 ngày (11.55%-18.05%), không cực đoan nhưng thanh khoản cao tại vùng giá đỉnh cần thận trọng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đã tăng quá nhanh 7.02% trong 30 ngày và VIX tăng vọt.",
-      "Lợi suất thực USD (1.82%) đang có đà tăng (change5dPct: 4.6%), có thể chặn đà tăng giá vàng thế giới trong ngắn hạn.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể, độ tin cậy định hướng thị trường bị giảm."
+      "Điều chỉnh kỹ thuật sâu từ vùng đỉnh lịch sử khi động lượng mua yếu đi, rủi ro drawdown tồi nhất 41.26%.",
+      "Lợi suất thực Mỹ tiếp tục tăng sẽ gây áp lực lên giá vàng thế giới, kéo theo giảm giá trong nước.",
+      "Biến động giá cao 1.49%/ngày cộng với VIX tăng có thể gây chốt lời ồ ạt từ nhà đầu tư FOMO."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "sjc_price",
+        "value": 185000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
+        "key": "change_30d_pct",
         "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 13.89,
-        "unit": "%",
+        "key": "ma7_vnd",
+        "value": 162697543,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_5d",
+        "key": "vix_5d_change",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_change_5d",
-        "value": 4.6,
+        "key": "us_real_yield_10y",
+        "value": 1.82,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_price_vs_ma30",
-        "value": 15.6,
-        "unit": "%",
-        "source": "market_snapshot"
       },
       {
         "key": "premium_range_30d",
         "value": 11.55,
         "unit": "%",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 1.49,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T10:04:38.227Z",
+    "latestTimestamp": "2026-03-07T11:05:16.221Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162434511.91536966,
+    "intlVndPerTael": 162431805.17973858,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697930,
-    "ma30VndPerTael": 160033069,
+    "ma7VndPerTael": 162697543,
+    "ma30VndPerTael": 160032979,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T10:04:44.226Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-07T11:05:22.699Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -184,8 +191,22 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-07 | wyso.org | One week into the Iran war , the fallout is global"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-07 | investing.com | The  Fiat Collapse  Narrative Overlooks the US Dollar Next Evolution",
+      "2026-03-07 | thedigitalcourier.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
+      "2026-03-07 | mendocinobeacon.com | What a Federal Reserve rate cut means for your finances",
+      "2026-03-07 | independent.ie | Irish shares buck the trend as war sinks European stocks and US futures",
+      "2026-03-07 | athens-times.com | China Boosts Gold Buys Amid Middle East Tensions",
+      "2026-03-07 | texarkanagazette.com | More than 20 states sue over new global tariffs Trump imposed after his stinging Supreme Court loss"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-07 | businesstoday.in | War is profitable : Robert Kiyosaki cites Dwight D Eisenhower warning , links modern conflicts to silver demand",
+      "2026-03-07 | investing.com | The  Fiat Collapse  Narrative Overlooks the US Dollar Next Evolution",
+      "2026-03-07 | benzinga.com | Peter Schiff Warns Iran War Could Cost US $1 Trillion And Send Inflation  Skyrocketing  As Mohamed El - Erian Flags Risk Of Supply Chain  Sudden Stops",
+      "2026-03-07 | benzinga.com | Peter Schiff Warns Iran War Could Cost US $1 Trillion And Send Inflation  Skyrocketing  As Mohamed El - Erian Flags Risk Of Supply Chain  Sudden Stops"
+    ]
   }
 }
