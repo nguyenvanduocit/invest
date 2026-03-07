@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T14:05:23.513Z",
+  "generatedAt": "2026-03-07T15:05:06.187Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,23 +7,22 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 100% 5 năm) sau đợt tăng mạnh 7% trong 30 ngày, tạo áp lực điều chỉnh ngắn hạn khi lợi suất thực USD tăng vọt 4.6% trong 5 ngày và VIX nhảy 27.5%, cho thấy thanh khoản đang được rút khỏi thị trường tài sản rủi ro.",
+    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua (+7.02%), nhưng tín hiệu vĩ mô đang chuyển tiêu cực khi lợi suất thực USD và VIX tăng mạnh, gây áp lực điều chỉnh ngắn hạn trước khi xu hướng tiếp tục.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao xa MA30 (160 triệu VND/lượng) và tăng 7.02% trong 30 ngày, rủi ro mua đỉnh ngắn hạn rất lớn.",
-      "Áp lực bán từ vĩ mô tăng khi lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày và 1.11% trong 1 ngày lên mức 1.82%, áp lực chi phí cơ hội lên vàng tăng cao.",
-      "Biến động thị trường tăng đột biến với VIX tăng 27.48% trong 5 ngày lên 23.75 điểm, thường đi kèm giai đoạn thanh khoản (selling liquidation) các tài sản phòng thủ thay vì tích lũy.",
-      "Premium 13.89% hiện tại thấp hơn đỉnh 17.17% ngày 03-03 nhưng vẫn cao hơn đáy 11.55% ngày 27-02, cho thấy tâm lý thị trường Việt Nam đang phân hóa và không còn FOMO mua vào mạnh mẽ."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng mạnh 7.02% sau 30 ngày, tạo áp lực chốt lời ngắn hạn.",
+      "Lợi suất thực US 10Y tăng vọt 4.6% trong 5 ngày và VIX nhảy 27.48% phản ánh dòng tiền rút khỏi vàng và tâm lý thị trường bất ổn.",
+      "Giá thế giới (5171.08 USD/oz) đang điều chỉnh giảm từ đỉnh 5330.95 USD/oz (02/03), cho thấy động lượng tăng đã suy yếu tạm thời."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá thế giới mất mốc hỗ trợ 5100 USD/oz và thanh khoản toàn cầu tiếp tục thắt chặt.",
-      "Biến động premium có thể tăng vọt nếu tỷ giá VND/USD chịu áp lực, làm tăng chi phí cơ hội khi mua ở vùng giá cao.",
-      "Dữ liệu sự kiện vĩ mô (policyHeadlines) không có tin tức trọng yếu trực tiếp đến giá vàng, độ tin cậy phân tích giảm."
+      "Rủi ro điều chỉnh sâu nếu lợi suất thực USD tiếp tục tăng, đẩy giá vàng thế giới giảm mạnh.",
+      "Thanh khoản thấp hoặc spread giãn rộng nếu nhà đầu tư đồng loạt chốt lời tại vùng giá đỉnh lịch sử.",
+      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia (dữ liệu trống), giảm độ tin cậy dự báo xu hướng dài hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Percentile 5Y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
@@ -45,35 +44,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 15.6,
-        "unit": "million VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium Range 30d",
-        "value": 11.55,
-        "unit": "% (low)",
+        "key": "World Gold Peak vs Latest",
+        "value": 5330.95,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Gold Spot Change 5d",
-        "value": -2.1,
+        "key": "Premium Current",
+        "value": 13.89,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T14:04:59.483Z",
+    "latestTimestamp": "2026-03-07T15:04:48.293Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162432355.51057595,
+    "intlVndPerTael": 162431745.81185716,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697622,
-    "ma30VndPerTael": 160032997,
+    "ma7VndPerTael": 162697534,
+    "ma30VndPerTael": 160032977,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,7 +77,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T14:05:02.826Z",
+    "fetchedAt": "2026-03-07T15:04:51.167Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
