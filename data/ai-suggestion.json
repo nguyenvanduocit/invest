@@ -1,77 +1,79 @@
 {
-  "generatedAt": "2026-03-07T04:31:13.156Z",
+  "generatedAt": "2026-03-07T05:17:03.904Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.02%/tháng, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi lợi suất thực USD và VIX tăng vọt. Nhà đầu tư không nên mua đuổi ở vùng giá cao 185 triệu/lượng, thay vào đó chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100) với đà tăng mạnh 30 ngày qua +7.02%, nhưng tín hiệu vĩ mô ngắn hạn đã chuyển tiêu cực khi lợi suất thực USD tăng vọt 4.6% và VIX nhảy 27.48% phản ánh rủi ro thanh khoản. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~162.7 triệu VND/lượng) thay vì đu đỉnh lúc này.",
     "reasons": [
-      "Giá SJC 185 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), vượt xa MA30 (160 triệu/lượng) tới 15.6%, báo hiệu vùng quá mua kỹ thuật.",
-      "Áp lực bán từ vĩ mô tăng cao: Lợi suất thực USD 10 năm tăng mạnh 4.6%/5 ngày và VIX tăng vọt 27.48%/5 ngày lên mức 23.75 điểm thường gây áp lực điều chỉnh giá vàng.",
-      "Biến động ngày ở mức 1.49% kết hợp với việc giá thế giới giảm 2.1%/5 ngày cho thấy động lượng tăng đang suy yếu và rủi ro điều chỉnh ngắn hạn rất lớn."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉh ngắn hạn rất lớn sau đà tăng +7.02% trong 30 ngày.",
+      "Áp lực vĩ mô tăng: Lợi suất thực 10Y USD tăng mạnh +4.6% (lên 1.82%) và VIX nhảy +27.48% (lên 23.75) cho thấy thanh khoản tài chính đang thắt chặt.",
+      "Premium 13.89% nằm trong biên dao động 30 ngày (11.55%-18.05%), không cảnh báo bất thường nhưng cũng không hấp dẫn để MUA mạnh ở vùng giá kỷ lục.",
+      "Động lượng giảm tốc: Giá thế giới giảm -2.1% trong 5 ngày gần nhất dù xu hướng 20 ngày vẫn dương +4.04%."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh do chênh lệch giá (premium) co giãn thất thường (dao động 11.55%-18.05% trong 30 ngày qua).",
-      "Thị trường thiếu dữ liệu sự kiện địa chính trị cụ thể để duy trì đà tăng giá trị tịnh (safe-haven) trong ngắn hạn."
+      "Xung đột Iran-Trung Đông leo thang có thể đẩy giá vàng thế giới bật tăng mạnh bất chấp tín hiệu lợi suất thực, gây thiếu hụt thanh khoản để mua vào giá tốt.",
+      "Dữ liệu sự kiện vĩ mô từ ECB/Fed trong input không có phát ngôn trực tiếp về chính sách lãi suất vàng, giảm độ tin cậy dự báo xu hướng.",
+      "Rủi ro điều chỉnh sâu về MA30 (160 triệu VND/lượng) nếu giá thế giới phá hỗ trợ 5100 USD/oz."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
-        "value": 185000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC 30D Change",
+        "key": "sjc_change_30d",
         "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y 5D Change",
+        "key": "us_real_yield_10y_change_5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index 5D Change",
+        "key": "vix_change_5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Spot Value",
-        "value": 23.75,
-        "unit": "index",
+        "key": "sjc_premium_current",
+        "value": 13.89,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "gold_spot_change_5d",
+        "value": -2.1,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30D",
-        "value": 6.5,
-        "unit": "% (11.55-18.05)",
-        "source": "monthly_series_30d"
+        "key": "sjc_ma7_support",
+        "value": 162697549,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T04:30:52.267Z",
+    "latestTimestamp": "2026-03-07T05:16:34.270Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162430434.37849757,
+    "intlVndPerTael": 162431846.0147893,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697347,
-    "ma30VndPerTael": 160032933,
+    "ma7VndPerTael": 162697549,
+    "ma30VndPerTael": 160032980,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -82,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T04:30:55.205Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-07T05:16:47.444Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -183,8 +185,24 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-07 | irishexaminer.com | Marion McKeone : Trump clown car ploughs on into Iran war with Netanyahu in driving seat",
+      "2026-03-07 | prowrestling.net | WXW  16 Carat Gold  night one results : Vetter review of first - round tournament matches involving Tetsuya Naito , Bushi , Yamato , Axel Tischer , Erick Stevens , Alan Angels , Arez , and more",
+      "2026-03-07 | aol.com | After Burgum hails mining potential , US allows some transactions of Venezuelan gold"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-07 | thedailystar.net | Venezuela inflation hit 475 % in 2025 , the world highest level",
+      "2026-03-07 | morningstar.com | Dow Jones Top Markets Headlines at 7 PM ET : Jobs Report , Oil Surge Leave Fed Gritting Its Teeth | Oil ...",
+      "2026-03-07 | tribune.net.ph | Venezuela inflation hit 475 % in 2025 , the world highest level",
+      "2026-03-07 | finance.yahoo.com | Stocks Finish Lower as War Rages in the Middle East",
+      "2026-03-07 | lemonde.fr | Venezuela inflation hit 475 % in 2025 , the world highest level",
+      "2026-03-07 | indiatvnews.com | Oil jumps to highest price since 2023 amid Iran war , weak US jobs data rattles Wall Street stocks"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-07 | actionforex.com | Markets Weekly Outlook - Geopolitics Overpower Fundamentals : The $150 Oil Warning and Rate Cut",
+      "2026-03-07 | morningstar.com | Dow Jones Top Markets Headlines at 7 PM ET : Jobs Report , Oil Surge Leave Fed Gritting Its Teeth | Oil ...",
+      "2026-03-07 | forbes.com | Will The Iran Conflict Reshape Venture Capital ?",
+      "2026-03-07 | nzherald.co.nz | Middle East war hits oil and gas prices as global stocks tumble again"
+    ]
   }
 }
