@@ -1,78 +1,77 @@
 {
-  "generatedAt": "2026-03-07T03:41:08.165Z",
+  "generatedAt": "2026-03-07T04:31:13.156Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng tín hiệu vĩ mô đang chuyển tiêu cực khi VIX tăng 27.48% và lợi suất thực USD tăng 4.6% trong 5 ngày, tạo áp lực điều chỉnh ngắn hạn trước khi xu hướng được xác định lại.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 7.02%/tháng, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi lợi suất thực USD và VIX tăng vọt. Nhà đầu tư không nên mua đuổi ở vùng giá cao 185 triệu/lượng, thay vào đó chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.02% sau 30 ngày và vượt xa MA30 (160 triệu VND/lượng) 15.6%, báo hiệu vùng quá mua kỹ thuật.",
-      "Rủi ro vĩ mô tăng cao: VIX nhảy 27.48% tuần qua lên 23.75 điểm và lợi suất thực 10 năm USD tăng 4.6% lên 1.82%, cả hai đều là yếu tố áp lực bán vàng theo quan hệ inverse.",
-      "Động lượng tăng đang suy yếu: Biến động ngày 1.49% thấp hơn đáng kể so với đà tăng giá, và giá thế giới tuần qua giảm 2.1% cho thấy dòng tiền quốc tế đang chốt lời."
+      "Giá SJC 185 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), vượt xa MA30 (160 triệu/lượng) tới 15.6%, báo hiệu vùng quá mua kỹ thuật.",
+      "Áp lực bán từ vĩ mô tăng cao: Lợi suất thực USD 10 năm tăng mạnh 4.6%/5 ngày và VIX tăng vọt 27.48%/5 ngày lên mức 23.75 điểm thường gây áp lực điều chỉnh giá vàng.",
+      "Biến động ngày ở mức 1.49% kết hợp với việc giá thế giới giảm 2.1%/5 ngày cho thấy động lượng tăng đang suy yếu và rủi ro điều chỉnh ngắn hạn rất lớn."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng作为 tài sản trú ẩn.",
-      "Premium SJC 13.89% có thể co lại nếu giá thế giới điều chỉnh sâu, gây mất giá cho nhà đầu tư Việt Nam.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể liên quan trực tiếp đến giá vàng, độ tin cậy phân tích giảm."
+      "Rủi ro điều chỉnh giá sâu từ vùng đỉnh do chênh lệch giá (premium) co giãn thất thường (dao động 11.55%-18.05% trong 30 ngày qua).",
+      "Thị trường thiếu dữ liệu sự kiện địa chính trị cụ thể để duy trì đà tăng giá trị tịnh (safe-haven) trong ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Spot Price",
+        "value": 185000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
+        "key": "SJC 30D Change",
         "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium",
-        "value": 13.89,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_5d",
-        "value": 27.48,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_5d",
+        "key": "US Real Yield 10Y 5D Change",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_5d",
-        "value": -2.1,
+        "key": "VIX Index 5D Change",
+        "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 15.6,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "VIX Spot Value",
+        "value": 23.75,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30D",
+        "value": 6.5,
+        "unit": "% (11.55-18.05)",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T03:40:30.099Z",
+    "latestTimestamp": "2026-03-07T04:30:52.267Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162435095.85659492,
+    "intlVndPerTael": 162430434.37849757,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162698013,
-    "ma30VndPerTael": 160033088,
+    "ma7VndPerTael": 162697347,
+    "ma30VndPerTael": 160032933,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +82,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T03:40:51.763Z",
+    "fetchedAt": "2026-03-07T04:30:55.205Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -184,16 +183,8 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-07 | dailyadvance.com | Russian flag returns as Milan Cortina Winter Paralympics open amid Iran war and boycott"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-07 | digitaljournal.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
-      "2026-03-07 | forbes.com | Will The Iran Conflict Reshape Venture Capital ?",
-      "2026-03-07 | timesofindia.indiatimes.com | In range - bound session , rupee slips 15 paisa vs Dollar",
-      "2026-03-07 | suncommercial.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
-      "2026-03-07 | kten.com | Venezuela inflation hit 475 % in 2025 , the world highest level"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": []
   }
 }
