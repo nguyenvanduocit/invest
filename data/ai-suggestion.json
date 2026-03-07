@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T23:07:16.974Z",
+  "generatedAt": "2026-03-07T00:20:13.290Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,28 +7,28 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chậm lại, trong khi dòng tiền vĩ mô đang phân vân giữa rủi ro địa chính trị và áp lực lãi suất thực tăng trở lại.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) sau đà tăng 7.02%/tháng, nhưng áp lực điều chỉnh ngắn hạn xuất hiện khi lợi suất thực USD tăng mạnh 4.6%/5 ngày và VIX vọt lên 23.75 điểm. Biên độ premium 13.16% vẫn bình thường, tuy nhiên rủi ro mua đỉnh cao hơn lợi nhuận tiềm năng trong ngắn hạn.",
     "reasons": [
-      "Giá SJC 183.8 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cao hơn MA30 (160.4 triệu) tới 14.6%, báo hiệu vùng giá quá mua cần thời gian củng cố.",
-      "Động lượng tăng suy yếu: Giá thế giới giảm 2.1% trong 5 ngày qua dù VIX tăng vọt 27.48%, cho thấy thanh khoản đang ưu tiên tài sản an toàn khác hoặc chốt lời ngắn hạn.",
-      "Lãi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày lên mức 1.82%, tạo áp lực chi phí cơ hội ngược chiều với đà tăng giá vàng.",
-      "Biên độ dao động premium mở rộng (11.31% - 17.79% trong 30 ngày qua) và VIX tăng cao (23.75 điểm) cho thấy thanh khoản thị trường Việt Nam có thể biến động mạnh hai chiều."
+      "Giá SJC 183.8 triệu VND/lượng ở mức cao nhất 5 năm (percentile 100%), tăng 7.02% sau 30 ngày và cao hơn MA7 (162.7 triệu) 12.9% - tín hiệu thị trường đã quá mua.",
+      "Lợi suất thực USD 10 năm tăng mạnh 4.6% trong 5 ngày lên mức 1.82%, tạo áp lực giảm lên giá vàng thế giới do tương quan nghịch biến.",
+      "VIX tăng vọt 27.48% trong 5 ngày lên 23.75 điểm, có thể gây áp lực bán tháo tài sản để cover margin thay vì tích trữ vàng.",
+      "Giá thế giới điều chỉnh giảm 2.1% trong 5 ngày (từ 5330.95 về 5171.03 USD/oz), trong khi giá SJC giảm nhẹ hơn khiến premium nới rộng từ 11.55% lên 13.16%."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá thế giới mất mốc hỗ trợ 5,000 USD/oz và lãi suất thực Mỹ tiếp tục tăng.",
-      "Thanh khoản thấp tại vùng đỉnh 183-187 triệu VND/lượng có thể khiến chốt lời gặp khó khăn nếu thị trường đảo chiều.",
-      "Căng thẳng Trung Đông leo thang có thể gây sốc giá đột ngột nhưng cũng đi kèm biên độ dao động cực đoan."
+      "Rủi ro điều chỉnh sâu nếu lợi suất thực USD tiếp tục tăng, áp lực chốt lời sau đà tăng 7% tháng qua.",
+      "Premium có thể nới rộng thêm nếu giá thế giới giảm nhanh hơn giá nội địa, gây thiệt hại cho người mua mới.",
+      "Dữ liệu first-principles không hoàn chỉnh (healthy: false), thiếu tín hiệu địa chính trị cụ thể để duy trì đà tăng."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 100,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_ma30",
-        "value": 14.6,
+        "key": "sjc_change_30d",
+        "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -45,35 +45,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change_5d",
+        "key": "premium_current",
+        "value": 13.16,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "world_gold_change_5d",
         "value": -2.1,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.31,
+        "key": "sjc_vs_ma7_gap",
+        "value": 12.9,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "current_vix_level",
-        "value": 23.75,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "volatility_daily",
+        "value": 1.49,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-06T23:06:59.750Z",
+    "latestTimestamp": "2026-03-07T00:19:35.080Z",
     "sjcVndPerTael": 183800000,
-    "intlVndPerTael": 162791469.80686542,
-    "premiumPct": 12.91,
+    "intlVndPerTael": 162430253.13369557,
+    "premiumPct": 13.16,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
-    "volatilityDailyPct": 1.53,
-    "ma7VndPerTael": 163058978,
-    "ma30VndPerTael": 160388642,
+    "volatilityDailyPct": 1.49,
+    "ma7VndPerTael": 162697321,
+    "ma30VndPerTael": 160032927,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -84,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-06T23:07:04.283Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-07T00:19:38.018Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,19 +191,8 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-06 | naturalnews.com | Middle East conflict sparks global supply chain chaos , threatens South African exports – NaturalNews . com",
-      "2026-03-06 | punchng.com | Trump on US - Iran War : Unconditional Surrender is Only End"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-06 | mauinews.com | More than 20 states sue over new global tariffs Trump imposed after his stinging Supreme Court loss | News , Sports , Jobs",
-      "2026-03-06 | wtae.com | Pennsylvania sues over Trump new global tariffs",
-      "2026-03-06 | thetimes.com | Inflation fears grow as oil prices surge past $90",
-      "2026-03-06 | finance.yahoo.com | The Pound Is Not Sterling . 1 Trade to Make ASAP Amid Middle East Conflict ."
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-06 | investmentnews.com | Gold is back in the spotlight , glinting its way into portfolios and headlines alike",
-      "2026-03-06 | econotimes.com | War Drums in the Middle East : Arthur Hayes Sees Bitcoin Next Big Boost"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
