@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T21:04:41.538Z",
+  "generatedAt": "2026-03-07T22:04:14.906Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 4.3%/tháng, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng do lợi suất thực USD bật tăng mạnh 4.6% và VIX nhảy vọt 27.5%. Nhà đầu tư không nên mua đuổi ở vùng giá cao 185 triệu/lượng này mà chờ đợi hồi về vùng hỗ trợ gần MA7 (~162-164 triệu/lượng giá thế giới) hoặc tín hiệu ổn định rõ ràng hơn.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lực tăng bị kìm hãm bởi lợi suất thực USD và VIX cùng tăng, tạo ra tín hiệu trái chiều cần thời gian xác nhận.",
     "reasons": [
-      "Giá SJC 185 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (160.3 triệu/lượng) tới 15.5%, cho thấy thị trường đang ở trạng thái quá mua ngắn hạn.",
-      "Động lượng vĩ mô hỗ trợ vàng dài hạn nhưng gây áp lực ngắn hạn: Lạm phát kỳ vọng (breakeven) tăng 4.44% và VIX tăng vọt 27.48% trong 5 ngày báo hiệu bất ổn, nhưng lợi suất thực 10 năm (real yield) cũng tăng mạnh 4.6% lên 1.82% là yếu tố đầu tư cạnh tranh gây áp lực giảm giá.",
-      "Premium 13.89% hiện tại thấp hơn đỉnh 17.17% (ngày 03/03) và 18.05% (ngày 17/02), cho thấy tâm lý thị trường Việt Nam đang bình ổn hơn sau cơn sốt, giảm rủi ro bong bóng nội địa."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 4.3% sau 30 ngày và giao dịch trên MA7 (162.2 triệu VND/lượng) cho thấy xu hướng tăng còn hiệu lực.",
+      "Áp lực bán từ vĩ mô xuất hiện khi lợi suất thực USD 10 năm tăng mạnh 4.6% trong 5 ngày lên 1.82%, cộng hưởng với VIX tăng 27.48% trong 5 ngày lên mức 23.75 chỉ báo lo ngại rủi ro.",
+      "Premium 13.89% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (khoảng 14%), không có dấu hiệu bong bóng địa phương.",
+      "Sự kiện vĩ mô gần đây chủ yếu từ ECB (tiền kỹ thuật số, lạm phát) không tác động trực tiếp đến định giá vàng, thiếu tín hiệu địa chính trị cấp thiết."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá thế giới phá vỡ xu hướng tăng do áp lực từ lợi suất thực USD (real yield) tiếp tục tăng.",
-      "Thanh khoản có thể giảm nếu giá chững lại ở mức cao 185 triệu/lượng, gây khó khăn cho việc thoát hàng ngắn hạn.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input khiến độ tin cậy đánh giá xu hướng giảm, cần đề phòng biến đổi bất ngờ."
+      "Mua đỉnh ngắn hạn khi giá đang ở percentile 100% trong 5 năm và vừa trải qua đợt điều chỉnh -2.02% trong 7 ngày.",
+      "Rủi ro thanh khoản nếu lợi suất thực USD tiếp tục tăng cao hơn mức 1.82% hiện tại.",
+      "Dữ liệu first-principles thiếu tín hiệu giá Gold Spot XAUUSD trực tiếp, giảm độ tin cậy phân tích đồng bộ."
     ],
     "evidence": [
       {
@@ -26,53 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Premium vs Intl",
-        "value": 13.89,
+        "key": "SJC Change 30d",
+        "value": 4.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5D",
+        "key": "SJC Change 7d",
+        "value": -2.02,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index Change 5D",
+        "key": "VIX Index Value",
+        "value": 23.75,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Price vs MA30 Distance",
-        "value": 15.5,
+        "key": "Current Premium vs World",
+        "value": 13.89,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Breakeven Inflation Change 5D",
-        "value": 4.44,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "SJC Change 30D",
-        "value": 4.3,
-        "unit": "%",
+        "key": "SJC Price vs MA7",
+        "value": 185,
+        "unit": "million VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T21:04:22.152Z",
+    "latestTimestamp": "2026-03-07T22:03:57.647Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162430671.5359075,
+    "intlVndPerTael": 162434028.80530807,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.46,
-    "ma7VndPerTael": 162218224,
-    "ma30VndPerTael": 160256333,
+    "ma7VndPerTael": 162218704,
+    "ma30VndPerTael": 160256445,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T21:04:25.449Z",
+    "fetchedAt": "2026-03-07T22:04:00.050Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5153.265,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-03-06",
-        "change1dPct": 1.42,
-        "change5dPct": -2.1,
-        "change20dPct": 4.04,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
