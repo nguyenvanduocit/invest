@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T07:10:41.853Z",
+  "generatedAt": "2026-03-07T08:06:18.620Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm với mức giá 185 triệu đồng/lượng, nhưng động lượng tăng đã chững lại và biên độ dao động rộng khiến rủi ro mua đỉp cao hơn. Nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi lợi suất thực USD tăng vọt 5 ngày qua. Nhà đầu tư nên chờ đợi hồi về vùng hỗ trợ kỹ thuật thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 185 triệu đồng/lượng đang ở mức percentile 100% trong 5 năm, đồng thời giảm -2.02% sau 7 ngày gần nhất cho thấy áp lực chốt lời ngắn hạn đang xuất hiện.",
-      "VIX tăng mạnh +27.48% trong 5 ngày lên mức 23.75 điểm phản ánh lo ngại rủi ro địa chính trị từ xung đột Trung Đông, thường hỗ trợ vàng nhưng cũng đi kèm biến động lớn.",
-      "Lợi suất thực Mỹ 10 năm tăng +4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới khi chi phí cơ hội nắm giữ tăng lên.",
-      "Premium 13.89% hiện tại nằm trong biên độ dao động bình thường 30 ngày qua (11.55%-18.05%), không có tín hiệu bất thường đột biến từ thị trường nội địa."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.02% sau 30 ngày, rủi ro mua đỉc ngắn hạn cao.",
+      "Áp lực điều chỉnh từ vĩ mô: Lợi suất thực USD 10Y tăng mạnh 4.6% trong 5 ngày qua (lên 1.82%), tạo áp lực giảm ngắn hạn lên giá vàng thế giới.",
+      "Động lượng giảm tốc: Giá SJC giảm 2.02% trong 7 ngày gần nhất, cho thấy dòng tiền đang thận trọng sau đợt tăng nóng.",
+      "VIX tăng 27.48% trong 5 ngày (lên 23.75) cho thấy lo ngại thị trường, nhưng chưa có sự kiện địa chính trị cụ thể thúc đẩy nhu cầu trú ẩn an toàn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua lịch sử với drawdown tồi nhất trong quá khứ lên tới -41.26%.",
-      "Biến động ngày ở mức 1.49% kết hợp với VIX cao có thể gây thanh khoản cục bộ và trượt giá khi thực hiện giao dịch lớn.",
-      "Xung đột Gulf có thể kéo dài gây sốc lạm phát nhưng cũng khiến USD mạnh lên, tạo áp lực kép lên giá vàng thế giới."
+      "Mua đỉnh lịch sử: Rủi ro điều chỉnh sâu nếu giá thế giới không duy trì trên 5100 USD/oz.",
+      "Biến động premium: Premium đã dao động từ 11.55% đến 18.05% trong 30 ngày qua, có thể gây thua lỗ chênh lệch nếu mua bán sai thời điểm.",
+      "Lợi suất thực USD tiếp tục tăng sẽ gây áp lực giảm giá vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
+        "key": "SJC Change 30d",
+        "value": 7.02,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_5d",
-        "value": 27.48,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_10y_change_5d",
+        "key": "US Real Yield 10Y Change 5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "current_premium_pct",
-        "value": 13.89,
+        "key": "VIX Change 5d",
+        "value": 27.48,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_30d_range_high",
-        "value": 18.05,
-        "unit": "%",
+        "key": "Premium Range 30d",
+        "value": 6.5,
+        "unit": "% (11.55-18.05)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "worst_drawdown",
-        "value": -41.26,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_current",
-        "value": 23.75,
-        "unit": "index",
+        "key": "Gold Spot XAUUSD",
+        "value": 5153.265,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T07:10:10.731Z",
+    "latestTimestamp": "2026-03-07T08:05:57.345Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162432819.45957527,
-    "premiumPct": 13.89,
+    "intlVndPerTael": 162430247.16549584,
+    "premiumPct": 13.9,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697688,
-    "ma30VndPerTael": 160033012,
+    "ma7VndPerTael": 162697320,
+    "ma30VndPerTael": 160032927,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T07:10:20.966Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-07T08:06:02.059Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -191,20 +185,8 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-07 | prokerala.com | Longer Gulf conflict may trigger rise in inflation ; India a notable exception : SBI report"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-07 | nzherald.co.nz | Venezuela inflation hit 475 % in 2025 , the world highest level",
-      "2026-03-07 | gjsentinel.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
-      "2026-03-07 | wyomingnewsnow.tv | Oil prices surge as Mideast war rages , stocks fall on US jobs",
-      "2026-03-07 | moneycontrol.com | Moneycontrol Pro Weekender | Will this war follow the old playbook ?",
-      "2026-03-07 | financialmirror.com | Safe - haven demand lifts dollar , despite NFP shock",
-      "2026-03-07 | economictimes.indiatimes.com | Stocks , Rupee Become Casualty of War amid Weak Sentiment"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-07 | prokerala.com | Longer Gulf conflict may trigger rise in inflation ; India a notable exception : SBI report",
-      "2026-03-07 | finance.yahoo.com | Gold price today , Friday , March 6 : Gold is down this week with Feb . employment report on deck"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
