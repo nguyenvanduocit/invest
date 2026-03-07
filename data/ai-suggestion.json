@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T16:05:36.973Z",
+  "generatedAt": "2026-03-07T17:05:37.527Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi lợi suất thực USD tăng vọt và VIX nhảy lên mức 23.75 phản ánh sự hoảng loạn cần theo dõi. Nhà đầu tư không nên mua đuổi ở giá 185 triệu/lượng mà chờ đợt điều chỉnh về vùng hỗ trợ gần MA7 (~162.7 triệu/lượng theo giá thế giới quy đổi) hoặc khi premium ổn định.",
+    "thesis": "Giá vàng SJC đang giao dịch ở mức đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng tín hiệu vĩ mô ngắn hạn đang chuyển tiêu cực khi lợi suất thực USD tăng vọt 4.6% và VIX nhảy 27.5%, cho thấy áp lực điều chỉnh có thể xảy ra trước khi tiếp tục xu hướng tăng dài hạn.",
     "reasons": [
-      "Giá SJC 185 triệu/lượng đang ở mức cao nhất 5 năm (percentile 100%), rủi ro mua đỉnh ngắn hạn rất lớn khi change30dPct đã đạt +7.02%.",
-      "Lợi suất thực USD 10 năm tăng mạnh +4.6% trong 5 ngày và +1.11% ngày qua lên mức 1.82%, tạo áp lực giảm lên giá vàng thế giới.",
-      "Động lượng tăng đang chững lại: change7dPct âm -2.02% cho thấy thanh khoản đang yếu đi sau đợt tăng nóng.",
-      "VIX tăng vọt 27.48% trong 5 ngày lên 23.75 điểm kết hợp tin tức 'Iran war' cho thấy sự hoảng loạn thị trường, thường đi kèm biến động hai chiều dữ dội."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 100% trong 5 năm (percentile5y: 100), cho thấy rủi ro mua đỉnh là rất lớn trong ngắn hạn.",
+      "Áp lực bán từ lợi suất thực USD tăng mạnh +4.6% trong 5 ngày (lên 1.82%) và lợi suất 2 năm tăng +4.39%, làm tăng chi phí cơ hội nắm giữ vàng.",
+      "Đà tăng 30 ngày quá mạnh (+7.02%) kết hợp với giảm nhẹ 7 ngày gần đây (-2.02%) và VIX tăng vọt 27.48% báo hiệu thị trường đang rung lọc, cần thận trọng.",
+      "Premium 13.89% nằm trong biên độ dao động bình thường của 30 ngày qua (11.55%-18.05%), không có tín hiệu bất thường để đánh giá vàng Việt Nam quá đắt hay rẻ so với thế giới."
     ],
     "risks": [
-      "Chiến tranh Iran có thể đẩy giá vàng sốc tăng bất ngờ, bỏ qua các tín hiệu điều chỉnh kỹ thuật.",
-      "Lợi suất thực USD tiếp tục tăng cao sẽ gây áp lực bán mạnh hơn trên thị trường vàng quốc tế.",
-      "Premium SJC dao động mạnh (từ 11.55% đến 18.05% trong 30 ngày qua) có thể hẹp lại gây lỗ cho người mua đuổi."
+      "Lợi suất thực USD tiếp tục tăng cao sẽ gây áp lực bán mạnh lên giá vàng thế giới và trong nước.",
+      "Biến động ngày ở mức 1.49% kết hợp với VIX 23.75 điểm có thể gây sụt giảm nhanh 3-5% trong ngắn hạn.",
+      "Sự kiện địa chính trị (khủng hoảng dầu, Trung Đông) có thể đẩy giá nhảy vọt bất ngờ, bỏ lỡ cơ hội nếu chờ quá lâu."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Price Level",
+        "value": 185000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30 Days",
+        "key": "30-Day Change",
         "value": 7.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7 Days",
-        "value": -2.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5D",
+        "key": "US Real Yield 10Y 5d Change",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index Value",
-        "value": 23.75,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 5 Days",
+        "key": "VIX 5d Change",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30D Low",
-        "value": 11.55,
+        "key": "Current Premium",
+        "value": 13.89,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "Premium Range 30D High",
-        "value": 18.05,
+        "key": "US Treasury 2Y 5d Change",
+        "value": 4.39,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T16:05:10.135Z",
+    "latestTimestamp": "2026-03-07T17:05:10.686Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162431211.81504008,
+    "intlVndPerTael": 162430791.21401772,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697458,
-    "ma30VndPerTael": 160032959,
+    "ma7VndPerTael": 162697398,
+    "ma30VndPerTael": 160032945,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T16:05:17.326Z",
+    "fetchedAt": "2026-03-07T17:05:21.931Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
@@ -192,8 +186,7 @@
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-07 | kclu.org | One week into the Iran war , the fallout is global",
-      "2026-03-07 | waer.org | One week into the Iran war , the fallout is global"
+      "2026-03-07 | oilprice.com | U . S . Brokers Major Gold Deal With Venezuela State Mining Company"
     ],
     "countryActionHeadlines": [
       "2026-03-07 | finance.yahoo.com | President Donald Trump Finally Has a New Incoming Fed Chair -- but Jerome Powell Can Still Prove to Be a Thorn in His Side",
