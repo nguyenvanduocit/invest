@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T20:05:16.649Z",
+  "generatedAt": "2026-03-07T21:04:41.538Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng chững lại, trong khi dòng tiền quốc tế đang phân vân giữa áp lực lợi suất thực tăng và nhu cầu trú ẩn an toàn từ VIX tăng cao.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 4.3%/tháng, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng do lợi suất thực USD bật tăng mạnh 4.6% và VIX nhảy vọt 27.5%. Nhà đầu tư không nên mua đuổi ở vùng giá cao 185 triệu/lượng này mà chờ đợi hồi về vùng hỗ trợ gần MA7 (~162-164 triệu/lượng giá thế giới) hoặc tín hiệu ổn định rõ ràng hơn.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), giảm 2.02% sau 7 ngày cho thấy động lượng mua đã yếu đi tạm thời.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày và 1.11% trong 1 ngày lên mức 1.82%, tạo áp lực giảm lên giá vàng thế giới.",
-      "VIX tăng vọt 27.48% trong 5 ngày lên 23.75 điểm cho thấy lo ngại rủi ro thị trường, hỗ trợ nhu cầu trú ẩn nhưng chưa đẩy giá vàng cao hơn do áp lực USD."
+      "Giá SJC 185 triệu/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (160.3 triệu/lượng) tới 15.5%, cho thấy thị trường đang ở trạng thái quá mua ngắn hạn.",
+      "Động lượng vĩ mô hỗ trợ vàng dài hạn nhưng gây áp lực ngắn hạn: Lạm phát kỳ vọng (breakeven) tăng 4.44% và VIX tăng vọt 27.48% trong 5 ngày báo hiệu bất ổn, nhưng lợi suất thực 10 năm (real yield) cũng tăng mạnh 4.6% lên 1.82% là yếu tố đầu tư cạnh tranh gây áp lực giảm giá.",
+      "Premium 13.89% hiện tại thấp hơn đỉnh 17.17% (ngày 03/03) và 18.05% (ngày 17/02), cho thấy tâm lý thị trường Việt Nam đang bình ổn hơn sau cơn sốt, giảm rủi ro bong bóng nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá đang ở vùng quá mua (percentile 100%) và biến động ngày ở mức 1.46%.",
-      "Áp lực từ lợi suất thực Mỹ (1.82%) và USD Index cao (117.82) có thể khiến giá vàng thế giới giảm sâu hơn, kéo theo tâm lý bán tháo tại Việt Nam.",
-      "Dữ liệu vĩ mô thiếu tin tức địa chính trị cụ thể, độ tin cậy về đà tăng dài hạn bị giới hạn."
+      "Rủi ro điều chỉnh kỹ thuật sâu nếu giá thế giới phá vỡ xu hướng tăng do áp lực từ lợi suất thực USD (real yield) tiếp tục tăng.",
+      "Thanh khoản có thể giảm nếu giá chững lại ở mức cao 185 triệu/lượng, gây khó khăn cho việc thoát hàng ngắn hạn.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input khiến độ tin cậy đánh giá xu hướng giảm, cần đề phòng biến đổi bất ngờ."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -2.02,
+        "key": "SJC Premium vs Intl",
+        "value": 13.89,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
+        "key": "US Real Yield 10Y Change 5D",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Value",
-        "value": 1.82,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 5d",
+        "key": "VIX Index Change 5D",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Value",
-        "value": 23.75,
-        "unit": "index",
+        "key": "SJC Price vs MA30 Distance",
+        "value": 15.5,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Breakeven Inflation Change 5D",
+        "value": 4.44,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index Value",
-        "value": 117.8223,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "SJC Change 30D",
+        "value": 4.3,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T20:04:57.205Z",
+    "latestTimestamp": "2026-03-07T21:04:22.152Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162430451.02663365,
+    "intlVndPerTael": 162430671.5359075,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.46,
-    "ma7VndPerTael": 162218193,
-    "ma30VndPerTael": 160256326,
+    "ma7VndPerTael": 162218224,
+    "ma30VndPerTael": 160256333,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -83,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T20:05:02.942Z",
+    "fetchedAt": "2026-03-07T21:04:25.449Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
