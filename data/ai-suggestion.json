@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T12:07:48.395Z",
+  "generatedAt": "2026-03-07T13:17:04.455Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 185 triệu VND/lượng đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng 7% tháng qua, nhưng động lực bị kìm hãm bởi lợi suất thực USD tăng vọt 4.6% và VIX nhảy 27.5% báo hiệu rủi ro thanh khoản. Biên độ premium co giãn thất thường (11.55%-17.17%) cho thấy thị trường phân kỳ mạnh, nhà đầu tư nên chờ xác nhận xu hướng thay vì FOMO đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 185 triệu đồng/lượng (percentile 5 năm 100%) sau tăng 7.02%/tháng, nhưng rủi ro điều chỉnh ngắn hạn tăng cao do lợi suất thực USD hồi phục (+4.6%/5 ngày) và giá thế giới đang nằm dưới đỉnh 5330 USD/oz trước đó.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), vượt xa MA30 (160 triệu VND/lượng) tới 15.6% báo hiệu vùng quá mua kỹ thuật.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày lên 1.82%, áp lực lãi suất thực cao đi ngược chiều với giá vàng.",
-      "VIX tăng vọt 27.48% tuần qua lên 23.75 điểm cho thấy lo ngại rủi ro thị trường tăng, thường đi kèm đợt chốt lời tài sản.",
-      "Premium dao động mạnh từ 11.55% đến 17.17% trong 30 ngày qua, sự thiếu ổn định này cho thấy tâm lý nhà đầu tư Việt Nam đang phân kỳ."
+      "Giá SJC 185 triệu đồng/lượng đang ở mức cao nhất lịch sử (percentile 5y: 100%), cách xa MA30 (160 triệu đồng/lượng) 15.6%, tạo áp lực chốt lời ngắn hạn đáng kể.",
+      "Lợi suất thực USD 10 năm tăng mạnh 4.6% trong 5 ngày gần nhất lên mức 1.82%, tạo áp lực giảm lên giá vàng thế giới (đang giảm từ đỉnh 5330.95 xuống 5171.07 USD/oz).",
+      "Biến động thị trường tăng (VIX: 23.75, +27.48% trong 5 ngày) và sự kiện địa chính trị (Iran war) gây ra dao động hai chiều khó lường, không thuận lợi cho việc mua đuổi.",
+      "Premium 13.89% hiện tại cao hơn mức thấp nhất 30 ngày (11.55%) nhưng thấp hơn đỉnh 18.05%, cho thấy nhà đầu tư Việt Nam chưa hoảng loạn mua vào mức cực đoan."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu lợi suất thực USD tiếp tục tăng, kéo giá vàng thế giới giảm mạnh và SJC điều chỉnh theo.",
-      "Premium có thể co hẹp đột ngột từ 13.89% hiện tại về mức trung bình 12-13%, gây mất giá cho người mua đuổi đỉnh.",
-      "Thanh khoản thấp và spread mua-bán nới rộng khi VIX cao có thể khiến nhà đầu tư khó thoát vị thế ở mức giá mong muốn."
+      "Chiến tranh Iran leo thang có thể đẩy giá vàng thế giới tăng vọt bất chấp lợi suất USD, gây ra 'gap up' cho người đang chờ mua.",
+      "Lợi suất thực USD tiếp tục tăng có thể khiến giá thế giới phá vỡ hỗ trợ 5000 USD/oz, kéo giá SJC giảm về vùng 175-180 triệu đồng/lượng.",
+      "Thanh khoản thấp hoặc chênh lệch mua-bán giãn rộng trong bối cảnh thị trường biến động mạnh."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5 năm",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá SJC hiện tại",
-        "value": 185000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 SJC",
-        "value": 160033067,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium hiện tại",
-        "value": 13.89,
+        "key": "SJC Price vs MA30 Premium",
+        "value": 15.6,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium dao động 30 ngày (thấp-cao)",
-        "value": 11.55,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y thay đổi 5 ngày",
+        "key": "US Real Yield 10Y Change 5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX thay đổi 5 ngày",
-        "value": 27.48,
-        "unit": "%",
+        "key": "VIX Level",
+        "value": 23.75,
+        "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới thay đổi 5 ngày",
-        "value": -2.1,
+        "key": "World Gold Peak 30d",
+        "value": 5330.95,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Current World Gold",
+        "value": 5171.07,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 7.02,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 11.55,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T12:07:08.286Z",
+    "latestTimestamp": "2026-03-07T13:16:39.149Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162434466.3685823,
+    "intlVndPerTael": 162431367.30234858,
     "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697923,
-    "ma30VndPerTael": 160033067,
+    "ma7VndPerTael": 162697480,
+    "ma30VndPerTael": 160032964,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T12:07:13.031Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-07T13:16:46.656Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -191,8 +191,21 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-07 | kawc.org | One week into the Iran war , the fallout is global",
+      "2026-03-07 | radio.wpsu.org | One week into the Iran war , the fallout is global",
+      "2026-03-07 | warsawvoice.pl | The Warsaw Voice"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-07 | warsawvoice.pl | The Warsaw Voice",
+      "2026-03-07 | actionforex.com | Oil Crisis Roils Global Markets : DOW Tumbles , Dollar Index Eyes Reversal , EUR / CAD Dives",
+      "2026-03-07 | thehindubusinessline.com | Gold price will continue to rise as central banks continue to diversify into non - dollar reserves : SBI Research",
+      "2026-03-07 | thehindubusinessline.com | Global economy faces widening strains as West Asia war intensifies",
+      "2026-03-07 | finance.yahoo.com | Bitcoin , Stocks Stabilize But The Bond Market Isnt Convinced : Will The Fed Cut Rates Now ?",
+      "2026-03-07 | news18.com | Gold Prices Prediction For Monday : Broader Bullish Structure Remains Intact ; Know Key Levels For March 9"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-07 | warsawvoice.pl | The Warsaw Voice"
+    ]
   }
 }
