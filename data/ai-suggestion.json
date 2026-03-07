@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T02:51:42.707Z",
+  "generatedAt": "2026-03-07T03:41:08.165Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi lợi suất thực USD và VIX tăng vọt. Nhà đầu tư nên chờ đợi hồi về vùng hỗ trợ kỹ thuật hoặc xác nhận xu hướng thay vì đuổi đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng tín hiệu vĩ mô đang chuyển tiêu cực khi VIX tăng 27.48% và lợi suất thực USD tăng 4.6% trong 5 ngày, tạo áp lực điều chỉnh ngắn hạn trước khi xu hướng được xác định lại.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.02% sau 30 ngày và nằm trên MA30 (160 triệu VND/lượng), cho thấy xu hướng tăng dài hạn còn sức nhưng đã ở vùng quá mua.",
-      "Áp lực điều chỉnh ngắn hạn tăng khi giá thế giới giảm -2.1% trong 5 ngày và lợi suất thực 10 năm USD tăng mạnh +4.6% trong 5 ngày lên 1.82%, tạo áp lực giảm lên giá vàng.",
-      "Biến động thị trường tăng đột biến với VIX tăng 27.48% trong 5 ngày lên mức 23.75, kết hợp với tin tức dầu WTI đạt 92 USD/thùng do căng thẳng địa chính trị, tạo ra môi trường rủi ro cao cho vị thế mới.",
-      "Premium 13.9% hiện tại nằm trong biên độ dao động bình thường của 30 ngày qua (11.55%-18.05%), không có dấu hiệu bất thường đòi hỏi hành động khẩn cấp."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 7.02% sau 30 ngày và vượt xa MA30 (160 triệu VND/lượng) 15.6%, báo hiệu vùng quá mua kỹ thuật.",
+      "Rủi ro vĩ mô tăng cao: VIX nhảy 27.48% tuần qua lên 23.75 điểm và lợi suất thực 10 năm USD tăng 4.6% lên 1.82%, cả hai đều là yếu tố áp lực bán vàng theo quan hệ inverse.",
+      "Động lượng tăng đang suy yếu: Biến động ngày 1.49% thấp hơn đáng kể so với đà tăng giá, và giá thế giới tuần qua giảm 2.1% cho thấy dòng tiền quốc tế đang chốt lời."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu lợi suất thực USD tiếp tục tăng và Fed duy trì lãi suất cao.",
-      "Biến động premium có thể mở rộng bất ngờ nếu giá thế giới giảm nhanh trong khi giá SJC giữ ổn định do tâm lý phòng thủ.",
-      "Dữ liệu vĩ mô first-principles không hoàn chỉnh (healthy: false) có thể bỏ sót các yếu tố quan trọng ảnh hưởng đến xu hướng."
+      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng作为 tài sản trú ẩn.",
+      "Premium SJC 13.89% có thể co lại nếu giá thế giới điều chỉnh sâu, gây mất giá cho nhà đầu tư Việt Nam.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể liên quan trực tiếp đến giá vàng, độ tin cậy phân tích giảm."
     ],
     "evidence": [
       {
@@ -33,14 +32,14 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_vs_ma30_vnd",
-        "value": 15.6,
+        "key": "sjc_premium",
+        "value": 13.89,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_change_5d",
-        "value": -2.1,
+        "key": "vix_change_5d",
+        "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -51,35 +50,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
-        "value": 23.75,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_5d",
-        "value": 27.48,
+        "key": "gold_spot_change_5d",
+        "value": -2.1,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 6.5,
+        "key": "sjc_vs_ma30",
+        "value": 15.6,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T02:51:19.907Z",
+    "latestTimestamp": "2026-03-07T03:40:30.099Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162430146.02021638,
-    "premiumPct": 13.9,
+    "intlVndPerTael": 162435095.85659492,
+    "premiumPct": 13.89,
     "change7dPct": -2.02,
     "change30dPct": 7.02,
     "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 162697306,
-    "ma30VndPerTael": 160032923,
+    "ma7VndPerTael": 162698013,
+    "ma30VndPerTael": 160033088,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T02:51:25.770Z",
+    "fetchedAt": "2026-03-07T03:40:51.763Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -192,16 +185,15 @@
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-07 | marketpulse.com | Oil reaches $92 in a historic War squeeze – WTI Analysis"
+      "2026-03-07 | dailyadvance.com | Russian flag returns as Milan Cortina Winter Paralympics open amid Iran war and boycott"
     ],
     "countryActionHeadlines": [
-      "2026-03-07 | kten.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
-      "2026-03-07 | myleaderpaper.com | Venezuela inflation hit 475 % in 2025 , the world highest level"
+      "2026-03-07 | digitaljournal.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
+      "2026-03-07 | forbes.com | Will The Iran Conflict Reshape Venture Capital ?",
+      "2026-03-07 | timesofindia.indiatimes.com | In range - bound session , rupee slips 15 paisa vs Dollar",
+      "2026-03-07 | suncommercial.com | Venezuela inflation hit 475 % in 2025 , the world highest level",
+      "2026-03-07 | kten.com | Venezuela inflation hit 475 % in 2025 , the world highest level"
     ],
-    "dollarYieldHeadlines": [
-      "2026-03-07 | marketpulse.com | Oil reaches $92 in a historic War squeeze – WTI Analysis",
-      "2026-03-07 | marketpulse.com | Markets Weekly Outlook - Geopolitics Overpower Fundamentals : The $150 oil warning and the rate cut dilemma",
-      "2026-03-07 | finance.yahoo.com | Why New Gold Stock Slumped This Week"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
