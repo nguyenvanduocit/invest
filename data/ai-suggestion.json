@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T22:04:48.084Z",
+  "generatedAt": "2026-03-08T23:05:24.175Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) sau đợt tăng mạnh 30 ngày, tạo áp lực điều chỉnh ngắn hạn dù xu hướng trung hạn vẫn tích cực do bất ổn địa chính trị và VIX tăng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) sau đợt tăng mạnh, tạo áp lực điều chỉnh kỹ thuật ngắn hạn dù xu hướng vĩ mô vẫn được hỗ trợ bởi căng thẳng địa chính trị và VIX tăng.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cao hơn MA30 (160.7 triệu VND/lượng) tới 15.1%, báo hiệu vùng quá mua cần thời gian củng cố.",
-      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75 chỉ thịnh sợ hãi, thường đi kèm đợt chốt lời tài sản rủi ro trong ngắn hạn.",
-      "Lợi suất thực Mỹ 10 năm tăng 4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới khi chi phí cơ hội nắm giữ tăng."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, đi kèm giảm 4.02% trong 7 ngày gần nhất cho thấy động lượng mua đã yếu đi đáng kể.",
+      "Lợi suất thực Mỹ 10Y tăng mạnh 4.6% trong 5 ngày và VIX nhảy 27.48% phản ánh dòng tiền rút khỏi vàng sang tài sản an toàn khác (cash/bonds) trong ngắn hạn.",
+      "Premium 14.92% nằm trong biên dao động 11-18% của 30 ngày qua, không báo hiệu bất thường nhưng cũng không hấp dẫn để mua đuổi."
     ],
     "risks": [
-      "Chiến tranh Trung Đông kéo dài có thể đẩy giá tăng đột biến bất chấp kỹ thuật quá mua.",
-      "Lạm phát kỳ vọng tăng 4.44% trong 5 ngày có thể kích hoạt lo ngại thắt chặt tiền tệ trở lại.",
-      "Biến động premium 11.38%-17.86% trong 30 ngày cho thấy thanh khoản thị trường Việt Nam không ổn định."
+      "Căng thẳng Tây Á có thể đẩy giá tăng vọt bất ngờ, gây bỏ lỡ cơ hội nếu chờ quá lâu.",
+      "Lợi suất thực Mỹ tiếp tục tăng sẽ gây áp lực giảm thêm lên giá vàng thế giới.",
+      "Thanh khoản thấp tại đỉnh giá lịch sử có thể khiến spread mua-bán giãn rộng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_premium_ma30",
-        "value": 15.1,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_5d",
-        "value": 27.48,
+        "key": "SJC Change 7 Days",
+        "value": -4.02,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.82,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "us_real_yield_change_5d",
+        "key": "US Real Yield 10Y Change 5D",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.42,
+        "key": "VIX Change 5 Days",
+        "value": 27.48,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium vs Intl Price",
+        "value": 14.92,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.38,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "Gold Spot XAUUSD",
+        "value": 5117.22,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       },
       {
-        "key": "breakeven_change_5d",
-        "value": 4.44,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "SJC MA7 Price",
+        "value": 161509473,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T22:04:30.389Z",
+    "latestTimestamp": "2026-03-08T23:05:07.729Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162915569.68438298,
-    "premiumPct": 13.56,
-    "change7dPct": -2.86,
-    "change30dPct": 4.42,
-    "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 161786622,
-    "ma30VndPerTael": 160737163,
+    "intlVndPerTael": 160975525.28959683,
+    "premiumPct": 14.92,
+    "change7dPct": -4.02,
+    "change30dPct": 3.18,
+    "volatilityDailyPct": 1.41,
+    "ma7VndPerTael": 161509473,
+    "ma30VndPerTael": 160672495,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -89,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T22:04:34.104Z",
+    "fetchedAt": "2026-03-08T23:05:12.344Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5153.265,
+        "value": 5117.22,
         "unit": "USD/oz",
-        "date": "2026-03-06",
-        "change1dPct": 1.42,
-        "change5dPct": -2.1,
-        "change20dPct": 4.04,
+        "date": "2026-03-09",
+        "change1dPct": -0.7,
+        "change5dPct": -3.85,
+        "change20dPct": 1.16,
         "relationToGold": "context"
       },
       {
@@ -191,24 +185,27 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-08 | bworldonline.com | Peso may weaken on prolonged Middle East war - BusinessWorld Online",
-      "2026-03-08 | thejournal.ie | Campaigning and the price of gold : Inside the expensive race to win an Oscar from Ireland",
-      "2026-03-08 | theglobeandmail.com | A prolonged war in the Middle East will be bad for your portfolio . Here how to prepare"
+      "2026-03-08 | rediff.com | Gold poised for volatile week as West Asia crisis roils markets",
+      "2026-03-08 | asiabulletin.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
+      "2026-03-08 | inquirer.com | Trump says he ended a war in Africa . U . S . sanctions say otherwise",
+      "2026-03-08 | calcuttanews.net | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
+      "2026-03-08 | sanantoniopost.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict"
     ],
     "countryActionHeadlines": [
+      "2026-03-08 | rediff.com | Gold poised for volatile week as West Asia crisis roils markets",
       "2026-03-08 | bworldonline.com | T - bill , bond rates may rise on BSP policy rate hike signals",
       "2026-03-08 | bworldonline.com | Peso may weaken on prolonged Middle East war - BusinessWorld Online",
       "2026-03-08 | investinglive.com | Newsquawk Week In Focus : US and China inflation , united kingdom GDP , China Trade and CBRT",
       "2026-03-08 | thedailystar.net | Inflation hits 10 - month high in February , crosses 9 %",
-      "2026-03-08 | elpasoinc.com | The  hardware store  of the AI  gold rush  | Columns",
-      "2026-03-08 | smh.com.au | Australian dollar : Get used to it staying around the US70¢ mark – or even climbing higher"
+      "2026-03-08 | elpasoinc.com | The  hardware store  of the AI  gold rush  | Columns"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-08 | theglobeandmail.com | A prolonged war in the Middle East will be bad for your portfolio . Here how to prepare",
-      "2026-03-08 | cambodiantimes.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | bignewsnetwork.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | news.webindia123.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | news.webindia123.com | Indian gold prices drop in February as rupee surges following US tariff relief : Report"
+      "2026-03-08 | rediff.com | Gold poised for volatile week as West Asia crisis roils markets",
+      "2026-03-08 | asiabulletin.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
+      "2026-03-08 | calcuttanews.net | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
+      "2026-03-08 | sanantoniopost.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
+      "2026-03-08 | mexicostar.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
+      "2026-03-08 | theglobeandmail.com | A prolonged war in the Middle East will be bad for your portfolio . Here how to prepare"
     ]
   }
 }
