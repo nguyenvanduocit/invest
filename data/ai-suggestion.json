@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T06:13:43.639Z",
+  "generatedAt": "2026-03-08T07:13:00.611Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 185 triệu/lượng đang ở đỉnh 5 năm (percentile 99%) với đà tăng 30 ngày mạnh 4.3%, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi VIX nhảy vọt 27.48% và lợi suất thực USD tăng nhanh. Nên chờ xác nhận xu hướng thay vì đu đỉnh.",
+    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 99%) với đà tăng mạnh 30 ngày qua, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi VIX nhảy vọt 27.5% và lợi suất thực USD tăng nhanh 4.6% trong 5 ngày, tạo rủi ro mua đuôi. Nhà đầu tư nên chờ xác nhận xu hướng hoặc hồi chỉnh về vùng hỗ trợ gần MA7 (162.5 triệu VND/lượng) trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC ở vùng cực kỳ cao percentile 99% (5 năm), rủi ro mua đỉnh ngắn hạn lớn khi giá đã tăng 4.3% trong 30 ngày qua.",
-      "Động lượng tăng bị suy yếu: giá hiện tại 185 triệu VND/lượng thấp hơn đỉnh tạm 190.9 triệu (02/03), đồng thời change7dPct âm -2.02%.",
-      "Lợi suất thực USD 10Y tăng mạnh 4.6% (5 ngày) lên 1.82%, tạo áp lực giảm lên giá vàng thế giới khi chi phí cơ hội nắm giữ tăng.",
-      "VIX tăng vọt 27.48% (5 ngày) lên 23.75 chỉ thị bất ổn thị trường, thường đi kèm biến động hai chiều mạnh而非trend đơn hướng."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm và tăng 4.3% sau 30 ngày, cho thấy thị trường đã mua vào mạnh và có thể quá mua ở ngắn hạn.",
+      "Động lượng tăng bị đe dọa khi VIX tăng vọt 27.48% trong 5 ngày qua (lên 23.75 điểm) đi kèm lợi suất thực 10 năm USD tăng 4.6% (lên 1.82%), áp lực bán vàng có thể gia tăng.",
+      "Premium 13.72% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (khoảng 14%), không có tín hiệu bất thường về chênh lệch cung cầu nội địa để hỗ trợ mua đuôi."
     ],
     "risks": [
-      "Chiến tranh Iran - Trung Đông leo thang có thể đẩy giá vàng sốc tăng bất chấp kỹ thuật.",
-      "Dữ liệu việc làm Mỹ yếu (Payroll) làm tăng kỳ vọng cắt giảm lãi suất Fed, có thể hồi phục giá vàng nhanh.",
-      "Premium SJC co giãn mạnh từ 11.38% đến 16.99% trong 30 ngày, thanh khoản thấp có thể gây trượt giá mua/bán."
+      "Rủi ro điều chỉnh sâu nếu lợi suất thực USD tiếp tục tăng và VIX duy trì mức cao trên 23.",
+      "Giá đang quá gần đỉnh lịch sử 5 năm, biên độ dao động 1.42%/ngày có thể gây thanh lý cọc nếu dùng đòn bẩy.",
+      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia cụ thể trong input, độ tin cậy phân tích vĩ mô bị giới hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price",
+        "value": 185000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 4.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 7d",
-        "value": -2.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Change 5d",
+        "key": "VIX 5-day Change",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
+        "key": "US Real Yield 10Y 5-day Change",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 5.61,
-        "unit": "% (11.38-16.99)",
-        "source": "monthly_series_30d"
+        "key": "SJC 30-day Change",
+        "value": 4.3,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot XAUUSD",
-        "value": 5153.265,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "Current Premium",
+        "value": 13.72,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 Support",
+        "value": 162472155,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T06:13:19.148Z",
+    "latestTimestamp": "2026-03-08T07:12:44.053Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162684737.8013876,
+    "intlVndPerTael": 162685061.53244302,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472109,
-    "ma30VndPerTael": 160507166,
+    "ma7VndPerTael": 162472155,
+    "ma30VndPerTael": 160507177,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T06:13:26.618Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-08T07:12:47.239Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -178,29 +177,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro",
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
-      "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
-      "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
+      "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-08 | sharecast.com | Weekly review - Sharecast . com",
-      "2026-03-08 | budapesttimes.hu | We must win the fight to reopen the oil pipeline , PM says",
-      "2026-03-08 | dailymail.co.uk | Aussies lose their minds over huge change in every suburb as Middle East crisis pushes up prices of a very common essential nobody can live without"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-08 | smh.com.au | The war in Iran has pushed up oil prices , which will fuel inflation",
-      "2026-03-08 | theage.com.au | The war in Iran has pushed up oil prices , which will fuel inflation",
-      "2026-03-08 | dawn.com | Venezuela suffers world highest inflation at 475 per cent - Newspaper",
-      "2026-03-08 | finance.yahoo.com | Gold Trims Weekly Loss as US Jobs Data Raises Fed Rate Cut Bets",
-      "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
-      "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame ."
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-08 | kashmirreader.com | Longer Gulf conflict may trigger rise in inflation ; India a notable exception : SBI report",
-      "2026-03-08 | finance.yahoo.com | Gold Trims Weekly Loss as US Jobs Data Raises Fed Rate Cut Bets"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
