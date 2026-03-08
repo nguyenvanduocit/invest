@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-07T23:04:50.141Z",
+  "generatedAt": "2026-03-08T00:20:38.572Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,42 +7,36 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh 30 ngày qua, nhưng động lượng ngắn hạn đã suy yếu và biến động tăng cao. Rủi ro mua đuổi tại vùng giá cực đại này là đáng kể, nhà đầu tư nên chờ đợi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh 5 năm (percentile 100%) với đà tăng chững lại sau đợt điều chỉnh -2.02% tuần qua; rủi ro mua đuổi cao khi lợi suất thực USD tăng vọt 4.6% và VIX nhảy 27.48% báo hiệu biến động chưa ổn định.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), tăng 4.3% sau 30 ngày nhưng giảm 2.02% trong 7 ngày gần nhất cho thấy động lượng mua đang chững lại.",
-      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75 chỉ báo sự bất ổn thị trường ngắn hạn, thường đi kèm với thanh khoản vàng bị ảnh hưởng hoặc chốt lời.",
-      "Lợi suất thực Mỹ 10 năm tăng 4.6% trong 5 ngày qua lên 1.82%, tạo áp lực ngược lên giá vàng thế giới (xuất hiện divergence với đà tăng giá vàng trước đó).",
-      "Premium 13.89% đang ở mức hợp lý trong dải dao động 30 ngày (11.55%-18.05%), không có tín hiệu bất thường về chênh lệch cung cầu nội địa."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cách xa MA30 (160.5 triệu VND/lượng) hơn 15%, báo hiệu vùng quá mua cần thời gian củng cố.",
+      "Động lượng ngắn hạn yếu đi: giá giảm -2.02% trong 7 ngày qua bất chấp xu hướng tăng 30 ngày (+4.3%), cho thấy áp lực chốt lời đang hiện hữu.",
+      "Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh +4.6% trong 5 ngày lên mức 1.82%, tạo áp lực trái chiều lớn lên giá vàng thế giới vì chi phí cơ hội nắm giữ vàng tăng.",
+      "VIX tăng vọt +27.48% lên 23.75 điểm cho thấy tâm lý thị trường lo ngại, thường đi kèm biến động giá hai chiều mạnh, chưa phải điểm nhập trường an toàn."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu sau khi chạm đỉnh lịch sử 5 năm, rủi ro chốt lời hàng loạt.",
-      "Thanh khoản có thể giảm nếu VIX tiếp tục tăng cao gây ách tắc dòng tiền.",
-      "Lợi suất thực Mỹ tiếp tục tăng sẽ làm giảm hấp dẫn của vàng thế giới."
+      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực bán tháo thêm trên thị trường vàng quốc tế.",
+      "Biến động ngắn hạn cao (1.42%/ngày) kết hợp với thanh khoản thấp có thể gây trượt giá khi thực thi lệnh.",
+      "Premium giảm từ 17.86% (17/02) xuống 13.72% có thể làm giảm hiệu quả bảo hộ của vàng SJC so với vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Percentile 5Y",
         "value": 100,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price vs MA30",
+        "value": 15.25,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 30d",
-        "value": 4.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price Change 7d",
+        "key": "SJC Change 7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Change 5d",
-        "value": 27.48,
-        "unit": "%",
-        "source": "first_principles_context"
       },
       {
         "key": "US Real Yield 10Y Change 5d",
@@ -51,35 +45,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 6.5,
-        "unit": "% (11.55-18.05)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Current Premium",
-        "value": 13.89,
+        "key": "VIX Change 5d",
+        "value": 27.48,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "VIX Level",
-        "value": 23.75,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "Premium Range 30d",
+        "value": 11.38,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-07T23:04:32.621Z",
+    "latestTimestamp": "2026-03-08T00:20:05.847Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162431460.5947337,
-    "premiumPct": 13.89,
+    "intlVndPerTael": 162684612.90223405,
+    "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
-    "volatilityDailyPct": 1.46,
-    "ma7VndPerTael": 162218337,
-    "ma30VndPerTael": 160256359,
+    "volatilityDailyPct": 1.42,
+    "ma7VndPerTael": 162472091,
+    "ma30VndPerTael": 160507162,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -90,7 +78,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-07T23:04:37.475Z",
+    "fetchedAt": "2026-03-08T00:20:25.193Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
