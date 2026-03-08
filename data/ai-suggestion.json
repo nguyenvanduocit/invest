@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T15:05:28.293Z",
+  "generatedAt": "2026-03-08T16:05:44.855Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 185 triệu đồng/lượng đang ở vùng cực kỳ quá mua (percentile 99%) với rủi ro điều chỉnh kỹ thuật cao, bất chấp đà tăng trung hạn còn nguyên vẹn. Nhà đầu tư nên chờ đợi hồi phục về vùng hỗ trợ gần MA7 (182.5 triệu/lượng) hoặc xác nhận phá vỡ đỉnh cũ 187-190 triệu/lượng trước khi hành động.",
+    "thesis": "Giá vàng SJC 185 triệu VND/lượng đang ở vùng cực hiếm (percentile 99% 5 năm) sau đà tăng 4.3%/tháng, nhưng áp lực điều chỉnh ngắn hạn đang rõ rệt khi VIX nhảy vọt 27.48% và lợi suất thực USD tăng nhanh 4.6% trong 5 ngày, tạo tín hiệu trái chiều cần thời gian quan sát.",
     "reasons": [
-      "Giá SJC (185 triệu VND/lượng) đang cách xa MA7 (162.5 triệu VND/lượng) tới 13.8% và nằm ở phân vị 99% trong 5 năm, tín hiệu quá mua cực đoan cần thời gian củng cố.",
-      "Động lượng tăng đã chững lại: giá giảm 2.02% trong 7 ngày qua, trong khi VIX tăng vọt 27.48% trong 5 ngày cho thấy tâm lý thị trường lo ngại rủi ro có thể gây áp lực bán thanh khoản.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày và lạm phát kỳ vọng (Breakeven) tăng 4.44% trong 5 ngày, tạo áp lực trái chiều lên giá vàng thế giới trong ngắn hạn."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cho thấy giá đã chạy đến vùng bão hòa kỹ thuật ngắn hạn.",
+      "Động lượng tăng 30 ngày (4.3%) vẫn dương nhưng giảm 2.02% trong 7 ngày gần nhất báo hiệu sự chững lại cần theo dõi.",
+      "VIX tăng vọt 27.48% tuần qua lên 23.75 điểm phản ánh lo ngại rủi ro thị trường, thường gây áp lực bán tháo tài sản để gom USD mặt.",
+      "Lợi suất thực 10 năm USD tăng mạnh 4.6% trong 5 ngày lên 1.82% tạo áp lực giảm lên giá vàng vì tăng chi phí cơ hội nắm giữ."
     ],
     "risks": [
-      "Căng thẳng Trung Đông leo thang có thể gây sốc tăng giá bất chấp tín hiệu kỹ thuật quá mua.",
-      "Thanh khoản thấp tại vùng giá kỷ lục có thể khiến spread mua-bán giãn rộng, khó thoát hàng.",
-      "Dữ liệu vĩ mô từ Fed/ECB trong tuần tới có thể gây biến động thất thường cho USD và giá vàng."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh 5 năm nếu dòng tiền rút khỏi vàng khi thị trường ổn định và lợi suất thực USD tiếp tục tăng.",
+      "Biên độ dao động rộng 1.42%/ngày kết hợp với VIX cao 23.75 có thể gây biến động giá bất ngờ, khó nhập liệu tốt.",
+      "Premium SJC 13.72% có thể giãn rộng bất thường nếu giá thế giới điều chỉnh nhanh hơn giá trong nước."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA7 Distance",
-        "value": 13.8,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC 5-Year Percentile",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7D",
+        "key": "sjc_change_30d",
+        "value": 4.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_change_7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 5D",
+        "key": "vix_change_5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5D",
+        "key": "us_real_yield_10y_change_5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 13.72,
-        "unit": "%",
+        "key": "vix_current",
+        "value": 23.75,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "daily_volatility",
+        "value": 1.42,
+        "unit": "%/day",
         "source": "market_snapshot"
       },
       {
-        "key": "Intl Gold Change 20D",
-        "value": 4.04,
+        "key": "sjc_premium_current",
+        "value": 13.72,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T15:05:06.518Z",
+    "latestTimestamp": "2026-03-08T16:05:04.214Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162685726.29796308,
+    "intlVndPerTael": 162685223.86988193,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472250,
-    "ma30VndPerTael": 160507199,
+    "ma7VndPerTael": 162472178,
+    "ma30VndPerTael": 160507182,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -83,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T15:05:11.682Z",
+    "fetchedAt": "2026-03-08T16:05:11.727Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
@@ -185,8 +192,7 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-08 | siasat.com | Gold poised for volatile week as Middle East tensions roil markets : Analysts",
-      "2026-03-08 | timesofindia.indiatimes.com | Gold braces for volatile week as Middle East tensions escalate : Analysts | India Business News"
+      "2026-03-08 | globalsecurity.org | Exercise Cobra Gold ends for Washington Guard , Thailand Partners"
     ],
     "countryActionHeadlines": [
       "2026-03-08 | siasat.com | Gold poised for volatile week as Middle East tensions roil markets : Analysts"
