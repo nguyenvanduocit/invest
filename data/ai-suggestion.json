@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T12:07:40.834Z",
+  "generatedAt": "2026-03-08T13:17:36.800Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99th percentile với đợt điều chỉnh -2.02% trong 7 ngày qua; thanh khoản thị trường căng thẳng do VIX tăng 27.48% và lợi suất thực USD nhảy 4.6%, nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ quá mua (percentile 99%) với đỉnh 190.9 triệu vừa hình thành, tạo áp lực điều chỉnh ngắn hạn đáng kể. Tuy nhiên, xu hướng trung hạn vẫn tích cực nhờ VIX tăng và lợi suất thực giảm, nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cực cao percentile 5 năm 99%, rủi ro mua đỉnh ngắn hạn đáng kể sau đợt tăng 30 ngày +4.3%.",
-      "Động lực vĩ mô đảo chiều: Lợi suất thực 10Y tăng mạnh 4.6% lên 1.82% và VIX nhảy 27.48% lên 23.75 điểm gây áp lực bán rủi ro.",
-      "Premium 13.71% đang nén về mức trung bình chuỗi 30 ngày (11.38%-17.86%), không có cơ hội arbitrage đặc biệt để biện minh cho việc MUA lúc này.",
-      "Xu hướng kỹ thuật yếu đi: SJC giảm -2.02% trong 7 ngày qua bất chấp giá thế giới vẫn tăng +4.04% trong 20 ngày, cho thấy áp lực bán nội địa."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá gần đỉnh lịch sử 190.9 triệu VND/lượng (2026-03-02), rủi ro điều chỉnh kỹ thuật cao.",
+      "Động lượng tăng đã chững lại với change7dPct = -2.02% trong khi change30dPct = +4.3%, cho thấy áp lực bán ngắn hạn đang xuất hiện.",
+      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75 điểm, hỗ trợ nhu cầu trú ẩn an toàn, nhưng tín hiệu vĩ mô chưa đủ rõ ràng do thiếu dữ liệu chính sách Mỹ cụ thể.",
+      "Premium 13.72% nằm trong biên dao động 30 ngày (11.38% - 17.86%), không có tín hiệu bất thường về thanh khoản thị trường Việt Nam."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn nếu lợi suất thực USD tiếp tục tăng hoặc Fed phát ngắn hawkish.",
-      "Thanh khoản thấp và biến động cao (volatility 1.42%) có thể gây trượt giá khi thực thi lệnh lớn.",
-      "Dữ liệu sự kiện vĩ mô không có tín hiệu rõ ràng từ Fed/địa chính trị, độ tin cậy dự báo giảm."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh nếu giá thế giới không giữ được mức 5,100 USD/oz, có thể test lại MA7 (162.4 triệu VND/lượng).",
+      "Dữ liệu sự kiện vĩ mô (policyHeadlines) chủ yếu từ ECB, thiếu tín hiệu rõ ràng từ Fed về chính sách lãi suất tương lai.",
+      "Lợi suất thực 10 năm tăng 4.6% trong 5 ngày (lên 1.82%) có thể gây áp lực ngược lên giá vàng nếu xu hướng này tiếp tục."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
+        "key": "sjc_price_latest",
+        "value": 185000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_30d_high",
+        "value": 190900000,
+        "unit": "VND/lượng",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "change_7d_pct",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_premium_current",
-        "value": 13.71,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change_5d",
-        "value": 4.6,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_5d",
+        "key": "vix_5d_change",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
-        "value": 23.75,
-        "unit": "index",
+        "key": "us_real_yield_10y",
+        "value": 1.82,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "intl_gold_change_20d",
-        "value": 4.04,
+        "key": "premium_current",
+        "value": 13.72,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "ma7_vnd_per_tael",
+        "value": 162472246,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T12:07:17.722Z",
+    "latestTimestamp": "2026-03-08T13:17:09.719Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162688856.9565953,
-    "premiumPct": 13.71,
+    "intlVndPerTael": 162685695.1518266,
+    "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472697,
-    "ma30VndPerTael": 160507303,
+    "ma7VndPerTael": 162472246,
+    "ma30VndPerTael": 160507198,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T12:07:23.297Z",
+    "fetchedAt": "2026-03-08T13:17:19.414Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -192,7 +192,8 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-08 | al-monitor.com | The weight of war : Erdal Duman sculptures probe politics of violence - AL - Monitor : The Middle Eastʼs leading independent news source since 2012"
+      "2026-03-08 | manchestereveningnews.co.uk | Doomsday prepper says people no longer  think he mad  as he prepares for WW3",
+      "2026-03-08 | aol.com | All About Queen Elizabeth Engagement Ring , Including the Secret Inscription Prince Philip Wrote in the Wedding Band"
     ],
     "countryActionHeadlines": [
       "2026-03-08 | fool.com | 2 Warren Buffett Stocks to Buy Hand Over Fist This Month , and 1 to Avoid",
