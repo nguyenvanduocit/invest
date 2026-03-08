@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T03:00:28.937Z",
+  "generatedAt": "2026-03-08T03:53:42.552Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,84 +7,90 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) với đà tăng mạnh +4.3%/tháng, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi VIX tăng vọt và lợi suất thực USD hồi phục. Rủi ro mua đuổi ở vùng giá cực đại outweighs cơ hội tăng tức thì.",
+    "thesis": "Giá SJC 185 triệu đồng/lượng đang ở đỉnh lịch sử 5 năm (percentile 99%) với đà tăng 30 ngày mạnh 4.3%, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi VIX tăng vọt 27.48% và lợi suất thực USD hồi phục. Nên chờ đợi hồi phục về vùng hỗ trợ kỹ thuật hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất lịch sử 5 năm (percentile 100%), cách xa MA30 (160.5 triệu VND/lượng) 15.2%, báo hiệu vùng quá mua kỹ thuật.",
-      "Động lượng tăng yếu đi: giá hiện tại (185 triệu) thấp hơn đỉnh tuần trước (190.9 triệu VND/lượng), kèm biến động cao 1.42%/ngày.",
-      "VIX tăng mạnh +27.48% trong 5 ngày lên mức 23.75 điểm, phản ánh lo ngại thị trường, thường đi kèm rủi ro thanh khoản.",
-      "Lợi suất thực USD 10 năm tăng +4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới (đã giảm -2.1% trong 5 ngày)."
+      "Giá SJC ở mức cực cao 185 triệu đồng/lượng, đứng tại percentile 99% trong 5 năm qua, rủi ro mua đỉp cao khi giá đã tăng 4.3% trong 30 ngày qua.",
+      "Động lượng tăng yếu đi: giá thế giới giảm -2.02% trong 7 ngày gần đây bất chấp xu hướng tăng 30 ngày trước đó.",
+      "VIX tăng mạnh 27.48% trong 5 ngày (lên mức 23.75) cho thấy lo ngại thị trường, thường đi kèm biến động hai chiều lớn và bán tháo tài sản rủi ro.",
+      "Lợi suất thực USD 10 năm tăng 4.6% trong 5 ngày (lên 1.82%) tạo áp lực ngược lên giá vàng thế giới, hạn chế đà tăng tiếp theo."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử khi động lượng mua suy yếu.",
-      "Biến động cao (volatility 1.42%) có thể gây cháy tài khoản nếu dùng đòn bẩy.",
-      "Thanh khoản có thể giảm nếu giá đi ngang kéo dài."
+      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều, đặc biệt khi biến động ngày đang ở 1.42%.",
+      "Thông tin địa chính trị (Iran) có thể gây sốc giá hai chiều, bắn stoploss nhà đầu tư đòn bẩy.",
+      "Dữ liệu vĩ mô có độ trễ 2-3 ngày so với giá vàng thực tế, có thể bỏ lỡ điểm đảo chiều nhạy cảm."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
-        "value": 100,
-        "unit": "%",
+        "key": "sjc_price_latest",
+        "value": 185000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d",
+        "key": "percentile_5y",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_30d_pct",
         "value": 4.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 15.2,
-        "unit": "% above",
+        "key": "change_7d_pct",
+        "value": -2.02,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 5d",
+        "key": "vix_change_5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 4.6,
+        "key": "us_real_yield_10y",
+        "value": 1.82,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 5d",
-        "value": -2.1,
+        "key": "premium_pct",
+        "value": 13.72,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "SJC Peak vs Current (30d)",
-        "value": -3.1,
-        "unit": "% from peak",
-        "source": "monthly_series_30d"
+        "key": "volatility_daily",
+        "value": 1.42,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T03:00:09.398Z",
+    "latestTimestamp": "2026-03-08T03:53:14.607Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162684830.2959749,
+    "intlVndPerTael": 162684613.531449,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472122,
-    "ma30VndPerTael": 160507169,
-    "percentile5y": 100,
+    "ma7VndPerTael": 162472091,
+    "ma30VndPerTael": 160507162,
+    "percentile5y": 99,
     "drawdowns": {
       "total": 4,
-      "recovered": 3,
-      "notRecovered": 1,
+      "recovered": 4,
+      "notRecovered": 0,
       "worstPct": 41.26,
-      "avgRecoveryDays": 1369
+      "avgRecoveryDays": 1035
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T03:00:14.986Z",
+    "fetchedAt": "2026-03-08T03:53:25.432Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,8 +191,20 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-08 | prowrestling.net | WXW  16 Carat Gold  night two results : Vetter review of Elijah Blum vs . 1 Called Manders for the WXW Title , The Grind vs . Planet Gojirah for the WXW Tag Titles , quarterfinal tournament matches"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
+      "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame .",
+      "2026-03-08 | livemint.com | Gold rate today ₹19 , 000 away from record high . Opportunity to buy amid US - Iran war ?",
+      "2026-03-07 | newsghana.com.gh | Venezuela Records World Highest Inflation at 475 Percent in 2025"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
+      "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame .",
+      "2026-03-08 | livemint.com | Gold rate today ₹19 , 000 away from record high . Opportunity to buy amid US - Iran war ?",
+      "2026-03-08 | finance.yahoo.com | Gold Slips as Dollar Strength and War - Driven Oil Surge Pressure Prices"
+    ]
   }
 }
