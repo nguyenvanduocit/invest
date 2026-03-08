@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T13:17:36.800Z",
+  "generatedAt": "2026-03-08T14:08:02.822Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ quá mua (percentile 99%) với đỉnh 190.9 triệu vừa hình thành, tạo áp lực điều chỉnh ngắn hạn đáng kể. Tuy nhiên, xu hướng trung hạn vẫn tích cực nhờ VIX tăng và lợi suất thực giảm, nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ thay vì mua đuổi.",
+    "thesis": "Giá SJC 185 triệu VND/lượng đang ở vùng cực trị 99th percentile 5 năm, biên độ dao động rộng 1.42%/ngày và tín hiệu vĩ mô xung đột (VIX tăng nhưng lợi suất thực USD cũng tăng) đòi hỏi nhà đầu tư thận trọng chờ điểm nhập tốt hơn.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá gần đỉnh lịch sử 190.9 triệu VND/lượng (2026-03-02), rủi ro điều chỉnh kỹ thuật cao.",
-      "Động lượng tăng đã chững lại với change7dPct = -2.02% trong khi change30dPct = +4.3%, cho thấy áp lực bán ngắn hạn đang xuất hiện.",
-      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75 điểm, hỗ trợ nhu cầu trú ẩn an toàn, nhưng tín hiệu vĩ mô chưa đủ rõ ràng do thiếu dữ liệu chính sách Mỹ cụ thể.",
-      "Premium 13.72% nằm trong biên dao động 30 ngày (11.38% - 17.86%), không có tín hiệu bất thường về thanh khoản thị trường Việt Nam."
+      "Giá SJC ở phân vị 99% trong 5 năm (185 triệu VND/lượng), rủi ro điều chỉnh cao khi mua tại vùng giá cực trị lịch sử này.",
+      "VIX tăng 27.48% lên 23.75 điểm cho thấy lo ngại thị trường, nhưng lợi suất thực USD 10Y cũng tăng 4.6% lên 1.82% tạo áp lực ngược lên vàng.",
+      "Giá thế giới đã điều chỉnh từ đỉnh 5330.95 USD/oz (02/03) về 5171.11 USD/oz, cần thời gian xác nhận xu hướng.",
+      "Premium 13.72% đang ở mức hợp lý trong dải giao động 30 ngày (11.38%-17.86%), không có tín hiệu bất thường để hành động ngay."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh nếu giá thế giới không giữ được mức 5,100 USD/oz, có thể test lại MA7 (162.4 triệu VND/lượng).",
-      "Dữ liệu sự kiện vĩ mô (policyHeadlines) chủ yếu từ ECB, thiếu tín hiệu rõ ràng từ Fed về chính sách lãi suất tương lai.",
-      "Lợi suất thực 10 năm tăng 4.6% trong 5 ngày (lên 1.82%) có thể gây áp lực ngược lên giá vàng nếu xu hướng này tiếp tục."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá SJC giao dịch cao hơn xa MA7 (162.47 triệu VND/lượng) và MA30 (160.51 triệu VND/lượng) của giá thế giới quy đổi.",
+      "Lịch sử cho thấy thời gian phục hồi trung bình sau drawdown lên đến 1035 ngày, thanh khoản thấp tại đỉnh có thể gây khó khăn khi cần bán gấp.",
+      "Lãi suất Fed neo 3.64% và lợi suất thực USD tăng, nếu duy trì sẽ hạn chế động lực tăng của vàng."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_price_latest",
+        "key": "sjc_current_price",
         "value": 185000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_30d_high",
-        "value": 190900000,
-        "unit": "VND/lượng",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "change_7d_pct",
-        "value": -2.02,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_5d_change",
+        "key": "vix_change_5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.82,
+        "key": "us_real_yield_10y_change_5d",
+        "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_current",
-        "value": 13.72,
+        "key": "intl_gold_peak_30d",
+        "value": 5330.95,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 6.48,
         "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "avg_recovery_days",
+        "value": 1035,
+        "unit": "ngày",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd_per_tael",
-        "value": 162472246,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "fed_funds_rate",
+        "value": 3.64,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T13:17:09.719Z",
+    "latestTimestamp": "2026-03-08T14:05:56.255Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162685695.1518266,
+    "intlVndPerTael": 162686919.60398182,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472246,
-    "ma30VndPerTael": 160507198,
+    "ma7VndPerTael": 162472421,
+    "ma30VndPerTael": 160507239,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T13:17:19.414Z",
+    "fetchedAt": "2026-03-08T14:05:59.308Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,17 +191,8 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-08 | manchestereveningnews.co.uk | Doomsday prepper says people no longer  think he mad  as he prepares for WW3",
-      "2026-03-08 | aol.com | All About Queen Elizabeth Engagement Ring , Including the Secret Inscription Prince Philip Wrote in the Wedding Band"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-08 | fool.com | 2 Warren Buffett Stocks to Buy Hand Over Fist This Month , and 1 to Avoid",
-      "2026-03-08 | thenationonlineng.net | Fed Govt reviews options as Iran War impact grows - The Nation Newspaper",
-      "2026-03-08 | capitalfm.co.ke | Kenya forex reserves Rise by Sh266bn after Eurobond boost"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-08 | gdnonline.com | International Business : Investor complacency or simply looking through the noise ?"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
