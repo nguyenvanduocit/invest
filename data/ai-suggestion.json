@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T00:20:38.572Z",
+  "generatedAt": "2026-03-08T01:34:49.055Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,36 +7,36 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở đỉnh 5 năm (percentile 100%) với đà tăng chững lại sau đợt điều chỉnh -2.02% tuần qua; rủi ro mua đuổi cao khi lợi suất thực USD tăng vọt 4.6% và VIX nhảy 27.48% báo hiệu biến động chưa ổn định.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 5 năm (percentile 100%) sau đà tăng 4.3%/tháng, nhưng áp lực điều chỉnh ngắn hạn xuất hiện khi lợi suất thực USD hồi phục mạnh (+4.6%/5 ngày) và VIX tăng vọt. Nhà đầu tư không nên đu đỉnh mà chờ hồi điều chỉnh về hỗ trợ kỹ thuật.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 100%), cách xa MA30 (160.5 triệu VND/lượng) hơn 15%, báo hiệu vùng quá mua cần thời gian củng cố.",
-      "Động lượng ngắn hạn yếu đi: giá giảm -2.02% trong 7 ngày qua bất chấp xu hướng tăng 30 ngày (+4.3%), cho thấy áp lực chốt lời đang hiện hữu.",
-      "Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh +4.6% trong 5 ngày lên mức 1.82%, tạo áp lực trái chiều lớn lên giá vàng thế giới vì chi phí cơ hội nắm giữ vàng tăng.",
-      "VIX tăng vọt +27.48% lên 23.75 điểm cho thấy tâm lý thị trường lo ngại, thường đi kèm biến động giá hai chiều mạnh, chưa phải điểm nhập trường an toàn."
+      "Giá SJC 185 triệu VND/lượng ở phân vị 100% trong 5 năm, rủi ro mua đỉnh cao sau khi tăng 4.3% trong 30 ngày.",
+      "Động lượng yếu đi: giá thế giới giảm -2.1% trong 5 ngày bất chấp VIX tăng vọt +27.48%, tín hiệu phân kỳ tiêu cực.",
+      "Lợi suất thực USD 10 năm tăng mạnh +4.6% trong 5 ngày (lên 1.82%), tạo áp lực giảm lên giá vàng khi chi phí cơ hội tăng.",
+      "VIX tăng lên 23.75 điểm (+27.48%/5 ngày) cho thấy căng thẳng tài chính, có thể gây áp lực thanh khoản bán vàng lấy tiền mặt."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực bán tháo thêm trên thị trường vàng quốc tế.",
-      "Biến động ngắn hạn cao (1.42%/ngày) kết hợp với thanh khoản thấp có thể gây trượt giá khi thực thi lệnh.",
-      "Premium giảm từ 17.86% (17/02) xuống 13.72% có thể làm giảm hiệu quả bảo hộ của vàng SJC so với vàng thế giới."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 5,000 USD/oz và VND tăng giá.",
+      "Sự kiện địa chính trị (Iran) có thể gây biến động bất ngờ hai chiều, khó dự đoán hướng đi ngắn hạn.",
+      "Thanh khoản giảm nếu nhà đầu tư e ngại mua ở vùng giá cao kỷ lục, gây trượt giá khi bán."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 100,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price vs MA30",
-        "value": 15.25,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -2.02,
+        "key": "SJC Change 30d",
+        "value": 4.3,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "World Gold Change 5d",
+        "value": -2.1,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
         "key": "US Real Yield 10Y Change 5d",
@@ -45,29 +45,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 5d",
+        "key": "VIX Index Change 5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 11.38,
+        "key": "Current Premium vs World",
+        "value": 13.71,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "World Gold Price Latest",
+        "value": 5171.14,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T00:20:05.847Z",
+    "latestTimestamp": "2026-03-08T01:34:12.844Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162684612.90223405,
-    "premiumPct": 13.72,
+    "intlVndPerTael": 162687979.51644605,
+    "premiumPct": 13.71,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472091,
-    "ma30VndPerTael": 160507162,
+    "ma7VndPerTael": 162472572,
+    "ma30VndPerTael": 160507274,
     "percentile5y": 100,
     "drawdowns": {
       "total": 4,
@@ -78,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T00:20:25.193Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-08T01:34:20.408Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -179,8 +185,22 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-08 | thereporter.com | Vacaville vendors turn out for vets",
+      "2026-03-08 | navhindtimes.in | The mysterious sphere of Khajuraho - The Navhind Times",
+      "2026-03-08 | cornwallseawaynews.com | New police chief will come from  outside"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-07 | newsghana.com.gh | Venezuela Records World Highest Inflation at 475 Percent in 2025",
+      "2026-03-07 | finance.yahoo.com | US Inflation Gauges Likely Diverged Before War in Iran",
+      "2026-03-07 | smdp.com | More than 20 states sue over new global tariffs Trump imposed after his stinging Supreme Court loss",
+      "2026-03-07 | philstar.com | Oil , rice pressures may push inflation higher"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-08 | zimbabwesituation.com | Why Africa remains dependent on Middle East oil despite its own vast reserves",
+      "2026-03-07 | container-mag.com | 24 US States Sue Over Trump Section 122 Tariffs After Supreme Court Trade Ruling",
+      "2026-03-07 | finance.yahoo.com | US Inflation Gauges Likely Diverged Before War in Iran",
+      "2026-03-07 | thezimbabwean.co | Why Africa remains dependent on Middle East oil despite its own vast reserves"
+    ]
   }
 }
