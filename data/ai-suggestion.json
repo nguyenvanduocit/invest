@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T04:33:53.836Z",
+  "generatedAt": "2026-03-08T05:20:28.724Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,47 +7,48 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng bị hãm lại sau đợt điều chỉnh -2.02% tuần qua. Vĩ mô ủng hộ dài hạn nhờ căng thẳng địa chính trị và VIX tăng, nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn là rất lớn khi lợi suất thực USD tăng vọt 4.6% trong 5 ngày.",
+    "thesis": "Giá SJC đang ở vùng cực cao percentile 99% với đà tăng mạnh 30 ngày qua, nhưng động lượng ngắn hạn đã yếu đi và VIX nhảy vọt báo hiệu biến động. Nên chờ đợi hồi chỉnh về mức hỗ trợ kỹ thuật tốt hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá gần vùng kháng cự tâm lý và lịch sử, tiềm năng tăng thêm hạn chế so với rủi ro giảm.",
-      "Động lượng tăng yếu đi: giá SJC hiện tại (185 triệu) thấp hơn đỉnh tuần trước (190.9 triệu) và lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày qua, tạo áp lực bán vàng.",
-      "Tín hiệu vĩ mô hỗ trợ: VIX tăng 27.48% và căng thẳng Mỹ-Iran (nguồn geopoliticalHeadlines) tạo nền tảng an toàn, nhưng chưa đủ mạnh để đẩy giá phá đỉnh ngay lập tức khi USD đang chịu áp lực từ báo cáo việc làm yếu."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, rủi ro mua đỉnh ngắn hạn cao.",
+      "Động lượng tăng yếu đi: giá hiện thấp hơn đỉnh 30 ngày (190.9 triệu VND) và giảm 2.02% trong 7 ngày qua.",
+      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75, tín hiệu thị trường tài chính căng thẳng có thể gây chốt lời vàng.",
+      "Lợi suất thực 10Y tăng 4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới."
     ],
     "risks": [
-      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở vùng đỉnh 5 năm và vừa trải qua biến động 1.42%/ngày.",
-      "Lợi suất thực USD tăng vọt (up 4.6% 5 ngày) có thể khiến các quỹ vàng ETF bán ròng, kéo giá thế giới giảm thêm.",
-      "Premium SJC (13.72%) có thể co hẹp nếu giá thế giới giảm sâu hơn, làm giảm giá vàng trong nước nhanh hơn giá thế giới."
+      "Rủi ro chốt lời sâu nếu biến động VIX tiếp tục leo thang.",
+      "Lợi suất thực Mỹ tiếp tục tăng sẽ làm giảm hấp dẫn của vàng.",
+      "Premium SJC có thể co hẹp nếu giá thế giới điều chỉnh mạnh."
     ],
     "evidence": [
       {
         "key": "SJC Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
+        "key": "SJC Change 7D",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 4.6,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "SJC Peak 30D",
+        "value": 190900000,
+        "unit": "VND/lượng",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "VIX Change 5d",
+        "key": "VIX Change 5D",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Peak vs Latest (30d)",
-        "value": 190.9,
-        "unit": "million VND/tael",
-        "source": "monthly_series_30d"
+        "key": "US Real Yield 10Y Change 5D",
+        "value": 4.6,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
         "key": "Current Premium",
@@ -58,15 +59,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T04:33:26.983Z",
+    "latestTimestamp": "2026-03-08T05:20:02.653Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162684554.69985774,
+    "intlVndPerTael": 162685888.00618708,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472083,
-    "ma30VndPerTael": 160507160,
+    "ma7VndPerTael": 162472273,
+    "ma30VndPerTael": 160507204,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -77,8 +78,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T04:33:37.965Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-08T05:20:17.262Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -178,20 +179,8 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-08 | kunm.org | Trump warns Iran  will be hit very hard  as war enters its second week",
-      "2026-03-08 | prowrestling.net | WXW  16 Carat Gold  night two results : Vetter review of Elijah Blum vs . 1 Called Manders for the WXW Title , The Grind vs . Planet Gojirah for the WXW Tag Titles , quarterfinal tournament matches"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
-      "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame .",
-      "2026-03-08 | livemint.com | Gold rate today ₹19 , 000 away from record high . Opportunity to buy amid US - Iran war ?",
-      "2026-03-07 | newsghana.com.gh | Venezuela Records World Highest Inflation at 475 Percent in 2025"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
-      "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame .",
-      "2026-03-08 | livemint.com | Gold rate today ₹19 , 000 away from record high . Opportunity to buy amid US - Iran war ?"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
