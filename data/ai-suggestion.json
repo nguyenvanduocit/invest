@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T03:53:42.552Z",
+  "generatedAt": "2026-03-08T04:33:53.836Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,66 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC 185 triệu đồng/lượng đang ở đỉnh lịch sử 5 năm (percentile 99%) với đà tăng 30 ngày mạnh 4.3%, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi VIX tăng vọt 27.48% và lợi suất thực USD hồi phục. Nên chờ đợi hồi phục về vùng hỗ trợ kỹ thuật hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng bị hãm lại sau đợt điều chỉnh -2.02% tuần qua. Vĩ mô ủng hộ dài hạn nhờ căng thẳng địa chính trị và VIX tăng, nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn là rất lớn khi lợi suất thực USD tăng vọt 4.6% trong 5 ngày.",
     "reasons": [
-      "Giá SJC ở mức cực cao 185 triệu đồng/lượng, đứng tại percentile 99% trong 5 năm qua, rủi ro mua đỉp cao khi giá đã tăng 4.3% trong 30 ngày qua.",
-      "Động lượng tăng yếu đi: giá thế giới giảm -2.02% trong 7 ngày gần đây bất chấp xu hướng tăng 30 ngày trước đó.",
-      "VIX tăng mạnh 27.48% trong 5 ngày (lên mức 23.75) cho thấy lo ngại thị trường, thường đi kèm biến động hai chiều lớn và bán tháo tài sản rủi ro.",
-      "Lợi suất thực USD 10 năm tăng 4.6% trong 5 ngày (lên 1.82%) tạo áp lực ngược lên giá vàng thế giới, hạn chế đà tăng tiếp theo."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá gần vùng kháng cự tâm lý và lịch sử, tiềm năng tăng thêm hạn chế so với rủi ro giảm.",
+      "Động lượng tăng yếu đi: giá SJC hiện tại (185 triệu) thấp hơn đỉnh tuần trước (190.9 triệu) và lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày qua, tạo áp lực bán vàng.",
+      "Tín hiệu vĩ mô hỗ trợ: VIX tăng 27.48% và căng thẳng Mỹ-Iran (nguồn geopoliticalHeadlines) tạo nền tảng an toàn, nhưng chưa đủ mạnh để đẩy giá phá đỉnh ngay lập tức khi USD đang chịu áp lực từ báo cáo việc làm yếu."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh lịch sử nếu dòng tiền đảo chiều, đặc biệt khi biến động ngày đang ở 1.42%.",
-      "Thông tin địa chính trị (Iran) có thể gây sốc giá hai chiều, bắn stoploss nhà đầu tư đòn bẩy.",
-      "Dữ liệu vĩ mô có độ trễ 2-3 ngày so với giá vàng thực tế, có thể bỏ lỡ điểm đảo chiều nhạy cảm."
+      "Rủi ro chốt lời ngắn hạn cao khi giá đang ở vùng đỉnh 5 năm và vừa trải qua biến động 1.42%/ngày.",
+      "Lợi suất thực USD tăng vọt (up 4.6% 5 ngày) có thể khiến các quỹ vàng ETF bán ròng, kéo giá thế giới giảm thêm.",
+      "Premium SJC (13.72%) có thể co hẹp nếu giá thế giới giảm sâu hơn, làm giảm giá vàng trong nước nhanh hơn giá thế giới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_latest",
-        "value": 185000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Percentile 5Y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "change_30d_pct",
-        "value": 4.3,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_7d_pct",
+        "key": "SJC Change 7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_change_5d",
+        "key": "US Real Yield 10Y Change 5d",
+        "value": 4.6,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Change 5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.82,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "SJC Peak vs Latest (30d)",
+        "value": 190.9,
+        "unit": "million VND/tael",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "premium_pct",
+        "key": "Current Premium",
         "value": 13.72,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 1.42,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T03:53:14.607Z",
+    "latestTimestamp": "2026-03-08T04:33:26.983Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162684613.531449,
+    "intlVndPerTael": 162684554.69985774,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472091,
-    "ma30VndPerTael": 160507162,
+    "ma7VndPerTael": 162472083,
+    "ma30VndPerTael": 160507160,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,8 +77,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T03:53:25.432Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-08T04:33:37.965Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -192,6 +179,7 @@
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
     "geopoliticalHeadlines": [
+      "2026-03-08 | kunm.org | Trump warns Iran  will be hit very hard  as war enters its second week",
       "2026-03-08 | prowrestling.net | WXW  16 Carat Gold  night two results : Vetter review of Elijah Blum vs . 1 Called Manders for the WXW Title , The Grind vs . Planet Gojirah for the WXW Tag Titles , quarterfinal tournament matches"
     ],
     "countryActionHeadlines": [
@@ -203,8 +191,7 @@
     "dollarYieldHeadlines": [
       "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
       "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame .",
-      "2026-03-08 | livemint.com | Gold rate today ₹19 , 000 away from record high . Opportunity to buy amid US - Iran war ?",
-      "2026-03-08 | finance.yahoo.com | Gold Slips as Dollar Strength and War - Driven Oil Surge Pressure Prices"
+      "2026-03-08 | livemint.com | Gold rate today ₹19 , 000 away from record high . Opportunity to buy amid US - Iran war ?"
     ]
   }
 }
