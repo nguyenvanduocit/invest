@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T10:05:44.232Z",
+  "generatedAt": "2026-03-08T11:05:29.257Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99 percentile với đợt điều chỉnh -2.02% trong 7 ngày qua; thanh khoản vĩ mô đang thắt chặt khi lợi suất thực USD tăng mạnh +4.6% và VIX nhảy vọt 27.48%, nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng bị hãm lại bởi USD mạnh và lợi suất thực tăng; nhà đầu tư không nên mua đuổi mà chờ tín hiệu hồi phục kỹ thuật hoặc điều chỉnh về mức hỗ trợ gần MA7.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở mức cực cao, vượt xa MA30 (160.5 triệu VND/lượng) và nằm ở percentile 99% trong 5 năm, rủi ro điều chỉnh sâu hiện hữu.",
-      "Áp lực bán từ vĩ mô tăng khi lợi suất thực US 10Y nhảy mạnh +4.6% (lên 1.82%) và lợi suất trái phiếu 2Y tăng +4.39% trong 5 ngày, làm tăng chi phí cơ hội nắm giữ vàng.",
-      "Động lượng ngắn hạn đã suy yếu: giá giảm -2.02% trong 7 ngày qua bất chấp giá thế giới vẫn tăng +4.3% trong 30 ngày, cho thấy áp lực chốt lời tại vùng đỉnh.",
-      "Biến động thị trường tăng cao với VIX tăng 27.48% lên mức 23.75, thanh khoản có thể bị ảnh hưởng trong ngắn hạn."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh rất cao khi giá đã tăng 4.3% trong 30 ngày.",
+      "Áp lực bán từ vĩ mô tăng khi lợi suất thực US 10 năm tăng mạnh 4.6% trong 5 ngày và VIX nhảy 27.5%, cho thấy dòng tiền đang dịch chuyển sang USD an toàn thay vì vàng.",
+      "Động lượng tăng chững lại: giá thế giới giảm -2.1% trong 5 ngày gần nhất và giá SJC điều chỉnh -2.02% trong 7 ngày, phá vỡ đà tăng liên tục trước đó.",
+      "Premium 13.71% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (12%-17%), không có tín hiệu bóp méu giá cực đoan từ thị trường nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn về mức MA7 (162.47 triệu VND/lượng) nếu thanh khoản tiếp tục thắt chặt.",
-      "Premium 13.71% có thể giãn rộng thêm nếu giá thế giới giảm nhanh hơn giá Việt Nam.",
-      "Thiếu dữ liệu Gold Spot XAUUSD trực tiếp làm giảm độ tin cậy trong việc xác định xu hướng giá thế giới tức thời."
+      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 5,000 USD/oz và USD tiếp tục mạnh.",
+      "Thanh khoản có thể giảm nếu nhà đầu tư tháo chạy khỏi tài sản rủi ro khi VIX duy trì cao.",
+      "Dữ liệu sự kiện vĩ mô (ECB, Fed speeches) không có tín hiệu rõ ràng về nới lỏng tiền tệ, giảm động lực tăng giá vàng."
     ],
     "evidence": [
       {
-        "key": "sjc_price_latest",
-        "value": 185000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d_pct",
+        "key": "SJC Change 7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma30_vnd",
-        "value": 160507298,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Intl Gold Change 5d",
+        "value": -2.1,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change5d",
+        "key": "US Real Yield 10Y Change 5d",
         "value": 4.6,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "vix_change5d",
+        "key": "VIX Change 5d",
         "value": 27.48,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_pct",
+        "key": "Current Premium",
         "value": 13.71,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "volatility_daily",
-        "value": 1.42,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Gold Spot Price",
+        "value": 5153.27,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T10:05:18.942Z",
+    "latestTimestamp": "2026-03-08T11:05:06.590Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162688709.4057061,
+    "intlVndPerTael": 162688195.02254224,
     "premiumPct": 13.71,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472676,
-    "ma30VndPerTael": 160507298,
+    "ma7VndPerTael": 162472603,
+    "ma30VndPerTael": 160507281,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T10:05:27.524Z",
-    "healthy": false,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "fetchedAt": "2026-03-08T11:05:14.817Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": null,
+        "value": 5153.265,
         "unit": "USD/oz",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-06",
+        "change1dPct": 1.42,
+        "change5dPct": -2.1,
+        "change20dPct": 4.04,
         "relationToGold": "context"
       },
       {
@@ -194,16 +186,18 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-08 | carrollspaper.com | Sri Lanka hospital releases 22 rescued from torpedoed Iranian vessel",
-      "2026-03-08 | cointelegraph.com | Bitcoin Sell - off To $65K Likely As Traders Run From Global Risks"
+      "2026-03-08 | latimes.com | Attempted suicides , fights , pain : 911 calls reveal misery at ICE largest detention facility",
+      "2026-03-08 | rferl.org | Wladimir Van Wilgenburg : Kurdish Groups Need US  Guarantee Before Iran Offensive",
+      "2026-03-08 | arkansasonline.com | 7 Ukrainians held by Hungary freed | The Arkansas Democrat - Gazette - Arkansa Best News Source"
     ],
     "countryActionHeadlines": [
-      "2026-03-08 | cointelegraph.com | Bitcoin Sell - off To $65K Likely As Traders Run From Global Risks",
-      "2026-03-08 | fool.com | What Target New CEO Michael Fiddelke Is Overestimating About American Consumers Right Now",
-      "2026-03-08 | insidermonkey.com | 9 Stocks on Jim Cramer Game Plan : Oracle , AeroVironment , and More"
+      "2026-03-08 | fool.com | 2 Warren Buffett Stocks to Buy Hand Over Fist This Month , and 1 to Avoid",
+      "2026-03-08 | thenationonlineng.net | Fed Govt reviews options as Iran War impact grows - The Nation Newspaper",
+      "2026-03-08 | capitalfm.co.ke | Kenya forex reserves Rise by Sh266bn after Eurobond boost"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-08 | dnews.com | Battling the national debt"
+      "2026-03-08 | seekingalpha.com | Gold posts first weekly decline since January , with dollar rising by most in a year ( GLD : NYSEARCA )",
+      "2026-03-08 | finance.yahoo.com | Gold is beating stocks . Here how to add it to your retirement account ."
     ]
   }
 }
