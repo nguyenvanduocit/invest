@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T11:05:29.257Z",
+  "generatedAt": "2026-03-08T12:07:40.834Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng bị hãm lại bởi USD mạnh và lợi suất thực tăng; nhà đầu tư không nên mua đuổi mà chờ tín hiệu hồi phục kỹ thuật hoặc điều chỉnh về mức hỗ trợ gần MA7.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 99th percentile với đợt điều chỉnh -2.02% trong 7 ngày qua; thanh khoản thị trường căng thẳng do VIX tăng 27.48% và lợi suất thực USD nhảy 4.6%, nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh rất cao khi giá đã tăng 4.3% trong 30 ngày.",
-      "Áp lực bán từ vĩ mô tăng khi lợi suất thực US 10 năm tăng mạnh 4.6% trong 5 ngày và VIX nhảy 27.5%, cho thấy dòng tiền đang dịch chuyển sang USD an toàn thay vì vàng.",
-      "Động lượng tăng chững lại: giá thế giới giảm -2.1% trong 5 ngày gần nhất và giá SJC điều chỉnh -2.02% trong 7 ngày, phá vỡ đà tăng liên tục trước đó.",
-      "Premium 13.71% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (12%-17%), không có tín hiệu bóp méu giá cực đoan từ thị trường nội địa."
+      "Giá SJC 185 triệu VND/lượng đang ở mức cực cao percentile 5 năm 99%, rủi ro mua đỉnh ngắn hạn đáng kể sau đợt tăng 30 ngày +4.3%.",
+      "Động lực vĩ mô đảo chiều: Lợi suất thực 10Y tăng mạnh 4.6% lên 1.82% và VIX nhảy 27.48% lên 23.75 điểm gây áp lực bán rủi ro.",
+      "Premium 13.71% đang nén về mức trung bình chuỗi 30 ngày (11.38%-17.86%), không có cơ hội arbitrage đặc biệt để biện minh cho việc MUA lúc này.",
+      "Xu hướng kỹ thuật yếu đi: SJC giảm -2.02% trong 7 ngày qua bất chấp giá thế giới vẫn tăng +4.04% trong 20 ngày, cho thấy áp lực bán nội địa."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 5,000 USD/oz và USD tiếp tục mạnh.",
-      "Thanh khoản có thể giảm nếu nhà đầu tư tháo chạy khỏi tài sản rủi ro khi VIX duy trì cao.",
-      "Dữ liệu sự kiện vĩ mô (ECB, Fed speeches) không có tín hiệu rõ ràng về nới lỏng tiền tệ, giảm động lực tăng giá vàng."
+      "Rủi ro điều chỉnh sâu hơn nếu lợi suất thực USD tiếp tục tăng hoặc Fed phát ngắn hawkish.",
+      "Thanh khoản thấp và biến động cao (volatility 1.42%) có thể gây trượt giá khi thực thi lệnh lớn.",
+      "Dữ liệu sự kiện vĩ mô không có tín hiệu rõ ràng từ Fed/địa chính trị, độ tin cậy dự báo giảm."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
+        "key": "sjc_change_7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Intl Gold Change 5d",
-        "value": -2.1,
+        "key": "sjc_change_30d",
+        "value": 4.3,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 4.6,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 5d",
-        "value": 27.48,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Current Premium",
+        "key": "sjc_premium_current",
         "value": 13.71,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Price",
-        "value": 5153.27,
-        "unit": "USD/oz",
+        "key": "us_real_yield_10y_change_5d",
+        "value": 4.6,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change_5d",
+        "value": 27.48,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_level",
+        "value": 23.75,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "intl_gold_change_20d",
+        "value": 4.04,
+        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T11:05:06.590Z",
+    "latestTimestamp": "2026-03-08T12:07:17.722Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162688195.02254224,
+    "intlVndPerTael": 162688856.9565953,
     "premiumPct": 13.71,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472603,
-    "ma30VndPerTael": 160507281,
+    "ma7VndPerTael": 162472697,
+    "ma30VndPerTael": 160507303,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T11:05:14.817Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-08T12:07:23.297Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -186,9 +192,7 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-08 | latimes.com | Attempted suicides , fights , pain : 911 calls reveal misery at ICE largest detention facility",
-      "2026-03-08 | rferl.org | Wladimir Van Wilgenburg : Kurdish Groups Need US  Guarantee Before Iran Offensive",
-      "2026-03-08 | arkansasonline.com | 7 Ukrainians held by Hungary freed | The Arkansas Democrat - Gazette - Arkansa Best News Source"
+      "2026-03-08 | al-monitor.com | The weight of war : Erdal Duman sculptures probe politics of violence - AL - Monitor : The Middle Eastʼs leading independent news source since 2012"
     ],
     "countryActionHeadlines": [
       "2026-03-08 | fool.com | 2 Warren Buffett Stocks to Buy Hand Over Fist This Month , and 1 to Avoid",
@@ -196,8 +200,7 @@
       "2026-03-08 | capitalfm.co.ke | Kenya forex reserves Rise by Sh266bn after Eurobond boost"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-08 | seekingalpha.com | Gold posts first weekly decline since January , with dollar rising by most in a year ( GLD : NYSEARCA )",
-      "2026-03-08 | finance.yahoo.com | Gold is beating stocks . Here how to add it to your retirement account ."
+      "2026-03-08 | gdnonline.com | International Business : Investor complacency or simply looking through the noise ?"
     ]
   }
 }

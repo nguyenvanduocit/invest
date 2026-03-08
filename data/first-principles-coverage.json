@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-08T11:05:14.900Z",
+  "checkedAt": "2026-03-08T12:07:23.377Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-08T11:05:14.817Z",
+  "dataFetchedAt": "2026-03-08T12:07:23.297Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -14,13 +14,16 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 3,
+    "geopoliticalCount": 2,
     "countryActionCount": 5,
-    "dollarYieldCount": 4,
+    "dollarYieldCount": 1,
     "sourceFailures": [],
-    "healthy": true
+    "healthy": false
   },
-  "hardFailures": [],
+  "hardFailures": [
+    "Not enough geopolitical events (2/3)",
+    "Not enough dollar/yield events (1/3)"
+  ],
   "warnings": [],
-  "canProceedToIntegration": true
+  "canProceedToIntegration": false
 }
