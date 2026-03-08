@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T05:20:28.724Z",
+  "generatedAt": "2026-03-08T06:13:43.639Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,67 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở vùng cực cao percentile 99% với đà tăng mạnh 30 ngày qua, nhưng động lượng ngắn hạn đã yếu đi và VIX nhảy vọt báo hiệu biến động. Nên chờ đợi hồi chỉnh về mức hỗ trợ kỹ thuật tốt hơn trước khi vào lệnh mới.",
+    "thesis": "Giá SJC 185 triệu/lượng đang ở đỉnh 5 năm (percentile 99%) với đà tăng 30 ngày mạnh 4.3%, nhưng áp lực điều chỉnh ngắn hạn đang xuất hiện khi VIX nhảy vọt 27.48% và lợi suất thực USD tăng nhanh. Nên chờ xác nhận xu hướng thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, rủi ro mua đỉnh ngắn hạn cao.",
-      "Động lượng tăng yếu đi: giá hiện thấp hơn đỉnh 30 ngày (190.9 triệu VND) và giảm 2.02% trong 7 ngày qua.",
-      "VIX tăng mạnh 27.48% trong 5 ngày lên mức 23.75, tín hiệu thị trường tài chính căng thẳng có thể gây chốt lời vàng.",
-      "Lợi suất thực 10Y tăng 4.6% trong 5 ngày lên 1.82%, tạo áp lực ngược lên giá vàng thế giới."
+      "Giá SJC ở vùng cực kỳ cao percentile 99% (5 năm), rủi ro mua đỉnh ngắn hạn lớn khi giá đã tăng 4.3% trong 30 ngày qua.",
+      "Động lượng tăng bị suy yếu: giá hiện tại 185 triệu VND/lượng thấp hơn đỉnh tạm 190.9 triệu (02/03), đồng thời change7dPct âm -2.02%.",
+      "Lợi suất thực USD 10Y tăng mạnh 4.6% (5 ngày) lên 1.82%, tạo áp lực giảm lên giá vàng thế giới khi chi phí cơ hội nắm giữ tăng.",
+      "VIX tăng vọt 27.48% (5 ngày) lên 23.75 chỉ thị bất ổn thị trường, thường đi kèm biến động hai chiều mạnh而非trend đơn hướng."
     ],
     "risks": [
-      "Rủi ro chốt lời sâu nếu biến động VIX tiếp tục leo thang.",
-      "Lợi suất thực Mỹ tiếp tục tăng sẽ làm giảm hấp dẫn của vàng.",
-      "Premium SJC có thể co hẹp nếu giá thế giới điều chỉnh mạnh."
+      "Chiến tranh Iran - Trung Đông leo thang có thể đẩy giá vàng sốc tăng bất chấp kỹ thuật.",
+      "Dữ liệu việc làm Mỹ yếu (Payroll) làm tăng kỳ vọng cắt giảm lãi suất Fed, có thể hồi phục giá vàng nhanh.",
+      "Premium SJC co giãn mạnh từ 11.38% đến 16.99% trong 30 ngày, thanh khoản thấp có thể gây trượt giá mua/bán."
     ],
     "evidence": [
       {
         "key": "SJC Percentile 5Y",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 4.3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7D",
+        "key": "SJC Change 7d",
         "value": -2.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Peak 30D",
-        "value": 190900000,
-        "unit": "VND/lượng",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "VIX Change 5D",
+        "key": "VIX Change 5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5D",
+        "key": "US Real Yield 10Y Change 5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 13.72,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Premium Range 30d",
+        "value": 5.61,
+        "unit": "% (11.38-16.99)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Gold Spot XAUUSD",
+        "value": 5153.265,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T05:20:02.653Z",
+    "latestTimestamp": "2026-03-08T06:13:19.148Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162685888.00618708,
+    "intlVndPerTael": 162684737.8013876,
     "premiumPct": 13.72,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472273,
-    "ma30VndPerTael": 160507204,
+    "ma7VndPerTael": 162472109,
+    "ma30VndPerTael": 160507166,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -78,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T05:20:17.262Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-08T06:13:26.618Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -179,8 +185,22 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve",
       "2026-03-03 | ECB Press / Speeches | Philip R. Lane: Interview with Financial Times"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-08 | sharecast.com | Weekly review - Sharecast . com",
+      "2026-03-08 | budapesttimes.hu | We must win the fight to reopen the oil pipeline , PM says",
+      "2026-03-08 | dailymail.co.uk | Aussies lose their minds over huge change in every suburb as Middle East crisis pushes up prices of a very common essential nobody can live without"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-08 | smh.com.au | The war in Iran has pushed up oil prices , which will fuel inflation",
+      "2026-03-08 | theage.com.au | The war in Iran has pushed up oil prices , which will fuel inflation",
+      "2026-03-08 | dawn.com | Venezuela suffers world highest inflation at 475 per cent - Newspaper",
+      "2026-03-08 | finance.yahoo.com | Gold Trims Weekly Loss as US Jobs Data Raises Fed Rate Cut Bets",
+      "2026-03-08 | finance.yahoo.com | Dollar Pressured by a Weak US Payroll Report",
+      "2026-03-08 | finance.yahoo.com | Gold prices post worst week since January . The dollar gets part of the blame ."
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-08 | kashmirreader.com | Longer Gulf conflict may trigger rise in inflation ; India a notable exception : SBI report",
+      "2026-03-08 | finance.yahoo.com | Gold Trims Weekly Loss as US Jobs Data Raises Fed Rate Cut Bets"
+    ]
   }
 }
