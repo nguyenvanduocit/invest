@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T16:05:44.855Z",
+  "generatedAt": "2026-03-08T17:06:36.292Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC 185 triệu VND/lượng đang ở vùng cực hiếm (percentile 99% 5 năm) sau đà tăng 4.3%/tháng, nhưng áp lực điều chỉnh ngắn hạn đang rõ rệt khi VIX nhảy vọt 27.48% và lợi suất thực USD tăng nhanh 4.6% trong 5 ngày, tạo tín hiệu trái chiều cần thời gian quan sát.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chững lại, trong khi VIX nhảy vọt 27.48% báo hiệu biến động cao cần thận trọng.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cho thấy giá đã chạy đến vùng bão hòa kỹ thuật ngắn hạn.",
-      "Động lượng tăng 30 ngày (4.3%) vẫn dương nhưng giảm 2.02% trong 7 ngày gần nhất báo hiệu sự chững lại cần theo dõi.",
-      "VIX tăng vọt 27.48% tuần qua lên 23.75 điểm phản ánh lo ngại rủi ro thị trường, thường gây áp lực bán tháo tài sản để gom USD mặt.",
-      "Lợi suất thực 10 năm USD tăng mạnh 4.6% trong 5 ngày lên 1.82% tạo áp lực giảm lên giá vàng vì tăng chi phí cơ hội nắm giữ."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% 5 năm (percentile 99), rủi ro mua đỉp cao khi không có động lực tăng mới ngay lập tức.",
+      "Đà tăng suy yếu: giá thế giới giảm -2.1% trong 5 ngày gần nhất (change5dPct) bất chấp lợi suất thực Mỹ giảm -6.19% (change20dPct) - dấu hiệu phân kỳ tiêu cực ngắn hạn.",
+      "VIX tăng vọt 27.48% (change5dPct) lên 23.75 điểm cho thấy tâm lý thị trường lo ngại, có thể gây áp lực chốt lời nhanh trên thị trường vàng Việt Nam.",
+      "Premium 13.71% đang ở mức hợp lý so với trung bình 30 ngày (dao động 11.38%-17.86%), không quá cao để kích cầu mua mạnh cũng không thấp để mua giá hời."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu từ vùng đỉnh 5 năm nếu dòng tiền rút khỏi vàng khi thị trường ổn định và lợi suất thực USD tiếp tục tăng.",
-      "Biên độ dao động rộng 1.42%/ngày kết hợp với VIX cao 23.75 có thể gây biến động giá bất ngờ, khó nhập liệu tốt.",
-      "Premium SJC 13.72% có thể giãn rộng bất thường nếu giá thế giới điều chỉnh nhanh hơn giá trong nước."
+      "Căng thẳng Trung Đông (tin tức Trump và Iran) có thể đẩy giá bật tăng đột ngột bất chấp kỹ thuật.",
+      "Lạm phát kỳ vọng Mỹ tăng 4.44% (change5dPct) có thể khiến Fed giữ lãi suất cao lâu hơn, gây áp lực lên giá vàng thế giới.",
+      "Biến động ngày 1.42% kết hợp VIX cao có thể tạo các đợt điều chỉnh sâu 3-5% trong ngắn hạn."
     ],
     "evidence": [
       {
@@ -27,16 +27,10 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.3,
+        "key": "intl_gold_change_5d",
+        "value": -2.1,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_change_7d",
-        "value": -2.02,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
         "key": "vix_change_5d",
@@ -45,41 +39,47 @@
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": 4.6,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_current",
+        "key": "vix_level",
         "value": 23.75,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "daily_volatility",
-        "value": 1.42,
-        "unit": "%/day",
+        "key": "us_real_yield_change_20d",
+        "value": -6.19,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_current",
+        "value": 13.71,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_current",
-        "value": 13.72,
+        "key": "volatility_daily",
+        "value": 1.42,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_price_latest",
+        "value": 185000000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T16:05:04.214Z",
+    "latestTimestamp": "2026-03-08T17:06:10.312Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162685223.86988193,
-    "premiumPct": 13.72,
+    "intlVndPerTael": 162688683.60789606,
+    "premiumPct": 13.71,
     "change7dPct": -2.02,
     "change30dPct": 4.3,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162472178,
-    "ma30VndPerTael": 160507182,
+    "ma7VndPerTael": 162472673,
+    "ma30VndPerTael": 160507298,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T16:05:11.727Z",
+    "fetchedAt": "2026-03-08T17:06:15.379Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
@@ -192,12 +192,15 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-08 | globalsecurity.org | Exercise Cobra Gold ends for Washington Guard , Thailand Partners"
+      "2026-03-08 | nbcnews.com | Trump wages Iran war from his own Situation Room at Mar - a - Lago"
     ],
     "countryActionHeadlines": [
+      "2026-03-08 | manilatimes.net | PH reserves rise to new record high | The Manila Times",
+      "2026-03-08 | newsx.com | MCX Gold And Silver Price Forecast : Precious Metals Eye Volatility Amid Fed Rate Cut Bets , Middle East Tensions - Check Details",
       "2026-03-08 | siasat.com | Gold poised for volatile week as Middle East tensions roil markets : Analysts"
     ],
     "dollarYieldHeadlines": [
+      "2026-03-08 | newsx.com | MCX Gold And Silver Price Forecast : Precious Metals Eye Volatility Amid Fed Rate Cut Bets , Middle East Tensions - Check Details",
       "2026-03-08 | siasat.com | Gold poised for volatile week as Middle East tensions roil markets : Analysts",
       "2026-03-08 | timesofindia.indiatimes.com | Gold braces for volatile week as Middle East tensions escalate : Analysts | India Business News"
     ]
