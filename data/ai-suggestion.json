@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T19:07:11.491Z",
+  "generatedAt": "2026-03-08T20:05:21.594Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chững lại sau đợt điều chỉnh 7 ngày; rủi ro mua đuổi cao hơn cơ hội ngắn hạn khi thanh khoản vĩ mô đang thắt chặt.",
+    "thesis": "Giá SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng bị hãm lại bởi lợi suất thực USD tăng mạnh, tạo ra rủi ro điều chỉnh ngắn hạn mặc dù xu hướng dài hạn vẫn tích cực.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, kết hợp giảm 2.06% trong 7 ngày gần nhất cho thấy áp lực chốt lời ngắn hạn đang hiện hữu.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh 4.6% trong 5 ngày và VIX nhảy 27.48% cho thấy thanh khoản dollar đang thắt chặt, áp lực bán tài sản rủi ro tăng.",
-      "Vùng hỗ trợ kỹ thuật gần nhất là MA7 (162.46 triệu VND/lượng - quy đổi thế giới), giá hiện tại đã vượt xa và cần thời gian củng cố hoặc điều chỉnh về vùng này.",
-      "Premium 13.76% đang ở mức hợp lý so với trung bình 30 ngày (12.5%-17.86%), không có tín hiệu bất thường về cạn kiệt nguồn cung hay thao túng thị trường."
+      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm và cao hơn MA30 (160.7 triệu VND/lượng) tới 15%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Lợi suất thực USD 10 năm tăng mạnh 4.6% trong 5 ngày và 1.82% hiện tại tạo áp lực giảm lên giá vàng thế giới, giải thích phần lớn đà giảm 3% của vàng trong 7 ngày qua.",
+      "VIX tăng 27.48% trong 5 ngày lên mức 23.75 cho thấy biến động thị trường cao nhưng chưa đủ để kích hoạt nhu cầu trú ẩn an toàn mạnh mẽ."
     ],
     "risks": [
-      "Lạm phát kỳ vọng (Breakeven 10Y) tăng 4.44% trong 5 ngày có thể thúc đẩy dòng tiền vào vàng bất chấp tín hiệu kỹ thuật tiêu cực.",
-      "Căng thẳng Trung Đông leo thang (tin tức Iran conflict) có thể tạo các đợt pump giá bất ngờ, gây thiệt hại cho vị thế bán khống hoặc chờ quá lâu.",
-      "Dữ liệu chính sách Fed/ECB trong input không có phát ngôn trực tiếp về lãi suất, thiếu thông tin định hướng dài hạn từ ngân hàng trung ương."
+      "Rủi ro điều chỉnh sâu nếu lợi suất thực USD tiếp tục tăng, kéo giá thế giới về dưới vùng hỗ trợ 5000 USD/oz.",
+      "Premium SJC 13.72% đang ổn định nhưng có thể co lại nếu giá thế giới giảm nhanh, làm giảm hiệu quả phòng ngừa của vàng Việt Nam.",
+      "Thiếu tín hiệu địa chính trị rõ ràng trong dữ liệu input, giảm niềm tin vào khả năng duy trì đà tăng giá."
     ],
     "evidence": [
       {
-        "key": "SJC_price_percentile_5y",
+        "key": "SJC Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC_change_7d",
-        "value": -2.06,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US_real_yield_10y_change_5d",
+        "key": "SJC vs MA30",
+        "value": 15.1,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX_change_5d",
+        "key": "SJC Change 7d",
+        "value": -3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Change 5d",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC_current_premium",
-        "value": 13.76,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7_world_price",
-        "value": 162463491,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US_breakeven_inflation_change_5d",
-        "value": 4.44,
-        "unit": "%",
+        "key": "VIX Level",
+        "value": 23.75,
+        "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC",
+        "value": 13.72,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T19:06:50.140Z",
+    "latestTimestamp": "2026-03-08T20:05:04.434Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 162624410.2517923,
-    "premiumPct": 13.76,
-    "change7dPct": -2.06,
-    "change30dPct": 4.26,
-    "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162463491,
-    "ma30VndPerTael": 160505155,
+    "intlVndPerTael": 162684085.9347726,
+    "premiumPct": 13.72,
+    "change7dPct": -3,
+    "change30dPct": 4.27,
+    "volatilityDailyPct": 1.4,
+    "ma7VndPerTael": 161753553,
+    "ma30VndPerTael": 160729447,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T19:06:56.606Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-08T20:05:08.158Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,18 +184,8 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-08 | dungogchronicle.com.au | Donald Trump : US leader Iran conflict  glee  speaks volumes | Dungog Chronicle"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-08 | finance.yahoo.com | War escalation , jobs report fallout , and Oracle earnings : What to watch this week",
-      "2026-03-08 | taipeitimes.com | War in the Middle East strains world economy",
-      "2026-03-08 | manilatimes.net | PH reserves rise to new record high | The Manila Times",
-      "2026-03-08 | newsx.com | MCX Gold And Silver Price Forecast : Precious Metals Eye Volatility Amid Fed Rate Cut Bets , Middle East Tensions - Check Details"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-08 | finance.yahoo.com | War escalation , jobs report fallout , and Oracle earnings : What to watch this week",
-      "2026-03-08 | newsx.com | MCX Gold And Silver Price Forecast : Precious Metals Eye Volatility Amid Fed Rate Cut Bets , Middle East Tensions - Check Details"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
