@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T17:18:59.111Z",
+  "generatedAt": "2026-03-09T18:17:04.068Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với biến động cao và rủi ro vĩ mô tăng, đòi hỏi nhà đầu tư kiên nhẫn chờ tín hiệu ổn định trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử với biến động tăng cao và tín hiệu vĩ mô trái chiều; nhà đầu tư nên chờ đợi sự ổn định của thị trường trước khi ra quyết định thay vì mua đuổi hoặc bán tháo trong giai đoạn bất định này.",
     "reasons": [
-      "Giá SJC 184.1 triệu VND/lượng đang thấp hơn đỉnh 30 ngày (190.9 triệu) và giảm -4.32% sau 7 ngày, cho thấy động lượng tăng đã suy yếu tạm thời.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh +4.6% trong 5 ngày lên mức 1.82%, tạo áp lực giảm lên giá vàng thế giới (đã giảm -4.15% trong 5 ngày).",
-      "VIX tăng vọt +48.49% trong 5 ngày lên 29.49 cho thấy thị trường tài chính căng thẳng, thường đi kèm biên độ dao động lớn và rủi ro thanh khoản.",
-      "Premium 14.49% nằm trong biên độ dao động 30 ngày (11.15% - 17.62%), không có tín hiệu bất thường cực đoan về cầu cung nội địa."
+      "Giá SJC 184.1 triệu VND/lượng giảm -4.38% sau 7 ngày và nằm dưới MA7 (161.76 triệu VND/lượng), cho thấy động lượng ngắn hạn đã suy yếu đáng kể sau đợt tăng nóng.",
+      "VIX tăng vọt +48.49% trong 5 ngày lên mức 29.49 chỉ số, phản ánh sự hoảng loạn thị trường thay vì nhu cầu trú ẩn an toàn có chọn lọc vào vàng.",
+      "Lợi suất thực Mỹ 10 năm tăng mạnh +4.6% lên 1.82% và lạm phát kỳ vọng tăng +4.44%, tạo áp lực bán lên vàng khi chi phí cơ hội nắm giữ tăng cao.",
+      "Giá SJC đang ở phân vị 99% trong 5 năm (percentile5y), rủi ro mua đỉnh là rất lớn khi thị trường đang trong giai đoạn điều chỉnh."
     ],
     "risks": [
-      "Biến động ngày cao 1.45% kết hợp VIX tăng vọt có thể gây sụt giảm ngắn hạn bất ngờ.",
-      "Dữ liệu vĩ mô thiếu lãi suất Fed Funds và không có tiêu đề địa chính trị cụ thể, giảm độ tin cậy dự báo xu hướng.",
-      "Giá SJC đang ở phân vị 99% trong 5 năm (percentile 5y), rủi ro mua đỉnh nếu thị trường điều chỉnh sâu hơn."
+      "Biến động ngày ở mức 1.45% kết hợp với VIX cao có thể gây thanh lý cưỡng bức nếu đòn bẩy tài chính lớn.",
+      "Xung đột Iran-Trung Đông có thể gây sốc giá hai chiều khó lường, bất chấp xu hướng điều chỉnh hiện tại.",
+      "Chênh lệch premium 14.56% có thể co hẹp nhanh nếu giá thế giới tiếp tục giảm, làm giảm giá trị tài sản nắm giữ."
     ],
     "evidence": [
       {
@@ -27,53 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới quy đổi",
-        "value": 160794801,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 7 ngày SJC",
-        "value": -4.32,
+        "key": "Thay đổi 7 ngày",
+        "value": -4.38,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Đỉnh giá 30 ngày SJC",
-        "value": 190900000,
+        "key": "MA7 giá SJC",
+        "value": 161757489,
         "unit": "VND/lượng",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 29.49,
-        "unit": "index",
+        "key": "Phân vị 5 năm",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX 5 ngày",
+        "value": 48.49,
+        "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực US 10Y (5d)",
+        "key": "Lợi suất thực Mỹ 10N 5 ngày",
         "value": 4.6,
         "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC",
-        "value": 14.49,
+        "key": "Biến động ngày",
+        "value": 1.45,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T17:18:18.056Z",
+    "latestTimestamp": "2026-03-09T18:16:36.720Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 160794800.81886405,
-    "premiumPct": 14.49,
-    "change7dPct": -4.32,
-    "change30dPct": 2.85,
+    "intlVndPerTael": 160698433.65942517,
+    "premiumPct": 14.56,
+    "change7dPct": -4.38,
+    "change30dPct": 2.79,
     "volatilityDailyPct": 1.45,
-    "ma7VndPerTael": 161770136,
-    "ma30VndPerTael": 160987685,
+    "ma7VndPerTael": 161757489,
+    "ma30VndPerTael": 160984734,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T17:18:39.203Z",
+    "fetchedAt": "2026-03-09T18:16:44.122Z",
     "healthy": false,
-    "missingFactors": [
-      "US Effective Fed Funds Rate"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5101.23,
+        "value": 5097.35,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -1.01,
-        "change5dPct": -4.15,
-        "change20dPct": 0.84,
+        "change1dPct": -1.09,
+        "change5dPct": -4.22,
+        "change20dPct": 0.77,
         "relationToGold": "context"
       },
       {
@@ -137,12 +135,12 @@
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-05",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
@@ -187,8 +185,29 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-09 | firstpost.com | Geopolitics and Dalal Street : Five lessons for retail investors in times of war",
+      "2026-03-09 | sun-sentinel.com | These lawmakers were shaped by combat after 9 / 11 , grapple with new war",
+      "2026-03-09 | wimbledonguardian.co.uk | Hungarian leader Orban urges European Union to lift Russian energy sanctions",
+      "2026-03-09 | echo-news.co.uk | Hungarian leader Orban urges European Union to lift Russian energy sanctions",
+      "2026-03-09 | mining.com | Gold price fades on inflation concerns , silver price rebounds",
+      "2026-03-09 | stourbridgenews.co.uk | Hungarian leader Orban urges European Union to lift Russian energy sanctions"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-09 | firstpost.com | Geopolitics and Dalal Street : Five lessons for retail investors in times of war",
+      "2026-03-09 | mining.com | Gold price fades on inflation concerns , silver price rebounds",
+      "2026-03-09 | sun-sentinel.com | The new Miami gold rush and the hunt for exclusive real estate",
+      "2026-03-09 | azerbaijannews.net | The Iran war has triggered a puzzling market trend",
+      "2026-03-09 | sundayworld.co.za | Warning signs for SA economy if Middle East conflict persists",
+      "2026-03-09 | heraldglobe.com | The Iran war has triggered a puzzling market trend"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-09 | firstpost.com | Geopolitics and Dalal Street : Five lessons for retail investors in times of war",
+      "2026-03-09 | mining.com | Gold price fades on inflation concerns , silver price rebounds",
+      "2026-03-09 | redlandcitybulletin.com.au | The Echidna : Gold drapes , winners , losers and great TV | Redland City Bulletin",
+      "2026-03-09 | azerbaijannews.net | The Iran war has triggered a puzzling market trend",
+      "2026-03-09 | sundayworld.co.za | Warning signs for SA economy if Middle East conflict persists",
+      "2026-03-09 | finance.yahoo.com | BlackRock CEO Larry Fink warned of  very elevated inflation  from tariffs last year . Here how 2026 is shaping up"
+    ]
   }
 }
