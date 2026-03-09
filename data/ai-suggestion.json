@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T14:20:52.096Z",
+  "generatedAt": "2026-03-09T15:21:16.644Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh -4.87% sau 7 ngày và giao dịch ở vùng cực cao (percentile 99%), nhưng rủi ro địa chính trị từ chiến tranh Iran đang đẩy VIX lên 29.49 điểm tạo áp lực tăng trở lại. Nên chờ đợi sự ổn định của giá thế giới quanh vùng hỗ trợ kỹ thuật trước khi ra quyết định.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh (-4.53%/7 ngày) từ đỉnh lịch sử percentile 99 do áp lực thanh khoản và giá dầu tăng vọt; xu hướng ngắn hạn yếu nhưng yếu tố địa chính trị (chiến tranh Iran) tạo đáy hỗ trợ, nên chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 184.1 triệu VND/lượng đang thấp hơn đáng kể so với MA7 (161.6 triệu VND/lượng) và MA30 (160.9 triệu VND/lượng), cho thấy thị trường đang trong đợt điều chỉnh kỹ thuật sâu sau đỉnh 190.9 triệu.",
-      "VIX tăng vọt 48.49% trong 5 ngày lên 29.49 điểm và tin tức chiến tranh Iran đẩy dầu thô trên $110/thùng thường hỗ trợ vàng, nhưng giá thế giới lại giảm -4.65% (5 ngày) xuống 5071.35 USD/oz cho thấy áp lực bán lợi nhuận đang chiếm ưu thế.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh 4.6% (5 ngày) lên 1.82% và USD index ở mức cao 117.82 là headwind lớn đè nén giá vàng, đối trọng với rủi ro địa chính trị.",
-      "Premium 15.15% nằm trong biên độ dao động 11-17% của 30 ngày qua, không cực đoan, nhưng vị thế percentile 5 năm ở mức 99% cho thấy rủi ro mua đón đỉnh ngắn hạn là rất lớn."
+      "Áp lực bán từ định chế: Headlines ghi nhận 'Great Gold Exodus' với thanh lý ETF kỷ lục 2.91 tỷ USD và giá vàng thế giới giảm -4.4% trong 5 ngày bất chấp giá dầu tăng trên 110 USD/thùng.",
+      "Định giá kỹ thuật quá cao: Giá SJC 184.1 triệu đang nằm ở phân vị 99% trong 5 năm (percentile5y: 99), rủi ro điều chỉnh sâu hiện hữu.",
+      "Tín hiệu vĩ mô tiêu cực cho vàng: Lợi suất trái phiếu Mỹ 10 năm tăng mạnh +2.74% trong 5 ngày và chỉ số VIX tăng vọt +48.49% (đạt 29.49) thường đi kèm đợt bán tháo tài sản rủi ro để gom USD mặt.",
+      "Biến động premium cao: Chênh lệch giá SJC so với thế giới dao động rộng 11.15%-17.62% trong 30 ngày qua, cho thấy thanh khoản thị trường Việt Nam bất ổn."
     ],
     "risks": [
-      "Nếu chiến tranh Iran leo thang, giá vàng có thể đảo chiều tăng vọt bất chấp kỹ thuật điều chỉnh, bỏ lỡ cơ hội mua.",
-      "Lợi suất thực Mỹ tiếp tục tăng cao hơn 1.82% sẽ gây áp lực bán thêm trên giá vàng thế giới.",
-      "Giá SJC có thể quay về test vùng hỗ trợ kỹ thuật quanh MA7/MA30 (160-161 triệu VND/lượng) nếu đà điều chỉnh tiếp tục."
+      "Xung đột Iran leo thang bất ngờ có thể đẩy giá vàng bật tăng mạnh (safe-haven shock), khiến nhà đầu tư bỏ lỡ cơ hội mua.",
+      "Dữ liệu vĩ mô thiếu: Thiếu lợi suất thực (US Real Yield) và kỳ vọng lạm phát (Breakeven) khiến đánh giá xung lực dài hạn giảm chính xác.",
+      "Rủi ro thanh khoản: Biến động ngày 1.45% kết hợp thanh lý ETF lớn có thể gây trượt giá khi đặt lệnh."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "Giá vàng SJC hiện tại",
         "value": 184100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAU/USD)",
-        "value": 5071.35,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Giá vàng thế giới quy đổi",
+        "value": 160441988,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày SJC",
-        "value": -4.87,
+        "key": "Biến động 7 ngày (SJC)",
+        "value": -4.53,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
+        "key": "Chỉ số VIX",
         "value": 29.49,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N",
-        "value": 1.82,
+        "key": "Lợi suất US Treasury 10Y (5d)",
+        "value": 2.74,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC/VN",
-        "value": 15.15,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Giá dầu thô (Iran war)",
+        "value": 110,
+        "unit": "USD/thùng",
+        "source": "first_principles_context"
       },
       {
-        "key": "Percentile 5 năm",
+        "key": "Phân vị giá 5 năm",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá dầu (Iran war)",
-        "value": 110,
-        "unit": "USD/thùng",
-        "source": "countryActionHeadlines"
+        "key": "Premium SJC",
+        "value": 14.75,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T14:20:16.500Z",
+    "latestTimestamp": "2026-03-09T15:20:30.939Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 159878563.90850687,
-    "premiumPct": 15.15,
-    "change7dPct": -4.87,
-    "change30dPct": 2.26,
-    "volatilityDailyPct": 1.47,
-    "ma7VndPerTael": 161639245,
-    "ma30VndPerTael": 160957144,
+    "intlVndPerTael": 160441987.56400022,
+    "premiumPct": 14.75,
+    "change7dPct": -4.53,
+    "change30dPct": 2.62,
+    "volatilityDailyPct": 1.45,
+    "ma7VndPerTael": 161719734,
+    "ma30VndPerTael": 160975925,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,22 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T14:20:28.660Z",
+    "fetchedAt": "2026-03-09T15:20:52.378Z",
     "healthy": false,
-    "missingFactors": [],
+    "missingFactors": [
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5074.49,
+        "value": 5087.97,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -1.53,
-        "change5dPct": -4.65,
-        "change20dPct": 0.32,
+        "change1dPct": -1.27,
+        "change5dPct": -4.4,
+        "change20dPct": 0.58,
         "relationToGold": "context"
       },
       {
@@ -119,23 +122,23 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.82,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 1.11,
-        "change5dPct": 4.6,
-        "change20dPct": -6.19,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.35,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-06",
-        "change1dPct": 1.73,
-        "change5dPct": 4.44,
-        "change20dPct": 1.29,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -191,17 +194,23 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-03-09 | bozemandailychronicle.com | Hungarian leader Orbán urges European Union to lift Russian energy sanctions",
+      "2026-03-09 | goskagit.com | Russian anthem rings out at Paralympics for first time in 12 years after Voronchikhina takes gold",
+      "2026-03-09 | stcatharinesstandard.ca | These lawmakers were shaped by combat after 9 / 11 . Now theyre grappling with a new Mideast war"
+    ],
     "countryActionHeadlines": [
-      "2026-03-09 | hellenicshippingnews.com | FX Daily : Dollar holds its own as economic fallout builds | Hellenic Shipping News Worldwide",
-      "2026-03-09 | kasu.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | wuky.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | wgcu.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | thehindubusinessline.com | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | marketscreener.com | Gold slips on firmer dollar , higher rate expectations"
+      "2026-03-09 | edition.cnn.com | Trump should fear the big X factor of the Iran war : affordability",
+      "2026-03-09 | markets.financialcontent.com | FinancialContent - The Great Gold Exodus : Record $2 . 91 Billion ETF Liquidation Signals Massive Institutional Shift",
+      "2026-03-09 | wmuk.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | delawarepublic.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | wcsufm.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | wyso.org | World shares tumble as Iran war pushes crude prices over $110 a barrel"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-09 | okayafrica.com | Mar 9 : 42 Killed in Kenya Floods , Rising Oil Prices From Iran War Threaten Inflation Across Africa",
+      "2026-03-09 | markets.financialcontent.com | FinancialContent - The Great Gold Exodus : Record $2 . 91 Billion ETF Liquidation Signals Massive Institutional Shift",
+      "2026-03-09 | markets.financialcontent.com | FinancialContent - Gold and Silver Retreat as Dollar Resurgence and Yield Spikes Dampen Safe - Haven Rally",
+      "2026-03-09 | markets.financialcontent.com | FinancialContent - Gold and Silver Retreat Despite $115 Oil and Inflation Fears",
       "2026-03-09 | marketscreener.com | Gold slips on firmer dollar , higher rate expectations"
     ]
   }
