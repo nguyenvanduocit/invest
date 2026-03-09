@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T11:15:33.247Z",
+  "generatedAt": "2026-03-09T12:12:00.378Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh (-4.45%/7 ngày) từ đỉnh lịch sử (percentile 99) trong bối cảnh lợi suất thực USD và VIX tăng nhanh gây áp lực thanh khoản. Tuy nhiên, xu hướng trung hạn vẫn dốc lên và premium 14.65% nằm trong biên độ bình thường, nhà đầu tư nên chờ tín hiệu ổn định thay vì mua đuổi hoặc bán tháo.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99%) với đỉnh 190.9 triệu vừa hình thành, trong bối cảnh giá thế giới điều chỉnh giảm mạnh -4.21% tuần qua dù địa chính trị căng thẳng. Rủi ro mua đỉp ngắn hạn rất lớn khi spread VND/USD đã giãn ra, cần chờ tín hiệu ổn định từ giá thế giới trước khi hành động.",
     "reasons": [
-      "Áp lực điều chỉnh ngắn hạn rõ rệt: giá SJC giảm 4.45% trong 7 ngày qua và thấp hơn MA7 VND/lượng (184.1tr vs 191.7tr), cho thấy động lượng mua đã suy yếu tạm thời.",
-      "Đỉnh giá lịch sử (Percentile 5 năm: 99%) cảnh báo rủi ro mua đuổi cao; giá hiện tại 184.1 triệu VND/lượng rất gần đỉnh 187 triệu đã thiết lập ngày 28/02.",
-      "Lợi suất thực USD (US Real Yield 10Y) tăng mạnh 4.6% trong 5 ngày lên mức 1.82%, tạo áp lực tăng chi phí cơ hội nắm giữ vàng và làm giảm sức hút tài sản trú ẩn.",
-      "Biên độ premium dao động rộng (11.15% - 17.62%) và biến động ngày cao (1.45%) cho thấy thanh khoản thị trường đang căng thẳng, rủi ro trượt giá lớn khi khớp lệnh."
+      "Giá SJC 184.1 triệu đang nằm trên MA7 (161.8 triệu) tới 13.8% và ở percentile 99% lịch sử 5 năm, rủi ro định giá ngắn hạn rất cao.",
+      "Giá thế giới XAUUSD giảm mạnh -4.21% trong 5 ngày và -1.07% ngày 09/03, cho thấy động lượng tăng đã bị gãy ngay cả khi có tin địa chính trị.",
+      "Lợi suất thực US 10Y tăng 4.6% trong 5 ngày lên 1.82%, tạo áp lực bán lên vàng thế giới (tương quan nghịch).",
+      "VIX tăng vọt 27.48% lên 23.75 điểm nhưng vàng vẫn giảm, tín hiệu cho thấy vàng không còn được ưu tiên làm kênh trú ẩn trong đợt bán tháo rủi ro hiện tại."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn nếu lợi suất thực USD tiếp tục tăng và VIX (đang ở 23.75) leo thang gây bán tháo tài sản rủi ro.",
-      "Giá SJC có thể trượt về vùng hỗ trợ kỹ thuật quanh MA30 VND/lượng (161 triệu) nếu động lượng bán tăng tốc.",
-      "Thanh khoản thấp có thể làm giãn spread mua-bán, gây thiệt hại khi giao dịch ngắn hạn."
+      "Xung đột Iran đẩy dầu thô lên $110 (+25%) có thể gây sốc lạm phát, khiến các ngân hàng trung ương duy trì lãi suất cao, tiếp tục gây áp lực lên giá vàng.",
+      "Giá SJC giảm sâu từ đỉnh 190.9 triệu xuống 184.1 triệu trong 1 tuần cho thấy thanh khoản yếu và biến động 1.45%/ngày rất rủi ro cho nhà đầu tư đòn bẩy.",
+      "Dữ liệu vĩ mô first-principles không hoàn chỉnh (healthy: false), thiếu cập nhật USD Index và Fed Funds mới nhất, có thể bỏ sót tín hiệu quan trọng."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 184100000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Thay đổi 7 ngày (SJC)",
-        "value": -4.45,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 giá SJC",
-        "value": 191739757,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Vị thế percentile 5 năm",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động ngày",
-        "value": 1.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y (5d)",
-        "value": 4.6,
-        "unit": "% thay đổi",
+        "key": "sjc_price_vs_ma7",
+        "value": 13.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "xauusd_change_5d",
+        "value": -4.21,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
+        "key": "us_real_yield_10y_change_5d",
+        "value": 4.6,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_level",
         "value": 23.75,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Biên độ Premium 30 ngày",
-        "value": 11.15,
+        "key": "crude_oil_price_shock",
+        "value": 110,
+        "unit": "USD/barrel",
+        "source": "geopoliticalHeadlines"
+      },
+      {
+        "key": "sjc_premium_current",
+        "value": 14.53,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_7d_change",
+        "value": -4.35,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T11:15:12.101Z",
+    "latestTimestamp": "2026-03-09T12:11:27.583Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 160582148.4913257,
-    "premiumPct": 14.65,
-    "change7dPct": -4.45,
-    "change30dPct": 2.71,
+    "intlVndPerTael": 160750723.3186603,
+    "premiumPct": 14.53,
+    "change7dPct": -4.35,
+    "change30dPct": 2.82,
     "volatilityDailyPct": 1.45,
-    "ma7VndPerTael": 161739757,
-    "ma30VndPerTael": 160980597,
+    "ma7VndPerTael": 161763839,
+    "ma30VndPerTael": 160986216,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T11:15:15.204Z",
+    "fetchedAt": "2026-03-09T12:11:36.721Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5090.53,
+        "value": 5097.9,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -1.22,
-        "change5dPct": -4.35,
-        "change20dPct": 0.63,
+        "change1dPct": -1.07,
+        "change5dPct": -4.21,
+        "change20dPct": 0.78,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,26 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-09 | kawc.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | irrigator.com.au | Fear is stalking market : ASX plunges amid Iran war",
+      "2026-03-09 | paktribune.com | Global Commodity Markets Shaken as Oil Surges 25 % Amid Iran War While Gold Slips",
+      "2026-03-09 | wrkf.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | newsghana.com.gh | Ghana Gold Sale Row : What Happened , What It Cost , Who Is Arguing What",
+      "2026-03-09 | english.aawsat.com | World Shares Tumble as Iran War Pushes Crude Prices Over $110 a Barrel"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-09 | kawc.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | wrkf.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | newsghana.com.gh | Ghana Gold Sale Row : What Happened , What It Cost , Who Is Arguing What",
+      "2026-03-09 | english.aawsat.com | World Shares Tumble as Iran War Pushes Crude Prices Over $110 a Barrel",
+      "2026-03-09 | upr.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | kvpr.org | World shares tumble as Iran war pushes crude prices over $110 a barrel"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-09 | paktribune.com | Global Commodity Markets Shaken as Oil Surges 25 % Amid Iran War While Gold Slips",
+      "2026-03-09 | marketscreener.com | Bombs fall , black gold climbs , and markets tumble",
+      "2026-03-09 | finance.yahoo.com | Gold price today , Monday , March 9 : Gold opens lower after oil prices spike"
+    ]
   }
 }
