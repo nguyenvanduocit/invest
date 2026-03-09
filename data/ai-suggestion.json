@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T15:21:16.644Z",
+  "generatedAt": "2026-03-09T16:22:32.805Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh (-4.53%/7 ngày) từ đỉnh lịch sử percentile 99 do áp lực thanh khoản và giá dầu tăng vọt; xu hướng ngắn hạn yếu nhưng yếu tố địa chính trị (chiến tranh Iran) tạo đáy hỗ trợ, nên chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh -4.37% sau 7 ngày và giao dịch ở vùng đỉnh 5 năm (percentile 99%), đòi hỏi nhà đầu tư kiên nhẫn chờ tín hiệu ổn định thay vì đu đỉnh. VIX tăng vọt 48.49% trong 5 ngày hỗ trợ nhu cầu trú ẩn dài hạn nhưng áp lực chốt lời ngắn hạn đang hiện hữu.",
     "reasons": [
-      "Áp lực bán từ định chế: Headlines ghi nhận 'Great Gold Exodus' với thanh lý ETF kỷ lục 2.91 tỷ USD và giá vàng thế giới giảm -4.4% trong 5 ngày bất chấp giá dầu tăng trên 110 USD/thùng.",
-      "Định giá kỹ thuật quá cao: Giá SJC 184.1 triệu đang nằm ở phân vị 99% trong 5 năm (percentile5y: 99), rủi ro điều chỉnh sâu hiện hữu.",
-      "Tín hiệu vĩ mô tiêu cực cho vàng: Lợi suất trái phiếu Mỹ 10 năm tăng mạnh +2.74% trong 5 ngày và chỉ số VIX tăng vọt +48.49% (đạt 29.49) thường đi kèm đợt bán tháo tài sản rủi ro để gom USD mặt.",
-      "Biến động premium cao: Chênh lệch giá SJC so với thế giới dao động rộng 11.15%-17.62% trong 30 ngày qua, cho thấy thanh khoản thị trường Việt Nam bất ổn."
+      "Giá SJC 184.1 triệu VND/lượng giảm sâu về dưới MA7 (161.8 triệu) và gần bằng MA30 (161.0 triệu), cho thấy động lượng tăng đã bị suy yếu đáng kể trong ngắn hạn.",
+      "VIX tăng mạnh 48.49% (5 ngày) và 66.05% (20 ngày) lên mức 29.49 phản ánh lo ngại rủi ro thị trường, nhưng mối quan hệ này chưa đẩy giá vàng tăng do áp lực từ trái phiếu Mỹ.",
+      "Lợi suất trái phiếu Mỹ 10 năm tăng 2.74% (5 ngày) lên 4.13% tạo áp lực giảm lên giá vàng thế giới (đã giảm -4.21% trong 5 ngày), làm giảm hấp dẫn của vàng không sinh lãi.",
+      "Premium 14.55% nằm trong biên độ dao động 30 ngày (11.15%-17.62%), không có tín hiệu bất thường nhưng cho thấy giá nội địa vẫn neo cao hơn thế giới."
     ],
     "risks": [
-      "Xung đột Iran leo thang bất ngờ có thể đẩy giá vàng bật tăng mạnh (safe-haven shock), khiến nhà đầu tư bỏ lỡ cơ hội mua.",
-      "Dữ liệu vĩ mô thiếu: Thiếu lợi suất thực (US Real Yield) và kỳ vọng lạm phát (Breakeven) khiến đánh giá xung lực dài hạn giảm chính xác.",
-      "Rủi ro thanh khoản: Biến động ngày 1.45% kết hợp thanh lý ETF lớn có thể gây trượt giá khi đặt lệnh."
+      "Rủi ro điều chỉnh tiếp diễn khi giá đang ở vùng overbought lịch sử (percentile 99% trong 5 năm) và vừa trải qua đợt giảm mạnh.",
+      "Thiếu dữ liệu lợi suất thực 10 năm (US Real Yield) và không có sự kiện địa chính trị cụ thể trong input làm giảm độ tin cậy dự báo xu hướng.",
+      "Độ biến động ngày 1.45% kết hợp với drawdown tồi tệ 41.26% trong lịch sử cho thấy rủi ro giảm sâu là có thật nếu thị trường đảo chiều."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 184100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới quy đổi",
-        "value": 160441988,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -4.53,
+        "key": "Thay đổi 7 ngày",
+        "value": -4.37,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Chỉ số VIX",
-        "value": 29.49,
-        "unit": "index",
+        "key": "VIX 5 ngày",
+        "value": 48.49,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất US Treasury 10Y (5d)",
+        "key": "Lợi suất US 10Y 5 ngày",
         "value": 2.74,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá dầu thô (Iran war)",
-        "value": 110,
-        "unit": "USD/thùng",
+        "key": "Gold Spot 5 ngày",
+        "value": -4.21,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Phân vị giá 5 năm",
+        "key": "Percentile 5 năm",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC",
-        "value": 14.75,
+        "key": "Premium hiện tại",
+        "value": 14.55,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 SJC",
+        "value": 160984881,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T15:20:30.939Z",
+    "latestTimestamp": "2026-03-09T16:21:52.479Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 160441987.56400022,
-    "premiumPct": 14.75,
-    "change7dPct": -4.53,
-    "change30dPct": 2.62,
+    "intlVndPerTael": 160710669.45797116,
+    "premiumPct": 14.55,
+    "change7dPct": -4.37,
+    "change30dPct": 2.8,
     "volatilityDailyPct": 1.45,
-    "ma7VndPerTael": 161719734,
-    "ma30VndPerTael": 160975925,
+    "ma7VndPerTael": 161758117,
+    "ma30VndPerTael": 160984881,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,22 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T15:20:52.378Z",
+    "fetchedAt": "2026-03-09T16:22:14.223Z",
     "healthy": false,
     "missingFactors": [
-      "US Real Yield 10Y",
-      "US Breakeven Inflation 10Y"
+      "US Real Yield 10Y"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5087.97,
+        "value": 5098.13,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -1.27,
-        "change5dPct": -4.4,
-        "change20dPct": 0.58,
+        "change1dPct": -1.07,
+        "change5dPct": -4.21,
+        "change20dPct": 0.78,
         "relationToGold": "context"
       },
       {
@@ -133,12 +132,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.35,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-06",
+        "change1dPct": 1.73,
+        "change5dPct": 4.44,
+        "change20dPct": 1.29,
         "relationToGold": "direct"
       },
       {
@@ -194,24 +193,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-09 | bozemandailychronicle.com | Hungarian leader Orbán urges European Union to lift Russian energy sanctions",
-      "2026-03-09 | goskagit.com | Russian anthem rings out at Paralympics for first time in 12 years after Voronchikhina takes gold",
-      "2026-03-09 | stcatharinesstandard.ca | These lawmakers were shaped by combat after 9 / 11 . Now theyre grappling with a new Mideast war"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-09 | edition.cnn.com | Trump should fear the big X factor of the Iran war : affordability",
-      "2026-03-09 | markets.financialcontent.com | FinancialContent - The Great Gold Exodus : Record $2 . 91 Billion ETF Liquidation Signals Massive Institutional Shift",
-      "2026-03-09 | wmuk.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | delawarepublic.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | wcsufm.org | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | wyso.org | World shares tumble as Iran war pushes crude prices over $110 a barrel"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-09 | markets.financialcontent.com | FinancialContent - The Great Gold Exodus : Record $2 . 91 Billion ETF Liquidation Signals Massive Institutional Shift",
-      "2026-03-09 | markets.financialcontent.com | FinancialContent - Gold and Silver Retreat as Dollar Resurgence and Yield Spikes Dampen Safe - Haven Rally",
-      "2026-03-09 | markets.financialcontent.com | FinancialContent - Gold and Silver Retreat Despite $115 Oil and Inflation Fears",
-      "2026-03-09 | marketscreener.com | Gold slips on firmer dollar , higher rate expectations"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
