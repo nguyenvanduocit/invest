@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T09:17:26.677Z",
+  "generatedAt": "2026-03-09T10:17:33.426Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh -4.08% sau 7 ngày và giao dịch ở vùng định giá cao (percentile 99%), nhưng rủi ro địa chính trị từ chiến tranh Iran đang leo thang có thể tạo đợt phục hồi ngắn. Nhà đầu tư nên chờ tín hiệu ổn định quanh MA7 trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang điều chỉnh giảm (-4.16%/7 ngày) từ đỉnh lịch sử percentile 99, trong khi lợi suất thực USD tăng mạnh (+4.6%/5 ngày) gây áp lực bán. Tuy nhiên, VIX tăng vọt (+27.48%/5 ngày) và premium ổn định quanh 14.3% gợi ý thị trường đang chờ đợi hướng đi rõ ràng hơn thay vì thoái vốn hoảng loạn.",
     "reasons": [
-      "Giá SJC 184.1 triệu VND/lượng đã giảm -4.08% trong 7 ngày và nằm dưới MA7 (161.8 triệu VND/lượng), cho thấy động lượng bán đang chiếm ưu thế ngắn hạn.",
-      "Vị thế định giá cực cao ở percentile 99% trong 5 năm và premium 14.2% hạn chế biên độ tăng tiếp theo, rủi ro điều chỉnh sâu còn đáng kể.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh +4.6% trong 5 ngày lên 1.82% và USD index ổn định, tạo áp lực ngược lên giá vàng thế giới.",
-      "VIX tăng vọt +27.48% trong 5 ngày lên 23.75 điểm phản ánh sợ hãi thị trường, nhưng vàng chưa hưởng lợi do dòng tiền đổ vào USD và năng lượng."
+      "Áp lực giảm giá ngắn hạn: Giá vàng thế giới giảm -4.01% trong 5 ngày (xuống 5108.92 USD/oz) và lợi suất thực 10 năm tăng +4.6% (lên 1.82%), tạo tín hiệu bán kỹ thuật mạnh từ thị trường quốc tế.",
+      "Biên độ an toàn của VND: Premium SJC dao động trong khoảng 11.15%-17.62% trong 30 ngày qua, mức hiện tại 14.3% là trung bình, cho thấy không có hiện tượng tháo chạy hay đầu cơ cực đoan tại thị trường nội địa.",
+      "Biến động thị trường tăng: VIX tăng 27.48% lên mức 23.75 chỉ báo bất ổn tài chính, thường hỗ trợ giá vàng dài hạn nhưng ngắn hạn gây biến động lớn hai chiều.",
+      "Định giá quá cao (Overbought): Giá SJC 184.1 triệu đồng/lượng đang nằm ở phân vị 99% trong 5 năm, rủi ro điều chỉnh kỹ thuật là rất cao."
     ],
     "risks": [
-      "Chiến tranh Iran đẩy dầu thô >110 USD/thùng có thể gây sốc lạm phát, Fed giữ lãi suất cao lâu hơn - áp lực giảm thêm lên giá vàng.",
-      "Premium SJC 14.2% có thể co hẹp về mức 12-13% nếu giá thế giới tiếp tục giảm, làm tăng tổn thất cho nhà đầu tư Việt Nam.",
-      "Thiếu dữ liệu vĩ mô Việt Nam (lãi suất, tỷ giá VND) khiến độ tin cậy phân tích giảm, cần thận trọng với vị thế lớn."
+      "Rủi ro thanh khoản: Nếu lợi suất thực USD tiếp tục tăng, giá vàng thế giới có thể giảm sâu hơn, kéo giá SJC về vùng hỗ trợ kỹ thuật quanh MA7 (161.8 triệu VND/lượng theo quy đổi).",
+      "Tin tức vĩ mô không rõ ràng: Các phát ngôn chính sách (ECB) trong dữ liệu không đề cập trực tiếp đến lãi suất hoặc vàng, giảm độ tin cậy của các yếu tố định giá first-principles.",
+      "Độ trễ dữ liệu: Một số chỉ báo vĩ mô (USD Index, Fed Funds) có độ trễ 2-4 ngày so với thời điểm hiện tại."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 184100000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_7d",
-        "value": -4.08,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "ma7_vnd",
-        "value": 161828535,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_pct",
-        "value": 14.2,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.82,
+        "key": "Giá vàng thế giới 5 ngày",
+        "value": -4.01,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_5d_change",
+        "key": "Lợi suất thực Mỹ 10 năm 5 ngày",
         "value": 4.6,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_5d_change",
+        "key": "VIX 5 ngày",
         "value": 27.48,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC hiện tại",
+        "value": 14.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Phân vị giá 5 năm",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá SJC hiện tại",
+        "value": 184100000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động ngày 30 ngày",
+        "value": 1.44,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T09:17:00.872Z",
+    "latestTimestamp": "2026-03-09T10:17:06.263Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 161203596.03618282,
-    "premiumPct": 14.2,
-    "change7dPct": -4.08,
-    "change30dPct": 3.11,
+    "intlVndPerTael": 161062871.7425788,
+    "premiumPct": 14.3,
+    "change7dPct": -4.16,
+    "change30dPct": 3.02,
     "volatilityDailyPct": 1.44,
-    "ma7VndPerTael": 161828535,
-    "ma30VndPerTael": 161001312,
+    "ma7VndPerTael": 161808432,
+    "ma30VndPerTael": 160996621,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T09:17:06.670Z",
+    "fetchedAt": "2026-03-09T10:17:13.447Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5118.46,
+        "value": 5108.51,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -0.68,
-        "change5dPct": -3.83,
-        "change20dPct": 1.18,
+        "change1dPct": -0.87,
+        "change5dPct": -4.01,
+        "change20dPct": 0.99,
         "relationToGold": "context"
       },
       {
@@ -184,34 +178,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks",
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro",
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
-      "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
-      "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
+      "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-09 | hepburnadvocate.com.au | Fear is stalking market : ASX plunges amid Iran war",
-      "2026-03-09 | maitlandmercury.com.au | Fear is stalking market : ASX plunges amid Iran war",
-      "2026-03-09 | mykxlg.com | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | marketscreener.com | Euro zone bonds slump as Middle East war spurs oil price spike , stoking market jitters",
-      "2026-03-09 | illawarramercury.com.au | Fear is stalking market : ASX plunges amid Iran war"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-09 | mykxlg.com | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | thestar.com.my | Gold prices fall as dollar firms , US rate - cut optimism fades",
-      "2026-03-09 | timesofmalta.com | War in Iran triggers global market turmoil",
-      "2026-03-09 | 2news.com | World shares tumble as Iran war pushes crude prices over $110 a barrel",
-      "2026-03-09 | livemint.com | Why are gold , silver rates today under pressure despite the escalating US - Iran war ? Explained with 5 reasons",
-      "2026-03-09 | tribune.com.pk | Shares skid as oil surge threatens inflation shock"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-09 | thestar.com.my | Gold prices fall as dollar firms , US rate - cut optimism fades",
-      "2026-03-09 | timesofmalta.com | War in Iran triggers global market turmoil",
-      "2026-03-09 | livemint.com | Stock Market Crash : How to protect your portfolio amid crude price rally , US - Iran war tensions ?",
-      "2026-03-09 | livemint.com | Why are gold , silver rates today under pressure despite the escalating US - Iran war ? Explained with 5 reasons",
-      "2026-03-09 | tribune.com.pk | Shares skid as oil surge threatens inflation shock"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
