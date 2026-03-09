@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T07:23:43.795Z",
+  "generatedAt": "2026-03-09T08:13:36.915Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh -4.35% sau đỉnh lịch sử, dù xung đột Iran hỗ trợ nhưng dòng tiền đang tháo chạy khỏi vàng (VIX tăng 27.5%) khiến rủi ro mua đuôi cao, nên chờ tín hiệu ổn định.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 99) trong bối cảnh đồng USD mạnh lên do dầu oil vượt 110 USD/thùng. Áp lực tăng lợi suất thực và giá trị ở vùng cao khuyến nghị chờ tín hiệu ổn định thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 184.1 triệu VND/lượng đang thấp hơn MA7 (161.8 triệu quy đổi) và giảm -4.35% trong 7 ngày, cho thấy động lượng bán ngắn hạn đang chiếm ưu thế.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh +4.6% lên 1.82% và USD mạnh lên, tạo áp lực nghịch biến lên giá vàng thế giới (xuống 5098 USD/oz).",
-      "VIX tăng vọt +27.48% lên mức 23.75 kèm tin tức 'Iran war' cho thấy thị trường đang hoảng loạn bán tháo tài sản (Nikkei -7%) thay vì tìm đến vàng an toàn.",
-      "Premium 14.53% đang ở mức trung bình so với biên độ dao động 11-17% trong 30 ngày qua, không có tín hiệu khan hiếm cục bộ đặc biệt."
+      "Giá SJC 184.1 triệu VND/lượng đang điều chỉnh mạnh -4.27% sau 7 ngày và đứng ở phân vị 99% trong 5 năm, rủi ro mua đón đỉnh cao.",
+      "Đồng USD tăng mạnh (DXY 117.82) và lợi suất thực 10 năm tăng 4.6% trong 5 ngày tạo áp lực bán vàng nắm giữ rẻ trên thị trường quốc tế.",
+      "VIX tăng vọt 27.48% lên 23.75 điểm phản ánh sự hoảng loạn thị trường, thường đi kèm dòng tiền chảy về USD an toàn thay vì vàng.",
+      "Premium 14.43% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (12%-17%), không có tín hiệu bất thường cần can thiệp."
     ],
     "risks": [
-      "Xung đột địa chính trị có thể leo thang bất ngờ, đẩy giá vàng bật tăng mạnh trở lại (rủi ro cho người đang giữ tiền mặt).",
-      "Lạm phát kỳ vọng tăng +4.44% có thể khiến Fed giữ lãi suất cao lâu hơn, tiếp tục gây áp lực lên giá vàng.",
-      "Biên độ dao động 1.45%/ngày cho thấy thị trường rất biến động, dễ bị quét stoploss."
+      "Xung đột Trung Đông leo thang có thể khiến giá dầu và lạm phát kỳ vọng tăng đột biến, đẩy giá vàng bật lại bất chấp USD mạnh.",
+      "Dữ liệu vĩ mô thiếu cập nhật (lợi suất thực ngày 05/03, DXY ngày 27/02) có thể đã thay đổi, làm giảm độ tin cậy phân tích.",
+      "Biến động ngày 1.44% cao có thể tạo ra các đợt dao động ngắn hạn khiến nhà đầu tư bị 'lãng' nếu nhập sai điểm."
     ],
     "evidence": [
       {
@@ -27,53 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (7d Change)",
-        "value": -4.35,
+        "key": "Thay đổi 7 ngày",
+        "value": -4.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 23.75,
+        "key": "Phân vị 5 năm",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC/Thế giới",
+        "value": 14.43,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "DXY Index",
+        "value": 117.82,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Thay đổi VIX 5 ngày",
-        "value": 27.48,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.82,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Thay đổi Lợi suất thực 5 ngày",
+        "key": "Lợi suất thực 10Y (5d)",
         "value": 4.6,
-        "unit": "%",
+        "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới",
-        "value": 5098.87,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "VIX (5d)",
+        "value": 27.48,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá dầu thô",
+        "value": 110,
+        "unit": "USD/thùng",
+        "source": "geopoliticalHeadlines"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T07:23:17.118Z",
+    "latestTimestamp": "2026-03-09T08:13:05.879Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 160746019.0368427,
-    "premiumPct": 14.53,
-    "change7dPct": -4.35,
-    "change30dPct": 2.82,
-    "volatilityDailyPct": 1.45,
-    "ma7VndPerTael": 161763167,
-    "ma30VndPerTael": 160986059,
+    "intlVndPerTael": 160889032.1044714,
+    "premiumPct": 14.43,
+    "change7dPct": -4.27,
+    "change30dPct": 2.91,
+    "volatilityDailyPct": 1.44,
+    "ma7VndPerTael": 161783597,
+    "ma30VndPerTael": 160990826,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T07:23:24.099Z",
+    "fetchedAt": "2026-03-09T08:13:12.928Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5099.19,
+        "value": 5102.35,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -1.05,
-        "change5dPct": -4.19,
-        "change20dPct": 0.8,
+        "change1dPct": -0.99,
+        "change5dPct": -4.13,
+        "change20dPct": 0.87,
         "relationToGold": "context"
       },
       {
@@ -186,22 +192,27 @@
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-09 | newstatesman.com | Dubai at war",
-      "2026-03-09 | greatlakesadvocate.com.au | Fear is stalking market : ASX plunges amid Iran war",
-      "2026-03-09 | singletonargus.com.au | Fear is stalking market : ASX plunges amid Iran war"
+      "2026-03-09 | cnbc.com | Dollar surges as Middle East war sends oil above $110 a barrel",
+      "2026-03-09 | thestar.com.my | Bank Negara international reserves hit 11 - year high on forex , gold gains",
+      "2026-03-09 | nynganobserver.com.au | Fear is stalking market : ASX plunges amid Iran war",
+      "2026-03-09 | yoursourceone.com | Iran war sends shockwaves through African fuel market and economies",
+      "2026-03-09 | kob.com | Iran war sends shockwaves through African fuel market and economies",
+      "2026-03-09 | blayneychronicle.com.au | Fear is stalking market : ASX plunges amid Iran war"
     ],
     "countryActionHeadlines": [
-      "2026-03-09 | theguardian.com | Why has the Iran war sparked fears of stagflation for the global economy ?",
-      "2026-03-09 | thehindubusinessline.com | Central banks ease purchasing gold in Jan compared with 2025 average buys",
-      "2026-03-09 | thehindubusinessline.com | Nikkei down over 7 %; Wall Street , EU stock futures skid as Middle East conflict drags on",
-      "2026-03-09 | ianslive.in | Silver dips 1 . 30 pc , gold eases marginally over stronger dollar",
-      "2026-03-09 | marketscreener.com | Iran conflict forces central banks into sharp policy rethink"
+      "2026-03-09 | dailyforex.com | EUR / USD Forex Forecast 08 / 03 : Hammer Candle Points",
+      "2026-03-09 | zerohedge.com | The gold market is quietly escaping central bank control",
+      "2026-03-09 | zerohedge.com | Oil surges as key producers cut output ; G7 to discuss release of emergency reserves - Newsquawk EU Market Open",
+      "2026-03-09 | kob.com | World shares tumble as Iran war pushes crude prices over $110 a barrel",
+      "2026-03-09 | rttnews.com | European Shares Set To Dive As Oil Rally Spurs Inflation , Growth Concerns",
+      "2026-03-09 | prokerala.com | Silver dips 1 . 30 pc , gold eases marginally over stronger dollar"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-09 | news18.com | Gold , Silver Prices Fall Despite Iran War : Check 22K And 24K Rates In Your City On March 9",
-      "2026-03-09 | sakshipost.com | Gold and Silver Prices Today , March 9 : Hyderabad , Chennai , Mumbai City - Wise Rates",
-      "2026-03-09 | thehindubusinessline.com | Nikkei down over 7 %; Wall Street , EU stock futures skid as Middle East conflict drags on",
-      "2026-03-09 | dawn.com | Oil soars 25pc , gold drops as Iran war jolts global commodity markets - Business"
+      "2026-03-09 | cnbc.com | Dollar surges as Middle East war sends oil above $110 a barrel",
+      "2026-03-09 | en.apa.az | Gold and other precious metals decline in global markets",
+      "2026-03-09 | thestar.com.my | Bank Negara international reserves hit 11 - year high on forex , gold gains",
+      "2026-03-09 | zerohedge.com | Oil surges as key producers cut output ; G7 to discuss release of emergency reserves - Newsquawk EU Market Open",
+      "2026-03-09 | rttnews.com | European Shares Set To Dive As Oil Rally Spurs Inflation , Growth Concerns"
     ]
   }
 }
