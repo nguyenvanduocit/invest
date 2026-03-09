@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-08T23:05:12.419Z",
+  "checkedAt": "2026-03-09T00:20:42.249Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-08T23:05:12.344Z",
+  "dataFetchedAt": "2026-03-09T00:20:42.171Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,18 +9,74 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 1,
+    "missingFactors": [
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y",
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 10Y",
+      "US Treasury Yield 2Y",
+      "VIX Volatility Index"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 12,
-    "countryActionCount": 13,
-    "dollarYieldCount": 13,
-    "sourceFailures": [],
-    "healthy": true
+    "geopoliticalCount": 0,
+    "countryActionCount": 0,
+    "dollarYieldCount": 0,
+    "sourceFailures": [
+      {
+        "id": "usd_index_trade_weighted",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_real_yield_10y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_breakeven_10y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_fed_funds_effective",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_10y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_2y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "vix",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "HTTP 429"
+      },
+      {
+        "id": "gdelt_dollar_yields",
+        "error": "HTTP 429"
+      }
+    ],
+    "healthy": false
   },
-  "hardFailures": [],
-  "warnings": [],
-  "canProceedToIntegration": true
+  "hardFailures": [
+    "Missing required factors: US Dollar Trade Weighted Index, US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index",
+    "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)",
+    "Not enough dollar/yield events (0/3)"
+  ],
+  "warnings": [
+    "Source failures: usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+  ],
+  "canProceedToIntegration": false
 }

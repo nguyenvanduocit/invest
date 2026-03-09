@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T23:05:24.175Z",
+  "generatedAt": "2026-03-09T00:20:58.673Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) sau đợt tăng mạnh, tạo áp lực điều chỉnh kỹ thuật ngắn hạn dù xu hướng vĩ mô vẫn được hỗ trợ bởi căng thẳng địa chính trị và VIX tăng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực cao (percentile 99% 5 năm) với động lượng giảm mạnh trong ngắn hạn (-5.49% tuần qua), trong khi giá thế giới đang điều chỉnh sâu; rủi ro mua đỉnh hiện tại rất lớn, nhà đầu tư nên chờ tín hiệu ổn định hoặc giá thế giới hồi phục.",
     "reasons": [
-      "Giá SJC 185 triệu VND/lượng đang ở phân vị 99% trong 5 năm, đi kèm giảm 4.02% trong 7 ngày gần nhất cho thấy động lượng mua đã yếu đi đáng kể.",
-      "Lợi suất thực Mỹ 10Y tăng mạnh 4.6% trong 5 ngày và VIX nhảy 27.48% phản ánh dòng tiền rút khỏi vàng sang tài sản an toàn khác (cash/bonds) trong ngắn hạn.",
-      "Premium 14.92% nằm trong biên dao động 11-18% của 30 ngày qua, không báo hiệu bất thường nhưng cũng không hấp dẫn để mua đuổi."
+      "Giá SJC 185 triệu VND/lượng đang nằm ở phân vị 99% trong 5 năm qua, cho thấy mức giá lịch sử và rủi ro điều chỉnh cao (source: market_snapshot).",
+      "Động lượng ngắn hạn rất yếu với giá SJC giảm 5.49% trong 7 ngày qua, trong khi giá thế giới giảm mạnh 5.36% trong 5 ngày và 2.26% trong 1 ngày (source: market_snapshot, first_principles_context).",
+      "Premium 16.45% đang nới rộng so với mức 12-13% đầu chuỗi dữ liệu, áp lực thanh khoản khi giá thế giới giảm từ đỉnh 5330.95 USD/oz (02-03) xuống 5038.08 USD/oz (09-03) (source: monthly_series_30d).",
+      "Dữ liệu vĩ mô (USD, Lợi suất thực, VIX) bị thiếu (healthy: false), không có driver tin tức địa chính trị hay hành động quốc gia cụ thể để hỗ trợ đà tăng, giảm confidence (source: first_principles_context)."
     ],
     "risks": [
-      "Căng thẳng Tây Á có thể đẩy giá tăng vọt bất ngờ, gây bỏ lỡ cơ hội nếu chờ quá lâu.",
-      "Lợi suất thực Mỹ tiếp tục tăng sẽ gây áp lực giảm thêm lên giá vàng thế giới.",
-      "Thanh khoản thấp tại đỉnh giá lịch sử có thể khiến spread mua-bán giãn rộng."
+      "Giá thế giới tiếp tục điều chỉnh sâu kéo giá SJC giảm theo, nhà đầu tư mua lúc này có thể bị lỗ tài khoản ngắn hạn.",
+      "Premium co hẹp nhanh nếu thanh khoản thị trường Việt Nam kém, làm tăng biên độ dao động giá SJC.",
+      "Thiếu dữ liệu vĩ mô (DXY, US Yield) khiến việc xác định xu hướng dài hạn bị thiếu chính xác."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
         "key": "SJC Change 7 Days",
-        "value": -4.02,
+        "value": -5.49,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5D",
-        "value": 4.6,
+        "key": "Gold Spot Change 1 Day",
+        "value": -2.26,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 5 Days",
-        "value": 27.48,
+        "key": "Gold Spot Change 5 Days",
+        "value": -5.36,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium vs Intl Price",
-        "value": 14.92,
+        "key": "Current Premium vs World",
+        "value": 16.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot XAUUSD",
-        "value": 5117.22,
+        "key": "World Price Peak 30D",
+        "value": 5330.95,
         "unit": "USD/oz",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "SJC MA7 Price",
-        "value": 161509473,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Current World Price",
+        "value": 5038.08,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Macro Data Health Status",
+        "value": 0,
+        "unit": "boolean (healthy=false)",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-08T23:05:07.729Z",
+    "latestTimestamp": "2026-03-09T00:20:20.521Z",
     "sjcVndPerTael": 185000000,
-    "intlVndPerTael": 160975525.28959683,
-    "premiumPct": 14.92,
-    "change7dPct": -4.02,
-    "change30dPct": 3.18,
-    "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 161509473,
-    "ma30VndPerTael": 160672495,
+    "intlVndPerTael": 158863373.77626953,
+    "premiumPct": 16.45,
+    "change7dPct": -5.49,
+    "change30dPct": 1.59,
+    "volatilityDailyPct": 1.5,
+    "ma7VndPerTael": 161489379,
+    "ma30VndPerTael": 160922175,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -83,96 +90,104 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-08T23:05:12.344Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-03-09T00:20:42.171Z",
+    "healthy": false,
+    "missingFactors": [
+      "US Dollar Trade Weighted Index",
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y",
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 10Y",
+      "US Treasury Yield 2Y",
+      "VIX Volatility Index"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5117.22,
+        "value": 5036.86,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -0.7,
-        "change5dPct": -3.85,
-        "change20dPct": 1.16,
+        "change1dPct": -2.26,
+        "change5dPct": -5.36,
+        "change20dPct": -0.43,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 117.8223,
+        "value": null,
         "unit": "index",
-        "date": "2026-02-27",
-        "change1dPct": -0.07,
-        "change5dPct": -0.14,
-        "change20dPct": 0.33,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.82,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 1.11,
-        "change5dPct": 4.6,
-        "change20dPct": -6.19,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.35,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-06",
-        "change1dPct": 1.73,
-        "change5dPct": 4.44,
-        "change20dPct": 1.29,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": 3.64,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 0,
-        "change5dPct": 0,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.13,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 0.98,
-        "change5dPct": 2.74,
-        "change20dPct": -3.73,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.57,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 0.85,
-        "change5dPct": 4.39,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 23.75,
+        "value": null,
         "unit": "index",
-        "date": "2026-03-05",
-        "change1dPct": 12.29,
-        "change5dPct": 27.48,
-        "change20dPct": 9.1,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       }
     ],
@@ -184,28 +199,8 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026",
       "2026-03-03 | Federal Reserve Speeches | Bowman, Liquidity Resiliency, Financial Stability, and the Role of the Federal Reserve"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-08 | rediff.com | Gold poised for volatile week as West Asia crisis roils markets",
-      "2026-03-08 | asiabulletin.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | inquirer.com | Trump says he ended a war in Africa . U . S . sanctions say otherwise",
-      "2026-03-08 | calcuttanews.net | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | sanantoniopost.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-08 | rediff.com | Gold poised for volatile week as West Asia crisis roils markets",
-      "2026-03-08 | bworldonline.com | T - bill , bond rates may rise on BSP policy rate hike signals",
-      "2026-03-08 | bworldonline.com | Peso may weaken on prolonged Middle East war - BusinessWorld Online",
-      "2026-03-08 | investinglive.com | Newsquawk Week In Focus : US and China inflation , united kingdom GDP , China Trade and CBRT",
-      "2026-03-08 | thedailystar.net | Inflation hits 10 - month high in February , crosses 9 %",
-      "2026-03-08 | elpasoinc.com | The  hardware store  of the AI  gold rush  | Columns"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-08 | rediff.com | Gold poised for volatile week as West Asia crisis roils markets",
-      "2026-03-08 | asiabulletin.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | calcuttanews.net | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | sanantoniopost.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | mexicostar.com | US gold revaluation could wipe out 70 per cent of budget deficit amid West Asia conflict",
-      "2026-03-08 | theglobeandmail.com | A prolonged war in the Middle East will be bad for your portfolio . Here how to prepare"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
