@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-09T19:17:37.755Z",
+  "checkedAt": "2026-03-09T20:08:15.690Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-09T19:17:37.676Z",
+  "dataFetchedAt": "2026-03-09T20:08:15.614Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,40 +9,47 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 4,
+    "missingFactors": [
+      "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y",
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 2Y"
+    ],
     "staleFactors": [
       "US Dollar Trade Weighted Index (2026-02-27)"
     ],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "geopoliticalCount": 7,
+    "countryActionCount": 14,
+    "dollarYieldCount": 11,
     "sourceFailures": [
       {
-        "id": "gdelt_geopolitics",
+        "id": "us_real_yield_10y",
         "error": "The operation timed out."
       },
       {
-        "id": "gdelt_country_actions",
+        "id": "us_breakeven_10y",
         "error": "The operation timed out."
       },
       {
-        "id": "gdelt_dollar_yields",
+        "id": "us_fed_funds_effective",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_2y",
         "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 2Y"
   ],
   "warnings": [
     "Stale factors: US Dollar Trade Weighted Index (2026-02-27)",
-    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
+    "Source failures: us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_2y (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
