@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T20:08:36.111Z",
+  "generatedAt": "2026-03-09T21:09:17.191Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chững lại, trong khi VIX tăng vọt 66% phản ánh lo ngại địa chính trị về chiến tranh Iran. Tuy nhiên, rủi ro điều chỉnh kỹ thuật cao khi lợi suất US Treasury 10Y hồi phục mạnh 2.74% trong 5 ngày và giá thế giới giảm 3.28% cùng kỳ, nhà đầu tư nên chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 99th percentile 5 năm với premium 13.6%, trong bối cảnh VIX tăng vọt 66% do chiến tranh Iran tạo tín hiệu quá mua ngắn hạn. Tuy nhiên, xu hướng tăng 2.56%/tháng và yếu tố địa chính trị căng thẳng vẫn hỗ trợ dài hạn, nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (~162 triệu VND/lượng) trước khi gia nhập.",
     "reasons": [
-      "Giá SJC 184.1 triệu đồng/lượng đang ở phân vị 99% trong 5 năm qua, quá gần đỉnh lịch sử với rủi ro điều chỉnh kỹ thuật cao khi giá thế giới đã giảm 3.28% trong 5 ngày gần nhất.",
-      "Động lượng tăng yếu đi: giá thế giới hiện tại 5145 USD/oz thấp hơn đỉnh 5331 USD/oz ngày 02/03, đồng thời lợi suất US Treasury 10Y hồi phục mạnh +2.74% trong 5 ngày gây áp lực nghịch đảo lên giá vàng.",
-      "VIX tăng vọt 66.05% trong 20 ngày và các tiêu đề về 'chiến tranh Iran' hỗ trợ yếu tố trú ẩn an toàn, nhưng premium SJC 13.5% vẫn ở mức hợp lý so với trung bình chuỗi 30 ngày (12-17%), không có tín hiệu khan hiếm cục bộ cực đoan.",
-      "Biên độ dao động ngày 1.4% và việc giá SJC giao dịch trên MA7 (162.1 triệu) lẫn MA30 (161.2 triệu) cho thấy xu hướng tăng vẫn còn nhưng đang cần hồi điều chỉnh trước khi tiếp tục."
+      "Giá SJC 184.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), tín hiệu quá mua rõ ràng cần thời gian củng cố.",
+      "VIX tăng mạnh 66.05% trong 20 ngày (lên 29.49) phản ánh sự hoảng loạn thị trường ngắn hạn, thường đi kèm biến động hai chiều lớn trước khi định hướng rõ.",
+      "Giá thế giới giảm -3.48% trong 5 ngày gần nhất (XAUUSD từ 5330 về 5139 USD/oz), tạo áp lực điều chỉnh lên giá vàng Việt Nam dù premium vẫn duy trì.",
+      "Lợi suất thực 10 năm Mỹ tăng 4.65% trong 5 ngày (lên 1.8%) và USD Index tăng 1.42% tạo áp lực ngược lên giá vàng ngắn hạn."
     ],
     "risks": [
-      "Lợi suất trái phiếu Mỹ tiếp tục tăng cao hơn mức 4.13% hiện tại sẽ làm giảm hấp dẫn của vàng và gây áp lực bán ròng.",
-      "Sự thiếu vắng dữ liệu lạm phát kỳ vọng và lãi suất Fed thực tế (missing factors) làm giảm độ tin cậy trong phân tích vĩ mô.",
-      "Địa chính trị căng thẳng có thể gây biến động hai chiều bất ngờ, đẩy giá bật tăng đột biến hoặc điều chỉnh sâu nếu tình hình giải tỏa."
+      "Chiến tranh Iran có thể đẩy giá vàng sốc tăng bất ngờ, bỏ lỡ cơ hội nếu chờ quá lâu ở vùng hỗ trợ.",
+      "Premium 13.6% có thể co hẹp về 11-12% nếu giá thế giới hồi phục nhanh hơn giá trong nước, làm giảm hiệu quả đầu tư.",
+      "Thanh khoản cao trong giai đoạn VIX 29.49 có thể tạo ra các cây nến đảo chiều bất ngờ, rủi ro cho lệnh đuổi đỉnh."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Change 20d",
-        "value": 66.05,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Treasury 10Y Change 5d",
-        "value": 2.74,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot Change 5d",
-        "value": -3.28,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "SJC Premium vs World",
-        "value": 13.5,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price vs MA30 VND",
+        "key": "sjc_price",
         "value": 184100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "US Dollar Index Change 20d",
-        "value": 0.33,
+        "key": "percentile_5y",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_pct",
+        "value": 13.62,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_change_20d",
+        "value": 66.05,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "xauusd_change_5d",
+        "value": -3.48,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.8,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "ma7_vnd",
+        "value": 162075990,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change30d_pct",
+        "value": 2.56,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T20:07:53.821Z",
+    "latestTimestamp": "2026-03-09T21:08:51.030Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 162209002.13235205,
-    "premiumPct": 13.5,
-    "change7dPct": 0.62,
-    "change30dPct": 2.67,
+    "intlVndPerTael": 162029421.95895338,
+    "premiumPct": 13.62,
+    "change7dPct": 0.51,
+    "change30dPct": 2.56,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162101644,
-    "ma30VndPerTael": 161172300,
+    "ma7VndPerTael": 162075990,
+    "ma30VndPerTael": 161166314,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,90 +90,85 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T20:08:15.614Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Real Yield 10Y",
-      "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y"
-    ],
+    "fetchedAt": "2026-03-09T21:08:59.682Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5147.78,
+        "value": 5136.9,
         "unit": "USD/oz",
         "date": "2026-03-09",
-        "change1dPct": -0.11,
-        "change5dPct": -3.28,
-        "change20dPct": 1.76,
+        "change1dPct": -0.32,
+        "change5dPct": -3.48,
+        "change20dPct": 1.55,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 117.8223,
+        "value": 119.491,
         "unit": "index",
-        "date": "2026-02-27",
-        "change1dPct": -0.07,
-        "change5dPct": -0.14,
-        "change20dPct": 0.33,
+        "date": "2026-03-06",
+        "change1dPct": -0.06,
+        "change5dPct": 1.42,
+        "change20dPct": 0.83,
         "relationToGold": "inverse"
       },
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": null,
+        "value": 1.8,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-06",
+        "change1dPct": -1.1,
+        "change5dPct": 4.65,
+        "change20dPct": -4.76,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.34,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-09",
+        "change1dPct": -0.43,
+        "change5dPct": 2.18,
+        "change20dPct": 0,
         "relationToGold": "direct"
       },
       {
         "id": "us_fed_funds_effective",
         "name": "US Effective Fed Funds Rate",
-        "value": null,
+        "value": 3.64,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-06",
+        "change1dPct": 0,
+        "change5dPct": 0,
+        "change20dPct": 0,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.13,
+        "value": 4.15,
         "unit": "%",
-        "date": "2026-03-05",
-        "change1dPct": 0.98,
-        "change5dPct": 2.74,
-        "change20dPct": -3.73,
+        "date": "2026-03-06",
+        "change1dPct": 0.48,
+        "change5dPct": 4.53,
+        "change20dPct": -1.43,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.56,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-06",
+        "change1dPct": -0.28,
+        "change5dPct": 5.33,
+        "change20dPct": 2.59,
         "relationToGold": "inverse"
       },
       {
@@ -191,26 +192,28 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-09 | finance.yahoo.com | BlackRock warns investing in the S & P 500 isnt enough for retirement . They recommend a strategy that prioritizes income",
-      "2026-03-09 | theglobeandmail.com | The war has left many investors asking : How volatile are my investments ?",
-      "2026-03-09 | tomshardware.com | New Commerce Department AI export rules could be seismic change for CSPs and data center operators buying American GPUs at scale means committing to building American infrastructure",
-      "2026-03-09 | myanmarnews.net | The Iran war has triggered a puzzling market trend"
+      "2026-03-09 | local12.com | US dollar gains strength as safe haven investment amid uncertainty from Iran war",
+      "2026-03-09 | investopedia.com | Here What Experts Think About the Economy and Markets as War in Iran Continues",
+      "2026-03-09 | abc.net.au | Dubai influencers have a new rule : Dont mention the war",
+      "2026-03-09 | thenewamerican.com | States Sue Trump Over New Tariffs Imposed Under 1974 Trade Act",
+      "2026-03-09 | dailynews.com | These lawmakers were shaped by combat after 9 / 11 , grapple with new war",
+      "2026-03-09 | news3lv.com | US dollar gains strength as safe haven investment amid uncertainty from Iran war"
     ],
     "countryActionHeadlines": [
-      "2026-03-09 | myanmarnews.net | The Iran war has triggered a puzzling market trend",
-      "2026-03-09 | coindesk.com | Bitcoin ( BTC ) could be the big winner if the U . S .- Iran conflict drags on for several months",
-      "2026-03-09 | markets.financialcontent.com | FinancialContent - The GENIUS Act : US Financial Institutions Enter the Blockchain Era with Federal Guardrails",
-      "2026-03-09 | batonrougepost.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-09 | markets.financialcontent.com | FinancialContent - The Warsh Pivot : Market - Based Resilience Takes Center Stage as Kevin Warsh Tapped for Fed Chair",
-      "2026-03-09 | moneycontrol.com | Nasdaq 100 erases drop as dip buyers pounce on Iran War worries"
+      "2026-03-09 | thenewamerican.com | States Sue Trump Over New Tariffs Imposed Under 1974 Trade Act",
+      "2026-03-09 | tvone.tv | Iran War Already Increasing Gas Prices , Mortgage Rates",
+      "2026-03-09 | brazilsun.com | The Iran war has triggered a puzzling market trend",
+      "2026-03-09 | azernews.az | Iran conflict forces Asian central banks into sharp policy rethink",
+      "2026-03-09 | marketscreener.com | Dollar higher as US - Israeli war on Iran sends oil prices soaring",
+      "2026-03-09 | myanmarnews.net | The Iran war has triggered a puzzling market trend"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-09 | finance.yahoo.com | BlackRock warns investing in the S & P 500 isnt enough for retirement . They recommend a strategy that prioritizes income",
-      "2026-03-09 | theglobeandmail.com | The war has left many investors asking : How volatile are my investments ?",
-      "2026-03-09 | myanmarnews.net | The Iran war has triggered a puzzling market trend",
-      "2026-03-09 | crookwellgazette.com.au | The Echidna : Gold drapes , winners , losers and great TV | Crookwell Gazette",
-      "2026-03-09 | westernadvocate.com.au | The Echidna : Gold drapes , winners , losers and great TV | Western Advocate",
-      "2026-03-09 | eastbaytimes.com | Bitcoin climbs in break with stocks amid inflation concerns"
+      "2026-03-09 | naroomanewsonline.com.au | The Echidna : Gold drapes , winners , losers and great TV | Narooma News",
+      "2026-03-09 | fortune.com | How to invest in gold : 6 ways to buy this precious metal",
+      "2026-03-09 | juneesoutherncross.com.au | The Echidna : Gold drapes , winners , losers and great TV | Southern Cross",
+      "2026-03-09 | brazilsun.com | The Iran war has triggered a puzzling market trend",
+      "2026-03-09 | yasstribune.com.au | The Echidna : Gold drapes , winners , losers and great TV | Yass Tribune",
+      "2026-03-09 | begadistrictnews.com.au | The Echidna : Gold drapes , winners , losers and great TV | Bega District News"
     ]
   }
 }

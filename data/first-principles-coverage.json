@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-09T20:08:15.690Z",
+  "checkedAt": "2026-03-09T21:08:59.761Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-09T20:08:15.614Z",
+  "dataFetchedAt": "2026-03-09T21:08:59.682Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,47 +9,18 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 4,
-    "missingFactors": [
-      "US Real Yield 10Y",
-      "US Breakeven Inflation 10Y",
-      "US Effective Fed Funds Rate",
-      "US Treasury Yield 2Y"
-    ],
-    "staleFactors": [
-      "US Dollar Trade Weighted Index (2026-02-27)"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
+    "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 7,
-    "countryActionCount": 14,
-    "dollarYieldCount": 11,
-    "sourceFailures": [
-      {
-        "id": "us_real_yield_10y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_breakeven_10y",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_fed_funds_effective",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "us_treasury_2y",
-        "error": "The operation timed out."
-      }
-    ],
-    "healthy": false
+    "geopoliticalCount": 14,
+    "countryActionCount": 15,
+    "dollarYieldCount": 9,
+    "sourceFailures": [],
+    "healthy": true
   },
-  "hardFailures": [
-    "Missing required factors: US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 2Y"
-  ],
-  "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-02-27)",
-    "Source failures: us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_2y (The operation timed out.)"
-  ],
-  "canProceedToIntegration": false
+  "hardFailures": [],
+  "warnings": [],
+  "canProceedToIntegration": true
 }
