@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-09T16:22:14.301Z",
+  "checkedAt": "2026-03-09T17:18:39.280Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-09T16:22:14.223Z",
+  "dataFetchedAt": "2026-03-09T17:18:39.203Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -11,7 +11,7 @@
     "requiredFactors": 8,
     "availableFactors": 7,
     "missingFactors": [
-      "US Real Yield 10Y"
+      "US Effective Fed Funds Rate"
     ],
     "staleFactors": [
       "US Dollar Trade Weighted Index (2026-02-27)"
@@ -23,7 +23,7 @@
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "us_real_yield_10y",
+        "id": "us_fed_funds_effective",
         "error": "The operation timed out."
       },
       {
@@ -36,20 +36,20 @@
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "The operation timed out."
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: US Real Yield 10Y",
+    "Missing required factors: US Effective Fed Funds Rate",
     "Not enough geopolitical events (0/3)",
     "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
     "Stale factors: US Dollar Trade Weighted Index (2026-02-27)",
-    "Source failures: us_real_yield_10y (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (The operation timed out.)"
+    "Source failures: us_fed_funds_effective (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
