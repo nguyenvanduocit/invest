@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T01:34:40.077Z",
+  "generatedAt": "2026-03-10T02:56:33.316Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,67 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 99th percentile với đà tăng mạnh +2.86%/30 ngày, nhưng thanh khoản thấp và biến động cao (VIX 29.49) cảnh báo rủi ro điều chỉnh ngắn hạn; nhà đầu tư không nên mua đuổi tại vùng giá này.",
+    "thesis": "Giá vàng SJC đang ở vùng cực cao (percentile 99% 5 năm) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX tăng vọt 66% và lợi suất thực USD hồi phục. Nên chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định thị trường trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 185.5 triệu VND/lượng đang ở percentile 99% (5 năm), mức cao nhất lịch sử, rủi ro mua đỉnh là rất lớn.",
-      "Động lượng tăng giá 30 ngày (+2.86%) và 7 ngày (+0.81%) vẫn dương, giá thế giới (5154.85 USD/oz) nằm trên MA7/MA30, xu hướng chính vẫn là tăng.",
-      "Biến động thị trường tài chính tăng vọt: VIX tăng 48.49% trong 5 ngày lên mức 29.49, tín hiệu bất ổn thường dẫn đến chốt lời nhanh trên thị trường vàng.",
-      "Premium 13.98% nằm trong biên độ dao động 11-17% của 30 ngày qua, không có tín hiệu bất thường về cung cầu nội địa để đẩy giá cao hơn."
+      "Giá SJC 186.1 triệu đồng/lượng đang ở phân vị 99% trong 5 năm, quá cao để mua đuổi (market_snapshot).",
+      "VIX tăng 66.05% trong 20 ngày (lên 29.49) cho thấy tâm lý thị trường hoảng loạn, thường đi kèm biến động hai chiều dữ dội (first_principles_context).",
+      "Lợi suất thực USD 10 năm tăng 4.65% trong 5 ngày gần nhất (lên 1.8%) tạo áp lực giảm lên giá vàng thế giới (first_principles_context).",
+      "Premium 13.88% nằm trong biên dao động 30 ngày (10.99%-17.45%), không có tín hiệu bất thường để kỳ vọng giảm sâu spread (monthly_series_30d)."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật mạnh sau khi thiết lập đỉnh mới do thanh khoản thị trường thấp.",
-      "Rủi ro dữ liệu vĩ mô: Không có tin tức địa chính trị hay hành động quốc gia cụ thể trong input để hỗ trợ đà tăng giá tiếp theo.",
-      "Lợi suất thực USD (1.8%) và DXY tăng 1.42%/5 ngày có thể gây áp lực giảm lên giá vàng thế giới."
+      "Giá thế giới có thể điều chỉnh mạnh nếu căng thẳng Trung Đông hạ nhiệt theo phát ngôn của Trump.",
+      "Thanh khoản cao nhưng biến động 1.42%/ngày có thể gây lỗ nếu mua đuổi FOMO.",
+      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 30d",
-        "value": 2.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Index Change 5d",
-        "value": 48.49,
+        "key": "vix_change_20d",
+        "value": 66.05,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 13.98,
+        "key": "us_real_yield_10y_change_5d",
+        "value": 4.65,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_current_price",
+        "value": 186100000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Intl Gold Price",
-        "value": 5154.85,
-        "unit": "USD/oz",
+        "key": "premium_range_30d",
+        "value": 10.99,
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.8,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "DXY Change 5d",
+        "key": "volatility_daily",
         "value": 1.42,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T01:34:16.445Z",
-    "sjcVndPerTael": 185500000,
-    "intlVndPerTael": 162751093.76535437,
-    "premiumPct": 13.98,
-    "change7dPct": 0.81,
-    "change30dPct": 2.86,
+    "latestTimestamp": "2026-03-10T02:56:06.623Z",
+    "sjcVndPerTael": 186100000,
+    "intlVndPerTael": 163421284.06543887,
+    "premiumPct": 13.88,
+    "change7dPct": 1.23,
+    "change30dPct": 3.29,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162384543,
-    "ma30VndPerTael": 161420727,
+    "ma7VndPerTael": 162480285,
+    "ma30VndPerTael": 161443066,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +78,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T01:34:22.429Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-10T02:56:14.246Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5159.41,
+        "value": 5172.28,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.5,
-        "change5dPct": 1.39,
-        "change20dPct": 2.67,
+        "change1dPct": 0.75,
+        "change5dPct": 1.65,
+        "change20dPct": 2.92,
         "relationToGold": "context"
       },
       {
@@ -185,8 +179,23 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-10 | keysnews.com | War in the Middle East : latest developments",
+      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon",
+      "2026-03-10 | spacewar.com | War in the Middle East : latest developments",
+      "2026-03-10 | cointelegraph.com | Bitcoin ETF Flows Rise As Gold Demand Cools : What Next for BTC ?",
+      "2026-03-10 | proactiveinvestors.com.au | Small Cap Watch : Orthocell , Far East Gold , Pantoro , St George and more ....",
+      "2026-03-10 | proactiveinvestors.com.au | Far East Gold extends high - grade gold mineralisation at Sua prospect ahead of resource update"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon",
+      "2026-03-10 | thejakartapost.com | What gold relentless rise is telling us about the dollar - Academia",
+      "2026-03-10 | businesstimes.com.sg | Global economy faces widening strains as Middle East war intensifies",
+      "2026-03-10 | timesofindia.indiatimes.com | Rupee tumbles to new low of 92 . 35 against dollar - The Times of India"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon",
+      "2026-03-10 | thestar.com.my | Oil soars then retreats , gold drops as Iran war jolts global commodity markets"
+    ]
   }
 }
