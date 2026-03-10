@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T17:18:17.645Z",
+  "generatedAt": "2026-03-10T18:16:50.469Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với động lượng tăng mạnh do căng thẳng địa chính trị, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX giảm 13.53% và giá đã vượt xa MA30.",
+    "thesis": "Giá SJC 186.1 triệu VND/lượng đang ở vùng cực kỳ cao (percentile 99% 5 năm) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là lớn khi VIX giảm và lợi suất thực USD hồi phục. Nên chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy vùng giá này là cực kỳ hiếm và rủi ro cao.",
-      "Căng thẳng địa chính trị leo thang (Iran tấn công Israel) đẩy giá thế giới lên 5230.31 USD/oz, tăng 4.37% sau 30 ngày.",
-      "VIX giảm mạnh 13.53% xuống 25.5 điểm trong ngày, tín hiệu lo âu thị trường hạ nhiệt có thể làm giảm áp lực mua vàng safe-haven.",
-      "Lợi suất thực US 10Y tăng 4.65% trong 5 ngày lên 1.8%, tạo áp lực ngược lên giá vàng thế giới."
+      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy vùng giá này cực kỳ cao và rủi ro mua đỉnh hiện hữu.",
+      "VIX giảm mạnh -13.53% xuống 25.5 điểm sau khi tăng 46.89% trong 20 ngày, tín hiệu hoảng loạn tài chính tạm thời lắng xuống có thể làm giảm sức mua vàng phòng thủ.",
+      "Lợi suất thực USD 10 năm tăng 4.65% trong 5 ngày lên 1.8%, tạo áp lực ngược lên giá vàng thế giới khi chi phí cơ hội nắm giữ vàng tăng.",
+      "Biến động ngày 1.44% kết hợp premium dao động 10.99%-17.45% trong 30 ngày cho thấy thị trường Việt Nam bất ổn định, không phải xu hướng tăng bền vững."
     ],
     "risks": [
-      "Giá có thể điều chỉnh mạnh từ đỉnh lịch sử khi tâm lý sợ hãi địa chính trị hạ nhiệt.",
-      "Thanh khoản cao nhưng biến động 1.45%/ngày khiến rủi ro giao dịch ngắn hạn tăng.",
-      "Premium 12.7% có thể co hẹp nếu giá thế giới giảm nhanh hơn giá trong nước."
+      "Giá thế giới phá vỡ đỉnh 5277 USD/oz và thiết lập mặt bằng giá mới cao hơn, kéo giá SJC tiếp tục tăng.",
+      "Lạm phát kỳ vọng (breakeven 10Y) tăng trở lại hoặc sự kiện địa chính trị bất ngờ kích hoạt làn sóng mua vàng an toàn.",
+      "Thanh khoản thấp tại vùng giá cực đỉnh khiến nhà đầu tư khó thoát hàng khi thị trường điều chỉnh."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Latest",
+        "key": "SJC Latest Price",
         "value": 186100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "World Gold Price",
-        "value": 5230.31,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "VIX Index Change 1d",
+        "key": "VIX 1-Day Change",
         "value": -13.53,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
+        "key": "US Real Yield 10Y 5-Day Change",
         "value": 4.65,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 4.37,
+        "key": "Premium Range 30D Low",
+        "value": 10.99,
         "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium Range 30D High",
+        "value": 17.45,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "MA7 Support Level",
+        "value": 162700273,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World Price",
-        "value": 12.7,
+        "key": "Gold Spot 20-Day Change",
+        "value": 3.77,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T17:17:54.873Z",
+    "latestTimestamp": "2026-03-10T18:16:17.362Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 165133702.88038206,
-    "premiumPct": 12.7,
-    "change7dPct": 2.29,
-    "change30dPct": 4.37,
-    "volatilityDailyPct": 1.45,
-    "ma7VndPerTael": 162724916,
-    "ma30VndPerTael": 161500147,
+    "intlVndPerTael": 164961200.56411457,
+    "premiumPct": 12.81,
+    "change7dPct": 2.18,
+    "change30dPct": 4.26,
+    "volatilityDailyPct": 1.44,
+    "ma7VndPerTael": 162700273,
+    "ma30VndPerTael": 161494397,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T17:18:02.329Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-10T18:16:20.616Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5227.49,
+        "value": 5215.17,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 1.82,
-        "change5dPct": 2.73,
-        "change20dPct": 4.02,
+        "change1dPct": 1.58,
+        "change5dPct": 2.49,
+        "change20dPct": 3.77,
         "relationToGold": "context"
       },
       {
@@ -185,22 +191,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-10 | thefox1049.com | Iranian barrages target Israel and Gulf countries as US warns Iran of  most intense day of strikes"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-10 | laosnews.net | Dollar rises , euro slips as war pushes oil near $120",
-      "2026-03-10 | torontotelegraph.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | europesun.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-10 | iranherald.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | oklahomastar.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | trinidadtimes.com | US dollar surges as oil rally fuels global market fears"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-10 | europesun.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-10 | northkoreatimes.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - Gold Shatters Records , Surging to $5 , 195 . 60 Amid Middle East Conflict and Persistent Debt Fears",
-      "2026-03-10 | en.tempo.co | Middle East Tensions Expected to Lift Gold Prices"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
