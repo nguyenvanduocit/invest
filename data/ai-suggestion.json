@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T11:13:07.880Z",
+  "generatedAt": "2026-03-10T12:11:48.058Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,30 +7,36 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99 percentile với đà tăng mạnh 3.57%/tháng, nhưng rủi ro điều chỉnh kỹ thuật cao khi VIX tăng vọt 66% và lợi suất thực USD tăng 4.65% trong 5 ngày gần nhất.",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX tăng vọt 66% và thị trường kỳ vọng xung đột Trung Đông hạ nhiệt.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang ở mức cao nhất 5 năm (percentile 99%), cao hơn MA30 (161.46 triệu VND/lượng) tới 15.3%, báo hiệu vùng quá mua kỹ thuật.",
-      "Lợi suất thực USD 10 năm tăng mạnh 4.65% trong 5 ngày (lên 1.8%) tạo áp lực nghịch biến lên giá vàng thế giới, đối trọng với đà tăng từ VIX.",
-      "VIX tăng vọt 66.05% trong 20 ngày lên mức 29.49 chỉ báo bất ổn thị trường, hỗ trợ vàng nhưng biến động cao khiến điểm vào chưa tối ưu.",
-      "Premium 13.57% nằm trong biên dao động 30 ngày (10.99%-17.45%), không có tín hiệu bùng nổ cầu cực đoan để đẩy giá tiếp tục tăng đột biến ngắn hạn."
+      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cho thấy giá đã quá cao trong lịch sử và rủi ro mua đỉnh là đáng kể.",
+      "Đà tăng giá thế giới vẫn tốt (+2.88% 20 ngày tới 5166.77 USD/oz) nhưng động lực có thể suy yếu nếu xung đột địa chính trị hạ nhiệt theo tin tức.",
+      "Premium 14.08% nằm trong biên độ dao động 30 ngày qua (10.99%-17.45%), không có dấu hiệu bất thường cực đoan cần cảnh báo.",
+      "VIX tăng mạnh 66.05% trong 20 ngày cho thấy tâm lý thị trường lo âu, thường đi kèm biến động giá lớn hai chiều."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể gây điều chỉnh mạnh giá vàng thế giới, kéo theo SJC.",
-      "Giá ở percentile 99% có rủi ro điều chỉnh kỹ thuật cao, drawdown tồi tệ nhất trong 5 năm đạt 41.26%.",
-      "Thiếu tín hiệu địa chính trị cấp thiết hoặc hành động can thiệp của quốc gia để tạo đà tăng mới."
+      "Tin tức về 'kết thúc nhanh chiến tranh Iran' có thể khiến giá vàng thế giới điều chỉnh mạnh giảm nếu rủi ro địa chính trị giảm.",
+      "Giá SJC cao kỷ lục có khả năng gặp áp lực chốt lời ngắn hạn từ nhà đầu tư cá nhân.",
+      "Biến động ngày 1.42% có thể gây sốc tài khoản nếu dùng đòn bẩy."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_ma30",
-        "value": 15.3,
-        "unit": "%",
+        "key": "sjc_price_latest",
+        "value": 186100000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
+      },
+      {
+        "key": "intl_gold_change_20d",
+        "value": 2.88,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
         "key": "vix_change_20d",
@@ -39,41 +45,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": 4.65,
+        "key": "premium_range_30d_low",
+        "value": 10.99,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_change_30d",
-        "value": 3.57,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 6.46,
-        "unit": "% (10.99-17.45)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "worst_drawdown_5y",
-        "value": 41.26,
+        "key": "premium_range_30d_high",
+        "value": 17.45,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 1.42,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T11:12:42.918Z",
+    "latestTimestamp": "2026-03-10T12:11:23.361Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 163861768.1633026,
-    "premiumPct": 13.57,
-    "change7dPct": 1.5,
-    "change30dPct": 3.57,
+    "intlVndPerTael": 163127413.202393,
+    "premiumPct": 14.08,
+    "change7dPct": 1.04,
+    "change30dPct": 3.1,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162543211,
-    "ma30VndPerTael": 161457749,
+    "ma7VndPerTael": 162438303,
+    "ma30VndPerTael": 161433271,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T11:12:45.942Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-10T12:11:29.827Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5190.83,
+        "value": 5170.37,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 1.11,
-        "change5dPct": 2.01,
-        "change20dPct": 3.29,
+        "change1dPct": 0.71,
+        "change5dPct": 1.61,
+        "change20dPct": 2.88,
         "relationToGold": "context"
       },
       {
@@ -185,8 +185,24 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-10 | thedailystar.net | Leela Nag : A lone tigress who waged war against the status quo",
+      "2026-03-10 | livemint.com | Gold rate ₹18 , 000 away from record high : Can yellow metal hit ₹2 lakh amid US - Iran war de - escalation hopes ?",
+      "2026-03-10 | marketscreener.com | Dax gains ground as investors hope for imminent end to Middle East conflict"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-10 | bignewsnetwork.com | Dollar jumps as oil nears $120 amid escalating Middle East war",
+      "2026-03-10 | livemint.com | Gold rate ₹18 , 000 away from record high : Can yellow metal hit ₹2 lakh amid US - Iran war de - escalation hopes ?",
+      "2026-03-10 | legit.ng | Dollar Value Rises More , Hits 5 - Month High as CBN Releases New Exchange Rate",
+      "2026-03-10 | finanznachrichten.de | Australian Dollar Rises After China Trade Surplus Data",
+      "2026-03-10 | fool.com | 1 Sizzling 12 . 7 % Ultra - High - Yield Dividend Stock to Buy Hand Over Fist Right Now"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-10 | livemint.com | Gold rate ₹18 , 000 away from record high : Can yellow metal hit ₹2 lakh amid US - Iran war de - escalation hopes ?",
+      "2026-03-10 | marketscreener.com | Dax gains ground as investors hope for imminent end to Middle East conflict",
+      "2026-03-10 | tomshardware.com | $500 , 000 gold RTX 5090 is now worth $830 , 000 thanks to rocketing commodity prices Asus ROG Astral RTX 5090 Real Gold Edition was actually a savvy investment , worth over 50 % more than at inception",
+      "2026-03-10 | finance.yahoo.com | Gold price today , Tuesday , March 10 : Gold rises after President Trump signalled quick end to Iran war",
+      "2026-03-10 | finanznachrichten.de | Australian Dollar Rises After China Trade Surplus Data"
+    ]
   }
 }
