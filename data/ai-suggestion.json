@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T03:48:48.554Z",
+  "generatedAt": "2026-03-10T04:34:00.051Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 2.93%/tháng, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng khi VIX tăng vọt 66% và tin tức địa chính trị cho thấy khả năng giảm căng thẳng. Nhà đầu tư không nên mua đuổi ở mức giá này.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng khi VIX nhảy vọt 66% và tin tức địa chính trị bắt đầu có tín hiệu hạ nhiệt xung đột.",
     "reasons": [
-      "Giá SJC 186.1 triệu/lượng đang ở phân vị 99% trong 5 năm qua, cao hơn MA30 (161.4 triệu/lượng) tới 15.3%, cho thấy giá đã vào vùng quá mua lịch sử.",
-      "VIX tăng mạnh 66.05% trong 20 ngày (lên mức 29.49) phản ánh sự hoảng loạn thị trường, thường đi kèm rủi ro thanh khoản và biến động hai chiều.",
-      "Tin tức địa chính trị ngày 10/03/2026 cho thấy Trump phát biểu chiến tranh Iran 'có thể kết thúc sớm', dầu giảm giá - nguy cơ giảm yếu tố bảo hiểm (risk-off) có thể khiến vàng điều chỉnh.",
-      "Lợi suất thực US 10Y tăng 4.65% trong 5 ngày (lên 1.8%) tạo áp lực ngược lên giá vàng thế giới, hạn chế đà tăng của giá quốc tế."
+      "Giá SJC 186.1 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 99% 5 năm), tăng 3.02% trong 30 ngày và giao dịch trên MA7/MA30 (khoảng 162-164 triệu VND/lượng quy đổi thế giới).",
+      "VIX tăng vọt 66.05% trong 20 ngày (lên 29.49) cho thấy tâm lý thị trường lo âu, thường hỗ trợ vàng ngắn hạn nhưng đi kèm biến động cao.",
+      "Lợi suất thực 10 năm Mỹ giảm 4.76% trong 20 ngày xuống 1.8% và USD Index giảm 0.06% ngày, tạo đà cho giá vàng thế giới tăng 2.73% trong 20 ngày qua.",
+      "Premium SJC ổn định ở 14.18%, nằm trong biên độ dao động 11-17% của 30 ngày qua, không có dấu hiệu bất thường cần cảnh báo."
     ],
     "risks": [
-      "Nếu xung đột Trung Đông kết thúc nhanh chóng, yếu tố 'fear premium' trong giá vàng có thể bốc hơi nhanh, gây sụt giảm giá cả thế giới và Việt Nam.",
-      "Giá SJC ở vùng cao kỷ lục với biến động 1.42%/ngày; nhà đầu tư mua lúc này đối mặt rủi ro điều chỉnh kỹ thuật sâu.",
-      "Premium 14.27% cao hơn trung bình chuỗi 30 ngày (13.2%), có thể co hẹp nếu giá thế giới giảm."
+      "Tin tức Trump cho thấy xung đột Iran có thể kết thúc sớm, có thể khiến giá vàng điều chỉnh giảm nhanh sau khi tăng nóng.",
+      "Giá đang ở vùng overbought kỹ thuật với percentile 99%, rủi ro chốt lời ngắn hạn cao nếu tín hiệu địa chính trị hạ nhiệt.",
+      "Biến động ngày ở 1.42% cộng với VIX cao có thể gây sụt giảm giá nhanh trong các phiên giao dịch ngắn."
     ],
     "evidence": [
       {
@@ -27,8 +27,8 @@
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_premium_vs_ma30",
-        "value": 15.3,
+        "key": "sjc_change_30d",
+        "value": 3.02,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -39,41 +39,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change_5d",
-        "value": 4.65,
+        "key": "us_real_yield_10y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 2.93,
+        "key": "gold_spot_change_20d",
+        "value": 2.73,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "current_premium",
-        "value": 14.27,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_level",
-        "value": 29.49,
-        "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_premium_current",
+        "value": 14.18,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_price_latest",
+        "value": 186100000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T03:48:23.410Z",
+    "latestTimestamp": "2026-03-10T04:33:31.106Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 162862501.84015667,
-    "premiumPct": 14.27,
-    "change7dPct": 0.88,
-    "change30dPct": 2.93,
+    "intlVndPerTael": 162994372.64190575,
+    "premiumPct": 14.18,
+    "change7dPct": 0.96,
+    "change30dPct": 3.02,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162400459,
-    "ma30VndPerTael": 161424440,
+    "ma7VndPerTael": 162419298,
+    "ma30VndPerTael": 161428836,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T03:48:28.659Z",
+    "fetchedAt": "2026-03-10T04:33:41.880Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5158.14,
+        "value": 5162.47,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.47,
-        "change5dPct": 1.37,
-        "change20dPct": 2.64,
+        "change1dPct": 0.56,
+        "change5dPct": 1.45,
+        "change20dPct": 2.73,
         "relationToGold": "context"
       },
       {
@@ -186,18 +186,26 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-10 | benzinga.com | Bitcoin , Ethereum , XRP , Dogecoin Rally As Trump Says Iran War  Pretty Much  Complete : Analyst Predicts BTC Moves If Oil Keeps Falling - Grayscale Bitcoin Mini Trust ( BTC ) ( ARCA : BTC )",
-      "2026-03-10 | aol.com | Turkey Halkbank settles US criminal case over Iran sanctions violations"
+      "2026-03-10 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Oil Prices Fall Even More on Report That Trump Called Iran War  Very Complete  | Stocks ...",
+      "2026-03-10 | livemint.com | Silver rate today rises 4 % on MCX as dollar falls after Trump signals US - Iran war may end soon - What should you do ?",
+      "2026-03-10 | morningstar.com | Oil Retreats , Asia Equities Rebound After Trump Says Iran War Could End Soon Update",
+      "2026-03-10 | marketscreener.com | Gold gains on weaker dollar , easing inflation concerns"
     ],
     "countryActionHeadlines": [
-      "2026-03-10 | thestar.com.my | Asia markets rebound , oil dives as Trump says Iran war could end soon",
-      "2026-03-10 | marketscreener.com | Asia markets rebound , oil dives as Trump says Iran war could end soon",
-      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon"
+      "2026-03-10 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Oil Prices Fall Even More on Report That Trump Called Iran War  Very Complete  | Stocks ...",
+      "2026-03-10 | livemint.com | Silver rate today rises 4 % on MCX as dollar falls after Trump signals US - Iran war may end soon - What should you do ?",
+      "2026-03-10 | marketscreener.com | Gold gains on weaker dollar , easing inflation concerns",
+      "2026-03-10 | businessday.co.za | Rand may hit R17 . 63 / $ if Middle East conflict persists , model shows",
+      "2026-03-10 | thehindubusinessline.com | Gold rises after trump signals Iran conflict may be nearing end",
+      "2026-03-10 | livemint.com | Stock market today : Trade setup for Gift Nifty 50 , US - Iran war , crude oil , gold , silver rates 8 stocks to buy or sell"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-10 | thestar.com.my | Asia markets rebound , oil dives as Trump says Iran war could end soon",
-      "2026-03-10 | fortune.com | Trump says war to end  very soon ,  floats removing oil sanctions",
-      "2026-03-10 | marketscreener.com | Asia markets rebound , oil dives as Trump says Iran war could end soon"
+      "2026-03-10 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Oil Prices Fall Even More on Report That Trump Called Iran War  Very Complete  | Stocks ...",
+      "2026-03-10 | livemint.com | Silver rate today rises 4 % on MCX as dollar falls after Trump signals US - Iran war may end soon - What should you do ?",
+      "2026-03-10 | marketscreener.com | Gold gains on weaker dollar , easing inflation concerns",
+      "2026-03-10 | thehindubusinessline.com | Gold rises after trump signals Iran conflict may be nearing end",
+      "2026-03-10 | livemint.com | Stock market today : Trade setup for Gift Nifty 50 , US - Iran war , crude oil , gold , silver rates 8 stocks to buy or sell",
+      "2026-03-10 | livemint.com | Gold , silver rates today : Gold price regains $5 , 100 level , silver price up 4 %. What should investors do ?"
     ]
   }
 }
