@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T00:18:38.460Z",
+  "generatedAt": "2026-03-10T01:34:40.077Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,63 +7,57 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 99th percentile với đà tăng chậm lại, trong khi VIX tăng vọt 66% cho thấy rủi ro thị trường cao nhưng lợi suất thực USD cũng tăng 4.65% gây áp lực ngược.",
+    "thesis": "Giá vàng SJC đang ở đỉnh lịch sử 99th percentile với đà tăng mạnh +2.86%/30 ngày, nhưng thanh khoản thấp và biến động cao (VIX 29.49) cảnh báo rủi ro điều chỉnh ngắn hạn; nhà đầu tư không nên mua đuổi tại vùng giá này.",
     "reasons": [
-      "Giá SJC 184.1 triệu VND/lượng đang ở percentile 99 (5 năm), mức cực kỳ cao so với lịch sử, rủi ro điều chỉnh kỹ thuật hiện hữu.",
-      "Động lượng tăng giảm tốc: tăng 2.45% trong 30 ngày nhưng chỉ tăng 0.41% trong 7 ngày gần đây, cho thấy phe mua mệt mỏi.",
-      "VIX tăng vọt 66.05% trong 20 ngày lên mức 29.49 chỉ báo bất ổn thị trường, thường hỗ trợ vàng nhưng cũng đi kèm biến động cao.",
-      "Lợi suất thực US 10Y tăng 4.65% (5 ngày) lên 1.8% tạo áp lực giảm lên giá vàng thế giới, trái chiều với xu hướng tăng của SJC."
+      "Giá SJC 185.5 triệu VND/lượng đang ở percentile 99% (5 năm), mức cao nhất lịch sử, rủi ro mua đỉnh là rất lớn.",
+      "Động lượng tăng giá 30 ngày (+2.86%) và 7 ngày (+0.81%) vẫn dương, giá thế giới (5154.85 USD/oz) nằm trên MA7/MA30, xu hướng chính vẫn là tăng.",
+      "Biến động thị trường tài chính tăng vọt: VIX tăng 48.49% trong 5 ngày lên mức 29.49, tín hiệu bất ổn thường dẫn đến chốt lời nhanh trên thị trường vàng.",
+      "Premium 13.98% nằm trong biên độ dao động 11-17% của 30 ngày qua, không có tín hiệu bất thường về cung cầu nội địa để đẩy giá cao hơn."
     ],
     "risks": [
-      "Giá ở vùng đỉnh 99th percentile có nguy cơ điều chỉnh kỹ thuật mạnh nếu dòng tiền yếu đi.",
-      "Thiếu dữ liệu lạm phát kỳ vọng (Breakeven 10Y) và không có sự kiện địa chính trị cụ thể, giảm độ tin cậy dự báo.",
-      "Premium 13.57% dao động mạnh trong 30 ngày (10.99%-17.45%), thanh khoản có thể bị ảnh hưởng nếu spread giãn."
+      "Điều chỉnh kỹ thuật mạnh sau khi thiết lập đỉnh mới do thanh khoản thị trường thấp.",
+      "Rủi ro dữ liệu vĩ mô: Không có tin tức địa chính trị hay hành động quốc gia cụ thể trong input để hỗ trợ đà tăng giá tiếp theo.",
+      "Lợi suất thực USD (1.8%) và DXY tăng 1.42%/5 ngày có thể gây áp lực giảm lên giá vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 30d vs 7d",
-        "value": 2.45,
-        "unit": "% vs 0.41%",
+        "key": "SJC Price Change 30d",
+        "value": 2.86,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 66.05,
+        "key": "VIX Index Change 5d",
+        "value": 48.49,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 4.65,
+        "key": "Current Premium",
+        "value": 13.98,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 6.46,
-        "unit": "% (10.99-17.45)",
+        "key": "Intl Gold Price",
+        "value": 5154.85,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "SJC Price vs MA30",
-        "value": 14.1,
-        "unit": "% above MA30",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Gold Spot 20d Change",
-        "value": 2.18,
+        "key": "US Real Yield 10Y",
+        "value": 1.8,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index 5d Change",
+        "key": "DXY Change 5d",
         "value": 1.42,
         "unit": "%",
         "source": "first_principles_context"
@@ -71,15 +65,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T00:18:02.867Z",
-    "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 162101065.62263,
-    "premiumPct": 13.57,
-    "change7dPct": 0.41,
-    "change30dPct": 2.45,
+    "latestTimestamp": "2026-03-10T01:34:16.445Z",
+    "sjcVndPerTael": 185500000,
+    "intlVndPerTael": 162751093.76535437,
+    "premiumPct": 13.98,
+    "change7dPct": 0.81,
+    "change30dPct": 2.86,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162291682,
-    "ma30VndPerTael": 161399059,
+    "ma7VndPerTael": 162384543,
+    "ma30VndPerTael": 161420727,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T00:18:24.455Z",
+    "fetchedAt": "2026-03-10T01:34:22.429Z",
     "healthy": false,
-    "missingFactors": [
-      "US Breakeven Inflation 10Y"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5134.97,
+        "value": 5159.41,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.02,
-        "change5dPct": 0.91,
-        "change20dPct": 2.18,
+        "change1dPct": 0.5,
+        "change5dPct": 1.39,
+        "change20dPct": 2.67,
         "relationToGold": "context"
       },
       {
@@ -132,12 +124,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": null,
+        "value": 2.34,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-09",
+        "change1dPct": -0.43,
+        "change5dPct": 2.18,
+        "change20dPct": 0,
         "relationToGold": "direct"
       },
       {
