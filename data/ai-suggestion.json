@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T20:08:42.346Z",
+  "generatedAt": "2026-03-10T21:09:25.252Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh từ căng thẳng địa chính trị Iran-Israel, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX giảm 13.53% và giá đã vượt xa MA7/MA30.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 99 percentile 5 năm với biên độ dao động rộng, đòi hỏi nhà đầu tư thận trọng chờ đợi điểm nhập khẩu tốt hơn thay vì đu đỉnh. Dù xu hướng trung hạn tích cực nhờ VIX cao và lợi suất thực giảm, rủi ro điều chỉnh ngắn hạn là rất lớn.",
     "reasons": [
-      "Căng thẳng địa chính trị leo thang nghiêm trọng (Iran tấn công Israel, dầu WTI gần 120 USD/thùng) thúc đẩy nhu cầu trú ẩn an toàn, đẩy giá thế giới tăng 3.44% trong 20 ngày qua lên 5198 USD/oz.",
-      "Động lượng tăng giá ngắn hạn rất mạnh: Giá SJC 186.1 triệu VND/lượng đang giao dịch cao hơn MA7 (162.9 triệu) và MA30 (161.6 triệu) từ 14-15%.",
-      "VIX ở mức 25.5 điểm cho thấy sự sợ hãi thị trường hiện hữu, hỗ trợ nhu cầu nắm giữ vàng trong ngắn hạn."
+      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), cho thấy giá đã quá cao lịch sử và rủi ro mua đỉng là đáng kể.",
+      "VIX tăng mạnh 46.89% trong 20 ngày qua lên mức 25.5 chỉ số, hỗ trợ tâm lý an toàn và duy trì nhu cầu trú ẩn vào vàng.",
+      "Lợi suất thực Mỹ 10 năm giảm 5.32% trong 20 ngày (xuống 1.78%), tạo động lực tăng giá cho vàng thế giới (tương quan nghịch biến).",
+      "Premium 13.5% đang ổn định trong dải giao dịch 30 ngày qua (10.99% - 17.45%), không có tín hiệu bất thường đột biến cần cảnh báo."
     ],
     "risks": [
-      "Giá SJC ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh là cực lớn khi thị trường quá mua.",
-      "VIX giảm 13.53% trong ngày cho thấy căng thẳng có thể hạ nhiệt nhanh chóng, gây áp lực bán tháo.",
-      "Premium 13.4% được duy trì nhưng biến động, chênh lệch thanh khoản có thể gây khó khăn khi cần bán gấp."
+      "Đang mua tại vùng giá cực đại lịch sử (99th percentile), khả năng điều chỉnh giảm ngắn hạn cao nếu thị trường đảo chiều.",
+      "Biên độ dao động ngày 1.4% cộng với VIX cao cho thấy thị trường bất ổn, dễ gây kích hoạt cắt lỗ nếu dùng đòn bẩy.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong kỳ, độ tin cậy dự báo xu hướng tiếp diễn bị giảm do thiếu driver tin tức rõ ràng."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "SJC Price",
         "value": 186100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold",
-        "value": 5198.02,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "5-Year Percentile",
         "value": 99,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "vix_level",
-        "value": 25.5,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change_1d",
-        "value": -13.53,
+        "key": "VIX 20d Change",
+        "value": 46.89,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_pct",
-        "value": 13.4,
+        "key": "US Real Yield 10Y 20d Change",
+        "value": -5.32,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 17.45,
+        "unit": "% (max)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 1.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "ma7_vnd",
-        "value": 162856369,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "intl_change_20d",
-        "value": 3.44,
-        "unit": "%",
+        "key": "Gold Spot",
+        "value": 5192.95,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T20:08:14.479Z",
+    "latestTimestamp": "2026-03-10T21:09:06.874Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 164114075.80925623,
-    "premiumPct": 13.4,
-    "change7dPct": 1.2,
-    "change30dPct": 2.43,
+    "intlVndPerTael": 163957999.68404686,
+    "premiumPct": 13.5,
+    "change7dPct": 1.1,
+    "change30dPct": 2.33,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162856369,
-    "ma30VndPerTael": 161596003,
+    "ma7VndPerTael": 162834072,
+    "ma30VndPerTael": 161590801,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -89,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T20:08:22.856Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-10T21:09:09.866Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5198.22,
+        "value": 5192.95,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 1.25,
-        "change5dPct": 2.16,
-        "change20dPct": 3.44,
+        "change1dPct": 1.15,
+        "change5dPct": 2.05,
+        "change20dPct": 3.33,
         "relationToGold": "context"
       },
       {
@@ -118,23 +113,23 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.8,
+        "value": 1.78,
         "unit": "%",
-        "date": "2026-03-06",
-        "change1dPct": -1.1,
-        "change5dPct": 4.65,
-        "change20dPct": -4.76,
+        "date": "2026-03-09",
+        "change1dPct": -1.11,
+        "change5dPct": 1.14,
+        "change20dPct": -5.32,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.34,
+        "value": 2.33,
         "unit": "%",
-        "date": "2026-03-09",
+        "date": "2026-03-10",
         "change1dPct": -0.43,
-        "change5dPct": 2.18,
-        "change20dPct": 0,
+        "change5dPct": 1.75,
+        "change20dPct": -0.85,
         "relationToGold": "direct"
       },
       {
@@ -142,7 +137,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-03-06",
+        "date": "2026-03-09",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -151,12 +146,12 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.15,
+        "value": 4.12,
         "unit": "%",
-        "date": "2026-03-06",
-        "change1dPct": 0.48,
-        "change5dPct": 4.53,
-        "change20dPct": -1.43,
+        "date": "2026-03-09",
+        "change1dPct": -0.72,
+        "change5dPct": 1.73,
+        "change20dPct": -2.37,
         "relationToGold": "inverse"
       },
       {
@@ -164,10 +159,10 @@
         "name": "US Treasury Yield 2Y",
         "value": 3.56,
         "unit": "%",
-        "date": "2026-03-06",
-        "change1dPct": -0.28,
-        "change5dPct": 5.33,
-        "change20dPct": 2.59,
+        "date": "2026-03-09",
+        "change1dPct": 0,
+        "change5dPct": 2.59,
+        "change20dPct": 1.71,
         "relationToGold": "inverse"
       },
       {
@@ -190,25 +185,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-10 | lbc.co.uk | FTSE 100 rallies as inflation fears ease",
-      "2026-03-10 | finanzen.ch | Crude Oil Plummets Following Trump Comments On Gulf War",
-      "2026-03-10 | eagle1005.com | Iranian barrages target Israel and Gulf countries as US warns Iran of  most intense day of strikes",
-      "2026-03-10 | dailydot.com | Trump says Iran war is  very complete pretty much  but also  just the beginning"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-10 | sana.sy | For the first time since 2011 : CBS restores financial ties with US Treasury",
-      "2026-03-10 | investinglive.com | Australian dollar rises to the best levels since 2023 . Four reasons why it climbing",
-      "2026-03-10 | investinglive.com | AUDUSD stretches to a new high for 2026 . Can the buyers keep the momentum going ?",
-      "2026-03-10 | laosnews.net | Dollar rises , euro slips as war pushes oil near $120",
-      "2026-03-10 | torontotelegraph.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | europesun.com | The Iran war has triggered a puzzling market trend"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-10 | lbc.co.uk | FTSE 100 rallies as inflation fears ease",
-      "2026-03-10 | newjerseytelegraph.com | Gold IRA Comparison Guide Released : Learn to Assess Top Gold IRA Companies in 2026",
-      "2026-03-10 | investinglive.com | Australian dollar rises to the best levels since 2023 . Four reasons why it climbing",
-      "2026-03-10 | finanzen.ch | Gold Soars After Trump Comments Pull Back Oil Prices"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
