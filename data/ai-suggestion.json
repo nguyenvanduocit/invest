@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T22:06:07.802Z",
+  "generatedAt": "2026-03-10T23:07:25.550Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chậm lại, khuyến nghị chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định premium trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng mạnh 2.33%/tháng, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX giảm mạnh và lợi suất thực USD hồi phục; nhà đầu tư không nên đu theo đỉnh mà chờ tín hiệu ổn định.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang nằm ở phân vị 99% trong 5 năm, rủi ro mua tại vùng cao rất lớn.",
-      "Động lượng tăng giảm tốc: tăng 1.11%/7 ngày so với 2.34%/30 ngày qua, tín hiệu xu hướng yếu dần.",
-      "VIX tăng mạnh +46.89% trong 20 ngày cho thấy lo ngại vĩ mô, nhưng giá vàng thế giới chưa phá vỡ đỉnh cũ 5330 USD/oz.",
-      "Lợi suất thực 10 năm Mỹ giảm -5.32% trong 20 ngày (xuống 1.78%) đang hỗ trợ vàng, nhưng cần xác nhận xu hướng."
+      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá gần vùng kháng cự tâm lý và kỹ thuật, rủi ro mua đỉnh cao.",
+      "Động lượng tăng yếu dần: giá thế giới tăng 2.18%/20 ngày nhưng chỉ tăng 0.06%/1 ngày gần đây, thiếu sức đẩy đột phá.",
+      "VIX giảm mạnh -13.53%/ngày (xuống 25.5) cho thấy cơn sợ hãi đã hạ nhiệt, giảm động lực mua vàng phòng thủ.",
+      "Lợi suất thực 10 năm USD tăng 1.14%/5 ngày (lên 1.78%) tạo áp lực ngược lên giá vàng thế giới."
     ],
     "risks": [
-      "Mua đỉnh lịch sử khi percentile 99%, rủi ro điều chỉnh sâu nếu thị trường chốt lời.",
-      "Premium 13.5% cao hơn mức thấp nhất 10.99% trong chuỗi dữ liệu, có thể co hẹp lại.",
-      "Thiếu sự kiện chính sách Mỹ (Fed) cụ thể trong dữ liệu, khó dự đoán biến động ngắn hạn từ lãi suất."
+      "Rủi ro chốt lời nhanh từ vùng đỉnh lịch sử khi thanh khoản cao.",
+      "Biến động premium 10.99%-17.45% trong 30 ngày có thể gây thua lỗ chênh lệch nếu mua đỉnh premium.",
+      "Thiếu dữ liệu sự kiện địa chính trị/can thiệp nhà nước để xác nhận xu hướng dài hạn, độ tin cậy giảm."
     ],
     "evidence": [
       {
@@ -27,53 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 7d vs 30d",
-        "value": -1.23,
-        "unit": "percentage points difference",
+        "key": "SJC Price vs MA7",
+        "value": 14.36,
+        "unit": "million VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 46.89,
+        "key": "VIX Change 1d",
+        "value": -13.53,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
-        "value": -5.32,
+        "key": "US Real Yield 10Y Change 5d",
+        "value": 1.14,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 10.99,
-        "unit": "% (low)",
+        "key": "Gold Spot Change 1d",
+        "value": 0.06,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Volatility Range 30d",
+        "value": 6.46,
+        "unit": "percentage points",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Gold Spot High 30d",
-        "value": 5330.95,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Current SJC Price",
-        "value": 186100000,
-        "unit": "VND/lượng",
+        "key": "SJC Change 30d",
+        "value": 2.33,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T22:05:41.530Z",
+    "latestTimestamp": "2026-03-10T23:07:09.302Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 163968579.6072091,
-    "premiumPct": 13.5,
-    "change7dPct": 1.11,
-    "change30dPct": 2.34,
+    "intlVndPerTael": 163952495.34562823,
+    "premiumPct": 13.51,
+    "change7dPct": 1.1,
+    "change30dPct": 2.33,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162835584,
-    "ma30VndPerTael": 161591153,
+    "ma7VndPerTael": 162833286,
+    "ma30VndPerTael": 161590617,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T22:05:52.038Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-10T23:07:12.148Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5191.93,
+        "value": 5195.26,
         "unit": "USD/oz",
-        "date": "2026-03-10",
-        "change1dPct": 1.13,
-        "change5dPct": 2.03,
-        "change20dPct": 3.31,
+        "date": "2026-03-11",
+        "change1dPct": 0.06,
+        "change5dPct": 1.05,
+        "change20dPct": 2.18,
         "relationToGold": "context"
       },
       {
@@ -185,25 +185,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-10 | mining.com | Gold price advances as Trump remarks calm inflation fears",
-      "2026-03-10 | rttnews.com | Canadian Stocks Edge Higher Following Trump Comments On Gulf War"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - March Madness Hits Wall Street : High - Stakes Inflation Data and Tech - Energy Convergence Set the Stage for 2026 Next Big Move",
-      "2026-03-10 | mining.com | Gold price advances as Trump remarks calm inflation fears",
-      "2026-03-10 | rttnews.com | Canadian Stocks Edge Higher Following Trump Comments On Gulf War",
-      "2026-03-10 | sana.sy | For the first time since 2011 : CBS restores financial ties with US Treasury",
-      "2026-03-10 | investinglive.com | Australian dollar rises to the best levels since 2023 . Four reasons why it climbing",
-      "2026-03-10 | investinglive.com | AUDUSD stretches to a new high for 2026 . Can the buyers keep the momentum going ?"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-10 | mining.com | Gold price advances as Trump remarks calm inflation fears",
-      "2026-03-10 | finanznachrichten.de | First Majestic Silver Corp .: First Majestic Announces Results of the 2025 Drilling Program at Jerritt Canyon Gold Mine",
-      "2026-03-10 | rttnews.com | Canadian Stocks Edge Higher Following Trump Comments On Gulf War",
-      "2026-03-10 | hawaiitelegraph.com | Gold IRA Comparison Guide Released : Learn to Assess Top Gold IRA Companies in 2026",
-      "2026-03-10 | lbc.co.uk | FTSE 100 rallies as inflation fears ease",
-      "2026-03-10 | newjerseytelegraph.com | Gold IRA Comparison Guide Released : Learn to Assess Top Gold IRA Companies in 2026"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
