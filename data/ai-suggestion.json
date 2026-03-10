@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T23:07:37.894Z",
+  "generatedAt": "2026-03-10T00:18:38.460Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,41 +7,36 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99th percentile với đà tăng chậm lại, trong khi lợi suất thực USD hồi phục tạo áp lực giảm lên giá vàng thế giới; nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật tốt hơn.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 99th percentile với đà tăng chậm lại, trong khi VIX tăng vọt 66% cho thấy rủi ro thị trường cao nhưng lợi suất thực USD cũng tăng 4.65% gây áp lực ngược.",
     "reasons": [
-      "Giá SJC 184.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), rủi ro mua đỉp cao khi không có đà tăng mạnh mới.",
-      "Động lượng tăng yếu dần: giá thế giới tăng 2.28% trong 20 ngày (change20dPct), thấp đáng kể so với mức tăng 2.58% của chu kỳ 30 ngày (change30dPct).",
-      "Áp lực vĩ mô ngược chiều: Lợi suất thực Mỹ 10 năm (US Real Yield 10Y) tăng mạnh 4.65% trong 5 ngày qua lên mức 1.8%, thường gây áp lực giảm lên giá vàng.",
-      "Premium 13.6% nằm trong vùng trung bình của chuỗi 30 ngày (dao động 11.15%-17.62%), không có tín hiệu bất thường để kỳ vọng thu hẹp lãi spread."
+      "Giá SJC 184.1 triệu VND/lượng đang ở percentile 99 (5 năm), mức cực kỳ cao so với lịch sử, rủi ro điều chỉnh kỹ thuật hiện hữu.",
+      "Động lượng tăng giảm tốc: tăng 2.45% trong 30 ngày nhưng chỉ tăng 0.41% trong 7 ngày gần đây, cho thấy phe mua mệt mỏi.",
+      "VIX tăng vọt 66.05% trong 20 ngày lên mức 29.49 chỉ báo bất ổn thị trường, thường hỗ trợ vàng nhưng cũng đi kèm biến động cao.",
+      "Lợi suất thực US 10Y tăng 4.65% (5 ngày) lên 1.8% tạo áp lực giảm lên giá vàng thế giới, trái chiều với xu hướng tăng của SJC."
     ],
     "risks": [
-      "Rủi ro dữ liệu nhiễu: Không có dữ liệu VIX và thiếu tin tức địa chính trị/can thiệp quốc gia trong input để đánh giá chính xác sự sợ hãi thị trường.",
-      "Giá thế giới có thể tiếp tục tăng nếu USD Index (đang ở 119.491) suy yếu nhanh chóng, đẩy giá SJC thiết lập mặt bằng cao mới."
+      "Giá ở vùng đỉnh 99th percentile có nguy cơ điều chỉnh kỹ thuật mạnh nếu dòng tiền yếu đi.",
+      "Thiếu dữ liệu lạm phát kỳ vọng (Breakeven 10Y) và không có sự kiện địa chính trị cụ thể, giảm độ tin cậy dự báo.",
+      "Premium 13.57% dao động mạnh trong 30 ngày (10.99%-17.45%), thanh khoản có thể bị ảnh hưởng nếu spread giãn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Percentile 5Y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Current Price",
-        "value": 184100000,
-        "unit": "VND/lượng",
+        "key": "SJC Change 30d vs 7d",
+        "value": 2.45,
+        "unit": "% vs 0.41%",
         "source": "market_snapshot"
       },
       {
-        "key": "Intl Gold Change 20d",
-        "value": 2.28,
+        "key": "VIX Change 20d",
+        "value": 66.05,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Intl Gold Change 30d",
-        "value": 2.58,
-        "unit": "%",
-        "source": "market_snapshot"
       },
       {
         "key": "US Real Yield 10Y Change 5d",
@@ -50,29 +45,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y Value",
-        "value": 1.8,
+        "key": "Premium Range 30d",
+        "value": 6.46,
+        "unit": "% (10.99-17.45)",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Price vs MA30",
+        "value": 14.1,
+        "unit": "% above MA30",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot 20d Change",
+        "value": 2.18,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 11.15,
+        "key": "USD Index 5d Change",
+        "value": 1.42,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-09T23:07:00.784Z",
+    "latestTimestamp": "2026-03-10T00:18:02.867Z",
     "sjcVndPerTael": 184100000,
-    "intlVndPerTael": 162064116.1161724,
-    "premiumPct": 13.6,
-    "change7dPct": 0.53,
-    "change30dPct": 2.58,
-    "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162080946,
-    "ma30VndPerTael": 161167471,
+    "intlVndPerTael": 162101065.62263,
+    "premiumPct": 13.57,
+    "change7dPct": 0.41,
+    "change30dPct": 2.45,
+    "volatilityDailyPct": 1.42,
+    "ma7VndPerTael": 162291682,
+    "ma30VndPerTael": 161399059,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -83,21 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-09T23:07:22.195Z",
+    "fetchedAt": "2026-03-10T00:18:24.455Z",
     "healthy": false,
     "missingFactors": [
-      "VIX Volatility Index"
+      "US Breakeven Inflation 10Y"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5139.89,
+        "value": 5134.97,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.12,
-        "change5dPct": 1.01,
-        "change20dPct": 2.28,
+        "change1dPct": 0.02,
+        "change5dPct": 0.91,
+        "change20dPct": 2.18,
         "relationToGold": "context"
       },
       {
@@ -125,12 +132,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.34,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-09",
-        "change1dPct": -0.43,
-        "change5dPct": 2.18,
-        "change20dPct": 0,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -169,12 +176,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": null,
+        "value": 29.49,
         "unit": "index",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-06",
+        "change1dPct": 24.17,
+        "change5dPct": 48.49,
+        "change20dPct": 66.05,
         "relationToGold": "direct"
       }
     ],

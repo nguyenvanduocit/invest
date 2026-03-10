@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-09T23:07:22.273Z",
+  "checkedAt": "2026-03-10T00:18:24.530Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-09T23:07:22.195Z",
+  "dataFetchedAt": "2026-03-10T00:18:24.455Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -11,7 +11,7 @@
     "requiredFactors": 8,
     "availableFactors": 7,
     "missingFactors": [
-      "VIX Volatility Index"
+      "US Breakeven Inflation 10Y"
     ],
     "staleFactors": [],
     "minNewsRequired": 3,
@@ -21,7 +21,7 @@
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "vix",
+        "id": "us_breakeven_10y",
         "error": "The operation timed out."
       },
       {
@@ -40,13 +40,13 @@
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: VIX Volatility Index",
+    "Missing required factors: US Breakeven Inflation 10Y",
     "Not enough geopolitical events (0/3)",
     "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: vix (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: us_breakeven_10y (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
