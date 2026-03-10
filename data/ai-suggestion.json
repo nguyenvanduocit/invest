@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T02:56:33.316Z",
+  "generatedAt": "2026-03-10T03:48:48.554Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,23 +7,29 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực cao (percentile 99% 5 năm) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX tăng vọt 66% và lợi suất thực USD hồi phục. Nên chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định thị trường trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 2.93%/tháng, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng khi VIX tăng vọt 66% và tin tức địa chính trị cho thấy khả năng giảm căng thẳng. Nhà đầu tư không nên mua đuổi ở mức giá này.",
     "reasons": [
-      "Giá SJC 186.1 triệu đồng/lượng đang ở phân vị 99% trong 5 năm, quá cao để mua đuổi (market_snapshot).",
-      "VIX tăng 66.05% trong 20 ngày (lên 29.49) cho thấy tâm lý thị trường hoảng loạn, thường đi kèm biến động hai chiều dữ dội (first_principles_context).",
-      "Lợi suất thực USD 10 năm tăng 4.65% trong 5 ngày gần nhất (lên 1.8%) tạo áp lực giảm lên giá vàng thế giới (first_principles_context).",
-      "Premium 13.88% nằm trong biên dao động 30 ngày (10.99%-17.45%), không có tín hiệu bất thường để kỳ vọng giảm sâu spread (monthly_series_30d)."
+      "Giá SJC 186.1 triệu/lượng đang ở phân vị 99% trong 5 năm qua, cao hơn MA30 (161.4 triệu/lượng) tới 15.3%, cho thấy giá đã vào vùng quá mua lịch sử.",
+      "VIX tăng mạnh 66.05% trong 20 ngày (lên mức 29.49) phản ánh sự hoảng loạn thị trường, thường đi kèm rủi ro thanh khoản và biến động hai chiều.",
+      "Tin tức địa chính trị ngày 10/03/2026 cho thấy Trump phát biểu chiến tranh Iran 'có thể kết thúc sớm', dầu giảm giá - nguy cơ giảm yếu tố bảo hiểm (risk-off) có thể khiến vàng điều chỉnh.",
+      "Lợi suất thực US 10Y tăng 4.65% trong 5 ngày (lên 1.8%) tạo áp lực ngược lên giá vàng thế giới, hạn chế đà tăng của giá quốc tế."
     ],
     "risks": [
-      "Giá thế giới có thể điều chỉnh mạnh nếu căng thẳng Trung Đông hạ nhiệt theo phát ngôn của Trump.",
-      "Thanh khoản cao nhưng biến động 1.42%/ngày có thể gây lỗ nếu mua đuổi FOMO.",
-      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng."
+      "Nếu xung đột Trung Đông kết thúc nhanh chóng, yếu tố 'fear premium' trong giá vàng có thể bốc hơi nhanh, gây sụt giảm giá cả thế giới và Việt Nam.",
+      "Giá SJC ở vùng cao kỷ lục với biến động 1.42%/ngày; nhà đầu tư mua lúc này đối mặt rủi ro điều chỉnh kỹ thuật sâu.",
+      "Premium 14.27% cao hơn trung bình chuỗi 30 ngày (13.2%), có thể co hẹp nếu giá thế giới giảm."
     ],
     "evidence": [
       {
         "key": "sjc_price_percentile_5y",
         "value": 99,
         "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_premium_vs_ma30",
+        "value": 15.3,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -39,35 +45,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_current_price",
-        "value": 186100000,
-        "unit": "VND/lượng",
+        "key": "sjc_change_30d",
+        "value": 2.93,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d",
-        "value": 10.99,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "volatility_daily",
-        "value": 1.42,
+        "key": "current_premium",
+        "value": 14.27,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "vix_level",
+        "value": 29.49,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T02:56:06.623Z",
+    "latestTimestamp": "2026-03-10T03:48:23.410Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 163421284.06543887,
-    "premiumPct": 13.88,
-    "change7dPct": 1.23,
-    "change30dPct": 3.29,
+    "intlVndPerTael": 162862501.84015667,
+    "premiumPct": 14.27,
+    "change7dPct": 0.88,
+    "change30dPct": 2.93,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162480285,
-    "ma30VndPerTael": 161443066,
+    "ma7VndPerTael": 162400459,
+    "ma30VndPerTael": 161424440,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -78,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T02:56:14.246Z",
+    "fetchedAt": "2026-03-10T03:48:28.659Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5172.28,
+        "value": 5158.14,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.75,
-        "change5dPct": 1.65,
-        "change20dPct": 2.92,
+        "change1dPct": 0.47,
+        "change5dPct": 1.37,
+        "change20dPct": 2.64,
         "relationToGold": "context"
       },
       {
@@ -180,22 +186,18 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-10 | keysnews.com | War in the Middle East : latest developments",
-      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon",
-      "2026-03-10 | spacewar.com | War in the Middle East : latest developments",
-      "2026-03-10 | cointelegraph.com | Bitcoin ETF Flows Rise As Gold Demand Cools : What Next for BTC ?",
-      "2026-03-10 | proactiveinvestors.com.au | Small Cap Watch : Orthocell , Far East Gold , Pantoro , St George and more ....",
-      "2026-03-10 | proactiveinvestors.com.au | Far East Gold extends high - grade gold mineralisation at Sua prospect ahead of resource update"
+      "2026-03-10 | benzinga.com | Bitcoin , Ethereum , XRP , Dogecoin Rally As Trump Says Iran War  Pretty Much  Complete : Analyst Predicts BTC Moves If Oil Keeps Falling - Grayscale Bitcoin Mini Trust ( BTC ) ( ARCA : BTC )",
+      "2026-03-10 | aol.com | Turkey Halkbank settles US criminal case over Iran sanctions violations"
     ],
     "countryActionHeadlines": [
-      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon",
-      "2026-03-10 | thejakartapost.com | What gold relentless rise is telling us about the dollar - Academia",
-      "2026-03-10 | businesstimes.com.sg | Global economy faces widening strains as Middle East war intensifies",
-      "2026-03-10 | timesofindia.indiatimes.com | Rupee tumbles to new low of 92 . 35 against dollar - The Times of India"
+      "2026-03-10 | thestar.com.my | Asia markets rebound , oil dives as Trump says Iran war could end soon",
+      "2026-03-10 | marketscreener.com | Asia markets rebound , oil dives as Trump says Iran war could end soon",
+      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-10 | economictimes.indiatimes.com | Gold steady on caution over Middle East conflict ; Trump says war could end soon",
-      "2026-03-10 | thestar.com.my | Oil soars then retreats , gold drops as Iran war jolts global commodity markets"
+      "2026-03-10 | thestar.com.my | Asia markets rebound , oil dives as Trump says Iran war could end soon",
+      "2026-03-10 | fortune.com | Trump says war to end  very soon ,  floats removing oil sanctions",
+      "2026-03-10 | marketscreener.com | Asia markets rebound , oil dives as Trump says Iran war could end soon"
     ]
   }
 }
