@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T05:22:06.031Z",
+  "generatedAt": "2026-03-10T06:15:27.872Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,47 +7,35 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh ngắn hạn đang gia tăng khi VIX nhảy vọt 66% và xung đột địa chính trị có dấu hiệu hạ nhiệt.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử (percentile 99%) với đà tăng chậm lại, trong khi VIX tăng vọt 66% cho thấy thị trường tài chính căng thẳng. Rủi ro điều chỉnh ngắn hạn cao, nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đã quá cao trong lịch sử và rủi ro mua đỉnh là đáng kể.",
-      "Động lượng tăng 30 ngày đạt 3.17% và giá hiện tại cao hơn MA30 (161.4 triệu VND/lượng) tới 15.3%, cho thấy thị trường đang ở trạng thái quá mua.",
-      "VIX tăng vọt 66.05% trong 20 ngày lên mức 29.49 chỉ báo sự bất ổn thị trường, nhưng tin tức \"Trump nói chiến tranh Iran có thể kết thúc sớm\" có thể làm giảm nhu cầu trú ẩn an toàn.",
-      "Lợi suất thực 10Y giảm 4.76% trong 20 ngày xuống 1.8% là động lực hỗ trợ vàng, nhưng premium 14% vẫn trong dải hợp lý 30 ngày (10.99%-17.45%)."
+      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cao hơn đáng kể so với MA30 (161.4 triệu VND/lượng), cho thấy thị trường đã tăng quá nóng trong ngắn hạn.",
+      "VIX tăng 66.05% trong 20 ngày lên mức 29.49 chỉ báo sự sợ hãi thị trường, thường dẫn đến nhu cầu thu hồi dòng tiền mặt và bán tháo tài sản bao gồm vàng.",
+      "Đà tăng 30 ngày (3.34%) yếu hơn đáng kể so với đà tăng của giá thế giới (từ ~5074 lên 5178 USD/oz), động lượng tăng giá đang chững lại quanh vùng 184-186 triệu VND.",
+      "Lợi suất thực Mỹ 10 năm tăng 4.65% trong 5 ngày gần nhất lên 1.8%, tạo áp lực dồn tiền vào trái phiếu thay vì vàng không sinh lời."
     ],
     "risks": [
-      "Giá ở mức cao kỷ lục (percentile 99%), rủi ro điều chỉnh kỹ thuật mạnh nếu tin tức địa chính trị tiếp tục tốt lên.",
-      "Sự kiện Trump phát biểu về kết thúc chiến tranh Iran có thể gây ra đợt chốt lời (profit-taking) mạnh làm giá giảm nhanh.",
-      "VIX cao (29.49) cho thấy biến động thị trường tài chính lớn, giá vàng có thể dao động thất thường trong ngắn hạn."
+      "VIX tăng vọt có thể kích hoạt bán tháo đa tài sản để gồng margin, kéo giá vàng SJC giảm nhanh về vùng hỗ trợ 180-182 triệu VND/lượng.",
+      "Giá thế giới có thể điều chỉnh về vùng hỗ trợ 5100-5150 USD/oz nếu dữ liệu lạm phát Mỹ nóng hơn dự kiến.",
+      "Premium 13.82% có thể co hẹp nếu nhà đầu tư Việt Nam chốt lời ồ ạt, làm giảm biên lợi nhuận của nhà đầu tư mới vào cuộc."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "SJC Price vs 5Y Percentile",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Current Price",
         "value": 186100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
-        "value": 99,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Change 30d",
-        "value": 3.17,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 Price",
-        "value": 161437017,
+        "key": "SJC MA30",
+        "value": 161446013,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium",
-        "value": 14,
-        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -57,29 +45,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.8,
+        "key": "VIX Current Level",
+        "value": 29.49,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Real Yield 10Y 5d Change",
+        "value": 4.65,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot",
-        "value": 5170.34,
-        "unit": "USD/oz",
+        "key": "Gold Spot 20d Change",
+        "value": 3.07,
+        "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Premium",
+        "value": 13.82,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T05:21:28.541Z",
+    "latestTimestamp": "2026-03-10T06:15:02.544Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 163239807.28435835,
-    "premiumPct": 14,
-    "change7dPct": 1.11,
-    "change30dPct": 3.17,
+    "intlVndPerTael": 163509682.46491626,
+    "premiumPct": 13.82,
+    "change7dPct": 1.28,
+    "change30dPct": 3.34,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162454360,
-    "ma30VndPerTael": 161437017,
+    "ma7VndPerTael": 162492913,
+    "ma30VndPerTael": 161446013,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T05:21:35.677Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-10T06:15:05.583Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5170.34,
+        "value": 5179.7,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.71,
-        "change5dPct": 1.61,
-        "change20dPct": 2.88,
+        "change1dPct": 0.89,
+        "change5dPct": 1.79,
+        "change20dPct": 3.07,
         "relationToGold": "context"
       },
       {
@@ -191,22 +191,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-10 | gulfbusiness.com | Gold gains on weaker dollar , easing inflation concerns",
-      "2026-03-10 | moneycontrol.com | Asia markets rebound , oil dives as Trump says Iran war could end soon"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-10 | gulfbusiness.com | Gold gains on weaker dollar , easing inflation concerns",
-      "2026-03-10 | moneycontrol.com | Asia markets rebound , oil dives as Trump says Iran war could end soon",
-      "2026-03-10 | moneycontrol.com | Gold rises after Trump signals Iran conflict may be nearing end",
-      "2026-03-10 | fortune.com | U . S . is entering a financial crisis more indebted than ever . Here a warning Washington is ignoring",
-      "2026-03-10 | morningstar.com | Dow Jones Top Markets Headlines at 11 PM ET : Oil Prices Fall Even More on Report That Trump Called Iran War  Very Complete  | Stocks ...",
-      "2026-03-10 | livemint.com | Silver rate today rises 4 % on MCX as dollar falls after Trump signals US - Iran war may end soon - What should you do ?"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-10 | gulfbusiness.com | Gold gains on weaker dollar , easing inflation concerns",
-      "2026-03-10 | moneycontrol.com | Asia markets rebound , oil dives as Trump says Iran war could end soon",
-      "2026-03-10 | moneycontrol.com | Gold rises after Trump signals Iran conflict may be nearing end"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
