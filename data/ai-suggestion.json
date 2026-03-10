@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T15:19:43.496Z",
+  "generatedAt": "2026-03-10T16:22:34.100Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,67 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi VIX giảm mạnh và giá đã vượt xa MA30. Nhà đầu tư không nên mua đuổi ở vùng giá này, tốt nhất là chờ đợi tín hiệu điều chỉnh về vùng hỗ trợ gần MA7 (~162.7 triệu VND/lượng) hoặc ổn định lại trước khi tham gia.",
+    "thesis": "Giá SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật gia tăng khi VIX giảm nhiệt và lợi suất thực USD hồi phục. Nên chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm, tăng 4.24% sau 30 ngày và vượt xa MA30 (161.5 triệu VND/lượng) đến 15%, cho thấy thị trường đang ở trạng thái quá mua cực độ.",
-      "VIX giảm 13.53% xuống 25.5 điểm trong ngày, cho thấy cơn sợ hãi địa chính trị đang hạ nhiệt nhanh chóng, có thể làm giảm động lực đẩy giá vàng lên cao.",
-      "Premium 12.84% đang ở mức hợp lý trong dải dao động 30 ngày qua (10.99%-17.45%), không có tín hiệu bất thường về chênh lệch cung cầu nội địa.",
-      "Lợi suất thực 10 năm Mỹ (1.8%) và chỉ số USD (119.491) vẫn duy trì ở mức cao, tạo áp lực dồn tiền vào tài sản sinh lời thay vì vàng."
+      "Giá SJC 186.1 triệu VND/lượng đang cao hơn MA30 (161.5 triệu VND/lượng) tới 15.3%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "VIX giảm mạnh 13.53% xuống 25.5 điểm so với đỉnh 5 ngày trước, tín hiệu lo âu thị trường hạ nhiệt có thể làm giảm nhu cầu trú ẩn vào vàng.",
+      "Lợi suất thực 10 năm USD tăng 4.65% trong 5 ngày lên mức 1.8%, tạo áp lực ngược lên giá vàng thế giới.",
+      "Premium 12.74% đang ở mức hợp lý so với trung bình chuỗi 30 ngày (13.2%), không có tín hiệu bong bóng nội địa."
     ],
     "risks": [
-      "Xung đột Trung Đông có thể leo thang bất ngờ theo tin tức về Iran, đẩy giá vàng bật tăng vượt dự báo.",
-      "Thị trường đang ở vùng quá mua kỹ thuật, rủi ro điều chỉnh giảm sâu (drawdown tồi t nhất 5 năm là -41.26%) là hiện hữu.",
-      "Dữ liệu tin tức từ các nguồn non-mainstream có độ tin cậy thấp, có thể gây nhiễu tín hiệu đầu tư."
+      "Giá thế giới tiếp tục phá đỉnh khi vàng spot đã vượt 5230 USD/oz, có thể kéo giá SJC tăng thêm.",
+      "Thanh khoản thấp tại vùng giá kỷ lục khiến spread mua-bán giãn rộng, khó thoát hàng.",
+      "Dữ liệu vĩ mô thiếu cập nhật (USD Index, Fed Funds ngày 06/03) có thể bỏ sót tín hiệu biến động mới."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price vs MA30",
+        "value": 15.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC 30D Change",
+        "value": 4.33,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC 5Y Percentile",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_30d",
-        "value": 4.24,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_vs_ma30",
-        "value": 15.2,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_1d",
+        "key": "VIX 1D Change",
         "value": -13.53,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 6.46,
-        "unit": "% (10.99-17.45)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.8,
+        "key": "US Real Yield 10Y 5D Change",
+        "value": 4.65,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot Price",
+        "value": 5230.36,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium vs 30D Avg",
+        "value": -0.46,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T15:19:19.691Z",
+    "latestTimestamp": "2026-03-10T16:22:10.782Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 164928958.16145363,
-    "premiumPct": 12.84,
-    "change7dPct": 2.16,
-    "change30dPct": 4.24,
+    "intlVndPerTael": 165068166.08150667,
+    "premiumPct": 12.74,
+    "change7dPct": 2.25,
+    "change30dPct": 4.33,
     "volatilityDailyPct": 1.44,
-    "ma7VndPerTael": 162695667,
-    "ma30VndPerTael": 161493322,
+    "ma7VndPerTael": 162715554,
+    "ma30VndPerTael": 161497962,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -78,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T15:19:25.371Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-10T16:22:13.981Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5223.54,
+        "value": 5230.36,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 1.74,
-        "change5dPct": 2.65,
-        "change20dPct": 3.94,
+        "change1dPct": 1.88,
+        "change5dPct": 2.79,
+        "change20dPct": 4.08,
         "relationToGold": "context"
       },
       {
@@ -179,27 +185,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-10 | wutc.org | Trump gives mixed signals on Iran war . And , how Epstein built ties to scientists",
-      "2026-03-10 | northkoreatimes.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - Gold Shatters Records , Surging to $5 , 195 . 60 Amid Middle East Conflict and Persistent Debt Fears",
-      "2026-03-10 | kunm.org | Trump gives mixed signals on Iran war . And , how Epstein built ties to scientists"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-10 | oklahomastar.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | trinidadtimes.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | northkoreatimes.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - Gold Shatters Records , Surging to $5 , 195 . 60 Amid Middle East Conflict and Persistent Debt Fears",
-      "2026-03-10 | northkoreatimes.com | US dollar surges as oil rally fuels global market fears",
-      "2026-03-10 | irishsun.com | US dollar surges as oil rally fuels global market fears"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-10 | northkoreatimes.com | The Iran war has triggered a puzzling market trend",
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - Gold Shatters Records , Surging to $5 , 195 . 60 Amid Middle East Conflict and Persistent Debt Fears",
-      "2026-03-10 | en.tempo.co | Middle East Tensions Expected to Lift Gold Prices",
-      "2026-03-10 | investingnews.com | Banyan Gold Continues to Intersect High - Grade Gold Mineralization in Airstrip , Yukon , Canada",
-      "2026-03-10 | zerohedge.com | Equities supported on hopes of Iran conflict ending ; Trump vows to keep the strait open - Newsquawk US Market Open",
-      "2026-03-10 | economictimes.indiatimes.com | Dont eat one day and buy silver , says Robert Kiyosaki as he warns of biggest market crash ahead"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
