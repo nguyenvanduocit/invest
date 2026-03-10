@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T06:15:27.872Z",
+  "generatedAt": "2026-03-10T07:17:50.630Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,35 +7,29 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử (percentile 99%) với đà tăng chậm lại, trong khi VIX tăng vọt 66% cho thấy thị trường tài chính căng thẳng. Rủi ro điều chỉnh ngắn hạn cao, nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 3.26% trong 30 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật gia tăng khi VIX nhảy vọt 66% và lợi suất thực USD hồi phục. Nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cao hơn đáng kể so với MA30 (161.4 triệu VND/lượng), cho thấy thị trường đã tăng quá nóng trong ngắn hạn.",
-      "VIX tăng 66.05% trong 20 ngày lên mức 29.49 chỉ báo sự sợ hãi thị trường, thường dẫn đến nhu cầu thu hồi dòng tiền mặt và bán tháo tài sản bao gồm vàng.",
-      "Đà tăng 30 ngày (3.34%) yếu hơn đáng kể so với đà tăng của giá thế giới (từ ~5074 lên 5178 USD/oz), động lượng tăng giá đang chững lại quanh vùng 184-186 triệu VND.",
-      "Lợi suất thực Mỹ 10 năm tăng 4.65% trong 5 ngày gần nhất lên 1.8%, tạo áp lực dồn tiền vào trái phiếu thay vì vàng không sinh lời."
+      "Giá SJC 186.1 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 99% 5 năm), cao xa MA30 (161.4 triệu VND/lượng) 15.3%, báo hiệu rủi ro mua đu đỉnh.",
+      "VIX tăng vọt 66.05% trong 20 ngày lên mức 29.49 cho thấy thị trường tài chính căng thẳng, có thể kích hoạt bán tháo tài sản để huy động tiền mặt.",
+      "Lợi suất thực 10 năm USD tăng 4.65% trong 5 ngày gần nhất lên 1.8%, tạo áp lực ngược lên giá vàng thế giới khi chi phí cơ hội nắm giữ vàng tăng.",
+      "Premium 13.91% đang ở mức hợp lý trong biên độ dao động 30 ngày (10.99%-17.45%), không có tín hiệu bất thường về nguồn cung nội địa."
     ],
     "risks": [
-      "VIX tăng vọt có thể kích hoạt bán tháo đa tài sản để gồng margin, kéo giá vàng SJC giảm nhanh về vùng hỗ trợ 180-182 triệu VND/lượng.",
-      "Giá thế giới có thể điều chỉnh về vùng hỗ trợ 5100-5150 USD/oz nếu dữ liệu lạm phát Mỹ nóng hơn dự kiến.",
-      "Premium 13.82% có thể co hẹp nếu nhà đầu tư Việt Nam chốt lời ồ ạt, làm giảm biên lợi nhuận của nhà đầu tư mới vào cuộc."
+      "Nếu VIX tiếp tục leo thang, áp lực bán tháo có thể kéo giá vàng thế giới giảm mạnh, ảnh hưởng giá Việt Nam.",
+      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng như tài sản trú ẩn.",
+      "Giá SJC quá xa MA30 kỹ thuật, khả năng điều chỉnh về mức trung bình di động là cao trong ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs 5Y Percentile",
+        "key": "SJC Price vs MA30 Deviation",
+        "value": 15.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price 5Y Percentile",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Current Price",
-        "value": 186100000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC MA30",
-        "value": 161446013,
-        "unit": "VND/lượng",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
@@ -45,41 +39,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Current Level",
-        "value": 29.49,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
         "key": "US Real Yield 10Y 5d Change",
         "value": 4.65,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot 20d Change",
-        "value": 3.07,
+        "key": "Premium 30d Range Max",
+        "value": 17.45,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "SJC Premium",
-        "value": 13.82,
+        "key": "SJC Change 30d",
+        "value": 3.26,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot 20d Change",
+        "value": 2.96,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-10T06:15:02.544Z",
+    "latestTimestamp": "2026-03-10T07:17:10.390Z",
     "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 163509682.46491626,
-    "premiumPct": 13.82,
-    "change7dPct": 1.28,
-    "change30dPct": 3.34,
+    "intlVndPerTael": 163372580.42631626,
+    "premiumPct": 13.91,
+    "change7dPct": 1.19,
+    "change30dPct": 3.26,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162492913,
-    "ma30VndPerTael": 161446013,
+    "ma7VndPerTael": 162473327,
+    "ma30VndPerTael": 161441443,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-10T06:15:05.583Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-10T07:17:17.059Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5179.7,
+        "value": 5174.23,
         "unit": "USD/oz",
         "date": "2026-03-10",
-        "change1dPct": 0.89,
-        "change5dPct": 1.79,
-        "change20dPct": 3.07,
+        "change1dPct": 0.78,
+        "change5dPct": 1.68,
+        "change20dPct": 2.96,
         "relationToGold": "context"
       },
       {
@@ -191,8 +185,15 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-10 | udaipurkiran.com | Gold and Silver Prices Surge by 3 . 5 %"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-10 | asianews.network | Vietnam considers zero petrol import tariff as Middle East tensions threaten supply"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-10 | finance.yahoo.com | As bombs fall , gold prices rise and Poland is taking notice",
+      "2026-03-10 | sakshipost.com | Gold and Silver Prices Today , March 10 : Hyderabad , Chennai , Mumbai City - Wise Rates"
+    ]
   }
 }
