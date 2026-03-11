@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-03-11T20:09:30.869Z",
+  "generatedAt": "2026-03-11T21:09:23.562Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Thấp",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99th percentile 5 năm với rủi ro điều chỉnh kỹ thuật cao, nhưng động lượng tăng 2.98%/tháng và VIX leo lên 24.93 vẫn hỗ trợ xu hướng dài hạn. Nên chờ đợi hồi về vùng hỗ trợ gần MA7 (~163.1 triệu VND/lượng) hoặc xác nhận phá đỉnh thế giới mới hành động.",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi dữ liệu vĩ mô đầu tư (USD, lợi suất) bị thiếu khiến nhà đầu tư nên chờ đợi hồi chỉnh thay vì mua đuổi.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), cho thấy rủi ro mua đỉnh ngắn hạn rất lớn.",
-      "VIX tăng mạnh 40.13% trong 20 ngày lên mức 24.93, phản ánh lo ngại rủi ro thị trường toàn cầu, thường hỗ trợ vàng nhưng cũng báo hiệu biến động cao.",
-      "Giá thế giới (5,178.74 USD/oz) có động lượng dương +1.85% trong 20 ngày, nhưng điều chỉnh nhẹ -0.25% phiên gần nhất.",
-      "Premium 14.64% nằm trong biên dao động 30 ngày (11.13%-17.59%), không có dấu hiệu bong bóng cực đoan nhưng không hấp dẫn để mua đuổi."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh rất cao (source: market_snapshot).",
+      "Động lượng tăng yếu dần: giá thế giới giảm 0.3% ngày 11/03, chỉ tăng nhẹ 0.68% trong 5 ngày (source: first_principles_context).",
+      "Premium 14.68% đang nới rộng so với mức 11-13% đầu chuỗi dữ liệu, cho thấy giá nội địa đắt hơn tương đối (source: monthly_series_30d).",
+      "Thiếu dữ liệu đầu vào về USD, lợi suất thực, và VIX (healthy: false) nên không thể đánh giá chính xác động lực tăng giá vĩ mô (source: first_principles_context)."
     ],
     "risks": [
-      "Dữ liệu vĩ mô thiếu các chỉ số then chốt (US Real Yield, Fed Funds Rate, Treasury Yield) làm giảm độ tin cậy phân tích first-principles.",
-      "Không có tiêu đề địa chính trị hay hành động quốc gia cụ thể nào trong dữ liệu đầu vào để biện minh cho việc mua đỉnh.",
-      "Độ biến động ngày 1.39% kết hợp với mức giá kỷ lục có thể gây sụt giảm nhanh nếu thị trường điều chỉnh."
+      "Dữ liệu vĩ mô bị thiếu hoàn toàn (7/8 chỉ báo null) làm giảm độ tin cậy của nhận định.",
+      "Mua đỉnh lịch sử khi percentile 99% có rủi ro điều chỉnh sâu nếu thị trường đảo chiều.",
+      "Các headline ECB không liên quan trực tiếp đến giá vàng, không có tin tức địa chính trị hay hành động quốc gia để hỗ trợ đà tăng."
     ],
     "evidence": [
       {
@@ -27,53 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Latest Price",
+        "key": "SJC Current Price",
         "value": 187200000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX 20d Change",
-        "value": 40.13,
+        "key": "Gold Spot Change 1D",
+        "value": -0.3,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot 20d Change",
-        "value": 1.85,
+        "key": "Gold Spot Change 5D",
+        "value": 0.68,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium vs World Price",
-        "value": 14.64,
+        "key": "Current Premium",
+        "value": 14.68,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA7",
-        "value": 163095372,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Premium Range 30D (Low-High)",
+        "value": 11.13,
+        "unit": "%",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "SJC 30d Change",
-        "value": 2.98,
+        "key": "Missing Macro Factors",
+        "value": 7,
+        "unit": "indicators",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Change 30D",
+        "value": 2.94,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T20:08:53.651Z",
+    "latestTimestamp": "2026-03-11T21:08:46.689Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 163299484.95986077,
-    "premiumPct": 14.64,
-    "change7dPct": 2.24,
-    "change30dPct": 2.98,
+    "intlVndPerTael": 163235149.47744176,
+    "premiumPct": 14.68,
+    "change7dPct": 2.2,
+    "change30dPct": 2.94,
     "volatilityDailyPct": 1.39,
-    "ma7VndPerTael": 163095372,
-    "ma30VndPerTael": 161534579,
+    "ma7VndPerTael": 163086181,
+    "ma30VndPerTael": 161532435,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,35 +90,38 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T20:09:15.227Z",
+    "fetchedAt": "2026-03-11T21:09:08.405Z",
     "healthy": false,
     "missingFactors": [
+      "US Dollar Trade Weighted Index",
       "US Real Yield 10Y",
+      "US Breakeven Inflation 10Y",
       "US Effective Fed Funds Rate",
       "US Treasury Yield 10Y",
-      "US Treasury Yield 2Y"
+      "US Treasury Yield 2Y",
+      "VIX Volatility Index"
     ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5178.73,
+        "value": 5176.11,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": -0.25,
-        "change5dPct": 0.73,
-        "change20dPct": 1.85,
+        "change1dPct": -0.3,
+        "change5dPct": 0.68,
+        "change20dPct": 1.8,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 119.491,
+        "value": null,
         "unit": "index",
-        "date": "2026-03-06",
-        "change1dPct": -0.06,
-        "change5dPct": 1.42,
-        "change20dPct": 0.83,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
@@ -129,12 +138,12 @@
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.33,
+        "value": null,
         "unit": "%",
-        "date": "2026-03-10",
-        "change1dPct": -0.43,
-        "change5dPct": 1.75,
-        "change20dPct": -0.85,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       },
       {
@@ -173,12 +182,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 24.93,
+        "value": null,
         "unit": "index",
-        "date": "2026-03-10",
-        "change1dPct": -2.24,
-        "change5dPct": 5.77,
-        "change20dPct": 40.13,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "direct"
       }
     ],
