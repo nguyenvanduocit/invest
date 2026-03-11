@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-11T22:06:51.614Z",
+  "checkedAt": "2026-03-11T23:06:06.218Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-11T22:06:51.536Z",
+  "dataFetchedAt": "2026-03-11T23:06:06.144Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -56,7 +56,7 @@
       },
       {
         "id": "gdelt_geopolitics",
-        "error": "The operation timed out."
+        "error": "HTTP 429"
       },
       {
         "id": "gdelt_country_actions",
@@ -64,7 +64,7 @@
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "The operation timed out."
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
@@ -76,7 +76,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (The operation timed out.)"
+    "Source failures: usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
