@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T18:18:36.130Z",
+  "generatedAt": "2026-03-11T19:18:16.416Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chậm lại, trong khi VIX nhảy vọt 40% báo hiệu rủi ro biến động hai chiều cao; nhà đầu tư nên chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định premium trước khi vào lệnh mới.",
+    "thesis": "Giá SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi VIX nhảy vọt 40% báo hiệu rủi ro thanh khoản; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá cao so với MA30 (161.4 triệu VND/lượng) để mua đuổi.",
-      "VIX tăng 40.13% trong 20 ngày qua chỉ báo bất ổn thị trường, nhưng lợi suất thực 10Y vẫn dương 1.78% gây áp lực ngược lên vàng.",
-      "Premium 14.76% đang ở mức cao hơn vùng thấp nhất 30 ngày (11.13%), cho thấy định giá nội địa chưa hấp dẫn.",
-      "Động lượng tăng 30 ngày (+1.94%) yếu hơn đáng kể so với biến động ngày (1.42%), tín hiệu thị trường đi ngang tích lũy."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy rủi ro mua đỉnh ngắn hạn rất cao.",
+      "Động lượng tăng giảm tốc: tăng 0.71%/7 ngày so với mức tăng 1.94%/30 ngày, giá hiện tại thấp hơn đỉnh tạm thời 190.9 triệu VND/lượng (ngày 02-03).",
+      "VIX tăng 40.13% trong 20 ngày (lên mức 24.93) cho thấy tâm lý thị trường tài chính lo âu, có thể gây áp lực chốt lời tài sản rủi ro.",
+      "Lợi suất thực 10Y Mỹ giảm 5.32% trong 20 ngày (xuống 1.78%) là động lực hỗ trợ giá vàng thế giới, nhưng chưa đủ để kéo giá SJC phá đỉnh."
     ],
     "risks": [
-      "Giá thế giới có thể tiếp tục tăng nếu xung đột Trung Đông leo thang (tin tức về Iran), đẩy giá SJC cao hơn.",
-      "Biến động cao (VIX 24.93) có thể gây thanh lý khoản cọc nếu giao dịch đòn bẩy.",
-      "Dữ liệu sự kiện vĩ mô không rõ ràng (nhiễu tin ECB), có thể gây đảo chiều bất ngờ."
+      "Rủi ro điều chỉnh mạnh khi giá giao dịch quá cao so với trung bình lịch sử (MA30 VND là 161.37 triệu/lượng).",
+      "Biến động ngày ở mức 1.42% kết hợp với VIX cao có thể gây sụt giảm thanh khoản tạm thời.",
+      "Premium 14.76% có thể co hẹp nếu giá thế giới tăng mạnh nhưng thị trường nội địa không chạy theo."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC vs MA30 Premium",
-        "value": 16,
-        "unit": "percent",
+        "key": "SJC Price vs MA30",
+        "value": 187.2,
+        "unit": "million VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Momentum Slowdown (7d vs 30d)",
+        "value": 0.71,
+        "unit": "% vs %",
         "source": "market_snapshot"
       },
       {
         "key": "VIX Change 20d",
         "value": 40.13,
-        "unit": "percent",
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.78,
-        "unit": "percent",
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -5.32,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Change 30d",
-        "value": 1.94,
-        "unit": "percent",
+        "key": "Premium vs 30d Avg",
+        "value": 14.76,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 11.13,
-        "unit": "percent (min)",
+        "key": "Recent Peak Price (Mar 02)",
+        "value": 190.9,
+        "unit": "million VND/lượng",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "Gold Spot Price",
-        "value": 5173.12,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T18:18:16.275Z",
+    "latestTimestamp": "2026-03-11T19:17:40.467Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 163124641.9630042,
+    "intlVndPerTael": 163127009.75143266,
     "premiumPct": 14.76,
     "change7dPct": 0.71,
     "change30dPct": 1.94,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 162539446,
-    "ma30VndPerTael": 161366397,
+    "ma7VndPerTael": 162539784,
+    "ma30VndPerTael": 161366476,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T18:18:22.467Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-11T19:18:01.848Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5173.12,
+        "value": 5173.91,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": -0.36,
-        "change5dPct": 0.62,
-        "change20dPct": 1.74,
+        "change1dPct": -0.35,
+        "change5dPct": 0.63,
+        "change20dPct": 1.76,
         "relationToGold": "context"
       },
       {
@@ -185,20 +185,8 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-11 | currencynews.co.uk | Pound to Dollar Forecast : GBP Jumps to 10 Day Highs as Oil Prices Slide"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-11 | thefrontierpost.com | Energy prices roil global bonds as traders tear up rate cut bets",
-      "2026-03-11 | myjoyonline.com | Africa Policy Lens demands full disclosure on gold divestment",
-      "2026-03-11 | manilatimes.net | Will the Iran war destroy the American empire ?",
-      "2026-03-11 | markets.financialcontent.com | FinancialContent - The Golden Fortress : Gold Hits $5 , 158 as Middle East Conflict Reaches a Fever Pitch"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-11 | benzinga.com | Crude Oil Gains 3 %; US Inflation Holds Steady At 2 . 4 % - Actelis Networks ( NASDAQ : ASNS ), The Campbell ( NASDAQ : CPB )",
-      "2026-03-11 | economictimes.indiatimes.com | gold IRA vs physical gold explained : Thinking about gold ? Here how a gold IRA compares with physical gold",
-      "2026-03-11 | manilatimes.net | Will the Iran war destroy the American empire ?",
-      "2026-03-11 | markets.financialcontent.com | FinancialContent - The Golden Fortress : Gold Hits $5 , 158 as Middle East Conflict Reaches a Fever Pitch"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
