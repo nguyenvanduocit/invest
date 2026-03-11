@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T02:56:06.842Z",
+  "generatedAt": "2026-03-11T03:48:41.329Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 2.85% trong 30 ngày qua, nhưng thanh khoản thấp và rủi ro điều chỉnh kỹ thuật đang gia tăng. Nhà đầu tư không nên mua đuổi lúc này mà chờ đợi信 hiệu hồi phục hoặc điều chỉnh về vùng hỗ trợ gần MA7 (162.7 triệu VND/lượng).",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với rủi ro điều chỉnh kỹ thuật, nhưng xung đột Mỹ-Iran và VIX tăng mạnh (46.89% trong 20 ngày) tạo sức đẩy an toàn. Nên chờ đợi hồi về vùng hỗ trợ gần MA7 (162.7 triệu/lượng) để tích sản thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy vùng giá này cực kỳ cao và rủi ro mua đỉnh là đáng kể.",
-      "Đà tăng giá 30 ngày qua (+2.85%) và 7 ngày qua (+1.61%) khá mạnh, nhưng giá hiện tại đã vượt xa MA7 (162.7 triệu VND/lượng) và MA30 (161.4 triệu VND/lượng), báo hiệu vùng quá mua kỹ thuật.",
-      "VIX tăng mạnh 46.89% trong 20 ngày qua (đến mức 25.5) cho thấy lo ngại rủi ro thị trường toàn cầu đang gia tăng, thường hỗ trợ vàng ngắn hạn nhưng cũng đi kèm biến động cao.",
-      "Lợi suất thực Mỹ 10 năm giảm 5.32% trong 20 ngày (xuống 1.78%) là động lực hỗ trợ giá vàng thế giới tăng 2.64% trong cùng kỳ, nhưng không đủ để biện minh cho việc MUA ở mức giá cực đỉnh hiện tại."
+      "Giá SJC 187.2 triệu/lượng đang ở phân vị 99% trong 5 năm, cao hơn MA30 (161.4 triệu/lượng) tới 16%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "Lợi suất thực Mỹ 10 năm giảm 5.32% trong 20 ngày xuống 1.78%, giảm chi phí cơ hội nắm giữ vàng và hỗ trợ giá thế giới tăng 2.39% trong 20 ngày qua.",
+      "Rủi ro địa chính trị Mỹ-Iran leo thang theo nhiều headline ngày 11/03, kết hợp VIX tăng 46.89% trong 20 ngày lên mức 25.5, duy trì nhu cầu trú ẩn an toàn.",
+      "Premium 14.02% hiện tại nằm trong biên dao động 30 ngày (11.13%-17.59%), không có dấu hiệu bong bóng cực đoan hay bất thường cần cảnh báo."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá mạnh nếu thị trường thế giới hồi phục về vùng trũng, kéo giá SJC giảm về test MA7 (khoảng 162-163 triệu VND/lượng).",
-      "Biến động ngày ở mức 1.41% kết hợp với VIX cao (25.5) có thể gây sốc tài chính ngắn hạn cho nhà đầu tư đòn bẩy.",
-      "Premium 13.74% đang ở mức cao, có nguy cơ co hẹp nếu giá thế giới điều chỉnh trong khi giá Việt Nam neo cao, gây thiệt hại cho người mua lúc này."
+      "Đỉnh giá 187.2 triệu/lượng có thể chịu áp lực chốt lời ngắn hạn khi RSI vùng quá mua (percentile 99%).",
+      "Nếu xung đột Trung Đông hạ nhiệt nhanh, giá có thể điều chỉnh về MA7 (162.7 triệu/lượng), tức giảm khoảng 13% từ đỉnh hiện tại.",
+      "Biến động ngày 1.41% và VIX cao (25.5) cho thấy rủi ro dao động giá lớn trong phiên."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price vs MA7",
-        "value": 187.2,
-        "unit": "million VND/tael",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 SJC",
-        "value": 162.7,
-        "unit": "million VND/tael",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Change 30d SJC",
-        "value": 2.85,
+        "key": "sjc_premium_current",
+        "value": 14.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 46.89,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y_change_20d",
         "value": -5.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 2.64,
+        "key": "vix_change_20d",
+        "value": 46.89,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Current Premium",
-        "value": 13.74,
+        "key": "gold_spot_change_20d",
+        "value": 2.39,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_vs_ma30_premium",
+        "value": 15.98,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 1.41,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T02:55:40.407Z",
+    "latestTimestamp": "2026-03-11T03:48:09.772Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 164579473.1036279,
-    "premiumPct": 13.74,
-    "change7dPct": 1.61,
-    "change30dPct": 2.85,
+    "intlVndPerTael": 164184825.30189243,
+    "premiumPct": 14.02,
+    "change7dPct": 1.37,
+    "change30dPct": 2.61,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162747279,
-    "ma30VndPerTael": 161414891,
+    "ma7VndPerTael": 162690901,
+    "ma30VndPerTael": 161401736,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T02:55:43.995Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-11T03:48:16.011Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5218.98,
+        "value": 5206.37,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": 0.52,
-        "change5dPct": 1.51,
-        "change20dPct": 2.64,
+        "change1dPct": 0.28,
+        "change5dPct": 1.26,
+        "change20dPct": 2.39,
         "relationToGold": "context"
       },
       {
@@ -191,8 +185,26 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-11 | livemint.com | Stock market today : Trade setup for Nifty 50 , US - Iran war , crude oil , gold , silver rates 8 stocks to buy or sell",
+      "2026-03-11 | latimes.com | Hungary Orbán orders authorities to hold some $82 million in seized Ukrainian cash and gold",
+      "2026-03-11 | businesstoday.in | West Asia conflict : Gold , silver ETFs rally as dollar slips , oil cools ; expert advises staggered buying in bullion",
+      "2026-03-11 | trains.com | Troop train operations during World War II"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-11 | livemint.com | Stock market today : Trade setup for Nifty 50 , US - Iran war , crude oil , gold , silver rates 8 stocks to buy or sell",
+      "2026-03-11 | businesstoday.in | West Asia conflict : Gold , silver ETFs rally as dollar slips , oil cools ; expert advises staggered buying in bullion",
+      "2026-03-11 | livemint.com | Indian stock market : 10 key things that changed for market overnight - Gift Nifty , US - Iran war , oil prices to gold rates",
+      "2026-03-11 | marketscreener.com | Currency market on tenterhooks as Iran war weighs on sentiment",
+      "2026-03-11 | moneycontrol.com | Gold steadies as traders digest uncertainty over Middle East war"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-11 | livemint.com | Stock market today : Trade setup for Nifty 50 , US - Iran war , crude oil , gold , silver rates 8 stocks to buy or sell",
+      "2026-03-11 | businesstoday.in | West Asia conflict : Gold , silver ETFs rally as dollar slips , oil cools ; expert advises staggered buying in bullion",
+      "2026-03-11 | livemint.com | Indian stock market : 10 key things that changed for market overnight - Gift Nifty , US - Iran war , oil prices to gold rates",
+      "2026-03-11 | marketscreener.com | Shares steady , oil turbulence deepens as Middle East war roils markets",
+      "2026-03-11 | moneycontrol.com | Gold steadies as traders digest uncertainty over Middle East war",
+      "2026-03-11 | moneycontrol.com | Oil drops on reserve release report , stocks gain"
+    ]
   }
 }
