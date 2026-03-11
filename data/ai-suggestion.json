@@ -1,85 +1,79 @@
 {
-  "generatedAt": "2026-03-11T06:17:31.804Z",
+  "generatedAt": "2026-03-11T07:19:33.227Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn lớn hơn cơ hội tăng ngay. Dù vĩ mô ủng hộ (lợi suất thực giảm, VIX cao, căng thẳng địa chính trị), nhà đầu tư nên chờ hồi về vùng hỗ trợ gần MA7 (~162.7 triệu VND/lượng) hoặc xác nhận phá đỉnh trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chậm lại, trong khi VIX giảm mạnh cho thấy cơn sợ hãi ngắn hạn đã hạ nhiệt; nhà đầu tư nên chờ đợi hồi điều chỉnh về vùng hỗ trợ MA7 (185.0 triệu VND/lượng) hoặc tín hiệu phá vỡ rõ ràng hơn trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang nằm ở phân vị 99% trong 5 năm qua, cho thấy định giá đang ở vùng lịch sử cực cao.",
-      "Đà tăng 30 ngày qua mạnh (2.65%) nhưng giá hiện tại đã vượt xa MA7 (162.7 triệu VND/lượng) và MA30 (161.4 triệu VND/lượng), tín hiệu ngắn hạn đã quá mua.",
-      "VIX ở mức 25.5 (tăng 46.89% trong 20 ngày) và lợi suất thực 10Y giảm 5.32% trong 20 ngày xuống 1.78% là động lực hỗ trợ giá vàng từ góc độ first-principles (sở hữu tài sản an toàn và chi phí cơ hội giảm).",
-      "Căng thẳng địa chính trị (Iran war sentiment) và dòng tiền institution vào safe havens được ghi nhận trong headlines ngày 11/03/2026 tiếp tục tạo nền hỗ trợ vĩ mô."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% 5 năm, quá cao so với MA30 (161.4 triệu VND/lượng) với khoảng cách +15.9%, rủi ro mua đỉp cao.",
+      "Động lượng tăng yếu dần: giá chỉ cao hơn mức 7 ngày trước 1.19% (từ 184.7 lên 187.2 triệu VND), trong khi trước đó đã có đợt tăng mạnh từ 181 lên 190.9 triệu VND (ngày 02/03).",
+      "VIX giảm 13.53% xuống 25.5 điểm cho thấy cơn hoảng loạn thị trường đã hạ nhiệt, giảm động lực mua vàng phòng thủ ngắn hạn.",
+      "Lợi suất thực 10Y Mỹ (1.78%) giảm 5.32% trong 20 ngày nhưng vẫn ở mức dương cao, tạo áp lực ngược lên giá vàng thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu khi giá thoái lui từ đỉnh lịch sử về тест vùng MA7.",
-      "Biến động ngày ở mức 1.41% cộng với premium dao động mạnh (từ 11.13% đến 17.59% trong 30 ngày) có thể gây sốc thanh khoản ngắn hạn.",
-      "Thị trường cổ phiếu toàn cầu suy yếu (Sensex giảm >700 điểm) có thể gây áp lực bán tài sản để cover margin."
+      "Căng thẳng chiến tranh Mỹ-Iran (theo tin tức ngày 11/03) có thể đẩy giá vàng tăng vọt bất ngờ, gây thủng lệnh CHỜ.",
+      "Premium SJC dao động mạnh từ 11.13% đến 17.59% trong 30 ngày qua, thanh khoản có thể giảm nếu giá quay đầu giảm nhanh.",
+      "Dữ liệu vĩ mô thiếu cập nhật trong 2 ngày gần nhất (USD Index, US Treasury), có thể bỏ sót tín hiệu đảo chiều từ thị trường Mỹ."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "SJC Price vs 5Y Percentile",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price vs MA30 Gap",
+        "value": 15.99,
+        "unit": "million VND/tael",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX 1D Change",
+        "value": -13.53,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "SJC Price vs MA7",
-        "value": 187200000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 Support Level",
-        "value": 162702149,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "US Real Yield 10Y 20D Change",
         "value": -5.32,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "VIX Index Level",
-        "value": 25.5,
-        "unit": "index",
-        "source": "macro_context"
-      },
-      {
-        "key": "VIX Change 20d",
-        "value": 46.89,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Premium Range 30d",
-        "value": 17.59,
-        "unit": "%",
+        "key": "Premium 30D Range",
+        "value": 6.46,
+        "unit": "percentage points",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Gold Spot XAUUSD",
-        "value": 5209.34,
-        "unit": "USD/oz",
-        "source": "macro_context"
+        "key": "SJC 7D Momentum",
+        "value": 1.19,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Intl Gold 20D Change",
+        "value": 2.19,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T06:16:56.667Z",
+    "latestTimestamp": "2026-03-11T07:18:55.239Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 164263562.7021292,
-    "premiumPct": 13.96,
-    "change7dPct": 1.42,
-    "change30dPct": 2.65,
+    "intlVndPerTael": 163894530.15211812,
+    "premiumPct": 14.22,
+    "change7dPct": 1.19,
+    "change30dPct": 2.42,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162702149,
-    "ma30VndPerTael": 161404361,
+    "ma7VndPerTael": 162649430,
+    "ma30VndPerTael": 161392060,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T06:17:04.556Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-11T07:19:09.050Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5209.34,
+        "value": 5195.85,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": 0.34,
-        "change5dPct": 1.32,
-        "change20dPct": 2.45,
+        "change1dPct": 0.08,
+        "change5dPct": 1.06,
+        "change20dPct": 2.19,
         "relationToGold": "context"
       },
       {
@@ -192,21 +186,21 @@
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-11 | news18.com | Stock Market Today Live Updates : Sensex Falls Over 700 Points , Nifty Slips Below 24 , 100 ; Auto , Financial Stocks Drag",
-      "2026-03-11 | hedgeco.net | Geopolitical Tensions Drive Institutional Capital Into Bonds and Safe Havens :",
-      "2026-03-11 | yahoo.com | Trump has one prescription for midterms . House Republicans have another",
-      "2026-03-11 | theconversation.com | Help for athletes , bans for others : unpacking Australia complex , chaotic migration developments"
+      "2026-03-11 | moneycontrol.com | Gold from Dubai : Indians can bring 20 g for men , 40 g for women duty free"
     ],
     "countryActionHeadlines": [
-      "2026-03-11 | e.vnexpress.net | Gold prices gain - VnExpress International",
-      "2026-03-11 | freemalaysiatoday.com | Currency market on tenterhooks as Iran war weighs on sentiment",
-      "2026-03-11 | marketscreener.com | Gold edges higher as inflation jitters ease ; key US data in focus",
-      "2026-03-11 | marketscreener.com | BOJ to raise interest rates next quarter with expectations unchanged by Middle East war",
-      "2026-03-11 | investmentwatchblog.com | Here how ( and when ) gold could reach $10 , 000 – Investment Watch Blog"
+      "2026-03-11 | myjoyonline.com | Gold edges higher as inflation jitters ease ; key US data in focus",
+      "2026-03-11 | timesofindia.indiatimes.com | Gold , silver price prediction today ( March 11 , 2026 ): Where are gold , silver headed in the near - term amid US - Iran war tensions ?",
+      "2026-03-11 | marketscreener.com | Gold edges higher on safe - haven demand ahead of US CPI data",
+      "2026-03-11 | economictimes.indiatimes.com | 278 % return on SGB premature redemption date : Gold bond turns Rs 1 lakh investment into Rs 3 . 78 lakh",
+      "2026-03-11 | econotimes.com | Bank of Japan Expected to Hold Rates at 0 . 75 % Before June Hike Amid Middle East War Uncertainty",
+      "2026-03-11 | miamitimesonline.com | More than 20 states sue over new global tariffs Trump imposed after his stinging Supreme Court loss"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-11 | hedgeco.net | Institutional Investors Reevaluate Gold Allocations :",
-      "2026-03-11 | e.vnexpress.net | Gold prices gain - VnExpress International"
+      "2026-03-11 | cointelegraph.com | Bitwise CIO : Bitcoin Could Hit $1M if it Tracks Gold",
+      "2026-03-11 | thejakartapost.com | Shares steady , oil turbulence deepens as Middle East war roils markets - Markets",
+      "2026-03-11 | myjoyonline.com | Gold edges higher as inflation jitters ease ; key US data in focus",
+      "2026-03-11 | timesofindia.indiatimes.com | Gold , silver price prediction today ( March 11 , 2026 ): Where are gold , silver headed in the near - term amid US - Iran war tensions ?"
     ]
   }
 }
