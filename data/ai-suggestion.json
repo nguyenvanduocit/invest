@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T08:11:52.067Z",
+  "generatedAt": "2026-03-11T09:15:47.730Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi VIX giảm mạnh cho thấy cơn sợ hãi ngắn hạn đã qua đỉnh; nhà đầu tư nên chờ đợi hồi điều chỉnh về mức hỗ trợ kỹ thuật tốt hơn thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi VIX giảm mạnh cho thấy cơn sợ hãi ngắn hạn đã hạ nhiệt, khuyến nghị chờ đợi hồi điều chỉnh về mức hỗ trợ kỹ thuật tốt hơn trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cho thấy rủi ro mua ở vùng giá cực đỉnh là rất lớn.",
-      "Động lượng tăng yếu dần: tăng 7 ngày (1.16%) thấp đáng kể so với tăng 30 ngày (2.39%), tín hiệu thường thấy trước khi thị trường đi ngang hoặc điều chỉnh.",
-      "VIX giảm mạnh 13.53% xuống 25.5 điểm, tín hiệu tâm lý sợ hãi tài chính hạ nhiệt, giảm động lực mua vàng phòng thủ ngắn hạn.",
-      "Lợi suất thực 10 năm của Mỹ (1.78%) và chỉ số USD (119.49) vẫn duy trì ở mức cao, tạo áp lực dồn tiền vào tài sản sinh lời lãi thay vì vàng."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh ngắn hạn rất cao.",
+      "Động lượng tăng yếu dần: giá hiện tại chỉ cao hơn MA7 (185 triệu VND) khoảng 1.2%, thấp hơn tốc độ tăng giai đoạn đầu chuỗi.",
+      "VIX giảm 13.53% xuống 25.5 điểm, tín hiệu tâm lý sợ hãi hạ nhiệt, giảm động lực đẩy giá vàng tăng nhanh thêm.",
+      "Lợi suất thực 10Y Mỹ giảm 5.32% trong 20 ngày (xuống 1.78%) đã phần nào được định giá vào đợt tăng vừa rồi của vàng."
     ],
     "risks": [
-      "Rủi ro thanh khoản cao nếu mua ở mức giá kỷ lục 187.2 triệu/lượng; thị trường có thể đi ngang kéo dài.",
-      "Dữ liệu vĩ mô thiếu tín hiệu giá vàng giao dịch trực tiếp (XAUUSD) và sự kiện địa chính trị, làm giảm độ tin cậy của dự báo xu hướng dài hạn.",
-      "Biến động ngày ở mức 1.41% cộng với premium dao động mạnh (12.24%-17.59% trong 30 ngày qua) cho thấy thị trường Việt Nam đang rất nhạy cảm."
+      "Dữ liệu vĩ mô (first_principles) không đầy đủ (healthy: false), thiếu tín hiệu Fed/Địa chính trị rõ ràng, độ tin cậy giảm.",
+      "Giá thế giới quay đầu giảm nhẹ -0.15% phiên gần nhất có thể kéo giá SJC điều chỉnh theo.",
+      "Biến động ngày 1.41% cho thấy thị trường vẫn rung lắc mạnh, dễ bị quét stoploss."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Current Price",
+        "value": 187200000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC MA7",
+        "value": 185000000,
+        "unit": "VND/lượng",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium vs World Price",
+        "value": 14.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Change 7d vs 30d",
-        "value": 1.16,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Index Value",
-        "value": 25.5,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX Change 1d",
+        "key": "VIX Index Change 1D",
         "value": -13.53,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Dollar Index",
-        "value": 119.49,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y",
-        "value": 1.78,
+        "key": "US Real Yield 10Y Change 20D",
+        "value": -5.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range 30d",
-        "value": 17.59,
+        "key": "Gold Spot Change 1D",
+        "value": -0.15,
         "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "SJC Latest Price",
-        "value": 187200000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T08:11:07.865Z",
+    "latestTimestamp": "2026-03-11T09:15:22.184Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 163844234.27710208,
-    "premiumPct": 14.25,
-    "change7dPct": 1.16,
-    "change30dPct": 2.39,
+    "intlVndPerTael": 163567055.14273363,
+    "premiumPct": 14.45,
+    "change7dPct": 0.99,
+    "change30dPct": 2.22,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162642245,
-    "ma30VndPerTael": 161390383,
+    "ma7VndPerTael": 162602648,
+    "ma30VndPerTael": 161381144,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,21 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T08:11:29.341Z",
+    "fetchedAt": "2026-03-11T09:15:33.014Z",
     "healthy": false,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": null,
+        "value": 5184.22,
         "unit": "USD/oz",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-11",
+        "change1dPct": -0.15,
+        "change5dPct": 0.83,
+        "change20dPct": 1.96,
         "relationToGold": "context"
       },
       {
@@ -186,15 +178,28 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks",
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro",
-      "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
-      "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
+      "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-11 | cairnspost.com.au | Clive Palmer announces shock political comeback",
+      "2026-03-11 | creators.yahoo.com | 7 best US cities to celebrate St . Patrick Day"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-11 | londonlovesbusiness.com | USDJPY Remains Elevated with Rising Oil Prices - London Business News",
+      "2026-03-11 | newsbtc.com | Bitcoin May Sink To $50K , Standard Chartered Kendrick Warns",
+      "2026-03-11 | economictimes.indiatimes.com | Global Markets | Australian shares extend gains as miners lead recovery ; rate hike in focus",
+      "2026-03-11 | thestar.com.my | Gold edges up on safe - haven demand ahead of US CPI data",
+      "2026-03-11 | ghanaiantimes.com.gh | Gold strategy , stable currency : BoG charts path for economic recovery",
+      "2026-03-11 | lewrockwell.com | It Is Treason for Trump and Congress To Fund Israel and Make War on Iranians"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-11 | irishtimes.com | Shares steady , oil turbulence deepens over Middle East war fears",
+      "2026-03-11 | economictimes.indiatimes.com | Global Markets | Australian shares extend gains as miners lead recovery ; rate hike in focus"
+    ]
   }
 }
