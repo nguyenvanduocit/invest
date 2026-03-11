@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T13:29:06.740Z",
+  "generatedAt": "2026-03-11T14:20:04.726Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi VIX giảm mạnh cho thấy cơn sợ hãi ngắn hạn đã qua đỉnh; nhà đầu tư nên chờ đợi hồi điều chỉnh hoặc xác nhận xu hướng rõ ràng hơn thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 99 percentile 5 năm với rủi ro điều chỉnh kỹ thuật cao, tuy nhiên xu hướng tăng dài hạn vẫn được hỗ trợ bởi bất ổn địa chính trị và lợi suất thực giảm.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy rủi ro mua đỉnh là rất lớn.",
-      "VIX giảm mạnh 13.53% xuống 25.5 điểm, tín hiệu sợ hãi tài chính hạ nhiệt, giảm động lực mua vàng phòng thủ ngắn hạn.",
-      "Premium 14.64% nằm trong biên dao động 30 ngày (11.13%-17.59%), không có tín hiệu bất thường để đánh canh bạc.",
-      "Lợi suất thực 10 năm Mỹ giảm 5.32% trong 20 ngày (xuống 1.78%) là động lực hỗ trợ giá vàng dài hạn, nhưng giá đã phản ánh trước."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm, cao hơn MA30 (161.4 triệu VND/lượng) tới 16%, cho thấy thị trường đã mua quá mức trong ngắn hạn.",
+      "VIX tăng mạnh 40.13% trong 20 ngày lên mức 24.93 kết hợp với dầu WTI vượt $90/thùng do căng thẳng chiến tranh gia tăng, hỗ trợ vàng như tài sản trú ẩn.",
+      "Lợi suất thực 10Y Mỹ giảm 5.32% trong 20 ngày xuống 1.78%, giảm chi phí cơ hội nắm giữ vàng và hỗ trợ giá thế giới tăng 2.02% trong cùng kỳ.",
+      "Premium 14.4% nằm trong biên dao động 30 ngày (11.13%-17.59%), không có dấu hiệu bất thường hay cơ hội arbitrage rõ ràng."
     ],
     "risks": [
-      "Giá thế giới xung quanh đỉnh lịch sử 5277 USD/oz, rủi ro chốt lời ngắn hạn cao.",
-      "Biên độ dao động 1.41%/ngày cho thấy thị trường đang rung lắc mạnh, dễ kích stop-loss.",
-      "Dữ liệu vĩ mô thiếu tiêu cực địa chính trị/can thiệp quốc gia, độ tin cậy xu hướng giảm."
+      "Điểm mua hiện tại gần đỉnh lịch sử, rủi ro điều chỉnh về mức MA7 (162.6 triệu VND/lượng) nếu thị trường chốt lời.",
+      "Dữ liệu chính sách chủ yếu từ ECB, thiếu tín hiệu rõ ràng từ Fed về lãi suất và bảng cân bằng.",
+      "Căng thẳng địa chính trị có thể giảm nhiệt nhanh chóng, khiến nhu cầu trú ẩn tạm thời suy giảm."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_premium_vs_ma30",
+        "value": 16,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 1d",
-        "value": -13.53,
+        "key": "vix_change_20d",
+        "value": 40.13,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Price Latest",
-        "value": 187200000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium vs Intl",
-        "value": 14.64,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y_change_20d",
         "value": -5.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Intl Gold Peak 30d",
-        "value": 5277.88,
-        "unit": "USD/oz",
+        "key": "gold_spot_change_20d",
+        "value": 2.02,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "premium_range_30d",
+        "value": 11.13,
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Daily Volatility",
-        "value": 1.41,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "oil_price",
+        "value": 90,
+        "unit": "USD/thùng",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T13:28:42.750Z",
+    "latestTimestamp": "2026-03-11T14:19:23.881Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 163291404.08170706,
-    "premiumPct": 14.64,
-    "change7dPct": 0.82,
-    "change30dPct": 2.05,
+    "intlVndPerTael": 163634119.46268895,
+    "premiumPct": 14.4,
+    "change7dPct": 1.03,
+    "change30dPct": 2.26,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162563269,
-    "ma30VndPerTael": 161371956,
+    "ma7VndPerTael": 162612229,
+    "ma30VndPerTael": 161383380,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T13:28:45.918Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-11T14:19:43.418Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5178.85,
+        "value": 5187.25,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": -0.25,
-        "change5dPct": 0.73,
-        "change20dPct": 1.85,
+        "change1dPct": -0.09,
+        "change5dPct": 0.89,
+        "change20dPct": 2.02,
         "relationToGold": "context"
       },
       {
@@ -168,12 +168,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 25.5,
+        "value": 24.93,
         "unit": "index",
-        "date": "2026-03-09",
-        "change1dPct": -13.53,
-        "change5dPct": 18.94,
-        "change20dPct": 46.89,
+        "date": "2026-03-10",
+        "change1dPct": -2.24,
+        "change5dPct": 5.77,
+        "change20dPct": 40.13,
         "relationToGold": "direct"
       }
     ],
@@ -185,8 +185,17 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-11 | zerohedge.com | Stocks Drop As Oil Rebounds Over $90 On Escalating War , Ignoring Looming SPR Release",
+      "2026-03-11 | warontherocks.com | Gaza and the Logic of High - Intensity Urban Warfare"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-11 | zerohedge.com | Stocks Drop As Oil Rebounds Over $90 On Escalating War , Ignoring Looming SPR Release",
+      "2026-03-11 | coindesk.com | Bitcoin price news : BTC remains modestly lower at $69 , 500 following in line inflation data",
+      "2026-03-11 | thechronicle.com.gh | KON Mad Over Sale Of Ghana Gold Reserves - The Ghanaian Chronicle"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-11 | zerohedge.com | Stocks Drop As Oil Rebounds Over $90 On Escalating War , Ignoring Looming SPR Release"
+    ]
   }
 }
