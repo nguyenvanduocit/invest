@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T00:17:59.585Z",
+  "generatedAt": "2026-03-11T01:34:34.090Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,29 +7,23 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99 percentile 5 năm với rủi ro điều chỉnh kỹ thuật cao, nhưng xung năng tăng từ giá thế giới (XAUUSD ~5195 USD/oz) và VIX leo lên 25.5 điểm vẫn hỗ trợ xu hướng dài hạn.",
+    "thesis": "Giá SJC đang ở vùng cực kỳ cao (percentile 99%) với đà tăng mạnh 2.8%/tháng, nhưng thanh toán rủi ro qua VIX và lợi suất thực chưa rõ ràng đòi hỏi nhà đầu tư chờ đợi điểm nhập trường an toàn hơn thay vì đu đỉnh.",
     "reasons": [
-      "Giá SJC 186.1 triệu VND/lượng đang ở percentile 99% trong 5 năm, quá cao để mua đuổi trong ngắn hạn.",
-      "VIX tăng mạnh +46.89% trong 20 ngày (lên 25.5 điểm) cho thấy lo ngại thị trường, nhưng tin tức Trump 'kết thúc xung đột' có thể làm giảm nhu cầu trú ẩn.",
-      "Lợi suất thực 10 năm Mỹ giảm -5.32% trong 20 ngày (xuống 1.78%) đang hỗ trợ giá vàng thế giới tăng +2.17% trong cùng kỳ.",
-      "Premium 13.6% hiện tại nằm trong biên dao động 11-17% của 30 ngày qua, không có tín hiệu bất thường để đánh giá rẻ hay đắt."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm, quá gần đỉnh lịch sử để mua vào với biên độ an toàn.",
+      "VIX tăng mạnh 46.89% trong 20 ngày qua cho thấy thị trường tài chính căng thẳng, thường hỗ trợ vàng ngắn hạn nhưng dễ gây biến động hai chiều.",
+      "Lợi suất thực Mỹ 10 năm giảm 5.32% trong 20 ngày (xuống 1.78%) là động lực hỗ trợ giá vàng tăng từ phân tích first-principles.",
+      "Premium 13.81% nằm trong vùng trung bình của chuỗi 30 ngày (dao động 11.13%-17.59%), không có tín hiệu bất thường để đánh giá vàng Việt Nam đắt/rẻ so với thế giới."
     ],
     "risks": [
-      "Đỉnh kỹ thuật: Mua tại mức percentile 99% mang rủi ro điều chỉnh cao nếu thị trường bình ổn.",
-      "Tin tức địa chính trị: Dấu hiệu giảm căng thẳng Iran có thể khiến vàng giảm nhiệt nhanh chóng.",
-      "Thanh khoản cao: Biến động ngày 1.41% đòi hỏi điểm cắt lỗ chặt."
+      "Rủi ro chốt lời nhanh khi giá ở vùng cực cao (percentile 99%), biên độ dao động 1.41%/ngày có thể kích hoạt cắt lỗ.",
+      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia cụ thể trong input, giảm độ tin cậy của xu hướng tăng vĩ mô.",
+      "Dữ liệu first-principles bị thiếu (healthy: false) có thể bỏ sót các yếu tố chính sách quan trọng tác động giá."
     ],
     "evidence": [
       {
-        "key": "SJC Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
         "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Price Latest",
-        "value": 186100000,
-        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
@@ -45,29 +39,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 2.17,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "SJC Price vs MA7",
+        "value": 15.05,
+        "unit": "million VND/lượng",
+        "source": "market_snapshot"
       },
       {
         "key": "Premium Range 30d",
-        "value": 11.13,
-        "unit": "%",
+        "value": 6.46,
+        "unit": "percentage points",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "SJC Change 30d",
+        "value": 2.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Treasury 10Y Change 20d",
+        "value": -2.37,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T00:17:40.410Z",
-    "sjcVndPerTael": 186100000,
-    "intlVndPerTael": 163821533.90568572,
-    "premiumPct": 13.6,
-    "change7dPct": 1.14,
-    "change30dPct": 2.38,
+    "latestTimestamp": "2026-03-11T01:34:09.533Z",
+    "sjcVndPerTael": 187200000,
+    "intlVndPerTael": 164489612.237603,
+    "premiumPct": 13.81,
+    "change7dPct": 1.56,
+    "change30dPct": 2.8,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162639002,
-    "ma30VndPerTael": 161389627,
+    "ma7VndPerTael": 162734442,
+    "ma30VndPerTael": 161411896,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -78,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T00:17:45.795Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-11T01:34:12.615Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5195.16,
+        "value": 5218.21,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": 0.06,
-        "change5dPct": 1.05,
-        "change20dPct": 2.17,
+        "change1dPct": 0.51,
+        "change5dPct": 1.49,
+        "change20dPct": 2.63,
         "relationToGold": "context"
       },
       {
@@ -179,23 +185,8 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-10 | dailydot.com | MAGA celebrates Olympic gold medalist Alysa Liu then discovers she liberal and anti - ICE",
-      "2026-03-10 | fnarena.com | The Overnight Report : Conflicting News Flows",
-      "2026-03-10 | asia.nikkei.com | US stocks dip , oil slides as investors weigh conflicting messages on Iran"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-10 | fnarena.com | The Overnight Report : Conflicting News Flows",
-      "2026-03-10 | asia.nikkei.com | US stocks dip , oil slides as investors weigh conflicting messages on Iran",
-      "2026-03-10 | currencynews.co.uk | Pound Sterling Higher as Trump Signals Conflict Could End Soon",
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - Wall Street Breathes Sigh of Relief : S & P 500 and Nasdaq Surge as Trump Signals Possible End to Iran Conflict",
-      "2026-03-10 | markets.financialcontent.com | FinancialContent - March Madness Hits Wall Street : High - Stakes Inflation Data and Tech - Energy Convergence Set the Stage for 2026 Next Big Move",
-      "2026-03-10 | mining.com | Gold price advances as Trump remarks calm inflation fears"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-10 | fnarena.com | The Overnight Report : Conflicting News Flows",
-      "2026-03-10 | finance.yahoo.com | Gold IRA vs . physical gold : Which is the better investment ?",
-      "2026-03-10 | californiatelegraph.com | Gold IRA Comparison Guide Released : Learn to Assess Top Gold IRA Companies in 2026"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
