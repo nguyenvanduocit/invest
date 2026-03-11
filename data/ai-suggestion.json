@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T09:15:47.730Z",
+  "generatedAt": "2026-03-11T10:15:01.597Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi VIX giảm mạnh cho thấy cơn sợ hãi ngắn hạn đã hạ nhiệt, khuyến nghị chờ đợi hồi điều chỉnh về mức hỗ trợ kỹ thuật tốt hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 2.35% trong 30 ngày qua, tuy nhiên thanh khoản có thể thấp và rủi ro điều chỉnh kỹ thuật là lớn; nhà đầu tư không nên mua đuổi tại vùng giá này.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh ngắn hạn rất cao.",
-      "Động lượng tăng yếu dần: giá hiện tại chỉ cao hơn MA7 (185 triệu VND) khoảng 1.2%, thấp hơn tốc độ tăng giai đoạn đầu chuỗi.",
-      "VIX giảm 13.53% xuống 25.5 điểm, tín hiệu tâm lý sợ hãi hạ nhiệt, giảm động lực đẩy giá vàng tăng nhanh thêm.",
-      "Lợi suất thực 10Y Mỹ giảm 5.32% trong 20 ngày (xuống 1.78%) đã phần nào được định giá vào đợt tăng vừa rồi của vàng."
+      "Giá SJC 187.2 triệu đồng/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đã quá cao lịch sử và rủi ro mua đỉnh là rất lớn.",
+      "Động lượng tăng giá 30 ngày qua đạt 2.35% và giá thế giới (5194.06 USD/oz) đang nằm trên MA7/MA30, nhưng VIX tăng mạnh 46.89% trong 20 ngày cho thấy thị trường bất ổn, vàng có thể biến động hai chiều.",
+      "Lợi suất thực Mỹ 10 năm giảm 5.32% trong 20 ngày (xuống 1.78%) là động lực hỗ trợ vàng, nhưng mức premium 14.3% hiện tại cao hơn vùng đáy 11-12% của chuỗi dữ liệu, làm giảm hiệu quả chi phí đầu tư."
     ],
     "risks": [
-      "Dữ liệu vĩ mô (first_principles) không đầy đủ (healthy: false), thiếu tín hiệu Fed/Địa chính trị rõ ràng, độ tin cậy giảm.",
-      "Giá thế giới quay đầu giảm nhẹ -0.15% phiên gần nhất có thể kéo giá SJC điều chỉnh theo.",
-      "Biến động ngày 1.41% cho thấy thị trường vẫn rung lắc mạnh, dễ bị quét stoploss."
+      "Rủi ro điều chỉnh giá mạnh nếu VIX giảm nhiệt và đồng USD hồi phục sau mức 119.491 điểm.",
+      "Giá đang sát đỉnh lịch sử, khả năng sinh lời ngắn hạn thấp và dễ bị kẹp lỗ (drawdown tồi t nhất từng ghi nhận là 41.26%).",
+      "Biến động ngày ở mức 1.41% cộng với thanh khoản có thể thay đổi khiến việc thoát hàng ở giá cao gặp khó khăn."
     ],
     "evidence": [
       {
@@ -27,53 +26,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Current Price",
-        "value": 187200000,
-        "unit": "VND/lượng",
+        "key": "SJC Change 30d",
+        "value": 2.35,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC MA7",
-        "value": 185000000,
-        "unit": "VND/lượng",
+        "key": "Intl Gold Price",
+        "value": 5194.06,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Premium vs World Price",
-        "value": 14.45,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Index Change 1D",
-        "value": -13.53,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y Change 20D",
+        "key": "US Real Yield 10Y Change 20d",
         "value": -5.32,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot Change 1D",
-        "value": -0.15,
+        "key": "VIX Change 20d",
+        "value": 46.89,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Current Premium",
+        "value": 14.3,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Dollar Index",
+        "value": 119.491,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T09:15:22.184Z",
+    "latestTimestamp": "2026-03-11T10:14:19.100Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 163567055.14273363,
-    "premiumPct": 14.45,
-    "change7dPct": 0.99,
-    "change30dPct": 2.22,
+    "intlVndPerTael": 163782559.20631862,
+    "premiumPct": 14.3,
+    "change7dPct": 1.12,
+    "change30dPct": 2.35,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162602648,
-    "ma30VndPerTael": 161381144,
+    "ma7VndPerTael": 162633434,
+    "ma30VndPerTael": 161388328,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T09:15:33.014Z",
+    "fetchedAt": "2026-03-11T10:14:40.265Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5184.22,
+        "value": 5193.68,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": -0.15,
-        "change5dPct": 0.83,
-        "change20dPct": 1.96,
+        "change1dPct": 0.03,
+        "change5dPct": 1.02,
+        "change20dPct": 2.14,
         "relationToGold": "context"
       },
       {
@@ -185,21 +184,8 @@
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro",
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-11 | cairnspost.com.au | Clive Palmer announces shock political comeback",
-      "2026-03-11 | creators.yahoo.com | 7 best US cities to celebrate St . Patrick Day"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-11 | londonlovesbusiness.com | USDJPY Remains Elevated with Rising Oil Prices - London Business News",
-      "2026-03-11 | newsbtc.com | Bitcoin May Sink To $50K , Standard Chartered Kendrick Warns",
-      "2026-03-11 | economictimes.indiatimes.com | Global Markets | Australian shares extend gains as miners lead recovery ; rate hike in focus",
-      "2026-03-11 | thestar.com.my | Gold edges up on safe - haven demand ahead of US CPI data",
-      "2026-03-11 | ghanaiantimes.com.gh | Gold strategy , stable currency : BoG charts path for economic recovery",
-      "2026-03-11 | lewrockwell.com | It Is Treason for Trump and Congress To Fund Israel and Make War on Iranians"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-11 | irishtimes.com | Shares steady , oil turbulence deepens over Middle East war fears",
-      "2026-03-11 | economictimes.indiatimes.com | Global Markets | Australian shares extend gains as miners lead recovery ; rate hike in focus"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
