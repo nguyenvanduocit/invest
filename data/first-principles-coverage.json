@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-11T19:18:01.920Z",
+  "checkedAt": "2026-03-11T20:09:15.305Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-11T19:18:01.848Z",
+  "dataFetchedAt": "2026-03-11T20:09:15.227Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,8 +9,13 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 8,
-    "missingFactors": [],
+    "availableFactors": 4,
+    "missingFactors": [
+      "US Real Yield 10Y",
+      "US Effective Fed Funds Rate",
+      "US Treasury Yield 10Y",
+      "US Treasury Yield 2Y"
+    ],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
@@ -19,27 +24,44 @@
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
-        "id": "gdelt_geopolitics",
+        "id": "us_real_yield_10y",
         "error": "The operation timed out."
+      },
+      {
+        "id": "us_fed_funds_effective",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_10y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "us_treasury_2y",
+        "error": "The operation timed out."
+      },
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
       },
       {
         "id": "gdelt_country_actions",
-        "error": "The operation timed out."
+        "error": "HTTP 429"
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "The operation timed out."
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
+    "Missing required factors: US Real Yield 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y",
     "Not enough geopolitical events (0/3)",
     "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
+    "Source failures: us_real_yield_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
