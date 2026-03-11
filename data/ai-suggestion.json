@@ -1,85 +1,85 @@
 {
-  "generatedAt": "2026-03-11T05:23:06.076Z",
+  "generatedAt": "2026-03-11T06:17:31.804Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC ở vùng đỉnh lịch sử (percentile 99% 5 năm) với biên độ dao động rộng 1.41%; động lượng tăng và VIX cao hỗ trợ nhưng lợi suất thực USD hồi phục tạo áp lực ngược, nhà đầu tư nên chờ điểm nhập tốt hơn thay vì mua đuổi.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, khiến rủi ro điều chỉnh ngắn hạn lớn hơn cơ hội tăng ngay. Dù vĩ mô ủng hộ (lợi suất thực giảm, VIX cao, căng thẳng địa chính trị), nhà đầu tư nên chờ hồi về vùng hỗ trợ gần MA7 (~162.7 triệu VND/lượng) hoặc xác nhận phá đỉnh trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở mức cao nhất lịch sử (percentile 99% 5 năm), cao hơn MA30 (161.4 triệu VND/lượng) tới 16%, tín hiệu vùng quá mua rõ ràng.",
-      "VIX ở mức 25.5 điểm và tăng 46.89% trong 20 ngày cho thấy lo ngại thị trường còn cao, duy trì yếu tố hỗ trợ an toàn cho vàng.",
-      "Lợi suất thực USD 10Y tăng 1.14% trong 5 ngày lên 1.78% tạo áp lực ngược lên giá vàng, hạn chế đà tăng tiếp theo.",
-      "Premium 14.07% nằm trong biên dao động 30 ngày (11.13%-17.59%), không có tín hiệu bất thường đột biến."
+      "Giá SJC 187.2 triệu VND/lượng đang nằm ở phân vị 99% trong 5 năm qua, cho thấy định giá đang ở vùng lịch sử cực cao.",
+      "Đà tăng 30 ngày qua mạnh (2.65%) nhưng giá hiện tại đã vượt xa MA7 (162.7 triệu VND/lượng) và MA30 (161.4 triệu VND/lượng), tín hiệu ngắn hạn đã quá mua.",
+      "VIX ở mức 25.5 (tăng 46.89% trong 20 ngày) và lợi suất thực 10Y giảm 5.32% trong 20 ngày xuống 1.78% là động lực hỗ trợ giá vàng từ góc độ first-principles (sở hữu tài sản an toàn và chi phí cơ hội giảm).",
+      "Căng thẳng địa chính trị (Iran war sentiment) và dòng tiền institution vào safe havens được ghi nhận trong headlines ngày 11/03/2026 tiếp tục tạo nền hỗ trợ vĩ mô."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật mạnh khi giá ở vùng đỉnh lịch sử với biên độ ngày 1.41%.",
-      "Lợi suất thực USD tiếp tục tăng sẽ làm giảm hấp dẫn của vàng không sinh lời.",
-      "Dữ liệu vĩ mô thiếu sự kiện địa chính trị trực tiếp, giảm độ tin cậy dự báo."
+      "Rủi ro điều chỉnh kỹ thuật sâu khi giá thoái lui từ đỉnh lịch sử về тест vùng MA7.",
+      "Biến động ngày ở mức 1.41% cộng với premium dao động mạnh (từ 11.13% đến 17.59% trong 30 ngày) có thể gây sốc thanh khoản ngắn hạn.",
+      "Thị trường cổ phiếu toàn cầu suy yếu (Sensex giảm >700 điểm) có thể gây áp lực bán tài sản để cover margin."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
-        "value": 187200000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5Y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 VND",
-        "value": 161399241,
+        "key": "SJC Price vs MA7",
+        "value": 187200000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 14.07,
-        "unit": "%",
+        "key": "MA7 Support Level",
+        "value": 162702149,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
+        "key": "US Real Yield 10Y Change 20d",
+        "value": -5.32,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "VIX Index Level",
         "value": 25.5,
         "unit": "index",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
         "key": "VIX Change 20d",
         "value": 46.89,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.78,
+        "key": "Premium Range 30d",
+        "value": 17.59,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Real Yield Change 5d",
-        "value": 1.14,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Gold Spot XAUUSD",
+        "value": 5209.34,
+        "unit": "USD/oz",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T05:22:27.926Z",
+    "latestTimestamp": "2026-03-11T06:16:56.667Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 164109958.85261413,
-    "premiumPct": 14.07,
-    "change7dPct": 1.32,
-    "change30dPct": 2.56,
+    "intlVndPerTael": 164263562.7021292,
+    "premiumPct": 13.96,
+    "change7dPct": 1.42,
+    "change30dPct": 2.65,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162680206,
-    "ma30VndPerTael": 161399241,
+    "ma7VndPerTael": 162702149,
+    "ma30VndPerTael": 161404361,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T05:22:31.035Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-11T06:17:04.556Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5201.07,
+        "value": 5209.34,
         "unit": "USD/oz",
         "date": "2026-03-11",
-        "change1dPct": 0.18,
-        "change5dPct": 1.16,
-        "change20dPct": 2.29,
+        "change1dPct": 0.34,
+        "change5dPct": 1.32,
+        "change20dPct": 2.45,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,22 @@
       "2026-03-05 | ECB Press / Speeches | Christine Lagarde: Technology, fragmentation and the new uncertainty",
       "2026-03-05 | ECB Press / Speeches | Meeting of 4-5 February 2026"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-11 | news18.com | Stock Market Today Live Updates : Sensex Falls Over 700 Points , Nifty Slips Below 24 , 100 ; Auto , Financial Stocks Drag",
+      "2026-03-11 | hedgeco.net | Geopolitical Tensions Drive Institutional Capital Into Bonds and Safe Havens :",
+      "2026-03-11 | yahoo.com | Trump has one prescription for midterms . House Republicans have another",
+      "2026-03-11 | theconversation.com | Help for athletes , bans for others : unpacking Australia complex , chaotic migration developments"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-11 | e.vnexpress.net | Gold prices gain - VnExpress International",
+      "2026-03-11 | freemalaysiatoday.com | Currency market on tenterhooks as Iran war weighs on sentiment",
+      "2026-03-11 | marketscreener.com | Gold edges higher as inflation jitters ease ; key US data in focus",
+      "2026-03-11 | marketscreener.com | BOJ to raise interest rates next quarter with expectations unchanged by Middle East war",
+      "2026-03-11 | investmentwatchblog.com | Here how ( and when ) gold could reach $10 , 000 – Investment Watch Blog"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-11 | hedgeco.net | Institutional Investors Reevaluate Gold Allocations :",
+      "2026-03-11 | e.vnexpress.net | Gold prices gain - VnExpress International"
+    ]
   }
 }
