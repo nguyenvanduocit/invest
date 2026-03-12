@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T08:13:48.578Z",
+  "generatedAt": "2026-03-12T09:16:48.447Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với động lượng tăng mạnh, nhưng rủi ro điều chỉnh kỹ thuật là rất lớn khi biên độ dao động lên tới 1.4%/ngày và thiếu tín hiệu vĩ mô hỗ trợ do dữ liệu first-principles bị khuyết.",
+    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng mạnh +2.94%/30 ngày, nhưng thanh khoản có thể giảm và rủi ro điều chỉnh tăng cao khi các yếu tố vĩ mô (lạm phát, USD) đang gây áp lực lên giá vàng thế giới.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đang ở vùng cực kỳ cao và rủi ro mua đỉp là đáng kể.",
-      "Động lượng tăng giá ngắn hạn mạnh: giá thế giới tăng 5.35% trong 20 ngày qua (từ ~4945 lên 5186 USD/oz), kéo theo SJC tăng 3.13% trong 30 ngày.",
-      "Biên độ dao động ngày cao (1.4%) kết hợp với vùng giá đỉnh lịch sử tạo ra môi trường rủi ro cao cho nhà đầu tư FOMO.",
-      "Premium 14.04% nằm trong biên độ dao động bình thường của 30 ngày qua (11.23% - 17.71%), không có tín hiệu bất thường khẩn cấp."
+      "Giá SJC 186.3 triệu đồng/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đang ở vùng cực kỳ cao so với lịch sử.",
+      "Đà tăng giá còn mạnh với change30dPct đạt +2.94%, giá hiện tại cao hơn MA30 (161.38 triệu đồng/lượng) tới 15.4%.",
+      "Premium 14.24% nằm trong biên dao động bình thường của 30 ngày qua (11.23% - 17.71%), không có dấu hiệu bong bóng cực đoan.",
+      "Giá thế giới XAUUSD giảm nhẹ -0.11%/ngày trong bối cảnh lo ngại lạm phát và USD mạnh lên theo tin tức."
     ],
     "risks": [
-      "Dữ liệu First-principles (DXY, Lợi suất thực, VIX) không khả dụng, dẫn đến thiếu tầm nhìn về các yếu tố thúc đẩy giá cốt lõi và làm giảm độ tin cậy phân tích.",
-      "Rủi ro điều chỉnh kỹ thuật sâu từ vùng đỉnh 99 percentile khi động lượng mua yếu đi.",
-      "Biên độ dao động 1.4%/ngày tương đương ~2.6 triệu VND/lượng, tiềm ẩn rủi ro biến động vốn lớn trong ngắn hạn."
+      "Rủi ro điều chỉnh giá cao do giá đang ở vùng đỉnh 5 năm (percentile 99%), biên độ dao động 1.4%/ngày có thể gây sốc tài khoản.",
+      "Áp lực lạm phát và USD mạnh (theo tin tức) có thể làm giảm giá vàng thế giới, kéo theo giá vàng trong nước.",
+      "Dữ liệu vĩ mô first-principles bị thiếu (healthy: false) khiến việc đánh giá xu hướng dài hạn không đầy đủ."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Price",
         "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Phân vị 5 năm",
+        "key": "5Y Percentile",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biên độ dao động ngày",
-        "value": 1.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới 20 ngày",
-        "value": 5.35,
-        "unit": "% thay đổi",
+        "key": "Premium vs World",
+        "value": 14.24,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Change 30 Days",
+        "value": 2.94,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 VND",
+        "value": 161375068,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "XAUUSD Change 1D",
+        "value": -0.11,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá SJC 30 ngày",
-        "value": 3.13,
-        "unit": "% thay đổi",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium hiện tại",
-        "value": 14.04,
+        "key": "XAUUSD Change 20D",
+        "value": 5.16,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Biên độ Premium 30 ngày",
-        "value": 11.23,
+        "key": "30D Premium Range High",
+        "value": 17.71,
         "unit": "%",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "Missing Macro Factors",
-        "value": 7,
-        "unit": "chỉ số",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T08:13:03.974Z",
+    "latestTimestamp": "2026-03-12T09:15:46.609Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 163369916.44230586,
-    "premiumPct": 14.04,
-    "change7dPct": 2.38,
-    "change30dPct": 3.13,
+    "intlVndPerTael": 163070814.81927255,
+    "premiumPct": 14.24,
+    "change7dPct": 2.19,
+    "change30dPct": 2.94,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162969429,
-    "ma30VndPerTael": 161385038,
+    "ma7VndPerTael": 162926700,
+    "ma30VndPerTael": 161375068,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T08:13:25.441Z",
+    "fetchedAt": "2026-03-12T09:16:07.692Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -105,12 +105,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5185.06,
+        "value": 5176.12,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": 0.06,
-        "change5dPct": 2.04,
-        "change20dPct": 5.35,
+        "change1dPct": -0.11,
+        "change5dPct": 1.87,
+        "change20dPct": 5.16,
         "relationToGold": "context"
       },
       {
@@ -199,8 +199,24 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-12 | edenmagnet.com.au | Big four banks predict three consecutive RBA rate hikes",
+      "2026-03-12 | moreechampion.com.au | Big four banks predict three consecutive RBA rate hikes",
+      "2026-03-12 | braidwoodtimes.com.au | Big four banks predict three consecutive RBA rate hikes"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-12 | actionforex.com | We Believe ECB Will Hike at Next Week Meeting or in April",
+      "2026-03-12 | marketscreener.com | Futures point lower as inflation fears resurface",
+      "2026-03-12 | batonrougepost.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
+      "2026-03-12 | economictimes.indiatimes.com | S & P / ASX 200 closes lower as Australian shares slip , oil price surge triggers inflation fears ; check top gainers and losers",
+      "2026-03-12 | thoibaotaichinhvietnam.vn | Deposit rate hikes expected to continue as banks compete for liquidity",
+      "2026-03-12 | mexicostar.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-12 | retail.economictimes.indiatimes.com | Gold Prices Drop as Dollar Strengthens and Inflation Fears Rise , ETRetail",
+      "2026-03-12 | marketscreener.com | Futures point lower as inflation fears resurface",
+      "2026-03-12 | news18.com | Gold , Silver Prices Fall Today : Check 22K And 24K Rates In Delhi , Mumbai , Other Cities On March 12",
+      "2026-03-12 | economictimes.indiatimes.com | S & P / ASX 200 closes lower as Australian shares slip , oil price surge triggers inflation fears ; check top gainers and losers"
+    ]
   }
 }
