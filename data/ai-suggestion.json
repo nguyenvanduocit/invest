@@ -1,85 +1,79 @@
 {
-  "generatedAt": "2026-03-12T13:29:02.387Z",
+  "generatedAt": "2026-03-12T14:19:42.866Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Thấp",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi dữ liệu vĩ mô first-principles bị thiếu khiến nhà đầu tư nên thận trọng chờ đợi điểm nhập trường tốt hơn thay vì FOMO.",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với động lượng tăng chậm lại, trong khi xung đột Trung Đông tạo áp lực giá nhưng cũng làm tăng rủi ro mua đỉnh. Nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật trước khi tham gia.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh cao hơn nhiều so với tiềm năng tăng.",
-      "Đà tăng chậm lại: giá thế giới giảm 0.2% ngày 12/03, trong khi biến động ngày chỉ 1.4% thấp hơn đợt tăng mạnh cuối tháng 2.",
-      "Premium 14.38% nằm trong biên dao động 30 ngày (11.23%-17.71%), không có tín hiệu bất thường nhưng cũng không hấp dẫn để mua.",
-      "Thiếu dữ liệu first-principles (USD, lợi suất thực, VIX) khiến không thể đánh giá chính xác động lực tăng giá từ vĩ mô."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy rủi ro định giá cao theo lịch sử là rất lớn.",
+      "Động lượng tăng yếu dần: giá hiện tại chỉ cao hơn MA7 (162.85 triệu VND/lượng) khoảng 14.4%, trong khi biến động ngày 1.4% báo hiệu thị trường đang tích lũy thay vì tăng mạnh.",
+      "Premium 14.6% nằm trong biên dao động 30 ngày (11.23%-17.71%), không có tín hiệu bất thường đột biến đòi hỏi hành động gấp.",
+      "Giá thế giới XAUUSD giảm 0.56%/ngày cho thấy áp lực chốt lời ngắn hạn dù xu hướng 20 ngày vẫn tăng 4.7%."
     ],
     "risks": [
-      "Dữ liệu vĩ mô first-principles bị thiếu hoàn toàn, không thể xác định động lực từ USD và lãi suất thực.",
-      "Rủi ro điều chỉnh kỹ thuật khi giá ở vùng cực cao (percentile 99%), có thể giảm mạnh nếu thị trường chốt lời.",
-      "Các headline ECB không liên quan trực tiếp đến giá vàng, không có tin tức địa chính trị hay hành động quốc gia nào hỗ trợ đà tăng."
+      "Xung đột Iran leo thang có thể đẩy giá bật tăng đột biến, bỏ qua các kháng cự kỹ thuật (FOMO risk).",
+      "Dữ liệu vĩ mô first-principles (DXY, lợi suất thực, VIX) bị thiếu, không thể đánh giá đầy đủ áp lực tỷ giá và chi phí cơ hội giữ vàng.",
+      "Mua ở mức giá kỷ lục 99th percentile mang rủi ro điều chỉnh sâu nếu tin tức địa chính trị hạ nhiệt."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Current Price",
+        "key": "SJC Price",
         "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 1D",
-        "value": -0.2,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Premium Current",
-        "value": 14.38,
+        "key": "5Y Percentile",
+        "value": 99,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium 30D Range High",
-        "value": 17.71,
+        "key": "Premium vs World",
+        "value": 14.6,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "30D Premium Range",
+        "value": 11.23,
+        "unit": "% (low)",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Premium 30D Range Low",
-        "value": 11.23,
+        "key": "XAUUSD Change 1D",
+        "value": -0.56,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "macro_context"
+      },
+      {
+        "key": "XAUUSD Change 20D",
+        "value": 4.7,
+        "unit": "%",
+        "source": "macro_context"
       },
       {
         "key": "Daily Volatility",
         "value": 1.4,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Missing Macro Factors",
-        "value": 7,
-        "unit": "indicators",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T13:28:20.918Z",
+    "latestTimestamp": "2026-03-12T14:19:02.353Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 162874667.68273443,
-    "premiumPct": 14.38,
-    "change7dPct": 2.09,
-    "change30dPct": 2.83,
+    "intlVndPerTael": 162570998.9012887,
+    "premiumPct": 14.6,
+    "change7dPct": 1.88,
+    "change30dPct": 2.62,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162903388,
-    "ma30VndPerTael": 161369628,
+    "ma7VndPerTael": 162855298,
+    "ma30VndPerTael": 161358407,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T13:28:42.078Z",
+    "fetchedAt": "2026-03-12T14:19:23.432Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -105,12 +99,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5171.86,
+        "value": 5153.08,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.2,
-        "change5dPct": 1.79,
-        "change20dPct": 5.08,
+        "change1dPct": -0.56,
+        "change5dPct": 1.42,
+        "change20dPct": 4.7,
         "relationToGold": "context"
       },
       {
@@ -199,8 +193,19 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-12 | wamc.org | Trump war with Iran is angering some swing voters who want money spent at home",
+      "2026-03-12 | resilience.org | The Petrostate Proxy War",
+      "2026-03-12 | foxnews.com | Iran conflict could trigger economic stagflation if war drags on too long"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-12 | finance.yahoo.com | Stock market today : Dow , S & P 500 , Nasdaq resume sell - off , oil surges as Middle East conflict escalates",
+      "2026-03-12 | gdnonline.com | International Business : Sterling sinks for third day as oil crisis burnishes dollar"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-12 | foxnews.com | Iran conflict could trigger economic stagflation if war drags on too long",
+      "2026-03-12 | thehindubusinessline.com | Retail inflation rose to 3 . 21 % in February - The HinduBusinessLine",
+      "2026-03-12 | news18.com | India CPI Inflation Rises At 3 . 21 % In February"
+    ]
   }
 }
