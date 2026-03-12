@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T09:16:48.447Z",
+  "generatedAt": "2026-03-12T10:15:09.781Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng mạnh +2.94%/30 ngày, nhưng thanh khoản có thể giảm và rủi ro điều chỉnh tăng cao khi các yếu tố vĩ mô (lạm phát, USD) đang gây áp lực lên giá vàng thế giới.",
+    "thesis": "Giá vàng SJC đang ở vùng cực kỳ quá mua (percentile 99% 5 năm) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật cao khi thiếu dữ liệu vĩ mô nền tảng để xác nhận xu hướng.",
     "reasons": [
-      "Giá SJC 186.3 triệu đồng/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đang ở vùng cực kỳ cao so với lịch sử.",
-      "Đà tăng giá còn mạnh với change30dPct đạt +2.94%, giá hiện tại cao hơn MA30 (161.38 triệu đồng/lượng) tới 15.4%.",
-      "Premium 14.24% nằm trong biên dao động bình thường của 30 ngày qua (11.23% - 17.71%), không có dấu hiệu bong bóng cực đoan.",
-      "Giá thế giới XAUUSD giảm nhẹ -0.11%/ngày trong bối cảnh lo ngại lạm phát và USD mạnh lên theo tin tức."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy vùng giá lịch sử cực kỳ cao cần thận trọng.",
+      "Đà tăng 7 ngày (+2.42%) và 30 ngày (+3.17%) khá dốc, đi kèm biên độ dao động ngày 1.4% báo hiệu thị trường biến động.",
+      "Giá thế giới XAUUSD tăng mạnh 20 ngày (+5.39%) lên 5187 USD/oz, nhưng premium SJC nới rộng ở mức 13.99% so với trung bình 30 ngày (~13.5%).",
+      "Căng thẳng địa chính trị (Iran, dầu thô >100 USD) hỗ trợ giá nhưng các chỉ số vĩ mô (DXY, lợi suất thực) đang thiếu dữ liệu."
     ],
     "risks": [
-      "Rủi ro điều chỉnh giá cao do giá đang ở vùng đỉnh 5 năm (percentile 99%), biên độ dao động 1.4%/ngày có thể gây sốc tài khoản.",
-      "Áp lực lạm phát và USD mạnh (theo tin tức) có thể làm giảm giá vàng thế giới, kéo theo giá vàng trong nước.",
-      "Dữ liệu vĩ mô first-principles bị thiếu (healthy: false) khiến việc đánh giá xu hướng dài hạn không đầy đủ."
+      "Điểm percentile 99% cảnh báo rủi ro điều chỉnh giảm kỹ thuật cao nếu động lượng mua yếu đi.",
+      "Dữ liệu first-principles (DXY, US yields, VIX) không khả dụng (healthy: false), hạn chế khả năng đánh giá chính xác động lực vĩ mô.",
+      "Biến động ngày 1.4% kết hợp với giá cao có thể gây sốc tài khoản nếu mua đuổi."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjc_price_percentile_5y",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_change_7d",
+        "value": 2.42,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_current_price",
         "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "5Y Percentile",
-        "value": 99,
+        "key": "xauusd_change_20d",
+        "value": 5.39,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "current_premium",
+        "value": 13.99,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 14.24,
+        "key": "daily_volatility",
+        "value": 1.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 30 Days",
-        "value": 2.94,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 VND",
-        "value": 161375068,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "XAUUSD Change 1D",
-        "value": -0.11,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "XAUUSD Change 20D",
-        "value": 5.16,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "30D Premium Range High",
-        "value": 17.71,
-        "unit": "%",
-        "source": "monthly_series_30d"
+        "key": "xauusd_spot",
+        "value": 5187.21,
+        "unit": "USD/oz",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T09:15:46.609Z",
+    "latestTimestamp": "2026-03-12T10:14:29.030Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 163070814.81927255,
-    "premiumPct": 14.24,
-    "change7dPct": 2.19,
-    "change30dPct": 2.94,
+    "intlVndPerTael": 163436164.81083846,
+    "premiumPct": 13.99,
+    "change7dPct": 2.42,
+    "change30dPct": 3.17,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162926700,
-    "ma30VndPerTael": 161375068,
+    "ma7VndPerTael": 162978893,
+    "ma30VndPerTael": 161387246,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T09:16:07.692Z",
+    "fetchedAt": "2026-03-12T10:14:50.109Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -105,12 +99,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5176.12,
+        "value": 5187.21,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.11,
-        "change5dPct": 1.87,
-        "change20dPct": 5.16,
+        "change1dPct": 0.1,
+        "change5dPct": 2.09,
+        "change20dPct": 5.39,
         "relationToGold": "context"
       },
       {
@@ -200,23 +194,20 @@
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-12 | edenmagnet.com.au | Big four banks predict three consecutive RBA rate hikes",
-      "2026-03-12 | moreechampion.com.au | Big four banks predict three consecutive RBA rate hikes",
-      "2026-03-12 | braidwoodtimes.com.au | Big four banks predict three consecutive RBA rate hikes"
+      "2026-03-12 | tribune.com.pk | List of ship attacks in Gulf since Feb 28 Iran conflict",
+      "2026-03-12 | japanherald.com | Nifty down 250 pts , Sensex loses 800 pts in opening as crude surges past USD 100 amid West Asia tensions",
+      "2026-03-12 | houstonpublicmedia.org | Trump war with Iran is angering some swing voters who want money spent at home"
     ],
     "countryActionHeadlines": [
-      "2026-03-12 | actionforex.com | We Believe ECB Will Hike at Next Week Meeting or in April",
-      "2026-03-12 | marketscreener.com | Futures point lower as inflation fears resurface",
-      "2026-03-12 | batonrougepost.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
-      "2026-03-12 | economictimes.indiatimes.com | S & P / ASX 200 closes lower as Australian shares slip , oil price surge triggers inflation fears ; check top gainers and losers",
-      "2026-03-12 | thoibaotaichinhvietnam.vn | Deposit rate hikes expected to continue as banks compete for liquidity",
-      "2026-03-12 | mexicostar.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions"
+      "2026-03-12 | afghanistannews.net | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
+      "2026-03-12 | sandiegosun.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
+      "2026-03-12 | brazilsun.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
+      "2026-03-12 | myanmarnews.net | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
+      "2026-03-12 | middleeaststar.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
+      "2026-03-12 | milwaukeesun.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-12 | retail.economictimes.indiatimes.com | Gold Prices Drop as Dollar Strengthens and Inflation Fears Rise , ETRetail",
-      "2026-03-12 | marketscreener.com | Futures point lower as inflation fears resurface",
-      "2026-03-12 | news18.com | Gold , Silver Prices Fall Today : Check 22K And 24K Rates In Delhi , Mumbai , Other Cities On March 12",
-      "2026-03-12 | economictimes.indiatimes.com | S & P / ASX 200 closes lower as Australian shares slip , oil price surge triggers inflation fears ; check top gainers and losers"
+      "2026-03-12 | pakistantoday.com.pk | Gold prices fall as US dollar strengthens and inflation fear - Pakistan Today"
     ]
   }
 }
