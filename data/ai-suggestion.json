@@ -1,85 +1,85 @@
 {
-  "generatedAt": "2026-03-12T06:18:46.222Z",
+  "generatedAt": "2026-03-12T07:20:25.493Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Thấp",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh 5 năm (percentile 99%) với đà tăng mạnh 30 ngày qua, nhưng động lực tăng bị suy yếu do giá thế giới điều chỉnh và vĩ mô thiếu dữ liệu định hướng, nhà đầu tư nên chờ đợi vùng giá tốt hơn hoặc xác nhận xu hướng rõ ràng hơn.",
+    "thesis": "Giá SJC đang ở đỉnh lịch sử 99 percentile 5 năm với biên độ dao động hẹp, trong khi dữ liệu vĩ mô first-principles bị thiếu khiến không thể xác nhận động lực tăng giá bền vững từ phía USD và lợi suất thực.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở mức cực cao percentile 99% (5 năm), rủi ro mua đỉp ngắn hạn lớn.",
-      "Động lượng tăng giá thế giới suy yếu: XAUUSD giảm -0.59% phiên gần nhất sau khi tăng mạnh +4.67% trong 20 ngày.",
-      "Premium 14.78% đang nới rộng so với mức đáy 11.23% đầu tháng 3, cho thấy tâm lý FOMO nội địa đang đẩy giá cao hơn giá trị thực tế.",
-      "Giá thế giới (5152.61 USD/oz) đang giao dịch dưới đỉnh 5330.95 USD/oz ngày 02/03, cấu trúc kỹ thuật ngắn hạn đang đi ngang/điều chỉnh."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), cho thấy rủi ro mua ở vùng giá cao lịch sử là rất lớn.",
+      "Dữ liệu vĩ mô nền tảng (first-principles) không khả dụng: thiếu chỉ số USD, lợi suất thực 10 năm, và VIX; không có dữ liệu để xác nhận xu hướng giảm của USD hay lạm phát kỳ vọng.",
+      "Premium 14.45% hiện tại cao hơn mức thấp nhất 30 ngày (11.23% ngày 27/02) nhưng thấp hơn đỉnh 17.71% (ngày 17/02), cho thấy thị trường Việt Nam không có tình trạng hoảng loạn mua gom cực đoan.",
+      "Giá thế giới giảm nhẹ -0.28% trong ngày (xuống 5167.35 USD/oz) và biến động 1.4%/ngày cho thấy động lượng tăng đang chững lại."
     ],
     "risks": [
-      "Dữ liệu vĩ mô cốt lõi (lợi suất thực, VIX, Fed Funds) bị thiếu hoàn toàn, không thể đánh giá chính xác động lực USD và lạm phát kỳ vọng.",
-      "Premium có thể tiếp tục nới rộng nếu tâm lý hoảng loạn tăng, gây thiệt hại cho người mua đuổi.",
-      "Giá SJC có tính thanh khoản thấp và biên độ dao động 1.41%/ngày, rủi ro trượt giá cao khi vào lệnh không đúng điểm."
+      "Thiếu dữ liệu vĩ mô (USD, Fed Funds, Yields) làm giảm độ tin cậy của nhận định; xu hướng giá có thể đảo chiều bất ngờ nếu chính sách tiền tệ thay đổi.",
+      "Mua tại mức giá cao kỷ lục (99 percentile) đối mặt với rủi ro điều chỉnh kỹ thuật sâu nếu thị trường thế giới chốt lời.",
+      "Biến động premium lịch sử (dao động từ 11.23% đến 17.71% trong 30 ngày) có thể gây thua lỗ tạm thời nếu mua vào lúc premium giãn."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_current_price",
+        "key": "SJC Price",
         "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_change_1d",
-        "value": -0.59,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "xauusd_change_20d",
-        "value": 4.67,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "current_premium",
-        "value": 14.78,
-        "unit": "%",
+        "key": "5-Year Percentile",
+        "value": 99,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_range_30d_low",
+        "key": "Gold Spot Price",
+        "value": 5167.35,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Daily Change (World)",
+        "value": -0.28,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30d (Low)",
         "value": 11.23,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "world_price_30d_high",
-        "value": 5330.95,
-        "unit": "USD/oz",
+        "key": "Premium Range 30d (High)",
+        "value": 17.71,
+        "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "daily_volatility",
-        "value": 1.41,
+        "key": "Missing Macro Factors",
+        "value": 7,
+        "unit": "indicators",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Daily Volatility",
+        "value": 1.4,
         "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T06:18:08.260Z",
+    "latestTimestamp": "2026-03-12T07:19:44.037Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 162317517.82915747,
-    "premiumPct": 14.78,
-    "change7dPct": 1.72,
-    "change30dPct": 2.46,
-    "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162819086,
-    "ma30VndPerTael": 161349958,
+    "intlVndPerTael": 162781771.15139124,
+    "premiumPct": 14.45,
+    "change7dPct": 2.01,
+    "change30dPct": 2.75,
+    "volatilityDailyPct": 1.4,
+    "ma7VndPerTael": 162885408,
+    "ma30VndPerTael": 161365433,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,9 +90,10 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T06:18:29.671Z",
+    "fetchedAt": "2026-03-12T07:20:05.239Z",
     "healthy": false,
     "missingFactors": [
+      "US Dollar Trade Weighted Index",
       "US Real Yield 10Y",
       "US Breakeven Inflation 10Y",
       "US Effective Fed Funds Rate",
@@ -104,23 +105,23 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5151.58,
+        "value": 5167.3,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.59,
-        "change5dPct": 1.39,
-        "change20dPct": 4.67,
+        "change1dPct": -0.28,
+        "change5dPct": 1.7,
+        "change20dPct": 4.98,
         "relationToGold": "context"
       },
       {
         "id": "usd_index_trade_weighted",
         "name": "US Dollar Trade Weighted Index",
-        "value": 119.491,
+        "value": null,
         "unit": "index",
-        "date": "2026-03-06",
-        "change1dPct": -0.06,
-        "change5dPct": 1.42,
-        "change20dPct": 0.83,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "inverse"
       },
       {
