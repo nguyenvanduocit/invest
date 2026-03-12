@@ -1,73 +1,85 @@
 {
-  "generatedAt": "2026-03-12T20:09:24.151Z",
+  "generatedAt": "2026-03-12T21:10:35.831Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Thấp",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang giao dịch ở vùng cực cao (percentile 99%) với đà tăng suy yếu, trong khi giá thế giới điều chỉnh giảm khiến premium nới rộng lên 16.19%. Thiếu dữ liệu vĩ mô (DXY, lợi suất thực) và tin tức địa chính trị không liên quan khiến tín hiệu không rõ ràng, nhà đầu tư nên chờ đợi xác nhận xu hướng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử (percentile 99% kỳ 5 năm) với đà tăng suy yếu, trong khi giá thế giới điều chỉnh giảm tạo áp lực bán. Nên chờ đợi xác nhận xu hướng rõ ràng hơn thay vì mua đuổi tại vùng giá cao rủi ro này.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm, rủi ro mua đỉnh ngắn hạn rất cao.",
-      "Động lượng tăng yếu: SJC giảm 1.38% trong 7 ngày qua, trái ngược với xu hướng tăng 3.42% của giá thế giới 20 ngày qua.",
-      "Premium nới rộng lên 16.19% (từ mức thấp nhất 11.23% trong 30 ngày), cho thấy giá nội địa đắt hơn đáng kể so với giá thế giới quy đổi.",
-      "Dữ liệu First-principles (DXY, Real Yield) bị thiếu hoàn toàn, và các tiêu đề chính sách (ECB, Fed) không chứa thông tin định giá vàng trực tiếp."
+      "Giá SJC 186.3 triệu đồng/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đang ở vùng cực kỳ cao so với lịch sử, rủi ro điều chỉnh lớn.",
+      "Động lượng tăng yếu đi: giá SJC giảm 1.59% trong 7 ngày qua dù vẫn cao hơn MA7 (162.1 triệu) và MA30 (161.3 triệu) khoảng 15%.",
+      "Giá thế giới (XAUUSD) giảm mạnh 1.98% xuống 5079.62 USD/oz, tạo divergence tiêu cực với giá SJC và đẩy premium lên mức cao 16.43%.",
+      "Bối cảnh vĩ mô nhiều bất định từ xung đột Trung Đông và lạm phát Mỹ dai dẳng (theo headlines) khiến thị trường chờ đợi dữ liệu lạm phát Mỹ sắp công bố để định hướng."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật sâu hơn khi giá thế giới mất đà tăng (đang giảm -1.77% ngày).",
-      "Rủi ro thanh khoản nếu spread mua-bán nới rộng tại vùng giá đỉnh lịch sử.",
-      "Dữ liệu vĩ mô đầu vào không đầy đủ (healthy: false) dẫn đến thiếu tín hiệu xác nhận xu hướng từ USD và lãi suất thực."
+      "Xung đột Trung Đông leo thang có thể đẩy giá vàng tăng vọt bất chấp kỹ thuật overbought.",
+      "Dữ liệu vĩ mô cốt lõi (DXY, US Real Yield, VIX) bị thiếu, làm giảm độ tin cậy của phân tích first-principles.",
+      "Premium 16.43% có thể co hẹp nhanh nếu giá thế giới phục hồi, làm giảm hiệu quả đầu tư trong ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC Change 7d",
-        "value": -1.38,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 3.42,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Current Premium vs 30d Low",
-        "value": 16.19,
+        "key": "sjc_change_7d",
+        "value": -1.59,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Daily Change",
-        "value": -1.77,
+        "key": "xauusd_change_1d",
+        "value": -1.98,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "Macro Data Health Status",
-        "value": 0,
-        "unit": "boolean (healthy)",
-        "source": "macro_context"
+        "key": "sjc_premium_current",
+        "value": 16.43,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "sjc_vs_ma30",
+        "value": 15.5,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "xauusd_spot",
+        "value": 5079.62,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_price_current",
+        "value": 186300000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 1.43,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T20:08:47.438Z",
+    "latestTimestamp": "2026-03-12T21:10:04.360Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 160345128.5043159,
-    "premiumPct": 16.19,
-    "change7dPct": -1.38,
-    "change30dPct": 0.18,
+    "intlVndPerTael": 160013812.00193822,
+    "premiumPct": 16.43,
+    "change7dPct": -1.59,
+    "change30dPct": -0.02,
     "volatilityDailyPct": 1.43,
-    "ma7VndPerTael": 162186215,
-    "ma30VndPerTael": 161287115,
+    "ma7VndPerTael": 162138884,
+    "ma30VndPerTael": 161276071,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -78,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T20:09:09.130Z",
+    "fetchedAt": "2026-03-12T21:10:25.511Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -93,12 +105,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5090.05,
+        "value": 5079.62,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -1.77,
-        "change5dPct": 0.18,
-        "change20dPct": 3.42,
+        "change1dPct": -1.98,
+        "change5dPct": -0.03,
+        "change20dPct": 3.2,
         "relationToGold": "context"
       },
       {
@@ -187,8 +199,20 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-12 | dailypress.com | Trump discourages Iranian team from attending the World Cup",
+      "2026-03-12 | foxnews.com | Canadian Conservatives accuse government of harboring Iranian operatives"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-12 | thecable.ng | Nigeria net reserves fell to $800m before reforms , says CBN deputy governor",
+      "2026-03-12 | marketscreener.com | Dollar flirts with new 2026 highs as oil price jump hurts euro",
+      "2026-03-12 | us.cnn.com | Mortgage rates climb to 6 . 11 % as Iran war roils markets",
+      "2026-03-12 | finance.yahoo.com | S & P Futures Waver as Middle East Conflict Uncertainty Persists , U . S . Inflation Data in Focus"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-12 | 9news.com.au | Trump decision wiped a trillion dollars from the market . But this is one call he cant chicken out of",
+      "2026-03-12 | economictimes.indiatimes.com | Retail inflation climbs to 3 . 21 % in February",
+      "2026-03-12 | markets.financialcontent.com | FinancialContent - The Fed Gordian Knot : Sticky Inflation and $100 Oil Forge a Policy Trap for March"
+    ]
   }
 }
