@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T22:06:18.786Z",
+  "generatedAt": "2026-03-12T23:07:47.714Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với động lượng yếu trong bối cảnh gold spot điều chỉnh -2% ngày, tuy nhiên rủi ro địa chính trị từ chiến tranh Iran có thể tạo đợt tăng mới cần theo dõi.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 99 percentile 5 năm với biên độ dao động rộng, trong khi xu hướng kỹ thuật 30 ngày đi ngang và thiếu tín hiệu vĩ mô rõ ràng do thiếu dữ liệu USD/lợi suất. Nhà đầu tư nên chờ đợi xác nhận xu hướng hoặc đợt điều chỉnh về vùng hỗ trợ kỹ thuật trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở mức rất cao, tương đương percentile 99% trong 5 năm qua, rủi ro mua đỉnh ngắn hạn đáng kể.",
-      "Động lượng yếu: giá SJC giảm -1.55% trong 7 ngày qua và gần như không đổi (+0.01%) trong 30 ngày, cho thấy thanh khoản cao và áp lực bán.",
-      "Gold spot điều chỉnh mạnh -2% xuống 5078.39 USD/oz ngày 12/03, kéo giá thế giới quy đổi về 160.07 triệu VND/lượng.",
-      "Premium tăng vọt lên 16.39% (so với mức 12-13% đầu tháng), cho thấy giá SJC đã tách khỏi biên động thế giới và bị đẩy lên cao nhân tạo."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), cho thấy rủi ro mua tại vùng giá cực cao của lịch sử.",
+      "Xu hướng giá đi ngang trong 30 ngày qua với thay đổi không đáng kể (+0.27%), giá hiện tại 186.3 triệu gần sát MA7 (162.2 triệu VND quy đổi thế giới) nhưng thiếu động lượng tăng mạnh.",
+      "Premium 16.09% đang ở mức cao hơn vùng thấp nhất 30 ngày (11.23-12.47%), cho thấy định giá nội địa đã bão hòa tương đối so với giá thế giới.",
+      "Dữ liệu first-principles vĩ mô (USD Index, Real Yield) bị thiếu hoàn toàn, các headline chính sách (Fed, ECB) không chứa tín hiệu định giá vàng rõ ràng, giảm khả năng dự đoán xu hướng."
     ],
     "risks": [
-      "Rủi ro địa chính trị: Chiến tranh Iran đẩy dầu lên 100 USD/thùng có thể gây sốt vàng bất chấp định giá kỹ thuật.",
-      "Thiếu dữ liệu vĩ mô: Không có dữ liệu USD Index, lợi suất thực, VIX để đánh giá chính xác first-principles.",
-      "Premium co giãn mạnh từ 11.23% đến 17.71% trong 30 ngày, biến động 6.48 điểm phần trăm gây khó dự đoán điểm vào lệnh."
+      "Rủi ro điều chỉnh giá từ vùng đỉnh 99 percentile khi động lượng tăng yếu đi hoặc thị trường chốt lời ngắn hạn.",
+      "Biên độ dao động ngày 1.43% khá cao, có thể gây thanh khoản sụt giảm nếu giá quay đầu giảm nhanh.",
+      "Thiếu dữ liệu vĩ mô (USD, Yield, VIX) khiến việc đánh giá xu hướng dài hạn bị giới hạn, dễ bị nhiễu thị trường ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá SJC hiện tại",
         "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
+        "key": "Phân vị 5 năm",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Thay đổi 30 ngày",
+        "value": 0.27,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "change_7d",
-        "value": -1.55,
+        "key": "Premium hiện tại",
+        "value": 16.09,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "premium_current",
-        "value": 16.39,
+        "key": "Biên độ dao động ngày",
+        "value": 1.43,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "gold_spot_1d_change",
-        "value": -2,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "Giá thế giới quy đổi",
+        "value": 160475517,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "gold_spot_price",
-        "value": 5078.39,
+        "key": "Giá vàng thế giới XAUUSD",
+        "value": 5095.37,
         "unit": "USD/oz",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 6.48,
-        "unit": "điểm %",
+        "key": "Vùng premium thấp 30 ngày",
+        "value": 11.23,
+        "unit": "%",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "ma7_vs_current_gap",
-        "value": 24.15,
-        "unit": "triệu VND/lượng",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T22:05:39.802Z",
+    "latestTimestamp": "2026-03-12T23:07:09.116Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 160070476.52025822,
-    "premiumPct": 16.39,
-    "change7dPct": -1.55,
-    "change30dPct": 0.01,
+    "intlVndPerTael": 160475517.44327533,
+    "premiumPct": 16.09,
+    "change7dPct": -1.3,
+    "change30dPct": 0.27,
     "volatilityDailyPct": 1.43,
-    "ma7VndPerTael": 162146979,
-    "ma30VndPerTael": 161277960,
+    "ma7VndPerTael": 162204842,
+    "ma30VndPerTael": 161291462,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T22:06:00.997Z",
+    "fetchedAt": "2026-03-12T23:07:30.633Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -105,12 +105,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5078.39,
+        "value": 5095.37,
         "unit": "USD/oz",
-        "date": "2026-03-12",
-        "change1dPct": -2,
-        "change5dPct": -0.05,
-        "change20dPct": 3.18,
+        "date": "2026-03-13",
+        "change1dPct": 0.33,
+        "change5dPct": -1.12,
+        "change20dPct": 1.24,
         "relationToGold": "context"
       },
       {
@@ -199,25 +199,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-12 | benzinga.com | 2  Safety Plays  to Make Now - Agnico Eagle Mines ( NYSE : AEM ), VanEck Gold Miners ETF ( ARCA : GDX )",
-      "2026-03-12 | finance.yahoo.com | Stock Market Today , March 12 : Oil Prices Surge After Iran War Fears Spark Broad Market Selloff",
-      "2026-03-12 | marketscreener.com | TSX falls to one - month low on escalating Middle East war",
-      "2026-03-12 | deccanchronicle.com | India Headline Retail Inflation Rises To 3 . 21 pc in Feb ."
-    ],
-    "countryActionHeadlines": [
-      "2026-03-12 | benzinga.com | 2  Safety Plays  to Make Now - Agnico Eagle Mines ( NYSE : AEM ), VanEck Gold Miners ETF ( ARCA : GDX )",
-      "2026-03-12 | fox13now.com | Mortgage rates climb to 6 . 11 % as Iran war roils markets",
-      "2026-03-12 | finance-commerce.com | Fed still expected to cut rates in June despite inflation risk",
-      "2026-03-12 | news8000.com | Mortgage rates climb to 6 . 11 % as Iran war roils markets",
-      "2026-03-12 | applevalleynewsnow.com | Oil jumps to $100 per barrel and stocks sink worldwide with no clear end in sight for the Iran war",
-      "2026-03-12 | salinapost.com | Oil price jumps , stocks sink worldwide with no end in sight for Iran war"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-12 | marketscreener.com | TSX falls to one - month low on escalating Middle East war",
-      "2026-03-12 | deccanchronicle.com | India Headline Retail Inflation Rises To 3 . 21 pc in Feb .",
-      "2026-03-12 | 9news.com.au | Trump decision wiped a trillion dollars from the market . But this is one call he cant chicken out of",
-      "2026-03-12 | economictimes.indiatimes.com | Retail inflation climbs to 3 . 21 % in February"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
