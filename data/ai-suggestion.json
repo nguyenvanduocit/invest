@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T23:06:21.205Z",
+  "generatedAt": "2026-03-12T00:18:07.527Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,17 @@
     "status": "CHỜ",
     "confidence": "Thấp",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99%), rủi ro điều chỉnh kỹ thuật lớn hơn cơ hội tăng ngay lập tức. Tuy nhiên, thiếu dữ liệu vĩ mô (USD, lợi suất thực) và tin tức địa chính trị không liên quan khiến tín hiệu bán chưa đủ mạnh, nên chiến lược chờ đợi là an toàn nhất.",
+    "thesis": "Giá vàng SJC 187.2 triệu VND/lượng đang ở đỉnh lịch sử 5 năm (percentile 99%), rủi ro điều chỉnh kỹ thuật cao hơn lợi nhuận tiềm năng trong ngắn hạn. Thiếu dữ liệu vĩ mô Mỹ (DXY, lợi suất thực, VIX) khiến không thể xác nhận động lực tăng giá từ dòng tiền quốc tế.",
     "reasons": [
-      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy thị trường đã ở vùng quá mua lịch sử.",
-      "Premium 15.35% hiện tại cao hơn đáng kể so với mức 11.13% thấp nhất trong 30 ngày qua, thanh khoản tại vùng giá này có thể kém.",
-      "Giá thế giới (Spot 5149.93 USD/oz) đang giảm nhẹ -0.62%/ngày, không tạo đà tăng cho giá vàng trong nước."
+      "Giá SJC 187.2 triệu VND/lượng đang ở phân vị 99% trong 5 năm, tín hiệu vùng quá mua cực đoan, rủi ro điều giá rất cao.",
+      "Premium dao động mạnh từ 11.23% đến 17.71% trong 30 ngày qua, hiện ở 15.59%, cho thấy thanh khoản thị trường Việt Nam không ổn định.",
+      "Động lượng tăng chậm lại: tăng 1.49%/7 ngày so với 2.23%/30 ngày, trong khi giá thế giới giảm 0.75% phiên gần nhất.",
+      "Thiếu hoàn toàn 7 chỉ số vĩ mô quan trọng (DXY, lợi suất thực, VIX, Fed Funds) - healthy: false - không có cơ sở first-principles để đánh giá xu hướng dòng tiền quốc tế."
     ],
     "risks": [
-      "Dữ liệu vĩ mô cốt lõi (USD Index, US Real Yield) bị thiếu, không thể đánh giá chính xác động lực dài hạn của giá vàng thế giới.",
-      "Tin tức chính sách chỉ có ECB (không liên quan trực tiếp đến giá vàng), thiếu tín hiệu từ Fed hoặc sự kiện địa chính trị.",
-      "Biên độ dao động 1.4%/ngày và đỉnh 5 năm có thể dẫn đến bẫy thanh khoản nếu thị trường điều chỉnh nhanh."
+      "Điều chỉnh kỹ thuật mạnh từ vùng đỉnh do thanh khoản thấp hoặc chốt lời ồ ạt khi percentile 99%.",
+      "Rủi ro nhiễu dữ liệu cao do thiếu tín hiệu vĩ mô Mỹ để xác nhận xu hướng giá thế giới.",
+      "Premium co giãn thất thường (biên độ 6.48 điểm phần trăm trong tháng) làm giảm hiệu quả bảo toàn vốn."
     ],
     "evidence": [
       {
@@ -32,47 +33,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC",
-        "value": 15.35,
+        "key": "Premium hiện tại",
+        "value": 15.59,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium thấp nhất 30 ngày",
-        "value": 11.13,
-        "unit": "%",
+        "key": "Biến động ngày",
+        "value": 1.41,
+        "unit": "%/ngày",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá thế giới XAUUSD",
+        "value": 5140.97,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Giá vàng thế giới Spot",
-        "value": 5149.93,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Biến động ngày thế giới",
-        "value": -0.62,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Biến động ngày VN",
-        "value": 1.4,
+        "key": "Tăng trưởng 7 ngày",
+        "value": 1.49,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Missing Macro Factors",
+        "value": 7,
+        "unit": "chỉ số",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-11T23:05:44.993Z",
+    "latestTimestamp": "2026-03-12T00:17:16.440Z",
     "sjcVndPerTael": 187200000,
-    "intlVndPerTael": 162285480.59017926,
-    "premiumPct": 15.35,
-    "change7dPct": 1.6,
-    "change30dPct": 2.34,
-    "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162950514,
-    "ma30VndPerTael": 161500779,
+    "intlVndPerTael": 161950696.06465024,
+    "premiumPct": 15.59,
+    "change7dPct": 1.49,
+    "change30dPct": 2.23,
+    "volatilityDailyPct": 1.41,
+    "ma7VndPerTael": 162766683,
+    "ma30VndPerTael": 161337730,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -83,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-11T23:06:06.144Z",
+    "fetchedAt": "2026-03-12T00:17:37.587Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -98,12 +99,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5149.93,
+        "value": 5143.12,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.62,
-        "change5dPct": 1.35,
-        "change20dPct": 4.63,
+        "change1dPct": -0.75,
+        "change5dPct": 1.22,
+        "change20dPct": 4.49,
         "relationToGold": "context"
       },
       {
