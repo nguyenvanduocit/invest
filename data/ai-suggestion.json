@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T10:15:09.781Z",
+  "generatedAt": "2026-03-12T11:13:28.259Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ quá mua (percentile 99% 5 năm) với đà tăng mạnh 7 ngày qua, nhưng rủi ro điều chỉnh kỹ thuật cao khi thiếu dữ liệu vĩ mô nền tảng để xác nhận xu hướng.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng mạnh 30 ngày qua, nhưng thanh khoản có thể thấp và rủi ro điều chỉnh ngắn hạn đang gia tăng; nhà đầu tư không nên mua đuổi nhưng cũng chưa cần bán tháo.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy vùng giá lịch sử cực kỳ cao cần thận trọng.",
-      "Đà tăng 7 ngày (+2.42%) và 30 ngày (+3.17%) khá dốc, đi kèm biên độ dao động ngày 1.4% báo hiệu thị trường biến động.",
-      "Giá thế giới XAUUSD tăng mạnh 20 ngày (+5.39%) lên 5187 USD/oz, nhưng premium SJC nới rộng ở mức 13.99% so với trung bình 30 ngày (~13.5%).",
-      "Căng thẳng địa chính trị (Iran, dầu thô >100 USD) hỗ trợ giá nhưng các chỉ số vĩ mô (DXY, lợi suất thực) đang thiếu dữ liệu."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy giá đã ở vùng lịch sử cực cao (source: market_snapshot).",
+      "Động lượng tăng vẫn còn với change30dPct đạt +3.03% và giá hiện tại cao hơn MA30 (161.38 triệu VND/lượng) tới 15.4% (source: market_snapshot, monthly_series_30d).",
+      "Premium 14.14% nằm trong biên độ dao động 30 ngày qua (11.23% - 17.71%), không có dấu hiệu bong bóng cấp thiết nhưng cũng không còn hấp dẫn (source: market_snapshot, monthly_series_30d).",
+      "Dữ liệu vĩ mô first-principles (DXY, lợi suất thực, VIX) bị thiếu hoàn toàn, không thể đánh giá chính xác động lực hỗ trợ từ USD và lãi suất, buộc phải giảm kỳ vọng (source: macro_context)."
     ],
     "risks": [
-      "Điểm percentile 99% cảnh báo rủi ro điều chỉnh giảm kỹ thuật cao nếu động lượng mua yếu đi.",
-      "Dữ liệu first-principles (DXY, US yields, VIX) không khả dụng (healthy: false), hạn chế khả năng đánh giá chính xác động lực vĩ mô.",
-      "Biến động ngày 1.4% kết hợp với giá cao có thể gây sốc tài khoản nếu mua đuổi."
+      "Mua đỉnh lịch sử: Rủi ro điều chỉnh kỹ thuật rất lớn khi giá ở percentile 99%, bất kỳ chốt lời nào cũng có thể tạo áp lực bán mạnh.",
+      "Thiếu tín hiệu vĩ mô: Không có dữ liệu USD và lợi suất trái phiếu Mỹ nên không xác định được xu hướng giá thế giới có thể đảo chiều hay không.",
+      "Biến động premium: Premium có thể co hẹp từ 14.14% về mức 12-13% như thấy trong chuỗi dữ liệu, làm giảm lợi nhuận thực tế của nhà đầu tư."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": 2.42,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "sjc_current_price",
+        "key": "SJC Current Price",
         "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_change_20d",
-        "value": 5.39,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "SJC MA30",
+        "value": 161379905,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "current_premium",
-        "value": 13.99,
+        "key": "Change 30 Days",
+        "value": 3.03,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "daily_volatility",
-        "value": 1.4,
+        "key": "Current Premium",
+        "value": 14.14,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "xauusd_spot",
-        "value": 5187.21,
-        "unit": "USD/oz",
+        "key": "30-Day Premium Range High",
+        "value": 17.71,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "30-Day Premium Range Low",
+        "value": 11.23,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Missing Macro Factors Count",
+        "value": 7,
+        "unit": "indicators",
         "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T10:14:29.030Z",
+    "latestTimestamp": "2026-03-12T11:12:45.511Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 163436164.81083846,
-    "premiumPct": 13.99,
-    "change7dPct": 2.42,
-    "change30dPct": 3.17,
+    "intlVndPerTael": 163215942.59397787,
+    "premiumPct": 14.14,
+    "change7dPct": 2.28,
+    "change30dPct": 3.03,
     "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162978893,
-    "ma30VndPerTael": 161387246,
+    "ma7VndPerTael": 162947433,
+    "ma30VndPerTael": 161379905,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T10:14:50.109Z",
+    "fetchedAt": "2026-03-12T11:13:06.682Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -99,12 +105,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5187.21,
+        "value": 5179.99,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": 0.1,
-        "change5dPct": 2.09,
-        "change20dPct": 5.39,
+        "change1dPct": -0.04,
+        "change5dPct": 1.95,
+        "change20dPct": 5.24,
         "relationToGold": "context"
       },
       {
@@ -193,21 +199,8 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-12 | tribune.com.pk | List of ship attacks in Gulf since Feb 28 Iran conflict",
-      "2026-03-12 | japanherald.com | Nifty down 250 pts , Sensex loses 800 pts in opening as crude surges past USD 100 amid West Asia tensions",
-      "2026-03-12 | houstonpublicmedia.org | Trump war with Iran is angering some swing voters who want money spent at home"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-12 | afghanistannews.net | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
-      "2026-03-12 | sandiegosun.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
-      "2026-03-12 | brazilsun.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
-      "2026-03-12 | myanmarnews.net | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
-      "2026-03-12 | middleeaststar.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions",
-      "2026-03-12 | milwaukeesun.com | Forget the island : Jeffrey Epsteins secret war for Libyas billions"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-12 | pakistantoday.com.pk | Gold prices fall as US dollar strengthens and inflation fear - Pakistan Today"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
