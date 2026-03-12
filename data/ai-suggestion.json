@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-03-12T03:53:43.864Z",
+  "generatedAt": "2026-03-12T04:35:14.275Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Thấp",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở đỉnh lịch sử 99th percentile 5 năm với biên độ dao động hẹp, trong khi dữ liệu vĩ mô first-principles (USD, lợi suất thực) bị thiếu hoàn toàn khiến không thể xác nhận động lực tăng giá bền vững từ phía thế giới.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chậm lại, xu hướng tăng trung hạn vẫn intact nhưng rủi ro điều chỉnh ngắn hạn cao.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm (percentile5y: 99), cho thấy rủi ro mua tại vùng giá cực cao về mặt lịch sử.",
-      "Premium 14.75% nằm trong biên độ dao động bình thường 30 ngày qua (11.23% - 17.71%), không có tín hiệu bất thường nhưng cũng không hấp dẫn để gia tăng vị thế.",
-      "Dữ liệu first-principles vĩ mô (DXY, US Real Yield, VIX) hoàn toàn thiếu (healthy: false, 7/8 chỉ báo null), không thể đánh giá động lực thực từ thị trường quốc tế.",
-      "Giá thế giới (XAUUSD) giảm nhẹ -0.56% phiên gần nhất về 5152.99 USD/oz, thiếu tín hiệu đột phá mạnh mẽ để kéo giá SJC tiếp tục tăng."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% 5 năm, dương tính cực cao so với lịch sử, rủi ro mua đỉp ngắn hạn đáng kể.",
+      "Động lượng tăng chậm lại: tăng 1.7% trong 7 ngày so với mức tăng 4.65% của giá thế giới 20 ngày qua, thanh khoản có thể đang cạn.",
+      "Premium 14.8% đang nới rộng từ mức đáy 11.23% ngày 27/02, cho thấy tâm lý FOMO nội địa tăng nhưng không bền vững khi giá thế giới điều chỉnh -0.6% hôm nay.",
+      "Giá thế giới 5151 USD/oz vẫn giữ xu hướng tăng mạnh (+4.65% 20 ngày) nhưng thiếu dữ liệu vĩ mô (USD, lợi suất thực) để xác nhận đà tăng, confidence bị giảm."
     ],
     "risks": [
-      "Thiếu dữ liệu vĩ mô (USD, Fed Funds, Yield) dẫn đến mù mờ về xu hướng lãi suất và đồng USD - yếu tố then chốt định giá vàng.",
-      "Mua tại mức giá kỷ lục (186.3 triệu) mang rủi ro điều chỉnh cao nếu thị trường thế giới chững lại.",
-      "Các headline chính sách (ECB) không liên quan trực tiếp đến giá vàng, dữ liệu nhiễu không hỗ trợ phân tích."
+      "Thiếu dữ liệu vĩ mô (DXY, US yields, VIX) khiến phân tích first-principles không đầy đủ, dễ bị bất ngờ ngược chiều.",
+      "Premium nới rộng nhanh từ 11.23% lên 14.8% trong 2 tuần có thể co lại mạnh nếu giá thế giới điều chỉnh, gây lỗ chênh lệch cho người mua mới.",
+      "Giá ở vùng cực hiếm (percentile 99%), rủi ro điều chỉnh kỹ thuật cao nếu không có tin tức thúc đẩy mới."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "5-Year Percentile",
+        "key": "5Y Percentile",
         "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium vs World",
-        "value": 14.75,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot XAUUSD",
-        "value": 5152.99,
+        "key": "Premium",
+        "value": 14.8,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Change 7d (SJC)",
+        "value": 1.7,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Change 20d (World)",
+        "value": 4.65,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot",
+        "value": 5150.79,
         "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
-        "key": "XAUUSD Change 1D",
-        "value": -0.56,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "30D Premium Range Low",
+        "key": "Premium Range 30d",
         "value": 11.23,
-        "unit": "%",
+        "unit": "% min",
         "source": "monthly_series_30d"
       },
       {
-        "key": "30D Premium Range High",
-        "value": 17.71,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Missing Macro Factors",
-        "value": 7,
-        "unit": "indicators",
+        "key": "Macro Data Health",
+        "value": 0,
+        "unit": "factors available",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T03:52:57.035Z",
+    "latestTimestamp": "2026-03-12T04:34:36.562Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 162352411.63767415,
-    "premiumPct": 14.75,
-    "change7dPct": 1.74,
-    "change30dPct": 2.48,
+    "intlVndPerTael": 162277096.36657372,
+    "premiumPct": 14.8,
+    "change7dPct": 1.7,
+    "change30dPct": 2.44,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162824071,
-    "ma30VndPerTael": 161351121,
+    "ma7VndPerTael": 162813312,
+    "ma30VndPerTael": 161348610,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T03:53:18.534Z",
+    "fetchedAt": "2026-03-12T04:34:58.069Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -105,12 +105,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5152.99,
+        "value": 5150.79,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.56,
-        "change5dPct": 1.41,
-        "change20dPct": 4.69,
+        "change1dPct": -0.6,
+        "change5dPct": 1.37,
+        "change20dPct": 4.65,
         "relationToGold": "context"
       },
       {
