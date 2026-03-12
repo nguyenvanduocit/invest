@@ -1,73 +1,73 @@
 {
-  "generatedAt": "2026-03-12T19:18:40.082Z",
+  "generatedAt": "2026-03-12T20:09:24.151Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Thấp",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng chậm lại, trong khi giá thế giới điều chỉnh giảm nhẹ. Nên chờ đợi hồi phục về vùng hỗ trợ kỹ thuật hoặc xác nhận xu hướng rõ ràng hơn từ thị trường quốc tế trước khi hành động.",
+    "thesis": "Giá SJC đang giao dịch ở vùng cực cao (percentile 99%) với đà tăng suy yếu, trong khi giá thế giới điều chỉnh giảm khiến premium nới rộng lên 16.19%. Thiếu dữ liệu vĩ mô (DXY, lợi suất thực) và tin tức địa chính trị không liên quan khiến tín hiệu không rõ ràng, nhà đầu tư nên chờ đợi xác nhận xu hướng.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy rủi ro mua đỉnh là rất lớn (market_snapshot).",
-      "Giá thế giới (XAUUSD) giảm 1.89% xuống 5084 USD/oz và thấp hơn MA7 VND (162.5 triệu), tín hiệu động lượng tăng yếu đi (first_principles_context, market_snapshot).",
-      "Premium tăng vọt lên 16.35% từ mức thấp nhất 11.23% trong 30 ngày qua, thanh khoản mua tại giá cao này có thể gặp áp lực (market_snapshot, monthly_series_30d).",
-      "Biến động ngày ở mức 1.45% kết hợp tin tức chiến tranh Vịnh Ba Tư gây bất ổn, thị trường cần thời gian để xác định xu hướng sau cú sốc (market_snapshot, geopoliticalHeadlines)."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm, rủi ro mua đỉnh ngắn hạn rất cao.",
+      "Động lượng tăng yếu: SJC giảm 1.38% trong 7 ngày qua, trái ngược với xu hướng tăng 3.42% của giá thế giới 20 ngày qua.",
+      "Premium nới rộng lên 16.19% (từ mức thấp nhất 11.23% trong 30 ngày), cho thấy giá nội địa đắt hơn đáng kể so với giá thế giới quy đổi.",
+      "Dữ liệu First-principles (DXY, Real Yield) bị thiếu hoàn toàn, và các tiêu đề chính sách (ECB, Fed) không chứa thông tin định giá vàng trực tiếp."
     ],
     "risks": [
-      "Rủi ro giá điều chỉnh sâu nếu giá thế giới không giữ được mốc 5000 USD/oz và dollar tiếp tục mạnh.",
-      "Premium co hẹp nhanh từ 16.35% có thể khiến giá SJC giảm nhanh hơn giá thế giới.",
-      "Dữ liệu vĩ mô (lợi suất thực, DXY) bị thiếu, hạn chế khả năng đánh giá chính xác động lực dài hạn."
+      "Điều chỉnh kỹ thuật sâu hơn khi giá thế giới mất đà tăng (đang giảm -1.77% ngày).",
+      "Rủi ro thanh khoản nếu spread mua-bán nới rộng tại vùng giá đỉnh lịch sử.",
+      "Dữ liệu vĩ mô đầu vào không đầy đủ (healthy: false) dẫn đến thiếu tín hiệu xác nhận xu hướng từ USD và lãi suất thực."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 7d",
+        "value": -1.38,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot Change 1D",
-        "value": -1.89,
+        "key": "Gold Spot Change 20d",
+        "value": 3.42,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "Premium Current vs 30D Low",
-        "value": 16.35,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "SJC Price vs MA7",
-        "value": 186.3,
-        "unit": "triệu VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Gold Spot Price",
-        "value": 5084,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 1.45,
+        "key": "Current Premium vs 30d Low",
+        "value": 16.19,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot Daily Change",
+        "value": -1.77,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "Macro Data Health Status",
+        "value": 0,
+        "unit": "boolean (healthy)",
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T19:17:59.890Z",
+    "latestTimestamp": "2026-03-12T20:08:47.438Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 160124263.64687315,
-    "premiumPct": 16.35,
-    "change7dPct": 0.35,
-    "change30dPct": 1.08,
-    "volatilityDailyPct": 1.45,
-    "ma7VndPerTael": 162505764,
-    "ma30VndPerTael": 161276849,
+    "intlVndPerTael": 160345128.5043159,
+    "premiumPct": 16.19,
+    "change7dPct": -1.38,
+    "change30dPct": 0.18,
+    "volatilityDailyPct": 1.43,
+    "ma7VndPerTael": 162186215,
+    "ma30VndPerTael": 161287115,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -78,7 +78,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T19:18:21.394Z",
+    "fetchedAt": "2026-03-12T20:09:09.130Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -93,12 +93,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5084,
+        "value": 5090.05,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -1.89,
-        "change5dPct": 0.06,
-        "change20dPct": 3.29,
+        "change1dPct": -1.77,
+        "change5dPct": 0.18,
+        "change20dPct": 3.42,
         "relationToGold": "context"
       },
       {
@@ -187,19 +187,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-12 | asianews.it | GULF War and oil : India and Bangladesh seek agreements with Iran to bypass Hormuz blockade",
-      "2026-03-12 | bitcoinmagazine.com | How War , Tariffs , And Oil Are Shaping The Bitcoin Price - And How To Predict What Next"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-12 | bitcoinmagazine.com | How War , Tariffs , And Oil Are Shaping The Bitcoin Price - And How To Predict What Next",
-      "2026-03-12 | livemint.com | Gold , silver rates today : Comex gold slides $64 / oz ; silver drops $1 . 5 as rising dollar caps safe - haven demand",
-      "2026-03-12 | cnn.com | Mortgage rates climb to 6 . 11 % as Iran war roils markets",
-      "2026-03-12 | marketscreener.com | Oil touches $100 a barrel , shares skid after attacks on Gulf shipping , Iran warnings"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-12 | bitcoinmagazine.com | How War , Tariffs , And Oil Are Shaping The Bitcoin Price - And How To Predict What Next",
-      "2026-03-12 | livemint.com | Gold , silver rates today : Comex gold slides $64 / oz ; silver drops $1 . 5 as rising dollar caps safe - haven demand"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
