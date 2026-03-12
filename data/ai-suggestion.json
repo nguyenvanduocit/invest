@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T01:35:08.427Z",
+  "generatedAt": "2026-03-12T02:59:55.182Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chậm lại, trong khi giá thế giới điều chỉnh nhẹ; rủi ro mua đuối cao hơn tiềm năng lợi nhuận ngắn hạn.",
+    "thesis": "Giá vàng SJC đang ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng chậm lại, yêu cầu nhà đầu tư thận trọng chờ điểm nhập trường tốt hơn thay vì mua đuổi. Premium 14.76% nằm trong biên độ dao động bình thường của 30 ngày qua, không có tín hiệu bất thường.",
     "reasons": [
-      "Giá SJC 185.8 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy thị trường đã định giá rất cao.",
-      "Đà tăng chậm lại: giá thế giới giảm 0.47% phiên gần nhất, trong khi SJC chỉ tăng 1.81% trong 7 ngày so với mức 2.56% của 30 ngày.",
-      "Premium 14.36% nằm trong biên dao động 11-18% của 30 ngày qua, không có tín hiệu bất thường nhưng cũng không hấp dẫn để mua vào.",
-      "Thiếu dữ liệu vĩ mô cốt lõi (DXY, lợi suất thực, VIX) nên không có cơ sở first-principles đủ mạnh cho xu hướng tiếp tục tăng."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm, rủi ro điều chỉnh cao khi mua tại vùng giá này.",
+      "Đà tăng chậm lại: giá thế giới giảm -0.58% phiên gần nhất (5153 USD/oz) và biến động ngày ở mức 1.41% thấp hơn đợt tăng mạnh cuối tháng 2.",
+      "Premium 14.76% hiện tại thấp hơn đỉnh 17.71% (ngày 17/02), cho thấy thị trường Việt Nam không hoảng loạn mua vào."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật khi giá ở vùng quá mua (percentile 99%), khả năng hồi về MA7 (~162.8 triệu VND/lượng quy đổi thế giới).",
-      "Dữ liệu vĩ mô thiếu (healthy: false) làm giảm độ tin cậy phân tích; các headline Iran jitters có thể là nhiễu.",
-      "Biên độ dao động 1.41%/ngày có thể gây thua lỗ ngắn hạn nếu nhập sai điểm mua."
+      "Dữ liệu vĩ mô first-principles (USD, lợi suất thực, VIX) bị thiếu hoàn toàn, không thể đánh giá đầy đủ động lực xu hướng chính.",
+      "Thời gian phục hồi xấu nhất lịch sử lên đến 1035 ngày, rủi ro thanh khoản cao nếu mua đỉnh.",
+      "Thiếu tin tức địa chính trị và hành động quốc gia đáng chú ý, thị trường có thể thiếu chất xúc tác để thiết lập xu hướng mới."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "percentile_5y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Price Latest",
-        "value": 185800000,
+        "key": "sjc_current_price",
+        "value": 186300000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "World Gold Change 1D",
-        "value": -0.47,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "SJC Change 7D vs 30D",
-        "value": 1.81,
+        "key": "premium_current",
+        "value": 14.76,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium Range 30D",
-        "value": 11.23,
+        "key": "premium_30d_high",
+        "value": 17.71,
         "unit": "%",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Current Premium",
-        "value": 14.36,
+        "key": "intl_change_1d",
+        "value": -0.58,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "volatility_daily",
+        "value": 1.41,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "World Gold MA7",
-        "value": 162840355,
-        "unit": "VND/lượng",
+        "key": "worst_recovery_days",
+        "value": 1035,
+        "unit": "ngày",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Macro Data Health",
-        "value": 0,
-        "unit": "boolean (false=unhealthy)",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T01:34:24.763Z",
-    "sjcVndPerTael": 185800000,
-    "intlVndPerTael": 162466397.4907915,
-    "premiumPct": 14.36,
-    "change7dPct": 1.81,
-    "change30dPct": 2.56,
+    "latestTimestamp": "2026-03-12T02:59:17.129Z",
+    "sjcVndPerTael": 186300000,
+    "intlVndPerTael": 162341949.82701898,
+    "premiumPct": 14.76,
+    "change7dPct": 1.74,
+    "change30dPct": 2.48,
     "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 162840355,
-    "ma30VndPerTael": 161354920,
+    "ma7VndPerTael": 162822577,
+    "ma30VndPerTael": 161350772,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T01:34:46.828Z",
+    "fetchedAt": "2026-03-12T02:59:38.372Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -105,12 +98,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5157.65,
+        "value": 5151.74,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.47,
-        "change5dPct": 1.51,
-        "change20dPct": 4.79,
+        "change1dPct": -0.58,
+        "change5dPct": 1.39,
+        "change20dPct": 4.67,
         "relationToGold": "context"
       },
       {
@@ -199,23 +192,8 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
       "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-12 | iraqsun.com | U . S . stocks end mixed Wednesday , Iran war jitters persist",
-      "2026-03-12 | haitisun.com | U . S . stocks end mixed Wednesday , Iran war jitters persist",
-      "2026-03-12 | gdnonline.com | International Business : IEA announces record release from emergency oil reserves",
-      "2026-03-12 | vietnamtribune.com | U . S . stocks end mixed Wednesday , Iran war jitters persist",
-      "2026-03-12 | finanznachrichten.de | Austral Gold Limited : Austral Gold Starts Near - Mine Silver Exploration in Chile"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-12 | investing.com | The War May End Soon , but the Fed Battle Is Only Beginning",
-      "2026-03-12 | bravenewcoin.com | Gold Moment Is Fading . Bitcoin May Be Just Beginning",
-      "2026-03-12 | manilatimes.net | Crown Point Announces Reserve Information for the Year Ended December 31 , 2025",
-      "2026-03-12 | komonews.com | Tillis pushes DOJ to end investigation of Fed chair Powell",
-      "2026-03-12 | ft.lk | Beyond the number : What $ 7 b in foreign reserves means for Sri Lanka",
-      "2026-03-12 | finance-commerce.com | Treasury yields expected to rise slightly following oil spike"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-12 | bravenewcoin.com | Gold Moment Is Fading . Bitcoin May Be Just Beginning"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
