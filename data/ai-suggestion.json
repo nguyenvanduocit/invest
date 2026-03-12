@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-12T14:19:42.866Z",
+  "generatedAt": "2026-03-12T15:20:11.094Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,67 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (percentile 99% 5 năm) với động lượng tăng chậm lại, trong khi xung đột Trung Đông tạo áp lực giá nhưng cũng làm tăng rủi ro mua đỉnh. Nên chờ đợi hồi điều chỉnh về vùng hỗ trợ kỹ thuật trước khi tham gia.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với biên độ dao động rộng, trong bối cảnh xung đột địa chính trị Trung Đông nâng cao rủi ro lạm phát và tỷ giá. Nhà đầu tư nên chờ đợi hồi chỉnh về vùng hỗ trợ kỹ thuật hoặc ổn định premium trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy rủi ro định giá cao theo lịch sử là rất lớn.",
-      "Động lượng tăng yếu dần: giá hiện tại chỉ cao hơn MA7 (162.85 triệu VND/lượng) khoảng 14.4%, trong khi biến động ngày 1.4% báo hiệu thị trường đang tích lũy thay vì tăng mạnh.",
-      "Premium 14.6% nằm trong biên dao động 30 ngày (11.23%-17.71%), không có tín hiệu bất thường đột biến đòi hỏi hành động gấp.",
-      "Giá thế giới XAUUSD giảm 0.56%/ngày cho thấy áp lực chốt lời ngắn hạn dù xu hướng 20 ngày vẫn tăng 4.7%."
+      "Giá SJC 186.3 triệu VND/lượng đang ở phân vị 99% trong 5 năm, tiềm ẩn rủi ro điều chỉnh kỹ thuật cao khi mua đuổi.",
+      "Premium tăng vọt từ 12.47% (28/02) lên 15.39% (12/03), cho thấy thị trường Việt Nam đang định giá quá mức so với biến động giá thế giới.",
+      "Giá thế giới giảm 1.09% xuống 5125.45 USD/oz trong ngày, trái ngược với xu hướng tăng của giá SJC trong nước, tạo ra sự phân kỳ bất ổn.",
+      "Xung đột Iran và rủi ro tỷ giá USD tăng mạnh (Dollar Strengthens) tạo áp lực kép, khiến xu hướng ngắn hạn khó lường."
     ],
     "risks": [
-      "Xung đột Iran leo thang có thể đẩy giá bật tăng đột biến, bỏ qua các kháng cự kỹ thuật (FOMO risk).",
-      "Dữ liệu vĩ mô first-principles (DXY, lợi suất thực, VIX) bị thiếu, không thể đánh giá đầy đủ áp lực tỷ giá và chi phí cơ hội giữ vàng.",
-      "Mua ở mức giá kỷ lục 99th percentile mang rủi ro điều chỉnh sâu nếu tin tức địa chính trị hạ nhiệt."
+      "Premium co giãn mạnh từ 11.23% đến 17.71% trong 30 ngày qua, rủi ro thua lỗ lớn nếu mua đỉnh premium và giá thế giới điều chỉnh.",
+      "Thiếu dữ liệu vĩ mô cốt lõi (Lợi suất thực USD, VIX) làm giảm độ tin cậy trong việc xác định xu hướng dài hạn.",
+      "Biên độ dao động ngày 1.42% cộng với tin tức chiến tranh có thể gây thanh khoản cục bộ hoặc gián đoạn giao dịch."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
-        "value": 186300000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "5Y Percentile",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "%",
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
-        "value": 14.6,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "30D Premium Range",
-        "value": 11.23,
-        "unit": "% (low)",
+        "key": "Premium Expansion 2-Week",
+        "value": 2.92,
+        "unit": "percentage points",
         "source": "monthly_series_30d"
       },
       {
-        "key": "XAUUSD Change 1D",
-        "value": -0.56,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "XAUUSD Change 20D",
-        "value": 4.7,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Daily Volatility",
-        "value": 1.4,
-        "unit": "%",
+        "key": "SJC Price vs MA7",
+        "value": 14.42,
+        "unit": "million VND/lượng",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Intl Gold Daily Change",
+        "value": -1.09,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "30-Day Premium Range",
+        "value": 6.48,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Gold Spot Price",
+        "value": 5125.45,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-12T14:19:02.353Z",
+    "latestTimestamp": "2026-03-12T15:19:33.027Z",
     "sjcVndPerTael": 186300000,
-    "intlVndPerTael": 162570998.9012887,
-    "premiumPct": 14.6,
-    "change7dPct": 1.88,
-    "change30dPct": 2.62,
-    "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 162855298,
-    "ma30VndPerTael": 161358407,
+    "intlVndPerTael": 161459357.331994,
+    "premiumPct": 15.39,
+    "change7dPct": 1.18,
+    "change30dPct": 1.92,
+    "volatilityDailyPct": 1.42,
+    "ma7VndPerTael": 162696492,
+    "ma30VndPerTael": 161321352,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,7 +78,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-12T14:19:23.432Z",
+    "fetchedAt": "2026-03-12T15:19:54.194Z",
     "healthy": false,
     "missingFactors": [
       "US Dollar Trade Weighted Index",
@@ -99,12 +93,12 @@
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5153.08,
+        "value": 5125.45,
         "unit": "USD/oz",
         "date": "2026-03-12",
-        "change1dPct": -0.56,
-        "change5dPct": 1.42,
-        "change20dPct": 4.7,
+        "change1dPct": -1.09,
+        "change5dPct": 0.87,
+        "change20dPct": 4.13,
         "relationToGold": "context"
       },
       {
@@ -186,26 +180,32 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt",
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks",
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
-      "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI",
-      "2026-03-06 | ECB Press / Speeches | Piero Cipollone: Digital euro"
+      "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-12 | wamc.org | Trump war with Iran is angering some swing voters who want money spent at home",
-      "2026-03-12 | resilience.org | The Petrostate Proxy War",
-      "2026-03-12 | foxnews.com | Iran conflict could trigger economic stagflation if war drags on too long"
+      "2026-03-12 | wfmd.com | Iran war jeopardizes Trump economic boom before key midterm elections",
+      "2026-03-12 | wcsufm.org | Trump war with Iran is angering some swing voters who want money spent at home"
     ],
     "countryActionHeadlines": [
-      "2026-03-12 | finance.yahoo.com | Stock market today : Dow , S & P 500 , Nasdaq resume sell - off , oil surges as Middle East conflict escalates",
-      "2026-03-12 | gdnonline.com | International Business : Sterling sinks for third day as oil crisis burnishes dollar"
+      "2026-03-12 | marketscreener.com | Fed to cut rates in June , economists still say , despite war inflation risks",
+      "2026-03-12 | benzinga.com | Stock Market Today : S & P 500 , Dow Futures Fall Despite Trump Claiming US  Won  The Iran War Bumble , Morgan Stanley , Adobe In Focus - State Street SPDR S & P 500 ETF Trust ( ARCA : SPY )",
+      "2026-03-12 | econotimes.com | Dollar Strengthens Amid Oil Price Surge and Inflation Fears",
+      "2026-03-12 | markets.financialcontent.com | FinancialContent - Gold Defies Gravity : Precious Metal Stabilizes Above $5 , 200 as Cooling Oil Prices Reshape Inflation Outlook",
+      "2026-03-12 | marketscreener.com | Oil jumps , shares skid after attacks on Gulf shipping , Iran warning",
+      "2026-03-12 | finance.yahoo.com | Stock market today : Dow , S & P 500 , Nasdaq resume sell - off , oil surges as Middle East conflict escalates"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-12 | foxnews.com | Iran conflict could trigger economic stagflation if war drags on too long",
-      "2026-03-12 | thehindubusinessline.com | Retail inflation rose to 3 . 21 % in February - The HinduBusinessLine",
-      "2026-03-12 | news18.com | India CPI Inflation Rises At 3 . 21 % In February"
+      "2026-03-12 | prnewswire.com | Permanent Portfolio Funds Wins Four 2026 LSEG Lipper Fund Awards",
+      "2026-03-12 | wfmd.com | Iran war jeopardizes Trump economic boom before key midterm elections",
+      "2026-03-12 | benzinga.com | Stock Market Today : S & P 500 , Dow Futures Fall Despite Trump Claiming US  Won  The Iran War Bumble , Morgan Stanley , Adobe In Focus - State Street SPDR S & P 500 ETF Trust ( ARCA : SPY )",
+      "2026-03-12 | markets.financialcontent.com | FinancialContent - The 60 / 40 Portfolio is Dead : Gold and Silver Ascend as Institutional Pillars in 2026",
+      "2026-03-12 | markets.financialcontent.com | FinancialContent - Gold Defies Gravity : Precious Metal Stabilizes Above $5 , 200 as Cooling Oil Prices Reshape Inflation Outlook",
+      "2026-03-12 | markets.financialcontent.com | FinancialContent - Gold Historic Surge to $5 , 400 Met by Gravity : Geopolitical Fear Clashes with a Resurgent Dollar"
     ]
   }
 }
