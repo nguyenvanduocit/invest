@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-13T04:34:25.271Z",
+  "generatedAt": "2026-03-13T05:23:27.410Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng đỉnh lịch sử 5 năm (percentile 99%) với đà tăng bị hãm lại bởi áp lực lợi suất thực Mỹ tăng mạnh, tạo nên rủi ro điều chỉnh ngắn hạn dù bối cảnh địa chính trị Iran vẫn hỗ trợ.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng bị hãm lại trong ngắn hạn; xu hướng vĩ mô hỗ trợ nhưng rủi ro điều chỉnh kỹ thuật và chi phí cơ hội cao khiến việc chờ đợi mức giá tốt hơn là hợp lý.",
     "reasons": [
-      "Giá SJC 184.8 triệu đồng/lượng đang ở phân vị 99% trong 5 năm, quá gần vùng kháng cáo tâm lý và thanh khoản có thể giảm.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh 2.78% trong 5 ngày lên mức 1.85%, tạo áp lực giảm lên giá vàng thế giới (tương quan nghịch).",
-      "VIX tăng 37.28% trong 20 ngày lên 24.23 cho thấy thị trường tài chính căng thẳng, có thể kích hoạt bán vàng lấy tiền mặt (liquidation).",
-      "Premium 14.8% hiện tại thấp hơn đỉnh 17.63% (17/02) nhưng cao hơn đáy 11.16% (27/02), cho thấy giá SJC biến động ít linh hoạt hơn giá thế giới."
+      "Giá SJC 184.8 triệu VND/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy rủi ro mua đỉnh là rất lớn.",
+      "Động lượng ngắn hạn yếu đi: giá giảm 1.03% trong 7 ngày qua và nằm dưới MA7 (162.37 triệu VND/lượng).",
+      "Lợi suất thực Mỹ (1.85%) và VIX (24.23) tăng mạnh 20 ngày qua gây áp lực bán chốt, dù lạm phát kỳ vọng (2.38%) vẫn hỗ trợ xu hướng dài.",
+      "Premium 14.76% đang dao động trong biên độ bình thường của 30 ngày qua (11.16% - 17.63%), không có tín hiệu bất thường để đánh giá can thiệp."
     ],
     "risks": [
-      "Xung đột Iran leo thang khiến dầu mỏ giữ trên $100/thùng, đẩy lạm phát kỳ vọng và giá vàng tăng vọt bất chấp lợi suất.",
-      "Fed phát đi tín hiệu diều hâu hơn do lo ngại lạm phát dầu, làm mạnh USD và ép giá vàng giảm sâu.",
-      "Dữ liệu vĩ mô first-principles bị flag 'healthy: false', độ tin cậy về mối tương quan có thể bị giảm sút."
+      "Giá thế giới quay đầu tăng mạnh do sốc địa chính trị (VIX đang ở mức cao 24.23) khiến nhà đầu tư bỏ lỡ cơ hội mua.",
+      "Lạm phát kỳ vọng tăng đột biến (đã tăng 2.59% trong 20 ngày) đẩy giá vàng cao hơn nhanh chóng.",
+      "Thanh khoản giảm đột ngột khiến chênh lệch mua bán giãn rộng."
     ],
     "evidence": [
       {
         "key": "SJC Price Percentile 5Y",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 2.78,
+        "key": "SJC Price Change 7d",
+        "value": -1.03,
         "unit": "%",
-        "source": "macro_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 37.28,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Premium Range 30d (Low-High)",
-        "value": 11.16,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Current SJC Price",
-        "value": 184800000,
+        "key": "SJC Price vs MA7",
+        "value": 184.8,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "US Breakeven Inflation 10Y Change 5d",
-        "value": 3.03,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "MA7 VND/Tael",
+        "value": 162373475,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "Crude Oil Price (Iran War Context)",
-        "value": 100,
-        "unit": "USD/barrel",
-        "source": "macro_context"
+        "key": "US Real Yield 10Y Change 20d",
+        "value": 0.54,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Index Level",
+        "value": 24.23,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Breakeven Inflation Change 20d",
+        "value": 2.59,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 17.63,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-13T04:33:54.217Z",
+    "latestTimestamp": "2026-03-13T05:23:05.871Z",
     "sjcVndPerTael": 184800000,
-    "intlVndPerTael": 160972953.33966208,
-    "premiumPct": 14.8,
-    "change7dPct": -1.06,
-    "change30dPct": 0.51,
+    "intlVndPerTael": 161025716.08420882,
+    "premiumPct": 14.76,
+    "change7dPct": -1.03,
+    "change30dPct": 0.54,
     "volatilityDailyPct": 1.44,
-    "ma7VndPerTael": 162365937,
-    "ma30VndPerTael": 161408847,
+    "ma7VndPerTael": 162373475,
+    "ma30VndPerTael": 161410606,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-13T04:34:06.830Z",
+    "fetchedAt": "2026-03-13T05:23:11.989Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5106.98,
+        "value": 5109.36,
         "unit": "USD/oz",
         "date": "2026-03-13",
-        "change1dPct": 0.56,
-        "change5dPct": -0.9,
-        "change20dPct": 1.47,
+        "change1dPct": 0.61,
+        "change5dPct": -0.85,
+        "change20dPct": 1.52,
         "relationToGold": "context"
       },
       {
@@ -185,23 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-13 | areanews.com.au | Meet the stoic Aussies staying put in the warring Gulf",
-      "2026-03-13 | brisbanetimes.com.au | Premier1 drills deeper in WA Yalgoo gold hunt",
-      "2026-03-13 | thejakartapost.com | Asian stocks slide as Iran war keeps oil near $100 , dents rate - cut bets - Markets",
-      "2026-03-13 | singletonargus.com.au | Meet the stoic Aussies staying put in the warring Gulf",
-      "2026-03-13 | batemansbaypost.com.au | Meet the stoic Aussies staying put in the warring Gulf",
-      "2026-03-13 | armidaleexpress.com.au | Meet the stoic Aussies staying put in the warring Gulf"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-13 | thejakartapost.com | Asian stocks slide as Iran war keeps oil near $100 , dents rate - cut bets - Markets",
-      "2026-03-13 | livemint.com | War - struck rupee : If the oil shock persists , India will need to widen its crisis response toolkit",
-      "2026-03-13 | economictimes.indiatimes.com | US Stock Market | Wall Street ends sharply lower as Iran war intensifies , crude price soars",
-      "2026-03-13 | santamariatimes.com | Oil jumps to $100 per barrel and stocks sink worldwide with no clear end in sight for the Iran war",
-      "2026-03-13 | marketscreener.com | Asian stocks slide as Iran war keeps oil near $100 , dents rate - cut bets"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-13 | thejakartapost.com | Asian stocks slide as Iran war keeps oil near $100 , dents rate - cut bets - Markets"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
