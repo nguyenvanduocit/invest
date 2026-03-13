@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-13T13:27:08.939Z",
+  "generatedAt": "2026-03-13T14:17:24.372Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đà tăng bị hãm lại bởi áp lực lợi suất thực dương và USD mạnh. Xung đột Iran là yếu tố hỗ trợ ngắn hạn nhưng rủi ro điều chỉnh kỹ thuật là đáng kể, nhà đầu tư không nên đu đỉnh.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đỉnh 190.9 triệu đã hình thành, áp lực bán từ lợi suất thực dương và USD mạnh gây rủi ro điều chỉnh ngắn hạn; nhà đầu tư không nên mua đuổi nhưng cũng chưa cần bán tháo vì xu hướng vĩ mô vẫn hỗ trợ.",
     "reasons": [
-      "Giá SJC 184.8 triệu đồng/lượng đang ở phân vị 99% trong 5 năm qua, cho thấy biên an toàn thấp và rủi ro mua đỉc là rất lớn.",
-      "Áp lực vĩ mô tăng: Lợi suất thực Mỹ 10 năm ở 1.85% và chỉ số USD tăng 1.42% trong 5 ngày thường gây áp lực giảm giá lên vàng thế giới.",
-      "Biến động thị trường cao: VIX tăng mạnh 37.28% trong 20 ngày và tin tức xung đột Iran kéo dài hỗ trợ nhu cầu trú ẩn, ngăn giá giảm sâu.",
-      "Premium 14.7% đang ở mức hợp lý so với trung bình dữ liệu 30 ngày (12-16%), không có tín hiệu bong bóng nội địa."
+      "Giá SJC 184.8 triệu/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh rất cao khi giá đã giảm 1.41% trong 7 ngày gần nhất.",
+      "Lợi suất thực USD 10 năm ở mức 1.85% và chỉ số USD tăng 1.42%/5 ngày tạo áp lực giảm lên giá vàng thế giới, giải thích động lực giảm từ đỉnh 5330 USD/oz về 5088 USD/oz.",
+      "VIX tăng mạnh 31%/20 ngày lên mức 27.29 cho thấy thị trường căng thẳng về cuộc chiến Iran, có thể gây biến động hai chiều thất thường.",
+      "Premium SJC dao động 11-17% trong 30 ngày qua, hiện ở 15.2% là mức hợp lý trong lịch sử, không có tín hiệu bong bóng premium cực đoan."
     ],
     "risks": [
-      "Điều chỉnh kỹ thuật mạnh khi giá thế giới giảm nếu tình hình địa chính trị hạ nhiệt hoặc Fed duy trì lãi suất cao lâu hơn kỳ vọng.",
-      "Thanh khoản có thể giảm nếu giá sideway quá lâu ở mức cao, bẫy thanh khoản tại vùng 184-187 triệu đồng.",
-      "Dữ liệu tin tức tự động có chứa nội dung trùng lặp và quảng cáo, có thể gây nhiễu tín hiệu phân tích cơ bản."
+      "Dầu Brent vượt 100 USD/thùng do chiến tranh Iran có thể đẩy lạm phát kỳ vọng, gây biến động giá vàng thất thường.",
+      "Lợi suất thực Mỹ tiếp tục tăng nếu Fed giữ lãi suất cao sẽ làm giảm hấp dẫn của vàng.",
+      "Thanh khoản thấp hoặc spread mua-bán rộng khi thị trường giao dịch ở mức giá kỷ lục."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
+        "key": "sjc_price_percentile_5y",
         "value": 99,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Current Price",
-        "value": 184800000,
-        "unit": "VND/lượng",
+        "key": "sjc_change_7d",
+        "value": -1.41,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 2.78,
+        "key": "us_real_yield_10y",
+        "value": 1.85,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "USD Index Change 5d",
+        "key": "usd_index_change_5d",
         "value": 1.42,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 37.28,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "vix_level",
+        "value": 27.29,
+        "unit": "index",
+        "source": "macro_context"
       },
       {
-        "key": "Current Premium vs Intl",
-        "value": 14.7,
+        "key": "vix_change_20d",
+        "value": 31.08,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "Gold Spot Change 20d",
-        "value": 1.5,
+        "key": "premium_range_30d",
+        "value": 11.16,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "gold_peak_30d",
+        "value": 5330.95,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-13T13:26:43.193Z",
+    "latestTimestamp": "2026-03-13T14:17:03.173Z",
     "sjcVndPerTael": 184800000,
-    "intlVndPerTael": 161115800.34878823,
-    "premiumPct": 14.7,
-    "change7dPct": -0.97,
-    "change30dPct": 0.6,
+    "intlVndPerTael": 160412640.0513632,
+    "premiumPct": 15.2,
+    "change7dPct": -1.41,
+    "change30dPct": 0.16,
     "volatilityDailyPct": 1.44,
-    "ma7VndPerTael": 162386344,
-    "ma30VndPerTael": 161413608,
+    "ma7VndPerTael": 162285893,
+    "ma30VndPerTael": 161390170,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-13T13:26:49.920Z",
+    "fetchedAt": "2026-03-13T14:17:08.570Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5108.29,
+        "value": 5088.56,
         "unit": "USD/oz",
         "date": "2026-03-13",
-        "change1dPct": 0.59,
-        "change5dPct": -0.87,
-        "change20dPct": 1.5,
+        "change1dPct": 0.2,
+        "change5dPct": -1.26,
+        "change20dPct": 1.11,
         "relationToGold": "context"
       },
       {
@@ -168,12 +174,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 24.23,
+        "value": 27.29,
         "unit": "index",
-        "date": "2026-03-11",
-        "change1dPct": -2.81,
-        "change5dPct": 14.56,
-        "change20dPct": 37.28,
+        "date": "2026-03-12",
+        "change1dPct": 12.63,
+        "change5dPct": 14.91,
+        "change20dPct": 31.08,
         "relationToGold": "direct"
       }
     ],
@@ -186,17 +192,17 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-13 | marketscreener.com | FTSE 100 nearly flat as oil hovers near USD100",
-      "2026-03-13 | economictimes.indiatimes.com | gold silver copper platinum prices are falling : Silver price crashes today : Why gold , silver , copper and platinum prices are falling Silver drops to $83 . 40 while gold slides $25 to $5 , 100 per ounce"
+      "2026-03-13 | sandiegouniontribune.com | World shares decline , while oil pops above $100 a barrel over Iran war"
     ],
     "countryActionHeadlines": [
+      "2026-03-13 | oklahomacitysun.com | Rupee hits fresh intraday low of 92 . 49 / USD amid crude surge near USD 100 per barrel",
       "2026-03-13 | economictimes.indiatimes.com | India bonds pressured by oil surge ; RBI likely shielding 10 - yr bond as Iran war set to enter third week",
       "2026-03-13 | economictimes.indiatimes.com | gold silver copper platinum prices are falling : Silver price crashes today : Why gold , silver , copper and platinum prices are falling Silver drops to $83 . 40 while gold slides $25 to $5 , 100 per ounce",
       "2026-03-13 | freemalaysiatoday.com | Dollar on track for second weekly rise",
-      "2026-03-13 | birminghamstar.com | Rupee hits fresh intraday low of 92 . 49 / USD amid crude surge near USD 100 per barrel",
-      "2026-03-13 | marketscreener.com | Dollar Extends Gains as Iran Conflict Shows No Signs of Abating"
+      "2026-03-13 | birminghamstar.com | Rupee hits fresh intraday low of 92 . 49 / USD amid crude surge near USD 100 per barrel"
     ],
     "dollarYieldHeadlines": [
+      "2026-03-13 | sandiegouniontribune.com | World shares decline , while oil pops above $100 a barrel over Iran war",
       "2026-03-13 | marketscreener.com | FTSE 100 nearly flat as oil hovers near USD100",
       "2026-03-13 | economictimes.indiatimes.com | gold silver copper platinum prices are falling : Silver price crashes today : Why gold , silver , copper and platinum prices are falling Silver drops to $83 . 40 while gold slides $25 to $5 , 100 per ounce"
     ]
