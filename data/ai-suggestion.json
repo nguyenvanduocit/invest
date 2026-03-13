@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-13T22:08:02.224Z",
+  "generatedAt": "2026-03-13T23:07:12.296Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang ở vùng cực kỳ cao (phân vị 99%) với động lượng giảm (-2.97%/7 ngày) trong khi lợi suất thực Mỹ và USD tăng mạnh tạo áp lực bán kép. Premium nội địa giãn nhanh lên 16.78% cho thấy rủi ro co hẹp, nhà đầu tư nên chờ điểm nhập an toàn hơn.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử khi áp lực bán từ lợi suất thực USD tăng vọt, trong khi premium nội địa nới rộng lên mức 16.79% cho thấy thanh khoản đang căng thẳng.",
     "reasons": [
-      "Giá SJC 184.8 triệu VND/lượng cao hơn 14.5% so với MA30 (161.4 triệu VND/lượng) và đang ở phân vị 99% trong 5 năm, rủi ro mua đỉnh rất lớn.",
-      "Động lượng yếu: SJC giảm 2.97% trong 7 ngày bất chấp VIX tăng 31.08% (20 ngày) và dầu trên 100 USD/thùng, cho thấy áp lực bán từ dòng tiền đang thắng thế.",
-      "Áp lực vĩ mô kép: Lợi suất thực Mỹ tăng 3.85% (5 ngày) và USD Index tăng 1.42% (5 ngày) đều có quan hệ nghịch biến với vàng, gây áp lực giảm giá thế giới.",
-      "Premium nội địa giãn từ 12.52% (26/02) lên 16.78% (13/03), mức cao nhất trong chuỗi 30 ngày, rủi ro co hẹp nếu NHNN can thiệp hoặc giá thế giới hồi phục."
+      "Giá SJC giảm 2.93% trong 7 ngày qua và thấp hơn MA7 (161.3 triệu VND/lượng), tín hiệu điều chỉnh kỹ thuật ngắn hạn rõ rệt.",
+      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực nghịch biến lớn lên giá vàng thế giới.",
+      "Premium nội địa nới rộng từ 12.9% (13/02) lên 16.79% (13/03), cho thấy chênh lệch cung cầu nội địa đang ở mức cao cần thận trọng.",
+      "VIX tăng 31.08% trong 20 ngày lên 27.29 điểm nhưng giá vàng không tăng tương ứng, tín hiệu phân kỳ tiêu cực."
     ],
     "risks": [
-      "Premium co hẹp nhanh: Mua đỉnh premium 16.78% có thể lỗ 3-5% nếu premium về mức trung bình 13-14%.",
-      "Lạm phát Mỹ nóng hơn dự báo đẩy lợi suất thực lên cao hơn, giá thế giới có thể giảm về vùng 4800-4900 USD/oz.",
-      "Thanh khoản giảm sút khi giá quá cao, khó chốt lời khi cần."
+      "Lợi suất thực USD tiếp tục tăng cao có thể kéo giá vàng thế giới giảm sâu hơn.",
+      "Premium 16.79% ở mức cao, rủi ro thu hẹp nhanh nếu chính sách điều tiết hoặc giá thế giới phục hồi.",
+      "Thanh khoản thị trường có thể giảm sút trong giai đoạn điều chỉnh."
     ],
     "evidence": [
       {
-        "key": "SJC Price vs MA30 Deviation",
-        "value": 14.5,
+        "key": "Giá SJC hiện tại",
+        "value": 184800000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 7 ngày (SJC)",
+        "value": -2.93,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -2.97,
+        "key": "MA7 giá SJC",
+        "value": 161295542,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium nội địa",
+        "value": 16.79,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC 5Y Percentile",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
+        "key": "Lợi suất thực USD 10Y",
+        "value": 1.89,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
-        "key": "Premium Expansion 26/02 to 13/03",
-        "value": 4.26,
-        "unit": "percentage points",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5d",
+        "key": "Biến động lợi suất thực 5 ngày",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index Change 5d",
-        "value": 1.42,
-        "unit": "%",
+        "key": "Chỉ số VIX",
+        "value": 27.29,
+        "unit": "điểm",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 31.08,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot XAUUSD Change 5d",
-        "value": -2.59,
-        "unit": "%",
+        "key": "Giá vàng thế giới",
+        "value": 5019.83,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-13T22:07:19.745Z",
+    "latestTimestamp": "2026-03-13T23:06:53.816Z",
     "sjcVndPerTael": 184800000,
-    "intlVndPerTael": 158256415.92303005,
-    "premiumPct": 16.77,
-    "change7dPct": -2.97,
-    "change30dPct": 1.46,
+    "intlVndPerTael": 158233300.58172923,
+    "premiumPct": 16.79,
+    "change7dPct": -2.93,
+    "change30dPct": 1.51,
     "volatilityDailyPct": 1.43,
-    "ma7VndPerTael": 161285423,
-    "ma30VndPerTael": 161394117,
+    "ma7VndPerTael": 161295542,
+    "ma30VndPerTael": 161396478,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-13T22:07:27.896Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-13T23:06:58.931Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -191,26 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-13 | channelstv.com | Oil Stays Above $100 , Stocks Slide Tracking Middle East War",
-      "2026-03-13 | weeklyblitz.net | Five key questions about the global gold trade and its hidden risks",
-      "2026-03-13 | wealthdaily.com | The Fed Oil Dilemma Is Really a Growth Dilemma"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-13 | kwbu.org | Judge blocks DOJ criminal probe of Federal Reserve , blasting it as political",
-      "2026-03-13 | denverpost.com | Judge quashes subpoenas in DOJ investigation of Fed Powell",
-      "2026-03-13 | presstelegram.com | Judge quashes subpoenas in DOJ investigation of Fed Powell",
-      "2026-03-13 | journal-news.com | Judge quashes subpoenas in Justice Department investigation of Fed chair Jerome Powell",
-      "2026-03-13 | rediff.com | India forex reserves drop $11 . 68 bn to $716 . 81 bn",
-      "2026-03-13 | kunr.org | Judge blocks DOJ criminal probe of Federal Reserve , blasting it as political"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-13 | weeklyblitz.net | Five key questions about the global gold trade and its hidden risks",
-      "2026-03-13 | investing.com | Mid - Tier Gold Miners Outperform Majors Again in Q4 2025 Results",
-      "2026-03-13 | wealthdaily.com | The Fed Oil Dilemma Is Really a Growth Dilemma",
-      "2026-03-13 | rttnews.com | European Stocks Close Lower For 3rd Straight Session On Middle East War Concerns",
-      "2026-03-13 | gulfbusiness.com | Gold rebounds toward $5 , 000 ahead of US inflation",
-      "2026-03-13 | aa.com.tr | US dollar strengthens as Middle East tensions push oil prices higher"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
