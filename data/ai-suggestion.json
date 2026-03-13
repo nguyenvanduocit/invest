@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-13T14:17:24.372Z",
+  "generatedAt": "2026-03-13T15:16:14.636Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực kỳ cao (percentile 99% 5 năm) với đỉnh 190.9 triệu đã hình thành, áp lực bán từ lợi suất thực dương và USD mạnh gây rủi ro điều chỉnh ngắn hạn; nhà đầu tư không nên mua đuổi nhưng cũng chưa cần bán tháo vì xu hướng vĩ mô vẫn hỗ trợ.",
+    "thesis": "Giá vàng SJC đang giao dịch ở vùng cực hiếm (percentile 99% 5 năm) với động lượng giảm ngắn hạn, trong khi áp lực vĩ mô từ lợi suất thực USD tăng và VIX cao tạo ra tín hiệu hỗn hợp. Nên chờ đợi hồi chỉnh hoặc xác nhận xu hướng rõ ràng hơn trước khi ra quyết định.",
     "reasons": [
-      "Giá SJC 184.8 triệu/lượng đang ở phân vị 99% trong 5 năm qua, rủi ro mua đỉnh rất cao khi giá đã giảm 1.41% trong 7 ngày gần nhất.",
-      "Lợi suất thực USD 10 năm ở mức 1.85% và chỉ số USD tăng 1.42%/5 ngày tạo áp lực giảm lên giá vàng thế giới, giải thích động lực giảm từ đỉnh 5330 USD/oz về 5088 USD/oz.",
-      "VIX tăng mạnh 31%/20 ngày lên mức 27.29 cho thấy thị trường căng thẳng về cuộc chiến Iran, có thể gây biến động hai chiều thất thường.",
-      "Premium SJC dao động 11-17% trong 30 ngày qua, hiện ở 15.2% là mức hợp lý trong lịch sử, không có tín hiệu bong bóng premium cực đoan."
+      "Giá SJC 184.8 triệu VND/lượng đang ở phân vị 99% trong 5 năm, mức cực cao về mặt định giá lịch sử, rủi ro mua đỉnh đáng kể.",
+      "Động lượng giảm 7 ngày gần đây là -1.75%, giá hiện thấp hơn đỉnh vùng 190.9 triệu VND/lượng (2026-03-02), cho thấy xu hướng điều chỉnh ngắn hạn.",
+      "Lợi suất thực USD 10 năm tăng mạnh +2.78% trong 5 ngày lên mức 1.85%, tạo áp lực giảm lên giá vàng thế giới (tương quan nghịch).",
+      "VIX tăng vọt +31.08% trong 20 ngày lên 27.29 điểm cho thấy lo ngại thị trường, nhưng các tiêu đề chính sách/tin tức địa chính trị hiện tại không đủ cụ thể để thúc đẩy đợt mua sợ hãi mới."
     ],
     "risks": [
-      "Dầu Brent vượt 100 USD/thùng do chiến tranh Iran có thể đẩy lạm phát kỳ vọng, gây biến động giá vàng thất thường.",
-      "Lợi suất thực Mỹ tiếp tục tăng nếu Fed giữ lãi suất cao sẽ làm giảm hấp dẫn của vàng.",
-      "Thanh khoản thấp hoặc spread mua-bán rộng khi thị trường giao dịch ở mức giá kỷ lục."
+      "Rủi ro điều chỉnh sâu hơn nếu lợi suất thực USD tiếp tục tăng và đồng USD mạnh lên.",
+      "Premium 15.6% có thể co hẹp nếu giá thế giới giảm nhanh trong khi giá SJC giữ ổn định.",
+      "Thiếu sự kiện kích hoạt địa chính trị cụ thể trong dữ liệu đầu vào, độ tin cậy dự báo giảm."
     ],
     "evidence": [
       {
-        "key": "sjc_price_percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Price Change 7D",
+        "value": -1.75,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -1.41,
+        "key": "US Real Yield 10Y Change 5D",
+        "value": 2.78,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y",
-        "value": 1.85,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "usd_index_change_5d",
-        "value": 1.42,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "vix_level",
-        "value": 27.29,
-        "unit": "index",
-        "source": "macro_context"
-      },
-      {
-        "key": "vix_change_20d",
+        "key": "VIX Change 20D",
         "value": 31.08,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "premium_range_30d",
-        "value": 11.16,
+        "key": "SJC Premium vs World",
+        "value": 15.6,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC 30D High Price",
+        "value": 190900000,
+        "unit": "VND/lượng",
         "source": "monthly_series_30d"
       },
       {
-        "key": "gold_peak_30d",
-        "value": 5330.95,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Current SJC Price",
+        "value": 184800000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-13T14:17:03.173Z",
+    "latestTimestamp": "2026-03-13T15:15:49.363Z",
     "sjcVndPerTael": 184800000,
-    "intlVndPerTael": 160412640.0513632,
-    "premiumPct": 15.2,
-    "change7dPct": -1.41,
-    "change30dPct": 0.16,
+    "intlVndPerTael": 159854817.3441582,
+    "premiumPct": 15.6,
+    "change7dPct": -1.75,
+    "change30dPct": -0.19,
     "volatilityDailyPct": 1.44,
-    "ma7VndPerTael": 162285893,
-    "ma30VndPerTael": 161390170,
+    "ma7VndPerTael": 162206204,
+    "ma30VndPerTael": 161371576,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-13T14:17:08.570Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-13T15:15:58.230Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5088.56,
+        "value": 5067.24,
         "unit": "USD/oz",
         "date": "2026-03-13",
-        "change1dPct": 0.2,
-        "change5dPct": -1.26,
-        "change20dPct": 1.11,
+        "change1dPct": -0.22,
+        "change5dPct": -1.67,
+        "change20dPct": 0.68,
         "relationToGold": "context"
       },
       {
@@ -191,20 +185,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-13 | sandiegouniontribune.com | World shares decline , while oil pops above $100 a barrel over Iran war"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-13 | oklahomacitysun.com | Rupee hits fresh intraday low of 92 . 49 / USD amid crude surge near USD 100 per barrel",
-      "2026-03-13 | economictimes.indiatimes.com | India bonds pressured by oil surge ; RBI likely shielding 10 - yr bond as Iran war set to enter third week",
-      "2026-03-13 | economictimes.indiatimes.com | gold silver copper platinum prices are falling : Silver price crashes today : Why gold , silver , copper and platinum prices are falling Silver drops to $83 . 40 while gold slides $25 to $5 , 100 per ounce",
-      "2026-03-13 | freemalaysiatoday.com | Dollar on track for second weekly rise",
-      "2026-03-13 | birminghamstar.com | Rupee hits fresh intraday low of 92 . 49 / USD amid crude surge near USD 100 per barrel"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-13 | sandiegouniontribune.com | World shares decline , while oil pops above $100 a barrel over Iran war",
-      "2026-03-13 | marketscreener.com | FTSE 100 nearly flat as oil hovers near USD100",
-      "2026-03-13 | economictimes.indiatimes.com | gold silver copper platinum prices are falling : Silver price crashes today : Why gold , silver , copper and platinum prices are falling Silver drops to $83 . 40 while gold slides $25 to $5 , 100 per ounce"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
