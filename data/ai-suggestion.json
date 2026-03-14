@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-14T13:19:53.400Z",
+  "generatedAt": "2026-03-14T14:09:42.122Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,72 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 99) với áp lực từ lợi suất thực USD tăng mạnh, nhưng rủi ro địa chính trị (VIX 27.29) và đà tăng 30 ngày (+1.51%) vẫn hỗ trợ xu hướng dài hạn.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với đà giảm 2.93% trong 7 ngày, trong khi lợi suất thực USD và VIX tăng mạnh tạo áp lực bán ngắn hạn. Tuy nhiên, premium 15.06% vẫn an toàn trong vùng lịch sử và xu hướng 30 ngày vẫn dương, nhà đầu tư nên chờ tín hiệu ổn định ở vùng hỗ trợ MA30 (161.9 triệu VND/lượng) trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 182.6 triệu VND/lượng đang thấp hơn đáng kể so với đỉnh 190.9 triệu (02/03), giảm 2.93% sau 7 ngày kể từ đỉnh cục bộ.",
-      "Áp lực bán từ vĩ mô tăng cao: Lợi suất thực Mỹ 10 năm tăng 3.85% trong 5 ngày lên mức 1.89%, đồng thời VIX tăng vọt 31.08% trong 20 ngày qua báo hiệu sự bất ổn có thể gây biến động hai chiều.",
-      "Premium 15.06% hiện tại cao hơn mức thấp nhất 10.83% trong chuỗi 30 ngày, cho thấy tâm lý thị trường Việt Nam vẫn thận trọng và chưa hoảng loạn bán tháo."
+      "Đà giảm ngắn hạn rõ rệt: Giá SJC giảm 2.93% trong 7 ngày gần đây, từ đỉnh 190.9 triệu VND/lượng (02/03) xuống 182.6 triệu VND/lượng (14/03), tương ứng giảm khoảng 8.3 triệu VND/lượng.",
+      "Áp lực vĩ mô tăng: Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày và 1.61% trong 20 ngày lên mức 1.89%, kết hợp VIX tăng 31.08% trong 20 ngày lên 27.29 điểm tạo môi trường bất lợi cho vàng.",
+      "Premium không căng thẳng: Mức premium 15.06% hiện tại thấp hơn đỉnh 17.28% (17/02) và 16.43% (13/03), cho thấy thị trường Việt Nam không hoảng loạn dù giá thế giới giảm.",
+      "Vị thế giá còn cao: Giá SJC 182.6 triệu VND/lượng vẫn cao hơn MA30 (161.9 triệu VND/lượng) khoảng 12.8%, và đang ở percentile 99% trong 5 năm, rủi ro điều chỉnh thêm vẫn tồn tại."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu hơn nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz và lợi suất thực Mỹ tiếp tục tăng.",
-      "Thanh khoản thấp hoặc gián đoạn mua bán từ các doanh nghiệp kinh doanh vàng nếu biên độ dao động vượt quá kiểm soát.",
-      "Dữ liệu vĩ mô 'healthy: false' và thiếu tiêu đề địa chính trị cụ thể có thể dẫn đến phân tích thiếu chính xác về các cú sốc cung cầu bất ngờ."
+      "Lợi suất thực USD tiếp tục tăng cao hơn mức 1.89% có thể gây áp lực bán thêm lên giá vàng thế giới và trong nước.",
+      "Biến động premium có thể mở rộng nếu giá thế giới giảm sâu trong khi giá SJC neo cứng, làm tăng chi phí cơ hội cho nhà đầu tư.",
+      "Sự kiện địa chính trị (Iran war headlines) và tariff mới của Mỹ có thể gây biến động bất ngờ hai chiều."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC_GIÁ_HIỆN_TẠI",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá đỉnh 30 ngày",
-        "value": 190900000,
-        "unit": "VND/lượng",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biến động 7 ngày",
+        "key": "SJC_THAY_ĐỔI_7D",
         "value": -2.93,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (5 ngày)",
-        "value": 3.85,
+        "key": "SJC_THAY_ĐỔI_30D",
+        "value": 1.51,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX (20 ngày)",
+        "key": "PREMIUM_HIỆN_TẠI",
+        "value": 15.06,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30_SJC",
+        "value": 161875258,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "LỢI_SUẤT_THỰC_10N",
+        "value": 1.89,
+        "unit": "%",
+        "source": "macro_context"
+      },
+      {
+        "key": "VIX_20D_CHANGE",
         "value": 31.08,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "Premium trung bình 30 ngày",
-        "value": 13.5,
-        "unit": "%",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Vị thế percentile 5 năm",
+        "key": "PERCENTILE_5N",
         "value": 99,
-        "unit": "percentile",
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-14T13:19:24.134Z",
+    "latestTimestamp": "2026-03-14T14:09:10.489Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158703977.63084668,
+    "intlVndPerTael": 158702743.3475487,
     "premiumPct": 15.06,
     "change7dPct": -2.93,
     "change30dPct": 1.51,
     "volatilityDailyPct": 1.37,
-    "ma7VndPerTael": 161774205,
-    "ma30VndPerTael": 161875299,
+    "ma7VndPerTael": 161774028,
+    "ma30VndPerTael": 161875258,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -83,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-14T13:19:38.813Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-14T14:09:18.536Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -184,8 +191,25 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-14 | finance.yahoo.com | Energy Secretary Chris Wright says oil prices may fall but past wars rattled market for months . How to prepare",
+      "2026-03-14 | motorsport.com | MotoGP working on rescheduling Qatar GP amid Iran war"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-14 | springfieldnewssun.com | Trump seeks to close $1 . 6 trillion revenue gap with raft of new tariffs",
+      "2026-03-14 | middleeaststar.com | Judge blocks subpoenas in US Justice Department probe of Fed chief",
+      "2026-03-14 | brazilsun.com | Judge blocks subpoenas in US Justice Department probe of Fed chief",
+      "2026-03-14 | oklahomacitysun.com | Judge blocks subpoenas in US Justice Department probe of Fed chief",
+      "2026-03-14 | kenyastar.com | Judge blocks subpoenas in US Justice Department probe of Fed chief",
+      "2026-03-14 | sandiegosun.com | Judge blocks subpoenas in US Justice Department probe of Fed chief"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-14 | finance.yahoo.com | Energy Secretary Chris Wright says oil prices may fall but past wars rattled market for months . How to prepare",
+      "2026-03-14 | finance.yahoo.com | Trump says prices are  plummeting downward , and the  only thing  going up is your 401 ( k ). What it means for your money",
+      "2026-03-14 | newsx.com | Gold Rate Today , March 14 : Check City - Wise Prices In Delhi , Mumbai , Chennai As Yellow Metal Drops To ₹15 , 966 , Silver To ₹2 . 75 Lakh / Kg",
+      "2026-03-14 | engineeringevil.com | IMF paper warns of  savings tax  and mass write - offs as West debt hits 200 - year high – Engineering Evil",
+      "2026-03-14 | livemint.com | From war to wealth : Lessons for investors in volatile times",
+      "2026-03-14 | aol.com | Trump says prices are  plummeting downward , and the  only thing  going up is your 401 ( k ). What it means for your money"
+    ]
   }
 }
