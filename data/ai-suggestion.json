@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-14T02:56:42.740Z",
+  "generatedAt": "2026-03-14T03:49:20.278Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-2.93%/7 ngày) từ vùng đỉnh lịch sử (percentile 99) trong bối cảnh áp lực từ lợi suất thực USD tăng mạnh và giá dầu leo thang; nhà đầu tư nên chờ tín hiệu ổn định thay vì đu đỉnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực từ lợi suất thực USD tăng mạnh, nhưng rủi ro địa chính trị (VIX 27.29) và đà tăng 30 ngày (+1.51%) vẫn hỗ trợ xu hướng dài hạn.",
     "reasons": [
-      "Giá SJC 182.6 triệu VND/lượng đang giao dịch ở vùng percentile 99 (5 năm), rủi ro điều chỉnh kỹ thuật cao khi giảm 2.93% trong 7 ngày qua.",
-      "Áp lực vĩ mô tăng khi lợi suất thực USD 10 năm tăng mạnh 3.85% (5 ngày) lên mức 1.89%, tạo lực đẩy giá vàng thế giới giảm về 5019.79 USD/oz.",
-      "VIX tăng vọt 31.08% (20 ngày) lên 27.29 điểm và giá dầu vượt 100 USD do chiến tranh Trung Đông, nhưng giá vàng lại giảm cho thấy động lượng mua yếu.",
-      "Premium SJC nới rộng lên 15.06% (từ mức thấp nhất 10.83% trong chuỗi 30 ngày), phản ánh tâm lý phòng thủ của nhà đầu tư Việt Nam nhưng giảm thanh khoản."
+      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày và 1.61% trong 20 ngày (lên 1.89%), tạo áp lực giảm lên giá vàng thế giới về mức 5019.77 USD/oz.",
+      "Giá SJC giảm 2.93% trong 7 ngày qua, điều chỉnh từ vùng đỉnh 190.9 triệu đồng/lượng về 182.6 triệu đồng/lượng.",
+      "VIX tăng vọt 31.08% trong 20 ngày lên mức 27.29, tín hiệu lo ngại thị trường thường hỗ trợ vàng nhưng đang bị áp đảo bởi dòng tiền chảy vào trái phiếu."
     ],
     "risks": [
-      "Rủi ro biến động cực đoan từ chiến tranh Iran và giá dầu >100 USD có thể đảo ngược xu hướng giảm bất ngờ.",
-      "Thanh khoản thị trường có thể giảm mạnh nếu spread mua-bán nới rộng trong bối cảnh giá điều chỉnh.",
-      "Dữ liệu sự kiện vĩ mô chưa có tín hiệu rõ ràng từ Fed về chính sách lãi suất trong bối cảnh lạm phát kỳ vọng tăng."
+      "Giá SJC đang ở phân vị 99% lịch sử 5 năm, rủi ro điều chỉnh sâu nếu dữ liệu lạm phát Mỹ nóng hơn dự kiến.",
+      "Premium 15.06% dao động mạnh trong khoảng 10.83%-17.28% trong 30 ngày qua, có thể gây thua lỗ chênh lệch nếu mua đỉnh premium.",
+      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input, độ tin cậy về yếu tố hỗ trợ an toàn bị giảm."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "Giá vàng SJC hiện tại",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày",
+        "key": "Giá vàng thế giới quy đổi",
+        "value": 158704262,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động giá SJC 7 ngày",
         "value": -2.93,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5 năm",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 15.06,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực USD 10N (5 ngày)",
+        "key": "Lợi suất thực USD 10Y (5 ngày)",
         "value": 3.85,
-        "unit": "% thay đổi",
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX (20 ngày)",
+        "key": "Chỉ số VIX (20 ngày)",
         "value": 31.08,
         "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới",
-        "value": 5019.79,
+        "key": "Phân vị giá 5 năm",
+        "value": 99,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC hiện tại",
+        "value": 15.06,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá vàng thế giới XAUUSD",
+        "value": 5019.77,
         "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-14T02:56:17.200Z",
+    "latestTimestamp": "2026-03-14T03:49:01.940Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158704862.24269807,
+    "intlVndPerTael": 158704261.54129794,
     "premiumPct": 15.06,
     "change7dPct": -2.93,
     "change30dPct": 1.51,
     "volatilityDailyPct": 1.37,
-    "ma7VndPerTael": 161774331,
-    "ma30VndPerTael": 161875329,
+    "ma7VndPerTael": 161774245,
+    "ma30VndPerTael": 161875309,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +89,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-14T02:56:28.256Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-14T03:49:06.669Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,24 +190,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-14 | en.tempo.co | Prabowo Cites Pakistan as Indonesia Weighs Austerity Amid Iran War",
-      "2026-03-14 | moneycontrol.com | Geopolitical tensions rise , but why arent gold prices ?",
-      "2026-03-14 | moneycontrol.com | Oil stays above $100 , stocks slide tracking Middle East war"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-14 | kbia.org | Judge blocks DOJ criminal probe of Federal Reserve , blasting it as political",
-      "2026-03-14 | hppr.org | Judge blocks DOJ criminal probe of Federal Reserve , blasting it as political",
-      "2026-03-14 | moneycontrol.com | Geopolitical tensions rise , but why arent gold prices ?",
-      "2026-03-14 | wnmufm.org | Judge blocks DOJ criminal probe of Federal Reserve , blasting it as political",
-      "2026-03-14 | finance.yahoo.com | Stocks Slump on Iran War and Credit Woes",
-      "2026-03-14 | wcbi.com | Judge quashes subpoenas sent to Federal Reserve as part of DOJ Powell probe"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-14 | moneycontrol.com | Geopolitical tensions rise , but why arent gold prices ?",
-      "2026-03-14 | thejakartapost.com | Analysis : Ramadan inflation surges , with geopolitics adding new risks - Academia",
-      "2026-03-14 | americanbazaaronline.com | The Ripples of the Middle East war reaching every doorstep",
-      "2026-03-14 | newsghana.com.gh | Oil Tops US$100 as Gold Retreats Under Dollar Pressure"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
