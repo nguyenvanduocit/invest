@@ -1,79 +1,78 @@
 {
-  "generatedAt": "2026-03-14T07:16:11.396Z",
+  "generatedAt": "2026-03-14T08:08:41.187Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 99) trong bối cảnh lợi suất thực USD tăng mạnh và xung đột Iran gây áp lực lên thị trường. Biên độ premium 15.06% là hợp lý, nhưng rủi ro điều chỉnh kỹ thuật ngắn hạn cao hơn cơ hội tăng ngay lập tức.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực bán từ lợi suất thực USD tăng mạnh, nhưng VIX cao cho thấy nhu cầu phòng thủ vẫn hiện hữu; nhà đầu tư nên chờ tín hiệu ổn định thay vì đuổi đỉnh hay bán tháo.",
     "reasons": [
-      "Giá SJC 182.6 triệu VND/lượng đang thấp hơn đáng kể so với MA7 (161.8 triệu VND/lượng) và MA30, cho thấy sự điều chỉnh mạnh sau đợt tăng nóng, phù hợp với đà giảm -2.93% trong 7 ngày qua.",
-      "Lợi suất thực USD 10 năm tăng mạnh +3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán vàng tài sản tài chính; đồng thời giá vàng thế giới giảm -2.59% (5 ngày) xuống 5019.83 USD/oz.",
-      "VIX tăng vọt +31.08% trong 20 ngày lên 27.29 điểm phản ánh sợ hãi thị trường, thường đi kèm đáo hạn tài sản rủi ro (de-risking) thay vì tích sản vàng ngay lập tức.",
-      "Giá đang ở phân vị 99% (5 năm), mức cực kỳ đắt, rủi ro mua đỉnh cao hơn nhiều so với tiềm năng tăng trong ngắn hạn khi chưa có tín hiệu ổn định."
+      "Áp lực bán vĩ mô: Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày và VIX tăng vọt 31.08% trong 20 ngày, gây áp lực giảm lên giá vàng thế giới (xuống còn 5019.66 USD/oz).",
+      "Động lượng kỹ thuật suy yếu: Giá SJC hiện tại 182.6 triệu VND/lượng giảm -2.93% sau 7 ngày, thấp hơn đỉnh vùng 190.9 triệu VND/lượng đầu tháng 3.",
+      "Định giá ở vùng cực đoan: Giá SJC đang ở phân vị 99% trong 5 năm và premium giãn ra 15.06%, hạn chế tiềm năng tăng thêm trong ngắn hạn so với giá thế giới."
     ],
     "risks": [
-      "Xung đột Iran leo thang có thể gây sốc giá dầu và đẩy lạm phát kỳ vọng, kích hoạt dòng tiền mua vàng trú ẩn bất chấp lợi suất USD.",
-      "Thiếu dữ liệu tin tức vĩ mô Mỹ (FOMC, NFP) cụ thể trong 7 ngày tới khiến khả năng dự đoán phản ứng chính sách thấp; tin tức pháp lý về Fed (thẩm phán chặn điều tra) có thể là nhiễu.",
-      "Premium co giãn mạnh từ 10.83% lên 16.43% trong tháng cho thấy thanh khoản thị trường nội địa mỏng, chênh lệch giá mua-bán có thể giãn rộng bất ngờ."
+      "Rủi ro điều chỉnh tiếp diễn nếu lợi suất thực USD và chỉ số DXY (đã tăng 1.42% trong 5 ngày) tiếp tục duy trì đà tăng.",
+      "Biến động premium cao: Premium đã dao động từ 10.83% đến 17.28% trong 30 ngày qua, có thể gây thua lỗ ngắn hạn nếu mua sai điểm.",
+      "Dữ liệu sự kiện địa chính trị和政策 trống, thiếu tín hiệu hỗ trợ tăng giá từ cú sốc bên ngoài."
     ],
     "evidence": [
       {
-        "key": "SJC Spot Price",
+        "key": "Giá vàng SJC hiện tại",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC 7-day Change",
-        "value": -2.93,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "SJC 5-Year Percentile",
-        "value": 99,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y 5d Change",
+        "key": "Lợi suất thực USD 10N (biến động 5 ngày)",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot XAUUSD 5d Change",
-        "value": -2.59,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "VIX 20d Change",
+        "key": "Chỉ số VIX (biến động 20 ngày)",
         "value": 31.08,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium Range (30d)",
-        "value": 5.6,
-        "unit": "percentage points (10.83-16.43)",
+        "key": "Premium giá SJC",
+        "value": 15.06,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Phân vị giá 5 năm",
+        "value": 99,
+        "unit": "phân vị",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá vàng thế giới Spot",
+        "value": 5019.66,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
+      },
+      {
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -2.93,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-14T07:15:44.649Z",
+    "latestTimestamp": "2026-03-14T08:08:17.767Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158704594.14017844,
+    "intlVndPerTael": 158700901.7235192,
     "premiumPct": 15.06,
     "change7dPct": -2.93,
     "change30dPct": 1.51,
     "volatilityDailyPct": 1.37,
-    "ma7VndPerTael": 161774293,
-    "ma30VndPerTael": 161875320,
+    "ma7VndPerTael": 161773765,
+    "ma30VndPerTael": 161875197,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-14T07:15:50.609Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-14T08:08:22.358Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,21 +184,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-14 | philstar.com | Ice Cube  War of the World remake wins Worst Picture , 4 other Razzies"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-14 | guardianlv.com | Judge Blocks DOJ Probe Into Federal Reserve [ Video ] - Guardian Liberty Voice",
-      "2026-03-14 | newsandsentinel.com | Judge quashes subpoenas in Justice Department investigation of Fed chair Jerome Powell | News , Sports , Jobs",
-      "2026-03-14 | geo.tv | Iran conflict pushes oil prices higher as stocks slip , dollar strengthens",
-      "2026-03-14 | en.people.cn | U . S . federal judge blocks subpoenas issued to Federal Reserve",
-      "2026-03-14 | mariettatimes.com | US stocks lose ground as war with Iran keeps pressure on oil prices | News , Sports , Jobs",
-      "2026-03-14 | grenadachronicle.com | US judge nixes two subpoenas against Federal Reserve chair Jerome Powell - Grenada Chronicle – Daily Grenada And Caribbean News"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-14 | economictimes.indiatimes.com | Global Markets | European shares log second week of losses as Mideast war fuels inflation fears",
-      "2026-03-14 | geo.tv | Iran conflict pushes oil prices higher as stocks slip , dollar strengthens",
-      "2026-03-14 | slguardian.org | War Shock Sends Global Markets Into Frenzy as Oil Surge Triggers Investor Panic"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
