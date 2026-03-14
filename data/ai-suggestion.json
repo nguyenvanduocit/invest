@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-14T20:05:51.729Z",
+  "generatedAt": "2026-03-14T21:07:08.537Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với biến động cao, trong khi áp lực vĩ mô từ lợi suất thực USD tăng mạnh và VIX nhảy vọt tạo tín hiệu trái chiều; nhà đầu tư nên chờ xác nhận vùng hỗ trợ thay vì đuổi đỉnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực bán từ lợi suất thực USD tăng mạnh, nhưng VIX cao cho thấy nhu cầu phòng thủ vẫn hiện hữu - nên chờ xác nhận vùng hỗ trợ quanh MA7.",
     "reasons": [
-      "Giá SJC 182.6 triệu VND/lượng giảm -2.93% sau 7 ngày và nằm dưới MA7 (161.1 triệu VND/lượng), cho thấy động lượng ngắn hạn đã suy yếu sau đợt tăng nóng.",
-      "Lợi suất thực USD 10Y tăng mạnh +3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán chốt lên vàng thế giới (xuống 5019.71 USD/oz).",
-      "VIX tăng vọt +31.08% trong 20 ngày lên mức 27.29 báo hiệu bất ổn thị trường, nhưng đồng thời USD Index cũng tăng +1.42% trong 5 ngày, làm giảm hiệu ứng trú ẩn an toàn của vàng.",
-      "Premium 15.06% đang ở mức cao hơn vùng 11-13% đầu tháng, cho thấy nhà đầu tư Việt vẫn trả giá cao hơn thị trường thế giới, rủi ro co hẹp premium nếu giá thế giới tiếp tục giảm."
+      "Lợi suất thực USD 10Y tăng mạnh 3.85% trong 5 ngày và 1.61% trong 20 ngày lên mức 1.89%, tạo áp lực giảm giá vàng thế giới xuống 5019.69 USD/oz.",
+      "Giá SJC giảm 2.93% trong 7 ngày về 182.6 triệu VND/lượng, nhưng vẫn đứng trên MA7 (161.09 triệu VND/lượng) và MA30 (161.86 triệu VND/lượng) theo ngữ cảnh long-term.",
+      "VIX tăng vọt 31.08% trong 20 ngày lên mức 27.29, tín hiệu lo ngại thị trường có thể hỗ trợ vàng trong ngắn hạn nếu rủi ro địa chính trị leo thang.",
+      "Premium 15.06% ở phân vị 99 trong 5 năm cho thấy giá SJC đã rất đắt so với thế giới, rủi ro điều chỉnh premium cao."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực bán mạnh thêm trên thị trường vàng quốc tế.",
-      "Premium SJC có thể co hẹp từ 15.06% về mức trung bình 12-13%, gây mất giá cho người mua đuổi đỉnh nội địa.",
-      "Biến động ngày 1.35% kết hợp với percentile 5 năm ở mức 99 cho thấy giá đang ở vùng cực đoan lịch sử, rủi ro điều chỉnh sâu hiện hữu."
+      "Lợi suất thực USD tiếp tục tăng cao hơn mức 1.89% sẽ gây áp lực bán vàng mạnh hơn.",
+      "Premium 15.06% có thể co hẹp về mức trung bình 12-13%, làm SJC giảm nhanh hơn giá thế giới.",
+      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu, VIX cao có thể chỉ là biến động ngắn hạn không duy trì."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "sjc_price",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 7d",
-        "value": -2.93,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 SJC",
-        "value": 161090653,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 3.85,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot XAUUSD",
-        "value": 5019.71,
+        "key": "intl_gold",
+        "value": 5019.69,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "VIX Change 20d",
-        "value": 31.08,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Premium SJC",
+        "key": "premium_pct",
         "value": 15.06,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5Y",
-        "value": 99,
-        "unit": "percentile",
+        "key": "change_7d_pct",
+        "value": -2.93,
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "us_real_yield_10y",
+        "value": 1.89,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_5d_change",
+        "value": 3.85,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_level",
+        "value": 27.29,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_20d_change",
+        "value": 31.08,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-14T20:05:28.867Z",
+    "latestTimestamp": "2026-03-14T21:06:49.638Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158702546.69687977,
+    "intlVndPerTael": 158701765.78505954,
     "premiumPct": 15.06,
     "change7dPct": -2.93,
     "change30dPct": -0.2,
     "volatilityDailyPct": 1.35,
-    "ma7VndPerTael": 161090653,
-    "ma30VndPerTael": 161864605,
+    "ma7VndPerTael": 161090541,
+    "ma30VndPerTael": 161864579,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-14T20:05:35.319Z",
+    "fetchedAt": "2026-03-14T21:06:53.425Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -193,12 +193,6 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-03-14 | finance.yahoo.com | Veteran analyst drops surprising gold price prediction",
-      "2026-03-14 | valdostadailytimes.com | AARON TAYLOR : Conflict in the Gulf | Valdosta Daily Times",
-      "2026-03-14 | cnbc.com | Peruvian stocks : Why they may be an unexpected winner of the AI boom , Iran war",
-      "2026-03-14 | ibtimes.co.in | Gold falls 0 . 73 % this week as profit - taking rises , dollar strengthens",
-      "2026-03-14 | thefrontierpost.com | Iran conflict pushes oil prices higher as stocks slip , dollar strengthens"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
