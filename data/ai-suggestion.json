@@ -1,79 +1,71 @@
 {
-  "generatedAt": "2026-03-14T17:07:29.707Z",
+  "generatedAt": "2026-03-14T18:08:28.087Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh 190.9 triệu đồng nhưng vẫn ở vùng định giá cao (percentile 99% 5 năm). Áp lực từ lợi suất thực USD tăng mạnh và rủi ro địa chính trị tạo thị trường hai chiều biến động, nhà đầu tư nên chờ đợt hồi phục để bán hoặc đợi điều chỉnh sâu hơn mới mua vào.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử (percentile 99) với áp lực bán từ lợi suất thực USD tăng vọt và VIX cao. Biên độ premium giãn nhanh (15.06%) trong bối cảnh thanh khoản thấp là tín hiệu xấu cho người mua đuổi, nên chờ xác nhận vùng hỗ trợ kỹ thuật.",
     "reasons": [
-      "Giá SJC 182.6 triệu đồng đang thấp hơn MA7 (161.8 triệu) do hiệu ứng điều chỉnh kỹ thuật sau đỉnh 190.9 triệu, nhưng biến động cao (1.37%/ngày) cho thấy thị trường chưa ổn định.",
-      "Premium 15.06% đang nới rộng so với mức 10.83% đầu tháng 3, cho thấy tâm lý phòng thủ của nhà đầu tư VN nhưng cũng ám chỉ rủi ro co hẹp premium nếu giá thế giới hồi phục.",
-      "Lợi suất thực 10Y Mỹ tăng mạnh 3.85% trong 5 ngày và VIX nhảy 31% lên 27.29 điểm tạo áp lực ngược chiều lên vàng nhưng đồng thời tín hiệu lo ngại rủi ro vẫn hiện hữu.",
-      "Vùng giá hiện tại ở percentile 99% (5 năm) là vùng lịch sử cao, rủi ro mua đỉp ngắn hạn lớn hơn cơ hội lãi nhanh."
+      "Áp lực bán vĩ mô mạnh: Lợi suất thực USD 10 năm tăng 3.85% trong 5 ngày và VIX tăng vọt 31.08% trong 20 ngày, đẩy giá thế giới mất 2.59% (5 ngày) xuống 5019.8 USD/oz.",
+      "Định giá kỹ thuật quá cao: Giá SJC 182.6 triệu đồng/lượng đang nằm ở phân vị 99% (percentile 5y), cao xa MA30 (161.9 triệu đồng) và rủi ro hồi quy về trung bình là rất lớn.",
+      "Dao động premium bất ổn: Chênh lệch giá tăng vọt từ 10.83% (27/02) lên 15.06% (14/03) chỉ trong 2 tuần, cho thấy tâm lý thị trường Việt Nam đang hoảng loạn và không ổn định để tham gia."
     ],
     "risks": [
-      "Lợi suất thực Mỹ tiếp tục tăng cao sẽ gây áp lực bán tháo vàng thế giới, kéo giá SJC giảm sâu hơn.",
-      "Premium co hẹp nhanh từ 15% về mức 12-13% nếu giá thế giới hồi phục mạnh, gây mất giá cho người nắm giữ SJC.",
-      "Tin tức về thuế quan mới và xung đột Iran có thể gây biến động bất ngờ hai chiều."
+      "Rủi ro điều chỉnh sâu: Giá thế giới đã phá vỡ xu hướng tăng ngắn hạn, có thể test vùng hỗ trợ 4900-5000 USD/oz, kéo giá SJC về vùng 175-178 triệu đồng.",
+      "Thanh khoản và spread: Biên độ dao động ngày 1.37% kết hợp với premium giãn rộng cho thấy chênh lệch giá mua-bán có thể mở rộng, gây thiệt hại khi giao dịch ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 182600000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_pct",
-        "value": 15.06,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "SJC Price Percentile 5Y",
         "value": 99,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change5d",
+        "key": "US Real Yield 10Y Change 5D",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
+        "key": "VIX Change 20D",
         "value": 31.08,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "ma7_vnd",
-        "value": 161773727,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "SJC Premium Expansion (Feb 27 to Mar 14)",
+        "value": 4.23,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "30d_high_sjc",
-        "value": 190900000,
-        "unit": "VND/lượng",
-        "source": "monthly_series_30d"
+        "key": "Gold Spot Change 5D",
+        "value": -2.59,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Price vs MA30 Deviation",
+        "value": 12.8,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-14T17:07:00.047Z",
+    "latestTimestamp": "2026-03-14T18:08:04.273Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158700635.51795137,
+    "intlVndPerTael": 158705385.4852335,
     "premiumPct": 15.06,
     "change7dPct": -2.93,
     "change30dPct": 1.51,
     "volatilityDailyPct": 1.37,
-    "ma7VndPerTael": 161773727,
-    "ma30VndPerTael": 161875188,
+    "ma7VndPerTael": 161774406,
+    "ma30VndPerTael": 161875346,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +76,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-14T17:07:06.862Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-14T18:08:11.508Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,24 +177,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-14 | gamerant.com | Pokopia Player Builds the Bell Tower From Pokemon Gold and Silver"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-14 | capitalfm.co.ke | Judge says  no evidence  to justify Federal Reserve probe",
-      "2026-03-14 | cbs8.com | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | newzealandstar.com | Judge blocks subpoenas in US Justice Department probe of Fed chief",
-      "2026-03-14 | ksat.com | Trump seeks to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | wccbcharlotte.com | Trump seeks to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | nigeriasun.com | Judge blocks subpoenas in US Justice Department probe of Fed chief"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-14 | valdostadailytimes.com | AARON TAYLOR : Conflict in the Gulf | Valdosta Daily Times",
-      "2026-03-14 | cnbc.com | Peruvian stocks : Why they may be an unexpected winner of the AI boom , Iran war",
-      "2026-03-14 | ibtimes.co.in | Gold falls 0 . 73 % this week as profit - taking rises , dollar strengthens",
-      "2026-03-14 | thefrontierpost.com | Iran conflict pushes oil prices higher as stocks slip , dollar strengthens",
-      "2026-03-14 | businessworld.in | Union Bank Sees Q4 CPI Inflation At 3 %, Lower Than RBI Projection",
-      "2026-03-14 | uk.news.yahoo.com | What are the consequences of war in the Middle East for African countries ?"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
