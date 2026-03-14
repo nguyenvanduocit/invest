@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-14T19:10:17.183Z",
+  "generatedAt": "2026-03-14T20:05:51.729Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh 5 năm (percentile 99%) trong bối cảnh USD và lợi suất thực tăng mạnh, tạo áp lực ngắn hạn; tuy nhiên, rủi ro địa chính trị từ thuế quan và xung đột Iran có thể tạo sàn hỗ trợ.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với biến động cao, trong khi áp lực vĩ mô từ lợi suất thực USD tăng mạnh và VIX nhảy vọt tạo tín hiệu trái chiều; nhà đầu tư nên chờ xác nhận vùng hỗ trợ thay vì đuổi đỉnh.",
     "reasons": [
-      "Giá SJC 182.6 triệu VND/lượng giảm -2.93% sau 7 ngày và nằm dưới MA7 (161.8 triệu VND/lượng), cho thấy động lượng ngắn hạn yếu đi.",
-      "Áp lực bán từ vĩ mô: Lợi suất thực Mỹ 10N tăng mạnh +3.85% trong 5 ngày và VIX nhảy +31% trong 20 ngày phản ánh dòng tiền rút khỏi vàng.",
-      "Premium 15.06% đang nới rộng so với mức thấp 10.83% (27/02), cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo ngại rủi ro và chấp nhận mua đắt hơn thế giới.",
-      "Dữ liệu vĩ mô hỗ trợ: VIX 27.29 điểm và tin tức thuế quan mới của Mỹ (1.6 nghìn tỷ USD) duy trì sự bất ổn thị trường."
+      "Giá SJC 182.6 triệu VND/lượng giảm -2.93% sau 7 ngày và nằm dưới MA7 (161.1 triệu VND/lượng), cho thấy động lượng ngắn hạn đã suy yếu sau đợt tăng nóng.",
+      "Lợi suất thực USD 10Y tăng mạnh +3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán chốt lên vàng thế giới (xuống 5019.71 USD/oz).",
+      "VIX tăng vọt +31.08% trong 20 ngày lên mức 27.29 báo hiệu bất ổn thị trường, nhưng đồng thời USD Index cũng tăng +1.42% trong 5 ngày, làm giảm hiệu ứng trú ẩn an toàn của vàng.",
+      "Premium 15.06% đang ở mức cao hơn vùng 11-13% đầu tháng, cho thấy nhà đầu tư Việt vẫn trả giá cao hơn thị trường thế giới, rủi ro co hẹp premium nếu giá thế giới tiếp tục giảm."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz và premium co hẹp nhanh về mức 12-13%.",
-      "Thanh khoản thấp có thể làm trượt giá mua-bán lớn nếu thị trường sốt ảo.",
-      "Dữ liệu sự kiện (Iran, thuế quan) có thể gây biến động hai chiều khó lường."
+      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực bán mạnh thêm trên thị trường vàng quốc tế.",
+      "Premium SJC có thể co hẹp từ 15.06% về mức trung bình 12-13%, gây mất giá cho người mua đuổi đỉnh nội địa.",
+      "Biến động ngày 1.35% kết hợp với percentile 5 năm ở mức 99 cho thấy giá đang ở vùng cực đoan lịch sử, rủi ro điều chỉnh sâu hiện hữu."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Price",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
+        "key": "Change 7d",
         "value": -2.93,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium so với thế giới",
+        "key": "MA7 SJC",
+        "value": 161090653,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
+        "value": 3.85,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Gold Spot XAUUSD",
+        "value": 5019.71,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX Change 20d",
+        "value": 31.08,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC",
         "value": 15.06,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 161774375,
-        "unit": "VND/lượng",
+        "key": "Percentile 5Y",
+        "value": 99,
+        "unit": "percentile",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10N (5d)",
-        "value": 3.85,
-        "unit": "% thay đổi",
-        "source": "macro_context"
-      },
-      {
-        "key": "VIX (20d)",
-        "value": 31.08,
-        "unit": "% thay đổi",
-        "source": "macro_context"
-      },
-      {
-        "key": "Giá thế giới XAUUSD",
-        "value": 5019.8,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-14T19:09:45.378Z",
+    "latestTimestamp": "2026-03-14T20:05:28.867Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158705167.01961902,
+    "intlVndPerTael": 158702546.69687977,
     "premiumPct": 15.06,
     "change7dPct": -2.93,
-    "change30dPct": 1.51,
-    "volatilityDailyPct": 1.37,
-    "ma7VndPerTael": 161774375,
-    "ma30VndPerTael": 161875339,
+    "change30dPct": -0.2,
+    "volatilityDailyPct": 1.35,
+    "ma7VndPerTael": 161090653,
+    "ma30VndPerTael": 161864605,
     "percentile5y": 99,
     "drawdowns": {
       "total": 4,
@@ -84,8 +90,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-14T19:09:59.415Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-14T20:05:35.319Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -185,18 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-14 | thetimes.com | We risked 20 years in jail to train doctors in a forgotten war",
-      "2026-03-14 | el-balad.com | Increased Military Spending on Iran War May Expand US Deficit"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-14 | kgw.com | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | cbs19.tv | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | 10tv.com | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | krem.com | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | kiiitv.com | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-14 | localmemphis.com | White House steps up ambitious effort to close $1 . 6 trillion revenue gap with raft of new tariffs"
-    ],
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
     "dollarYieldHeadlines": [
       "2026-03-14 | finance.yahoo.com | Veteran analyst drops surprising gold price prediction",
       "2026-03-14 | valdostadailytimes.com | AARON TAYLOR : Conflict in the Gulf | Valdosta Daily Times",
