@@ -1,79 +1,78 @@
 {
-  "generatedAt": "2026-03-15T10:07:31.548Z",
+  "generatedAt": "2026-03-15T11:07:45.502Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử với giảm 2.93% trong 7 ngày, trong khi lợi suất thực USD và VIX tăng cao tạo áp lực bán ngắn hạn. Tuy nhiên, premium 15.22% vẫn ổn định và xung đột địa chính trị (Middle East war) có thể tạo sàn hỗ trợ, nên nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98%) trong bối cảnh áp lực bán từ lợi suất thực USD tăng mạnh (+3.85% tuần), nhưng đà giảm có thể chững lại do VIX leo thang mức 27.29 báo hiệu nhu cầu phòng thủ. Nhà đầu tư nên chờ tín hiệu ổn định thay vì đuổi đỉnh hoặc bắt đáy ngay lập tức.",
     "reasons": [
-      "Áp lực bán vĩ mô mạnh: Lợi suất thực US 10Y tăng 3.85% trong 5 ngày và 1.61% trong 20 ngày (lên 1.89%), kết hợp USD Index tăng 1.42% trong 5 ngày, gây áp lực giảm lên giá vàng thế giới về mức 5019.75 USD/oz.",
-      "Động lượng kỹ thuật suy yếu: Giá thế giới hiện tại (158.48 triệu VND/lượng) thấp hơn MA7 (160.87 triệu VND/lượng) và MA30 (161.64 triệu VND/lượng), cho thấy xu hướng ngắn hạn đã chuyển sang điều chỉnh giảm.",
-      "Biến loạn địa chính trị tạo sàn hỗ trợ: VIX tăng vọt 31.08% trong 20 ngày lên mức 27.29, kết hợp tin tức 'Market turmoil continues after week two of Middle East war' và 'US-Iran war' giới hạn khả năng giảm sâu của giá vàng.",
-      "Premium thị trường bình thường: Mức premium 15.22% nằm trong biên độ dao động 30 ngày (10.99% - 17.45%), cho thấy thị trường Việt Nam vẫn thanh khoản và không có dấu hiệu hoảng loạn."
+      "Giá SJC 182.6 triệu VND/lượng đang nằm trên MA7 (160.9 triệu VND/lượng) và MA30 (161.6 triệu VND/lượng) với khoảng cách rất lớn, cho thấy thị trường đang ở vùng quá mua kỹ thuật (percentile 5Y: 98%).",
+      "Áp lực giảm giá từ vĩ mô mạnh mẽ: Lợi suất thực Mỹ 10 năm tăng 3.85% trong 5 ngày và DXY tăng 1.42% (nguồn first_principles), tạo lực bán vàng thế giới giảm 2.59% tuần.",
+      "Biến động thị trường gia tăng (VIX: 27.29, tăng 31% trong 20 ngày) hỗ trợ nhu cầu trú ẩn, nhưng premium SJC đang nới rộng ở mức 15.22% (so với trung bình 13-14% đầu tháng), rủi ro co hẹp premium cao hơn rủi ro giảm giá thế giới."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật tiếp tục nếu giá thế giới phá vỡ hỗ trợ 5000 USD/oz và lợi suất thực Mỹ tiếp tục tăng.",
-      "Tin tức địa chính trị (chiến tranh Trung Đông, Mỹ-Iran) có thể gây biến động đột biến hai chiều không dự báo trước được.",
-      "Dữ liệu vĩ mô first-principles không hoàn chỉnh (healthy: false), có thể làm giảm độ chính xác của phân tích xu hướng."
+      "Rủi ro co hẹp premium: Nếu giá thế giới tiếp tục giảm, chênh lệch 15.22% có thể thu hẹp nhanh chóng làm mất giá tài sản SJC nhanh hơn vàng thế giới.",
+      "Bẫy thanh khoản ở đỉnh 5 năm: Với percentile 98%, thanh khoản mua vào có thể mỏng, khó thoát hàng nhanh nếu thị trường điều chỉnh sâu.",
+      "Thiếu tín hiệu địa chính trị cụ thể: Không có tin tức địa chính trị nào trong dữ liệu đầu vào để biện minh cho việc giữ giá cao, confidence bị giới hạn bởi dữ liệu nhiễu."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
-        "value": 182600000,
-        "unit": "VND/lượng",
+        "key": "SJC Price vs MA7",
+        "value": 13.5,
+        "unit": "% above MA7",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -2.93,
+        "key": "5Y Price Percentile",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Real Yield 10Y Change 5d",
+        "value": 3.85,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC so với thế giới",
+        "key": "VIX Index Level",
+        "value": 27.29,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Premium vs World",
         "value": 15.22,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực US 10Y (5 ngày)",
-        "value": 3.85,
-        "unit": "% thay đổi",
-        "source": "macro_context"
+        "key": "Gold Spot Change 5d",
+        "value": -2.59,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
-        "key": "VIX Index (20 ngày)",
-        "value": 31.08,
-        "unit": "% thay đổi",
-        "source": "macro_context"
-      },
-      {
-        "key": "Giá thế giới quy đổi vs MA7",
-        "value": -1.49,
-        "unit": "% (158.48M vs 160.87M VND/lượng)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biên độ Premium 30 ngày",
-        "value": 6.46,
-        "unit": "phần trăm điểm (10.99%-17.45%)",
-        "source": "monthly_series_30d"
+        "key": "SJC Change 7d",
+        "value": -2.93,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-15T10:06:55.056Z",
+    "latestTimestamp": "2026-03-15T11:07:22.402Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158481241.19009796,
+    "intlVndPerTael": 158479980.53740737,
     "premiumPct": 15.22,
     "change7dPct": -2.93,
     "change30dPct": -0.2,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160865105,
-    "ma30VndPerTael": 161637858,
+    "ma7VndPerTael": 160864925,
+    "ma30VndPerTael": 161637816,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-15T10:07:06.398Z",
+    "fetchedAt": "2026-03-15T11:07:25.702Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -185,17 +184,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-15 | indianexpress.com | Avimukteshwaranand - Yogi Adityanath Row : Magh Mela Dispute , Cow Demand Explained"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-15 | sharecast.com | Week ahead : Central banks in the spotlight",
-      "2026-03-15 | independent.ie | Market turmoil continues after week two of Middle East war",
-      "2026-03-15 | livemint.com | Gold rate today : Yellow metal slips below ₹1 . 60 lakh level . Is it the right time to buy amid US - Iran war ?",
-      "2026-03-15 | livemint.com | Gold prices today : Check retail rates of 24K , 22K , 18K gold in Mumbai , Delhi , Bengaluru and other cities on March 15"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-15 | independent.ie | Market turmoil continues after week two of Middle East war"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
