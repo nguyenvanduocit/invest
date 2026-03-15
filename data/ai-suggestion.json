@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T20:06:23.646Z",
+  "generatedAt": "2026-03-15T21:07:59.243Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,46 +7,47 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98) trong bối cảnh USD và lợi suất thực tăng mạnh tạo áp lực bán; tuy nhiên, rủi ro địa chính trị từ Iran đang giới hạn đà giảm và duy trì mức premium 15.22%.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98) trong bối cảnh áp lực bán từ lợi suất thực USD tăng mạnh, tuy nhiên rủi ro địa chính trị từ khu vực Vịnh và VIX cao đang tạo sàn hỗ trợ, nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Áp lực bán kỹ thuật rõ ràng: giá thế giới giảm -2.59% trong 5 ngày và nằm dưới MA7 (5083 USD/oz), kéo giá SJC giảm -2.38% trong tuần.",
-      "Động lực vĩ mô tiêu cực: Lợi suất thực Mỹ (1.89%) tăng mạnh 3.85% tuần qua và VIX nhảy 31% lên 27.29 điểm cho thấy đáo hạn rủi ro nhưng dòng tiền ưu tiên USD.",
-      "Định giá rủi ro cao: Giá SJC (182.6 triệu/lượng) đang ở phân vị 98% lịch sử 5 năm, tiềm năng sinh lời ngắn hạn hạn chế trong khi rủi ro điều chỉnh vẫn còn."
+      "Giá SJC 182.6 triệu VND/lượng đang giao dịch dưới MA7 (160.3 triệu VND/lượng) và giảm 2.38% sau 7 ngày, cho thấy động lượng ngắn hạn yếu và đang trong nhịp điều chỉnh kỹ thuật.",
+      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực giảm giá vàng thế giới (xuống 5019.8 USD/oz) do chi phí cơ hội nắm giữ vàng tăng.",
+      "VIX tăng vọt 31.08% trong 20 ngày lên mức 27.29 kết hợp với tin tức 'Oil, gas and war amid Gulf crisis' cho thấy rủi ro địa chính trị vẫn cao, có thể giới hạn biên độ giảm của vàng.",
+      "Giá SJC đang ở phân vị 98% (5 năm), mức định giá rất cao so với lịch sử, rủi ro mua đỉp hiện hữu nếu không có tin tức địa chính trị leo thang thêm."
     ],
     "risks": [
-      "Căng thẳng Iran leo thang bất ngờ có thể đẩy giá bật tăng nhanh chóng (safe-haven demand).",
-      "Biến động premium cao (dao động 10.99%-17.45% trong tháng) làm tăng rủi ro giao dịch ngắn hạn.",
-      "Dữ liệu chính sách Fed không có tín hiệu rõ ràng trong kỳ này, khả năng dự báo giảm."
+      "Fed có thể giữ lãi suất cao hơn dự kiến lâu hơn (dilemma rate decision), khiến lợi suất thực tiếp tục tăng gây áp lực bán vàng mạnh hơn.",
+      "Biến động giá dầu do chiến tranh kinh tế Iran có thể gây sốc lạm phát, làm tăng độ trồi của giá vàng nhưng cũng tăng biến động giá.",
+      "Premium SJC 15.22% có thể co hẹp nếu giá thế giới giảm sâu, khiến giá trong nước giảm nhanh hơn giá quốc tế."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAU/USD",
-        "value": 5019.75,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biến động 7 ngày (SJC)",
+        "key": "Thay đổi 7 ngày SJC",
         "value": -2.38,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y (5 ngày)",
+        "key": "Lợi suất thực Mỹ 10N (5 ngày)",
         "value": 3.85,
         "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
-        "value": 27.29,
-        "unit": "điểm",
+        "key": "VIX (20 ngày)",
+        "value": 31.08,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá vàng thế giới Spot",
+        "value": 5019.8,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
@@ -56,29 +57,23 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
+        "key": "Premium SJC",
         "value": 15.22,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 Giá thế giới",
-        "value": 5083.42,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-15T20:06:02.656Z",
+    "latestTimestamp": "2026-03-15T21:07:32.179Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158481230.455765,
+    "intlVndPerTael": 158483108.96403176,
     "premiumPct": 15.22,
     "change7dPct": -2.38,
     "change30dPct": -0.46,
     "volatilityDailyPct": 1.31,
-    "ma7VndPerTael": 160313132,
-    "ma30VndPerTael": 161613264,
+    "ma7VndPerTael": 160313400,
+    "ma30VndPerTael": 161613326,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -89,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-15T20:06:10.299Z",
+    "fetchedAt": "2026-03-15T21:07:40.307Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
@@ -191,21 +186,23 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-15 | bworldonline.com | Peso may hit P60 a dollar this week amid escalating Iran war",
-      "2026-03-15 | dailymaverick.co.za | The year the ANC broke : Jackie Selebi war with Bulelani Ngcuka and Vusi Pikoli",
-      "2026-03-15 | pjmedia.com | New Mexico Is the First State to Ban Armed Federal Agents from Voting Locations"
+      "2026-03-15 | seekingalpha.com | Oil war volatility pushes investors toward complex  hybrid  options bets ( CO1 : COM : Commodity )",
+      "2026-03-15 | livemint.com | Week Ahead : Wall Street braces for Federal Reserve rate decision , Powell speech , PPI inflation",
+      "2026-03-15 | economictimes.indiatimes.com | OGW now means oil , gas and war amid Gulf crisis"
     ],
     "countryActionHeadlines": [
+      "2026-03-15 | forbes.com | The Federal Reserve Policy Dilemma And Its Implications For Interest Rate Expectations",
+      "2026-03-15 | seekingalpha.com | Wall Street Brunch : Is That It For Fed Rate Cuts ? ( null : US10Y )",
+      "2026-03-15 | livemint.com | Week Ahead : Wall Street braces for Federal Reserve rate decision , Powell speech , PPI inflation",
+      "2026-03-15 | inquirer.com | Iran wages economic war in hopes of outlasting U . S . and Israel",
       "2026-03-15 | bworldonline.com | Peso may hit P60 a dollar this week amid escalating Iran war",
-      "2026-03-15 | arabtimesonline.com | Gold reaches KD 50 per gram in Kuwait as global markets swing",
-      "2026-03-15 | timesofindia.indiatimes.com | Gold Prices : Gold , silver may see more corrective moves this week as Middle East tensions , central bank cues drive volatility",
-      "2026-03-15 | newsx.com | Gold Rate Today , March 15 : Check City - Wise Prices In Delhi , Mumbai , Chennai And Other Major Cities As Bullion Remains Volatile Amid Global Uncertainty"
+      "2026-03-15 | arabtimesonline.com | Gold reaches KD 50 per gram in Kuwait as global markets swing"
     ],
     "dollarYieldHeadlines": [
+      "2026-03-15 | livemint.com | Week Ahead : Wall Street braces for Federal Reserve rate decision , Powell speech , PPI inflation",
       "2026-03-15 | arabtimesonline.com | Gold reaches KD 50 per gram in Kuwait as global markets swing",
       "2026-03-15 | mining.com | Open - pit gold miners most exposed to high oil prices : Jefferies",
-      "2026-03-15 | timesofindia.indiatimes.com | Gold Prices : Gold , silver may see more corrective moves this week as Middle East tensions , central bank cues drive volatility",
-      "2026-03-15 | newsx.com | Gold Rate Today , March 15 : Check City - Wise Prices In Delhi , Mumbai , Chennai And Other Major Cities As Bullion Remains Volatile Amid Global Uncertainty"
+      "2026-03-15 | timesofindia.indiatimes.com | Gold Prices : Gold , silver may see more corrective moves this week as Middle East tensions , central bank cues drive volatility"
     ]
   }
 }
