@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T04:48:11.158Z",
+  "generatedAt": "2026-03-15T05:32:17.517Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực từ lợi suất thực USD tăng mạnh, nhưng rủi ro địa chính trị (VIX 27.29) và xu hướng tăng dài hạn vẫn hỗ trợ. Nên chờ xác nhận vùng hỗ trợ kỹ thuật trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-2.93%/7 ngày) từ vùng đỉnh lịch sử (percentile 98%), áp lực bán từ việc lợi suất thực USD và VIX tăng mạnh khiến thị trường cần thời gian để ổn định trước khi có xu hướng rõ ràng hơn.",
     "reasons": [
-      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán vàng đáng kể do chi phí cơ hội tăng.",
-      "Giá thế giới giảm -2.59% trong 5 ngày xuống 5019.66 USD/oz, kéo giá SJC giảm -2.93% trong 7 ngày xuống 182.6 triệu VND/lượng.",
-      "VIX tăng vọt 31.08% trong 20 ngày lên mức 27.29, chỉ thị thị trường lo ngại rủi ro cao, thường hỗ trợ vàng nhưng đang bị áp lực lợi suất thực lấn át ngắn hạn.",
-      "Giá SJC 182.6 triệu VND/lượng nằm trên MA30 (161.6 triệu VND/lượng), xu hướng dài hạn vẫn là tăng mạnh."
+      "Giá SJC 182.6 triệu VND/lượng đã giảm -2.93% sau 7 ngày và nằm dưới đỉnh 190.9 triệu (ngày 02/03), cho thấy động lượng tăng đã suy yếu tạm thời.",
+      "Lợi suất thực USD 10 năm tăng mạnh +3.85% (5 ngày) lên 1.89% và VIX nhảy +31% (20 ngày) lên 27.29 điểm tạo áp lực tài chính thắt chặt, bất lợi cho vàng ngắn hạn.",
+      "Premium 15.22% đang ở mức trung bình so với chuỗi 30 ngày (dao động 10.99%-17.45%), không có tín hiệu mua quá rẻ hay bán quá đắt cực đoan để hành động ngay."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao hơn có thể gây áp lực bán sâu hơn, đẩy giá thử các vùng hỗ trợ thấp hơn.",
-      "Premium SJC đang ở mức 15.22%, nếu giá thế giới giảm sâu có thể khiến chênh lệch nới rộng thêm, tăng rủi ro thanh khoản.",
-      "Dữ liệu vĩ mô first_principles không hoàn chỉnh (healthy: false), các chỉ số USD có độ trễ, có thể bỏ lỡ tín hiệu đảo chiều."
+      "Lợi suất thực USD tiếp tục tăng cao hơn có thể gây áp lực bán thêm trên thị trường quốc tế, kéo giá VND giảm theo.",
+      "Giá SJC có thể quay đầu tăng nhanh nếu VIX tiếp tục leo thang và chuyển thành khủng hoảng, bỏ lỡ điểm mua nếu chờ quá lâu.",
+      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu input nên độ tin cậy về xu hướng tránh hiểm thấp, dễ bị nhiễu."
     ],
     "evidence": [
       {
@@ -27,40 +26,34 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 5019.66,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Thay đổi 7 ngày",
+        "value": -2.93,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày SJC",
-        "value": -2.93,
+        "key": "Premium SJC",
+        "value": 15.22,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
         "key": "Lợi suất thực USD 10N (5 ngày)",
         "value": 3.85,
-        "unit": "%",
+        "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
-        "value": 27.29,
-        "unit": "index",
+        "key": "VIX (20 ngày)",
+        "value": 31.08,
+        "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 15.22,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 SJC",
-        "value": 161637766,
+        "key": "Giá SJC đỉnh 30 ngày",
+        "value": 190900000,
         "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
         "key": "Vị thế percentile 5 năm",
@@ -71,15 +64,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-15T04:47:34.441Z",
+    "latestTimestamp": "2026-03-15T05:31:58.927Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158478471.7321961,
+    "intlVndPerTael": 158480402.64926496,
     "premiumPct": 15.22,
     "change7dPct": -2.93,
     "change30dPct": -0.2,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160864709,
-    "ma30VndPerTael": 161637766,
+    "ma7VndPerTael": 160864985,
+    "ma30VndPerTael": 161637830,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-15T04:47:39.623Z",
+    "fetchedAt": "2026-03-15T05:32:03.835Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -191,20 +184,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-15 | freemalaysiatoday.com | Dubai  safe haven  brand faces wartime test",
-      "2026-03-15 | finance.yahoo.com | Rich Dad Poor Dad  author sends blunt message on  New Depression  warning"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-15 | thehindubusinessline.com | Stock trader guide to navigating supply disruption by Iran war",
-      "2026-03-15 | messenger-inquirer.com | Trump seeks to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-15 | adn.com | Trump seeks to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-15 | eldoradonews.com | Trump seeks to close $1 . 6 trillion revenue gap with raft of new tariffs",
-      "2026-03-15 | thezimbabwemail.com | ZiG Awareness Campaign Reaches Over 256 , 000 People Nationwide",
-      "2026-03-14 | timesfreepress.com | Judge quashes subpoenas in Justice Department investigation of Fed chair Jerome Powell"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-15 | thezimbabwemail.com | ZiG Awareness Campaign Reaches Over 256 , 000 People Nationwide"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
