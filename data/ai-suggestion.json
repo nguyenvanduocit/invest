@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T00:23:44.245Z",
+  "generatedAt": "2026-03-15T01:34:45.853Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,16 +7,16 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 99) trong bối cảnh áp lực bán từ lợi suất thực USD tăng mạnh; nhà đầu tư nên chờ tín hiệu ổn định thay vì mua đuổi hoặc bán tháo.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 99) với áp lực bán từ lợi suất thực USD tăng mạnh, nhưng VIX cao (27.29) và premium nới rộng (15.22%) cho thấy nhu cầu phòng thủ vẫn còn, nên chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC giảm -2.93% trong 7 ngày gần nhất từ mức đỉnh 190.9 triệu xuống 182.6 triệu VND/lượng, cho thấy động lượng tăng đã suy yếu tạm thời.",
-      "Lợi suất thực USD 10 năm tăng mạnh +3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán ngược hạn chế đà tăng của giá vàng thế giới.",
-      "VIX tăng vọt +31.08% trong 20 ngày lên mức 27.29 chỉ thị thị trường căng thẳng, nhưng chưa thấy sự chuyển dịch rõ ràng sang vàng an toàn."
+      "Giá SJC (182.6 triệu VND/lượng) đã giảm -2.93% sau 7 ngày và nằm dưới MA7 (160.9 triệu VND/lượng), cho thấy động lượng ngắn hạn đang yếu đi.",
+      "Áp lực bán vĩ mô mạnh: Lợi suất thực USD 10 năm tăng 3.85% trong 5 ngày và VIX tăng vọt 31.08% trong 20 ngày, thường gây khó khăn cho giá vàng.",
+      "Vị thế giá đang ở mức rất cao (percentile 99 trong 5 năm), rủi ro điều chỉnh sâu tiếp tục tồn tại khi thị trường đang rung lắc."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz và lợi suất thực USD tiếp tục tăng.",
-      "Biến động premium cao (dao động 10.99%-17.45% trong 30 ngày) có thể gây thua lỗ chênh lệch cho nhà đầu tư ngắn hạn.",
-      "Thiếu tín hiệu địa chính trị cụ thể trong dữ liệu đầu vào, độ tin cậy về xu hướng an toàn bị giới hạn."
+      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực bán thêm trên thị trường quốc tế.",
+      "Biến động cao (VIX 27.29) có thể khiến giá giật lên/xuống thất thường, gây khó khăn cho điểm vào lệnh.",
+      "Premium 15.22% có thể co hẹp nếu giá thế giới phục hồi nhưng giá SJC điều chỉnh chậm."
     ],
     "evidence": [
       {
@@ -26,47 +26,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi giá SJC 7 ngày",
+        "key": "Thay đổi 7 ngày (SJC)",
         "value": -2.93,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực USD 10N (5 ngày)",
-        "value": 3.85,
-        "unit": "% thay đổi",
-        "source": "first_principles_context"
+        "key": "MA7 giá SJC",
+        "value": 160864699,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX (20 ngày)",
-        "value": 31.08,
-        "unit": "% thay đổi",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Giá vàng thế giới",
-        "value": 5019.66,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biến động premium 30 ngày",
-        "value": 17.45,
-        "unit": "% (max-min)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Vị thế percentile 5 năm",
+        "key": "Vị thế Percentile 5 năm",
         "value": 99,
         "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực USD 10N (thay đổi 5d)",
+        "value": 3.85,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX (thay đổi 20d)",
+        "value": 31.08,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC/Thế giới",
+        "value": 15.22,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-15T00:23:27.437Z",
+    "latestTimestamp": "2026-03-15T01:34:23.901Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158478397.53901246,
+    "intlVndPerTael": 158478397.85472816,
     "premiumPct": 15.22,
     "change7dPct": -2.93,
     "change30dPct": -0.2,
@@ -83,7 +83,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-15T00:23:30.475Z",
+    "fetchedAt": "2026-03-15T01:34:28.434Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
