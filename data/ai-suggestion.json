@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T22:10:44.888Z",
+  "generatedAt": "2026-03-16T23:08:28.100Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Dù xung đột địa chính trị Iran-Israel đang hỗ trợ giá vàng, áp lực từ lợi suất thực USD tăng mạnh 6.67% và giá Vàng SJC đang ở vùng cực cao (percentile 98% 5 năm) khiến rủi ro mua đuổi là rất lớn, nhà đầu tư nên chờ đợi hồi điều chỉnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.73% tuần qua) do áp lực từ lợi suất thực USD tăng mạnh, nhưng rủi ro địa chính trị (Iran) và VIX cao (27.19) hạn chế đà giảm. Nên chờ tín hiệu ổn định trước khi vào lệnh vì giá đang ở vùng rất cao (percentile 98% 5 năm).",
     "reasons": [
-      "Giá Vàng SJC 183.1 triệu/lượng đang ở phân vị thứ 98% trong 5 năm qua, cho thấy mức giá hiện tại đã cực kỳ cao so với lịch sử.",
-      "Lợi suất thực Mỹ 10 năm (US Real Yield) tăng mạnh 6.67% trong 20 ngày qua lên mức 1.92%, tạo áp lực bán chốt lên giá vàng thế giới (xu hướng nghịch biến).",
-      "Giá vàng thế giới (XAUUSD) đã giảm 2.4% trong 5 ngày gần nhất, cho thấy động lượng tăng đang suy yếu dù có tin tức địa chính trị.",
-      "VIX ở mức 27.19 (+31.99% trong 20 ngày) phản ánh thị trường lo ngại, nhưng sự lo ngại này chưa đẩy giá vàng tăng vượt trội do áp lực USD."
+      "Lợi suất thực USD 10 năm tăng 6.67% trong 20 ngày qua lên 1.92%, tạo áp lực bán vàng mạnh theo mối quan hệ nghịch biến.",
+      "Giá vàng SJC giảm 3.73% trong 7 ngày qua, phá vỡ MA7 (159.2 triệu VND/lượng) cho thấy động lượng ngắn hạn đã suy yếu.",
+      "VIX ở mức 27.19 (tăng 31.99% trong 20 ngày) và tin tức xung đột Iran cho thấy rủi ro địa chính trị vẫn cao, có thể hỗ trợ giá bất ngờ.",
+      "Premium SJC đang ở 16.02%, cao hơn vùng 12-13% đầu tháng 3/2026, cho thấy nhà đầu tư Việt vẫn chấp nhận mua giá cao."
     ],
     "risks": [
-      "Xung đột Iran-Israel leo thang có thể khiến giá vàng tăng sốc bất chấp kỹ thuật overbought.",
-      "Chính sách tiền tệ từ Fed hoặc các ngân hàng trung ương lớn phản ứng khác biệt với kỳ vọng thị trường.",
-      "Thanh khoản thấp hoặc chênh lệch giá (spread) mở rộng đột ngột tại thị trường vàng vật lý Việt Nam."
+      "Lợi suất thực USD tiếp tục tăng có thể kéo giá vàng thế giới về vùng 4,885 USD/oz như dự báo kỹ thuật.",
+      "Giá SJC ở percentile 98% trong 5 năm (183.1 triệu VND/lượng), rủi ro điều chỉnh sâu nếu thị trường toàn cầu bán tháo.",
+      "Dữ liệu sự kiện từ các nguồn marketpulse/zerohedge có thể chứa nhiễu, cần kiểm chứng thêm về diễn biến Iran."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 98,
+        "key": "sjc_price",
+        "value": 183100000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "change_7d_pct",
+        "value": -3.73,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Real Yield 10Y Change 20d",
+        "key": "us_real_yield_10y",
+        "value": 1.92,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "real_yield_20d_change",
         "value": 6.67,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Gold Spot XAUUSD Change 5d",
-        "value": -2.4,
-        "unit": "%",
+        "key": "vix_level",
+        "value": 27.19,
+        "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index Change 20d",
+        "key": "vix_20d_change",
         "value": 31.99,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "SJC Premium vs World",
-        "value": 15.77,
+        "key": "premium_pct",
+        "value": 16.02,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "US Dollar Index Change 20d",
-        "value": 2.56,
+        "key": "percentile_5y",
+        "value": 98,
         "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "SJC Price Latest",
-        "value": 183100000,
-        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T22:10:20.057Z",
+    "latestTimestamp": "2026-03-16T23:08:09.615Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 158155837.71667498,
-    "premiumPct": 15.77,
-    "change7dPct": -3.53,
-    "change30dPct": -0.57,
+    "intlVndPerTael": 157821676.3441632,
+    "premiumPct": 16.02,
+    "change7dPct": -3.73,
+    "change30dPct": -0.78,
     "volatilityDailyPct": 1.31,
-    "ma7VndPerTael": 159288211,
-    "ma30VndPerTael": 161407545,
+    "ma7VndPerTael": 159240473,
+    "ma30VndPerTael": 161396407,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T22:10:31.262Z",
+    "fetchedAt": "2026-03-16T23:08:14.631Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5010.69,
+        "value": 5003.43,
         "unit": "USD/oz",
-        "date": "2026-03-16",
-        "change1dPct": -0.18,
-        "change5dPct": -2.4,
-        "change20dPct": 0.36,
+        "date": "2026-03-17",
+        "change1dPct": -0.14,
+        "change5dPct": -3.63,
+        "change20dPct": 2.58,
         "relationToGold": "context"
       },
       {
@@ -186,23 +192,25 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-16 | 9news.com.au | US , Israel attack Iran : Three weeks in , there one big winner from the war in Iran : Vladimir Putin",
-      "2026-03-16 | bnnbloomberg.ca | Oil volatility from Iran conflict clouds outlook before U . S . Fed"
+      "2026-03-16 | marketpulse.com | Metals fake - out to the downside ; Opportunity ? – Gold ( XAU / USD ) & Silver ( XAG / USD ) update",
+      "2026-03-16 | ibtimes.com | Maduro Regime Unlawfully Sent Tons Of Gold To Turkey , Iran , Russia Over The Years : Report",
+      "2026-03-16 | investopedia.com | The Battle to Control Hormuz Will Be the  Worst Phase  of the Iran Conflict . Here Why , According to Ray Dalio",
+      "2026-03-16 | mining.com | Gold wavers as high energy prices threaten Fed rate path"
     ],
     "countryActionHeadlines": [
-      "2026-03-16 | 9news.com.au | US , Israel attack Iran : Three weeks in , there one big winner from the war in Iran : Vladimir Putin",
-      "2026-03-16 | bnnbloomberg.ca | Oil volatility from Iran conflict clouds outlook before U . S . Fed",
-      "2026-03-16 | finance.yahoo.com | World Top Central Banks Are About to Confront Fresh Inflation Threat as War Jolts Oil",
-      "2026-03-16 | asia.nikkei.com | Wall St rises on tech strength ; Middle East conflict limits gains",
-      "2026-03-16 | marketscreener.com | Dollar slips as markets eye central bank meetings amid Middle East conflict",
-      "2026-03-16 | mykxlg.com | Falling oil prices send Wall Street toward its best day since the Iran war began"
+      "2026-03-16 | mining.com | Gold wavers as high energy prices threaten Fed rate path",
+      "2026-03-16 | wdio.com | US stocks climb to their best day since the Iran war began after oil prices ease",
+      "2026-03-16 | mesabitribune.com | US stocks climb to their best day since the Iran war began after oil prices ease",
+      "2026-03-16 | zerohedge.com | Gold Becomes America Top Export < !-- -- >",
+      "2026-03-16 | bravenewcoin.com | Gold ( XAUUSD ) Price Prediction : Gold Sellers Eye $4 , 885 Liquidity Zone While GLD Remains in Bullish Uptrend",
+      "2026-03-16 | nagalandpost.com | Rupee falls 10 paise to closeat all - time low against USD"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-16 | finance.yahoo.com | Best gold IRA companies for 2026 : Low fees , trusted names , and expert picks",
-      "2026-03-16 | bnnbloomberg.ca | Oil volatility from Iran conflict clouds outlook before U . S . Fed",
-      "2026-03-16 | bnnbloomberg.ca | Investors warned not to chase commodity surge amid oil shock",
-      "2026-03-16 | cbsnews.com | How to choose a gold IRA company : A consumer checklist",
-      "2026-03-16 | benzinga.com | Trump Urges Other Nations To Join War , Wall Street Rally Cools - BellRing Brands ( NYSE : BRBR )"
+      "2026-03-16 | marketpulse.com | Metals fake - out to the downside ; Opportunity ? – Gold ( XAU / USD ) & Silver ( XAG / USD ) update",
+      "2026-03-16 | investopedia.com | The Battle to Control Hormuz Will Be the  Worst Phase  of the Iran Conflict . Here Why , According to Ray Dalio",
+      "2026-03-16 | mining.com | Gold wavers as high energy prices threaten Fed rate path",
+      "2026-03-16 | bravenewcoin.com | Gold ( XAUUSD ) Price Prediction : Gold Sellers Eye $4 , 885 Liquidity Zone While GLD Remains in Bullish Uptrend",
+      "2026-03-16 | finance.yahoo.com | Best gold IRA companies for 2026 : Low fees , trusted names , and expert picks"
     ]
   }
 }
