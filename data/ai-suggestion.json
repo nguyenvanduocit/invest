@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T14:29:06.007Z",
+  "generatedAt": "2026-03-16T15:25:29.190Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98%) trong bối cảnh lợi suất thực USD tăng mạnh và xung đột Trung Đông chưa đủ để đẩy giá bật lên; nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực chốt lời ngắn hạn, trong khi lợi suất thực USD tăng mạnh tạo áp lực headwind đáng kể; nhà đầu tư nên chờ tín hiệu ổn định quanh MA7 hoặc giảm sâu hơn để tích sản.",
     "reasons": [
-      "Giá SJC 183.1 triệu VND/lượng đang thấp hơn MA7 (160.1 triệu) và giảm -2.39% sau 7 ngày, cho thấy động lượng ngắn hạn yếu.",
-      "Lợi suất thực USD 10 năm tăng mạnh +3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán lên vàng thế giới (xuống 5019 USD/oz).",
-      "VIX ở mức cao 27.19 (+31.99% trong 20 ngày) và tin tức 'War Escalates' hỗ trợ vàng nhưng giá vẫn giảm, tín hiệu phân kỳ cảnh báo rủi ro.",
-      "Premium SJC nới rộng lên 15.67% từ mức thấp nhất 11.1% trong chuỗi 30 ngày, thanh khoản có thể bị ảnh hưởng khi giá thế giới giảm."
+      "Giá SJC giảm 2.72% trong 7 ngày gần nhất về mức 183.1 triệu VND/lượng, cho thấy động lượng tăng đã suy yếu và đang điều chỉnh kỹ thuật.",
+      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực giảm giá đáng kể lên vàng thế giới (đã giảm về 5002 USD/oz).",
+      "VIX ở mức cao 27.19 (+31.99% trong 20 ngày) cho thấy thị trường tài chính còn biến động, chưa phải điểm mua an toàn cho nhà đầu tư cá nhân.",
+      "Premium 16.06% hiện tại cao hơn đáng kể so với vùng thấp nhất 11.1% trong chuỗi 30 ngày, rủi ro co hẹp premium nếu giá thế giới tiếp tục giảm."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể kéo giá vàng thế giới giảm sâu hơn về vùng hỗ trợ kỹ thuật.",
-      "Premium SJC nới rộng đột ngột có thể gây khó khăn khi nhà đầu tư muốn bán lại cho doanh nghiệp.",
-      "Tin tức địa chính trị (Trung Đông) biến động nhanh có thể đảo ngược xu hướng giảm bất cứ lúc nào."
+      "Lợi suất thực USD tiếp tục tăng cao sẽ gây áp lực giảm giá vàng thêm.",
+      "Premium SJC có thể thu hẹp từ mức 16% hiện tại gây thiệt hại cho người mua mới.",
+      "Biến động giá cao (1.34%/ngày) trong bối cảnh VIX cao tăng rủi ro giao dịch ngắn hạn."
     ],
     "evidence": [
       {
@@ -28,12 +28,12 @@
       },
       {
         "key": "Thay đổi 7 ngày SJC",
-        "value": -2.39,
+        "value": -2.72,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực USD 10Y (5d)",
+        "key": "Lợi suất thực US 10Y (5d)",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
@@ -45,35 +45,41 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC hiện tại",
-        "value": 15.67,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
         "key": "Giá vàng thế giới",
-        "value": 5019.18,
+        "value": 5002.36,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Percentile 5 năm",
-        "value": 98,
+        "key": "Premium SJC hiện tại",
+        "value": 16.06,
         "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium thấp nhất 30d",
+        "value": 11.1,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "MA7 SJC",
+        "value": 160067932,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T14:28:40.357Z",
+    "latestTimestamp": "2026-03-16T15:25:01.803Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 158298481.58628705,
-    "premiumPct": 15.67,
-    "change7dPct": -2.39,
-    "change30dPct": -0.48,
-    "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160143707,
-    "ma30VndPerTael": 161444432,
+    "intlVndPerTael": 157768052.3516659,
+    "premiumPct": 16.06,
+    "change7dPct": -2.72,
+    "change30dPct": -0.81,
+    "volatilityDailyPct": 1.34,
+    "ma7VndPerTael": 160067932,
+    "ma30VndPerTael": 161426751,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T14:28:45.890Z",
+    "fetchedAt": "2026-03-16T15:25:09.061Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5016.56,
+        "value": 5001.41,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.07,
-        "change5dPct": -2.29,
-        "change20dPct": 0.48,
+        "change1dPct": -0.37,
+        "change5dPct": -2.58,
+        "change20dPct": 0.18,
         "relationToGold": "context"
       },
       {
@@ -185,25 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-16 | finance.yahoo.com | Morning Minute : Crypto Holds Strong as War Escalates",
-      "2026-03-16 | dailyforex.com | USD / ZAR Analysis 16 / 03"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-16 | economictimes.indiatimes.com | US Stock Market Today | Dow Jones | Nasdaq Live : US stock futures rise as tech stocks gain ; Middle East conflict in focus",
-      "2026-03-16 | zerohedge.com | Who Killed the Dollar – Xi Jinping OR Paul Samuelson ?",
-      "2026-03-16 | cnbcafrica.com | South African rand gains as softer dollar offsets reduced Fed cut hopes",
-      "2026-03-16 | zerohedge.com | Gold Breaks $5K As The  Safe Haven  Narrative Cracks< !-- -- >",
-      "2026-03-16 | timesofoman.com | Gold slips as rate cut optimism wanes amid soaring energy prices",
-      "2026-03-16 | myjoyonline.com | Middle East tensions could threaten Ghana inflation gains – BoG Governor"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-16 | zerohedge.com | Who Killed the Dollar – Xi Jinping OR Paul Samuelson ?",
-      "2026-03-16 | cnbcafrica.com | South African rand gains as softer dollar offsets reduced Fed cut hopes",
-      "2026-03-16 | timesofoman.com | Gold slips as rate cut optimism wanes amid soaring energy prices",
-      "2026-03-16 | myjoyonline.com | Middle East tensions could threaten Ghana inflation gains – BoG Governor",
-      "2026-03-16 | naturalnews.com | The Great Taking Has Begun : Why Your Financial Assets Are Now Trapped in a War Zone – NaturalNews . com",
-      "2026-03-16 | actionforex.com | Gold Price Falls to a Monthly Low"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
