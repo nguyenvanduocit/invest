@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T00:24:20.204Z",
+  "generatedAt": "2026-03-16T01:35:27.088Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh 30 ngày nhưng vẫn ở vùng định giá cao (percentile 98%); áp lực từ lợi suất thực USD tăng và VIX nhảy vọt cho thấy thị trường đang trong giai đoạn bất định cao, chờ đợi quyết định lãi suất Fed sắp tới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với đà giảm 3% trong 7 ngày qua, trong khi lợi suất thực USD tăng mạnh và VIX leo lên mức 27.29 báo hiệu bất ổn thị trường. Nên chờ đợi sự ổn định của giá thế giới quanh vùng hỗ trợ kỹ thuật và sự rõ ràng hơn từ tín hiệu vĩ mô trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC hiện tại 182.6 triệu VND/lượng thấp hơn MA7 (160.1 triệu VND/lượng quy đổi thế giới) và giảm 2.37% sau 7 ngày, cho thấy động lượng ngắn hạn đã suy yếu.",
-      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực giảm lên giá vàng thế giới (xuống 5020 USD/oz).",
-      "VIX tăng vọt 31.08% trong 20 ngày lên 27.29 điểm báo hiệu biến động thị trường cao, nhưng thiếu tin địa chính trị trực tiếp khiến tín hiệu mua避险 chưa đủ rõ ràng.",
-      "Premium 15.33% đang ở mức trung bình so với dao động 30 ngày (11.1%-17.57%), không có tín hiệu bất thường để giao dịch chênh lệch."
+      "Động lượng bán áp đảo trong ngắn hạn: Giá SJC giảm 3% trong 7 ngày qua (từ 187.2 triệu xuống 182.6 triệu VND/lượng), phá vỡ dưới MA7 (160.0 triệu VND/lượng quy đổi thế giới).",
+      "Áp lực vĩ mô tiêu cực từ Mỹ: Lợi suất thực 10 năm (US Real Yield) tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, đồng thời USD Index tăng 1.42%, tạo áp lực giảm giá lên vàng thế giới.",
+      "Biến động thị trường cao (Risk-off): Chỉ số VIX tăng vọt 31.08% trong 20 ngày lên 27.29 điểm, cho thấy sự hoảng loạn thanh khoản có thể khiến vàng bị bán tháo để gỡ vốn thay vì đóng vai trò trú ẩn.",
+      "Premium SJC giãn rộng: Chênh lệch giá SJC so với thế giới tăng từ 13.52% (10/03) lên 16.08% (16/03), cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo sợ thiếu hụt nguồn cung cục bộ."
     ],
     "risks": [
-      "Fed quyết định lãi suất trong tuần tới có thể gây biến động hai chiều mạnh cho giá vàng.",
-      "Dữ liệu vĩ mô (lợi suất, VIX) có độ trễ 3-4 ngày so với giá vàng hiện tại, có thể bỏ sót diễn biến mới nhất.",
-      "Giá SJC ở phân vị 98% (5 năm) cho thấy rủi ro điều chỉnh sâu nếu thị trường tài sản rủi ro hồi phục."
+      "Rủi ro thanh khoản: Nếu VIX tiếp tục tăng cao, đà bán tháo tài sản rủi ro (bao gồm vàng) có thể tiếp tục kéo giá SJC về vùng 180 triệu VND/lượng.",
+      "Cú sốc chính sách tiền tệ: Các phát ngôn từ Fed (Bowman) và dữ liệu lạm phát kỳ vọng tăng 3.06% có thể khiến kỳ vọng cắt giảm lãi suất dời lại, củng cố USD và gây áp lực lên giá vàng.",
+      "Sai lệch dữ liệu vĩ mô: Các chỉ số vĩ mô (USD, Yield) có độ trễ 3-4 ngày so với thời điểm hiện tại, có thể không phản ánh đúng tình hình khẩn cấp mới nhất."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 182600000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change_7d",
-        "value": -2.37,
+        "key": "Giá SJC 7 ngày qua",
+        "value": -3,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 98,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change5d",
+        "key": "Lợi suất thực Mỹ 10 năm (5 ngày)",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
-        "value": 27.29,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change20d",
+        "key": "Chỉ số VIX (20 ngày)",
         "value": 31.08,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "premium_current",
-        "value": 15.33,
+        "key": "Premium SJC hiện tại",
+        "value": 16.08,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold_usd",
-        "value": 5020.07,
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 4989.84,
         "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "MA7 Giá thế giới (quy đổi)",
+        "value": 160002524,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Vị thế percentile 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T00:23:44.076Z",
+    "latestTimestamp": "2026-03-16T01:35:02.248Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158326551.34594885,
-    "premiumPct": 15.33,
-    "change7dPct": -2.37,
-    "change30dPct": -0.46,
-    "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160147717,
-    "ma30VndPerTael": 161445367,
+    "intlVndPerTael": 157310196.5075236,
+    "premiumPct": 16.08,
+    "change7dPct": -3,
+    "change30dPct": -1.1,
+    "volatilityDailyPct": 1.34,
+    "ma7VndPerTael": 160002524,
+    "ma30VndPerTael": 161411489,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T00:24:05.212Z",
+    "fetchedAt": "2026-03-16T01:35:05.632Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5018.38,
+        "value": 4989.84,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.03,
-        "change5dPct": -2.25,
-        "change20dPct": 0.52,
+        "change1dPct": -0.6,
+        "change5dPct": -2.81,
+        "change20dPct": -0.05,
         "relationToGold": "context"
       },
       {
@@ -192,17 +186,7 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [
-      "2026-03-16 | proactiveinvestors.com.au | The Morning Catch - Up : ASX set to fall as oil shock fuels inflation fears",
-      "2026-03-15 | marketscreener.com | Week Ahead for FX , Bonds : Central Bank Decisions in Focus After Jump in Energy Prices",
-      "2026-03-15 | columbian.com | Trump eyes tariff workaround to recover lost $1 . 6 trillion",
-      "2026-03-15 | forbes.com | The Federal Reserve Policy Dilemma And Its Implications For Interest Rate Expectations",
-      "2026-03-15 | seekingalpha.com | Wall Street Brunch : Is That It For Fed Rate Cuts ? ( null : US10Y )",
-      "2026-03-15 | livemint.com | Week Ahead : Wall Street braces for Federal Reserve rate decision , Powell speech , PPI inflation"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-16 | proactiveinvestors.com.au | The Morning Catch - Up : ASX set to fall as oil shock fuels inflation fears",
-      "2026-03-15 | livemint.com | Week Ahead : Wall Street braces for Federal Reserve rate decision , Powell speech , PPI inflation"
-    ]
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
