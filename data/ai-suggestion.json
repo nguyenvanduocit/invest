@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T10:24:03.000Z",
+  "generatedAt": "2026-03-16T11:19:59.165Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.14%/7 ngày) từ vùng đỉnh lịch sử (percentile 98% 5 năm) trong bối cảnh lợi suất thực USD tăng mạnh gây áp lực; tuy nhiên, rủi ro địa chính trị từ chiến tranh Iran và VIX tăng cao (27.29) tạo sàn hỗ trợ, nên chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98) trong bối cảnh lợi suất thực USD tăng mạnh gây áp lực; tuy nhiên, rủi ro địa chính trị từ chiến tranh Iran và VIX cao (27.29) tạo sàn hỗ trợ, khuyến nghị chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 183.1 triệu/lượng đang giao dịch cao hơn đáng kể so với MA7 (159.97 triệu/lượng) và MA30 (161.4 triệu/lượng) theo market_snapshot, cho thấy thị trường đang ở vùng quá mua kỹ thuật ngắn hạn.",
-      "Áp lực bán từ vĩ mô: Lợi suất thực Mỹ 10 năm tăng 3.85% trong 5 ngày và 1.61% trong 20 ngày (lên 1.89%), cộng với VIX tăng 31.08% trong 20 ngày (lên 27.29) cho thấy dòng tiền đang tái phân bổ trong bất ổn.",
-      "Premium 16.57% hiện tại cao hơn đáng kể so với mức 12-13% đầu chuỗi dữ liệu 30 ngày (ngày 20-27/02), gợi ý rủi ro co hẹp premium nếu giá thế giới tiếp tục giảm.",
-      "Giá thế giới giảm -2.99% trong 5 ngày xuống 4980.66 USD/oz, kết hợp với dầu mỏ trên 100 USD và tin tức 'Iran war rages' tạo tín hiệu trái chiều hỗn loạn."
+      "Giá SJC 183.1 triệu VND/lượng đang giao dịch dưới MA7 (160.1 triệu VND/lượng) và giảm 2.64% sau 7 ngày, cho thấy động lượng ngắn hạn yếu đi.",
+      "Lợi suất thực Mỹ 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực giảm lên giá vàng thế giới (đã giảm về 5006.2 USD/oz).",
+      "VIX tăng vọt 31.08% trong 20 ngày lên 27.29 điểm kết hợp tin tức 'chiến tranh Iran' và dầu thô trên 100 USD gây lo ngại rủi ro hệ thống, có thể kích hoạt đợt bán tháo tài sản hoặc tìm kiếm an toàn thất thường.",
+      "Giá đang ở phân vị 98% (5 năm), rủi ro mua đỉnh là rất lớn khi thị trường đang trong giai đoạn điều chỉnh."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới phá vỡ hỗ trợ 4900-5000 USD/oz và premium co về mức 13-14%.",
-      "Chiến tranh Iran có thể đẩy giá dầu và vàng tăng đột biến ngắn hạn, gây trượt stop-loss cho vị thế bán.",
-      "Dữ liệu vĩ mô thiếu cập nhật (USD Index ngày 06/03, Fed Funds ngày 12/03) có thể không phản ánh đầy đủ diễn biến mới nhất."
+      "Rủi ro biến động cực đoan từ địa chính trị (chiến tranh Iran) có thể khiến giá giật ngược bất ngờ.",
+      "Lợi suất thực USD tiếp tục tăng cao sẽ làm giảm hấp dẫn của vàng.",
+      "Thanh khoản thấp hoặc gián đoạn thông tin vĩ mô (first-principles context không healthy) có thể dẫn đến quyết định thiếu chính xác."
     ],
     "evidence": [
       {
-        "key": "sjc_price_vs_ma7",
-        "value": 14.46,
-        "unit": "% above MA7",
+        "key": "SJC Spot Price",
+        "value": 183100000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "change7d_pct",
-        "value": -3.14,
+        "key": "MA7 SJC",
+        "value": 160085211,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "SJC Change 7d",
+        "value": -2.64,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "percentile_5y",
-        "value": 98,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y_change5d",
+        "key": "US Real Yield 10Y Change 5d",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
+        "key": "VIX Index",
         "value": 27.29,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_change20d",
-        "value": 31.08,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "premium_current_vs_early",
-        "value": 16.57,
-        "unit": "%",
+        "key": "Gold Spot Price",
+        "value": 5006.2,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "gold_spot_change5d",
-        "value": -2.99,
+        "key": "5-Year Price Percentile",
+        "value": 98,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T10:23:05.709Z",
+    "latestTimestamp": "2026-03-16T11:19:21.300Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 157077797.2782793,
-    "premiumPct": 16.57,
-    "change7dPct": -3.14,
-    "change30dPct": -1.24,
-    "volatilityDailyPct": 1.34,
-    "ma7VndPerTael": 159969324,
-    "ma30VndPerTael": 161403742,
+    "intlVndPerTael": 157889004.84859392,
+    "premiumPct": 15.97,
+    "change7dPct": -2.64,
+    "change30dPct": -0.73,
+    "volatilityDailyPct": 1.33,
+    "ma7VndPerTael": 160085211,
+    "ma30VndPerTael": 161430783,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T10:23:11.680Z",
+    "fetchedAt": "2026-03-16T11:19:27.963Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4980.66,
+        "value": 5008.37,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.78,
-        "change5dPct": -2.99,
-        "change20dPct": -0.24,
+        "change1dPct": -0.23,
+        "change5dPct": -2.45,
+        "change20dPct": 0.32,
         "relationToGold": "context"
       },
       {
@@ -192,17 +186,23 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-16 | miningmx.com | Banks failing to screen for illegal mining risks"
+      "2026-03-16 | economictimes.indiatimes.com | Sensex ends 3 - day losing streak , settles 939 pts higher , Nifty above 23 , 400",
+      "2026-03-16 | lobotero.com | Is This The Trigger ?",
+      "2026-03-16 | goulburnpost.com.au | Philippines rejects China claim over disputed atoll",
+      "2026-03-16 | metro.co.uk | Is it safe to travel to Dubai ? Latest united kingdom FCO advice after drone strike near airport",
+      "2026-03-16 | santabanta.com | SantaBanta  A Hong Kong Holiday And A Massive Announcement",
+      "2026-03-16 | coinspeaker.com | Bitcoin Surges Past $73 , 000 : Records $586 Million In Weekly ETF Inflows"
     ],
     "countryActionHeadlines": [
+      "2026-03-16 | pwmnet.com | War costs are rewiring bond markets",
+      "2026-03-16 | marketscreener.com | Wall St futures rise as tech stocks gain ; Middle East conflict in focus",
       "2026-03-16 | bransontrilakesnews.com | Oil rises further above $100 , stocks mixed as Iran war rages",
       "2026-03-16 | suncommercial.com | Oil rises further above $100 , most Asian stocks fall as Iran war rages",
       "2026-03-16 | theheraldghana.com | GOLDBOD three contracts valued at GH¢15 million spark procurement controversy",
-      "2026-03-16 | econotimes.com | Asian Currencies Hold Steady Amid Iran Conflict and Fed Uncertainty",
-      "2026-03-16 | econotimes.com | RBA Set to Hike Rates Again Amid Inflation Surge and Global Uncertainty",
-      "2026-03-16 | fairfieldsuntimes.com | Oil rises further above $100 , stocks mixed as Iran war rages"
+      "2026-03-16 | econotimes.com | Asian Currencies Hold Steady Amid Iran Conflict and Fed Uncertainty"
     ],
     "dollarYieldHeadlines": [
+      "2026-03-16 | rttnews.com | India Wholesale Price Inflation Accelerates",
       "2026-03-16 | thenational.com.pg | The Pacific and Iran war | The National",
       "2026-03-16 | rttnews.com | European Shares Subdued In Lackluster Trade ; EU Summit On Iran War Eyed"
     ]
