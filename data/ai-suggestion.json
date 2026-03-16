@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T18:21:04.632Z",
+  "generatedAt": "2026-03-16T19:24:08.879Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm ngắn hạn (-2.8% trong 7 ngày) do áp lực từ lợi suất thực USD tăng mạnh và rủi ro địa chính trị đã phần nào được định giá. Mặc dù xu hướng dài hạn vẫn tích cực nhờ VIX cao và lạm phát kỳ vọng tăng, nhưng đỉnh giá 5 năm (percentile 98%) và premium giãn rộng khuyến nghị nhà đầu tư chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98) trong bối cảnh lợi suất thực USD tăng mạnh tạo áp lực; tuy nhiên, rủi ro địa chính trị từ Iran và VIX cao (27.19) hạn chế đà bán, nên nhà đầu tư chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Áp lực giảm giá ngắn hạn: Giá SJC giảm 2.8% trong 7 ngày gần nhất, về mức 183.1 triệu VND/lượng, dưới đỉnh 190.9 triệu VND/lượng đầu tháng 3.",
-      "Đồng USD và Lợi suất thực tăng: US Real Yield 10Y tăng mạnh 3.85% trong 5 ngày (lên 1.89%) và USD Index tăng 1.42% trong 5 ngày, tạo áp lực nghịch biến lên giá vàng thế giới.",
-      "Biến động và Rủi ro địa chính trị: VIX ở mức cao 27.19 (tăng 31.99% trong 20 ngày) cùng tin tức về 'Iran war' cho thấy rủi ro thị trường vẫn lớn, có thể hỗ trợ giá vàng không giảm sâu.",
-      "Premium giãn rộng: Chênh lệch giá SJC so với thế giới tăng từ 12.22% (23/02) lên 16.15% (16/03), phản ánh tâm lý thận trọng của nhà đầu tư Việt Nam nhưng cũng làm giảm biên an toàn khi mua đuổi."
+      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực nghịch biến lên giá vàng thế giới (xuống 5013 USD/oz).",
+      "Giá SJC 183.1 triệu đang cao hơn MA7 (160.1 triệu) và MA30 (161.4 triệu) khoảng 14%, cho thấy rủi ro điều chỉnh kỹ thuật ngắn hạn vẫn còn.",
+      "Premium 15.8% đang ở mức cao hơn vùng thấp nhất 30 ngày (11.1%), cho thấy nhà đầu tư Việt vẫn định giá bảo hiểm khá cao amid biến động.",
+      "VIX ở 27.19 (+31.99% trong 20 ngày) và tin tức 'Iran war' cho thấy rủi ro thị trường chưa hết, không nên bán tháo lúc này."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao hơn có thể khiến giá vàng thế giới giảm sâu hơn, kéo theo điều chỉnh giá SJC.",
-      "Giá SJC đang ở phân vị 98% trong 5 năm (183.1 triệu VND/lượng), rủi ro điều chỉnh về mặt giá trị vẫn đáng kể.",
-      "Dữ liệu vĩ mô (first_principles) có độ trễ 3-4 ngày so với thời điểm hiện tại, có thể bỏ sót các biến động mới nhất của Fed/Thị trường."
+      "Lợi suất thực USD tiếp tục tăng có thể kéo giá vàng thế giới giảm sâu hơn, ảnh hưởng giá SJC.",
+      "Premium SJC có thể co hẹp về mức 12-13% nếu giá thế giới ổn định, gây mất giá tạm thời cho người mua cao.",
+      "Thiếu dữ liệu chính sách Fed mới nhất (sau 12/03) và headlines có nhiễu, giảm độ tin cậy dự báo."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price",
         "value": 183100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -2.8,
+        "key": "intl_gold",
+        "value": 5013.43,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "premium_pct",
+        "value": 15.8,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Phân vị giá 5 năm",
+        "key": "us_real_yield_10y_change5d",
+        "value": 3.85,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_level",
+        "value": 27.19,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "vix_change20d",
+        "value": 31.99,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "percentile_5y",
         "value": 98,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 16.15,
+        "key": "sjc_vs_ma30",
+        "value": 13.4,
         "unit": "%",
         "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y (Biến động 5 ngày)",
-        "value": 3.85,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "VIX Index (Biến động 20 ngày)",
-        "value": 31.99,
-        "unit": "%",
-        "source": "macro_context"
-      },
-      {
-        "key": "Giá thế giới (XAU/USD)",
-        "value": 4997.89,
-        "unit": "USD/oz",
-        "source": "macro_context"
-      },
-      {
-        "key": "Giá SJC đỉnh 30 ngày",
-        "value": 190900000,
-        "unit": "VND/lượng",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T18:20:37.133Z",
+    "latestTimestamp": "2026-03-16T19:23:47.618Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 157638818.1071288,
-    "premiumPct": 16.15,
-    "change7dPct": -2.8,
-    "change30dPct": -0.89,
-    "volatilityDailyPct": 1.34,
-    "ma7VndPerTael": 160049470,
-    "ma30VndPerTael": 161422443,
+    "intlVndPerTael": 158117154.5532072,
+    "premiumPct": 15.8,
+    "change7dPct": -2.5,
+    "change30dPct": -0.59,
+    "volatilityDailyPct": 1.33,
+    "ma7VndPerTael": 160117803,
+    "ma30VndPerTael": 161438387,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T18:20:45.533Z",
+    "fetchedAt": "2026-03-16T19:23:56.829Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4997.89,
+        "value": 5011.45,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.44,
-        "change5dPct": -2.65,
-        "change20dPct": 0.11,
+        "change1dPct": -0.17,
+        "change5dPct": -2.39,
+        "change20dPct": 0.38,
         "relationToGold": "context"
       },
       {
@@ -192,23 +192,21 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-16 | jdsupra.com | President Trump Issues a  Cyber Strategy for America  and an Executive Order on Combating Cyber - Enabled Crime | Wilson Sonsini Goodrich & Rosati",
-      "2026-03-16 | capitalxtra.com | Who is Drake ex Baby M ? Inside his lyrics about her",
-      "2026-03-16 | knau.org | Team united states dominated the Paralympics on both ice and snow . Check out the highlights",
-      "2026-03-16 | knpr.org | Team united states dominated the Paralympics on both ice and snow . Check out the highlights",
-      "2026-03-16 | jdsupra.com | Trump Administration Commits to Hemispheric Security Cooperation | Brownstein Hyatt Farber Schreck",
-      "2026-03-16 | marketpulse.com | RBA Preview : Why a 25bps hike to 4 . 1 % is the most likely outcome"
+      "2026-03-16 | banklesstimes.com | Circle Stock Price Analysis : CRCL Outlook as USYC , USDC Growth Jumps",
+      "2026-03-16 | interest.co.nz | Breakfast briefing : Markets discount war risks"
     ],
     "countryActionHeadlines": [
-      "2026-03-16 | timesofindia.indiatimes.com | US stock markets today ( March 16 , 2026 ): S & P 500 heads for best day in weeks since Iran war began ; relief rally eases inflation worries",
-      "2026-03-16 | dailyadvance.com | Falling oil prices send Wall Street toward its best day since the Iran war began",
-      "2026-03-16 | woonsocketcall.com | Falling oil prices send Wall Street toward its best day since the Iran war began",
-      "2026-03-16 | miamitimesonline.com | Trump probe of Fed Chair Powell meant to harass , judge says while denying subpoenas",
-      "2026-03-16 | economictimes.indiatimes.com | Bitcoin BTC USD price vs gold safe haven : Iran war shock : The asset beating gold and stocks might surprise you"
+      "2026-03-16 | yumasun.com | Falling oil prices send Wall Street toward its best day since the Iran war began",
+      "2026-03-16 | goskagit.com | Falling oil prices send Wall Street toward its best day since the Iran war began",
+      "2026-03-16 | interest.co.nz | Breakfast briefing : Markets discount war risks",
+      "2026-03-16 | markets.financialcontent.com | FinancialContent - The North - South Divide : Canada Inflation Hits Nine - Month Low as U . S . Price Pressures Persist",
+      "2026-03-16 | independent.co.uk | Oil prices send Wall Street toward best day since Iran war began",
+      "2026-03-16 | cbsnews.com | $5 , 000 high - yield savings account vs . $5 , 000 money market account : Which will be more profitable in 2026 ?"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-16 | economictimes.indiatimes.com | Bitcoin BTC USD price vs gold safe haven : Iran war shock : The asset beating gold and stocks might surprise you",
-      "2026-03-16 | fool.com | Can the SPDR Gold ETF Keep Climbing From Here ?"
+      "2026-03-16 | interest.co.nz | Breakfast briefing : Markets discount war risks",
+      "2026-03-16 | markets.financialcontent.com | FinancialContent - Fed on High Alert : Interest Rates Expected to Hold Steady Amid Middle East Conflict and Global Energy Shocks",
+      "2026-03-16 | bullionvault.com | Gold Falls Through $5000 Even as War Spikes Stagflation Fears"
     ]
   }
 }
