@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T13:33:01.810Z",
+  "generatedAt": "2026-03-16T14:29:06.007Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực từ lợi suất thực USD tăng mạnh, nhưng rủi ro thị trường (VIX 27.29) và đà tăng dài hạn vẫn hỗ trợ. Nên chờ xác nhận vùng hỗ trợ kỹ thuật quanh MA7 (160.1 triệu VND/lượng) trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98%) trong bối cảnh lợi suất thực USD tăng mạnh và xung đột Trung Đông chưa đủ để đẩy giá bật lên; nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Áp lực bán từ vĩ mô: Lợi suất thực Mỹ 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực nghịch biến lên giá vàng thế giới.",
-      "Động lượng kỹ thuật suy yếu: Giá thế giới (5021.85 USD/oz) đã giảm 2.2% trong 5 ngày và đang giao dịch dưới đỉnh vùng 5330 USD/oz đầu tháng 3.",
-      "Biến động premium cao: Chênh lệch giá SJC dao động từ 11.1% đến 16.72% trong 30 ngày qua, hiện ở 15.61%, cho thấy thanh khoản thị trường nội địa không ổn định.",
-      "Rủi ro thị trường tăng: VIX tăng 31.08% trong 20 ngày lên mức 27.29 chỉ báo sự bất ổn, có thể hỗ trợ vàng nhưng cũng tăng rủi ro biến động ngắn hạn."
+      "Giá SJC 183.1 triệu VND/lượng đang thấp hơn MA7 (160.1 triệu) và giảm -2.39% sau 7 ngày, cho thấy động lượng ngắn hạn yếu.",
+      "Lợi suất thực USD 10 năm tăng mạnh +3.85% trong 5 ngày lên mức 1.89%, tạo áp lực bán lên vàng thế giới (xuống 5019 USD/oz).",
+      "VIX ở mức cao 27.19 (+31.99% trong 20 ngày) và tin tức 'War Escalates' hỗ trợ vàng nhưng giá vẫn giảm, tín hiệu phân kỳ cảnh báo rủi ro.",
+      "Premium SJC nới rộng lên 15.67% từ mức thấp nhất 11.1% trong chuỗi 30 ngày, thanh khoản có thể bị ảnh hưởng khi giá thế giới giảm."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao hơn có thể gây áp lực bán thêm kéo giá vàng thế giới giảm sâu.",
-      "Premium SJC co giãn mạnh (biên độ ~5.6% trong 30 ngày) làm tăng rủi ro giao dịch chênh lệch giá cho nhà đầu tư nội địa.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể trong input khiến độ tin cậy về đà tăng giá trị trú ẩn bị giới hạn."
+      "Lợi suất thực USD tiếp tục tăng có thể kéo giá vàng thế giới giảm sâu hơn về vùng hỗ trợ kỹ thuật.",
+      "Premium SJC nới rộng đột ngột có thể gây khó khăn khi nhà đầu tư muốn bán lại cho doanh nghiệp.",
+      "Tin tức địa chính trị (Trung Đông) biến động nhanh có thể đảo ngược xu hướng giảm bất cứ lúc nào."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 183100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới quy đổi",
-        "value": 158382492,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 15.61,
+        "key": "Thay đổi 7 ngày SJC",
+        "value": -2.39,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (Biến động 5 ngày)",
+        "key": "Lợi suất thực USD 10Y (5d)",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index (Biến động 20 ngày)",
-        "value": 31.08,
-        "unit": "%",
+        "key": "VIX Index",
+        "value": 27.19,
+        "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "MA7 Giá thế giới quy đổi",
-        "value": 160155709,
-        "unit": "VND/lượng",
+        "key": "Premium SJC hiện tại",
+        "value": 15.67,
+        "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biên độ Premium 30 ngày (Thấp-Cao)",
-        "value": 5.62,
-        "unit": "%",
+        "key": "Giá vàng thế giới",
+        "value": 5019.18,
+        "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Giá thế giới XAUUSD (Biến động 5 ngày)",
-        "value": -2.2,
+        "key": "Percentile 5 năm",
+        "value": 98,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T13:32:16.493Z",
+    "latestTimestamp": "2026-03-16T14:28:40.357Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 158382492.17145336,
-    "premiumPct": 15.61,
-    "change7dPct": -2.34,
-    "change30dPct": -0.42,
+    "intlVndPerTael": 158298481.58628705,
+    "premiumPct": 15.67,
+    "change7dPct": -2.39,
+    "change30dPct": -0.48,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160155709,
-    "ma30VndPerTael": 161447232,
+    "ma7VndPerTael": 160143707,
+    "ma30VndPerTael": 161444432,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T13:32:19.459Z",
+    "fetchedAt": "2026-03-16T14:28:45.890Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5021.22,
+        "value": 5016.56,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": 0.03,
-        "change5dPct": -2.2,
-        "change20dPct": 0.58,
+        "change1dPct": -0.07,
+        "change5dPct": -2.29,
+        "change20dPct": 0.48,
         "relationToGold": "context"
       },
       {
@@ -174,12 +168,12 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 27.29,
+        "value": 27.19,
         "unit": "index",
-        "date": "2026-03-12",
-        "change1dPct": 12.63,
-        "change5dPct": 14.91,
-        "change20dPct": 31.08,
+        "date": "2026-03-13",
+        "change1dPct": -0.37,
+        "change5dPct": -7.8,
+        "change20dPct": 31.99,
         "relationToGold": "direct"
       }
     ],
@@ -191,8 +185,25 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-16 | finance.yahoo.com | Morning Minute : Crypto Holds Strong as War Escalates",
+      "2026-03-16 | dailyforex.com | USD / ZAR Analysis 16 / 03"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-16 | economictimes.indiatimes.com | US Stock Market Today | Dow Jones | Nasdaq Live : US stock futures rise as tech stocks gain ; Middle East conflict in focus",
+      "2026-03-16 | zerohedge.com | Who Killed the Dollar – Xi Jinping OR Paul Samuelson ?",
+      "2026-03-16 | cnbcafrica.com | South African rand gains as softer dollar offsets reduced Fed cut hopes",
+      "2026-03-16 | zerohedge.com | Gold Breaks $5K As The  Safe Haven  Narrative Cracks< !-- -- >",
+      "2026-03-16 | timesofoman.com | Gold slips as rate cut optimism wanes amid soaring energy prices",
+      "2026-03-16 | myjoyonline.com | Middle East tensions could threaten Ghana inflation gains – BoG Governor"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-16 | zerohedge.com | Who Killed the Dollar – Xi Jinping OR Paul Samuelson ?",
+      "2026-03-16 | cnbcafrica.com | South African rand gains as softer dollar offsets reduced Fed cut hopes",
+      "2026-03-16 | timesofoman.com | Gold slips as rate cut optimism wanes amid soaring energy prices",
+      "2026-03-16 | myjoyonline.com | Middle East tensions could threaten Ghana inflation gains – BoG Governor",
+      "2026-03-16 | naturalnews.com | The Great Taking Has Begun : Why Your Financial Assets Are Now Trapped in a War Zone – NaturalNews . com",
+      "2026-03-16 | actionforex.com | Gold Price Falls to a Monthly Low"
+    ]
   }
 }
