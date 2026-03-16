@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T19:24:08.879Z",
+  "generatedAt": "2026-03-16T20:11:29.824Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98) trong bối cảnh lợi suất thực USD tăng mạnh tạo áp lực; tuy nhiên, rủi ro địa chính trị từ Iran và VIX cao (27.19) hạn chế đà bán, nên nhà đầu tư chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (-3.43% trong 7 ngày) trong bối cảnh lợi suất thực USD tăng mạnh tạo áp lực bán. Tuy nhiên, vùng hỗ trợ kỹ thuật quan trọng và mức premium bình thường hóa gợi ý không nên bán tháo mà chờ tín hiệu ổn định.",
     "reasons": [
-      "Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, tạo áp lực nghịch biến lên giá vàng thế giới (xuống 5013 USD/oz).",
-      "Giá SJC 183.1 triệu đang cao hơn MA7 (160.1 triệu) và MA30 (161.4 triệu) khoảng 14%, cho thấy rủi ro điều chỉnh kỹ thuật ngắn hạn vẫn còn.",
-      "Premium 15.8% đang ở mức cao hơn vùng thấp nhất 30 ngày (11.1%), cho thấy nhà đầu tư Việt vẫn định giá bảo hiểm khá cao amid biến động.",
-      "VIX ở 27.19 (+31.99% trong 20 ngày) và tin tức 'Iran war' cho thấy rủi ro thị trường chưa hết, không nên bán tháo lúc này."
+      "Áp lực bán vĩ mô: Lợi suất thực Mỹ 10 năm tăng mạnh +3.85% trong 5 ngày và +1.61% trong 20 ngày (lên mức 1.89%), tạo áp lực giảm lên giá vàng thế giới.",
+      "Động lượng kỹ thuật yếu: Giá thế giới hiện tại 5019.56 USD/oz thấp hơn đáng kể so với đỉnh 5330.95 USD/oz đầu tháng 3, giảm khoảng -5.8% tính theo USD.",
+      "Thanh khoản rủi ro: VIX ở mức cao 27.19 (tăng +31.99% trong 20 ngày) cho thấy thị trường tài chính căng thẳng, có thể gây ra đợt bán tài sản bao gồm vàng để gỡ vốn.",
+      "Premium bình thường: Mức chênh lệch 15.66% nằm trong biên độ dao động 11-17% của 30 ngày qua, không có dấu hiệu bất thường đòi hỏi hành động gấp."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể kéo giá vàng thế giới giảm sâu hơn, ảnh hưởng giá SJC.",
-      "Premium SJC có thể co hẹp về mức 12-13% nếu giá thế giới ổn định, gây mất giá tạm thời cho người mua cao.",
-      "Thiếu dữ liệu chính sách Fed mới nhất (sau 12/03) và headlines có nhiễu, giảm độ tin cậy dự báo."
+      "Rủi ro điều chỉnh tiếp nếu lợi suất thực Mỹ tiếp tục tăng vọt.",
+      "Sự kiện chính sách từ Fed (phát biểu ngày 12/03) có thể gây biến động bất ngờ.",
+      "Dữ liệu vĩ mô không đầy đủ (healthy: false) làm giảm độ tin cậy của mô hình dự báo."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá vàng SJC hiện tại",
         "value": 183100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "intl_gold",
-        "value": 5013.43,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_pct",
-        "value": 15.8,
+        "key": "Biến động 7 ngày",
+        "value": -3.43,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_10y_change5d",
+        "key": "Lợi suất thực Mỹ 10N (5 ngày)",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
-        "value": 27.19,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_change20d",
+        "key": "VIX (20 ngày)",
         "value": 31.99,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "percentile_5y",
-        "value": 98,
-        "unit": "percentile",
-        "source": "market_snapshot"
+        "key": "Giá thế giới đỉnh tháng 3",
+        "value": 5330.95,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "sjc_vs_ma30",
-        "value": 13.4,
+        "key": "Giá thế giới hiện tại",
+        "value": 5019.56,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium trung bình 30 ngày",
+        "value": 13.95,
         "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Vị thế phân vị 5 năm",
+        "value": 98,
+        "unit": "percentile",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T19:23:47.618Z",
+    "latestTimestamp": "2026-03-16T20:11:08.023Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 158117154.5532072,
-    "premiumPct": 15.8,
-    "change7dPct": -2.5,
-    "change30dPct": -0.59,
-    "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160117803,
-    "ma30VndPerTael": 161438387,
+    "intlVndPerTael": 158310514.86243156,
+    "premiumPct": 15.66,
+    "change7dPct": -3.43,
+    "change30dPct": -0.47,
+    "volatilityDailyPct": 1.31,
+    "ma7VndPerTael": 159310308,
+    "ma30VndPerTael": 161412701,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T19:23:56.829Z",
+    "fetchedAt": "2026-03-16T20:11:10.987Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5011.45,
+        "value": 5020.4,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.17,
-        "change5dPct": -2.39,
-        "change20dPct": 0.38,
+        "change1dPct": 0.01,
+        "change5dPct": -2.21,
+        "change20dPct": 0.56,
         "relationToGold": "context"
       },
       {
@@ -191,22 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-16 | banklesstimes.com | Circle Stock Price Analysis : CRCL Outlook as USYC , USDC Growth Jumps",
-      "2026-03-16 | interest.co.nz | Breakfast briefing : Markets discount war risks"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-16 | yumasun.com | Falling oil prices send Wall Street toward its best day since the Iran war began",
-      "2026-03-16 | goskagit.com | Falling oil prices send Wall Street toward its best day since the Iran war began",
-      "2026-03-16 | interest.co.nz | Breakfast briefing : Markets discount war risks",
-      "2026-03-16 | markets.financialcontent.com | FinancialContent - The North - South Divide : Canada Inflation Hits Nine - Month Low as U . S . Price Pressures Persist",
-      "2026-03-16 | independent.co.uk | Oil prices send Wall Street toward best day since Iran war began",
-      "2026-03-16 | cbsnews.com | $5 , 000 high - yield savings account vs . $5 , 000 money market account : Which will be more profitable in 2026 ?"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-16 | interest.co.nz | Breakfast briefing : Markets discount war risks",
-      "2026-03-16 | markets.financialcontent.com | FinancialContent - Fed on High Alert : Interest Rates Expected to Hold Steady Amid Middle East Conflict and Global Energy Shocks",
-      "2026-03-16 | bullionvault.com | Gold Falls Through $5000 Even as War Spikes Stagflation Fears"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
