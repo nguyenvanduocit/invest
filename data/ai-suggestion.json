@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T21:13:25.513Z",
+  "generatedAt": "2026-03-16T22:10:44.888Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực từ lợi suất thực USD tăng mạnh, nhưng đệm premium 15.96% vẫn an toàn trong chuỗi 30 ngày; nhà đầu tư nên chờ tín hiệu ổn định thay vì đuổi đỉnh hay bán tháo.",
+    "thesis": "Dù xung đột địa chính trị Iran-Israel đang hỗ trợ giá vàng, áp lực từ lợi suất thực USD tăng mạnh 6.67% và giá Vàng SJC đang ở vùng cực cao (percentile 98% 5 năm) khiến rủi ro mua đuổi là rất lớn, nhà đầu tư nên chờ đợi hồi điều chỉnh.",
     "reasons": [
-      "Lợi suất thực USD 10Y tăng mạnh +6.67% trong 20 ngày (lên 1.92%) tạo áp lực nghịch biến lên giá vàng thế giới, kéo XAUUSD giảm -2.48% trong 5 ngày gần nhất.",
-      "Giá SJC 183.1 triệu VND/lượng đang thấp hơn MA7 (159.25 triệu - lưu ý dữ liệu MA có thể bao gồm quy đổi thế giới), phản ánh điều chỉnh ngắn hạn sau đỉnh 190.9 triệu đầu tháng 3.",
-      "Premium 15.96% nằm trong vùng an toàn của chuỗi 30 ngày (dao động 11.1%-17.57%), không có dấu hiệu bong bóng cực đoan hay bất thường thanh khoản.",
-      "VIX ở mức 27.19 (+31.99% trong 20 ngày) cho thấy thị trường vẫn căng thẳng, vàng giữ vai trờ trú ẩn nhưng thanh khoản có thể biến động mạnh."
+      "Giá Vàng SJC 183.1 triệu/lượng đang ở phân vị thứ 98% trong 5 năm qua, cho thấy mức giá hiện tại đã cực kỳ cao so với lịch sử.",
+      "Lợi suất thực Mỹ 10 năm (US Real Yield) tăng mạnh 6.67% trong 20 ngày qua lên mức 1.92%, tạo áp lực bán chốt lên giá vàng thế giới (xu hướng nghịch biến).",
+      "Giá vàng thế giới (XAUUSD) đã giảm 2.4% trong 5 ngày gần nhất, cho thấy động lượng tăng đang suy yếu dù có tin tức địa chính trị.",
+      "VIX ở mức 27.19 (+31.99% trong 20 ngày) phản ánh thị trường lo ngại, nhưng sự lo ngại này chưa đẩy giá vàng tăng vượt trội do áp lực USD."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao hơn 2% có thể gây áp lực bán thêm lên giá vàng thế giới.",
-      "Dữ liệu MA7/MA30 trong snapshot có sự chênh lệch đơn vị lớn với giá SJC thực tế, cần thận trọng khi diễn giải xu hướng kỹ thuật.",
-      "Thiếu tín hiệu địa chính trị rõ ràng trong 7 ngày qua, rủi ro biến động giảm có thể làm giảm động lực mua vào."
+      "Xung đột Iran-Israel leo thang có thể khiến giá vàng tăng sốc bất chấp kỹ thuật overbought.",
+      "Chính sách tiền tệ từ Fed hoặc các ngân hàng trung ương lớn phản ứng khác biệt với kỳ vọng thị trường.",
+      "Thanh khoản thấp hoặc chênh lệch giá (spread) mở rộng đột ngột tại thị trường vàng vật lý Việt Nam."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 183100000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 15.96,
+        "key": "SJC Price Percentile 5Y",
+        "value": 98,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày SJC",
-        "value": -3.68,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực USD 10Y",
-        "value": 1.92,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Thay đổi lợi suất thực 20 ngày",
+        "key": "US Real Yield 10Y Change 20d",
         "value": 6.67,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới XAUUSD",
-        "value": 5006.4,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Thay đổi XAUUSD 5 ngày",
-        "value": -2.48,
+        "key": "Gold Spot XAUUSD Change 5d",
+        "value": -2.4,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số VIX",
-        "value": 27.19,
-        "unit": "index",
+        "key": "VIX Index Change 20d",
+        "value": 31.99,
+        "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Premium vs World",
+        "value": 15.77,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "US Dollar Index Change 20d",
+        "value": 2.56,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "SJC Price Latest",
+        "value": 183100000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T21:13:05.721Z",
+    "latestTimestamp": "2026-03-16T22:10:20.057Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 157900462.85882425,
-    "premiumPct": 15.96,
-    "change7dPct": -3.68,
-    "change30dPct": -0.73,
+    "intlVndPerTael": 158155837.71667498,
+    "premiumPct": 15.77,
+    "change7dPct": -3.53,
+    "change30dPct": -0.57,
     "volatilityDailyPct": 1.31,
-    "ma7VndPerTael": 159251729,
-    "ma30VndPerTael": 161399033,
+    "ma7VndPerTael": 159288211,
+    "ma30VndPerTael": 161407545,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T21:13:08.843Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-16T22:10:31.262Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5006.4,
+        "value": 5010.69,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.27,
-        "change5dPct": -2.48,
-        "change20dPct": 0.28,
+        "change1dPct": -0.18,
+        "change5dPct": -2.4,
+        "change20dPct": 0.36,
         "relationToGold": "context"
       },
       {
@@ -191,8 +185,24 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-16 | 9news.com.au | US , Israel attack Iran : Three weeks in , there one big winner from the war in Iran : Vladimir Putin",
+      "2026-03-16 | bnnbloomberg.ca | Oil volatility from Iran conflict clouds outlook before U . S . Fed"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-16 | 9news.com.au | US , Israel attack Iran : Three weeks in , there one big winner from the war in Iran : Vladimir Putin",
+      "2026-03-16 | bnnbloomberg.ca | Oil volatility from Iran conflict clouds outlook before U . S . Fed",
+      "2026-03-16 | finance.yahoo.com | World Top Central Banks Are About to Confront Fresh Inflation Threat as War Jolts Oil",
+      "2026-03-16 | asia.nikkei.com | Wall St rises on tech strength ; Middle East conflict limits gains",
+      "2026-03-16 | marketscreener.com | Dollar slips as markets eye central bank meetings amid Middle East conflict",
+      "2026-03-16 | mykxlg.com | Falling oil prices send Wall Street toward its best day since the Iran war began"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-16 | finance.yahoo.com | Best gold IRA companies for 2026 : Low fees , trusted names , and expert picks",
+      "2026-03-16 | bnnbloomberg.ca | Oil volatility from Iran conflict clouds outlook before U . S . Fed",
+      "2026-03-16 | bnnbloomberg.ca | Investors warned not to chase commodity surge amid oil shock",
+      "2026-03-16 | cbsnews.com | How to choose a gold IRA company : A consumer checklist",
+      "2026-03-16 | benzinga.com | Trump Urges Other Nations To Join War , Wall Street Rally Cools - BellRing Brands ( NYSE : BRBR )"
+    ]
   }
 }
