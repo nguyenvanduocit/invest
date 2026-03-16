@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T04:54:18.609Z",
+  "generatedAt": "2026-03-16T05:38:12.669Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,62 +7,63 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với đà giảm 2.48% trong 7 ngày qua, trong khi lợi suất thực USD và VIX tăng mạnh tạo áp lực bán ngắn hạn; nhà đầu tư nên chờ tín hiệu ổn định ở vùng hỗ trợ kỹ thuật trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 5Y: 98%) trong bối cảnh lợi suất thực USD và VIX tăng mạnh tạo áp lực chốt lời ngắn hạn; nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh mới.",
     "reasons": [
-      "Đà giảm ngắn hạn rõ rệt: Giá SJC giảm 2.48% trong 7 ngày qua và nằm dưới MA7 (160.1 triệu VND/lượng), cho thấy động lượng bán đang chiếm ưu thế.",
-      "Áp lực vĩ mô tăng: Lợi suất thực USD 10 năm tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, kết hợp với VIX tăng 14.91% cùng kỳ cho thấy dòng vốn đang rút khỏi vàng sang tài sản an toàn khác.",
-      "Biên độ dao động premium mở rộng: Premium tăng từ đáy 11.1% (27/02) lên đỉnh 16.72% (13/03), cho thấy tâm lý thị trường Việt Nam còn phân hóa và chưa ổn định."
+      "Giá SJC 182.6 triệu VND/lượng đang thấp hơn MA7 (160.1 triệu VND/lượng) và giảm 2.66% sau 7 ngày, cho thấy động lượng bán ngắn hạn đang chiếm ưu thế.",
+      "Áp lực vĩ mô tăng khi US Real Yield 10Y tăng mạnh 3.85% (5 ngày) lên 1.89% và US Treasury 2Y tăng 5.32% (5 ngày), làm tăng chi phí cơ hội nắm giữ vàng.",
+      "VIX tăng vọt 31.08% (20 ngày) lên mức 27.29 cho thấy thị trường tài chính căng thẳng, thường dẫn đến dòng tiền chốt lời từ tài sản rủi ro bao gồm vàng.",
+      "Giá thế giới giảm từ đỉnh 5330.95 USD/oz (02/03) xuống 5005.62 USD/oz, kéo theo biên độ dao động premium mở rộng từ 12.22% lên 15.66%."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn nếu giá thế giới phá vỡ vùng hỗ trợ 5000 USD/oz và lợi suất thực USD tiếp tục tăng.",
-      "Biên độ biến động ngày 1.33% có thể gây thanh khoản cạn cục khi thị trường giảm mạnh.",
-      "Dữ liệu vĩ mô thiếu cập nhật trong 3-4 ngày gần nhất (USD Index, Fed Funds) làm giảm độ tin cậy dự báo."
+      "Rủi ro thanh khoản và trượt giá cao khi chênh lệch giá (premium) dao động mạnh trong khoảng 11.1% - 17.57% trong 30 ngày qua.",
+      "Căng thẳng địa chính trị (Iran) có thể gây biến động giá đột ngột bất chấp xu hướng kỹ thuật hiện tại.",
+      "Dữ liệu vĩ mô (USD Index, Fed Funds) có độ trễ 3-4 ngày so với thời điểm hiện tại, có thể chưa phản ánh đầy đủ các động lực mới nhất."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Spot Price",
         "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi 7 ngày (SJC)",
-        "value": -2.48,
+        "key": "Change 7 Days",
+        "value": -2.66,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 160123141,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực 10Y (5d)",
+        "key": "US Real Yield 10Y (5d Change)",
         "value": 3.85,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index (5d)",
-        "value": 14.91,
+        "key": "VIX Index (20d Change)",
+        "value": 31.08,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium biến động 30d",
-        "value": 5.62,
-        "unit": "% (11.1-16.72)",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Giá thế giới XAUUSD",
-        "value": 5014.62,
+        "key": "World Gold Peak (Mar 02)",
+        "value": 5330.95,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Vị thế percentile 5 năm",
+        "key": "Current World Gold",
+        "value": 5005.62,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium Range 30d",
+        "value": 11.1,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "5-Year Percentile",
         "value": 98,
         "unit": "percentile",
         "source": "market_snapshot"
@@ -70,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T04:53:59.948Z",
+    "latestTimestamp": "2026-03-16T05:37:41.134Z",
     "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158154520.66050318,
-    "premiumPct": 15.46,
-    "change7dPct": -2.48,
-    "change30dPct": -0.57,
+    "intlVndPerTael": 157870770.11758676,
+    "premiumPct": 15.66,
+    "change7dPct": -2.66,
+    "change30dPct": -0.74,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 160123141,
-    "ma30VndPerTael": 161439633,
+    "ma7VndPerTael": 160082606,
+    "ma30VndPerTael": 161430175,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -89,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T04:54:02.953Z",
+    "fetchedAt": "2026-03-16T05:37:48.984Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5015.11,
+        "value": 5005.17,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.09,
-        "change5dPct": -2.32,
-        "change20dPct": 0.45,
+        "change1dPct": -0.29,
+        "change5dPct": -2.51,
+        "change20dPct": 0.25,
         "relationToGold": "context"
       },
       {
@@ -190,8 +191,18 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-16 | straitstimes.com | Iranian protesters fled  hell  at home , watch war from exile"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-16 | moneycontrol.com | Bond yields climb 2 basis points as Brent crude holds above $100",
+      "2026-03-16 | moneycontrol.com | Rupee opens 3 paise higher at 92 . 42 against the dollar , crude a worry",
+      "2026-03-16 | econotimes.com | Gold Prices Slip as Iran Conflict and Fed Uncertainty Weigh on Markets",
+      "2026-03-16 | econotimes.com | Dollar Steadies Near 10 - Month High as Central Banks Prepare for Critical Rate Decisions",
+      "2026-03-16 | livemint.com | Gold rate crashes over 1 % on MCX as Fed rate cut hopes weaken amid US - Iran war"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-16 | econotimes.com | Gold Prices Slip as Iran Conflict and Fed Uncertainty Weigh on Markets"
+    ]
   }
 }
