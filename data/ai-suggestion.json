@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T16:23:55.582Z",
+  "generatedAt": "2026-03-16T17:23:53.641Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Dù giá vàng SJC đang ở vùng cực kỳ cao (percentile 98%), áp lực bán từ lợi suất thực USD tăng mạnh và giá thế giới điều chỉnh xuống dưới MA7 đang tạo tín hiệu thận trọng. Tuy nhiên, sự biến động cao (VIX > 27) và premium giãn nở cho thấy thanh khoản thị trường Việt Nam vẫn căng thẳng, nhà đầu tư nên chờ đợi sự ổn định hơn thay vì mua đuổi hoặc bán tháo vội vàng.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với đà giảm 2.8% trong 7 ngày gần nhất, trong khi giá thế giới đã phá ngưỡng tâm lý 5,000 USD/oz nhưng đang gặp áp lực chốt lời ngắn hạn. Biến động premium 11-17% và thanh khoản cao cho thấy thị trường đang tìm hướng đi mới sau cú sốc địa chính trị Iran.",
     "reasons": [
-      "Giá vàng SJC 183.1 triệu đồng/lượng đang ở mức rất cao, tương đương percentile 98% trong 5 năm và giảm 2.97% trong 7 ngày qua so với đỉnh vùng 190 triệu.",
-      "Áp lực vĩ mô tiêu cực tăng lên khi US Real Yield 10Y tăng mạnh 3.85% trong 5 ngày lên mức 1.89%, cộng hưởng với USD Index tăng 1.42% (5 ngày) gây áp lực giảm lên giá vàng thế giới.",
-      "Giá vàng thế giới (4989 USD/oz) đã điều chỉnh xuống dưới MA7 (tương đương ~5171 USD/oz ngày 07/03), xu hướng ngắn hạn đang yếu đi với mức giảm -2.79% trong 5 ngày.",
-      "Premium SJC giãn nở đáng kể từ mức 11.1% (ngày 27/02) lên 16.36% (ngày 16/03), cho thấy tâm lý投机 vẫn cao nhưng thanh khoản có thể bị ảnh hưởng bởi biên độ dao động 1.34%/ngày."
+      "Giá vàng SJC giảm 2.8% trong 7 ngày gần nhất (từ 187.2 triệu xuống 183.1 triệu VND/lượng), cho thấy đà điều chỉnh kỹ thuật ngắn hạn sau đỉnh lịch sử.",
+      "Giá thế giới giảm 2.64% trong 5 ngày (từ ~5,183 xuống 4,998 USD/oz), tương đương mức giảm 2.8% của giá SJC, phản ánh sự đồng bộ trong đà điều chỉnh.",
+      "VIX ở mức 27.19 (+32% so với 20 ngày trước) kết hợp tin tức 'Iran war shock' cho thấy rủi ro địa chính trị vẫn cao, hạn chế đà giảm sâu của vàng.",
+      "Premium SJC dao động trong khoảng 11.1%-17.6% trong 30 ngày qua, mức 16.16% hiện tại nằm trong vùng bình thường, không có dấu hiệu căng thẳng cực đoan."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu US Real Yield tiếp tục tăng và Fed duy trì lãi suất cao lâu hơn kỳ vọng.",
-      "Biến động premium cao (dao động từ 11-17% trong tháng) có thể gây thua lỗ chênh lệch cho nhà đầu tư mua đuổi.",
-      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu đầu vào để hỗ trợ kịch bản tăng giá an toàn."
+      "Lợi suất thực 10Y của Mỹ tăng mạnh 3.85% trong 5 ngày (lên 1.89%) có thể tiếp tục gây áp lực lên giá vàng thế giới ngắn hạn.",
+      "Giá SJC ở phân vị 98% trong 5 năm (183.1 triệu VND/lượng), rủi ro điều chỉnh sâu nếu các yếu tố địa chính trị hạ nhiệt.",
+      "Sự thiếu rõ ràng trong chính sách dự trữ vàng giữa Ngân hàng Trung ương và Bộ Tài chính (theo tin tức Ghana) có thể tạo biến động bất ngờ cho thị trường các nước mới nổi."
     ],
     "evidence": [
       {
-        "key": "SJC Price Percentile 5Y",
-        "value": 98,
-        "unit": "percentile",
+        "key": "Giá SJC hiện tại",
+        "value": 183100000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC Change 7d",
-        "value": -2.97,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y Change 5d",
-        "value": 3.85,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Gold Spot vs MA7 Context",
-        "value": 4989.35,
+        "key": "Giá thế giới hiện tại",
+        "value": 4998.03,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Premium Expansion (Feb 27 to Mar 16)",
-        "value": 11.1,
-        "unit": "% to 16.36%",
-        "source": "monthly_series_30d"
+        "key": "Biến động 7 ngày SJC",
+        "value": -2.8,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX Level",
+        "key": "Premium SJC/Thế giới",
+        "value": 16.16,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Index",
         "value": 27.19,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Daily Volatility",
-        "value": 1.34,
+        "key": "Lợi suất thực 10Y Mỹ",
+        "value": 1.89,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Phân vị 5 năm",
+        "value": 98,
+        "unit": "percentile",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-16T16:23:33.366Z",
+    "latestTimestamp": "2026-03-16T17:23:31.191Z",
     "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 157357529.4752462,
-    "premiumPct": 16.36,
-    "change7dPct": -2.97,
-    "change30dPct": -1.07,
+    "intlVndPerTael": 157631245.98030192,
+    "premiumPct": 16.16,
+    "change7dPct": -2.8,
+    "change30dPct": -0.9,
     "volatilityDailyPct": 1.34,
-    "ma7VndPerTael": 160009286,
-    "ma30VndPerTael": 161413067,
+    "ma7VndPerTael": 160048388,
+    "ma30VndPerTael": 161422191,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-16T16:23:36.300Z",
+    "fetchedAt": "2026-03-16T17:23:37.196Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4990.75,
+        "value": 4998.33,
         "unit": "USD/oz",
         "date": "2026-03-16",
-        "change1dPct": -0.58,
-        "change5dPct": -2.79,
-        "change20dPct": -0.03,
+        "change1dPct": -0.43,
+        "change5dPct": -2.64,
+        "change20dPct": 0.12,
         "relationToGold": "context"
       },
       {
@@ -185,8 +185,24 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-16 | economictimes.indiatimes.com | Bitcoin BTC USD price vs gold safe haven : Iran war shock : The asset beating gold and stocks might surprise you"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-16 | economictimes.indiatimes.com | Bitcoin BTC USD price vs gold safe haven : Iran war shock : The asset beating gold and stocks might surprise you",
+      "2026-03-16 | graphic.com.gh | Ghana international reserves rise to $14 . 5bn BoG Governor",
+      "2026-03-16 | markets.financialcontent.com | FinancialContent - Gold Shatters $5 , 000 Milestone : Geopolitical Storm and Inflation Fears Drive Historic Surge",
+      "2026-03-16 | thebftonline.com | The quiet policy divide between treasury and Central Bank on Gold Reserve Strategy",
+      "2026-03-16 | columbian.com | Falling oil prices send Wall Street toward its best day since the start of the Iran war",
+      "2026-03-16 | rttnews.com | Market Sentiment Improves Ahead Of Central Bank Decisions"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-16 | economictimes.indiatimes.com | Bitcoin BTC USD price vs gold safe haven : Iran war shock : The asset beating gold and stocks might surprise you",
+      "2026-03-16 | fool.com | Can the SPDR Gold ETF Keep Climbing From Here ?",
+      "2026-03-16 | newsx.com | Gold Rate Today , March 16 : How Much Will 18 And 24 - Carat Cost You In Delhi , Mumbai , Chennai And Other Major Cities Amid Global Volatility",
+      "2026-03-16 | graphic.com.gh | Ghana international reserves rise to $14 . 5bn BoG Governor",
+      "2026-03-16 | markets.financialcontent.com | FinancialContent - Gold Shatters $5 , 000 Milestone : Geopolitical Storm and Inflation Fears Drive Historic Surge",
+      "2026-03-16 | thebftonline.com | The quiet policy divide between treasury and Central Bank on Gold Reserve Strategy"
+    ]
   }
 }
