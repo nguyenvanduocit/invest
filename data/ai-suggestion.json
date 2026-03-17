@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T10:18:08.999Z",
+  "generatedAt": "2026-03-17T11:17:44.184Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.7% tuần) từ vùng định giá cao (percentile 98%), nhưng áp lực bán chưa kết thúc do USD và lợi suất thực tăng mạnh. Nên chờ giá thế giới ổn định hoặc premium giãn thêm trước khi mua.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực từ lợi suất thực USD tăng mạnh, nhưng xung đột Iran và xu hướng phi USD hóa tạo nền hỗ trợ. Nên chờ xác nhận vùng hỗ trợ kỹ thuật trước khi vào lệnh.",
     "reasons": [
-      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (159.49 triệu VND/lượng - quy đổi thế giới) và giảm -3.7% sau 7 ngày, cho thấy động lượng bán đang chiếm ưu thế.",
-      "Lợi suất thực US 10Y tăng mạnh +6.67% trong 20 ngày lên 1.92%, tạo áp lực nghịch biến lớn lên giá vàng thế giới (đang ở 5005.79 USD/oz).",
-      "VIX ở mức 27.19 (+31.99% trong 20 ngày) phản ánh rủi ro thị trường cao, nhưng USD Index tăng +2.56% làm hạn chế sức mạnh trú ẩn của vàng.",
-      "Premium 15.73% nằm trong biên độ dao động 30 ngày (10.93%-17.39%), chưa xuất hiện tín hiệu cực đoan để mua gấp hoặc bán tháo."
+      "Lợi suất thực Mỹ 10 năm tăng mạnh 6.67% trong 20 ngày qua lên mức 1.92%, tạo áp lực bán gold carry-trade đáng kể lên giá thế giới.",
+      "Giá vàng SJC giảm 3.69% trong 7 ngày qua, hiện giao dịch dưới MA7 (159.5 triệu VND/lượng) cho thấy động lượng ngắn hạn yếu.",
+      "VIX ở mức 27.19 (+31.99% trong 20 ngày) và căng thẳng Iran hỗ trợ giá vàng không giảm sâu hơn.",
+      "Premium 15.73% nằm trong biên dao động 30 ngày (10.93%-17.39%), không có dấu hiệu bất thường cần hành động gấp."
     ],
     "risks": [
-      "Lợi suất thực Mỹ tiếp tục tăng cao sẽ gây áp lực giảm thêm lên giá vàng thế giới.",
-      "Giá SJC có thể điều chỉnh sâu hơn về vùng hỗ trợ kỹ thuật nếu thị trường chứng kiến đợt bán rửa (selloff) mạnh hơn.",
-      "Thông tin về RBA tăng lãi suất và rủi ro chiến tranh Iran có thể gây biến động bất ngờ cho thị trường tài sản."
+      "Lợi suất thực USD tiếp tục tăng có thể kéo giá thế giới về vùng hỗ trợ thấp hơn.",
+      "Chính sách Fed hawkish duy trì áp lực lên tài sản phi lợi suất.",
+      "Biến động giá cao (1.33%/ngày) gây rủi ro thanh khoản ngắn hạn."
     ],
     "evidence": [
       {
@@ -27,22 +27,28 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới quy đổi",
-        "value": 158120605.46,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Lợi suất thực Mỹ 10N",
+        "value": 1.92,
+        "unit": "%",
+        "source": "first_principles_context"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -3.7,
+        "key": "Biến động lợi suất thực 20 ngày",
+        "value": 6.67,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá SJC giảm 7 ngày",
+        "value": -3.69,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực US 10Y (20 ngày)",
-        "value": 6.67,
-        "unit": "% thay đổi",
-        "source": "first_principles_context"
+        "key": "MA7 giá SJC",
+        "value": 159495622,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
         "key": "VIX Index",
@@ -51,35 +57,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC",
+        "key": "Premium SJC/Thế giới",
         "value": 15.73,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới XAUUSD",
-        "value": 5005.79,
+        "key": "Giá thế giới XAUUSD",
+        "value": 5005.94,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
-      },
-      {
-        "key": "Percentile 5 năm",
-        "value": 98,
-        "unit": "percentile",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T10:17:40.103Z",
+    "latestTimestamp": "2026-03-17T11:17:22.707Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 158120605.46387672,
+    "intlVndPerTael": 158125552.0749044,
     "premiumPct": 15.73,
-    "change7dPct": -3.7,
+    "change7dPct": -3.69,
     "change30dPct": -0.74,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 159494916,
-    "ma30VndPerTael": 161648223,
+    "ma7VndPerTael": 159495622,
+    "ma30VndPerTael": 161648388,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T10:17:46.577Z",
+    "fetchedAt": "2026-03-17T11:17:28.263Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5005.24,
+        "value": 5008.01,
         "unit": "USD/oz",
         "date": "2026-03-17",
-        "change1dPct": -0.11,
-        "change5dPct": -3.6,
-        "change20dPct": 2.62,
+        "change1dPct": -0.05,
+        "change5dPct": -3.54,
+        "change20dPct": 2.68,
         "relationToGold": "context"
       },
       {
@@ -192,20 +192,15 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-17 | actionforex.com | GBP / USD Pauses Ahead of Bank of England Rate Decision"
+      "2026-03-17 | marketscreener.com | Gold firms on Iran tensions , but hawkish Fed outlook curbs gains",
+      "2026-03-17 | investordaily.com.au | De - dollarisation is gradual but real : Insight Investment"
     ],
     "countryActionHeadlines": [
-      "2026-03-17 | thejakartapost.com | Australia central bank hikes rates in tight call as Iran war stokes inflation risk - Economy",
-      "2026-03-17 | econotimes.com | FxWirePro : USD / JPY edges up , remains on front foot",
-      "2026-03-17 | livemint.com | Biggest Bubble Bust : Robert Kiyosaki predicts gold at $35 , 000 , silver at $200 , and Bitcoin at $750 , 000",
-      "2026-03-17 | thebull.com.au | RBA Delivers Back - to - Back Rate Hikes – Could There Be More In Store ?"
+      "2026-03-17 | marketscreener.com | Gold firms on Iran tensions , but hawkish Fed outlook curbs gains",
+      "2026-03-17 | investordaily.com.au | De - dollarisation is gradual but real : Insight Investment"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-17 | actionforex.com | GBP / USD Pauses Ahead of Bank of England Rate Decision",
-      "2026-03-17 | hawaiitelegraph.com | Gold IRA Rollover : Learn to Transfer Gold IRA Guide Released ( 2026 )",
-      "2026-03-17 | dallassun.com | Gold IRA Rollover : Learn to Transfer Gold IRA Guide Released ( 2026 )",
-      "2026-03-17 | marketscreener.com | Alkane Resources Finds the Golden Goose",
-      "2026-03-17 | livemint.com | Biggest Bubble Bust : Robert Kiyosaki predicts gold at $35 , 000 , silver at $200 , and Bitcoin at $750 , 000"
+      "2026-03-17 | marketscreener.com | Gold firms on Iran tensions , but hawkish Fed outlook curbs gains"
     ]
   }
 }
