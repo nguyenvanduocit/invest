@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T12:16:50.938Z",
+  "generatedAt": "2026-03-17T13:32:22.560Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh 30 ngày nhưng vẫn ở vùng định giá cao (percentile 98% 5 năm), trong khi áp lực vĩ mô từ USD và lợi suất thực tăng tạo ra rủi ro giảm thêm trước khi tìm điểm hỗ trợ mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử khi áp lực từ lợi suất thực USD tăng mạnh, nhưng xu hướng dài hạn vẫn tích cực nhờ VIX cao và lo ngại lạm phát. Nên chờ xác nhận vùng hỗ trợ kỹ thuật trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC 183 triệu VND/lượng giảm -3.64% trong 7 ngày, điều chỉnh từ đỉnh 190.9 triệu (02/03) trong khi giá thế giới giảm về 5008.55 USD/oz.",
-      "Lợi suất thực USD 10Y tăng mạnh +6.67% trong 20 ngày lên 1.92%, tạo áp lực giảm lên giá vàng khi chi phí cơ hội nắm giữ tăng.",
-      "Premium 15.67% cao hơn vùng 12-13% của đợt tăng đầu tháng 3, cho thấy giá Việt Nam chưa điều chỉnh sâu bằng giá thế giới.",
-      "VIX ở mức cao 27.19 (+31.99% trong 20 ngày) cho thấy thị trường chưa ổn định, có thể tạo biến động hai chiều."
+      "Áp lực bán vĩ mô mạnh: Lợi suất thực Mỹ 10 năm tăng 6.67% trong 20 ngày qua (lên 1.92%) và chỉ số USD tăng 2.56%, tạo áp lực nghịch biến lên giá vàng thế giới.",
+      "Động lượng kỹ thuật suy yếu: Giá thế giới (5014 USD/oz) đang giao dịch dưới MA7 VND (tương đương ~5050 USD/oz) và giảm 3.38% trong 5 ngày gần nhất.",
+      "Biến động thị trường còn cao: VIX ở mức 27.19 (tăng 31.99% trong 20 ngày) cho thấy rủi ro hệ thống chưa hạ nhiệt, vàng vẫn là tài sản trú ẩn cần thiết nhưng cần chọn thời điểm.",
+      "Giá SJC (183 triệu) đang ở phân vị 98% trong 5 năm, rủi ro mua đỉh ngắn hạn là đáng kể."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể kéo giá vàng thế giới giảm sâu hơn về vùng hỗ trợ 4900-5000 USD/oz.",
-      "Premium SJC có thể co hẹp nếu giá thế giới tiếp tục giảm, làm tăng rủi ro điều chỉnh cho nhà đầu tư Việt Nam.",
-      "Thiếu tín hiệu chính sách Fed rõ ràng trong dữ liệu input, khó dự đoán xu hướng lãi suất ngắn hạn."
+      "Lợi suất thực USD tiếp tục tăng cao hơn có thể khiến giá vàng thế giới giảm sâu hơn về vùng hỗ trợ thấp hơn.",
+      "Premium SJC (15.54%) có thể co hẹp nếu giá thế giới giảm nhanh, làm giảm hiệu quả bảo vệ của vàng trong nước.",
+      "Thiếu sự kiện địa chính trị cụ thể trong dữ liệu đầu vào nên động lực tăng giá ngắn hạn hạn chế."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 5014.16,
+        "unit": "USD/oz",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá SJC hiện tại",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "change7d_pct",
-        "value": -3.64,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
-        "value": 98,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y",
-        "value": 1.92,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "real_yield_change20d",
+        "key": "Lợi suất thực Mỹ 10Y (biến động 20d)",
         "value": 6.67,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_level",
+        "key": "Chỉ số VIX",
         "value": 27.19,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot",
-        "value": 5008.55,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Giá thế giới thay đổi 5 ngày",
+        "value": -3.38,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC/Thế giới",
+        "value": 15.54,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Phân vị giá 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T12:16:00.476Z",
+    "latestTimestamp": "2026-03-17T13:31:57.193Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 158207909.98976016,
-    "premiumPct": 15.67,
-    "change7dPct": -3.64,
-    "change30dPct": -0.69,
+    "intlVndPerTael": 158384969.60400164,
+    "premiumPct": 15.54,
+    "change7dPct": -3.54,
+    "change30dPct": -0.58,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 159507388,
-    "ma30VndPerTael": 161651133,
+    "ma7VndPerTael": 159532682,
+    "ma30VndPerTael": 161657035,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T12:16:05.906Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-17T13:32:02.200Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5011.04,
+        "value": 5016.54,
         "unit": "USD/oz",
         "date": "2026-03-17",
-        "change1dPct": 0.01,
-        "change5dPct": -3.48,
-        "change20dPct": 2.74,
+        "change1dPct": 0.12,
+        "change5dPct": -3.38,
+        "change20dPct": 2.85,
         "relationToGold": "context"
       },
       {
@@ -185,15 +185,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-17 | republicanherald.com | Today in History : March 17 , Golda Meir takes office as prime minister in Israel",
-      "2026-03-17 | finanznachrichten.de | Legacy Gold Mines Ltd .: Legacy Gold Final Assays from Baner Drilling Extend Hole # 04 to 187 . 5m ( 615ft ) at 0 . 55 g / t Gold ; Step Out Hole # 06 Now Widened to 64m ( 210ft ) at 0 . 57 g / t Gold , Extending Zone 136m North"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-17 | bizcommunity.com | Trafigura to help Venezuela Minerven develop a responsible gold - sourcing programme"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-17 | rttnews.com | Croatia Inflation Confirmed At 3 . 8 %"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
