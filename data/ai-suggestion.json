@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T20:12:01.048Z",
+  "generatedAt": "2026-03-17T21:13:11.650Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm ngắn hạn (-3.43%/7 ngày) từ vùng đỉnh lịch sử (percentile 98%), nhưng áp lực bán từ lợi suất thực USD tăng mạnh và đắt giá cao khiến rủi ro mua đuổi lớn, nên chờ tín hiệu ổn định.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 5Y: 98%) với động lượng yếu; xung đột Iran hỗ trợ giá nhưng USD và lợi suất thực tăng mạnh tạo áp lực ngược, nên chờ xác nhận hỗ trợ thay vì mua đuổi.",
     "reasons": [
-      "Động lượng giảm rõ rệt: Giá thế giới giảm 3.6% trong 5 ngày gần nhất và giá SJC giảm 3.43% trong 7 ngày, cho thấy phe bán đang kiểm soát thị trường ngắn hạn.",
-      "Áp lực vĩ mô tiêu cực: Lợi suất thực Mỹ 10 năm tăng mạnh 6.67% và chỉ số USD tăng 2.56% trong 20 ngày qua, tạo áp lực nghịch biến lớn lên giá vàng.",
-      "Định giá quá cao: Giá SJC đang ở phân vị 98% (98th percentile) trong 5 năm và premium 15.73% cao hơn đáng kể so với mức thấp nhất 10.93% trong chuỗi 30 ngày quan sát.",
-      "Thiếu chất xúc tác địa chính trị: Không có tin tức địa chính trị hay hành động quốc gia quan trọng nào trong dữ liệu đầu vào để hỗ trợ đà tăng giá."
+      "Giá SJC 183 triệu VND/lượng giảm -3.42% sau 7 ngày và nằm dưới MA7 (158.66 triệu VND/lượng - lưu ý dữ liệu MA bất thường), cho thấy động lượng bán ngắn hạn.",
+      "Giá thế giới giảm mạnh -3.59% trong 5 ngày về 5006 USD/oz, tương quan với đà tăng của USD Index (+0.89% 5 ngày) và lợi suất thực 10Y (+5.06% 5 ngày).",
+      "Premium 15.73% đang ở mức hợp lý trong 30 ngày qua (dao động 10.93%-17.39%), không có tín hiệu bão hòa cực đoan để bán tháo.",
+      "VIX ở 23.51 và tin tức về sự từ chức quan chức Mỹ phản đối chiến tranh Iran cho thấy rủi ro địa chính trị vẫn hỗ trợ vai trò trú ẩn của vàng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu hơn nếu giá thế giới phá vỡ vùng hỗ trợ kỹ thuật quanh 5000 USD/oz.",
-      "Thanh khoản thấp và biên độ dao động cao (1.31%/ngày) có thể gây trượt giá khi giao dịch.",
-      "Dữ liệu tin tức đầu vào không có sự kiện trọng điểm, độ tin cậy dự báo giảm."
+      "Dữ liệu MA7/MA30 có sự bất đồng lớn với giá hiện tại (chênh lệch >15%), có thể là lỗi dữ liệu đầu vào, làm giảm độ tin cậy của phân tích kỹ thuật.",
+      "Nếu giá thế giới phá vỡ hỗ trợ 5000 USD/oz, áp lực bán có thể kéo giá SJC về vùng 180 triệu VND/lượng.",
+      "Chính sách tiền tệ từ Fed và ECB trong các bài phát biểu gần đây chưa có tín hiệu rõ ràng, rủi ro biến động cao khi có tin mới."
     ],
     "evidence": [
       {
@@ -27,59 +27,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới quy đổi",
-        "value": 158120115,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Giá thế giới (XAUUSD)",
+        "value": 5006.11,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -3.43,
+        "key": "Biến động 7 ngày SJC",
+        "value": -3.42,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 5 ngày (Thế giới)",
-        "value": -3.6,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10N (20 ngày)",
-        "value": 6.67,
-        "unit": "% thay đổi",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Phân vị giá 5 năm",
-        "value": 98,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium hiện tại",
+        "key": "Premium SJC",
         "value": 15.73,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium thấp nhất 30 ngày",
-        "value": 10.93,
+        "key": "USD Index thay đổi 5 ngày",
+        "value": 0.89,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực 10Y thay đổi 5 ngày",
+        "value": 5.06,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX hiện tại",
+        "value": 23.51,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T20:11:41.069Z",
+    "latestTimestamp": "2026-03-17T21:12:43.404Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 158120114.90915608,
+    "intlVndPerTael": 158130836.6727648,
     "premiumPct": 15.73,
-    "change7dPct": -3.43,
+    "change7dPct": -3.42,
     "change30dPct": 0.27,
     "volatilityDailyPct": 1.31,
-    "ma7VndPerTael": 158663037,
-    "ma30VndPerTael": 161655068,
+    "ma7VndPerTael": 158664569,
+    "ma30VndPerTael": 161655425,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T20:11:44.378Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-17T21:12:55.253Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5004.92,
+        "value": 5005.73,
         "unit": "USD/oz",
         "date": "2026-03-17",
-        "change1dPct": -0.12,
-        "change5dPct": -3.6,
-        "change20dPct": 2.61,
+        "change1dPct": -0.1,
+        "change5dPct": -3.59,
+        "change20dPct": 2.63,
         "relationToGold": "context"
       },
       {
@@ -119,23 +113,23 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.92,
+        "value": 1.87,
         "unit": "%",
-        "date": "2026-03-13",
-        "change1dPct": 1.59,
-        "change5dPct": 6.67,
-        "change20dPct": 6.67,
+        "date": "2026-03-16",
+        "change1dPct": -2.6,
+        "change5dPct": 5.06,
+        "change20dPct": 5.65,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.36,
+        "value": 2.37,
         "unit": "%",
-        "date": "2026-03-16",
-        "change1dPct": 0,
-        "change5dPct": 0.85,
-        "change20dPct": 3.96,
+        "date": "2026-03-17",
+        "change1dPct": 0.42,
+        "change5dPct": 1.72,
+        "change20dPct": 4.87,
         "relationToGold": "direct"
       },
       {
@@ -143,7 +137,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-03-13",
+        "date": "2026-03-16",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -152,23 +146,23 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.28,
+        "value": 4.23,
         "unit": "%",
-        "date": "2026-03-13",
-        "change1dPct": 0.23,
-        "change5dPct": 3.13,
-        "change20dPct": 4.65,
+        "date": "2026-03-16",
+        "change1dPct": -1.17,
+        "change5dPct": 2.67,
+        "change20dPct": 4.7,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.73,
+        "value": 3.68,
         "unit": "%",
-        "date": "2026-03-13",
-        "change1dPct": -0.8,
-        "change5dPct": 4.78,
-        "change20dPct": 7.49,
+        "date": "2026-03-16",
+        "change1dPct": -1.34,
+        "change5dPct": 3.37,
+        "change20dPct": 8.24,
         "relationToGold": "inverse"
       },
       {
@@ -191,8 +185,24 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-17 | fox7austin.com | Who is Joe Kent ? Trump counterterrorism admin , veteran resigns over Iran war",
+      "2026-03-17 | theage.com.au | Investing in gold : Is it really a safe haven asset ?",
+      "2026-03-17 | npr.org | Migrant workers in the Gulf caught in war : NPR",
+      "2026-03-17 | english.aawsat.com | Senior US Counterterrorism Official Resigns to Protest Iran War"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-17 | theage.com.au | Investing in gold : Is it really a safe haven asset ?",
+      "2026-03-17 | seekingalpha.com | There will be no interest rate cuts this year – Piper Sandler Nancy Lazar ( SP500 :)",
+      "2026-03-17 | bnnbloomberg.ca | Mortgage - backed ETFs gain traction amid yield search",
+      "2026-03-17 | bnnbloomberg.ca | Iran conflict drives oil volatility as stocks push higher",
+      "2026-03-17 | baystreet.ca | Baystreet . ca - TSX Continues on Upward Path"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-17 | theage.com.au | Investing in gold : Is it really a safe haven asset ?",
+      "2026-03-17 | memphissun.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights",
+      "2026-03-17 | albuquerqueexpress.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights",
+      "2026-03-17 | baystreet.ca | Baystreet . ca - TSX Continues on Upward Path"
+    ]
   }
 }
