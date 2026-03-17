@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T22:10:11.908Z",
+  "generatedAt": "2026-03-17T23:10:35.771Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,58 +7,58 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm ngắn hạn (-3.54%/7 ngày) từ vùng đỉnh lịch sử (percentile 98% 5 năm), nhưng xu hướng vĩ mô dài hạn vẫn tích cực nhờ lạm phát kỳ vọng tăng và rủi ro địa chính trị. Nên chờ xác nhận vùng hỗ trợ kỹ thuật trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.53%/7 ngày) từ vùng đỉnh lịch sử (percentile 98%) trong khi giá thế giới có dấu hiệu suy yếu kỹ thuật; nhà đầu tư nên chờ đợi xác nhận xu hướng rõ ràng hơn thay vì mua đuổi hoặc bán tháo lúc này.",
     "reasons": [
-      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (158.6 triệu VND quy đổi thế giới) và giảm -3.54% sau 7 ngày, cho thấy động lượng ngắn hạn yếu và đang trong giai đoạn điều chỉnh kỹ thuật.",
-      "Premium 15.87% ở mức hợp lý so với trung bình 30 ngày (10.93%-17.39%), không có dấu hiệu bong bóng địa phương; giá thế giới giảm -3.64%/5 ngày xuống 4999.72 USD/oz kéo giá VN về theo.",
-      "Lạm phát kỳ vọng (Breakeven 10Y) tăng +4.87%/20 ngày lên 2.37% và VIX ở mức 23.51 hỗ trợ giá vàng dài hạn, nhưng lợi suất thực 10Y tăng mạnh +5.65%/20 ngày lên 1.87% tạo áp lực ngắn hạn.",
-      "Giá SJC đang ở phân vị 98% trong 5 năm (183 triệu VND/lượng), rủi ro mua đỉh cao nếu không có xác nhận hỗ trợ kỹ thuật rõ ràng."
+      "Giá SJC 183 triệu VND/lượng giảm -3.53% sau 7 ngày và thấp hơn đỉnh 190.9 triệu VND/lượng (02/03), cho thấy động lượng ngắn hạn đã suy yếu sau đợt tăng nóng.",
+      "Giá thế giới giảm từ đỉnh 5330.95 USD/oz (02/03) xuống 5000.42 USD/oz hiện tại, tương ứng giảm ~6.2%, phá vỡ xu hướng tăng ngắn hạn.",
+      "Premium 15.86% nằm trong biên độ dao động 30 ngày (10.93%-17.39%), không có tín hiệu bất thường cực đoan nhưng cho thấy nhà đầu tư Việt vẫn giữ tâm lý thận trọng.",
+      "USD Index tăng +2.56% trong 20 ngày và lợi suất thực 10Y ở 1.87% tạo áp lực ngược lên giá vàng, trong khi VIX giảm -13.53%/ngày cho thấy lo ngại rủi ro ngắn hạn đã hạ nhiệt."
     ],
     "risks": [
-      "Lợi suất thực USD (1.87%) và chỉ số DXY (120.55) tăng mạnh có thể gây áp lực giảm thêm cho giá vàng thế giới trong ngắn hạn.",
-      "Giá SJC ở mức rất cao (phân vị 98% 5 năm), rủi ro điều chỉnh sâu nếu thị trường thế giới tiếp tục giảm.",
-      "Dữ liệu sự kiện vĩ mô (phát ngôn Fed, ECB) không có tín hiệu rõ ràng, có thể gây nhiễu và giảm độ tin cậy dự báo."
+      "Rủi ro địa chính trị từ căng thẳng Iran-Trung Đông (headline đề cập 'Iran war') có thể đẩy giá tăng vọt bất ngờ, bất chấp xu hướng kỹ thuật.",
+      "Giá đang ở percentile 98% trong 5 năm (vùng quá mua lịch sử), rủi ro điều chỉnh sâu vẫn hiện hữu nếu giá thế giới tiếp tục suy yếu.",
+      "Dữ liệu MA7/MA30 có giá trị bất hợp lý (158.6 triệu thấp hơn giá giao dịch 183 triệu), gợi ý có thể có lỗi xử lý dữ liệu đầu vào - cần thận trọng khi tham chiếu."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "Giá SJC hiện tại",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium",
-        "value": 15.87,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Change 7D",
-        "value": -3.54,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5Y",
-        "value": 98,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Gold Spot",
-        "value": 4999.72,
+        "key": "Giá thế giới hiện tại",
+        "value": 5000.42,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "US Real Yield 10Y",
-        "value": 1.87,
+        "key": "Biến động 7 ngày SJC",
+        "value": -3.53,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium hiện tại",
+        "value": 15.86,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Đỉnh giá thế giới 30 ngày",
+        "value": 5330.95,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "USD Index thay đổi 20 ngày",
+        "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "US Breakeven 10Y Change 20D",
-        "value": 4.87,
+        "key": "Lợi suất thực 10Y",
+        "value": 1.87,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -71,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T22:09:45.773Z",
+    "latestTimestamp": "2026-03-17T23:09:51.842Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 157928843.10653847,
-    "premiumPct": 15.87,
-    "change7dPct": -3.54,
-    "change30dPct": 0.15,
+    "intlVndPerTael": 157951062.42409343,
+    "premiumPct": 15.86,
+    "change7dPct": -3.53,
+    "change30dPct": 0.16,
     "volatilityDailyPct": 1.31,
-    "ma7VndPerTael": 158635713,
-    "ma30VndPerTael": 161648692,
+    "ma7VndPerTael": 158638887,
+    "ma30VndPerTael": 161649433,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,21 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T22:09:52.233Z",
-    "healthy": true,
-    "missingFactors": [],
+    "fetchedAt": "2026-03-17T23:10:03.901Z",
+    "healthy": false,
+    "missingFactors": [
+      "Gold Spot XAUUSD"
+    ],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5003.05,
+        "value": null,
         "unit": "USD/oz",
-        "date": "2026-03-17",
-        "change1dPct": -0.15,
-        "change5dPct": -3.64,
-        "change20dPct": 2.57,
+        "date": null,
+        "change1dPct": null,
+        "change5dPct": null,
+        "change20dPct": null,
         "relationToGold": "context"
       },
       {
@@ -192,21 +194,19 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-17 | kashmirreader.com | Middle East conflict key risk for FY27 , potential impacts on exports , remittances",
-      "2026-03-17 | investing.com | Gold Holds Key Buy Zones as Inflation and Oil Risks Keep Pressure on the Fed",
-      "2026-03-17 | rawstory.com | Partial coup ! Alex Jones rallies MAGA against Trump over Iran war  disaster"
+      "2026-03-17 | krdo.com | 5 things to know for March 17 : Travel disruptions in Middle East , Iran war , Gas prices , Cuba blackouts , Meatpacking workers",
+      "2026-03-17 | theconservativetreehouse.com | NCTC Director Joe Kent Resigns from Trump Administration in Protest to Iran War"
     ],
     "countryActionHeadlines": [
-      "2026-03-17 | currencynews.co.uk | Pound to Euro Rangebound Ahead of BoE and ECB",
-      "2026-03-17 | investmentwatchblog.com | Yen crashes toward 160 , Japan warns of  bold steps  – Investment Watch Blog"
+      "2026-03-17 | finance.yahoo.com | Dollar Retreats as Stocks Rebound and Bond Yields Fall"
     ],
     "dollarYieldHeadlines": [
+      "2026-03-17 | dallassun.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights",
+      "2026-03-17 | straitstimes.com | Middle - aged Chinese and Indian women emerge as force behind global gold demand : Report",
+      "2026-03-17 | el-balad.com | Why Gold Prices Remain Stable",
+      "2026-03-17 | marketscreener.com | Materials Up Ahead of Fed - Materials Roundup",
       "2026-03-17 | kashmirreader.com | Middle East conflict key risk for FY27 , potential impacts on exports , remittances",
-      "2026-03-17 | investing.com | Gold Holds Key Buy Zones as Inflation and Oil Risks Keep Pressure on the Fed",
-      "2026-03-17 | cbsnews.com | Gold IRA minimum investments : What to expect and questions to ask upfront",
-      "2026-03-17 | stlouisstar.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights",
-      "2026-03-17 | theage.com.au | Investing in gold : Is it really a safe haven asset ?",
-      "2026-03-17 | memphissun.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights"
+      "2026-03-17 | investing.com | Gold Holds Key Buy Zones as Inflation and Oil Risks Keep Pressure on the Fed"
     ]
   }
 }
