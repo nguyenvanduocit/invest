@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T08:16:02.260Z",
+  "generatedAt": "2026-03-17T09:19:45.741Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,54 +7,42 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.4% tuần qua) từ đỉnh lịch sử nhưng vẫn giao dịch ở vùng giá rất cao (percentile 98% 5 năm). Áp lực từ lợi suất thực USD tăng mạnh (+6.67% 20 ngày) và giá đang nằm dưới MA7/MA30 cho thấy xu hướng ngắn hạn yếu, nhà đầu tư nên chờ tín hiệu ổn định hơn trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử với áp lực bán từ lợi suất thực USD tăng cao, nhưng xu hướng dài hạn vẫn tích cực nhờ VIX ở mức 27.19 và kỳ vọng lạm phát. Nên chờ tín hiệu ổn định thay vì đuổi đỉnh hoặc bán tháo.",
     "reasons": [
-      "Giá SJC 183 triệu VND/lượng đang giao dịch dưới MA7 (159.56 triệu VND/lượng - quy đổi thế giới) và giảm 3.4% sau 7 ngày, cho thấy động lượng bán ngắn hạn đang chiếm ưu thế.",
-      "Lợi suất thực USD 10 năm tăng mạnh +6.67% trong 20 ngày qua lên mức 1.92%, tạo áp lực giảm lên giá vàng thế giới vì tăng chi phí cơ hội nắm giữ.",
-      "VIX ở mức 27.19 (+31.99% 20 ngày) cho thấy thị trường vẫn lo ngại rủi ro, nhưng premium SJC 15.38% nằm trong biên độ dao động 30 ngày qua (10.93%-17.39%), chưa có tín hiệu bất thường cực đoan.",
-      "Giá thế giới giảm -3.27% trong 5 ngày về 5021 USD/oz, kéo theo giá SJC điều chỉnh từ đỉnh 190.9 triệu VND/lượng (03-02) xuống 183 triệu VND/lượng hiện tại."
+      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (159.5 triệu - quy đổi thế giới) và giảm -3.48% sau 7 ngày, cho thấy động lượng ngắn hạn yếu và đang điều chỉnh.",
+      "Lợi suất thực USD 10 năm tăng mạnh +6.67% lên 1.92% và chỉ số DXY tăng +2.56% trong 20 ngày, tạo áp lực nghịch biến đáng kể lên giá vàng thế giới.",
+      "VIX duy trì ở mức cao 27.19 (+31.99% trong 20 ngày) và lạm phát kỳ vọng 2.36% vẫn hỗ trợ vàng như tài sản trú ẩn an toàn trong bối cảnh bất ổn.",
+      "Premium 15.48% nằm trong biên độ dao động 30 ngày (10.93%-17.39%), không có dấu hiệu bất thường cần cảnh báo đặc biệt."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao có thể gây áp lực bán thêm lên giá vàng.",
-      "Giá SJC ở percentile 98% (5 năm) có rủi ro điều chỉnh sâu hơn nếu thị trường tài chính ổn định.",
-      "Biến động ngày 1.33% có thể gây thua lỗ ngắn hạn cho nhà đầu tư đuổi đỉnh."
+      "Lợi suất thực USD và DXY tiếp tục tăng cao có thể gây áp lực bán thêm trong ngắn hạn.",
+      "Tin tức địa chính trị và dự đoán giá vàng $35,000 có tính chất gây nhiễu, không phản ánh dữ liệu thị trường hiện tại.",
+      "Biến động ngày 1.33% và drawdown tồi tệ 41.26% trong lịch sử cho thấy rủi ro giảm sâu nếu xu hướng đảo chiều."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Price",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi 7 ngày SJC",
-        "value": -3.4,
+        "key": "Change 7d",
+        "value": -3.48,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC",
-        "value": 15.38,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực USD 10Y",
+        "key": "US Real Yield 10Y",
         "value": 1.92,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Thay đổi lợi suất thực 20 ngày",
+        "key": "Real Yield Change 20d",
         "value": 6.67,
         "unit": "%",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Giá vàng thế giới XAUUSD",
-        "value": 5021.06,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
       },
       {
         "key": "VIX Index",
@@ -63,23 +51,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Percentile 5 năm",
-        "value": 98,
+        "key": "VIX Change 20d",
+        "value": 31.99,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium",
+        "value": 15.48,
         "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "Gold Spot",
+        "value": 5014.54,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T08:15:35.029Z",
+    "latestTimestamp": "2026-03-17T09:18:58.981Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 158602950.57916445,
-    "premiumPct": 15.38,
-    "change7dPct": -3.4,
-    "change30dPct": -0.44,
+    "intlVndPerTael": 158469972.66066748,
+    "premiumPct": 15.48,
+    "change7dPct": -3.48,
+    "change30dPct": -0.52,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 159563822,
-    "ma30VndPerTael": 161664301,
+    "ma7VndPerTael": 159544825,
+    "ma30VndPerTael": 161659868,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T08:15:37.961Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-17T09:19:09.432Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5021.9,
+        "value": 5014.54,
         "unit": "USD/oz",
         "date": "2026-03-17",
-        "change1dPct": 0.22,
-        "change5dPct": -3.27,
-        "change20dPct": 2.96,
+        "change1dPct": 0.08,
+        "change5dPct": -3.42,
+        "change20dPct": 2.81,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,19 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-17 | livemint.com | Biggest Bubble Bust : Robert Kiyosaki predicts gold at $35 , 000 , silver at $200 , and Bitcoin at $750 , 000",
+      "2026-03-17 | sun-sentinel.com | Today in History : March 17 , Golda Meir takes office as prime minister in Israel"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-17 | livemint.com | Biggest Bubble Bust : Robert Kiyosaki predicts gold at $35 , 000 , silver at $200 , and Bitcoin at $750 , 000",
+      "2026-03-17 | thebull.com.au | RBA Delivers Back - to - Back Rate Hikes – Could There Be More In Store ?",
+      "2026-03-17 | marketscreener.com | South African rand weakens as Middle East conflict weighs on sentiment"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-17 | marketscreener.com | Alkane Resources Finds the Golden Goose",
+      "2026-03-17 | livemint.com | Biggest Bubble Bust : Robert Kiyosaki predicts gold at $35 , 000 , silver at $200 , and Bitcoin at $750 , 000",
+      "2026-03-17 | finanznachrichten.de | Tiger Gold Corp .: Tiger Gold Mobilizes for Drilling at Ceibal Target at Quinchía Gold Project"
+    ]
   }
 }
