@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T00:22:07.913Z",
+  "generatedAt": "2026-03-17T01:35:05.954Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,78 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với đà giảm 7 ngày liên tiếp, trong khi dòng tiền vĩ mô đang chuyển bất lợi khi lợi suất thực USD và chỉ số đồng xanh tăng mạnh. Nên chờ đợi vùng hỗ trợ kỹ thuật rõ ràng hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực từ lợi suất thực USD tăng mạnh, nhưng đỉnh giá 5 năm percentile 98% khuyến nghị thận trọng khi mua đuổi.",
     "reasons": [
-      "Đà giảm ngắn hạn rõ rệt: Giá SJC giảm 3.69% trong 7 ngày gần nhất, từ đỉnh 190.9 triệu xuống 183.1 triệu VND/lượng, cho thấy áp lực chốt lời đang hiện hữu.",
-      "Dòng tiền vĩ mô bất lợi: Lợi suất thực USD 10 năm tăng mạnh 6.67% trong 20 ngày (lên 1.92%) và DXY tăng 2.56%, tạo áp lực giảm lên giá vàng thế giới.",
-      "Biên độ premium an toàn: Mức premium 15.78% nằm trong vùng giao dịch phổ biến của chuỗi 30 ngày (10.93%-17.39%), không có dấu hiệu bong bóng cực đoan cần cảnh báo.",
-      "Vị thế giá cao: Percentile 5 năm ở mức 98 cho thấy giá đang ở vùng rất cao, rủi ro mua đỉp hiện hữu nếu không có động lực tăng mới."
+      "Lợi suất thực USD 10Y tăng mạnh +6.67% trong 20 ngày qua lên 1.92%, tạo áp lực giảm lên giá vàng thế giới.",
+      "Giá SJC 182.6 triệu/lượng đang thấp hơn MA7 (159.5 triệu/lượng) và MA30 (161.7 triệu/lượng) trên giá thế giới quy đổi, cho thấy động lượng giảm ngắn hạn.",
+      "VIX ở mức 27.19 (+31.99% trong 20 ngày) cho thấy thị trường vẫn căng thẳng, có thể hỗ trợ vàng nhưng biến động cao."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao sẽ làm giảm hấp dẫn của vàng作为 tài sản trú ẩn.",
-      "VIX vẫn ở mức 27.19 cho thấy biến động thị trường còn lớn, giá có thể dao động mạnh hai chiều.",
-      "Sự kiện địa chính trị (Iran conflict, oil supply) có thể gây biến động bất ngờ."
+      "Lợi suất thực USD tiếp tục tăng có thể gây áp lực giảm thêm cho giá vàng.",
+      "Premium SJC 15.33% ở mức cao, rủi ro co hẹp premium nếu giá thế giới giảm sâu.",
+      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia, độ tin cậy phân tích giảm."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 183100000,
+        "key": "sjc_price",
+        "value": 182600000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày",
-        "value": -3.69,
+        "key": "intl_price_vnd",
+        "value": 158334907,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "premium_pct",
+        "value": 15.33,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 15.78,
+        "key": "change7d_pct",
+        "value": -3.57,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực USD 10N",
+        "key": "us_real_yield_10y",
         "value": 1.92,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Thay đổi DXY 20 ngày",
-        "value": 2.56,
+        "key": "real_yield_20d_change",
+        "value": 6.67,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
+        "key": "vix_level",
         "value": 27.19,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới",
-        "value": 5006.41,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "percentile_5y",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T00:21:47.495Z",
-    "sjcVndPerTael": 183100000,
-    "intlVndPerTael": 158140394.43499187,
-    "premiumPct": 15.78,
-    "change7dPct": -3.69,
-    "change30dPct": -0.73,
+    "latestTimestamp": "2026-03-17T01:34:47.168Z",
+    "sjcVndPerTael": 182600000,
+    "intlVndPerTael": 158334907.43657207,
+    "premiumPct": 15.33,
+    "change7dPct": -3.57,
+    "change30dPct": -0.61,
     "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 159497743,
-    "ma30VndPerTael": 161648883,
+    "ma7VndPerTael": 159525530,
+    "ma30VndPerTael": 161655366,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T00:21:53.332Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-17T01:34:51.326Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5006.93,
+        "value": 5012.62,
         "unit": "USD/oz",
         "date": "2026-03-17",
-        "change1dPct": -0.08,
-        "change5dPct": -3.56,
-        "change20dPct": 2.65,
+        "change1dPct": 0.04,
+        "change5dPct": -3.45,
+        "change20dPct": 2.77,
         "relationToGold": "context"
       },
       {
@@ -185,22 +190,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-17 | currencynews.co.uk | GBP / USD Forecast : US Dollar Softens as Oil Supply Fears Ease",
-      "2026-03-17 | fox13now.com | Gold Star families turn grief into hope and support for other military families"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-17 | currencynews.co.uk | GBP / USD Forecast : US Dollar Softens as Oil Supply Fears Ease",
-      "2026-03-16 | newsghana.com.gh | C - NERGY Warns Ghana Must Transform Gold Boom , Not Spend It",
-      "2026-03-16 | newsghana.com.gh | Nigeria Inflation Holds Near Five - Year Low Despite Ramadan Food Surge",
-      "2026-03-16 | kurv.com | Falling Oil Prices Send Wall Street Toward Its Best Day Since The Iran War Began – 710am KURV",
-      "2026-03-16 | wdio.com | US stocks climb to their best day since the Iran war began after oil prices ease",
-      "2026-03-16 | mining.com | Gold wavers as high energy prices threaten Fed rate path"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-17 | fool.ca | 4 Canadian Copper Stocks That Can Quickly Respond to Falling Inflation",
-      "2026-03-16 | marketpulse.com | Metals fake - out to the downside ; Opportunity ? – Gold ( XAU / USD ) & Silver ( XAG / USD ) update",
-      "2026-03-16 | investopedia.com | The Battle to Control Hormuz Will Be the  Worst Phase  of the Iran Conflict . Here Why , According to Ray Dalio"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
