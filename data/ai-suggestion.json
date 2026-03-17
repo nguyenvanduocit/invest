@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-17T02:59:59.048Z",
+  "generatedAt": "2026-03-17T03:54:40.324Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh 30 ngày trong bối cảnh lợi suất thực USD tăng mạnh tạo áp lực; nhà đầu tư nên chờ tín hiệu ổn định thay vì bắt đáy ngay khi biên độ dao động còn cao.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.26% sau 7 ngày) trong bối cảnh USD và lợi suất thực tăng mạnh gây áp lực, nhưng rủi ro địa chính trị từ chiến tranh Iran và VIX cao (27.19) tạo sàn hỗ trợ, đòi hỏi nhà đầu tư chờ xác nhận xu hướng rõ ràng hơn.",
     "reasons": [
-      "Áp lực vĩ mô ngược chiều: Lợi suất thực USD 10 năm tăng mạnh 6.67% trong 5 ngày và Dollar Index tăng 0.89%, tương quan nghịch gây áp lực giảm lên giá vàng thế giới.",
-      "Động lượng kỹ thuật yếu: Giá thế giới (5024.95 USD/oz) đang thấp hơn vùng đỉnh đầu tháng (5330.95 USD/oz), kéo SJC giảm 3.33% trong 7 ngày qua.",
-      "Biên độ dao động cao: Volatility daily ở mức 1.33% kết hợp VIX tăng 31.99% trong 20 ngày cho thấy thị trường chưa ổn định, rủi ro bắt đáy cao.",
-      "Premium đang nới rộng: Chênh lệch giá SJC so với thế giới tăng từ 12.05% (23/02) lên 15.04% hiện tại, cho thấy tâm lý lo lắng trong nước nhưng giá nhập đang cao hơn trung bình giai đoạn đầu tháng."
+      "Áp lực bán từ vĩ mô: Lợi suất thực US 10Y tăng mạnh +6.67% (lên 1.92%) và USD Index tăng +2.56% trong 20 ngày qua gây áp lực nghịch biến lên giá vàng thế giới.",
+      "Động lượng kỹ thuật suy yếu: Giá thế giới (5028.48 USD/oz) đang thấp hơn đáng kể so với đỉnh vùng 5251 USD/oz đầu tháng 3, phản ánh đà điều chỉnh ngắn hạn.",
+      "Biến động và rủi ro địa chính trị cao: VIX ở mức 27.19 (+31.99% trong 20 ngày) và tin tức về chiến tranh Iran/Strait of Hormuz hỗ trợ tâm lý phòng thủ, hạn chế đà giảm sâu của giá vàng.",
+      "Định giá SJC ở vùng cao: Giá SJC (183 triệu VND/lượng) đang ở phân vị 98% trong 5 năm, rủi ro điều chỉnh premium cao hơn so với biến động giá thế giới."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng cao hơn mức 1.92% sẽ làm giảm hấp dẫn của vàng và có thể khiến giá điều chỉnh sâu hơn.",
-      "Biên độ dao động 1.33%/ngày có thể gây thanh khoản tài khoản nếu sử dụng đòn bẩy hoặc mua sát đáy tạm thời.",
-      "Dữ liệu vĩ mô thiếu cập nhật (ngày 13/03) so với giá hiện tại (17/03) có thể bỏ sót các biến động chính sách mới nhất."
+      "Lợi suất thực Mỹ tiếp tục tăng cao hơn mức 1.92% có thể gây sụt giảm mạnh hơn cho giá vàng.",
+      "Căng thẳng Trung Đông leo thang (Iran, Pakistan-Afghanistan) có thể gây sốc tăng giá bất chấp xu hướng kỹ thuật.",
+      "Thanh khoản giảm hoặc biên độ mua bán giãn rộng khi giá ở vùng đỉnh lịch sử (phân vị 98%)."
     ],
     "evidence": [
       {
-        "key": "intl_gold_change_5d",
-        "value": -3.24,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Giá vàng SJC hiện tại",
+        "value": 183000000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "us_real_yield_change_5d",
+        "key": "Giá vàng thế giới quy đổi",
+        "value": 158837377,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biên độ premium SJC",
+        "value": 15.21,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực US 10Y (20 ngày)",
         "value": 6.67,
-        "unit": "%",
+        "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "sjc_change_7d",
-        "value": -3.33,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "vix_change_20d",
-        "value": 31.99,
-        "unit": "%",
+        "key": "Chỉ số VIX",
+        "value": 27.19,
+        "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "current_premium",
-        "value": 15.04,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Giá vàng thế giới đỉnh 30 ngày",
+        "value": 5251.02,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "daily_volatility",
-        "value": 1.33,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "percentile_5y",
+        "key": "Phân vị giá 5 năm",
         "value": 98,
         "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Thay đổi giá SJC 7 ngày",
+        "value": -3.26,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-17T02:59:34.104Z",
-    "sjcVndPerTael": 182600000,
-    "intlVndPerTael": 158726004.95155373,
-    "premiumPct": 15.04,
-    "change7dPct": -3.33,
-    "change30dPct": -0.36,
-    "volatilityDailyPct": 1.33,
-    "ma7VndPerTael": 159581401,
-    "ma30VndPerTael": 161668403,
+    "latestTimestamp": "2026-03-17T03:54:02.987Z",
+    "sjcVndPerTael": 183000000,
+    "intlVndPerTael": 158837376.98280323,
+    "premiumPct": 15.21,
+    "change7dPct": -3.26,
+    "change30dPct": -0.29,
+    "volatilityDailyPct": 1.34,
+    "ma7VndPerTael": 159597311,
+    "ma30VndPerTael": 161672115,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-17T02:59:36.932Z",
+    "fetchedAt": "2026-03-17T03:54:13.315Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5023.5,
+        "value": 5029.46,
         "unit": "USD/oz",
         "date": "2026-03-17",
-        "change1dPct": 0.26,
-        "change5dPct": -3.24,
-        "change20dPct": 2.99,
+        "change1dPct": 0.37,
+        "change5dPct": -3.13,
+        "change20dPct": 3.12,
         "relationToGold": "context"
       },
       {
@@ -185,8 +191,21 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-17 | economictimes.indiatimes.com | Pakistan Afghanistan war latest : Pakistan - Afghanistan War latest updates : 400 killed in Kabul as Islamabad launches deadly airstrikes , will U . S . President Donald Trump intervene ?",
+      "2026-03-17 | businesstimes.com.sg | Global funds look to Malaysia as Iran war shakes up Asian assets",
+      "2026-03-17 | businesstimes.com.sg | Gold steady as investors await central bank decisions , weigh Middle East risks",
+      "2026-03-17 | businesstimes.com.sg | Is the fixed - income market ripe for yield - hunting amid volatility ? Here where to look , according to analysts"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-17 | businesstimes.com.sg | Gold steady as investors await central bank decisions , weigh Middle East risks",
+      "2026-03-17 | investopedia.com | The Fed Meets This Week And It Could Signal How Long Today High Savings Rates Will Last",
+      "2026-03-17 | butlereagle.com | U . S . stocks climb to their best day since the Iran war began after oil prices ease",
+      "2026-03-17 | naturalnews.com | Catherine Austin Fitts warns : Strait of Hormuz shutdown signals  COVID 2 . 0  and engineered famine – NaturalNews . com",
+      "2026-03-17 | freemalaysiatoday.com | Ringgit opens firmer versus US dollar on improved sentiment"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-17 | businesstimes.com.sg | Gold steady as investors await central bank decisions , weigh Middle East risks"
+    ]
   }
 }
