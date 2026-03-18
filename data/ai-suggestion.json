@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T06:24:51.699Z",
+  "generatedAt": "2026-03-18T07:24:30.180Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm (-3.37%/7 ngày) từ vùng định giá quá cao (percentile 98%), nhưng đà giảm có thể chững lại do giá thế giới tìm hỗ trợ ngắn hạn và lạm phát kỳ vọng tăng; nhà đầu tư nên chờ xác nhận xu hướng rõ ràng hơn trước khi hành động.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm 3.39% sau 7 ngày và giao dịch ở vùng giá cao (percentile 98% 5 năm), trong khi giá thế giới có dấu hiệu hồi phục nhẹ từ đáy nhưng áp lực từ USD mạnh và lợi suất thực tăng cao đang kìm hãm đà tăng.",
     "reasons": [
-      "Giá SJC giảm mạnh 3.37% trong 7 ngày gần nhất, chạm mức 183 triệu VND/lượng, cho thấy áp lực chốt lời từ vùng đỉnh lịch sử.",
-      "Giá đang giao dịch ở phân vị 98% (5 năm), mức định giá cực cao hạn chế tiềm năng tăng giá ngắn hạn và tăng rủi ro điều chỉnh sâu.",
-      "Lạm phát kỳ vọng (Breakeven 10Y) tăng 4.87% trong 20 ngày (lên 2.37%), cùng với bất ổn địa chính trị (Israel-Iran) có thể tạo sàn hỗ trợ cho giá vàng.",
-      "Premium giảm từ 17.42% (17/02) xuống 12.08% (23/02) và hồi về 15.7% hiện tại, cho thấy premium đang dao động bình thường thay vì bùng nổ bất thường."
+      "Giá SJC 183 triệu VND/lượng giảm -3.39% sau 7 ngày và nằm dưới MA7 (158.63 triệu VND/lượng quy đổi thế giới), cho thấy động lượng ngắn hạn đã suy yếu.",
+      "Giá thế giới XAUUSD (5007 USD/oz) giảm -3.35% sau 5 ngày nhưng đang hồi phục nhẹ từ đáy 5012 USD/oz ngày 16/03.",
+      "USD Index tăng mạnh +2.56% sau 20 ngày (đạt 120.55) và lợi suất thực 10 năm tăng +5.65% (đạt 1.87%), tạo áp lực bán vàng đáng kể.",
+      "Premium SJC 15.73% đang ở mức hợp lý trong biên độ dao động 30 ngày (10.96%-17.42%), không có tín hiệu bong bóng hay cơ hội arbitrage đặc biệt."
     ],
     "risks": [
-      "Dữ liệu tin tức vĩ mô (policyHeadlines) thiếu các phát ngôn trực tiếp từ Fed/ECB về lãi suất, làm giảm độ tin cậy của phân tích chính sách.",
-      "Đồng USD mạnh lên (+2.56% trong 20 ngày) và lợi suất thực duy trì cao (1.87%) có thể tiếp tục gây áp lực giảm lên giá vàng thế giới.",
-      "Rủi ro thanh khoản nếu giá tiếp tục điều chỉnh về mức MA30 (161.6 triệu VND/lượng), tương ứng vùng hỗ trợ kỹ thuật quan trọng."
+      "Rủi ro điều chỉnh sâu hơn nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz do áp lực từ USD mạnh tiếp tục.",
+      "Thanh khoản có thể sụt giảm khi nhà đầu tư chờ đợi quyết định lãi suất từ Fed.",
+      "Biến động giá cao (1.32%/ngày) có thể gây thua lỗ ngắn hạn nếu mua đuôi."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -3.37,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Phân vị 5 năm",
-        "value": 98,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC/Thế giới",
-        "value": 15.7,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 5008.84,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Lạm phát kỳ vọng (Breakeven 10Y)",
-        "value": 2.37,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Chỉ số USD (Trade Weighted)",
-        "value": 120.5518,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "MA30 (SJC)",
-        "value": 161614794,
+        "key": "Giá thế giới quy đổi",
+        "value": 158130180,
         "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 7 ngày SJC",
+        "value": -3.39,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC",
+        "value": 15.73,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "USD Index 20 ngày",
+        "value": 2.56,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực 10Y 20 ngày",
+        "value": 5.65,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá XAUUSD 5 ngày",
+        "value": -3.35,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Percentile 5 năm",
+        "value": 98,
+        "unit": "%",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T06:24:16.647Z",
+    "latestTimestamp": "2026-03-18T07:23:59.966Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 158174330.82977158,
-    "premiumPct": 15.7,
-    "change7dPct": -3.37,
-    "change30dPct": 0.33,
+    "intlVndPerTael": 158130180.15352407,
+    "premiumPct": 15.73,
+    "change7dPct": -3.39,
+    "change30dPct": 0.3,
     "volatilityDailyPct": 1.32,
-    "ma7VndPerTael": 158634166,
-    "ma30VndPerTael": 161614794,
+    "ma7VndPerTael": 158627859,
+    "ma30VndPerTael": 161613322,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T06:24:23.078Z",
+    "fetchedAt": "2026-03-18T07:24:06.225Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5009.12,
+        "value": 5008.42,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": 0.12,
-        "change5dPct": -3.34,
-        "change20dPct": 0.64,
+        "change1dPct": 0.11,
+        "change5dPct": -3.35,
+        "change20dPct": 0.62,
         "relationToGold": "context"
       },
       {
@@ -192,22 +192,23 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-18 | lewrockwell.com | Inflation Will Define the Next Crisis",
-      "2026-03-18 | lewrockwell.com | All This Fuss About a Fiat Dollar",
-      "2026-03-18 | original.antiwar.com | The Explosion Inside Trump War Machine : Joe Kent Resigns"
+      "2026-03-18 | nzherald.co.nz | NZX 50 up 1 % as property gains outweigh Middle East conflict worries – Market close",
+      "2026-03-18 | bozemandailychronicle.com | Top US intelligence officials set to testify about Iran war , threats confronting the homeland",
+      "2026-03-18 | thehindubusinessline.com | Gold steady as investors weigh Mideast risks ahead of Fed decision",
+      "2026-03-18 | thehindubusinessline.com | With watchful eye on Iran war , crypto dodges UAE disruption"
     ],
     "countryActionHeadlines": [
-      "2026-03-18 | lewrockwell.com | Inflation Will Define the Next Crisis",
-      "2026-03-18 | lewrockwell.com | All This Fuss About a Fiat Dollar",
-      "2026-03-18 | lewrockwell.com | Our only Hope to Avoid Civil War and Depression is to Reverse The Coup of 1913 that Destroyed our Constitutional Republic .",
-      "2026-03-18 | spacewar.com | Stocks extend gains and oil dips as US , Israel , Iran continue strikes",
-      "2026-03-18 | freemalaysiatoday.com | Indonesia tightens dollar - buying rules over outflows"
+      "2026-03-18 | nzherald.co.nz | NZX 50 up 1 % as property gains outweigh Middle East conflict worries – Market close",
+      "2026-03-18 | thehindubusinessline.com | Gold steady as investors weigh Mideast risks ahead of Fed decision",
+      "2026-03-18 | timesofindia.indiatimes.com | Gold price prediction today : Where is gold headed on March 18 , 2026 & is the bull run over for now ?",
+      "2026-03-18 | finance.yahoo.com | Strength in Stocks Weighs on the Dollar and Gold",
+      "2026-03-18 | economictimes.indiatimes.com | Silver and gold ETFs fall up to 4 % ahead of Fed decision . What investors should do"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-18 | lewrockwell.com | Inflation Will Define the Next Crisis",
-      "2026-03-18 | lewrockwell.com | All This Fuss About a Fiat Dollar",
-      "2026-03-18 | lewrockwell.com | Our only Hope to Avoid Civil War and Depression is to Reverse The Coup of 1913 that Destroyed our Constitutional Republic .",
-      "2026-03-18 | finance.yahoo.com | Can the SPDR Gold ETF Keep Climbing From Here ?"
+      "2026-03-18 | nzherald.co.nz | NZX 50 up 1 % as property gains outweigh Middle East conflict worries – Market close",
+      "2026-03-18 | thehindubusinessline.com | Gold steady as investors weigh Mideast risks ahead of Fed decision",
+      "2026-03-18 | timesofindia.indiatimes.com | Gold price prediction today : Where is gold headed on March 18 , 2026 & is the bull run over for now ?",
+      "2026-03-18 | economictimes.indiatimes.com | Silver and gold ETFs fall up to 4 % ahead of Fed decision . What investors should do"
     ]
   }
 }
