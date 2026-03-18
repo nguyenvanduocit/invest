@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T00:22:41.977Z",
+  "generatedAt": "2026-03-18T01:35:13.632Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm ngắn hạn (-3.44%/7 ngày) từ vùng định giá cao (percentile 5 năm: 98%), nhưng xu hướng trung hạn vẫn dương nhờ sự bất ổn địa chính trị và nhu cầu dự trữ. Nên chờ đợi xác nhận hỗ trợ hoặc giảm nhiệt premium trước khi vào lệnh mới.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực bán từ thị trường quốc tế, trong khi premium vẫn neo ở mức cao 15.7%. Nhà đầu tư nên chờ đợi sự ổn định của giá thế giới hoặc sự thu hẹp của chênh lệch premium trước khi vào lệnh mới.",
     "reasons": [
-      "Động lượng giảm ngắn hạn: Giá SJC giảm 3.44% trong 7 ngày qua và đang giao dịch dưới MA7 (158.6 triệu VND/lượng), cho thấy áp lực bán đang hiện hữu.",
-      "Định giá ở vùng cực đoan lịch sử: Giá hiện tại 183 triệu VND/lượng nằm ở phân vị thứ 98 trong 5 năm qua, rủi ro điều chỉnh sâu vẫn còn (đã từng giảm 41.26% trong quá khứ).",
-      "Áp lực vĩ mô trái chiều: Lợi suất thực Mỹ 10 năm tăng mạnh 5.65% trong 20 ngày (lên 1.87%) và chỉ số USD tăng 2.56%, tạo áp lực giảm lên giá vàng thế giới (đã giảm 3.41% trong 5 ngày).",
-      "Yếu tố hỗ trợ địa chính trị: Căng thẳng với Iran và sự kiện quan chức Mỹ từ chức (ngày 17-18/03) duy trì yếu tố rủi ro, giúp hạn chế đà giảm của vàng."
+      "Giá vàng SJC giảm 3.37% trong 7 ngày qua (từ 189.2tr xuống 183tr VND/lượng), phản ánh đà điều chỉnh của giá thế giới.",
+      "Giá thế giới (XAU/USD) đang chịu áp lực từ việc USD Index tăng mạnh 2.56% trong 20 ngày qua và lợi suất thực 10 năm tăng 5.65%.",
+      "Premium SJC đang ở mức 15.7%, cao hơn đáng kể so với vùng thấp nhất 10.96% trong chuỗi 30 ngày, cho thấy định giá nội địa chưa hấp dẫn.",
+      "VIX giảm 13.53% trong 1 ngày cho thấy tâm lý sợ hãi đang hạ nhiệt, giảm động lực đẩy giá vàng tăng nhanh trong ngắn hạn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh kỹ thuật sâu hơn nếu giá thế giới mất mốc hỗ trợ 5000 USD/oz và premium SJC co về dưới 12%.",
-      "Thanh khoản thấp hoặc biến động cao (1.32%/ngày) có thể gây trượt giá khi thực hiện giao dịch lớn.",
-      "Dữ liệu tin tức vĩ mô hiện tại chứa nhiều nội dung nhiễu (quảng cáo, bài viết không liên quan), làm giảm độ tin cậy của các tín hiệu chính sách."
+      "Lạm phát kỳ vọng (Breakeven 10Y) tăng 4.87% trong 20 ngày có thể tạo đợt mua vàng phòng thủ mới bất ngờ.",
+      "Giá SJC đang ở phân vị 98% trong 5 năm (98th percentile), rủi ro điều chỉnh sâu vẫn còn nếu giá thế giới không phục hồi.",
+      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia cụ thể trong input, có thể bỏ sót các yếu tố kích giá đột ngột."
     ],
     "evidence": [
       {
@@ -28,52 +28,58 @@
       },
       {
         "key": "Biến động 7 ngày (SJC)",
-        "value": -3.44,
+        "value": -3.37,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Phân vị định giá 5 năm",
-        "value": 98,
-        "unit": "percentile",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC/Thế giới",
-        "value": 15.77,
+        "key": "Premium hiện tại",
+        "value": 15.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (Biến động 20 ngày)",
+        "key": "Premium thấp nhất 30 ngày",
+        "value": 10.96,
+        "unit": "%",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "USD Index biến động 20 ngày",
+        "value": 2.56,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực 10Y biến động 20 ngày",
         "value": 5.65,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá vàng thế giới (XAUUSD)",
-        "value": 5005.36,
-        "unit": "USD/oz",
+        "key": "VIX biến động 1 ngày",
+        "value": -13.53,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số USD (Biến động 20 ngày)",
-        "value": 2.56,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Phân vị giá 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T00:22:20.210Z",
+    "latestTimestamp": "2026-03-18T01:34:52.447Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 158078238.92450488,
-    "premiumPct": 15.77,
-    "change7dPct": -3.44,
-    "change30dPct": 0.26,
+    "intlVndPerTael": 158166306.59199566,
+    "premiumPct": 15.7,
+    "change7dPct": -3.37,
+    "change30dPct": 0.32,
     "volatilityDailyPct": 1.32,
-    "ma7VndPerTael": 158618033,
-    "ma30VndPerTael": 161611029,
+    "ma7VndPerTael": 158633020,
+    "ma30VndPerTael": 161614526,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T00:22:25.766Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-18T01:34:55.531Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 5005.36,
+        "value": 5007.49,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": 0.05,
-        "change5dPct": -3.41,
-        "change20dPct": 0.56,
+        "change1dPct": 0.09,
+        "change5dPct": -3.37,
+        "change20dPct": 0.6,
         "relationToGold": "context"
       },
       {
@@ -185,23 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-18 | scoop.co.nz | The Explosion Inside Trump War Machine : Joe Kent Resigns",
-      "2026-03-17 | dailyreckoning.com | Why You Should Own Gold Miners AND Oil - The Daily Reckoning",
-      "2026-03-17 | 13newsnow.com | Iran posed no imminent threat  | Top US counterterrorism official resigns over Iran war",
-      "2026-03-17 | zerohedge.com | Stocks and bonds gain as eyes look to Fed - Newsquawk US Market Wrap"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-18 | greatbendpost.com | Oil prices resumed their rise because of the war with Iran",
-      "2026-03-17 | finance.yahoo.com | Dollar Retreats as Stocks Rebound and Bond Yields Fall"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-17 | dailyreckoning.com | Why You Should Own Gold Miners AND Oil - The Daily Reckoning",
-      "2026-03-17 | bostonstar.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights",
-      "2026-03-17 | zerohedge.com | Stocks and bonds gain as eyes look to Fed - Newsquawk US Market Wrap",
-      "2026-03-17 | dallassun.com | Midas Gold Group Shares Gold IRA Planning For 2026 : Updated Contribution Caps And Retirement Investment Insights",
-      "2026-03-17 | straitstimes.com | Middle - aged Chinese and Indian women emerge as force behind global gold demand : Report",
-      "2026-03-17 | el-balad.com | Why Gold Prices Remain Stable"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
