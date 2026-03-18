@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T04:40:49.501Z",
+  "generatedAt": "2026-03-18T05:32:03.949Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với biến động cao, trong khi giá thế giới quay đầu giảm và USD mạnh lên tạo áp lực bán; nhà đầu tư nên chờ đợi tín hiệu ổn định hoặc giá thế giới bật tăng trở lại trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử với áp lực bán từ USD mạnh và lợi suất thực tăng cao, trong khi premium 16.11% vẫn ở vùng an toàn; nhà đầu tư nên chờ xác nhận điểm hỗ trợ kỹ thuật trước khi vào lệnh mới.",
     "reasons": [
-      "Giá SJC giảm 3.84% trong 7 ngày qua xuống 183,000,000 VND/lượng, cho thấy động lượng bán đang tăng sau đợt tăng nóng.",
-      "Giá thế giới giảm 3.83% trong 5 ngày qua xuống 4,983.28 USD/oz, dưới các MA ngắn hạn và kéo theo tâm lý bán chốt lời toàn cầu.",
-      "Chỉ số USD Index tăng 2.56% trong 20 ngày qua lên 120.55 điểm, tạo áp lực ngược chiều mạnh lên giá vàng thế giới.",
-      "Premium SJC đang nới rộng lên 16.26%, cao hơn vùng 12-13% của đợt tăng giá đầu tháng 3, phản ánh tâm lý lo ngại rủi ro nhưng cũng ám chỉ biên độ an toàn thấp."
+      "Áp lực bán ngắn hạn rõ ràng: Giá thế giới giảm -3.71% trong 7 ngày và giá SJC giảm từ đỉnh 190.9 triệu (02/03) về 183 triệu, tương ứng giảm 4.1%.",
+      "Đồng USD mạnh tạo đầu gió ngược: US Dollar Index tăng +2.56% trong 20 ngày và Lợi suất thực 10 năm tăng +5.65% trong 20 ngày, cả hai đều gây áp lực giảm giá vàng.",
+      "Premium đã giảm từ đỉnh 17.42% (17/02) về 16.11%, cho thấy tâm lý thị trường đang bình thường hóa và không có dấu hiệu hoảng loạn tích trữ.",
+      "Giá SJC hiện tại (183 triệu) đã thấp hơn MA7 (158.55 triệu - quy đổi thế giới) và MA30 (161.6 triệu - quy đổi thế giới), cho thấy thị trường đang trong nhịp điều chỉnh kỹ thuật."
     ],
     "risks": [
-      "Rủi ro biến động cao (volatility 1.32%) khi thị trường chờ đợi quyết định lãi suất từ Fed có thể gây sập bẫy thanh khoản.",
-      "Giá thế giới có thể tiếp tục điều chỉnh sâu hơn nếu dữ liệu vĩ mô Mỹ tiếp tục tốt, kéo giá SJC giảm theo.",
-      "Premium co hẹp đột ngột nếu giá thế giới hồi phục có thể khiến nhà đầu tư mua đuôi chịu lỗ tỷ giá."
+      "Rủi ro dữ liệu nhiễu: Các tiêu đề chính sách (Fed, ECB) trong input không chứa nội dung trực tiếp tác động đến giá vàng, làm giảm độ tin cậy của tín hiệu vĩ mô.",
+      "Điểm mua quá cao về mặt định vị: Giá đang ở phân vị 98% trong 5 năm (percentile5y: 98), rủi ro điều chỉnh sâu vẫn còn nếu USD tiếp tục tăng.",
+      "Biến động cao: Volatility 1.32%/ngày và lịch sử drawdown tồi nhất -41.26% cảnh báo rủi ro giảm giá đáng kể."
     ],
     "evidence": [
       {
@@ -27,43 +27,43 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới hiện tại",
-        "value": 4983.28,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "Giá thế giới quy đổi",
+        "value": 157605445.21,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -3.84,
+        "key": "Premium SJC",
+        "value": 16.11,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá thế giới 5 ngày",
-        "value": -3.83,
+        "key": "Biến động 7 ngày (Thế giới)",
+        "value": -3.71,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Chỉ số USD Index",
-        "value": 120.55,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Biến động USD Index 20 ngày",
+        "key": "US Dollar Index 20 ngày",
         "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC hiện tại",
-        "value": 16.26,
+        "key": "Lợi suất thực 10 năm 20 ngày",
+        "value": 5.65,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Phân vị giá 5 năm",
+        "value": 98,
+        "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Volatility Index",
+        "key": "VIX Index",
         "value": 23.51,
         "unit": "index",
         "source": "first_principles_context"
@@ -71,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T04:40:16.944Z",
+    "latestTimestamp": "2026-03-18T05:31:36.349Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 157405832.11475706,
-    "premiumPct": 16.26,
-    "change7dPct": -3.84,
-    "change30dPct": -0.16,
+    "intlVndPerTael": 157605445.2136775,
+    "premiumPct": 16.11,
+    "change7dPct": -3.71,
+    "change30dPct": -0.03,
     "volatilityDailyPct": 1.32,
-    "ma7VndPerTael": 158524381,
-    "ma30VndPerTael": 161589177,
+    "ma7VndPerTael": 158552897,
+    "ma30VndPerTael": 161595831,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T04:40:25.987Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-18T05:31:44.544Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4983.28,
+        "value": 4990.49,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": -0.4,
-        "change5dPct": -3.83,
-        "change20dPct": 0.12,
+        "change1dPct": -0.25,
+        "change5dPct": -3.7,
+        "change20dPct": 0.26,
         "relationToGold": "context"
       },
       {
@@ -191,19 +191,8 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-18 | proactiveinvestors.com.au | Titan Minerals lifts Dynasty resource to 3 . 9Moz gold as Cerro Verde drives growth"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-18 | maitlandmercury.com.au | Asian stocks rally as oil retreats , US Fed in spotlight",
-      "2026-03-18 | econotimes.com | Gold Prices Hold Steady Amid U . S .- Israel - Iran Conflict and Fed Rate Decision",
-      "2026-03-18 | econotimes.com | FxWirePro : EUR / AUD neutral in the near - term , scope for downward resumption",
-      "2026-03-18 | newcastleherald.com.au | Asian stocks rally as oil retreats , US Fed in spotlight"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-18 | investmentexecutive.com | Markets edge higher ahead of interest rate decisions from BoC and Fed",
-      "2026-03-18 | econotimes.com | Gold Prices Hold Steady Amid U . S .- Israel - Iran Conflict and Fed Rate Decision",
-      "2026-03-18 | businesstimes.com.sg | Singapore gold sellers bring in more stock , build vaults to meet higher demand amid Middle East crisis"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
