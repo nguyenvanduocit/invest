@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T15:28:28.139Z",
+  "generatedAt": "2026-03-18T16:24:57.710Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,78 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh (-5.94%/7 ngày) do USD tăng giá và lợi suất thực tăng, nhưng mức giá 183 triệu VND/lượng vẫn nằm trong vùng lịch sử cực cao (percentile 98% 5 năm) khiến rủi ro mua đuổi là rất lớn.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử khi giá thế giới lao dốc -5.92% trong 7 ngày và USD mạnh lên; nhà đầu tư nên chờ tín hiệu ổn định thay vì mua đuổi hoặc bán tháo, vì xung đột địa chính trị vẫn là yếu tố hỗ trợ dài hạn.",
     "reasons": [
-      "Áp lực bán từ vĩ mô: Chỉ số USD tăng 2.56% trong 20 ngày và lợi suất thực 10 năm Mỹ tăng 5.65% trong 20 ngày, tạo áp lực nghịch biến mạnh lên giá vàng thế giới (đã giảm -6.02% trong 5 ngày).",
-      "Định giá kỹ thuật quá cao: Giá SJC 183 triệu VND/lượng đang nằm ở phân vị 98% trong 5 năm qua, đồng thời thấp hơn MA7 (158 triệu VND/lượng) cho thấy động lượng ngắn hạn đã suy yếu đáng kể.",
-      "Sự giãn nở premium bất thường: Chênh lệch giá SJC so với thế giới tăng vọt lên 18.86% từ mức 12-13% đầu tháng, cho thấy tâm lý thị trường Việt Nam đang hoảng loạn hoặc thiếu thanh khoản thay vì đầu tư cơ bản."
+      "Giá vàng SJC giảm mạnh -5.92% trong 7 ngày và nằm dưới MA7 (158.0 triệu VND/lượng), cho thấy động lượng bán đang chi phối ngắn hạn.",
+      "Giá thế giới XAUUSD giảm -2.51% xuống 4877.52 USD/oz do USD Index tăng +2.56% trong 20 ngày và lợi suất thực 10Y neo ở mức cao 1.87%.",
+      "Premium SJC nới rộng lên 18.83% (từ mức thấp nhất 10.96% trong chuỗi 30 ngày), phản ánh tâm lý phòng thủ của nhà đầu tư Việt Nam nhưng làm giảm hấp dẫn mua mới.",
+      "VIX ở mức 22.37 và tin tức xung đột US-Iran đẩy dầu thô lên 108 USD/thùng tạo rủi ro lạm phát, có thể hỗ trợ vàng bật lại nhưng cũng gây biến động lớn."
     ],
     "risks": [
-      "Rủi ro điều chỉnh sâu nếu giá thế giới mất mốc hỗ trợ 4,800 USD/oz và premium Việt Nam co lại về mức trung bình 12-14%.",
-      "Thiếu tín hiệu sự kiện rõ ràng: Các headline chính sách (Fed, ECB) không chứa tin tức trọng tâm về lãi suất hoặc địa chính trị ảnh hưởng trực tiếp vàng, làm giảm độ tin cậy dự báo.",
-      "Biến động cao 1.4%/ngày cộng với drawdown tồi tệ nhất 41.26% trong quá khứ cảnh báo rủi ro vốn lớn."
+      "Giá SJC đang ở phân vị 98% 5 năm (183 triệu VND/lượng), rủi ro điều chỉnh sâu còn cao nếu dữ liệu Fed hawkish.",
+      "Biến động ngày 1.39% kết hợp với sự kiện Fed decision có thể gây sốc thanh khoản ngắn hạn.",
+      "Premium co giãn mạnh (từ 10.96% đến 18.83% trong 30 ngày) làm khó kiểm soát điểm vào/lên vốn."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới quy đổi",
-        "value": 153960769,
+        "key": "Giá thế giới XAUUSD",
+        "value": 4877.52,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biến động 7 ngày SJC",
+        "value": -5.92,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC/Thế giới",
+        "value": 18.83,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA7 giá SJC",
+        "value": 158037226,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC",
-        "value": 18.86,
+        "key": "USD Index thay đổi 20 ngày",
+        "value": 2.56,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -5.94,
+        "key": "Lợi suất thực US 10Y",
+        "value": 1.87,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
         "key": "Phân vị giá 5 năm",
         "value": 98,
         "unit": "percentile",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Giá vàng thế giới XAUUSD 5 ngày",
-        "value": -6.02,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Chỉ số USD 20 ngày",
-        "value": 2.56,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm 20 ngày",
-        "value": 5.65,
-        "unit": "%",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T15:27:58.968Z",
+    "latestTimestamp": "2026-03-18T16:24:27.744Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 153960768.5208993,
-    "premiumPct": 18.86,
-    "change7dPct": -5.94,
-    "change30dPct": -2.34,
-    "volatilityDailyPct": 1.4,
-    "ma7VndPerTael": 158032229,
-    "ma30VndPerTael": 161474342,
+    "intlVndPerTael": 153995750.21864134,
+    "premiumPct": 18.83,
+    "change7dPct": -5.92,
+    "change30dPct": -2.32,
+    "volatilityDailyPct": 1.39,
+    "ma7VndPerTael": 158037226,
+    "ma30VndPerTael": 161475508,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -89,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T15:28:02.632Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-18T16:24:39.078Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4869.94,
+        "value": 4877.52,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": -2.66,
-        "change5dPct": -6.02,
-        "change20dPct": -2.16,
+        "change1dPct": -2.51,
+        "change5dPct": -5.88,
+        "change20dPct": -2.01,
         "relationToGold": "context"
       },
       {
@@ -190,8 +191,28 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-18 | livemint.com | Crude hovers near $108 amid US - Iran conflict : How could oil volatility affect your investment portfolio ?",
+      "2026-03-18 | english.aawsat.com | Gold Falls 2 % as Inflation Fears Bolster Hawkish Fed Bets",
+      "2026-03-18 | zerohedge.com | Why Is Wyoming Stashing Gold Inside This Old Newspaper Building ?",
+      "2026-03-18 | kplctv.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
+      "2026-03-18 | wctv.tv | Top US intelligence officials set to testify about Iran war , threats confronting the homeland"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-18 | english.aawsat.com | Gold Falls 2 % as Inflation Fears Bolster Hawkish Fed Bets",
+      "2026-03-18 | kplctv.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
+      "2026-03-18 | londonlovesbusiness.com | Pound sterling edges lower as markets eye central bank meetings - London Business News",
+      "2026-03-18 | lowellsun.com | US stocks drift lower in countdown to Fed decision as oil prices rise",
+      "2026-03-18 | pottsmerc.com | US stocks drift lower in countdown to Fed decision as oil prices rise",
+      "2026-03-18 | capitalgazette.com | US stocks drift lower in countdown to Fed decision as oil prices rise"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-18 | livemint.com | Crude hovers near $108 amid US - Iran conflict : How could oil volatility affect your investment portfolio ?",
+      "2026-03-18 | english.aawsat.com | Gold Falls 2 % as Inflation Fears Bolster Hawkish Fed Bets",
+      "2026-03-18 | zerohedge.com | Why Is Wyoming Stashing Gold Inside This Old Newspaper Building ?",
+      "2026-03-18 | kplctv.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
+      "2026-03-18 | torontotelegraph.com | Inventus Reports $1 . 16 Million in Gold Sales and 102 % Return on Bulk Sample Cost at Pardo",
+      "2026-03-18 | breitbart.com | Investors Turn Bearish Amid Iran War and Private Credit Turmoil"
+    ]
   }
 }
