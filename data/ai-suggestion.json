@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T17:24:20.735Z",
+  "generatedAt": "2026-03-18T18:21:28.897Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử khi giá thế giới giảm và USD tăng sức mạnh, tạo áp lực bán ngắn hạn; tuy nhiên, rủi ro địa chính trị từ Iran và mức premium tăng vọt gợi ý nên chờ tín hiệu ổn định trước khi mua.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử khi giá thế giới giảm -5.73% trong 5 ngày và USD tăng +2.56% trong 20 ngày, nhưng rủi ro địa chính trị từ Iran war và VIX ở mức 22.37 vẫn hỗ trợ dài hạn. Nên chờ xác nhận vùng hỗ trợ thay vì bắt dao rơi.",
     "reasons": [
-      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (158.1 triệu) và giảm 5.65% sau 7 ngày, cho thấy động lượng bán đang chi phối ngắn hạn.",
-      "Giá thế giới XAUUSD giảm về 4890.33 USD/oz (-2.2%/ngày), chịu áp lực từ USD Index tăng 2.56% trong 20 ngày và lợi suất thực 10Y ở mức cao 1.87%.",
-      "Premium tăng vọt lên 18.5% (từ mức thấp nhất 10.96% trong chuỗi 30 ngày) cho thấy tâm lý nhà đầu tư Việt Nam lo sợ nhưng giá đang ở vùng rất cao (percentile 5 năm: 98%).",
-      "VIX ở 22.37 và tin tức về chiến tranh Iran hỗ trợ vàng về dài hạn, nhưng tin nới lỏng trừng phạt dầu Venezuela đang gây áp lực giảm giá tức thời."
+      "Giá vàng thế giới giảm mạnh -5.73% trong 5 ngày xuống 4884.92 USD/oz, kéo giá SJC giảm -5.75% trong 7 ngày từ vùng 190.9 triệu xuống 183 triệu VND/lượng",
+      "USD Index tăng +2.56% trong 20 ngày lên 120.55 và lợi suất thực 10Y tăng +5.65% lên 1.87%, tạo áp lực bán vàng mạnh kể từ sau đỉnh 5330 USD/oz ngày 02/03",
+      "Premium SJC nới rộng lên 18.63% (từ mức thấp nhất 10.96% ngày 27/02), cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo ngại và giữ chênh lệch cao bất chấp giá thế giới giảm",
+      "Giá SJC hiện ở phân vị 98% trong 5 năm (183 triệu VND/lượng), rủi ro mua ở vùng giá cực đỉnh rất cao nếu không có tin tức địa chính trị mới"
     ],
     "risks": [
-      "Giá SJC có thể tiếp tục điều chỉnh về mức MA30 (161.5 triệu VND/lượng) nếu giá thế giới không giữ được hỗ trợ.",
-      "Lợi suất thực Mỹ duy trì trên 1.8% và Fed Funds ở 3.64% có thể tiếp tục gây áp lực lên giá vàng thế giới.",
-      "Premium 18.5% ở mức cao trong chuỗi dữ liệu, rủi ro co hẹp premium nếu giá thế giới hồi phục nhưng giá trong nước không tăng tương ứng."
+      "Xung đột Iran có thể leo thang bất ngờ, đẩy giá vàng tăng vọt ngắn hạn (VIX đang ở 22.37)",
+      "Fed phát biểu chính sách ngày 18/03 có thể gây biến động lớn nếu tín hiệu hawkish hơn kỳ vọng",
+      "Giá thế giới có thể test thêm vùng hỗ trợ thấp hơn nếu USD tiếp tục mạnh, kéo SJC về vùng 178-180 triệu"
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "gold_spot_price",
+        "value": 4884.92,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "sjc_price_current",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4890.33,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biến động 7 ngày SJC",
-        "value": -5.65,
+        "key": "sjc_change_7d",
+        "value": -5.75,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC",
-        "value": 18.5,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA30 SJC",
-        "value": 161490045,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "USD Index thay đổi 20 ngày",
+        "key": "usd_index_20d_change",
         "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực Mỹ 10 năm",
+        "key": "us_real_yield_10y",
         "value": 1.87,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
+        "key": "premium_pct",
+        "value": 18.63,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "vix_level",
         "value": 22.37,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "percentile_5y",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T17:23:44.353Z",
+    "latestTimestamp": "2026-03-18T18:21:02.215Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 154431861.06805494,
-    "premiumPct": 18.5,
-    "change7dPct": -5.65,
-    "change30dPct": -2.05,
+    "intlVndPerTael": 154265942.18882012,
+    "premiumPct": 18.63,
+    "change7dPct": -5.75,
+    "change30dPct": -2.15,
     "volatilityDailyPct": 1.38,
-    "ma7VndPerTael": 158099528,
-    "ma30VndPerTael": 161490045,
+    "ma7VndPerTael": 158075825,
+    "ma30VndPerTael": 161484514,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,21 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T17:24:00.451Z",
-    "healthy": false,
-    "missingFactors": [
-      "US Treasury Yield 2Y"
-    ],
+    "fetchedAt": "2026-03-18T18:21:13.033Z",
+    "healthy": true,
+    "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4892.84,
+        "value": 4884.92,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": -2.2,
-        "change5dPct": -5.58,
-        "change20dPct": -1.7,
+        "change1dPct": -2.36,
+        "change5dPct": -5.73,
+        "change20dPct": -1.86,
         "relationToGold": "context"
       },
       {
@@ -165,12 +163,12 @@
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": null,
+        "value": 3.68,
         "unit": "%",
-        "date": null,
-        "change1dPct": null,
-        "change5dPct": null,
-        "change20dPct": null,
+        "date": "2026-03-16",
+        "change1dPct": -1.34,
+        "change5dPct": 3.37,
+        "change20dPct": 8.24,
         "relationToGold": "inverse"
       },
       {
@@ -186,32 +184,32 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve issues FOMC statement",
+      "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt",
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
-      "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks",
-      "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
-      "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
+      "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-18 | dailybulletin.com | US eases Venezuela oil sanctions as Trump seeks to boost supply",
-      "2026-03-18 | theitem.com | U . S . eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war"
+      "2026-03-18 | mysuncoast.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
+      "2026-03-18 | isp.netscape.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war"
     ],
     "countryActionHeadlines": [
-      "2026-03-18 | dailybulletin.com | US eases Venezuela oil sanctions as Trump seeks to boost supply",
-      "2026-03-18 | theitem.com | U . S . eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war",
-      "2026-03-18 | kfvs12.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
-      "2026-03-18 | mining.com | Gold price drops to month - low on rate cut uncertainty",
-      "2026-03-18 | thesouthafrican.com | There BAD news for an interest rate cut in South Africa next week",
-      "2026-03-18 | mankatofreepress.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war"
+      "2026-03-18 | mysuncoast.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
+      "2026-03-18 | isp.netscape.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war",
+      "2026-03-18 | thebull.com.au | US Stocks Falter on Hot Inflation Data",
+      "2026-03-18 | benzinga.com | Brent Tops $108 , Red - Hot PPI Fuels Stagflation Alarm On Fed Day : What Moving Markets Wednesday ? - Ciena ( NYSE : CIEN ), Colgate - Palmolive ( NYSE : CL )",
+      "2026-03-18 | oneidadispatch.com | US eases Venezuela oil sanctions as Trump seeks to boost supply",
+      "2026-03-18 | springfieldnewssun.com | US stocks fall as Brent crude jumps toward $110 per barrel"
     ],
     "dollarYieldHeadlines": [
-      "2026-03-18 | dailybulletin.com | US eases Venezuela oil sanctions as Trump seeks to boost supply",
-      "2026-03-18 | theitem.com | U . S . eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war",
-      "2026-03-18 | kfvs12.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
-      "2026-03-18 | mining.com | Gold price drops to month - low on rate cut uncertainty",
-      "2026-03-18 | mankatofreepress.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war",
-      "2026-03-18 | ktar.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war"
+      "2026-03-18 | mysuncoast.com | Trump issues 60 - day waiver from century - old Jones Act shipping rules to lower costs for oil as Iran war pressures prices",
+      "2026-03-18 | news.webindia123.com | Gold is positioned to anchor Indian portfolios during periods of market stress : World Gold Council",
+      "2026-03-18 | isp.netscape.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war",
+      "2026-03-18 | benzinga.com | Brent Tops $108 , Red - Hot PPI Fuels Stagflation Alarm On Fed Day : What Moving Markets Wednesday ? - Ciena ( NYSE : CIEN ), Colgate - Palmolive ( NYSE : CL )",
+      "2026-03-18 | oneidadispatch.com | US eases Venezuela oil sanctions as Trump seeks to boost supply",
+      "2026-03-18 | benzinga.com | Barrick Mining Stock Slips Amid Weaker Gold Prices - Barrick Mining ( NYSE : B )"
     ]
   }
 }

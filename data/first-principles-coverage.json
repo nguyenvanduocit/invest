@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-18T17:24:00.526Z",
+  "checkedAt": "2026-03-18T18:21:13.106Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-18T17:24:00.451Z",
+  "dataFetchedAt": "2026-03-18T18:21:13.033Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,29 +9,18 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "US Treasury Yield 2Y"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 7,
-    "countryActionCount": 15,
-    "dollarYieldCount": 14,
-    "sourceFailures": [
-      {
-        "id": "us_treasury_2y",
-        "error": "HTTP 502"
-      }
-    ],
-    "healthy": false
+    "geopoliticalCount": 9,
+    "countryActionCount": 14,
+    "dollarYieldCount": 11,
+    "sourceFailures": [],
+    "healthy": true
   },
-  "hardFailures": [
-    "Missing required factors: US Treasury Yield 2Y"
-  ],
-  "warnings": [
-    "Source failures: us_treasury_2y (HTTP 502)"
-  ],
-  "canProceedToIntegration": false
+  "hardFailures": [],
+  "warnings": [],
+  "canProceedToIntegration": true
 }
