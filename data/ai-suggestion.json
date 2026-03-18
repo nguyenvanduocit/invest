@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T10:20:15.812Z",
+  "generatedAt": "2026-03-18T11:18:42.210Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 5Y: 98%) trong bối cảnh vàng thế giới mất mốc 5,000 USD/oz trước quyết định lãi suất Fed. Biên độ premium 16.17% nằm trong vùng trung bình 30 ngày, chưa có tín hiệu đảo chiều rõ ràng từ động lượng bán gần đây.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 98) trong bối cảnh USD mạnh lên và thị trường chờ đợi quyết định lãi suất Fed; xu hướng ngắn hạn yếu đi nhưng đà giảm có thể chững lại quanh vùng hỗ trợ kỹ thuật.",
     "reasons": [
-      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (158.54 triệu - quy đổi thế giới) và giảm 3.76% sau 7 ngày, cho thấy động lượng bán đang chiếm ưu thế ngắn hạn.",
-      "Giá thế giới xả về 4,988.34 USD/oz, mất mốc tâm lý 5,000 USD/oz, chịu áp lực từ USD Index tăng 2.56% trong 20 ngày và lợi suất thực 10 năm ở mức cao 1.87%.",
-      "Vị thế giá đang ở phân vị 98% trong 5 năm (percentile 5Y), rủi ro mua đỉnh cao hơn đáng kể so với tiềm năng sinh lời ngắn hạn khi thị trường chờ Fed.",
-      "Biến động VIX ở 23.51 và rủi ro địa chính trị (US-Iran) có thể gây dao động mạnh hai chiều, chưa định hình xu hướng rõ ràng."
+      "Giá thế giới giảm mạnh 5 ngày qua (-4.11% đến 4971 USD/oz) và giá SJC giảm -4.09% trong 7 ngày, cho thấy động lượng tăng đã bị phá vỡ tạm thời.",
+      "Vị thế giá SJC (183 triệu VND/lượng) đang ở mức rất cao (percentile 98% trong 5 năm), rủi ro điều chỉnh sâu là đáng kể nếu Fed phát ngôn hawkish.",
+      "Chỉ số USD tăng 2.56% trong 20 ngày qua (đạt 120.55 điểm) và lợi suất thực 10 năm tăng 5.65% tạo áp lực bán vàng mạnh mẽ từ first-principles.",
+      "Premium SJC nới rộng lên 16.57% khi giá thế giới giảm nhanh hơn giá trong nước, cho thấy tâm lý nhà đầu tư Việt Nam vẫn thận trọng hỗ trợ giá."
     ],
     "risks": [
-      "Fed quyết định lãi suất trong ngày có thể gây biến động đột ngột cho giá USD và vàng.",
-      "Xung đột US-Iran có thể đẩy giá dầu và vàng tăng vọt bất ngờ, bỏ lỡ cơ hội mua nếu chờ quá lâu.",
-      "Lợi suất thực Mỹ tăng 5.65% trong 20 ngày có thể tiếp tục gây áp lực giảm lên giá vàng thế giới."
+      "Quyết định lãi suất và phát ngôn của Fed sắp tới có thể gây biến động hai chiều cực lớn cho giá vàng.",
+      "Rủi ro thanh khoản nếu giá tiếp tục điều chỉnh về mức MA30 (161.6 triệu VND/lượng).",
+      "Sự kiện địa chính trị (US-Iran) có thể đẩy giá dầu và lạm phát, kích hoạt dòng tiền mua vàng an toàn bất ngờ."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "Giá vàng SJC hiện tại",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Gold Spot",
-        "value": 4988.34,
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 4971.31,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Premium",
-        "value": 16.17,
+        "key": "Biến động 7 ngày (SJC)",
+        "value": -4.09,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Change 7d",
-        "value": -3.76,
+        "key": "Premium SJC/VN",
+        "value": 16.57,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Percentile 5Y",
+        "key": "Vị thế Percentile 5 năm",
         "value": 98,
         "unit": "percentile",
         "source": "market_snapshot"
       },
       {
-        "key": "USD Index Change 20d",
-        "value": 2.56,
-        "unit": "%",
-        "source": "macro_context"
+        "key": "Chỉ số USD (DXY)",
+        "value": 120.55,
+        "unit": "index",
+        "source": "first_principles_context"
       },
       {
-        "key": "US Real Yield 10Y",
+        "key": "Lợi suất thực Mỹ 10 năm",
         "value": 1.87,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "VIX",
+        "key": "VIX (Sợ hãi)",
         "value": 23.51,
         "unit": "index",
-        "source": "macro_context"
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T10:19:45.509Z",
+    "latestTimestamp": "2026-03-18T11:17:56.448Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 157527102.63184378,
-    "premiumPct": 16.17,
-    "change7dPct": -3.76,
-    "change30dPct": -0.08,
-    "volatilityDailyPct": 1.32,
-    "ma7VndPerTael": 158541705,
-    "ma30VndPerTael": 161593219,
+    "intlVndPerTael": 156989181.85774565,
+    "premiumPct": 16.57,
+    "change7dPct": -4.09,
+    "change30dPct": -0.42,
+    "volatilityDailyPct": 1.33,
+    "ma7VndPerTael": 158464859,
+    "ma30VndPerTael": 161575289,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T10:19:57.474Z",
+    "fetchedAt": "2026-03-18T11:18:09.103Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4990.09,
+        "value": 4969.11,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": -0.26,
-        "change5dPct": -3.7,
-        "change20dPct": 0.25,
+        "change1dPct": -0.68,
+        "change5dPct": -4.11,
+        "change20dPct": -0.17,
         "relationToGold": "context"
       },
       {
@@ -192,24 +192,22 @@
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
     "geopoliticalHeadlines": [
+      "2026-03-18 | thestar.com | Newcore Gold Announces Updated Mineral Resource Estimate for the Enchi Gold Project , Ghana",
+      "2026-03-18 | hindustantimes.com | 24K gold at ₹1 . 55 lakh in Delhi , ₹1 . 57 lakh in Chennai ; check MCX prices"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-18 | bworldonline.com | Go : April rate hike likely amid oil shock - BusinessWorld Online",
+      "2026-03-18 | finanznachrichten.de | Canadian Dollar Falls As Oil Prices Slide",
+      "2026-03-18 | marketscreener.com | Europe poised for third straight gain as markets await Fed signal",
+      "2026-03-18 | londonlovesbusiness.com | US dollar stable as investors await Fed decision - London Business News",
       "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
       "2026-03-18 | livemint.com | US - Iran war : How may crude oil price at $200 / barrel impact Nifty 50 , gold , silver ?"
     ],
-    "countryActionHeadlines": [
-      "2026-03-18 | londonlovesbusiness.com | US dollar stable as investors await Fed decision - London Business News",
-      "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
-      "2026-03-18 | livemint.com | US - Iran war : How may crude oil price at $200 / barrel impact Nifty 50 , gold , silver ?",
-      "2026-03-18 | kashmirlife.net | What Price Does an Oil - Dependent Economy Pay for Someone Else War ? | Kashmir Life - Latest News & Breaking News from Kashmir",
-      "2026-03-18 | myjoyonline.com | Cedi depreciates by 3 . 9 % against US dollar – BoG",
-      "2026-03-18 | freepressjournal.in | Gold Futures Dip To ₹1 . 55 Lakh Amid US Fed Caution & Geopolitical Oil Volatility"
-    ],
     "dollarYieldHeadlines": [
+      "2026-03-18 | hindustantimes.com | 24K gold at ₹1 . 55 lakh in Delhi , ₹1 . 57 lakh in Chennai ; check MCX prices",
+      "2026-03-18 | newjerseytelegraph.com | Augusta Precious Metals Reviews Highlight Growing Demand for Top Gold IRA Companies ( 2026 Industry Insights )",
       "2026-03-18 | rttnews.com | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
-      "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
-      "2026-03-18 | hawaiitelegraph.com | Augusta Precious Metals Reviews Highlight Growing Demand for Top Gold IRA Companies ( 2026 Industry Insights )",
-      "2026-03-18 | rttnews.com | US Counter - terrorism Chief Joe Kent Quits Over Middle East War",
-      "2026-03-18 | livemint.com | US - Iran war : How may crude oil price at $200 / barrel impact Nifty 50 , gold , silver ?",
-      "2026-03-18 | rttnews.com | US Counter - terrorism Chief Joe Kent Quits Over Middle East War"
+      "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision"
     ]
   }
 }
