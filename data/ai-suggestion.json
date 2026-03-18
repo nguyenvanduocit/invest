@@ -1,85 +1,85 @@
 {
-  "generatedAt": "2026-03-18T09:19:37.619Z",
+  "generatedAt": "2026-03-18T10:20:15.812Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm mạnh (-3.82% tuần) từ vùng đỉnh lịch sử (percentile 98% 5 năm) trong bối cảnh USD tăng mạnh (+2.56% 20 ngày) gây áp lực. Mặc dù đà giảm đã kéo giá về dưới MA7 (158.5 triệu VND/lượng), rủi ro mua đuổi ở vùng giá quá cao (premium 16.24%) là lớn, nhà đầu tư nên chờ tín hiệu ổn định.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm từ đỉnh lịch sử (percentile 5Y: 98%) trong bối cảnh vàng thế giới mất mốc 5,000 USD/oz trước quyết định lãi suất Fed. Biên độ premium 16.17% nằm trong vùng trung bình 30 ngày, chưa có tín hiệu đảo chiều rõ ràng từ động lượng bán gần đây.",
     "reasons": [
-      "Áp lực bán từ thị trường quốc tế: Giá thế giới giảm 3.75% trong 5 ngày gần nhất xuống 4,985.55 USD/oz, kéo giá SJC giảm sâu.",
-      "Đồng USD mạnh lên: Chỉ số USD tăng 2.56% trong 20 ngày (lên 120.55 điểm), tạo lực cản ngược lớn với giá vàng.",
-      "Biên độ an toàn chưa đạt: Giá SJC hiện tại (183 triệu VND/lượng) vẫn nằm trên đường MA7 (158.5 triệu VND/lượng) và chưa có dấu hiệu chạm đáy kỹ thuật.",
-      "Thanh khoản rủi ro: VIX vẫn ở mức cao (23.51) cho thấy tâm lý thị trường chưa ổn định, có thể gây biến động thêm."
+      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (158.54 triệu - quy đổi thế giới) và giảm 3.76% sau 7 ngày, cho thấy động lượng bán đang chiếm ưu thế ngắn hạn.",
+      "Giá thế giới xả về 4,988.34 USD/oz, mất mốc tâm lý 5,000 USD/oz, chịu áp lực từ USD Index tăng 2.56% trong 20 ngày và lợi suất thực 10 năm ở mức cao 1.87%.",
+      "Vị thế giá đang ở phân vị 98% trong 5 năm (percentile 5Y), rủi ro mua đỉnh cao hơn đáng kể so với tiềm năng sinh lời ngắn hạn khi thị trường chờ Fed.",
+      "Biến động VIX ở 23.51 và rủi ro địa chính trị (US-Iran) có thể gây dao động mạnh hai chiều, chưa định hình xu hướng rõ ràng."
     ],
     "risks": [
-      "Rủi ro điều chỉnh tiếp: Giá đang ở percentile 98% (gần đỉnh 5 năm), dư địa giảm sâu vẫn còn nếu phe bán kiểm soát.",
-      "Premium co hẹp: Chênh lệch giá (16.24%) có thể giảm thêm nếu giá thế giới tiếp tục giảm mà giá trong nước neo giữ, gây thiệt hại cho người nắm giữ.",
-      "Thiếu dữ liệu vĩ mô cụ thể: Không có tin tức địa chính trị hay hành động quốc gia nào trong dữ liệu đầu vào để hỗ trợ kịch bản tăng giá ngắn hạn."
+      "Fed quyết định lãi suất trong ngày có thể gây biến động đột ngột cho giá USD và vàng.",
+      "Xung đột US-Iran có thể đẩy giá dầu và vàng tăng vọt bất ngờ, bỏ lỡ cơ hội mua nếu chờ quá lâu.",
+      "Lợi suất thực Mỹ tăng 5.65% trong 20 ngày có thể tiếp tục gây áp lực giảm lên giá vàng thế giới."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "SJC Price",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -3.82,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 4985.55,
+        "key": "Gold Spot",
+        "value": 4988.34,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       },
       {
-        "key": "Chỉ số USD (DXY)",
-        "value": 120.5518,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "Premium",
+        "value": 16.17,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "Biến động USD 20 ngày",
+        "key": "Change 7d",
+        "value": -3.76,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5Y",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "USD Index Change 20d",
         "value": 2.56,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "MA7 giá SJC",
-        "value": 158529093,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "US Real Yield 10Y",
+        "value": 1.87,
+        "unit": "%",
+        "source": "macro_context"
       },
       {
-        "key": "VIX Volatility",
+        "key": "VIX",
         "value": 23.51,
         "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Percentile 5 năm",
-        "value": 98,
-        "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T09:19:01.661Z",
+    "latestTimestamp": "2026-03-18T10:19:45.509Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 157438817.38466674,
-    "premiumPct": 16.24,
-    "change7dPct": -3.82,
-    "change30dPct": -0.14,
+    "intlVndPerTael": 157527102.63184378,
+    "premiumPct": 16.17,
+    "change7dPct": -3.76,
+    "change30dPct": -0.08,
     "volatilityDailyPct": 1.32,
-    "ma7VndPerTael": 158529093,
-    "ma30VndPerTael": 161590277,
+    "ma7VndPerTael": 158541705,
+    "ma30VndPerTael": 161593219,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T09:19:05.599Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-18T10:19:57.474Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4987.57,
+        "value": 4990.09,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": -0.31,
-        "change5dPct": -3.75,
-        "change20dPct": 0.2,
+        "change1dPct": -0.26,
+        "change5dPct": -3.7,
+        "change20dPct": 0.25,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,25 @@
       "2026-03-08 | ECB Press / Speeches | Christine Lagarde: Interview with ELLE Magazine",
       "2026-03-06 | ECB Press / Speeches | Isabel Schnabel: Navigating inflation and employment in an era of supply shocks and AI"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
+      "2026-03-18 | livemint.com | US - Iran war : How may crude oil price at $200 / barrel impact Nifty 50 , gold , silver ?"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-18 | londonlovesbusiness.com | US dollar stable as investors await Fed decision - London Business News",
+      "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
+      "2026-03-18 | livemint.com | US - Iran war : How may crude oil price at $200 / barrel impact Nifty 50 , gold , silver ?",
+      "2026-03-18 | kashmirlife.net | What Price Does an Oil - Dependent Economy Pay for Someone Else War ? | Kashmir Life - Latest News & Breaking News from Kashmir",
+      "2026-03-18 | myjoyonline.com | Cedi depreciates by 3 . 9 % against US dollar – BoG",
+      "2026-03-18 | freepressjournal.in | Gold Futures Dip To ₹1 . 55 Lakh Amid US Fed Caution & Geopolitical Oil Volatility"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-18 | rttnews.com | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
+      "2026-03-18 | finanzen.ch | Gold Dips Below $5 , 000 Ahead Of Fed Rate Decision",
+      "2026-03-18 | hawaiitelegraph.com | Augusta Precious Metals Reviews Highlight Growing Demand for Top Gold IRA Companies ( 2026 Industry Insights )",
+      "2026-03-18 | rttnews.com | US Counter - terrorism Chief Joe Kent Quits Over Middle East War",
+      "2026-03-18 | livemint.com | US - Iran war : How may crude oil price at $200 / barrel impact Nifty 50 , gold , silver ?",
+      "2026-03-18 | rttnews.com | US Counter - terrorism Chief Joe Kent Quits Over Middle East War"
+    ]
   }
 }
