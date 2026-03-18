@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T22:08:52.637Z",
+  "generatedAt": "2026-03-18T23:09:14.251Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,57 +7,63 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới đang điều chỉnh mạnh sau đợt tăng giá kéo dài, trong khi giá SJC Việt Nam neo cao tạo ra mức premium kỷ lục gần 20%. Nhà đầu tư không nên mua đuổi ở vùng giá quá cao này, nhưng cũng chưa nên bán khống khi xu hướng dài hạn vẫn tích cực và rủi ro địa chính trị hiện hữu.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh -4.87% sau 7 ngày và giao dịch ở vùng giá cực cao (percentile 98%), trong khi giá thế giới giảm sâu về 4835 USD/oz; nhà đầu tư nên chờ đợi sự ổn định của thị trường sau đợt bán tháo thay vì mua đuổi.",
     "reasons": [
-      "Giá vàng thế giới giảm mạnh 6.66% trong 5 ngày gần nhất (xuống 4829.81 USD/oz), kéo theo giảm 4.99% giá SJC trong 7 ngày, cho thấy động lượng tăng đã bị phá vỡ tạm thời.",
-      "Premium SJC đang ở mức rất cao 19.98% (30.47 triệu VND/lượng), cao hơn đáng kể so với vùng 12-16% trong hầu hết các ngày của chuỗi 30 ngày, thể hiện sự định giá quá cao của vàng trong nước so với thế giới.",
-      "Đồng USD mạnh lên (DXY tăng 2.56% trong 20 ngày) và lợi suất thực 10 năm ở mức 1.83% tạo áp lực bán lên giá vàng, làm giảm hấp dẫn của kim loại quý.",
-      "Giá SJC hiện tại 183 triệu VND/lượng nằm dưới MA7 (156.7 triệu - *lưu ý: dữ liệu đầu vào có sự bất hợp lệ về đơn vị MA, sử dụng xu hướng giảm 7 ngày để tham chiếu*), xác nhận xu hướng điều chỉnh ngắn hạn."
+      "Giá SJC 183 triệu VND/lượng đang thấp hơn MA7 (156.8 triệu) và MA30 (161.4 triệu), cho thấy động lượng ngắn hạn đã suy yếu đáng kể sau đợt điều chỉnh.",
+      "Premium tăng vọt lên 19.83% từ mức 12-15% đầu tháng, cho thấy giá Việt Nam neo cứng trong khi giá thế giới giảm sâu -4.8% trong 5 ngày, tạo rủi ro điều chỉnh premium.",
+      "Giá thế giới XAUUSD giảm về 4835 USD/oz, chịu áp lực từ USD Index tăng +2.56% (20 ngày) và lợi suất thực 10Y ở mức cao 1.83%.",
+      "VIX ở 22.37 cho thấy thị trường vẫn căng thẳng sau FOMC ngày 18/03 giữ nguyên lãi suất 3.5-3.75%, nhưng chưa đủ để kích hoạt dòng tiền vào vàng an toàn."
     ],
     "risks": [
-      "Premium co giãn mạnh: Nếu giá thế giới hồi phục nhưng tâm lý nhà đầu tư Việt Nam thận trọng, premium có thể giảm từ 20% về 15%, khiến giá SJC đi ngang hoặc giảm dù giá thế giới tăng.",
-      "Rủi ro kỹ thuật: Giá thế giới đã phá vỡ các mức hỗ trợ ngắn hạn, có thể tiếp tục điều chỉnh sâu hơn trước khi tìm đáy.",
-      "Thanh khoản cao và biến động 1.42%/ngày có thể gây thua lỗ ngắn hạn cho nhà đầu tư dùng đòn bẩy."
+      "Premium 19.83% có thể co về mức trung bình 13-15% nếu giá thế giới phục hồi, gây thua lỗ cho người mua hiện tại.",
+      "Giá SJC ở percentile 98% trong 5 năm (98/100), rủi ro điều chỉnh sâu nếu động lượng tiếp tục suy yếu.",
+      "Lạm phát kỳ vọng tăng +4.8% (20 ngày) có thể khiến Fed duy trì lãi suất cao lâu hơn, gây áp lực tiếp lên giá vàng."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới (Spot)",
-        "value": 4829.81,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Giá SJC Việt Nam",
+        "key": "Giá SJC hiện tại",
         "value": 183000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Tỷ lệ Premium SJC",
-        "value": 19.98,
+        "key": "Giá thế giới XAUUSD",
+        "value": 4835.91,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium SJC",
+        "value": 19.83,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá thế giới 5 ngày",
-        "value": -6.66,
+        "key": "Biến động 7 ngày SJC",
+        "value": -4.87,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "USD Index thay đổi 20 ngày",
+        "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số Dollar Index (DXY)",
-        "value": 120.55,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
+        "key": "Lợi suất thực 10Y",
         "value": 1.83,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX (Sợ hãi)",
+        "key": "VIX Index",
         "value": 22.37,
         "unit": "index",
         "source": "first_principles_context"
@@ -65,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T22:08:27.644Z",
+    "latestTimestamp": "2026-03-18T23:08:51.240Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 152520981.84204176,
-    "premiumPct": 19.98,
-    "change7dPct": -4.99,
-    "change30dPct": -1.05,
+    "intlVndPerTael": 152713550.28546026,
+    "premiumPct": 19.83,
+    "change7dPct": -4.87,
+    "change30dPct": -0.93,
     "volatilityDailyPct": 1.42,
-    "ma7VndPerTael": 156737097,
-    "ma30VndPerTael": 161384954,
+    "ma7VndPerTael": 156764606,
+    "ma30VndPerTael": 161391373,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T22:08:34.079Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-18T23:08:57.372Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4836.86,
+        "value": 4834.5,
         "unit": "USD/oz",
-        "date": "2026-03-18",
-        "change1dPct": -3.32,
-        "change5dPct": -6.66,
-        "change20dPct": -2.82,
+        "date": "2026-03-19",
+        "change1dPct": -0.05,
+        "change5dPct": -4.8,
+        "change20dPct": -3.24,
         "relationToGold": "context"
       },
       {
@@ -185,8 +191,29 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-18 | investmentexecutive.com | U . S . stocks slump on worries about higher oil prices , inflation and interest rates",
+      "2026-03-18 | milwaukeesun.com | U . S . stocks tumble as Fed keeps interest rates on hold",
+      "2026-03-18 | oklahomastar.com | U . S . stocks tumble as Fed keeps interest rates on hold",
+      "2026-03-18 | brazilsun.com | U . S . stocks tumble as Fed keeps interest rates on hold",
+      "2026-03-18 | thestar.com.my | 2nd LD Writethru : U . S . Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
+      "2026-03-18 | dailybreeze.com | Lance Christensen : LAUSD is broke , and the union knows it"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-18 | milwaukeesun.com | U . S . stocks tumble as Fed keeps interest rates on hold",
+      "2026-03-18 | oklahomastar.com | U . S . stocks tumble as Fed keeps interest rates on hold",
+      "2026-03-18 | brazilsun.com | U . S . stocks tumble as Fed keeps interest rates on hold",
+      "2026-03-18 | thestar.com.my | 2nd LD Writethru : U . S . Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
+      "2026-03-18 | businesstimes.com.sg | US Fed leaves interest rates unchanged , expects inflation to rise",
+      "2026-03-18 | queanbeyanage.com.au | US Fed leaves rates unchanged despite higher inflation"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-18 | investmentexecutive.com | U . S . stocks slump on worries about higher oil prices , inflation and interest rates",
+      "2026-03-18 | milwaukeesun.com | Gold is positioned to anchor Indian portfolios during periods of market stress : World Gold Council",
+      "2026-03-18 | thestar.com.my | 2nd LD Writethru : U . S . Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
+      "2026-03-18 | nvdaily.com | US stocks slump on worries about higher oil prices , inflation and interest rates",
+      "2026-03-18 | springfieldnewssun.com | US stocks slump on worries about higher oil prices , inflation and interest rates",
+      "2026-03-18 | marketpulse.com | FOMC pauses rates yet again , Dollar explodes – Economic Projections and ( Updated ) Market Reactions"
+    ]
   }
 }
