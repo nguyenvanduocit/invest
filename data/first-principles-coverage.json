@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-17T23:10:03.977Z",
+  "checkedAt": "2026-03-18T00:22:25.838Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-17T23:10:03.901Z",
+  "dataFetchedAt": "2026-03-18T00:22:25.766Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,29 +9,18 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 7,
-    "missingFactors": [
-      "Gold Spot XAUUSD"
-    ],
+    "availableFactors": 8,
+    "missingFactors": [],
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 12,
+    "geopoliticalCount": 9,
     "countryActionCount": 15,
-    "dollarYieldCount": 13,
-    "sourceFailures": [
-      {
-        "id": "gold_spot_xauusd",
-        "error": "Malformed Stooq daily CSV payload"
-      }
-    ],
-    "healthy": false
+    "dollarYieldCount": 14,
+    "sourceFailures": [],
+    "healthy": true
   },
-  "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD"
-  ],
-  "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
-  ],
-  "canProceedToIntegration": false
+  "hardFailures": [],
+  "warnings": [],
+  "canProceedToIntegration": true
 }
