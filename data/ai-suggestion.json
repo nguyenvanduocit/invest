@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-18T19:22:19.838Z",
+  "generatedAt": "2026-03-18T20:12:08.765Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,19 +7,31 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đợt tăng nóng, nằm ở vùng giá rất cao (percentile 98% 5 năm) với động lượng bán áp đảo từ thị trường quốc tế; nhà đầu tư nên chờ tín hiệu ổn định thay vì vội đuổi đỉnh hay bán tháo.",
+    "thesis": "Giá vàng thế giới giảm mạnh -3.31%/ngày xuống 4837.53 USD/oz do kỳ vọng chiến tranh vùng Vịnh kết thúc và USD mạnh lên, nhưng giá SJC Việt Nam neo tại 183 triệu đồng/lượng khiến premium bùng nổ lên mức cực đoan 19.71% - mức cao nhất trong 30 ngày qua.",
     "reasons": [
-      "Động lượng bán mạnh: Giá thế giới giảm -6.31% trong 5 ngày và giá SJC giảm -6.2% trong 7 ngày, phá vỡ MA7 (157.9 triệu VND/lượng) và MA30 (161.5 triệu VND/lượng).",
-      "Áp lực vĩ mô tăng: Chỉ số USD tăng +2.56% (20 ngày) và Lợi suất thực 10Y tăng +5.65% (20 ngày), tạo áp lực nghịch biến lớn lên giá vàng.",
-      "Định giá cực đoan: Giá SJC đang ở phân vị 98% trong 5 năm qua, rủi ro điều chỉnh sâu còn cao hơn tiềm năng tăng ngắn hạn.",
-      "Premium giãn nhanh: Chênh lệch giá SJC so với thế giới nới rộng từ 12.08% (23/02) lên 19.19% hiện tại, cho thấy thị trường nội địa đang định giá quá lạc quan so với xu hướng giảm của giá thế giới."
+      "Giá thế giới giảm sâu: XAUUSD mất -6.65% trong 5 ngày xuống 4837.53 USD/oz, phá vỡ ngưỡng tâm lý 5000 USD/oz do tin tức 'kỳ vọng kết thúc chiến tranh vùng Vịnh' giảm nhu cầu trú ẩn.",
+      "Premium SJC giãn mức độ: Chênh lệch giá tăng vọt từ vùng 12-13% đầu tháng lên 19.71% (30.1 triệu VND/lượng), cao nhất trong chuỗi dữ liệu 30 ngày, cho thấy định giá SJC đang đắt hơn bất thường so với thế giới.",
+      "Áp lực vĩ mô ngược chiều: Chỉ số USD tăng 2.56% trong 20 ngày (lên 120.55) và lợi suất thực 10Y ở mức cao 1.87% tạo áp lực bán lên giá vàng quốc tế.",
+      "Động lượng kỹ thuật yếu: Giá SJC hiện tại (183 triệu) thấp hơn MA7 (156.8 triệu - cần kiểm chứng dữ liệu) và giảm -4.77% trong 7 ngày, cho thấy xu hướng ngắn hạn đã đảo chiều giảm."
     ],
     "risks": [
-      "Giá thế giới có thể hồi phục kỹ thuật ngắn hạn sau đợt giảm sâu (-6.31% trong 5 ngày), tạo cơ hội mua đáy ngắn hạn nếu vượt qua MA7.",
-      "Premium 19.19% có thể co lại nếu giá thế giới hồi phục, làm giảm hiệu quả bảo toàn vốn của nhà đầu tư SJC.",
-      "Dữ liệu sự kiện vĩ mô (policyHeadlines) chưa có chi tiết cụ thể về nội dung quyết định FOMC ngày 18/03, có thể gây biến động bất ngờ."
+      "Rủi ro co giãn premium: Nếu giá thế giới tiếp tục giảm hoặc bình ổn, premium 19.71% có thể co lại nhanh chóng khiến giá SJC giảm sâu dù thế giới ít biến động.",
+      "Bẫy thanh khoản cao điểm: Giá SJC đang ở phân vị 98% trong 5 năm (183 triệu VND), thanh khoản có thể giảm nếu nhà đầu tư chốt lời ồ ạt.",
+      "Nhiễu dữ liệu kỹ thuật: MA7 (156.8 triệu) thấp bất thường so với giá hiện tại (183 triệu), có thể do lỗi dữ liệu, làm giảm độ tin cậy của phân tích động lượng."
     ],
     "evidence": [
+      {
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4837.53,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biến động giá thế giới 5 ngày",
+        "value": -6.65,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
       {
         "key": "Giá SJC hiện tại",
         "value": 183000000,
@@ -27,59 +39,47 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới quy đổi",
-        "value": 153535143,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
         "key": "Premium SJC/Thế giới",
-        "value": 19.19,
+        "value": 19.71,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -6.2,
+        "key": "Premium 30 ngày trước",
+        "value": 15.08,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "MA30 (SJC)",
-        "value": 161460154,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4854.91,
-        "unit": "USD/oz",
+        "key": "Chỉ số USD (DXY)",
+        "value": 120.55,
+        "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Biến động 5 ngày (Thế giới)",
-        "value": -6.31,
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -4.77,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực 10Y (20 ngày)",
-        "value": 5.65,
-        "unit": "%",
+        "key": "VIX (Sợ hãi)",
+        "value": 22.37,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-18T19:21:56.507Z",
+    "latestTimestamp": "2026-03-18T20:11:39.002Z",
     "sjcVndPerTael": 183000000,
-    "intlVndPerTael": 153535142.5491967,
-    "premiumPct": 19.19,
-    "change7dPct": -6.2,
-    "change30dPct": -2.61,
-    "volatilityDailyPct": 1.41,
-    "ma7VndPerTael": 157971425,
-    "ma30VndPerTael": 161460154,
+    "intlVndPerTael": 152865287.0112706,
+    "premiumPct": 19.71,
+    "change7dPct": -4.77,
+    "change30dPct": -0.83,
+    "volatilityDailyPct": 1.42,
+    "ma7VndPerTael": 156786283,
+    "ma30VndPerTael": 161396431,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-18T19:22:01.141Z",
+    "fetchedAt": "2026-03-18T20:11:45.696Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4854.91,
+        "value": 4837.53,
         "unit": "USD/oz",
         "date": "2026-03-18",
-        "change1dPct": -2.96,
-        "change5dPct": -6.31,
-        "change20dPct": -2.46,
+        "change1dPct": -3.31,
+        "change5dPct": -6.65,
+        "change20dPct": -2.81,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,19 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [],
+    "geopoliticalHeadlines": [
+      "2026-03-18 | reflector.com | US stocks sink on worries about inflation as gold falls below $5 , 000 per ounce",
+      "2026-03-18 | rttnews.com | Gold Slumps As Expectations Of An End To The Gulf War Shrink",
+      "2026-03-18 | kob.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war"
+    ],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "dollarYieldHeadlines": [
+      "2026-03-18 | reflector.com | US stocks sink on worries about inflation as gold falls below $5 , 000 per ounce",
+      "2026-03-18 | kob.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during Iran war",
+      "2026-03-18 | iraqsun.com | Gold is positioned to anchor Indian portfolios during periods of market stress : World Gold Council",
+      "2026-03-18 | cbsnews.com | 3 traditional gold investing benefits that are especially timely this March",
+      "2026-03-18 | cbsnews.com | Gold price is down 13 % since January . Here why you should get invested now .",
+      "2026-03-18 | watoday.com.au | Investing in gold : Is it really a safe haven asset ?"
+    ]
   }
 }
