@@ -1,73 +1,79 @@
 {
-  "generatedAt": "2026-03-19T20:11:43.365Z",
+  "generatedAt": "2026-03-19T21:11:44.299Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang trong đà điều chỉnh mạnh sau đỉnh lịch sử khi giá thế giới giảm sâu, nhưng premium vọt lên mức 19.48% cho thấy tâm lý hoảng loạn/bắt đáy tại Việt Nam chưa ổn định. Nhà đầu tư nên chờ đợi sự ổn định của giá thế giới và sự hạ nhiệt của premium trước khi hành động.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử, áp lực bán từ thị trường quốc tế (XAUUSD giảm -8.42% trong 5 ngày) đang lấn át biến động nội địa. Dù premium tăng cao (19.45%) cho thấy tâm lý hỗ trợ trong nước, rủi ro giảm thêm là đáng kể khi các yếu tố vĩ mô (USD, Lợi suất thực) đang gây áp lực ngược.",
     "reasons": [
-      "Giá vàng thế giới giảm mạnh 8.36% trong 5 ngày (từ ~5183 xuống 4650 USD/oz), kéo giá SJC giảm 7.37% trong 7 ngày qua, tạo ra áp lực bán ngắn hạn đáng kể.",
-      "Premium SJC tăng vọt từ mức 12-13% đầu tháng lên 19.48%, cao hơn đáng kể so với trung bình giai đoạn trước đó, cho thấy sự mất cân đối cung cầu tạm thời thay vì xu hướng bền vững.",
-      "VIX tăng 27.88% trong 20 ngày lên mức 25.09 kết hợp với USD Index tăng 2.56% tạo ra môi trường tài chính thắt chặt, bất lợi cho vàng ngắn hạn.",
-      "Giá SJC hiện tại (175.5 triệu VND/lượng) thấp hơn MA7 (154.2 triệu VND/lương) và MA30 (160.8 triệu VND/lượng), xác nhận xu hướng giảm ngắn hạn."
+      "Áp lực bán mạnh từ thị trường quốc tế: Giá thế giới XAUUSD giảm 8.42% trong 5 ngày và 3.85% trong 1 ngày, kéo giá quy đổi VND giảm sâu.",
+      "Yếu tố vĩ mô tiêu cực: Lợi suất thực Mỹ 10 năm (1.86%) và chỉ số USD (+2.56% trong 20 ngày) tăng mạnh, tạo áp lực giảm giá vàng.",
+      "Biến động cao và xu hướng giảm ngắn hạn: Giá SJC giảm 7.34% trong 7 ngày và đang giao dịch dưới MA7 VND/lượng (175.5tr vs 154.2tr).",
+      "Tâm lý thị trường bất ổn: VIX tăng 27.88% trong 20 ngày, phản ánh sự hoảng loạn có thể khiến nhà đầu tư bán tháo tài sản rủi ro."
     ],
     "risks": [
-      "Giá thế giới có thể tiếp tục điều chỉnh sâu hơn nếu USD Index và lợi suất thực duy trì đà tăng.",
-      "Premium có thể co lại nhanh chóng (từ ~19.5% về 14-15%) nếu giá thế giới ổn định, gây thiệt hại cho người mua đuôi.",
-      "Biến động ngày ở mức 1.55% cho thấy rủi ro giao dịch短线 cao."
+      "Giá thế giới tiếp tục giảm sâu do áp lực từ lãi suất thực dương và USD mạnh.",
+      "Thanh khoản SJC có thể bị ảnh hưởng nếu chênh lệch premium (19.45%) bị thu hẹp mạnh về mức trung bình.",
+      "Rủi ro dữ liệu nhiễu: Không có tin tức địa chính trị cụ thể để hỗ trợ giá tăng ngược dòng."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới (XAUUSD)",
-        "value": -8.36,
-        "unit": "% (5 ngày)",
+        "key": "Giá vàng SJC hiện tại",
+        "value": 175500000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá thế giới (XAUUSD)",
+        "value": 4650.54,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá SJC thay đổi (7 ngày)",
-        "value": -7.37,
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -7.34,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC hiện tại",
-        "value": 19.48,
+        "key": "Biến động giá thế giới 5 ngày",
+        "value": -8.42,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Chênh lệch Premium",
+        "value": 19.45,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
+        "key": "Lợi suất thực Mỹ 10 năm",
+        "value": 1.86,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Chỉ số VIX",
         "value": 25.09,
         "unit": "index",
         "source": "first_principles_context"
-      },
-      {
-        "key": "USD Index thay đổi (20 ngày)",
-        "value": 2.56,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Giá SJC so với MA30",
-        "value": -8.9,
-        "unit": "% (mức giảm)",
-        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T20:11:24.335Z",
+    "latestTimestamp": "2026-03-19T21:11:28.666Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 146885397.94677258,
-    "premiumPct": 19.48,
-    "change7dPct": -7.37,
-    "change30dPct": -6.63,
+    "intlVndPerTael": 146923912.51748967,
+    "premiumPct": 19.45,
+    "change7dPct": -7.34,
+    "change30dPct": -6.6,
     "volatilityDailyPct": 1.55,
-    "ma7VndPerTael": 154230055,
-    "ma30VndPerTael": 160864637,
+    "ma7VndPerTael": 154235557,
+    "ma30VndPerTael": 160865920,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -78,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T20:11:28.939Z",
+    "fetchedAt": "2026-03-19T21:11:31.624Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4653.84,
+        "value": 4650.54,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -3.78,
-        "change5dPct": -8.36,
-        "change20dPct": -6.85,
+        "change1dPct": -3.85,
+        "change5dPct": -8.42,
+        "change20dPct": -6.92,
         "relationToGold": "context"
       },
       {
@@ -107,23 +113,23 @@
       {
         "id": "us_real_yield_10y",
         "name": "US Real Yield 10Y",
-        "value": 1.83,
+        "value": 1.86,
         "unit": "%",
-        "date": "2026-03-17",
-        "change1dPct": -2.14,
-        "change5dPct": 0.55,
-        "change20dPct": 2.23,
+        "date": "2026-03-18",
+        "change1dPct": 1.64,
+        "change5dPct": 0.54,
+        "change20dPct": 3.33,
         "relationToGold": "inverse"
       },
       {
         "id": "us_breakeven_10y",
         "name": "US Breakeven Inflation 10Y",
-        "value": 2.4,
+        "value": 2.37,
         "unit": "%",
-        "date": "2026-03-18",
-        "change1dPct": 1.27,
-        "change5dPct": 1.69,
-        "change20dPct": 4.8,
+        "date": "2026-03-19",
+        "change1dPct": -1.25,
+        "change5dPct": -0.42,
+        "change20dPct": 3.49,
         "relationToGold": "direct"
       },
       {
@@ -131,7 +137,7 @@
         "name": "US Effective Fed Funds Rate",
         "value": 3.64,
         "unit": "%",
-        "date": "2026-03-17",
+        "date": "2026-03-18",
         "change1dPct": 0,
         "change5dPct": 0,
         "change20dPct": 0,
@@ -140,23 +146,23 @@
       {
         "id": "us_treasury_10y",
         "name": "US Treasury Yield 10Y",
-        "value": 4.2,
+        "value": 4.26,
         "unit": "%",
-        "date": "2026-03-17",
-        "change1dPct": -0.71,
-        "change5dPct": 1.2,
-        "change20dPct": 3.7,
+        "date": "2026-03-18",
+        "change1dPct": 1.43,
+        "change5dPct": 1.19,
+        "change20dPct": 4.16,
         "relationToGold": "inverse"
       },
       {
         "id": "us_treasury_2y",
         "name": "US Treasury Yield 2Y",
-        "value": 3.68,
+        "value": 3.76,
         "unit": "%",
-        "date": "2026-03-17",
-        "change1dPct": 0,
-        "change5dPct": 3.08,
-        "change20dPct": 7.29,
+        "date": "2026-03-18",
+        "change1dPct": 2.17,
+        "change5dPct": 3.3,
+        "change20dPct": 8.36,
         "relationToGold": "inverse"
       },
       {
@@ -172,7 +178,7 @@
       }
     ],
     "policyHeadlines": [
-      "2026-03-19 | ECB Press / Speeches | Christine Lagarde, Luis de Guindos: Monetary policy statement",
+      "2026-03-19 | ECB Press / Speeches | Christine Lagarde, Luis de Guindos: Monetary policy statement (with Q&A)",
       "2026-03-19 | ECB Press / Speeches | Monetary policy decisions",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve issues FOMC statement",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
