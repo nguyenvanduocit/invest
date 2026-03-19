@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T13:31:45.327Z",
+  "generatedAt": "2026-03-19T14:19:58.789Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC giảm mạnh 10.2% trong 7 ngày nhưng premium vọt lên 21.72% cho thấy thị trường Việt Nam đang hoảng loạn thiếu thanh khoản thay vì cơ hội mua. Nên chờ đợi premium hạ nhiệt về vùng 15-16% trước khi vào lệnh.",
+    "thesis": "Giá vàng thế giới đang giảm mạnh (-9.28% trong 5 ngày) kéo giá SJC điều chỉnh sâu về 175.5 triệu/lượng, nhưng đà giảm chưa ổn định và biên độ dao động cao (1.6%) khiến điểm mua an toàn chưa rõ ràng.",
     "reasons": [
-      "Giá thế giới giảm sâu -10.02% trong 5 ngày (xuống 4569.49 USD/oz) nhưng giá SJC chỉ giảm nhẹ, đẩy premium từ 15.06% (đầu tháng 2) lên mức cực đoan 21.72% hiện tại.",
-      "Thanh khoản vàng Việt Nam đang kẹt cứng khi spread mua-bán giãn rộng; MUA lúc này chấp nhận rủi ro thua lỗ ngay tức khắc nếu premium điều chỉnh về trung bình 5 năm.",
-      "Dữ liệu vĩ mô cho thấy USD Index tăng +2.56% và Real Yield tăng +2.23% trong 20 ngày, tạo áp lực bán kỹ thuật lên vàng thế giới; rủi ro giá test thêm vùng hỗ trợ cũ là rất lớn.",
-      "Giá SJC hiện tại 175.5 triệu VND/lượng nằm dưới MA7 (155.57 triệu) và MA30 (161.13 triệu), cho thấy xu hướng ngắn hạn đã bị phá vỡ nhưng biên độ dao động quá lớn (1.72%/ngày) để hành động ngay."
+      "Giá thế giới giảm mạnh 9.28% trong 5 ngày và 4.75% trong 1 ngày (nguồn: first_principles), tạo áp lực bán đáng kể lên thị trường Việt Nam.",
+      "Giá SJC hiện tại 175.5 triệu/lượng đã thấp hơn đáng kể so với MA7 (155.8 triệu VND/lượng - lưu ý: dữ liệu input có sự bất thường về đơn vị MA, cần kiểm chứng) và đỉnh 30 ngày (190.9 triệu).",
+      "VIX tăng cao 27.88% trong 20 ngày cho thấy thị trường tài chính bất ổn, có thể gây áp lực thanh khoản nhưng cũng là tín hiệu đáy tiềm năng trong tương lai gần.",
+      "Premium tăng vọt lên 20.12% từ mức 12-15% đầu tháng, cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo ngại và chấp nhận mua giá cao, nhưng đây là vùng premium cao cần thận trọng."
     ],
     "risks": [
-      "Premium 21.72% có thể co về 15-16%, gây lỗ 5-6% cho người mua đuổi ngay lúc này.",
-      "Thị trường thế giới chưa ổn định với VIX ở mức 22.37 và đà giảm -5.53% chỉ trong 1 ngày của vàng.",
-      "Rủi ro thanh khoản: các nhà môi giới có thể mở rộng spread hoặc ngừng giao dịch khi biến động quá cao."
+      "Đà giảm giá thế giới có thể tiếp tục do USD Index tăng 2.56% trong 20 ngày, gây rủi ro 'bắt dao rơi' cho nhà đầu tư MUA lúc này.",
+      "Premium 20.12% ở mức rất cao so với trung bình 12-16% trong chuỗi 30 ngày, rủi ro co hẹp premium nếu giá thế giới hồi phục sẽ làm giá SJC tăng chậm hơn hoặc điều chỉnh giảm.",
+      "Biên độ dao động ngày 1.6% và sự thiếu vắng tin tức địa chính trị cụ thể (geopoliticalHeadlines rỗng) khiến khó dự đoán điểm đảo chiều chính xác."
     ],
     "evidence": [
       {
-        "key": "premiumPct",
-        "value": 21.72,
-        "unit": "%",
+        "key": "Giá vàng SJC hiện tại",
+        "value": 175500000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "change7dPct_SJC",
-        "value": -10.2,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 4606.95,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_change5d",
-        "value": -10.02,
+        "key": "Biến động giá thế giới 5 ngày",
+        "value": -9.28,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change20d",
-        "value": 2.23,
+        "key": "Premium SJC/Thế giới",
+        "value": 20.12,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Index",
+        "value": 25.09,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biến động VIX 20 ngày",
+        "value": 27.88,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "usd_index_change20d",
+        "key": "USD Index biến động 20 ngày",
         "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "vix_value",
-        "value": 22.37,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "sjc_vs_ma7",
-        "value": 12.77,
-        "unit": "% above MA7",
-        "source": "market_snapshot"
+        "key": "Đỉnh giá SJC 30 ngày",
+        "value": 190900000,
+        "unit": "VND/lượng",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T13:31:06.114Z",
+    "latestTimestamp": "2026-03-19T14:19:30.558Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 144182861.72538763,
-    "premiumPct": 21.72,
-    "change7dPct": -10.2,
-    "change30dPct": -6.48,
-    "volatilityDailyPct": 1.72,
-    "ma7VndPerTael": 155570719,
-    "ma30VndPerTael": 161135720,
+    "intlVndPerTael": 146109613.61050668,
+    "premiumPct": 20.12,
+    "change7dPct": -9,
+    "change30dPct": -5.23,
+    "volatilityDailyPct": 1.6,
+    "ma7VndPerTael": 155845969,
+    "ma30VndPerTael": 161199945,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T13:31:13.337Z",
+    "fetchedAt": "2026-03-19T14:19:33.585Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4569.49,
+        "value": 4606.95,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -5.53,
-        "change5dPct": -10.02,
-        "change20dPct": -8.54,
+        "change1dPct": -4.75,
+        "change5dPct": -9.28,
+        "change20dPct": -7.79,
         "relationToGold": "context"
       },
       {
@@ -168,22 +174,22 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 22.37,
+        "value": 25.09,
         "unit": "index",
-        "date": "2026-03-17",
-        "change1dPct": -4.85,
-        "change5dPct": -10.27,
-        "change20dPct": 10.25,
+        "date": "2026-03-18",
+        "change1dPct": 12.16,
+        "change5dPct": 3.55,
+        "change20dPct": 27.88,
         "relationToGold": "direct"
       }
     ],
     "policyHeadlines": [
+      "2026-03-19 | ECB Press / Speeches | Christine Lagarde, Luis de Guindos: Monetary policy statement",
       "2026-03-19 | ECB Press / Speeches | Monetary policy decisions",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve issues FOMC statement",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
-      "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt",
-      "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance"
+      "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
