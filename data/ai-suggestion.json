@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T16:20:11.236Z",
+  "generatedAt": "2026-03-19T17:22:37.226Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới đang điều chỉnh mạnh sau đỉnh 5330 USD/oz (02/03), kéo giá SJC giảm sâu nhưng vẫn nằm trong vùng định giá cao (percentile 98%). Biến động tăng vọt và xu hướng ngắn hạn xấu đi yêu cầu nhà đầu tư kiên nhẫn chờ tín hiệu ổn định thay vì vội vã đón đá.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử nhưng động lượng bán quá mức từ thị trường quốc tế và sự thiếu rõ ràng từ chính sách Fed sau ngày 18/03 khiến nhà đầu tư nên chờ đợi tín hiệu ổn định thay vì vội vàng mua đón đáy.",
     "reasons": [
-      "Xu hướng giảm giá ngắn hạn rất mạnh: Giá thế giới mất -9.31% trong 5 ngày và giá SJC giảm -9.54% trong 7 ngày, phá vỡ MA7 (155.7 triệu VND/lượng) xuống mức 175.5 triệu VND/lượng.",
-      "Đồng USD tăng sức ép: Chỉ số DXY tăng +2.56% trong 20 ngày và lợi suất thực 10Y ở mức 1.83% tạo dòng chảy vốn bất lợi cho vàng.",
-      "Biến động thị trường cực đoan: VIX tăng +27.88% lên 25.09 điểm cho thấy sự hoảng loạn thanh khoản, rủi ro bán tháo vẫn hiện hữu.",
-      "Premium SJC nới rộng đột ngột lên 20.83% do giá thế giới giảm nhanh hơn giá trong nước, cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo ngại chưa sẵn sàng bán tháo mạnh."
+      "Giá thế giới giảm siêu nhanh -9.27% trong 5 ngày và -4.74% trong 1 ngày (nguồn first_principles), kéo SJC giảm -9.78% trong 7 ngày qua, tạo ra áp lực bán kỹ thuật chưa từng thấy trong chuỗi dữ liệu 30 ngày.",
+      "Premium SJC vọt lên 21.15% (đỉnh 30 ngày) do giá thế giới giảm nhanh hơn giá nội địa, cho thấy thanh khoản nội kháng giảm nhưng rủi ro co hẹp premium sau này là rất lớn nếu giá thế giới hồi phục.",
+      "VIX tăng 27.88% trong 20 ngày lên mức 25.09 cho thấy thị trường tài chính căng thẳng; USD Index tăng 2.56% trong 20 ngày gây áp lực ngược lên giá vàng.",
+      "Giá SJC hiện tại 175.5 triệu/lượng vẫn nằm dưới MA30 (161.16 triệu/lượng) nếu xét xu hướng 30 ngày, nhưng biên độ dao động 1.67%/ngày cảnh báo rủi ro biến động cực đoan."
     ],
     "risks": [
-      "Rủi ro thanh khoản: Biến động ngày ở mức 1.65% cộng với đợt giảm giá -9.54% tuần qua có thể kích hoạt bán tháo tiếp theo.",
-      "Rủi ro vĩ mô: Lợi suất trái phiếu Mỹ (10Y: 4.2%) và DXY (120.55) duy trì xu hướng tăng sẽ tiếp tục gây áp lực lên giá vàng thế giới.",
-      "Giá trị định giá cao: Vị thế percentile 5 năm ở mức 98 cảnh báo biên an toàn biên lợi nhuận thấp nếu mua vào lúc này."
+      "Rủi ro premium co hẹp nhanh: Nếu giá thế giới hồi phục trong khi giá SJC tăng chậm hơn do thanh khoản yếu, nhà đầu tư mua lúc premium 21.15% có thể lỗ thực tế dù giá thế giới tăng.",
+      "Động lượng bán chưa kết thúc: Giá thế giới đã phá vỡ nhiều hỗ trợ trong 5 ngày qua, rủi ro test thêm các vùng hỗ trợ thấp hơn trước khi ổn định.",
+      "Thiếu tín hiệu địa chính trị/can thiệp quốc gia trong dữ liệu đầu vào, khiến độ tin cậy dự báo xu hướng ngắn hạn bị giảm."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAU/USD)",
-        "value": 4598.58,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Giá thế giới quy đổi",
+        "value": 144864443,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -9.54,
+        "key": "Premium SJC/Thế giới",
+        "value": 21.15,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Chỉ số VIX",
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -9.78,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động giá thế giới 5 ngày (XAUUSD)",
+        "value": -9.27,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Index",
         "value": 25.09,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số DXY",
-        "value": 120.5518,
-        "unit": "index",
+        "key": "USD Index thay đổi 20 ngày",
+        "value": 2.56,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC",
-        "value": 20.83,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 SJC",
-        "value": 155722508,
+        "key": "MA30 giá SJC",
+        "value": 161158440,
         "unit": "VND/lượng",
         "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực 10Y Mỹ",
-        "value": 1.83,
-        "unit": "%",
-        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T16:19:44.091Z",
+    "latestTimestamp": "2026-03-19T17:22:14.743Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 145245388.84097916,
-    "premiumPct": 20.83,
-    "change7dPct": -9.54,
-    "change30dPct": -5.79,
-    "volatilityDailyPct": 1.65,
-    "ma7VndPerTael": 155722508,
-    "ma30VndPerTael": 161171138,
+    "intlVndPerTael": 144864442.65596846,
+    "premiumPct": 21.15,
+    "change7dPct": -9.78,
+    "change30dPct": -6.04,
+    "volatilityDailyPct": 1.67,
+    "ma7VndPerTael": 155668087,
+    "ma30VndPerTael": 161158440,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T16:19:46.942Z",
+    "fetchedAt": "2026-03-19T17:22:17.615Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4605.43,
+        "value": 4607.57,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -4.78,
-        "change5dPct": -9.31,
-        "change20dPct": -7.82,
+        "change1dPct": -4.74,
+        "change5dPct": -9.27,
+        "change20dPct": -7.78,
         "relationToGold": "context"
       },
       {
