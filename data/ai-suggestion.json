@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T03:03:46.910Z",
+  "generatedAt": "2026-03-19T04:40:06.034Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh giảm mạnh (-4.38% tuần) từ đỉnh lịch sử nhưng vẫn nằm trong vùng giá rất cao (percentile 98% 5 năm). Áp lực bán từ việc USD và lợi suất thực tăng mạnh, cộng hưởng với đà giảm của giá thế giới, khiến rủi ro điều chỉnh tiếp trong ngắn hạn còn hiện hữu, nhà đầu tư nên chờ tín hiệu ổn định.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử với xu hướng giảm ngắn hạn, nhưng thanh khoản thấp và rủi ro biến động cao sau FOMC khiến nhà đầu tư nên chờ tín hiệu ổn định.",
     "reasons": [
-      "Động lượng giảm mạnh: Giá SJC giảm 4.38% trong 7 ngày qua, kéo giá hiện tại (178.4 triệu VND/lượng) xuống dưới MA7 (157.0 triệu VND/lượng) và MA30 (161.6 triệu VND/lượng).",
-      "Áp lực vĩ mô tăng: Chỉ số USD tăng 2.56% trong 20 ngày và lợi suất thực 10 năm ở mức 1.83% tạo áp lực nghịch biến lên giá vàng thế giới (đã giảm về 4860.9 USD/oz).",
-      "Giá trị quá cao: Giá SJC đang ở phân vị 98% trong 5 năm qua, biên độ dao động 1.38%/ngày cho thấy thị trường rung lắc mạnh, chưa có tín hiệu chốt đáy rõ ràng.",
-      "Premium co giãn: Chênh lệch giá SJC/Thế giới giảm từ đỉnh 19.56% (ngày 18/03) về 16.1%, cho thấy tâm lý thị trường Việt Nam đang đi theo điều chỉnh chung chứ không bung tách."
+      "Giá SJC 178.4 triệu VND/lượng đang giao dịch dưới MA7 (156.9 triệu VND/lượng) và giảm 4.58% sau 7 ngày, cho thấy động lượng bán đang chiếm ưu thế.",
+      "Vị thế giá tại phân vị 98% (5 năm) rất cao, rủi ro điều chỉnh tiếp tục lớn hơn cơ hội tăng điểm trong ngắn hạn.",
+      "Lợi suất thực Mỹ 1.83% và chỉ số USD tăng 2.56% (20 ngày) tạo áp lực giảm lên giá vàng thế giới, kéo theo tâm lý thận trọng tại thị trường Việt Nam.",
+      "Premium 16.34% đang dao động rộng (10.84%-19.56% trong 30 ngày) và không có xu hướng rõ ràng, khó xác định điểm mua an toàn."
     ],
     "risks": [
-      "Cú sốc cung dầu và lo ngại lạm phát stagflation có thể đẩy giá vàng thế giới quay đầu tăng bất ngờ.",
-      "Fed giữ nguyên lãi suất và phát ngôn có thể tăng thêm (hike) tiếp tục củng cố USD, gây áp lực giảm thêm cho vàng.",
-      "Biên độ dao động cao (1.38%/ngày) và thanh khoản có thể gây trượt giá khi thực hiện lệnh lớn."
+      "Biến động cao (1.38%/ngày) và thanh khoản có thể thấp khiến việc thoát hàng gặp khó khăn khi thị trường điều chỉnh.",
+      "Tin tức từ FOMC (18/03) có thể gây ra các đợt dao động giá thất thường trong vài ngày tới.",
+      "Giá thế giới giảm mạnh (change5dPct -4.49%) có thể tiếp tục kéo giá trong nước đi xuống."
     ],
     "evidence": [
       {
@@ -27,34 +27,28 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới quy đổi",
-        "value": 153666390,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -4.38,
+        "key": "Thay đổi 7 ngày (SJC)",
+        "value": -4.58,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Phân vị giá 5 năm",
+        "key": "Phân vị 5 năm",
         "value": 98,
-        "unit": "percentile",
+        "unit": "phân vị",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới (Spot)",
-        "value": 4860.9,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Premium hiện tại",
+        "value": 16.34,
+        "unit": "%",
+        "source": "market_snapshot"
       },
       {
-        "key": "Chỉ số USD Index",
-        "value": 120.5518,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "MA7 (SJC)",
+        "value": 156998669,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
         "key": "Lợi suất thực Mỹ 10 năm",
@@ -63,23 +57,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC/Thế giới",
-        "value": 16.1,
-        "unit": "%",
-        "source": "market_snapshot"
+        "key": "Chỉ số USD (20 ngày)",
+        "value": 2.56,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá vàng thế giới (5 ngày)",
+        "value": -4.49,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T03:03:16.117Z",
+    "latestTimestamp": "2026-03-19T04:39:43.485Z",
     "sjcVndPerTael": 178400000,
-    "intlVndPerTael": 153666389.64209372,
-    "premiumPct": 16.1,
-    "change7dPct": -4.38,
-    "change30dPct": -0.42,
+    "intlVndPerTael": 153343605.9280923,
+    "premiumPct": 16.34,
+    "change7dPct": -4.58,
+    "change30dPct": -0.63,
     "volatilityDailyPct": 1.38,
-    "ma7VndPerTael": 157044781,
-    "ma30VndPerTael": 161589983,
+    "ma7VndPerTael": 156998669,
+    "ma30VndPerTael": 161579223,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T03:03:21.879Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-19T04:39:46.392Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4855.97,
+        "value": 4850.17,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": 0.4,
-        "change5dPct": -4.38,
-        "change20dPct": -2.81,
+        "change1dPct": 0.28,
+        "change5dPct": -4.49,
+        "change20dPct": -2.93,
         "relationToGold": "context"
       },
       {
@@ -191,26 +191,8 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-19 | moneycontrol.com | Daily Voice : No Fed rate cuts soon ? Sandeep Bagla says next move may be a hike , not a cut",
-      "2026-03-19 | moneycontrol.com | Deepening oil supply shock could push economies toward stagflation , worry policymakers",
-      "2026-03-19 | europe.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-19 | moneycontrol.com | Daily Voice : No Fed rate cuts soon ? Sandeep Bagla says next move may be a hike , not a cut",
-      "2026-03-19 | moneycontrol.com | Deepening oil supply shock could push economies toward stagflation , worry policymakers",
-      "2026-03-19 | marketscreener.com | Yen under pressure as focus turns to BOJ after Fed holds",
-      "2026-03-19 | moneycontrol.com | Oil - driven inflation fears are reshaping Asian bond yield curves",
-      "2026-03-19 | europe.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
-      "2026-03-19 | nbcconnecticut.com | Trump eases Venezuela oil sanctions in effort to boost oil supply – NBC Connecticut"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-19 | moneycontrol.com | Daily Voice : No Fed rate cuts soon ? Sandeep Bagla says next move may be a hike , not a cut",
-      "2026-03-19 | moneycontrol.com | Deepening oil supply shock could push economies toward stagflation , worry policymakers",
-      "2026-03-19 | europe.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
-      "2026-03-19 | nbcconnecticut.com | Trump eases Venezuela oil sanctions in effort to boost oil supply – NBC Connecticut",
-      "2026-03-19 | tribune.com.pk | Gold prices steady amid global volatility",
-      "2026-03-19 | africa.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
