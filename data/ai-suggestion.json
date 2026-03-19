@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T05:29:48.634Z",
+  "generatedAt": "2026-03-19T06:22:05.562Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,19 +7,25 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử với đà giảm 4.63% trong 7 ngày, trong khi giá thế giới lao động dưới các đường trung bình ngắn hạn; nhà đầu tư nên chờ đợi dấu hiệu ổn định kỹ thuật thay vì vội đón đáy vì đà giảm vẫn còn và premium đang biến động cao.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh -5.17% sau 7 ngày và giao dịch ở vùng giá cực cao (percentile 98%), trong khi giá thế giới lao xuống dưới 4,850 USD/oz do áp lực từ USD và lợi suất thực tăng vọt. Nên chờ đợi sự ổn định của thị trường quốc tế và xác nhận vùng hỗ trợ kỹ thuật trước khi ra quyết định.",
     "reasons": [
-      "Đà giảm ngắn hạn mạnh: Giá SJC giảm 4.63% trong 7 ngày qua (từ 187.2 triệu xuống 178.4 triệu VND/lượng), cho thấy áp lực bán vẫn còn hiện hữu.",
-      "Xu hướng kỹ thuật yếu: Giá thế giới (4847.94 USD/oz) đang giao dịch dưới MA7 VND (156.99 triệu VND/lượng quy đổi) và giảm gần 3% trong 20 ngày qua.",
-      "Áp lực vĩ mô: Chỉ số USD tăng 2.56% trong 20 ngày và lợi suất thực 10Y ở mức 1.83% tạo áp lực ngược lên giá vàng, hạn chế đà phục hồi nhanh.",
-      "Biến động premium cao: Premium tăng vọt từ 12.08% lên đỉnh 19.56% rồi về 16.41%, cho thấy thị trường Việt Nam đang trong giai đoạn định giá lại hỗn loạn."
+      "Giá thế giới giảm mạnh 5.04% trong 5 ngày và 3.48% trong 20 ngày xuống mức 4,822 USD/oz, phá vỡ vùng hỗ trợ kỹ thuật quan trọng, tạo áp lực bán ra trực tiếp lên giá vàng Việt Nam.",
+      "Chỉ số USD tăng 2.56% và lợi suất thực 10 năm tăng 2.23% trong 20 ngày qua (lên 1.83%), tạo ra headwinds vĩ mô mạnh làm giảm hấp dẫn của vàng.",
+      "Giá SJC ở mức 178.4 triệu đồng/lượng, nằm trên MA7 (156.9 triệu) và MA30 (161.5 triệu), nhưng đang trong đà điều chỉnh giảm từ đỉnh 190.9 triệu (giảm khoảng 6.5%).",
+      "Premium tăng vọt từ 12-13% lên mức 17.06%, cho thấy tâm lý phòng thủ của nhà đầu tư Việt Nam nhưng cũng báo hiệu rủi ro co giãn nếu giá thế giới tiếp tục giảm."
     ],
     "risks": [
-      "Rủi ro đà giảm tiếp tục nếu giá thế giới phá vỡ hỗ trợ 4800 USD/oz và USD tiếp tục tăng mạnh.",
-      "Premium có thể co hẹp thêm về mức trung bình 12-14%, khiến giá SJC giảm sâu hơn giá thế giới.",
-      "Thiếu sự kiện địa chính trị cấp bách để kích hoạt dòng tiền an toàn (không có tin tức địa chính trị trong dữ liệu)."
+      "Rủi ro điều chỉnh tiếp diễn nếu giá thế giới không giữ được ngưỡng hỗ trợ mới quanh 4,800 USD/oz.",
+      "Thanh khoản có thể giảm sút trong ngắn hạn khi nhà đầu tư chờ đợi tín hiệu rõ ràng từ FOMC meeting vừa kết thúc.",
+      "Biến động premium cao (dao động từ 10.84% đến 19.56% trong 30 ngày) làm tăng chi phí giao dịch chênh lệch mua-bán."
     ],
     "evidence": [
+      {
+        "key": "Giá vàng thế giới (XAU/USD)",
+        "value": 4822.26,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
       {
         "key": "Giá SJC hiện tại",
         "value": 178400000,
@@ -27,59 +33,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày SJC",
-        "value": -4.63,
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -5.17,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4847.94,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "MA7 giá quy đổi VND",
-        "value": 156986252,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 16.41,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động 20 ngày giá thế giới",
-        "value": -2.98,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Chỉ số USD Index",
+        "key": "Chỉ số USD (DXY)",
         "value": 120.5518,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Lợi suất thực US 10Y",
+        "key": "Lợi suất thực Mỹ 10 năm",
         "value": 1.83,
         "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC/Thế giới",
+        "value": 17.06,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Percentile 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Volatility",
+        "value": 22.37,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T05:29:25.085Z",
+    "latestTimestamp": "2026-03-19T06:21:34.261Z",
     "sjcVndPerTael": 178400000,
-    "intlVndPerTael": 153256682.20592582,
-    "premiumPct": 16.41,
-    "change7dPct": -4.63,
-    "change30dPct": -0.68,
+    "intlVndPerTael": 152396071.4754762,
+    "premiumPct": 17.06,
+    "change7dPct": -5.17,
+    "change30dPct": -1.24,
     "volatilityDailyPct": 1.38,
-    "ma7VndPerTael": 156986252,
-    "ma30VndPerTael": 161576326,
+    "ma7VndPerTael": 156863307,
+    "ma30VndPerTael": 161547639,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T05:29:28.222Z",
+    "fetchedAt": "2026-03-19T06:21:37.701Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4847.49,
+        "value": 4822.26,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": 0.22,
-        "change5dPct": -4.55,
-        "change20dPct": -2.98,
+        "change1dPct": -0.3,
+        "change5dPct": -5.04,
+        "change20dPct": -3.48,
         "relationToGold": "context"
       },
       {
