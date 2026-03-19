@@ -1,79 +1,85 @@
 {
-  "generatedAt": "2026-03-19T09:16:32.794Z",
+  "generatedAt": "2026-03-19T10:15:14.171Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử nhưng thanh khoản thấp và biến động cao (volatility 1.49%) khiến việc bắt đáy rủi ro; nhà đầu tư nên chờ tín hiệu ổn định hoặc hỗ trợ kỹ thuật rõ ràng hơn trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử nhưng động lượng bán chưa hết, giá hiện tại 175.5 triệu VND/lượng vẫn nằm dưới MA7 (156.2 triệu) và MA30 (161.3 triệu) cho thấy xu hướng ngắn hạn yếu kém; nhà đầu tư nên chờ tín hiệu ổn định thay vì vội đón đáy.",
     "reasons": [
-      "Giá thế giới giảm đột biến -7.51% (5 ngày) xuống 4691.53 USD/oz, kéo giá SJC giảm -7.71% (7 ngày) xuống 175.5 triệu VND/lượng, tạo áp lực bán ngắn hạn mạnh mẽ.",
-      "Giá SJC hiện tại (175.5 triệu VND) đã thấp hơn MA7 (156.28 triệu VND) và MA30 (161.41 triệu VND), cho thấy động lượng tiêu cực và xu hướng điều chỉnh đang chiếm ưu thế.",
-      "Premium tăng vọt lên 18.33% từ mức ~12-13% đầu tháng, phản ánh tâm lý hoảng loạn mua vào của nhà đầu tư Việt Nam khi giá thế giới giảm, làm tăng chi phí nhập sân và rủi ro thua lỗ nếu premium co lại.",
-      "Dù có hỗ trợ địa chính trị từ cuộc chiến Iran-Qatar đẩy dầu lên 112 USD, nhưng USD Index tăng mạnh +2.56% (20 ngày) và lợi suất thực 10Y ở 1.83% đang gây áp lực lên giá vàng nói chung."
+      "Giá thế giới giảm mạnh 7.36% trong 5 ngày gần nhất xuống 4704.79 USD/oz, kéo giá SJC giảm 7.43% trong 7 ngày; động lượng bán áp đảo khi giá xuyên dưới MA7 và MA30.",
+      "Đồng USD mạnh lên (DXY tăng 2.56% trong 20 ngày lên 120.55) và lợi suất thực 10 năm ở mức cao 1.83% tạo áp lực nghịch biến lớn lên giá vàng.",
+      "Premium SJC đang ở mức 18.08%, cao hơn đáng kể so với vùng 12-14% đầu chuỗi dữ liệu, cho thấy giá nội địa vẫn còn phần nào độ trễ trong việc phản ánh đà giảm của giá thế giới.",
+      "VIX ở mức 22.37 cho thấy thị trường vẫn lo ngại rủi ro, nhưng sự vắng mặt của tin tức địa chính trị cụ thể khiến đà tăng giá khó duy trì."
     ],
     "risks": [
-      "Rủi ro premium co hồi nhanh về mức trung bình (12-15%) nếu giá thế giới phục hồi, gây thua lỗ cho người mua ở mức premium cao (18.33%).",
-      "Biến động cực đoan có thể tiếp diễn do VIX ở mức 22.37 và sự kiện địa chính trị chưa có hồi kết.",
-      "Giá thế giới có thể tiếp tục tìm đáy dưới mức hỗ trợ 4700 USD/oz nếu chính sách Fed duy trì lãi suất cao (Fed Funds 3.64%)."
+      "Rủi ro giá tiếp tục điều chỉnh sâu nếu Fed duy trì lập trường cứng rắn từ kết quả FOMC ngày 18/03.",
+      "Premium có thể co hẹp nhanh chóng về mức 15-16% nếu giá thế giới tiếp tục giảm, làm gia tăng thua lỗ cho người mua hiện tại.",
+      "Biến động ngày ở mức 1.47% cộng với drawdown tồi t nhất trong 5 năm lên tới 41.26% cảnh báo rủi ro thanh khoản."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới (Spot)",
-        "value": 4691.53,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Giá vàng SJC",
+        "key": "Giá SJC hiện tại",
         "value": 175500000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -7.71,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC/Thế giới",
-        "value": 18.33,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Dollar Index thay đổi 20 ngày",
-        "value": 2.56,
-        "unit": "%",
+        "key": "Giá thế giới (Spot)",
+        "value": 4704.79,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Volatility Index",
-        "value": 22.37,
+        "key": "Biến động 7 ngày (SJC)",
+        "value": -7.43,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "MA30 (SJC)",
+        "value": 161283969,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC",
+        "value": 18.08,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Chỉ số USD (DXY)",
+        "value": 120.55,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá dầu thô (Iran-Qatar conflict)",
-        "value": 112,
-        "unit": "USD/thùng",
+        "key": "Lợi suất thực US 10Y",
+        "value": 1.83,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX",
+        "value": 22.37,
+        "unit": "index",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T09:15:39.092Z",
+    "latestTimestamp": "2026-03-19T10:14:44.073Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 148312190.70111984,
-    "premiumPct": 18.33,
-    "change7dPct": -7.71,
-    "change30dPct": -3.89,
-    "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 156279896,
-    "ma30VndPerTael": 161411510,
+    "intlVndPerTael": 148630321.82971835,
+    "premiumPct": 18.08,
+    "change7dPct": -7.43,
+    "change30dPct": -3.6,
+    "volatilityDailyPct": 1.47,
+    "ma7VndPerTael": 156206070,
+    "ma30VndPerTael": 161283969,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T09:15:44.359Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-19T10:14:46.870Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4696.87,
+        "value": 4704.79,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -2.89,
-        "change5dPct": -7.51,
-        "change20dPct": -5.99,
+        "change1dPct": -2.73,
+        "change5dPct": -7.36,
+        "change20dPct": -5.83,
         "relationToGold": "context"
       },
       {
@@ -185,21 +191,8 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-19 | finance.yahoo.com | Iran war threatens to wipe out Reeves economic plan",
-      "2026-03-19 | asiaone.com | Voters rocked by war and tariffs could add to market angst in upcoming elections",
-      "2026-03-19 | newsghana.com.gh | Oil Hits $112 as Iran - Qatar Energy War Escalates ; Investors Warned of 1970s - Style Shock"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-19 | finance.yahoo.com | Iran war threatens to wipe out Reeves economic plan",
-      "2026-03-19 | investinglive.com | BOJ governor Ueda : Need to pay attention on further developments in the Middle East",
-      "2026-03-19 | world.kbs.co.kr | Oil Prices Surge As Iran War , Fed Rate Freeze Hit S . Korean Currency And Shares l KBS WORLD",
-      "2026-03-19 | finanznachrichten.de | NZ Dollar Rises Despite Disappointing GDP Data"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-19 | asiaone.com | Voters rocked by war and tariffs could add to market angst in upcoming elections",
-      "2026-03-19 | newsghana.com.gh | Oil Hits $112 as Iran - Qatar Energy War Escalates ; Investors Warned of 1970s - Style Shock",
-      "2026-03-19 | livemint.com | Buying gold on Gudi Padwa , Ugadi ? Dont skip these purity checks to safeguard your festive purchase"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
