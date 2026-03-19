@@ -1,25 +1,31 @@
 {
-  "generatedAt": "2026-03-19T22:06:36.810Z",
+  "generatedAt": "2026-03-19T23:08:39.372Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang trong đà điều chỉnh mạnh sau đỉnh lịch sử, chịu áp lực từ USD và lợi suất thực tăng vọt, mặc dù rủi ro địa chính trị đang tạo đáy hỗ trợ.",
+    "thesis": "Giá vàng thế giới giảm mạnh 7.5% trong 7 ngày do áp lực từ USD và lợi suất thực tăng cao, kéo giá SJC giảm nhưng premium vẫn nới rộng ở mức 19.65%. Nhà đầu tư nên chờ đợi sự ổn định của thị trường quốc tế trước khi vào lệnh, vì đà giảm chưa có dấu hiệu đảo chiều rõ ràng.",
     "reasons": [
-      "Giá SJC 175.5 triệu VND/lượng đã phá vỡ MA7 (154.3 triệu VND/lượng) và giảm mạnh 7.15% sau 7 ngày, xác nhận xu hướng điều chỉnh ngắn hạn.",
-      "Áp lực bán từ vĩ mô rất mạnh: Lợi suất thực Mỹ (US Real Yield 10Y) tăng 3.33% lên 1.86% và DXY tăng 2.56% trong 20 ngày qua, gây áp lực giảm lên giá vàng thế giới.",
-      "Giá thế giới giảm sâu từ đỉnh 5330 USD/oz (02/03) xuống 4661 USD/oz, biên độ giảm hơn 12% trong nửa tháng, kéo theo tâm lý thị trường Việt Nam.",
-      "VIX tăng 27.88% lên mức 25.09 cho thấy thị trường tài chính đang bất ổn, nhưng dòng tiền hiện tại đang chảy vào USD hơn là vàng."
+      "Giá thế giới giảm mạnh 7.49% trong 5 ngày và 8.9% trong 20 ngày (xuống 4643.87 USD/oz), dưới cả MA7 (5142 USD/oz) và MA30 (5098 USD/oz), cho thấy động lượng bán rất mạnh.",
+      "Áp lực vĩ mô tiêu cực: Lợi suất thực Mỹ 10 năm tăng 3.33% trong 20 ngày lên 1.86%, và USD Index tăng 2.56%, cả hai đều là yếu tố nghịch biến mạnh với giá vàng.",
+      "Premium SJC nới rộng từ 12-13% (đầu tháng 3) lên 19.65% hiện tại, cho thấy tâm lý phòng thủ của nhà đầu tư VN nhưng tạo rủi ro co hẹp nếu giá thế giới tiếp tục giảm.",
+      "VIX tăng 27.88% trong 20 ngày lên mức 25.09 báo hiệu biến động thị trường cao, chưa phải lúc thích hợp để bắt đáy mà cần chờ tín hiệu ổn định."
     ],
     "risks": [
-      "Biên độ dao động cao 1.55%/ngày và mức giá đang ở phân vị 98% (top 2% lịch sử 5 năm) khiến rủi ro mua đỉh rất lớn.",
-      "Premium tăng vọt lên 19.21% (từ mức ~12-14% đầu tháng) cho thấy chênh lệch cung cầu nội địa đang căng thẳng, có thể gây sốc thanh khoản nếu thị trường điều chỉnh tiếp.",
-      "Sự kiện FOMC (18/03) và các bài phát biểu tiếp theo có thể gây biến động bất ngờ cho USD."
+      "Nếu giá thế giới tiếp tục phá đáy, premium SJC có thể co hẹp từ 19.65% về mức trung bình 13-15%, gây thiệt hại kép cho nhà đầu tư mua hiện tại.",
+      "Sự kiện FOMC ngày 18-19/03 với các dự báo kinh tế mới có thể gây biến động thêm cho USD và lợi suất, ảnh hưởng trực tiếp giá vàng.",
+      "Dữ liệu sự kiện địa chính trị trong input không đủ chi tiết để đánh giá rủi ro chiến tranh, giảm độ tin cậy của yếu tố hỗ trợ giá vàng."
     ],
     "evidence": [
+      {
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4643.87,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
       {
         "key": "Giá SJC hiện tại",
         "value": 175500000,
@@ -27,59 +33,53 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -7.15,
+        "key": "Biến động giá thế giới 5 ngày",
+        "value": -7.49,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Premium SJC hiện tại",
+        "value": 19.65,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y (20 ngày)",
-        "value": 3.33,
-        "unit": "% thay đổi",
+        "key": "Lợi suất thực Mỹ 10 năm",
+        "value": 1.86,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số DXY (20 ngày)",
+        "key": "USD Index biến động 20 ngày",
         "value": 2.56,
-        "unit": "% thay đổi",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Giá thế giới đỉnh tháng 3",
-        "value": 5330.95,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Giá thế giới hiện tại",
-        "value": 4661.2,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Premium hiện tại",
-        "value": 19.21,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
         "key": "VIX Index",
         "value": 25.09,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "MA7 giá thế giới",
+        "value": 5142.18,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T22:06:03.637Z",
+    "latestTimestamp": "2026-03-19T23:08:02.936Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 147223307.55754834,
-    "premiumPct": 19.21,
-    "change7dPct": -7.15,
-    "change30dPct": -6.41,
+    "intlVndPerTael": 146675910.4564343,
+    "premiumPct": 19.65,
+    "change7dPct": -7.5,
+    "change30dPct": -6.76,
     "volatilityDailyPct": 1.55,
-    "ma7VndPerTael": 154278328,
-    "ma30VndPerTael": 160875900,
+    "ma7VndPerTael": 154200128,
+    "ma30VndPerTael": 160857654,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T22:06:18.639Z",
+    "fetchedAt": "2026-03-19T23:08:19.167Z",
     "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4655.29,
+        "value": 4643.76,
         "unit": "USD/oz",
-        "date": "2026-03-19",
-        "change1dPct": -3.75,
-        "change5dPct": -8.33,
-        "change20dPct": -6.83,
+        "date": "2026-03-20",
+        "change1dPct": -0.25,
+        "change5dPct": -7.49,
+        "change20dPct": -8.9,
         "relationToGold": "context"
       },
       {
@@ -192,21 +192,17 @@
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
     ],
     "geopoliticalHeadlines": [
-      "2026-03-19 | rttnews.com | Canadian Stocks Slump Amid Escalation In Middle East War",
-      "2026-03-19 | finanznachrichten.de | Maple Gold Mines Ltd .: Maple Gold Announces Early Exercise of Warrants by Michael Gentile",
-      "2026-03-19 | thedailybeast.com | Billionaire Donald Trump Plugs $180K Gold Sneakers During Posting Rampage",
-      "2026-03-19 | investing.com | Gold : Holding the Yellow Metal Through Fog of War and Scary Data"
+      "2026-03-19 | afr.com | ASX 200 LIVE : ASX to edge lower as oil reverses earlier spike toward $US120",
+      "2026-03-19 | canadianminingjournal.com | JV article :  Amex advances Perron towards feasibility study  - Canadian Mining Journal"
     ],
     "countryActionHeadlines": [
-      "2026-03-19 | journal-news.com | DOJ investigation into Powell could backfire on Trump and keep Fed chair in office",
-      "2026-03-19 | yoursourceone.com | DOJ investigation into Powell could backfire on Trump and keep Fed chair in office",
-      "2026-03-19 | mariettatimes.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during war | News , Sports , Jobs"
+      "2026-03-19 | afr.com | ASX 200 LIVE : ASX to edge lower as oil reverses earlier spike toward $US120",
+      "2026-03-19 | journal-news.com | DOJ investigation into Powell could backfire on Trump and keep Fed chair in office"
     ],
     "dollarYieldHeadlines": [
       "2026-03-19 | rttnews.com | Canadian Stocks Slump Amid Escalation In Middle East War",
       "2026-03-19 | investing.com | Gold : Holding the Yellow Metal Through Fog of War and Scary Data",
-      "2026-03-19 | cnbc.com | Goldman sees risks of market correction rising and bonds wont help weather it",
-      "2026-03-19 | mariettatimes.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during war | News , Sports , Jobs"
+      "2026-03-19 | cnbc.com | Goldman sees risks of market correction rising and bonds wont help weather it"
     ]
   }
 }
