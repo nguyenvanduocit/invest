@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T01:35:26.739Z",
+  "generatedAt": "2026-03-19T03:03:46.910Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,17 +7,17 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh (-4.7% tuần) do giá thế giới giảm và USD mạnh, nhưng mức giá hiện tại vẫn rất cao (percentile 98% 5 năm) và biến động lớn. Nhà đầu tư nên chờ tín hiệu ổn định hoặc giá thế giới phục hồi trước khi vào lệnh mới, tránh bắt đáy trong bối cảnh lãi suất thực dương cao.",
+    "thesis": "Giá vàng SJC đang điều chỉnh giảm mạnh (-4.38% tuần) từ đỉnh lịch sử nhưng vẫn nằm trong vùng giá rất cao (percentile 98% 5 năm). Áp lực bán từ việc USD và lợi suất thực tăng mạnh, cộng hưởng với đà giảm của giá thế giới, khiến rủi ro điều chỉnh tiếp trong ngắn hạn còn hiện hữu, nhà đầu tư nên chờ tín hiệu ổn định.",
     "reasons": [
-      "Giá SJC giảm mạnh 4.7% trong 7 ngày qua, từ đỉnh 190.9 triệu xuống 178.4 triệu VND/lượng, cho thấy động lượng bán áp đảo ngắn hạn.",
-      "Áp lực vĩ mô tăng: Chỉ số USD tăng 2.56% trong 20 ngày (lên 120.55) và lãi suất thực 10 năm duy trì ở mức cao 1.83%, tạo áp lực giảm lên giá vàng thế giới (đã mất 4.53% trong 5 ngày).",
-      "Biên độ premium giãn nở thất thường, từ 10.84% (thấp nhất 30 ngày) lên 19.56% (ngày 18/03) rồi về 16.49%, cho thấy thanh khoản và tâm lý thị trường Việt Nam đang biến động mạnh.",
-      "Giá hiện tại 178.4 triệu VND/lượng vẫn nằm trong top 2% cao nhất lịch sử 5 năm (percentile 98), rủi ro mua đỉnh vẫn hiện hữu nếu xu hướng giảm tiếp tục."
+      "Động lượng giảm mạnh: Giá SJC giảm 4.38% trong 7 ngày qua, kéo giá hiện tại (178.4 triệu VND/lượng) xuống dưới MA7 (157.0 triệu VND/lượng) và MA30 (161.6 triệu VND/lượng).",
+      "Áp lực vĩ mô tăng: Chỉ số USD tăng 2.56% trong 20 ngày và lợi suất thực 10 năm ở mức 1.83% tạo áp lực nghịch biến lên giá vàng thế giới (đã giảm về 4860.9 USD/oz).",
+      "Giá trị quá cao: Giá SJC đang ở phân vị 98% trong 5 năm qua, biên độ dao động 1.38%/ngày cho thấy thị trường rung lắc mạnh, chưa có tín hiệu chốt đáy rõ ràng.",
+      "Premium co giãn: Chênh lệch giá SJC/Thế giới giảm từ đỉnh 19.56% (ngày 18/03) về 16.1%, cho thấy tâm lý thị trường Việt Nam đang đi theo điều chỉnh chung chứ không bung tách."
     ],
     "risks": [
-      "Rủi ro thanh khoản: Biến động ngày ở mức 1.38% kết hợp với spread mua-bán có thể giãn rộng trong phiên điều chỉnh.",
-      "Rủi ro vĩ mô: Các phát ngôn từ FOMC (ngày 18/03) có thể tiếp tục hỗ trợ USD, gây áp lực thêm lên giá vàng.",
-      "Dữ liệu sự kiện địa chính trị trống (geopoliticalHeadlines: []), thiếu yếu tố hỗ trợ tăng giá bất ngờ từ cú sốc bên ngoài."
+      "Cú sốc cung dầu và lo ngại lạm phát stagflation có thể đẩy giá vàng thế giới quay đầu tăng bất ngờ.",
+      "Fed giữ nguyên lãi suất và phát ngôn có thể tăng thêm (hike) tiếp tục củng cố USD, gây áp lực giảm thêm cho vàng.",
+      "Biên độ dao động cao (1.38%/ngày) và thanh khoản có thể gây trượt giá khi thực hiện lệnh lớn."
     ],
     "evidence": [
       {
@@ -27,59 +27,59 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi 7 ngày (SJC)",
-        "value": -4.7,
+        "key": "Giá thế giới quy đổi",
+        "value": 153666390,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Biến động 7 ngày (SJC)",
+        "value": -4.38,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAU/USD)",
-        "value": 4848.22,
-        "unit": "USD/oz",
-        "source": "first_principles_context"
+        "key": "Phân vị giá 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       },
       {
-        "key": "Thay đổi 5 ngày (XAU/USD)",
-        "value": -4.53,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4860.9,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
         "key": "Chỉ số USD Index",
-        "value": 120.55,
+        "value": 120.5518,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Lãi suất thực Mỹ 10 năm",
+        "key": "Lợi suất thực Mỹ 10 năm",
         "value": 1.83,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Biên độ Premium",
-        "value": 16.49,
+        "key": "Premium SJC/Thế giới",
+        "value": 16.1,
         "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Percentile 5 năm",
-        "value": 98,
-        "unit": "percentile",
         "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T01:35:01.426Z",
+    "latestTimestamp": "2026-03-19T03:03:16.117Z",
     "sjcVndPerTael": 178400000,
-    "intlVndPerTael": 153144256.1503961,
-    "premiumPct": 16.49,
-    "change7dPct": -4.7,
-    "change30dPct": -0.76,
+    "intlVndPerTael": 153666389.64209372,
+    "premiumPct": 16.1,
+    "change7dPct": -4.38,
+    "change30dPct": -0.42,
     "volatilityDailyPct": 1.38,
-    "ma7VndPerTael": 156970191,
-    "ma30VndPerTael": 161572578,
+    "ma7VndPerTael": 157044781,
+    "ma30VndPerTael": 161589983,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T01:35:06.423Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-19T03:03:21.879Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4848.22,
+        "value": 4855.97,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": 0.23,
-        "change5dPct": -4.53,
-        "change20dPct": -2.96,
+        "change1dPct": 0.4,
+        "change5dPct": -4.38,
+        "change20dPct": -2.81,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,26 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-19 | moneycontrol.com | Daily Voice : No Fed rate cuts soon ? Sandeep Bagla says next move may be a hike , not a cut",
+      "2026-03-19 | moneycontrol.com | Deepening oil supply shock could push economies toward stagflation , worry policymakers",
+      "2026-03-19 | europe.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-19 | moneycontrol.com | Daily Voice : No Fed rate cuts soon ? Sandeep Bagla says next move may be a hike , not a cut",
+      "2026-03-19 | moneycontrol.com | Deepening oil supply shock could push economies toward stagflation , worry policymakers",
+      "2026-03-19 | marketscreener.com | Yen under pressure as focus turns to BOJ after Fed holds",
+      "2026-03-19 | moneycontrol.com | Oil - driven inflation fears are reshaping Asian bond yield curves",
+      "2026-03-19 | europe.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
+      "2026-03-19 | nbcconnecticut.com | Trump eases Venezuela oil sanctions in effort to boost oil supply – NBC Connecticut"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-19 | moneycontrol.com | Daily Voice : No Fed rate cuts soon ? Sandeep Bagla says next move may be a hike , not a cut",
+      "2026-03-19 | moneycontrol.com | Deepening oil supply shock could push economies toward stagflation , worry policymakers",
+      "2026-03-19 | europe.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct",
+      "2026-03-19 | nbcconnecticut.com | Trump eases Venezuela oil sanctions in effort to boost oil supply – NBC Connecticut",
+      "2026-03-19 | tribune.com.pk | Gold prices steady amid global volatility",
+      "2026-03-19 | africa.chinadaily.com.cn | US Fed keeps interest rate unchanged at 3 . 5 - 3 . 75 pct"
+    ]
   }
 }
