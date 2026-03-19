@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T21:11:44.299Z",
+  "generatedAt": "2026-03-19T22:06:36.810Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,57 +7,63 @@
     "status": "CHỜ",
     "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử, áp lực bán từ thị trường quốc tế (XAUUSD giảm -8.42% trong 5 ngày) đang lấn át biến động nội địa. Dù premium tăng cao (19.45%) cho thấy tâm lý hỗ trợ trong nước, rủi ro giảm thêm là đáng kể khi các yếu tố vĩ mô (USD, Lợi suất thực) đang gây áp lực ngược.",
+    "thesis": "Giá vàng SJC đang trong đà điều chỉnh mạnh sau đỉnh lịch sử, chịu áp lực từ USD và lợi suất thực tăng vọt, mặc dù rủi ro địa chính trị đang tạo đáy hỗ trợ.",
     "reasons": [
-      "Áp lực bán mạnh từ thị trường quốc tế: Giá thế giới XAUUSD giảm 8.42% trong 5 ngày và 3.85% trong 1 ngày, kéo giá quy đổi VND giảm sâu.",
-      "Yếu tố vĩ mô tiêu cực: Lợi suất thực Mỹ 10 năm (1.86%) và chỉ số USD (+2.56% trong 20 ngày) tăng mạnh, tạo áp lực giảm giá vàng.",
-      "Biến động cao và xu hướng giảm ngắn hạn: Giá SJC giảm 7.34% trong 7 ngày và đang giao dịch dưới MA7 VND/lượng (175.5tr vs 154.2tr).",
-      "Tâm lý thị trường bất ổn: VIX tăng 27.88% trong 20 ngày, phản ánh sự hoảng loạn có thể khiến nhà đầu tư bán tháo tài sản rủi ro."
+      "Giá SJC 175.5 triệu VND/lượng đã phá vỡ MA7 (154.3 triệu VND/lượng) và giảm mạnh 7.15% sau 7 ngày, xác nhận xu hướng điều chỉnh ngắn hạn.",
+      "Áp lực bán từ vĩ mô rất mạnh: Lợi suất thực Mỹ (US Real Yield 10Y) tăng 3.33% lên 1.86% và DXY tăng 2.56% trong 20 ngày qua, gây áp lực giảm lên giá vàng thế giới.",
+      "Giá thế giới giảm sâu từ đỉnh 5330 USD/oz (02/03) xuống 4661 USD/oz, biên độ giảm hơn 12% trong nửa tháng, kéo theo tâm lý thị trường Việt Nam.",
+      "VIX tăng 27.88% lên mức 25.09 cho thấy thị trường tài chính đang bất ổn, nhưng dòng tiền hiện tại đang chảy vào USD hơn là vàng."
     ],
     "risks": [
-      "Giá thế giới tiếp tục giảm sâu do áp lực từ lãi suất thực dương và USD mạnh.",
-      "Thanh khoản SJC có thể bị ảnh hưởng nếu chênh lệch premium (19.45%) bị thu hẹp mạnh về mức trung bình.",
-      "Rủi ro dữ liệu nhiễu: Không có tin tức địa chính trị cụ thể để hỗ trợ giá tăng ngược dòng."
+      "Biên độ dao động cao 1.55%/ngày và mức giá đang ở phân vị 98% (top 2% lịch sử 5 năm) khiến rủi ro mua đỉh rất lớn.",
+      "Premium tăng vọt lên 19.21% (từ mức ~12-14% đầu tháng) cho thấy chênh lệch cung cầu nội địa đang căng thẳng, có thể gây sốc thanh khoản nếu thị trường điều chỉnh tiếp.",
+      "Sự kiện FOMC (18/03) và các bài phát biểu tiếp theo có thể gây biến động bất ngờ cho USD."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 175500000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 4650.54,
+        "key": "Biến động 7 ngày (SJC)",
+        "value": -7.15,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10Y (20 ngày)",
+        "value": 3.33,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Chỉ số DXY (20 ngày)",
+        "value": 2.56,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá thế giới đỉnh tháng 3",
+        "value": 5330.95,
         "unit": "USD/oz",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -7.34,
+        "key": "Giá thế giới hiện tại",
+        "value": 4661.2,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "Premium hiện tại",
+        "value": 19.21,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá thế giới 5 ngày",
-        "value": -8.42,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Chênh lệch Premium",
-        "value": 19.45,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.86,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Chỉ số VIX",
+        "key": "VIX Index",
         "value": 25.09,
         "unit": "index",
         "source": "first_principles_context"
@@ -65,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T21:11:28.666Z",
+    "latestTimestamp": "2026-03-19T22:06:03.637Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 146923912.51748967,
-    "premiumPct": 19.45,
-    "change7dPct": -7.34,
-    "change30dPct": -6.6,
+    "intlVndPerTael": 147223307.55754834,
+    "premiumPct": 19.21,
+    "change7dPct": -7.15,
+    "change30dPct": -6.41,
     "volatilityDailyPct": 1.55,
-    "ma7VndPerTael": 154235557,
-    "ma30VndPerTael": 160865920,
+    "ma7VndPerTael": 154278328,
+    "ma30VndPerTael": 160875900,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T21:11:31.624Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-19T22:06:18.639Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4650.54,
+        "value": 4655.29,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -3.85,
-        "change5dPct": -8.42,
-        "change20dPct": -6.92,
+        "change1dPct": -3.75,
+        "change5dPct": -8.33,
+        "change20dPct": -6.83,
         "relationToGold": "context"
       },
       {
@@ -185,8 +191,22 @@
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-19 | rttnews.com | Canadian Stocks Slump Amid Escalation In Middle East War",
+      "2026-03-19 | finanznachrichten.de | Maple Gold Mines Ltd .: Maple Gold Announces Early Exercise of Warrants by Michael Gentile",
+      "2026-03-19 | thedailybeast.com | Billionaire Donald Trump Plugs $180K Gold Sneakers During Posting Rampage",
+      "2026-03-19 | investing.com | Gold : Holding the Yellow Metal Through Fog of War and Scary Data"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-19 | journal-news.com | DOJ investigation into Powell could backfire on Trump and keep Fed chair in office",
+      "2026-03-19 | yoursourceone.com | DOJ investigation into Powell could backfire on Trump and keep Fed chair in office",
+      "2026-03-19 | mariettatimes.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during war | News , Sports , Jobs"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-19 | rttnews.com | Canadian Stocks Slump Amid Escalation In Middle East War",
+      "2026-03-19 | investing.com | Gold : Holding the Yellow Metal Through Fog of War and Scary Data",
+      "2026-03-19 | cnbc.com | Goldman sees risks of market correction rising and bonds wont help weather it",
+      "2026-03-19 | mariettatimes.com | US eases Venezuela oil sanctions as Trump seeks to boost world oil supply during war | News , Sports , Jobs"
+    ]
   }
 }
