@@ -1,46 +1,46 @@
 {
-  "generatedAt": "2026-03-19T11:14:46.608Z",
+  "generatedAt": "2026-03-19T12:12:15.442Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử khi Fed duy trì lập trường hawkish và USD tăng mạnh, tạo áp lực giảm giá ngắn hạn. Tuy nhiên, rủi ro địa chính trị từ Trung Đông và mức premium 18.41% vẫn cao có thể tạo sàn hỗ trợ, nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng thế giới đang giảm mạnh -9.1% sau FOMC, kéo giá SJC giảm nhưng premium vọt lên 19.98% cho thấy tâm lý hoảng loạn. Điểm mua kỹ thuật chưa xuất hiện khi giá SJC (175.5tr) vẫn dưới MA7 (155.9tr) nhưng động lượng bán quá mạnh cần thời gian ổn định.",
     "reasons": [
-      "Giá thế giới giảm mạnh 7.55% trong 5 ngày và 6.03% trong 20 ngày (xuống 4692.41 USD/oz), kéo giá SJC giảm 7.69% trong 7 ngày qua, phá vỡ MA7 VND (175.5tr vs 156.1tr/lượng) cho thấy động lượng bán đang chiếm ưu thế.",
-      "USD Index tăng 2.56% trong 20 ngày lên 120.55 và Fed giữ nguyên lãi suất tại 3.64% với phát ngôn hawkish, tăng áp lực lên giá vàng không sinh lời.",
-      "Giá SJC (175.5tr VND/lượng) vẫn nằm ở phân vị 98% trong 5 năm, rủi ro mua đỉnh cao mặc dù đã giảm từ mức 190.9tr VND/lượng đầu tháng.",
-      "Premium tăng vọt từ 12.06% (23/02) lên 18.41% hiện tại cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo ngại, có thể hạn chế biên độ giảm tiếp theo của giá SJC."
+      "Giá thế giới giảm sâu -9.1% (5 ngày) và -4.56% (1 ngày) xuống 4616 USD/oz, tạo áp lực điều chỉnh mạnh lên giá vàng Việt Nam.",
+      "Premium tăng vọt từ 12.18% (đầu tháng) lên 19.98% hiện tại, mức cao nhất trong chuỗi 30 ngày, cho thấy chênh lệch giá đã ở vùng cực đoan.",
+      "USD Index tăng 2.56% (20 ngày) lên 120.55 và lợi suất thực 10Y ở 1.83% tạo áp lực trái chiều mạnh lên giá vàng.",
+      "Giá SJC hiện tại 175.5tr/lượng thấp hơn MA30 (161.2tr) nhưng biến động ngày 1.59% cảnh báo rủi ro cao khi canh đáy."
     ],
     "risks": [
-      "Căng thẳng Trung Đông leo thang có thể đẩy giá vàng bật tăng bất chấp xu hướng giảm của USD/lãi suất.",
-      "Premium 18.41% cao hơn đáng kể so với trung bình giai đoạn đầu tháng (12-13%), rủi ro co hẹp premium nếu giá thế giới phục hồi khiến giá SJC tăng chậm hơn.",
-      "Thanh khoản thấp trong giai đoạn điều chỉnh có thể gây trượt giá khi mua/bán số lượng lớn."
+      "Premium 19.98% có thể co về mức trung bình 13-15%, gây lỗ cho người mua đáy dù giá thế giới ổn định.",
+      "FOMC vừa kết thúc với dự báo kinh tế mới, thị trường cần thời gian định giá lại chính sách tiền tệ.",
+      "Giá thế giới phá vỡ vùng hỗ trợ 5000 USD/oz, rủi ro test thêm vùng 4500 USD/oz trước khi ổn định."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 175500000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới XAUUSD",
-        "value": 4692.41,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -7.69,
+        "key": "Premium SJC",
+        "value": 19.98,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Vàng thế giới",
-        "value": 18.41,
+        "key": "Giá thế giới XAUUSD",
+        "value": 4616.47,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -8.9,
         "unit": "%",
         "source": "market_snapshot"
       },
@@ -51,35 +51,29 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Lãi suất Fed Funds",
-        "value": 3.64,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Phân vị giá 5 năm",
-        "value": 98,
-        "unit": "percentile",
+        "key": "MA30 giá SJC",
+        "value": 161205431,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 22.37,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "Premium đầu tháng 3/2026",
+        "value": 12.18,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T11:14:12.783Z",
+    "latestTimestamp": "2026-03-19T12:11:51.487Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 148208927.1333927,
-    "premiumPct": 18.41,
-    "change7dPct": -7.69,
-    "change30dPct": -3.87,
-    "volatilityDailyPct": 1.49,
-    "ma7VndPerTael": 156145871,
-    "ma30VndPerTael": 161269922,
+    "intlVndPerTael": 146274176.06820163,
+    "premiumPct": 19.98,
+    "change7dPct": -8.9,
+    "change30dPct": -5.12,
+    "volatilityDailyPct": 1.59,
+    "ma7VndPerTael": 155869478,
+    "ma30VndPerTael": 161205431,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T11:14:22.522Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-19T12:11:54.461Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4695.22,
+        "value": 4616.47,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -2.93,
-        "change5dPct": -7.55,
-        "change20dPct": -6.03,
+        "change1dPct": -4.56,
+        "change5dPct": -9.1,
+        "change20dPct": -7.6,
         "relationToGold": "context"
       },
       {
@@ -191,25 +185,8 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-19 | economictimes.indiatimes.com | S & P / ASX 200 drops sharply as Australian shares fall to 4 - month low on Middle East war escalation , inflation fears and mixed labour data ; check top gainers and losers",
-      "2026-03-19 | aol.co.uk | Gold prices slump after Fed holds interest rates steady",
-      "2026-03-19 | zawya.com | Gold falls to over one - month low on firm dollar , hawkish Fed",
-      "2026-03-19 | tennesseedaily.com | Tocvan Drone Magnetic Data Strengthens Gold - Silver Targets Across Gran Pilar ; Identifies Broad Zones for Expansion Potential"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-19 | asahi.com | BOJ keeps 0 . 75 % policy rate with eyes on Middle East situation | The Asahi Shimbun : Breaking News , Japan News and Analysis",
-      "2026-03-19 | koreatimes.co.kr | Seoul shares dip nearly 3 % on escalating Iran crisis , hawkish Fed ; won slides to 17 - year low",
-      "2026-03-19 | aol.co.uk | Gold prices slump after Fed holds interest rates steady",
-      "2026-03-19 | zawya.com | Gold falls to over one - month low on firm dollar , hawkish Fed",
-      "2026-03-19 | zawya.com | Stocks slump on worsening war in Middle East ; frail yen in focus",
-      "2026-03-19 | zawya.com | Yen under pressure as BOJ and Fed hold rates steady"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-19 | economictimes.indiatimes.com | S & P / ASX 200 drops sharply as Australian shares fall to 4 - month low on Middle East war escalation , inflation fears and mixed labour data ; check top gainers and losers",
-      "2026-03-19 | aol.co.uk | Gold prices slump after Fed holds interest rates steady",
-      "2026-03-19 | zawya.com | Gold falls to over one - month low on firm dollar , hawkish Fed",
-      "2026-03-19 | finanznachrichten.de | Asian Shares Plunge As Iran Conflict Worsens"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
