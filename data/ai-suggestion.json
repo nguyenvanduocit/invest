@@ -1,69 +1,69 @@
 {
-  "generatedAt": "2026-03-19T10:15:14.171Z",
+  "generatedAt": "2026-03-19T11:14:46.608Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử nhưng động lượng bán chưa hết, giá hiện tại 175.5 triệu VND/lượng vẫn nằm dưới MA7 (156.2 triệu) và MA30 (161.3 triệu) cho thấy xu hướng ngắn hạn yếu kém; nhà đầu tư nên chờ tín hiệu ổn định thay vì vội đón đáy.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử khi Fed duy trì lập trường hawkish và USD tăng mạnh, tạo áp lực giảm giá ngắn hạn. Tuy nhiên, rủi ro địa chính trị từ Trung Đông và mức premium 18.41% vẫn cao có thể tạo sàn hỗ trợ, nhà đầu tư nên chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Giá thế giới giảm mạnh 7.36% trong 5 ngày gần nhất xuống 4704.79 USD/oz, kéo giá SJC giảm 7.43% trong 7 ngày; động lượng bán áp đảo khi giá xuyên dưới MA7 và MA30.",
-      "Đồng USD mạnh lên (DXY tăng 2.56% trong 20 ngày lên 120.55) và lợi suất thực 10 năm ở mức cao 1.83% tạo áp lực nghịch biến lớn lên giá vàng.",
-      "Premium SJC đang ở mức 18.08%, cao hơn đáng kể so với vùng 12-14% đầu chuỗi dữ liệu, cho thấy giá nội địa vẫn còn phần nào độ trễ trong việc phản ánh đà giảm của giá thế giới.",
-      "VIX ở mức 22.37 cho thấy thị trường vẫn lo ngại rủi ro, nhưng sự vắng mặt của tin tức địa chính trị cụ thể khiến đà tăng giá khó duy trì."
+      "Giá thế giới giảm mạnh 7.55% trong 5 ngày và 6.03% trong 20 ngày (xuống 4692.41 USD/oz), kéo giá SJC giảm 7.69% trong 7 ngày qua, phá vỡ MA7 VND (175.5tr vs 156.1tr/lượng) cho thấy động lượng bán đang chiếm ưu thế.",
+      "USD Index tăng 2.56% trong 20 ngày lên 120.55 và Fed giữ nguyên lãi suất tại 3.64% với phát ngôn hawkish, tăng áp lực lên giá vàng không sinh lời.",
+      "Giá SJC (175.5tr VND/lượng) vẫn nằm ở phân vị 98% trong 5 năm, rủi ro mua đỉnh cao mặc dù đã giảm từ mức 190.9tr VND/lượng đầu tháng.",
+      "Premium tăng vọt từ 12.06% (23/02) lên 18.41% hiện tại cho thấy tâm lý nhà đầu tư Việt Nam vẫn lo ngại, có thể hạn chế biên độ giảm tiếp theo của giá SJC."
     ],
     "risks": [
-      "Rủi ro giá tiếp tục điều chỉnh sâu nếu Fed duy trì lập trường cứng rắn từ kết quả FOMC ngày 18/03.",
-      "Premium có thể co hẹp nhanh chóng về mức 15-16% nếu giá thế giới tiếp tục giảm, làm gia tăng thua lỗ cho người mua hiện tại.",
-      "Biến động ngày ở mức 1.47% cộng với drawdown tồi t nhất trong 5 năm lên tới 41.26% cảnh báo rủi ro thanh khoản."
+      "Căng thẳng Trung Đông leo thang có thể đẩy giá vàng bật tăng bất chấp xu hướng giảm của USD/lãi suất.",
+      "Premium 18.41% cao hơn đáng kể so với trung bình giai đoạn đầu tháng (12-13%), rủi ro co hẹp premium nếu giá thế giới phục hồi khiến giá SJC tăng chậm hơn.",
+      "Thanh khoản thấp trong giai đoạn điều chỉnh có thể gây trượt giá khi mua/bán số lượng lớn."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "Giá vàng SJC hiện tại",
         "value": 175500000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (Spot)",
-        "value": 4704.79,
+        "key": "Giá thế giới XAUUSD",
+        "value": 4692.41,
         "unit": "USD/oz",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -7.43,
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -7.69,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "MA30 (SJC)",
-        "value": 161283969,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 18.08,
+        "key": "Premium SJC/Vàng thế giới",
+        "value": 18.41,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Chỉ số USD (DXY)",
-        "value": 120.55,
-        "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực US 10Y",
-        "value": 1.83,
+        "key": "USD Index thay đổi 20 ngày",
+        "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX",
+        "key": "Lãi suất Fed Funds",
+        "value": 3.64,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Phân vị giá 5 năm",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX Index",
         "value": 22.37,
         "unit": "index",
         "source": "first_principles_context"
@@ -71,15 +71,15 @@
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T10:14:44.073Z",
+    "latestTimestamp": "2026-03-19T11:14:12.783Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 148630321.82971835,
-    "premiumPct": 18.08,
-    "change7dPct": -7.43,
-    "change30dPct": -3.6,
-    "volatilityDailyPct": 1.47,
-    "ma7VndPerTael": 156206070,
-    "ma30VndPerTael": 161283969,
+    "intlVndPerTael": 148208927.1333927,
+    "premiumPct": 18.41,
+    "change7dPct": -7.69,
+    "change30dPct": -3.87,
+    "volatilityDailyPct": 1.49,
+    "ma7VndPerTael": 156145871,
+    "ma30VndPerTael": 161269922,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T10:14:46.870Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-19T11:14:22.522Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4704.79,
+        "value": 4695.22,
         "unit": "USD/oz",
         "date": "2026-03-19",
-        "change1dPct": -2.73,
-        "change5dPct": -7.36,
-        "change20dPct": -5.83,
+        "change1dPct": -2.93,
+        "change5dPct": -7.55,
+        "change20dPct": -6.03,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,25 @@
       "2026-03-11 | ECB Press / Speeches | Eurosystem Unveils Appia Roadmap for Europe’s Tokenised Finance",
       "2026-03-09 | ECB Press / Speeches | Frank Elderson: Nature in decline, economy on the line: the importance of international cooperation for managing nature-related risks"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-19 | economictimes.indiatimes.com | S & P / ASX 200 drops sharply as Australian shares fall to 4 - month low on Middle East war escalation , inflation fears and mixed labour data ; check top gainers and losers",
+      "2026-03-19 | aol.co.uk | Gold prices slump after Fed holds interest rates steady",
+      "2026-03-19 | zawya.com | Gold falls to over one - month low on firm dollar , hawkish Fed",
+      "2026-03-19 | tennesseedaily.com | Tocvan Drone Magnetic Data Strengthens Gold - Silver Targets Across Gran Pilar ; Identifies Broad Zones for Expansion Potential"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-19 | asahi.com | BOJ keeps 0 . 75 % policy rate with eyes on Middle East situation | The Asahi Shimbun : Breaking News , Japan News and Analysis",
+      "2026-03-19 | koreatimes.co.kr | Seoul shares dip nearly 3 % on escalating Iran crisis , hawkish Fed ; won slides to 17 - year low",
+      "2026-03-19 | aol.co.uk | Gold prices slump after Fed holds interest rates steady",
+      "2026-03-19 | zawya.com | Gold falls to over one - month low on firm dollar , hawkish Fed",
+      "2026-03-19 | zawya.com | Stocks slump on worsening war in Middle East ; frail yen in focus",
+      "2026-03-19 | zawya.com | Yen under pressure as BOJ and Fed hold rates steady"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-19 | economictimes.indiatimes.com | S & P / ASX 200 drops sharply as Australian shares fall to 4 - month low on Middle East war escalation , inflation fears and mixed labour data ; check top gainers and losers",
+      "2026-03-19 | aol.co.uk | Gold prices slump after Fed holds interest rates steady",
+      "2026-03-19 | zawya.com | Gold falls to over one - month low on firm dollar , hawkish Fed",
+      "2026-03-19 | finanznachrichten.de | Asian Shares Plunge As Iran Conflict Worsens"
+    ]
   }
 }
