@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T18:13:22.386Z",
+  "generatedAt": "2026-03-20T19:15:54.514Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,40 +7,39 @@
     "status": "CHỜ",
     "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới đang giảm mạnh do áp lực từ USD mạnh và lợi suất thực tăng cao, nhưng giá SJC Việt Nam giảm chậm hơn khiến mức phí premium tăng vọt lên mức cực đoan 22.3%. Nên chờ đợi sự ổn định của giá thế giới hoặc sự điều chỉnh của giá trong nước để giảm rủi ro mua đỉnh phí.",
+    "thesis": "Giá vàng thế giới đang giảm mạnh với động lượng bán áp đảo từ chính sách Fed, nhưng premium SJC vọt lên 23.97% tạo rào cản thanh khoản và rủi ro điều chỉnh hai chiều cho nhà đầu tư Việt Nam.",
     "reasons": [
-      "Giá vàng thế giới giảm mạnh 8.99% trong 5 ngày và 10.37% trong 20 ngày xuống 4563.5 USD/oz, dưới các đường MA ngắn hạn, cho thấy động lượng bán rất mạnh.",
-      "Lợi suất thực Mỹ 10 năm tăng lên 1.86% và chỉ số USD tăng 2.56% trong 20 ngày qua tạo áp lực tài chính lớn, làm giảm sức hút của vàng theo quan hệ first-principles.",
-      "Mức phí premium SJC tăng vọt từ 12-15% đầu tháng lên 22.3% (khoảng 32.1 triệu VND/lượng), cao hơn đáng kể so với trung bình 30 ngày qua, cho thấy giá trong nước đang bị định giá quá cao so với giá thế giới.",
-      "Giá SJC hiện tại 176.1 triệu VND/lượng thấp hơn MA7 (153.7 triệu) và MA30 (160.6 triệu) nhưng động lượng giảm của thế giới (-9.1% trong 7 ngày) vẫn chưa có dấu hiệu dừng lại."
+      "Giá thế giới giảm 10.26% trong 5 ngày và 11.62% trong 20 ngày (từ ~5083 xuống 4501 USD/oz), phá vỡ xu hướng tăng do áp lực từ lợi suất thực Mỹ tăng 3.33% và USD mạnh lên 2.56%.",
+      "Premium SJC tăng vọt từ mức 12-13% đầu tháng lên 23.97% (ngưỡng cao nhất trong chuỗi dữ liệu), cho thấy giá trong nước đã không theo kịp đà giảm của thế giới, làm tăng rủi ro điều chỉnh giảm.",
+      "Giá SJC hiện 176.1 triệu/lượng thấp hơn MA7 (153.4 triệu/lượng) và MA30 (160.5 triệu/lượng) nhưng động lượng giảm quá mạnh (-10.33% trong 7 ngày) cần thời gian ổn định."
     ],
     "risks": [
-      "Rủi ro phí premium co giãn mạnh: Nếu giá thế giới tiếp tục giảm hoặc bình ổn trong khi giá SJC điều chỉnh giảm sâu để thu hẹp chênh lệch, nhà đầu tư mua сейчас có thể chịu lỗ giá trị tài sản ngay lập tức.",
-      "Rủi ro vĩ mô: Các phát ngôn chính sách từ FOMC ngày 18-03 và ECB ngày 19-03 đang định hình lại kỳ vọng lãi suất toàn cầu theo hướng hawkish (thắt chặt hơn), có thể tiếp tục đè giá vàng.",
-      "Biến động cao: Volatility daily ở mức 1.54% kết hợp với VIX 24.06 cho thấy thị trường đang trong trạng thái bất ổn cao, khó dự đoán điểm đáy chính xác."
+      "Premium 23.97% ở mức cực đoan lịch sử, có thể giảm nhanh nếu SJC điều chỉnh theo thế giới, gây thiệt hại cho người mua đuổi.",
+      "Lợi suất thực Mỹ (1.86%) và USD Index tăng mạnh tạo áp lực bán tiếp tục đối với vàng thế giới.",
+      "VIX ở 24.06 cho thấy thị trường tài chính biến động cao, thanh khoản có thể bị ảnh hưởng."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới (XAU/USD)",
-        "value": 4563.5,
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4501.85,
         "unit": "USD/oz",
-        "source": "first_principles_context"
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Giá SJC Việt Nam",
+        "key": "Giá SJC hiện tại",
         "value": 176100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Mức phí Premium",
-        "value": 22.3,
+        "key": "Premium SJC",
+        "value": 23.97,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá thế giới 5 ngày",
-        "value": -8.99,
+        "key": "Giá thế giới giảm 5 ngày",
+        "value": -10.26,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -51,35 +50,35 @@
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số USD (Trade Weighted)",
-        "value": 120.55,
-        "unit": "index",
+        "key": "USD Index tăng 20 ngày",
+        "value": 2.56,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Giá SJC so với MA30",
-        "value": -8.38,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "VIX Volatility Index",
+        "key": "VIX",
         "value": 24.06,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Giá SJC giảm 7 ngày",
+        "value": -10.33,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-20T18:12:37.987Z",
+    "latestTimestamp": "2026-03-20T19:15:32.658Z",
     "sjcVndPerTael": 176100000,
-    "intlVndPerTael": 143991623.78979298,
-    "premiumPct": 22.3,
-    "change7dPct": -9.1,
-    "change30dPct": -8.38,
-    "volatilityDailyPct": 1.54,
-    "ma7VndPerTael": 153681720,
-    "ma30VndPerTael": 160610228,
+    "intlVndPerTael": 142046357.9343145,
+    "premiumPct": 23.97,
+    "change7dPct": -10.33,
+    "change30dPct": -9.61,
+    "volatilityDailyPct": 1.6,
+    "ma7VndPerTael": 153403825,
+    "ma30VndPerTael": 160545386,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +89,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-20T18:12:59.361Z",
+    "fetchedAt": "2026-03-20T19:15:39.872Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4568.65,
+        "value": 4504.86,
         "unit": "USD/oz",
         "date": "2026-03-20",
-        "change1dPct": -1.86,
-        "change5dPct": -8.99,
-        "change20dPct": -10.37,
+        "change1dPct": -3.23,
+        "change5dPct": -10.26,
+        "change20dPct": -11.62,
         "relationToGold": "context"
       },
       {
@@ -193,13 +192,6 @@
     ],
     "geopoliticalHeadlines": [],
     "countryActionHeadlines": [],
-    "dollarYieldHeadlines": [
-      "2026-03-20 | marketscreener.com | MIB down as Inwit lags and ECB repricing weighs",
-      "2026-03-20 | zerohedge.com | Futures Slide Ahead Of Massive $5 . 7 Trillion OpEx As Iran War Shows No Signs Of Easing",
-      "2026-03-20 | finanznachrichten.de | Sound Money Defense League : Leading Gold and Silver Groups Announce New Sound Money Fellows",
-      "2026-03-20 | moneycontrol.com | Gold set for worst week in 4 decades as Iran war curbs rate - cut bets",
-      "2026-03-20 | marketpulse.com | Metals dive lower from the global Hawkish repricings , Opportunity or Trap ? – Silver ( XAG / USD ) and Gold ( XAU / USD ) Outlook",
-      "2026-03-20 | us.cnn.com | Gold is having an awful week for a worrying reason"
-    ]
+    "dollarYieldHeadlines": []
   }
 }
