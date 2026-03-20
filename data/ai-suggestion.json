@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T23:08:39.372Z",
+  "generatedAt": "2026-03-20T00:22:12.383Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,22 +7,22 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới giảm mạnh 7.5% trong 7 ngày do áp lực từ USD và lợi suất thực tăng cao, kéo giá SJC giảm nhưng premium vẫn nới rộng ở mức 19.65%. Nhà đầu tư nên chờ đợi sự ổn định của thị trường quốc tế trước khi vào lệnh, vì đà giảm chưa có dấu hiệu đảo chiều rõ ràng.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh 5 năm, premium vọt lên vùng cực đoan 19.19% trong khi giá thế giới giảm sâu dưới MA7, tín hiệu kỹ thuật và vĩ mô chưa ổn định để mua đuổi.",
     "reasons": [
-      "Giá thế giới giảm mạnh 7.49% trong 5 ngày và 8.9% trong 20 ngày (xuống 4643.87 USD/oz), dưới cả MA7 (5142 USD/oz) và MA30 (5098 USD/oz), cho thấy động lượng bán rất mạnh.",
-      "Áp lực vĩ mô tiêu cực: Lợi suất thực Mỹ 10 năm tăng 3.33% trong 20 ngày lên 1.86%, và USD Index tăng 2.56%, cả hai đều là yếu tố nghịch biến mạnh với giá vàng.",
-      "Premium SJC nới rộng từ 12-13% (đầu tháng 3) lên 19.65% hiện tại, cho thấy tâm lý phòng thủ của nhà đầu tư VN nhưng tạo rủi ro co hẹp nếu giá thế giới tiếp tục giảm.",
-      "VIX tăng 27.88% trong 20 ngày lên mức 25.09 báo hiệu biến động thị trường cao, chưa phải lúc thích hợp để bắt đáy mà cần chờ tín hiệu ổn định."
+      "Giá thế giới giảm mạnh 7.23% trong 5 ngày xuống 4658.77 USD/oz, phá vỡ MA7 (5198 USD/oz) và MA30 (5098 USD/oz) cho thấy động lượng bán còn mạnh.",
+      "Premium SJC tăng vọt từ 12-13% đầu tháng lên 19.19% (28.25 triệu VND/lượng), mức cao nhất trong chuỗi 30 ngày, tạo rủi ro co hẹp nếu giá thế giới hồi phục.",
+      "Lợi suất thực US 10Y tăng 3.33% lên 1.86% và USD Index tăng 2.56% trong 20 ngày là áp lực nghịch đảo lớn lên giá vàng thế giới.",
+      "VIX ở mức 25.09 chỉ số lo ngại cao, nhưng giá vàng giảm ngược cho thấy thị trường đang ưu tiên nắm giữ USD hơn vàng an toàn."
     ],
     "risks": [
-      "Nếu giá thế giới tiếp tục phá đáy, premium SJC có thể co hẹp từ 19.65% về mức trung bình 13-15%, gây thiệt hại kép cho nhà đầu tư mua hiện tại.",
-      "Sự kiện FOMC ngày 18-19/03 với các dự báo kinh tế mới có thể gây biến động thêm cho USD và lợi suất, ảnh hưởng trực tiếp giá vàng.",
-      "Dữ liệu sự kiện địa chính trị trong input không đủ chi tiết để đánh giá rủi ro chiến tranh, giảm độ tin cậy của yếu tố hỗ trợ giá vàng."
+      "Premium 19.19% có thể co về mức trung bình 13-15% nếu giá thế giới phục hồi, gây thiệt hại cho người mua đuổi.",
+      "Giá SJC 175.5 triệu VND vẫn dưới MA7 (154.2 triệu VND) và MA30 (160.9 triệu VND), xu hướng ngắn hạn vẫn là điều chỉnh.",
+      "Thiếu dữ liệu sự kiện địa chính trị và hành động quốc gia, độ tin cậy phân tích giảm, cần thận trọng với tín hiệu nhiễu."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới (Spot)",
-        "value": 4643.87,
+        "key": "Giá vàng thế giới (XAUUSD)",
+        "value": 4658.77,
         "unit": "USD/oz",
         "source": "first_principles_context"
       },
@@ -33,26 +33,20 @@
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá thế giới 5 ngày",
-        "value": -7.49,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Premium SJC hiện tại",
-        "value": 19.65,
+        "key": "Premium SJC",
+        "value": 19.19,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.86,
+        "key": "Biến động 7 ngày giá thế giới",
+        "value": -7.23,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index biến động 20 ngày",
-        "value": 2.56,
+        "key": "Lợi suất thực US 10Y",
+        "value": 1.86,
         "unit": "%",
         "source": "first_principles_context"
       },
@@ -64,22 +58,28 @@
       },
       {
         "key": "MA7 giá thế giới",
-        "value": 5142.18,
+        "value": 5198,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "MA30 giá thế giới",
+        "value": 5098.61,
         "unit": "USD/oz",
         "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-19T23:08:02.936Z",
+    "latestTimestamp": "2026-03-20T00:21:34.083Z",
     "sjcVndPerTael": 175500000,
-    "intlVndPerTael": 146675910.4564343,
-    "premiumPct": 19.65,
-    "change7dPct": -7.5,
-    "change30dPct": -6.76,
-    "volatilityDailyPct": 1.55,
-    "ma7VndPerTael": 154200128,
-    "ma30VndPerTael": 160857654,
+    "intlVndPerTael": 147244813.36864853,
+    "premiumPct": 19.19,
+    "change7dPct": -7.2,
+    "change30dPct": -6.46,
+    "volatilityDailyPct": 1.53,
+    "ma7VndPerTael": 154267346,
+    "ma30VndPerTael": 160873338,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-19T23:08:19.167Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-20T00:21:55.674Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4643.76,
+        "value": 4656.93,
         "unit": "USD/oz",
         "date": "2026-03-20",
-        "change1dPct": -0.25,
-        "change5dPct": -7.49,
-        "change20dPct": -8.9,
+        "change1dPct": 0.04,
+        "change5dPct": -7.23,
+        "change20dPct": -8.64,
         "relationToGold": "context"
       },
       {
@@ -191,18 +191,8 @@
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-19 | afr.com | ASX 200 LIVE : ASX to edge lower as oil reverses earlier spike toward $US120",
-      "2026-03-19 | canadianminingjournal.com | JV article :  Amex advances Perron towards feasibility study  - Canadian Mining Journal"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-19 | afr.com | ASX 200 LIVE : ASX to edge lower as oil reverses earlier spike toward $US120",
-      "2026-03-19 | journal-news.com | DOJ investigation into Powell could backfire on Trump and keep Fed chair in office"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-19 | rttnews.com | Canadian Stocks Slump Amid Escalation In Middle East War",
-      "2026-03-19 | investing.com | Gold : Holding the Yellow Metal Through Fog of War and Scary Data",
-      "2026-03-19 | cnbc.com | Goldman sees risks of market correction rising and bonds wont help weather it"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
