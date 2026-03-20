@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T02:59:15.637Z",
+  "generatedAt": "2026-03-20T03:53:04.816Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử với áp lực bán từ thị trường quốc tế (XAUUSD giảm -7.8% trong 20 ngày) và USD tăng mạnh, tuy nhiên mức giảm sâu -6.42% trong 7 ngày qua có thể tạo đáy ngắn hạn cần xác nhận.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử dưới áp lực USD và lợi suất thực tăng cao, nhưng biến động lớn và VIX ở mức 25.09 báo hiệu rủi ro chưa ổn định để xuống tiền ngay.",
     "reasons": [
-      "Áp lực bán vĩ mô: Lợi suất thực US 10Y tăng mạnh +3.33% (20 ngày) lên 1.86% và USD Index tăng +2.56%, tạo áp lực giảm giá lớn lên vàng thế giới.",
-      "Động lượng giảm mạnh: Giá thế giới giảm từ đỉnh 5330 USD/oz (02/03) xuống 4698 USD/oz, kéo SJC giảm từ 190.9 triệu xuống 174.9 triệu/lượng.",
-      "Biến động cao cần cảnh giác: VIX tăng vọt +27.88% (20 ngày) lên mức 25.09, cho thấy thị trường tài chính bất ổn, thanh khoản có thể bị ảnh hưởng.",
-      "Premium giãn rộng: Chênh lệch giá SJC tăng từ 12-13% đầu kỳ lên mức 17.87%, cho thấy tâm lý phòng thủ trong nước cao nhưng giảm thanh khoản mua."
+      "Giá SJC 176.1 triệu VND/lượng đã穿透 MA7 (154.6 triệu) và MA30 (160.9 triệu), cho thấy động lượng giảm rất mạnh sau đỉnh 190.9 triệu đầu tháng 3.",
+      "Lợi suất thực Mỹ 10N tăng 3.33% trong 20 ngày lên 1.86% và DXY tăng 2.56% lên 120.55, tạo áp lực nghịch biến lớn lên giá vàng thế giới (đã giảm -7.33% trong 20 ngày).",
+      "Premium SJC nới rộng lên 18.04% (từ mức 12-14% đầu chuỗi dữ liệu) do giá thế giới giảm nhanh hơn giá nội địa, biến động ngày ở mức cao 1.57%.",
+      "VIX tăng 27.88% trong 20 ngày lên mức 25.09 kết hợp tin tức 'hawkish rate repricing' và 'Iran war' cho thấy thị trường tài chính đang trong trạng thái bất ổn cao."
     ],
     "risks": [
-      "Rủi ro tiếp tục điều chỉnh nếu Fed duy trì lãi suất cao (hiện 3.64%) lâu hơn dự kiến do lạm phát kỳ vọng vẫn ở 2.37%.",
-      "Thanh khoản thị trường thấp sau đợt giảm giá, nhà đầu tư có thể chờ đợi dấu hiệu đảo chiều rõ ràng hơn.",
-      "Biến động ngày ở mức 1.55% cho thấy rủi ro giao dịch ngắn hạn cao."
+      "Áp lực bán tiếp tục nếu Fed duy trì lập trường hawkish và lợi suất thực Mỹ tiếp tục tăng.",
+      "Thanh khoản giảm và spread mua bán nới rộng trong bối cảnh giá điều chỉnh mạnh.",
+      "Giá thế giới có thể hồi phục ngắn hạn nhưng xu hướng chính vẫn chịu ảnh hưởng của chính sách tiền tệ thắt chặt."
     ],
     "evidence": [
       {
         "key": "Giá SJC hiện tại",
-        "value": 174900000,
+        "value": 176100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 4698,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "key": "Giá thế giới quy đổi",
+        "value": 149185043,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "Biến động 7 ngày SJC",
-        "value": -6.42,
+        "key": "Premium SJC",
+        "value": 18.04,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực US 10Y (20 ngày)",
+        "key": "Biến động giá SJC 30 ngày",
+        "value": -5.17,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10N (20 ngày)",
         "value": 3.33,
         "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index (20 ngày)",
+        "key": "Chỉ số DXY (20 ngày)",
         "value": 2.56,
         "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
+        "key": "VIX hiện tại",
         "value": 25.09,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC",
-        "value": 17.87,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "MA7 SJC",
-        "value": 154444367,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "Giá vàng thế giới XAUUSD (20 ngày)",
+        "value": -7.33,
+        "unit": "% thay đổi",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-20T02:58:48.332Z",
-    "sjcVndPerTael": 174900000,
-    "intlVndPerTael": 148385583.11575705,
-    "premiumPct": 17.87,
-    "change7dPct": -6.42,
-    "change30dPct": -5.68,
-    "volatilityDailyPct": 1.55,
-    "ma7VndPerTael": 154444367,
-    "ma30VndPerTael": 160914643,
+    "latestTimestamp": "2026-03-20T03:52:35.366Z",
+    "sjcVndPerTael": 176100000,
+    "intlVndPerTael": 149185042.82673025,
+    "premiumPct": 18.04,
+    "change7dPct": -5.92,
+    "change30dPct": -5.17,
+    "volatilityDailyPct": 1.57,
+    "ma7VndPerTael": 154558576,
+    "ma30VndPerTael": 160941291,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-20T02:58:51.598Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-20T03:52:43.177Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4699.79,
+        "value": 4724,
         "unit": "USD/oz",
         "date": "2026-03-20",
-        "change1dPct": 0.96,
-        "change5dPct": -6.38,
-        "change20dPct": -7.8,
+        "change1dPct": 1.48,
+        "change5dPct": -5.89,
+        "change20dPct": -7.33,
         "relationToGold": "context"
       },
       {
@@ -191,8 +191,20 @@
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-20 | proactiveinvestors.com | Nova Minerals to showcase Estelle progress at Emerging Growth Conference",
+      "2026-03-20 | proactiveinvestors.com | The Morning Catch - Up : ASX set to ease as oil volatility drives sentiment",
+      "2026-03-20 | economictimes.indiatimes.com | Hegseth wants Pentagon to dump Anthropic Claude , but military users say it not so easy",
+      "2026-03-20 | ft.lk | Energy is national security : Why Sri Lanka future depends on a radical power shift"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-20 | timesofindia.indiatimes.com | As inflation weighs , gold , silver extend losing streak",
+      "2026-03-20 | marketscreener.com | Dollar toppled as oil shock turns central banks hawkish",
+      "2026-03-20 | marketscreener.com | Oil prices retreat , bonds struggle on hawkish rate repricing as Iran war rages"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-20 | timesofindia.indiatimes.com | As inflation weighs , gold , silver extend losing streak",
+      "2026-03-20 | marketscreener.com | Oil prices retreat , bonds struggle on hawkish rate repricing as Iran war rages"
+    ]
   }
 }
