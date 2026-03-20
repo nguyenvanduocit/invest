@@ -1,79 +1,85 @@
 {
-  "generatedAt": "2026-03-20T14:17:48.115Z",
+  "generatedAt": "2026-03-20T15:16:17.527Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC giảm mạnh 8.83% trong 7 ngày nhưng premium vọt lên 21.94% cho thấy thị trường Việt Nam đang hoảng loạn bán thua trong bối cảnh giá thế giới lao dốc do áp lực USD và lợi suất thực tăng cao.",
+    "thesis": "Giá vàng thế giới đang giảm mạnh do áp lực từ USD và lợi suất thực tăng cao, nhưng premium SJC vọt lên mức 21.98% khiến chi phí đầu tư vào vàng Việt Nam hiện tại rất rủi ro. Nhà đầu tư nên chờ đợi premium hạ nhiệt hoặc giá thế giới ổn định trở lại trước khi mua.",
     "reasons": [
-      "Giá thế giới giảm mạnh 10.12% trong 20 ngày (từ 5020 xuống 4577 USD/oz) do lợi suất thực 10Y tăng lên 1.86% và USD Index tăng 2.56%, tạo áp lực bán mạnh lên vàng.",
-      "Premium SJC tăng vọt từ 15-16% lên 21.94% trong 2 ngày gần nhất, cho thấy chênh lệch giá đang ở mức căng thẳng, rủi ro điều chỉnh premium là rất lớn nếu nhà đầu tư tiếp tục bán tháo.",
-      "Giá SJC hiện (176.1 triệu VND/lượng) đã phá vỡ dưới MA7 (153.7 triệu VND/lường) và MA30 (160.6 triệu VND/lượng), xu hướng ngắn hạn đã chuyển sang giảm mạnh với động lượng bán chưa thấy dấu hiệu dừng.",
-      "VIX ở mức 24.06 cho thấy lo ngại thị trường vẫn cao, nhưng các yếu tố vĩ mô cơ bản (lợi suất thực tăng, USD mạnh) đang chống lại giá vàng."
+      "Giá vàng thế giới giảm 8.89% trong 5 ngày và 10.27% trong 20 ngày (theo first_principles), chốt ở 4575.29 USD/oz, xu hướng điều chỉnh rất mạnh.",
+      "Premium SJC tăng vọt từ 12-16% lên mức 21.98% (31.7 triệu VND/lượng), cao hơn nhiều so với trung bình 30 ngày qua, làm giảm hiệu quả mua vào.",
+      "Áp lực vĩ mô tiêu cực: Lợi suất thực Mỹ 10 năm tăng 3.33% (20 ngày) và USD Index tăng 2.56%, cả hai đều có mối quan hệ nghịch biến với giá vàng.",
+      "Giá SJC hiện (176.1 triệu) thấp hơn MA7 (153.7 triệu là dữ liệu bất thường), nhưng xu hướng 30 ngày cho thấy đỉnh đã qua từ 190.9 triệu."
     ],
     "risks": [
-      "Premium 21.94% có thể co lại nhanh chóng về mức trung bình 15-16%, gây thiệt hại cho người mua đuổi ngay lúc này.",
-      "Xu hướng giảm giá thế giới có thể tiếp tục nếu Fed duy trì chính sách thắt chặt tiền tệ như tín hiệu từ FOMC ngày 18/03.",
-      "Biến động ngày ở mức 1.53% cộng với đà giảm 8.83% tuần qua cho thấy rủi ro xuống điểm ngắn hạn vẫn rất lớn."
+      "Premium co lại nhanh chóng từ 21.98% về mức 15-16% bình thường, khiến giá SJC giảm sâu ngay cả khi giá thế giới đi ngang.",
+      "Giá thế giới tiếp tục điều chỉnh sâu hơn nếu Fed duy trì lãi suất cao và USD tiếp tục mạnh.",
+      "Biến động ngày ở mức 1.53% cộng với sự thiếu rõ ràng từ các phát ngôn chính sách gần đây (FOMC, ECB) gây nhiễu thị trường ngắn hạn."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới 20 ngày",
-        "value": -10.12,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.86,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4575.29,
+        "unit": "USD/oz",
+        "source": "monthly_series_30d"
       },
       {
         "key": "Premium SJC hiện tại",
-        "value": 21.94,
+        "value": 21.98,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá SJC thay đổi 7 ngày",
-        "value": -8.83,
-        "unit": "%",
+        "key": "Giá trị tuyệt đối Premium",
+        "value": 31736432.58,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "USD Index thay đổi 20 ngày",
+        "key": "Thay đổi giá thế giới 5 ngày",
+        "value": -8.89,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10N (20 ngày)",
+        "value": 3.33,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "USD Index (20 ngày)",
         "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
+        "key": "Đỉnh giá SJC 30 ngày",
+        "value": 190900000,
+        "unit": "VND/lượng",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "VIX",
         "value": 24.06,
         "unit": "index",
         "source": "first_principles_context"
-      },
-      {
-        "key": "Premium ngày 17/03",
-        "value": 16.02,
-        "unit": "%",
-        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-20T14:17:22.856Z",
+    "latestTimestamp": "2026-03-20T15:15:54.575Z",
     "sjcVndPerTael": 176100000,
-    "intlVndPerTael": 144420751.62728053,
-    "premiumPct": 21.94,
-    "change7dPct": -8.83,
-    "change30dPct": -8.1,
+    "intlVndPerTael": 144363567.4183,
+    "premiumPct": 21.98,
+    "change7dPct": -8.86,
+    "change30dPct": -8.14,
     "volatilityDailyPct": 1.53,
-    "ma7VndPerTael": 153743024,
-    "ma30VndPerTael": 160624533,
+    "ma7VndPerTael": 153734855,
+    "ma30VndPerTael": 160622626,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,19 +90,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-20T14:17:28.314Z",
+    "fetchedAt": "2026-03-20T15:15:57.703Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4581.42,
+        "value": 4573.68,
         "unit": "USD/oz",
         "date": "2026-03-20",
-        "change1dPct": -1.59,
-        "change5dPct": -8.73,
-        "change20dPct": -10.12,
+        "change1dPct": -1.75,
+        "change5dPct": -8.89,
+        "change20dPct": -10.27,
         "relationToGold": "context"
       },
       {
