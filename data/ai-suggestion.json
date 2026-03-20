@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T06:19:42.766Z",
+  "generatedAt": "2026-03-20T07:20:58.569Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh sau đỉnh lịch sử, áp lực bán từ việc USD và lợi suất thực tăng cao khiến giá thế giới lao động, trong khi premium Việt Nam nới rộng lên mức 18.86% như một bộ đệm giảm sốc nhưng thanh khoản vẫn rủi ro.",
+    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh lịch sử dưới áp lực USD và lợi suất thực tăng cao; xu hướng ngắn hạn đã chuyển sang giảm, cần chờ tín hiệu ổn định trước khi vào lệnh.",
     "reasons": [
-      "Xu hướng giảm giá rõ ràng: Giá thế giới giảm -8.02% trong 20 ngày qua (từ 5020 xuống 4690 USD/oz), kéo giá SJC giảm -6.56% chỉ trong 7 ngày gần nhất.",
-      "Áp lực vĩ mô tiêu cực: Lợi suất thực Mỹ (US Real Yield 10Y) tăng mạnh +3.33% lên 1.86% và chỉ số USD tăng +2.56%, tạo áp lực bán vàng toàn cầu lớn.",
-      "Biến động cao và rủi ro đuổi đỉnh: Vị thế giá hiện tại (176.1 triệu VND/lượng) nằm ở phân vị 98% trong 5 năm, thanh khoản thấp khi thị trường điều chỉnh.",
-      "Premium nới rộng: Chênh lệch giá tăng từ 12-13% đầu tháng lên 18.86% hiện tại, cho thấy tâm lý thận trọng tại thị trường nội địa."
+      "Giá SJC 176.1 triệu VND/lượng đã giảm -6.77% sau 7 ngày và nằm dưới MA7 (154.4 triệu VND/lượng), cho thấy động lượng bán đang thống trị.",
+      "Lợi suất thực Mỹ 10 năm tăng mạnh +3.33% lên 1.86% và chỉ số USD tăng +2.56% trong 20 ngày qua tạo áp lực nghịch biến lớn lên giá vàng thế giới.",
+      "Premium SJC đang ở mức cao 19.13%, tăng từ vùng 12-14% đầu tháng, cho thấy nhà đầu tư Việt Nam vẫn thận trọng và thanh khoản nội địa được hỗ trợ."
     ],
     "risks": [
-      "Rủi ro thanh khoản: Premium cao có thể thu hẹp nhanh chóng nếu giá thế giới tiếp tục giảm, khiến nhà đầu tư chịu lỗ kép.",
-      "Bẫy giá rẻ: Giá giảm nhanh (-6.56%/tuần) có thể là bẫy trong bối cảnh lợi suất thực USD đang tăng mạnh.",
-      "Dữ liệu vĩ mô bị trễ: Một số chỉ số vĩ mô (USD Index) cập nhật đến ngày 13/03, có thể chưa phản ánh đầy đủ diễn biến FOMC ngày 18/03."
+      "Áp lực bán tiếp tục từ phía USD và lãi suất Mỹ nếu dữ liệu vĩ mô tiếp tục nóng.",
+      "Rủi ro điều chỉnh premium về mức trung bình lịch sử nếu giá thế giới hồi phục nhanh nhưng thanh khoản trong nước yếu.",
+      "Biến động ngày ở mức 1.54% cho thấy thị trường đang dao động mạnh, rủi ro chốt lỗ cao cho nhà đầu tư đòn bẩy."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC hiện tại",
         "value": 176100000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá 7 ngày (SJC)",
-        "value": -6.56,
+        "key": "Thay đổi 7 ngày (SJC)",
+        "value": -6.77,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Chênh lệch Premium",
-        "value": 18.86,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới (Spot)",
-        "value": 4690.85,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Lợi suất thực Mỹ 10 năm",
-        "value": 1.86,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Thay đổi lợi suất thực 20 ngày",
+        "key": "Lợi suất thực Mỹ 10N (Thay đổi 20 ngày)",
         "value": 3.33,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số VIX",
-        "value": 25.09,
-        "unit": "index",
+        "key": "Chỉ số USD (Thay đổi 20 ngày)",
+        "value": 2.56,
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "Phân vị giá 5 năm",
-        "value": 98,
-        "unit": "percentile",
+        "key": "Premium SJC hiện tại",
+        "value": 19.13,
+        "unit": "%",
         "source": "market_snapshot"
+      },
+      {
+        "key": "VIX (Thay đổi 20 ngày)",
+        "value": 27.88,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá vàng thế giới (Thay đổi 20 ngày)",
+        "value": -8.19,
+        "unit": "%",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-20T06:18:55.206Z",
+    "latestTimestamp": "2026-03-20T07:20:22.621Z",
     "sjcVndPerTael": 176100000,
-    "intlVndPerTael": 148159894.80636197,
-    "premiumPct": 18.86,
-    "change7dPct": -6.56,
-    "change30dPct": -5.82,
+    "intlVndPerTael": 147826728.60892907,
+    "premiumPct": 19.13,
+    "change7dPct": -6.77,
+    "change30dPct": -6.03,
     "volatilityDailyPct": 1.54,
-    "ma7VndPerTael": 154412126,
-    "ma30VndPerTael": 160907120,
+    "ma7VndPerTael": 154364531,
+    "ma30VndPerTael": 160896014,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +83,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-20T06:18:59.519Z",
+    "fetchedAt": "2026-03-20T07:20:36.313Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4688.67,
+        "value": 4680.18,
         "unit": "USD/oz",
         "date": "2026-03-20",
-        "change1dPct": 0.72,
-        "change5dPct": -6.6,
-        "change20dPct": -8.02,
+        "change1dPct": 0.53,
+        "change5dPct": -6.77,
+        "change20dPct": -8.19,
         "relationToGold": "context"
       },
       {
@@ -191,8 +184,23 @@
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
       "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-20 | marketscreener.com | India gold discounts ease on festive demand ; China premiums ease"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-20 | marketscreener.com | India gold discounts ease on festive demand ; China premiums ease",
+      "2026-03-20 | businesstoday.in | Gold , silver prices today : Yellow , white metal rates rise ; check prices in Dubai vs Indian cities",
+      "2026-03-20 | businesstoday.in | Gold , silver recover early after sharp drop a day before ; WGC says gold safer , silver high beta",
+      "2026-03-20 | marketscreener.com | Hawkish rate repricing halts the dollar rally",
+      "2026-03-20 | bignewsnetwork.com | Gold set for third weekly decline as dollar firms",
+      "2026-03-20 | gulfbusiness.com | Oil prices retreat as US moves to boost supply amid Iran war"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-20 | ianslive.in | Gold , silver prices climb up to 3 pc as geopolitical tensions appear to ease",
+      "2026-03-20 | businesstoday.in | Gold , silver recover early after sharp drop a day before ; WGC says gold safer , silver high beta",
+      "2026-03-20 | bignewsnetwork.com | Gold set for third weekly decline as dollar firms",
+      "2026-03-20 | gulfbusiness.com | Oil prices retreat as US moves to boost supply amid Iran war",
+      "2026-03-20 | prokerala.com | Gold , silver prices climb up to 3 pc as geopolitical tensions appear to ease"
+    ]
   }
 }
