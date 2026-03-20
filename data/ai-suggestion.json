@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T13:27:28.219Z",
+  "generatedAt": "2026-03-20T14:17:48.115Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang điều chỉnh mạnh từ đỉnh 30 ngày, nhưng áp lực bán từ lợi suất thực USD tăng cao và giá thế giới giảm sâu 7.14% tuần qua khiến rủi ro ngắn hạn còn đáng kể, cần chờ ổn định.",
+    "thesis": "Giá vàng SJC giảm mạnh 8.83% trong 7 ngày nhưng premium vọt lên 21.94% cho thấy thị trường Việt Nam đang hoảng loạn bán thua trong bối cảnh giá thế giới lao dốc do áp lực USD và lợi suất thực tăng cao.",
     "reasons": [
-      "Giá SJC 176.1 triệu VND/lượng đã giảm dưới MA30 (160.7 triệu VND/lượng) và giảm 7.12% trong 7 ngày, cho thấy động lượng bán đang chi phối ngắn hạn.",
-      "Lợi suất thực USD 10 năm tăng mạnh +3.33% trong 20 ngày lên mức 1.86%, tạo áp lực nghịch biến lớn lên giá vàng thế giới (đã giảm từ 5330 USD/oz xuống 4662 USD/oz).",
-      "Premium SJC nới rộng lên 19.7% (so với trung bình 13-15% đầu tháng 3), phản ánh tâm lý phòng thủ của nhà đầu tư Việt Nam nhưng cũng tiềm ẩn rủi ro co hẹp khi giá thế giới hồi phục.",
-      "VIX tăng 27.88% trong 20 ngày lên 25.09 cho thấy bất định thị trường cao, thường hỗ trợ vàng nhưng lần này dòng tiền đang chảy vào USD (DXY +2.56% 20 ngày)."
+      "Giá thế giới giảm mạnh 10.12% trong 20 ngày (từ 5020 xuống 4577 USD/oz) do lợi suất thực 10Y tăng lên 1.86% và USD Index tăng 2.56%, tạo áp lực bán mạnh lên vàng.",
+      "Premium SJC tăng vọt từ 15-16% lên 21.94% trong 2 ngày gần nhất, cho thấy chênh lệch giá đang ở mức căng thẳng, rủi ro điều chỉnh premium là rất lớn nếu nhà đầu tư tiếp tục bán tháo.",
+      "Giá SJC hiện (176.1 triệu VND/lượng) đã phá vỡ dưới MA7 (153.7 triệu VND/lường) và MA30 (160.6 triệu VND/lượng), xu hướng ngắn hạn đã chuyển sang giảm mạnh với động lượng bán chưa thấy dấu hiệu dừng.",
+      "VIX ở mức 24.06 cho thấy lo ngại thị trường vẫn cao, nhưng các yếu tố vĩ mô cơ bản (lợi suất thực tăng, USD mạnh) đang chống lại giá vàng."
     ],
     "risks": [
-      "Lợi suất thực USD tiếp tục tăng có thể đẩy giá vàng thế giới giảm sâu hơn, kéo theo điều chỉnh giá SJC.",
-      "Premium 19.7% có thể co hẹp nhanh nếu nhà đầu tư thoái vốn, gây mất giá tạm thời.",
-      "Thiếu sự kiện địa chính trị trọng đại trong dữ liệu để tạo đà đảo chiều mạnh."
+      "Premium 21.94% có thể co lại nhanh chóng về mức trung bình 15-16%, gây thiệt hại cho người mua đuổi ngay lúc này.",
+      "Xu hướng giảm giá thế giới có thể tiếp tục nếu Fed duy trì chính sách thắt chặt tiền tệ như tín hiệu từ FOMC ngày 18/03.",
+      "Biến động ngày ở mức 1.53% cộng với đà giảm 8.83% tuần qua cho thấy rủi ro xuống điểm ngắn hạn vẫn rất lớn."
     ],
     "evidence": [
       {
-        "key": "sjc_price",
-        "value": 176100000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change7d_pct",
-        "value": -7.12,
+        "key": "Giá vàng thế giới 20 ngày",
+        "value": -10.12,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "ma30_vnd",
-        "value": 160714603,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "premium_pct",
-        "value": 19.7,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "us_real_yield_10y",
+        "key": "Lợi suất thực Mỹ 10 năm",
         "value": 1.86,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "real_yield_20d_change",
-        "value": 3.33,
+        "key": "Premium SJC hiện tại",
+        "value": 21.94,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá SJC thay đổi 7 ngày",
+        "value": -8.83,
+        "unit": "%",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "USD Index thay đổi 20 ngày",
+        "value": 2.56,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "gold_spot_20d_change",
-        "value": -8.55,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "vix_level",
-        "value": 25.09,
+        "key": "VIX Index",
+        "value": 24.06,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Premium ngày 17/03",
+        "value": 16.02,
+        "unit": "%",
+        "source": "monthly_series_30d"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-20T13:26:55.568Z",
+    "latestTimestamp": "2026-03-20T14:17:22.856Z",
     "sjcVndPerTael": 176100000,
-    "intlVndPerTael": 147122872.33739984,
-    "premiumPct": 19.7,
-    "change7dPct": -7.12,
-    "change30dPct": -6.38,
+    "intlVndPerTael": 144420751.62728053,
+    "premiumPct": 21.94,
+    "change7dPct": -8.83,
+    "change30dPct": -8.1,
     "volatilityDailyPct": 1.53,
-    "ma7VndPerTael": 154129041,
-    "ma30VndPerTael": 160714603,
+    "ma7VndPerTael": 153743024,
+    "ma30VndPerTael": 160624533,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,19 +84,19 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-20T13:27:11.131Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-20T14:17:28.314Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
         "id": "gold_spot_xauusd",
         "name": "Gold Spot XAUUSD",
-        "value": 4661.62,
+        "value": 4581.42,
         "unit": "USD/oz",
         "date": "2026-03-20",
-        "change1dPct": 0.14,
-        "change5dPct": -7.14,
-        "change20dPct": -8.55,
+        "change1dPct": -1.59,
+        "change5dPct": -8.73,
+        "change20dPct": -10.12,
         "relationToGold": "context"
       },
       {
@@ -174,33 +168,25 @@
       {
         "id": "vix",
         "name": "VIX Volatility Index",
-        "value": 25.09,
+        "value": 24.06,
         "unit": "index",
-        "date": "2026-03-18",
-        "change1dPct": 12.16,
-        "change5dPct": 3.55,
-        "change20dPct": 27.88,
+        "date": "2026-03-19",
+        "change1dPct": -4.11,
+        "change5dPct": -11.84,
+        "change20dPct": 18.93,
         "relationToGold": "direct"
       }
     ],
     "policyHeadlines": [
+      "2026-03-20 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-03-19 | ECB Press / Speeches | Christine Lagarde, Luis de Guindos: Monetary policy statement (with Q&A)",
       "2026-03-19 | ECB Press / Speeches | Monetary policy decisions",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve issues FOMC statement",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
-      "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy",
-      "2026-03-11 | ECB Press / Speeches | ECB welcomes decision on new site for European School Frankfurt"
+      "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-20 | goldseiten.de | Pirate Gold Commences Drilling at Crippleback , Releases Episode 7 and New Technical Presentation"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-20 | freemalaysiatoday.com | Dollar set for weekly fall as central banks turn hawkish",
-      "2026-03-20 | pakistantoday.com.pk | Dollar slips , bonds struggle amid Iran war tensions - Pakistan Today"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-20 | finance.yahoo.com | 12 Retirement Warnings You Cant Afford to Ignore , According to Top Financial Pros",
-      "2026-03-20 | it-online.co.za | Bitcoin , gold tipped for significant gains"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
