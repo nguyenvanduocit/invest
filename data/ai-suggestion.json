@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T03:44:44.133Z",
+  "generatedAt": "2026-03-21T04:32:45.165Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC giảm mạnh 9.82% trong 30 ngày nhưng biến động cao (1.6%/ngày) và premium vọt lên 20.7% cho thấy thị trường chưa ổn định. Áp lực bán từ lợi suất thực USD dương (1.88%) và đồng USD mạnh khiến xu hướng ngắn hạn vẫn là điều chỉnh, nhà đầu tư nên chờ tín hiệu ổn định.",
+    "thesis": "Giá vàng thế giới đang giảm mạnh do áp lực USD và lợi suất thực tăng cao, nhưng mức premium SJC vọt lên 20.7% tạo rủi ro thanh khoản hai chiều cho nhà đầu tư Việt Nam. Nên chờ đợi ổn định thay vì bắt dao rơi.",
     "reasons": [
-      "Giá SJC giảm sâu về 171 triệu VND/lượng, thấp hơn MA7 (150.8 triệu) và MA30 (159.8 triệu), xu hướng giảm ngắn hạn rõ rệt.",
-      "Lợi suất thực USD 10 năm ở mức 1.88% (tăng 5.03% trong 20 ngày) và DXY tăng 2.56% tạo áp lực bán vàng quốc tế mạnh mẽ.",
-      "Premium SJC tăng vọt lên 20.7% từ mức 13.12% đầu kỳ, cho thấy chênh lệch giá đang giãn rộng quá mức so với trung bình lịch sử 30 ngày.",
-      "Giá thế giới giảm 11.84% trong 20 ngày (từ 5277 xuống 4497 USD/oz), chưa có tín hiệu đảo chiều kỹ thuật rõ ràng."
+      "Giá thế giới giảm 10.48% trong 5 ngày xuống 4493.95 USD/oz, tương đương mức thấp nhất 30 ngày, cho thấy động lượng bán rất mạnh.",
+      "Lợi suất thực Mỹ 10 năm tăng vọt 5.03% trong 20 ngày lên 1.88%, tạo áp lực chi phí cơ hội lớn lên giá vàng.",
+      "Premium SJC nới rộng nhanh từ 13.12% (20/02) lên 20.7% hiện tại, cho thấy thị trường nội địa đang định giá quá mức so với biến động thế giới.",
+      "Giá SJC hiện 171 triệu VND/lượng đã thấp hơn MA7 (150.8 triệu) và MA30 (159.8 triệu), nhưng vẫn chưa có tín hiệu đảo chiều kỹ thuật rõ ràng."
     ],
     "risks": [
-      "Rủi ro premium co giãn mạnh nếu giá thế giới hồi phục nhưng giá SJC điều chỉnh chậm, gây thiệt hại cho người mua đuổi.",
-      "Biến động ngày ở mức 1.6% kết hợp với VIX 24.06 cho thấy thị trường tài chính đang bất ổn, giá có thể dao động rộng.",
-      "Thiếu dữ liệu sự kiện địa chính trị cụ thể, khó dự đoán các cú sốc giá bất ngờ."
+      "Premium co hẹp nhanh từ 20.7% về mức trung bình 13-15% sẽ gây mất giá nặng cho vàng SJC ngay cả khi giá thế giới đi ngang.",
+      "Xung đột Iran gây lo ngại lạm phát, đẩy Fed duy trì lãi suất cao, tiếp tục gây áp lực lên giá vàng thế giới.",
+      "Thanh khoản thấp trong bối cảnh thị trường điều chỉnh mạnh khiến chênh lệch giá mua-bán của tiệm vàng nới rộng."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
-        "value": 171000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Giá thế giới (XAUUSD)",
-        "value": 4497.5,
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4493.95,
         "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
-        "key": "Biến động 30 ngày SJC",
-        "value": -9.82,
+        "key": "Biến động giá SJC 7 ngày",
+        "value": -10.41,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium SJC/Thế giới",
+        "key": "Premium SJC hiện tại",
         "value": 20.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực USD 10Y",
-        "value": 1.88,
-        "unit": "%",
+        "key": "Lợi suất thực Mỹ 10Y (20 ngày)",
+        "value": 5.03,
+        "unit": "% thay đổi",
         "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số DXY",
-        "value": 120.5518,
+        "key": "Chỉ số USD Trade Weighted",
+        "value": 120.55,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX",
+        "key": "MA30 giá SJC",
+        "value": 159766215,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "VIX (Biến động thị trường)",
         "value": 24.06,
         "unit": "index",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "Giá thế giới 20 ngày",
-        "value": -11.84,
-        "unit": "%",
         "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-21T03:44:17.578Z",
+    "latestTimestamp": "2026-03-21T04:32:06.872Z",
     "sjcVndPerTael": 171000000,
-    "intlVndPerTael": 141676204.3327342,
+    "intlVndPerTael": 141673805.52235055,
     "premiumPct": 20.7,
-    "change7dPct": -10.4,
-    "change30dPct": -9.82,
+    "change7dPct": -10.41,
+    "change30dPct": -9.83,
     "volatilityDailyPct": 1.6,
-    "ma7VndPerTael": 150796434,
-    "ma30VndPerTael": 159766295,
+    "ma7VndPerTael": 150796091,
+    "ma30VndPerTael": 159766215,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-21T03:44:23.000Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-21T04:32:28.257Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -191,8 +185,26 @@
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-21 | econotimes.com | Gold Prices Extend Losing Streak , On Track for Worst Weekly Loss Since 1983",
+      "2026-03-21 | economictimes.indiatimes.com | United Airlines to cut 5 % of flights , planning for $175 oil from Iran war",
+      "2026-03-21 | finance.yahoo.com | Gold and Silver Plunge As Iran War Drags",
+      "2026-03-21 | actionforex.com | Farewell , Rate Cuts – Markets Weekly Outlook",
+      "2026-03-21 | finance.yahoo.com | Stocks Finish Lower as Iran War Spurs Inflation Concerns"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-21 | thailandnews.net | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
+      "2026-03-21 | econotimes.com | Gold Prices Extend Losing Streak , On Track for Worst Weekly Loss Since 1983",
+      "2026-03-21 | coloradostar.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
+      "2026-03-21 | tucsonpost.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
+      "2026-03-21 | mexicostar.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
+      "2026-03-21 | finance.yahoo.com | Gold and Silver Plunge As Iran War Drags"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-21 | econotimes.com | Gold Prices Extend Losing Streak , On Track for Worst Weekly Loss Since 1983",
+      "2026-03-21 | finance.yahoo.com | Gold and Silver Plunge As Iran War Drags",
+      "2026-03-21 | actionforex.com | Farewell , Rate Cuts – Markets Weekly Outlook",
+      "2026-03-21 | finance.yahoo.com | Stocks Finish Lower as Iran War Spurs Inflation Concerns"
+    ]
   }
 }
