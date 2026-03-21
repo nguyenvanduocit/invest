@@ -1,5 +1,5 @@
-// Scheduled build - fetch latest data and generate dashboard
-// Usage: bun run build (runs via CI schedule and on pushes)
+// Scheduled build - fetch latest data and run analysis
+// Usage: bun run build
 
 import { $ } from 'bun'
 
@@ -11,7 +11,7 @@ async function main() {
   await $`bun run src/fetch-all.ts`.quiet()
   console.log('   Done')
 
-  // 2. Refresh short-term history used by dashboard + AI
+  // 2. Refresh short-term history
   console.log('\n2. Refreshing short-term history...')
   await $`bun run src/fetch-history.ts 30`.quiet()
   console.log('   Done')
@@ -26,27 +26,22 @@ async function main() {
   await $`bun run src/analyze-drawdowns.ts`.quiet()
   console.log('   Done')
 
-  // 5. Fetch macro/event first-principles context for AI
+  // 5. Fetch macro/event first-principles context
   console.log('\n5. Fetching first-principles context...')
   await $`bun run src/fetch-first-principles.ts`.quiet()
   console.log('   Done')
 
-  // 6. Verify first-principles coverage (report-only in scheduled build)
+  // 6. Verify first-principles coverage
   console.log('\n6. Verifying first-principles coverage...')
   await $`bun run src/verify-first-principles.ts`.quiet()
   console.log('   Done')
 
-  // 7. Generate AI suggestion (Z.AI)
+  // 7. Generate AI suggestion
   console.log('\n7. Generating AI suggestion...')
   await $`bun run src/generate-ai-suggestion.ts`.quiet()
   console.log('   Done')
 
-  // 8. Generate dashboard
-  console.log('\n8. Generating dashboard...')
-  await $`bun run src/generate-dashboard.ts`.quiet()
-  console.log('   Done')
-
-  console.log('\n✓ Build complete: data/index.html')
+  console.log('\n✓ Build complete')
 }
 
 main().catch(e => {
