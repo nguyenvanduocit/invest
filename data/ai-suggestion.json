@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T08:07:38.424Z",
+  "generatedAt": "2026-03-21T09:09:03.182Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,73 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới giảm mạnh -11.84% trong 20 ngày qua do lợi suất thực USD tăng vọt 5.03%, tạo áp lực bán thua khiến SJC giảm -9.83% tháng. Dù premium nới rộng lên 20.7% là tín hiệu hỗ trợ tâm lý, xu hướng ngắn hạn vẫn yếu và cần chờ ổn định kỹ thuật trước khi vào lệnh.",
+    "thesis": "Giá vàng thế giới đang giảm mạnh với động lượng bán áp đảo, nhưng premium SJC vọt lên 20.7% cho thấy tâm lý hoảng loạn hoặc khan hiếm cục bộ tại Việt Nam. Nên chờ đợi sự ổn định của giá thế giới và tín hiệu hạ nhiệt của premium trước khi ra quyết định.",
     "reasons": [
-      "Áp lực vĩ mô mạnh: Lợi suất thực 10Y Mỹ tăng 5.03% và USD Index tăng 2.56% trong 20 ngày qua là nguyên nhân chính khiến giá vàng thế giới giảm từ 5330 USD/oz (02/03) xuống 4497 USD/oz.",
-      "Xu hướng giảm giá rõ rệt: Giá SJC hiện ở 171 triệu VND/lượng, thấp hơn đáng kể so với MA7 (150.8 triệu) và MA30 (159.8 triệu), kèm biến động ngày cao 1.6%.",
-      "Premium nới rộng hỗ trợ phần nào: Chênh lệch giá tăng từ 12.47% đầu tháng lên 20.7% hiện tại cho thấy cầu nội địa vẫn hấp thụ mạnh ở vùng giá thấp, hạn chế mức sụt giảm của giá SJC so với giá thế giới.",
-      "Thanh lý rủi ro toàn cầu: VIX giảm 11.84% trong 5 ngày và Fed duy trì thái độ trung lập 18/03, thị trường đang định giá lại tài sản rủi ro thay vì chạy trốn vào vàng an toàn."
+      "Giá thế giới giảm sâu -11.84% trong 20 ngày qua (từ 5083 xuống 4497 USD/oz), kết hợp USD Index tăng +2.56% và Lợi suất thực 10Y tăng +5.03% tạo áp lực bán mạnh về mặt first-principles.",
+      "Premium SJC tăng vọt từ mức 13-16% đầu tháng lên 20.7% hiện tại, mức cao nhất trong chuỗi 30 ngày, cho thấy chênh lệch giá đang ở vùng rủi ro cao cho người mua đuổi.",
+      "Giá SJC hiện tại (171 triệu VND/lượng) đã phá vỡ dưới MA7 (150.8 triệu) và MA30 (159.8 triệu) về mặt kỹ thuật, nhưng biến động ngày (1.6%) và sự giãn rộng premium cảnh báo bẫy thanh khoản.",
+      "VIX ở mức 24.06 cho thấy lo ngại thị trường vẫn cao, nhưng thiếu dữ liệu sự kiện địa chính trị cụ thể trong input nên không có động lực đẩy giá tăng ngắn hạn từ yếu tố an toàn."
     ],
     "risks": [
-      "Rủi ro tiếp tục điều chỉnh nếu giá thế giới phá vỡ hỗ trợ 4490 USD/oz và lợi suất thực Mỹ tiếp tục tăng.",
-      "Premium 20.7% có thể co lại nhanh chóng về mức trung bình 13-16% nếu giá thế giới phục hồi, làm giảm hiệu quả đầu tư lướt sóng.",
-      "Biến động ngày 1.6% cao hơn trung bình lịch sử, dễ kích hoạt stop-loss của nhà đầu tư đòn bẩy."
+      "Rủi ro premium co giãn mạnh: Nếu giá thế giới hồi phục nhưng tâm lý VN bình ổn, premium có thể giảm từ 20% về 15%, khiến giá SJC đi ngang hoặc giảm dù giá thế giới tăng.",
+      "Bẫy bắt đáy: Xu hướng giảm 10% trong 7 ngày quá mạnh, rủi ro giá thế giới tiếp tục test các mức hỗ trợ thấp hơn.",
+      "Thanh khoản thấp: Biến động cao kết hợp với spread mua-bán có thể giãn rộng trong bối cảnh thị trường rung lắc."
     ],
     "evidence": [
       {
-        "key": "Giá vàng thế giới XAU/USD",
-        "value": 4497.45,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Giá SJC Việt Nam",
-        "value": 171000000,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Biến động giá SJC 30 ngày",
-        "value": -9.83,
+        "key": "Giá thế giới 20 ngày",
+        "value": -11.84,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "first_principles_context"
       },
       {
-        "key": "Premium SJC/Thế giới",
+        "key": "Premium SJC hiện tại",
         "value": 20.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10Y (20 ngày)",
-        "value": 5.03,
-        "unit": "% thay đổi",
-        "source": "first_principles_context"
+        "key": "Giá SJC so với MA30",
+        "value": 159766265,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       },
       {
-        "key": "USD Index (20 ngày)",
+        "key": "USD Index 20 ngày",
         "value": 2.56,
-        "unit": "% thay đổi",
+        "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Volatility (5 ngày)",
-        "value": -11.84,
-        "unit": "% thay đổi",
+        "key": "Lợi suất thực 10Y 20 ngày",
+        "value": 5.03,
+        "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "VIX Index",
+        "value": 24.06,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Giá SJC giảm 7 ngày",
+        "value": -10.41,
+        "unit": "%",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-21T08:06:55.186Z",
+    "latestTimestamp": "2026-03-21T09:08:22.378Z",
     "sjcVndPerTael": 171000000,
-    "intlVndPerTael": 141674805.99796164,
+    "intlVndPerTael": 141675319.1512269,
     "premiumPct": 20.7,
     "change7dPct": -10.41,
     "change30dPct": -9.83,
     "volatilityDailyPct": 1.6,
-    "ma7VndPerTael": 150796234,
-    "ma30VndPerTael": 159766248,
+    "ma7VndPerTael": 150796307,
+    "ma30VndPerTael": 159766265,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -84,7 +84,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-21T08:07:12.855Z",
+    "fetchedAt": "2026-03-21T09:08:44.010Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
@@ -178,28 +178,15 @@
       }
     ],
     "policyHeadlines": [
+      "2026-03-21 | ECB Press / Speeches | Piero Cipollone: Digital euro - why?",
       "2026-03-20 | ECB Press / Speeches | Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
       "2026-03-19 | ECB Press / Speeches | Christine Lagarde, Luis de Guindos: Monetary policy statement (with Q&A)",
       "2026-03-19 | ECB Press / Speeches | Monetary policy decisions",
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve issues FOMC statement",
-      "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
-      "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy"
+      "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-21 | economictimes.indiatimes.com | Ticket rebellions , SIR voter churn add volatility to Bengal poll race",
-      "2026-03-21 | seattletimes.com | U . S . asked to keep military planes in Sri Lanka before Iran airstrikes"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-21 | birminghamstar.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
-      "2026-03-21 | myanmarnews.net | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
-      "2026-03-21 | economictimes.indiatimes.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
-      "2026-03-21 | pakistantelegraph.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
-      "2026-03-21 | sandiegosun.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
-      "2026-03-21 | africaleader.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-21 | lewrockwell.com | Central Banks Fund Civilization Collapse",
-      "2026-03-21 | gulfbusiness.com | Iran war update : 5 key things to know on day 22"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
