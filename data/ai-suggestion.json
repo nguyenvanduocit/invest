@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T01:34:46.907Z",
+  "generatedAt": "2026-03-21T02:54:58.299Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,72 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới giảm mạnh -11.84% trong 20 ngày qua do lợi suất thực USD tăng vọt, gây áp lực bán tháo; tuy nhiên, premium SJC nới rộng đột ngột lên mức 24.3% cho thấy tâm lý hoảng loạn và nhu cầu phòng thủ tại Việt Nam vẫn rất cao, tạo nên bẫy thanh khoản.",
+    "thesis": "Giá vàng SJC giảm mạnh ~10% trong 7 ngày qua do giá thế giới lao dốc và USD mạnh lên, nhưng đà giảm quá nhanh kèm biến động cao (1.6%/ngày) khiến việc bắt đáy rất rủi ro. Nhà đầu tư nên chờ tín hiệu ổn định giá trước khi vào lệnh.",
     "reasons": [
-      "Giá thế giới giảm sâu từ đỉnh 5330.95 USD/oz (02/03) xuống 4497.5 USD/oz (21/03), kéo theo giá VND giảm -9.82% trong 30 ngày, xu hướng ngắn hạn rất yếu.",
-      "Lợi suất thực Mỹ 10 năm tăng mạnh +5.03% trong 20 ngày lên mức 1.88%, tăng chi phí cơ hội nắm giữ vàng và gây áp lực bán ra.",
-      "Premium SJC nới rộng đột biến từ 12.69% (21/02) lên 24.3% (21/03), cho thấy chênh lệch giá Việt Nam - Thế giới đang ở vùng cực đoan, rủi ro điều chỉnh premium là rất lớn nếu nhà nước can thiệp.",
-      "VIX ở mức 24.06 và tin tức địa chính trị (chiến tranh Trung Đông) gây biến động, nhưng dòng tiền đang chảy vào USD (DXY +2.56% 20 ngày) thay vì vàng."
+      "Giá SJC hiện tại 171 triệu VND/lượng đã thấp hơn đáng kể so với MA7 (150.8 triệu) và MA30 (159.8 triệu), cho thấy thị trường đang trong điều chỉnh kỹ thuật sâu.",
+      "Áp lực bán từ vĩ mô mạnh: Giá vàng thế giới giảm -10.48% trong 5 ngày (xuống ~4494 USD/oz) và lợi suất thực Mỹ tăng +5.03% trong 20 ngày lên 1.88%, làm giảm hấp dẫn của vàng.",
+      "Premium SJC tăng vọt lên 20.7% (từ mức ~13% đầu tháng) khi giá trong nước giảm chậm hơn giá thế giới, tạo rủi ro điều chỉnh thêm nếu tỷ giá ổn định."
     ],
     "risks": [
-      "Premium 24.3% có thể giảm nhanh về mức trung bình 13-16% nếu Ngân hàng Nhà nước bán vàng can thiệp hoặc nhập khẩu tăng cung, gây lỗ nặng cho người mua đuổi.",
-      "Giá thế giới có thể tiếp tục điều chỉnh sâu hơn nếu Fed duy trì lãi suất cao do lạm phát dầu tăng từ chiến tranh.",
-      "Thanh khoản thị trường thấp trong bối cảnh giá giảm mạnh, chênh lệch giá mua-bán của tiệm vàng có thể nới rộng gây khó khăn khi thoát hàng."
+      "Biến động ngày ở mức 1.6% có thể gây 'cháy tài khoản' nếu dùng đòn bẩy hoặc MUA gấp.",
+      "Premium 20.7% ở mức cao, rủi ro thu hẹp nếu Ngân hàng Nhà nước can thiệp hoặc giá thế giới phục hồi.",
+      "Xu hướng ngắn hạn vẫn là giảm (change7dPct: -10.41%), bắt đáy sớm có thể bị 'hứng' đợt bán tiếp theo."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
-        "value": 176100000,
+        "key": "Giá SJC hiện tại",
+        "value": 171000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá vàng thế giới quy đổi",
-        "value": 141676185,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "Premium SJC",
-        "value": 24.3,
+        "key": "Biến động giá 7 ngày",
+        "value": -10.41,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động giá SJC 30 ngày",
-        "value": -9.82,
+        "key": "Premium SJC/Vàng thế giới",
+        "value": 20.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "Lợi suất thực Mỹ 10N (20 ngày)",
+        "key": "Giá vàng thế giới (Spot)",
+        "value": 4493.95,
+        "unit": "USD/oz",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Lợi suất thực Mỹ 10N (thay đổi 20 ngày)",
         "value": 5.03,
-        "unit": "% thay đổi",
-        "source": "macro_context"
-      },
-      {
-        "key": "Giá vàng thế giới XAUUSD (20 ngày)",
-        "value": -11.84,
         "unit": "%",
-        "source": "macro_context"
+        "source": "first_principles_context"
       },
       {
-        "key": "Chỉ số VIX",
-        "value": 24.06,
-        "unit": "index",
-        "source": "macro_context"
-      },
-      {
-        "key": "Premium đầu chuỗi 30 ngày",
-        "value": 12.69,
+        "key": "Chỉ số USD (thay đổi 20 ngày)",
+        "value": 2.56,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
+      },
+      {
+        "key": "MA30 giá SJC",
+        "value": 159766256,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-21T01:34:09.532Z",
-    "sjcVndPerTael": 176100000,
-    "intlVndPerTael": 141676184.80203906,
-    "premiumPct": 24.3,
-    "change7dPct": -10.4,
-    "change30dPct": -9.82,
+    "latestTimestamp": "2026-03-21T02:54:19.699Z",
+    "sjcVndPerTael": 171000000,
+    "intlVndPerTael": 141675583.44563422,
+    "premiumPct": 20.7,
+    "change7dPct": -10.41,
+    "change30dPct": -9.83,
     "volatilityDailyPct": 1.6,
-    "ma7VndPerTael": 150796431,
-    "ma30VndPerTael": 159766294,
+    "ma7VndPerTael": 150796267,
+    "ma30VndPerTael": 159766256,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,8 +83,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-21T01:34:28.475Z",
-    "healthy": true,
+    "fetchedAt": "2026-03-21T02:54:40.874Z",
+    "healthy": false,
     "missingFactors": [],
     "factors": [
       {
@@ -191,21 +184,8 @@
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy"
     ],
-    "geopoliticalHeadlines": [
-      "2026-03-21 | economictimes.indiatimes.com | Eid vibes go missing on Dubai deserted streets amid war"
-    ],
-    "countryActionHeadlines": [
-      "2026-03-21 | kvoa.com | Another climb for oil prices rattles stocks worldwide and erases hopes for a rate cut by the Fed",
-      "2026-03-21 | wkoa.com | Stocks sink on fears the war with Iran will keep interest rates high",
-      "2026-03-20 | bear953.com | Stocks sink on fears the war with Iran will keep interest rates high",
-      "2026-03-20 | fairfieldsuntimes.com | Stocks drop , oil jumps as Mideast war persists",
-      "2026-03-20 | proactiveinvestors.com | Frank Talk : Oil shock sends yields higher and gold lower",
-      "2026-03-20 | bryantimes.com | Stocks drop , oil jumps as Mideast war persists"
-    ],
-    "dollarYieldHeadlines": [
-      "2026-03-20 | bravenewcoin.com | Bitcoin Price Holds as Gold Crashes 7 % and Clarity Act moves closer Is It Time to Buy Bitcoin ?",
-      "2026-03-20 | proactiveinvestors.com | Frank Talk : Oil shock sends yields higher and gold lower",
-      "2026-03-20 | fool.ca | Oil Prices Are Rewriting Canada Inflation Outlook : Here How to Adjust Your Portfolio"
-    ]
+    "geopoliticalHeadlines": [],
+    "countryActionHeadlines": [],
+    "dollarYieldHeadlines": []
   }
 }
