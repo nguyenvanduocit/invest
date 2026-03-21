@@ -1,53 +1,56 @@
 {
-  "generatedAt": "2026-03-21T11:05:48.039Z",
-  "provider": "z.ai",
-  "model": "glm-5",
+  "generatedAt": "2026-03-21T11:55:00.000Z",
+  "provider": "claude-analysis",
+  "model": "claude-opus-4-6",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Trung bình-Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang trong xu hướng giảm mạnh (giảm 9.82% tháng qua) và nằm dưới MA30, nhưng áp lực bán tháo quá mức đã đẩy premium lên mức cao (20.7%). Nhà đầu tư nên chờ đợi sự ổn định của giá thế giới và sự hồi phục của động lượng kỹ thuật trước khi xuống tiền.",
+    "thesis": "Vàng thế giới đang trong đợt điều chỉnh mạnh -17% từ đỉnh $5,415/oz (28/01) xuống $4,494/oz (20/03). SJC Miếng giữ ở 171 triệu VND/lượng, premium 7.3% so với quốc tế. Fed giữ nguyên lãi suất 3.64%, USD mạnh lên và lợi suất thực tăng tạo áp lực giảm ngắn hạn. Tuy nhiên, đợt drawdown 12% gần nhất (Jan-Feb) đã phục hồi chỉ trong 33 ngày, cho thấy lực cầu cơ bản vẫn mạnh. Nhà đầu tư nên chờ tín hiệu ổn định giá quốc tế trước khi mua vào.",
     "reasons": [
-      "Xu hướng giảm giá mạnh: Giá thế giới giảm -11.84% trong 20 ngày qua (từ ~5278 xuống 4497 USD/oz), kéo giá SJC giảm -9.82% so với 30 ngày trước và giao dịch dưới MA30 (159.7 triệu VND/lượng).",
-      "Đồng USD tăng sức ép: Chỉ số USD tăng +2.56% trong 20 ngày và lợi suất thực 10 năm tăng +5.03% lên 1.88%, tạo áp lực bán vàng tài sản tài chính mạnh mẽ.",
-      "Premium giãn rộng bất thường: Chênh lệch giá SJC so với thế giới tăng vọt từ 12.47% (đầu tháng) lên 20.7% hiện tại, cho thấy thanh khoản thị trường nội địa đang căng thẳng và giá chưa ổn định."
+      "Điều chỉnh mạnh từ đỉnh: Vàng thế giới giảm -17% từ đỉnh $5,415/oz (28/01/2026) xuống $4,494/oz. Trong 20 ngày gần nhất giảm -11.84%, 5 ngày giảm -10.48%, áp lực bán chưa dừng.",
+      "Macro bất lợi ngắn hạn: USD Index tăng +2.56% (20 ngày), lợi suất thực Mỹ 10Y tăng lên 1.88% (+5.03%), lãi suất US Treasury 10Y ở 4.25% - tất cả đều tạo áp lực giảm giá vàng.",
+      "Fed giữ nguyên lãi suất: FOMC họp 17-18/03 giữ Fed Funds Rate 3.64%, chưa có tín hiệu cắt giảm thêm. ECB cũng vừa ra quyết định chính sách tiền tệ (19/03).",
+      "Premium SJC thu hẹp: Premium SJC Miếng so với quốc tế ở mức 7.3%, thấp hơn đáng kể so với mức 20.7% trước đó, cho thấy thị trường nội địa đang bình ổn hơn.",
+      "Phục hồi nhanh từ drawdown: Đợt sụt giảm 12% (28/01 → 02/02) đã phục hồi hoàn toàn chỉ trong 33 ngày (đến 02/03), cho thấy lực cầu vàng vẫn rất mạnh ở mức giá thấp hơn."
     ],
     "risks": [
-      "Rủi ro thanh khoản: Premium cao có thể thu hẹp nhanh chóng nếu giá thế giới không hồi phục, gây thiệt hại cho người mua đuổi.",
-      "Động lượng giảm chưa kết thúc: Giá SJC (171 triệu) vẫn dưới MA7 (150.8 triệu) và MA30, chưa có tín hiệu đảo chiều kỹ thuật rõ ràng.",
-      "Biến động cao: Volatility 1.6%/ngày và VIX ở mức 24.06 cảnh báo thị trường vẫn rất rung lắc."
+      "Đà giảm chưa kết thúc: Giá giảm -3.47% chỉ trong 1 ngày gần nhất, momentum vẫn tiêu cực. Chưa có tín hiệu đảo chiều rõ ràng.",
+      "USD tiếp tục mạnh: Nếu USD Index tiếp tục tăng trên 121, giá vàng có thể giảm thêm 5-10%.",
+      "VIX vẫn cao: Ở mức 24.06, tuy đã giảm -11.84% trong 5 ngày nhưng vẫn trên ngưỡng bình thường, thị trường còn nhiều biến động.",
+      "Rủi ro thanh khoản SJC: Nếu giá quốc tế tiếp tục giảm mạnh, giá SJC nội địa sẽ phải điều chỉnh theo, premium có thể tiếp tục thu hẹp."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "Giá SJC Miếng hiện tại",
         "value": 171000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới (XAU/USD)",
-        "value": 4497.55,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "Biến động 30 ngày SJC",
-        "value": -9.82,
-        "unit": "%",
+        "key": "Giá SJC Nhẫn hiện tại",
+        "value": 170700000,
+        "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Biến động 20 ngày Giá thế giới",
-        "value": -11.84,
-        "unit": "%",
+        "key": "Giá thế giới (XAU/USD)",
+        "value": 4493.95,
+        "unit": "USD/oz",
         "source": "first_principles_context"
       },
       {
-        "key": "Premium hiện tại",
-        "value": 20.7,
+        "key": "Giảm từ đỉnh",
+        "value": -17.0,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "calculated"
+      },
+      {
+        "key": "Premium SJC vs Quốc tế",
+        "value": 7.3,
+        "unit": "%",
+        "source": "calculated"
       },
       {
         "key": "Lợi suất thực Mỹ 10 năm",
@@ -60,16 +63,34 @@
         "value": 120.55,
         "unit": "index",
         "source": "first_principles_context"
+      },
+      {
+        "key": "VIX",
+        "value": 24.06,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Fed Funds Rate",
+        "value": 3.64,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "Phục hồi drawdown gần nhất",
+        "value": 33,
+        "unit": "ngày",
+        "source": "drawdown_analysis"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-21T11:05:27.900Z",
+    "latestTimestamp": "2026-03-21T11:50:54.845Z",
     "sjcVndPerTael": 171000000,
-    "intlVndPerTael": 141677726.4669133,
-    "premiumPct": 20.7,
-    "change7dPct": -10.4,
-    "change30dPct": -9.82,
+    "intlVndPerTael": 159373617,
+    "premiumPct": 7.3,
+    "change7dPct": -10.48,
+    "change30dPct": -11.84,
     "volatilityDailyPct": 1.6,
     "ma7VndPerTael": 150796651,
     "ma30VndPerTael": 159766345,
@@ -83,8 +104,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-21T11:05:30.626Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-21T11:51:12.351Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
