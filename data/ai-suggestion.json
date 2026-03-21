@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T06:13:27.553Z",
+  "generatedAt": "2026-03-21T07:14:50.672Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,73 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC đang trong đà điều chỉnh mạnh sau đỉnh lịch sử, giá hiện thấp hơn MA30 (159.8 triệu VND/lượng) và MA7 (150.8 triệu VND/lượng), cho thấy xu hướng ngắn hạn vẫn là giảm. Mặc dù premium tăng cao (20.7%) phản ánh tâm lý phòng thủ, áp lực từ USD mạnh và lợi suất thực tăng tạo rủi ro tiếp tục điều chỉnh.",
+    "thesis": "Giá vàng SJC giảm mạnh 10.4% trong 7 ngày nhưng vẫn ở vùng định giá cực cao (percentile 98% 5 năm) với premium giãn nhanh lên 20.7%, trong khi vàng thế giới chịu áp lực từ USD mạnh và lợi suất thực tăng; nhà đầu tư nên chờ ổn định thay vì bắt đáy vội.",
     "reasons": [
-      "Xu hướng giảm mạnh: Giá SJC giảm -10.4% sau 7 ngày và đang giao dịch dưới MA7 (150.8 triệu VND/lượng) và MA30 (159.8 triệu VND/lượng), cho thấy động lượng bán vẫn chiếm ưu thế.",
-      "Áp lực vĩ mô tăng: US Dollar Index tăng +2.56% trong 20 ngày và US Real Yield 10Y tăng vọt +5.03% lên 1.88%, tạo áp lực lớn lên giá vàng thế giới (đã giảm -11.84% trong 20 ngày).",
-      "Phân kỳ giá nội - ngoại: Premium tăng đột biến từ 13.12% (20/2) lên 20.7% (21/3), cho thấy nhà đầu tư Việt Nam đang phòng thủ mạnh nhưng rủi ro điều chỉnh premium là cao nếu giá thế giới tiếp tục giảm.",
-      "Thanh khoản và biến động: Biến động ngày ở mức 1.6% kết hợp với VIX (24.06) cho thấy thị trường chưa ổn định, chưa xuất hiện tín hiệu đảo chiều rõ ràng."
+      "Giá SJC hiện tại 171 triệu VND/lượng vẫn cao hơn MA7 (150.8 triệu) và nằm ở phân vị 98% lịch sử 5 năm, rủi ro điều chỉnh tiếp còn đáng kể.",
+      "Premium SJC giãn mạnh từ 13.12% (20/02) lên 20.7% (21/03), cho thấy định giá nội địa đã phản ứng quá mức so với biến động giá thế giới.",
+      "Áp lực vĩ mô tiêu cực: lợi suất thực US 10Y tăng 5.03% trong 20 ngày và USD Index tăng 2.56%, kìm hãm đà tăng giá vàng thế giới (XAUUSD giảm -11.84% 20 ngày).",
+      "Giá vàng thế giới đã phá vỡ MA30 ngày (từ 5079 USD/oz xuống 4497 USD/oz), xu hướng ngắn hạn đang yếu đi mặc dù VIX vẫn ở mức cao (24.06)."
     ],
     "risks": [
-      "Rủi ro điều chỉnh premium: Mức premium 20.7% cao hơn đáng kể so với trung bình lịch sử, có thể bị nén nếu giá thế giới tiếp tục giảm.",
-      "Áp lực lãi suất thực: Lợi suất thực 10Y (1.88%) đang tăng mạnh, có thể tiếp tục gây áp lực lên giá vàng nếu dữ liệu kinh tế Mỹ tích cực.",
-      "Bẫy giá rẻ: Giá đã giảm gần 10% nhưng vẫn ở phân vị 98% trong 5 năm, khả năng điều chỉnh sâu hơn vẫn tồn tại."
+      "Xung đột Iran-US (ngày 22) có thể gây biến động đột ngột, làm giá giật ngược bất chấp xu hướng kỹ thuật.",
+      "Premium 20.7% có thể co hẹp nhanh nếu giá thế giới hồi phục nhưng giá SJC điều chỉnh chậm, gây thiệt hại cho người nắm giữ.",
+      "Dữ liệu chính sách Fed/ECB mới phát hành (18-19/03) chưa phản ánh đầy đủ trong giá, rủi ro nhiễu thị trường cao."
     ],
     "evidence": [
       {
-        "key": "Giá SJC hiện tại",
+        "key": "sjc_price_vs_ma7",
         "value": 171000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới quy đổi",
-        "value": 141677648,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
+        "key": "premium_expansion_30d",
+        "value": 7.58,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
       },
       {
-        "key": "Premium SJC",
-        "value": 20.7,
+        "key": "intl_gold_change_20d",
+        "value": -11.84,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "Biến động 7 ngày (SJC)",
-        "value": -10.4,
+        "key": "us_real_yield_change_20d",
+        "value": 5.03,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "macro_context"
       },
       {
-        "key": "MA30 (SJC)",
-        "value": 159766343,
-        "unit": "VND/lượng",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "US Real Yield 10Y",
-        "value": 1.88,
+        "key": "usd_index_change_20d",
+        "value": 2.56,
         "unit": "%",
-        "source": "first_principles_context"
+        "source": "macro_context"
       },
       {
-        "key": "US Dollar Index",
-        "value": 120.5518,
-        "unit": "index",
-        "source": "first_principles_context"
+        "key": "price_percentile_5y",
+        "value": 98,
+        "unit": "percentile",
+        "source": "market_snapshot"
       },
       {
-        "key": "VIX",
+        "key": "vix_level",
         "value": 24.06,
         "unit": "index",
-        "source": "first_principles_context"
+        "source": "macro_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-21T06:12:58.119Z",
+    "latestTimestamp": "2026-03-21T07:14:19.911Z",
     "sjcVndPerTael": 171000000,
-    "intlVndPerTael": 141677647.7141102,
+    "intlVndPerTael": 141673526.107405,
     "premiumPct": 20.7,
     "change7dPct": -10.4,
     "change30dPct": -9.82,
     "volatilityDailyPct": 1.6,
-    "ma7VndPerTael": 150796640,
-    "ma30VndPerTael": 159766343,
+    "ma7VndPerTael": 150796576,
+    "ma30VndPerTael": 159766328,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-21T06:13:00.854Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-21T07:14:32.366Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -191,8 +185,25 @@
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-21 | lewrockwell.com | Central Banks Fund Civilization Collapse",
+      "2026-03-21 | gulfbusiness.com | Iran war update : 5 key things to know on day 22"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-21 | lewrockwell.com | Central Banks Fund Civilization Collapse",
+      "2026-03-21 | gulfbusiness.com | Iran war update : 5 key things to know on day 22",
+      "2026-03-21 | oklahomacitysun.com | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
+      "2026-03-21 | aninews.in | Global markets to remain driven by West Asia conflict , Fed neutral guidance reflects uncertainty : Report",
+      "2026-03-21 | finance.yahoo.com | Stock Market Today , March 19 : B2Gold Slides Following Steep Gold Price Drop",
+      "2026-03-21 | livemint.com | US - Iran war effect : S & P 500 lost over $1 trillion market cap last week , crashes 5 . 83 % in one month"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-21 | lewrockwell.com | Central Banks Fund Civilization Collapse",
+      "2026-03-21 | gulfbusiness.com | Iran war update : 5 key things to know on day 22",
+      "2026-03-21 | finance.yahoo.com | Stock Market Today , March 19 : B2Gold Slides Following Steep Gold Price Drop",
+      "2026-03-21 | livemint.com | US - Iran war effect : S & P 500 lost over $1 trillion market cap last week , crashes 5 . 83 % in one month",
+      "2026-03-21 | livemint.com | Gold rate today : Resilient US dollar , inflation fear may drag gold price in India to ₹1 . 27 lakh",
+      "2026-03-21 | retail.economictimes.indiatimes.com | Gold Prices Plummet 1 . 8 % Amid US Troop Deployments in Middle East , ETRetail"
+    ]
   }
 }
