@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T05:19:40.334Z",
+  "generatedAt": "2026-03-21T06:13:27.553Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
@@ -7,79 +7,79 @@
     "status": "CHỜ",
     "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC giảm mạnh 10.4% trong 7 ngày nhưng premium vọt lên 20.7% cho thấy thị trường Việt Nam đang hoảng loạn và định giá quá cao so với thế giới; nhà đầu tư nên chờ đợi premium hạ nhiệt hoặc giá thế giới ổn định trước khi vào lệnh.",
+    "thesis": "Giá vàng SJC đang trong đà điều chỉnh mạnh sau đỉnh lịch sử, giá hiện thấp hơn MA30 (159.8 triệu VND/lượng) và MA7 (150.8 triệu VND/lượng), cho thấy xu hướng ngắn hạn vẫn là giảm. Mặc dù premium tăng cao (20.7%) phản ánh tâm lý phòng thủ, áp lực từ USD mạnh và lợi suất thực tăng tạo rủi ro tiếp tục điều chỉnh.",
     "reasons": [
-      "Giá SJC 171 triệu VND/lượng đang thấp hơn đáng kể so với MA7 (150.8 triệu) và MA30 (159.8 triệu), cho thấy động lượng bán mạnh nhưng cần cẩn trọng với bẫy giảm sâu.",
-      "Premium 20.7% ở mức rất cao so với trung bình 13-16% của chuỗi 30 ngày, rủi ro mất giá nếu premium điều chỉnh về mức bình thường.",
-      "Giá thế giới giảm 10.48% trong 5 ngày và 11.84% trong 20 ngày (XAUUSD về 4493.95 USD/oz), xu hướng ngắn hạn vẫn yếu thế.",
-      "Lợi suất thực USD 10 năm tăng 5.03% trong 20 ngày lên 1.88%, tạo áp lực bán vàng mạnh từ thị trường quốc tế."
+      "Xu hướng giảm mạnh: Giá SJC giảm -10.4% sau 7 ngày và đang giao dịch dưới MA7 (150.8 triệu VND/lượng) và MA30 (159.8 triệu VND/lượng), cho thấy động lượng bán vẫn chiếm ưu thế.",
+      "Áp lực vĩ mô tăng: US Dollar Index tăng +2.56% trong 20 ngày và US Real Yield 10Y tăng vọt +5.03% lên 1.88%, tạo áp lực lớn lên giá vàng thế giới (đã giảm -11.84% trong 20 ngày).",
+      "Phân kỳ giá nội - ngoại: Premium tăng đột biến từ 13.12% (20/2) lên 20.7% (21/3), cho thấy nhà đầu tư Việt Nam đang phòng thủ mạnh nhưng rủi ro điều chỉnh premium là cao nếu giá thế giới tiếp tục giảm.",
+      "Thanh khoản và biến động: Biến động ngày ở mức 1.6% kết hợp với VIX (24.06) cho thấy thị trường chưa ổn định, chưa xuất hiện tín hiệu đảo chiều rõ ràng."
     ],
     "risks": [
-      "Premium có thể tiếp tục mở rộng nếu tâm lý hoảng loạn tăng, gây thiệt hại cho người bán non.",
-      "Giá thế giới có thể phục hồi kỹ thuật sau đợt bán tháo quá mức, người chờ mua có thể bỏ lỡ đáy ngắn hạn.",
-      "VIX ở mức 24.06 cho thấy biến động thị trường tài chính còn cao, dự báo khó khăn."
+      "Rủi ro điều chỉnh premium: Mức premium 20.7% cao hơn đáng kể so với trung bình lịch sử, có thể bị nén nếu giá thế giới tiếp tục giảm.",
+      "Áp lực lãi suất thực: Lợi suất thực 10Y (1.88%) đang tăng mạnh, có thể tiếp tục gây áp lực lên giá vàng nếu dữ liệu kinh tế Mỹ tích cực.",
+      "Bẫy giá rẻ: Giá đã giảm gần 10% nhưng vẫn ở phân vị 98% trong 5 năm, khả năng điều chỉnh sâu hơn vẫn tồn tại."
     ],
     "evidence": [
       {
-        "key": "SJC Price",
+        "key": "Giá SJC hiện tại",
         "value": 171000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Premium vs World",
+        "key": "Giá thế giới quy đổi",
+        "value": 141677648,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Premium SJC",
         "value": 20.7,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "SJC 7-day Change",
+        "key": "Biến động 7 ngày (SJC)",
         "value": -10.4,
         "unit": "%",
         "source": "market_snapshot"
       },
       {
-        "key": "XAUUSD 5-day Change",
-        "value": -10.48,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "US Real Yield 10Y 20d Change",
-        "value": 5.03,
-        "unit": "%",
-        "source": "first_principles_context"
-      },
-      {
-        "key": "SJC MA7",
-        "value": 150796661,
+        "key": "MA30 (SJC)",
+        "value": 159766343,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "VIX Index",
-        "value": 24.06,
+        "key": "US Real Yield 10Y",
+        "value": 1.88,
+        "unit": "%",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "US Dollar Index",
+        "value": 120.5518,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "30-day Premium Range",
-        "value": 11.24,
-        "unit": "% (low)",
-        "source": "monthly_series_30d"
+        "key": "VIX",
+        "value": 24.06,
+        "unit": "index",
+        "source": "first_principles_context"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-21T05:19:23.355Z",
+    "latestTimestamp": "2026-03-21T06:12:58.119Z",
     "sjcVndPerTael": 171000000,
-    "intlVndPerTael": 141677799.23450342,
+    "intlVndPerTael": 141677647.7141102,
     "premiumPct": 20.7,
     "change7dPct": -10.4,
     "change30dPct": -9.82,
     "volatilityDailyPct": 1.6,
-    "ma7VndPerTael": 150796661,
-    "ma30VndPerTael": 159766348,
+    "ma7VndPerTael": 150796640,
+    "ma30VndPerTael": 159766343,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,7 +90,7 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-21T05:19:26.363Z",
+    "fetchedAt": "2026-03-21T06:13:00.854Z",
     "healthy": false,
     "missingFactors": [],
     "factors": [
