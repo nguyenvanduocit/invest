@@ -1,85 +1,79 @@
 {
-  "generatedAt": "2026-03-20T23:07:57.911Z",
+  "generatedAt": "2026-03-21T00:19:59.374Z",
   "provider": "z.ai",
   "model": "glm-5",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Cao",
+    "confidence": "Trung bình",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng thế giới đang giảm mạnh với động lượng bán áp đảo, nhưng premium SJC bùng nổ lên 24.1% cho thấy thị trường nội địa đang hoảng loạn và định giá lại rủi ro thanh khoản. Nhà đầu tư không nên bắt dao rơi mà chờ đợi ổn định, nhưng cần thận trọng vì premium cực cao có thể co hồi mạnh nếu giá thế giới phục hồi.",
+    "thesis": "Giá vàng thế giới giảm mạnh -11.84% trong 20 ngày do lợi suất thực USD tăng vọt 5.03% và lo ngại lạm phát từ dầu khí, khiến giá SJC điều chỉnh về 176.1 triệu/lượng. Tuy nhiên, premium tăng đột biến lên 24.3% cho thấy tâm lý hoảng loạn/bắt đáy tại Việt Nam rất cao, rủi ro điều chỉnh thêm của premium là đáng kể.",
     "reasons": [
-      "Giá thế giới giảm 11.84% trong 20 ngày (từ ~5020 xuống 4497 USD/oz) kết hợp lợi suất thực 10Y tăng 5.03% tạo áp lực bán kỹ thuật lớn.",
-      "Premium SJC nới rộng đột biến từ 12.93% (20/2) lên 24.1% (21/3), mức cao nhất trong chuỗi dữ liệu, cho thấy sự đứt gãy thanh khoản và tâm lý sợ hãi nội địa.",
-      "Giá SJC hiện 176.1 triệu VND/lượng đã thấp hơn MA7 (151.0 triệu) và MA30 (160.0 triệu), nhưng biên độ dao động 1.57%/ngày cảnh báo rủi ro biến động cực đoan.",
-      "VIX ở 24.06 và USD Index tăng 2.56% trong 20 ngày tạo môi trường bất lợi cho vàng ngắn hạn."
+      "Giá thế giới giảm sâu: XAUUSD mất -10.48% trong 5 ngày và -11.84% trong 20 ngày, phá vỡ nhiều vùng hỗ trợ kỹ thuật quan trọng.",
+      "Áp lực vĩ mô tăng: Lợi suất thực 10 năm Mỹ tăng mạnh +5.03% (lên 1.88%) và chỉ số USD tăng +2.56% tạo áp lực bán thẳng vàng.",
+      "Premium SJC giãn mức độ cao: Từ 13.12% (20/2) tăng vọt lên 24.3% (21/3), chênh lệch này rất cao so với trung bình lịch sử và rủi ro co hẹp lại là lớn.",
+      "Giá SJC nằm dưới MA7 (150.8 triệu) và MA30 (159.8 triệu), xu hướng ngắn hạn vẫn là giảm."
     ],
     "risks": [
-      "Premium 24.1% có thể co hồi nhanh về mức trung bình 13-16% nếu giá thế giới phục hồi, gây thiệt hại cho người mua đuổi.",
-      "Thị trường đang phản ứng mạnh với chính sách Fed (ngày 18/3), rủi ro biến động tiếp diễn trong 1-2 tuần tới.",
-      "Giá thế giới có thể tìm đáy kỹ thuật quanh vùng hỗ trợ tâm lý 4500 USD/oz, nhưng rủi ro test các mức thấp hơn vẫn tồn tại."
+      "Premium 24.3% có thể co lại nhanh chóng nếu giá thế giới tiếp tục giảm hoặc Ngân hàng Nhà nước can thiệp bình ổn.",
+      "Xung đột Iran gây sốc dầu thô, đẩy kỳ vọng lạm phát và lợi suất thực lên cao, tiếp tục gây áp lực lên giá vàng.",
+      "Thanh khoản thị trường có thể giảm sút trong giai đoạn biến động mạnh, khó thoát hàng ở mức giá cao."
     ],
     "evidence": [
       {
-        "key": "premiumPct",
-        "value": 24.1,
-        "unit": "%",
-        "source": "market_snapshot"
-      },
-      {
-        "key": "change20dPct_gold",
+        "key": "gold_change_20d",
         "value": -11.84,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "us_real_yield_10y_change20d",
+        "key": "us_real_yield_change_20d",
         "value": 5.03,
         "unit": "%",
         "source": "first_principles_context"
       },
       {
-        "key": "sjcVndPerTael",
-        "value": 176100000,
-        "unit": "VND/lượng",
+        "key": "premium_expansion",
+        "value": 11.18,
+        "unit": "percentage points",
+        "source": "monthly_series_30d"
+      },
+      {
+        "key": "sjc_price_vs_ma7",
+        "value": -25.3,
+        "unit": "triệu VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "intlUsdPerOunce",
-        "value": 4497.42,
-        "unit": "USD/oz",
-        "source": "monthly_series_30d"
-      },
-      {
-        "key": "premium_range_30d",
-        "value": 11.05,
+        "key": "usd_index_change_20d",
+        "value": 2.56,
         "unit": "%",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
-        "key": "vix",
+        "key": "vix_level",
         "value": 24.06,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "usd_index_change20d",
-        "value": 2.56,
-        "unit": "%",
-        "source": "first_principles_context"
+        "key": "sjc_current_price",
+        "value": 176.1,
+        "unit": "triệu VND/lượng",
+        "source": "market_snapshot"
       }
     ]
   },
   "marketSnapshot": {
-    "latestTimestamp": "2026-03-20T23:07:36.803Z",
+    "latestTimestamp": "2026-03-21T00:19:37.100Z",
     "sjcVndPerTael": 176100000,
-    "intlVndPerTael": 141906471.1344842,
-    "premiumPct": 24.1,
-    "change7dPct": -10.41,
-    "change30dPct": -9.83,
-    "volatilityDailyPct": 1.57,
-    "ma7VndPerTael": 151043794,
-    "ma30VndPerTael": 160028659,
+    "intlVndPerTael": 141676646.92348787,
+    "premiumPct": 24.3,
+    "change7dPct": -10.4,
+    "change30dPct": -9.82,
+    "volatilityDailyPct": 1.6,
+    "ma7VndPerTael": 150796497,
+    "ma30VndPerTael": 159766309,
     "percentile5y": 98,
     "drawdowns": {
       "total": 4,
@@ -90,8 +84,8 @@
     }
   },
   "macroContext": {
-    "fetchedAt": "2026-03-20T23:07:42.452Z",
-    "healthy": false,
+    "fetchedAt": "2026-03-21T00:19:42.862Z",
+    "healthy": true,
     "missingFactors": [],
     "factors": [
       {
@@ -191,8 +185,25 @@
       "2026-03-18 | Federal Reserve Monetary Policy Press Releases | Federal Reserve Board and Federal Open Market Committee release economic projections from the March 17-18 FOMC meeting",
       "2026-03-12 | Federal Reserve Speeches | Bowman, Capital Rules for the Real Economy"
     ],
-    "geopoliticalHeadlines": [],
-    "countryActionHeadlines": [],
-    "dollarYieldHeadlines": []
+    "geopoliticalHeadlines": [
+      "2026-03-20 | bravenewcoin.com | Bitcoin Price Holds as Gold Crashes 7 % and Clarity Act moves closer Is It Time to Buy Bitcoin ?",
+      "2026-03-20 | bravenewcoin.com | HBAR Price Prediction 2026 : Why Hedera and G Coin Could Be the Best Altcoins to Buy as Gold Crashes and Crypto Holds Strong"
+    ],
+    "countryActionHeadlines": [
+      "2026-03-21 | wkoa.com | Stocks sink on fears the war with Iran will keep interest rates high",
+      "2026-03-20 | bear953.com | Stocks sink on fears the war with Iran will keep interest rates high",
+      "2026-03-20 | fairfieldsuntimes.com | Stocks drop , oil jumps as Mideast war persists",
+      "2026-03-20 | proactiveinvestors.com | Frank Talk : Oil shock sends yields higher and gold lower",
+      "2026-03-20 | bryantimes.com | Stocks drop , oil jumps as Mideast war persists",
+      "2026-03-20 | 1059themountain.com | Stocks sink on fears the war with Iran will keep interest rates high"
+    ],
+    "dollarYieldHeadlines": [
+      "2026-03-20 | bravenewcoin.com | Bitcoin Price Holds as Gold Crashes 7 % and Clarity Act moves closer Is It Time to Buy Bitcoin ?",
+      "2026-03-20 | proactiveinvestors.com | Frank Talk : Oil shock sends yields higher and gold lower",
+      "2026-03-20 | fool.ca | Oil Prices Are Rewriting Canada Inflation Outlook : Here How to Adjust Your Portfolio",
+      "2026-03-20 | markets.financialcontent.com | FinancialContent - FedEx ( FDX ) Earnings Beat : Logistics Giant Surges on Strong Q3 Results and Upbeat 2026 Guidance",
+      "2026-03-20 | insidermonkey.com | Is American Express ( AXP ) The Best Financial Stock to Buy Amid Potential Interest Rate Volatility Coming Due to Iran War",
+      "2026-03-20 | benzinga.com | Iran War Reignites Rate Hike Fears – S & P 500 Hits  Oversold  Levels - State Street Energy Select Sector SPDR ETF ( ARCA : XLE )"
+    ]
   }
 }
