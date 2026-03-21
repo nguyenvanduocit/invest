@@ -1,48 +1,56 @@
 {
-  "generatedAt": "2026-03-21T11:55:07.909Z",
-  "provider": "z.ai",
-  "model": "glm-5",
+  "generatedAt": "2026-03-21T12:10:00.000Z",
+  "provider": "claude",
+  "model": "claude-opus-4-6",
   "source": "ai",
   "suggestion": {
     "status": "CHỜ",
-    "confidence": "Trung bình",
+    "confidence": "Trung bình-Cao",
     "horizon": "1-4 tuần",
-    "thesis": "Giá vàng SJC giảm mạnh 10.4% trong 7 ngày nhưng động lượng giảm chưa rõ đáy khi giá thế giới vẫn dưới MA7 và lợi suất thực USD tăng. Premium 20.7% cao nhưng phù hợp trong bối cảnh biến động, nhà đầu tư nên chờ tín hiệu ổn định kỹ thuật trước khi vào lệnh.",
+    "thesis": "Vàng thế giới đang trong đợt điều chỉnh mạnh -17% từ đỉnh $5,415/oz (28/01) xuống $4,494/oz (20/03). SJC Miếng giữ ở 171 triệu VND/lượng, premium 7.3% so với quốc tế. Fed giữ nguyên lãi suất 3.64%, USD mạnh lên và lợi suất thực tăng tạo áp lực giảm ngắn hạn. Xung đột Tây Á và rủi ro oil shock hỗ trợ giá vàng nhưng chưa đủ bù đắp áp lực bán. Đợt drawdown 12% gần nhất (Jan-Feb) phục hồi chỉ trong 33 ngày, cho thấy lực cầu cơ bản vẫn mạnh. Chờ tín hiệu ổn định trước khi mua.",
     "reasons": [
-      "Giá thế giới giảm 10.48% trong 5 ngày và 11.84% trong 20 ngày (USD/oz), xu hướng ngắn hạn vẫn là giảm khi giá hiện tại 4497.53 USD/oz thấp hơn vùng 5000-5100 USD/oz đầu tháng 3.",
-      "Lợi suất thực 10Y tăng 5.03% trong 20 ngày lên mức 1.88%, tạo áp lực bán lên vàng vì chi phí cơ hội nắm giữ tăng.",
-      "VIX ở mức 24.06 (+18.93% trong 20 ngày) cho thấy thị trường vẫn căng thẳng, Fed giữ thái độ trung tính amid rủi ro lạm phát và xung đột Tây Á.",
-      "Premium SJC nới rộng từ 13.12% (20/2) lên 20.7% (21/3), phản ánh tâm lý phòng thủ của nhà đầu tư Việt Nam khi giá thế giới lao dốc."
+      "Điều chỉnh mạnh từ đỉnh: Vàng thế giới giảm -17% từ đỉnh $5,415/oz (28/01) xuống $4,494/oz. Trong 5 ngày giảm -10.48%, 20 ngày giảm -11.84%, áp lực bán chưa dừng.",
+      "Macro bất lợi ngắn hạn: USD Index tăng +2.56% (20 ngày) lên 120.55, lợi suất thực Mỹ 10Y tăng lên 1.88% (+5.03%), US Treasury 10Y ở 4.25% - tất cả tạo áp lực giảm giá vàng.",
+      "Fed & ECB trung tính: FOMC họp 17-18/03 giữ Fed Funds Rate 3.64%. ECB ra quyết định chính sách tiền tệ 19/03. Chưa có tín hiệu nới lỏng thêm.",
+      "Yếu tố hỗ trợ: Xung đột Tây Á, oil shock và rủi ro lạm phát (breakeven 10Y tăng +4.39% lên 2.38%) tạo nền cho vàng. Drawdown 12% gần nhất phục hồi chỉ trong 33 ngày.",
+      "Premium SJC hợp lý: Chênh lệch SJC Miếng vs quốc tế ở mức 7.3% (171M vs 159.4M VND/lượng), thấp hơn nhiều so với mức cực đoan trước đó."
     ],
     "risks": [
-      "Giá thế giới có thể tiếp tục điều chỉnh sâu hơn nếu USD Index (đã tăng 2.56% trong 20 ngày) tiếp tục mạnh lên.",
-      "Rủi ro thanh khoản: biến động ngày 1.6% và drawdown tồi tệ nhất 41.26% cho thấy mức độ rủi ro cao khi bắt đáy.",
-      "Dữ liệu vĩ mô không đầy đủ (healthy: false) có thể bỏ sót các yếu tố quan trọng ảnh hưởng giá."
+      "Đà giảm chưa kết thúc: Giá giảm -3.47% chỉ trong 1 ngày gần nhất, momentum tiêu cực mạnh.",
+      "USD tiếp tục mạnh: Nếu USD Index vượt 121, giá vàng có thể giảm thêm 5-10%.",
+      "VIX vẫn cao: Ở mức 24.06, tuy đã giảm -11.84% trong 5 ngày nhưng vẫn trên ngưỡng bình thường 20, thị trường còn biến động.",
+      "Rủi ro bắt đáy: Volatility 1.6%/ngày và lịch sử drawdown tồi tệ nhất -41.26% cho thấy rủi ro cao khi cố bắt đáy sớm."
     ],
     "evidence": [
       {
-        "key": "Giá vàng SJC hiện tại",
+        "key": "Giá SJC Miếng hiện tại",
         "value": 171000000,
         "unit": "VND/lượng",
         "source": "market_snapshot"
       },
       {
-        "key": "Giá thế giới hiện tại",
-        "value": 4497.53,
+        "key": "Giá SJC Nhẫn hiện tại",
+        "value": 170700000,
+        "unit": "VND/lượng",
+        "source": "market_snapshot"
+      },
+      {
+        "key": "Giá thế giới (XAU/USD)",
+        "value": 4493.95,
         "unit": "USD/oz",
-        "source": "monthly_series_30d"
+        "source": "first_principles_context"
       },
       {
-        "key": "Biến động giá SJC 7 ngày",
-        "value": -10.4,
+        "key": "Giảm từ đỉnh $5,415",
+        "value": -17.0,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "calculated"
       },
       {
-        "key": "Premium SJC hiện tại",
-        "value": 20.7,
+        "key": "Premium SJC vs Quốc tế",
+        "value": 7.3,
         "unit": "%",
-        "source": "market_snapshot"
+        "source": "calculated"
       },
       {
         "key": "Lợi suất thực Mỹ 10 năm",
@@ -51,16 +59,28 @@
         "source": "first_principles_context"
       },
       {
-        "key": "VIX Index",
+        "key": "USD Index",
+        "value": 120.55,
+        "unit": "index",
+        "source": "first_principles_context"
+      },
+      {
+        "key": "VIX",
         "value": 24.06,
         "unit": "index",
         "source": "first_principles_context"
       },
       {
-        "key": "USD Index thay đổi 20 ngày",
-        "value": 2.56,
+        "key": "Fed Funds Rate",
+        "value": 3.64,
         "unit": "%",
         "source": "first_principles_context"
+      },
+      {
+        "key": "Phục hồi drawdown gần nhất",
+        "value": 33,
+        "unit": "ngày",
+        "source": "drawdown_analysis"
       }
     ]
   },

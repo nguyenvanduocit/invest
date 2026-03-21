@@ -36,11 +36,6 @@ async function main() {
   await $`bun run src/verify-first-principles.ts`.quiet()
   console.log('   Done')
 
-  // 7. Generate AI suggestion
-  console.log('\n7. Generating AI suggestion...')
-  await $`bun run src/generate-ai-suggestion.ts`.quiet()
-  console.log('   Done')
-
   console.log('\n✓ Build complete')
 }
 
