@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phân Tích Thị Trường Vàng - 22/03/2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --card: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e4e4e7;
+    --muted: #9ca3af;
+    --gold: #f59e0b;
+    --gold-dim: #92400e;
+    --red: #ef4444;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --orange: #f97316;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
+  .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+  .card h2 { font-size: 1rem; color: var(--gold); margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+  .card h3 { font-size: 0.9rem; color: var(--text); margin-bottom: 0.5rem; }
+  .stat { text-align: center; padding: 0.75rem; }
+  .stat .value { font-size: 1.75rem; font-weight: 700; color: var(--gold); }
+  .stat .label { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
+  .stat .change { font-size: 0.85rem; font-weight: 600; margin-top: 0.25rem; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .neutral { color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; font-size: 0.75rem; text-transform: uppercase; }
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .badge-wait { background: #92400e33; color: var(--gold); border: 1px solid var(--gold); }
+  .badge-buy { background: #16a34a22; color: var(--green); border: 1px solid var(--green); }
+  .badge-sell { background: #dc262622; color: var(--red); border: 1px solid var(--red); }
+  .thesis { background: #1e2030; border-left: 3px solid var(--gold); padding: 1rem; border-radius: 0 8px 8px 0; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.7; }
+  .reason-list, .risk-list { list-style: none; padding: 0; }
+  .reason-list li, .risk-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; line-height: 1.5; }
+  .reason-list li:last-child, .risk-list li:last-child { border-bottom: none; }
+  .reason-list li::before { content: "▸ "; color: var(--green); font-weight: bold; }
+  .risk-list li::before { content: "▾ "; color: var(--red); font-weight: bold; }
+  .price-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+  .price-row:last-child { border-bottom: none; }
+  .price-row .name { font-size: 0.85rem; }
+  .price-row .price { font-weight: 600; font-size: 0.95rem; }
+  .chart-container { width: 100%; height: 300px; position: relative; }
+  canvas { width: 100% !important; height: 100% !important; }
+  .section-title { font-size: 1.1rem; color: var(--gold); margin: 1.5rem 0 0.75rem 0; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75rem; margin-top: 2rem; padding: 1rem; border-top: 1px solid var(--border); }
+  .highlight { color: var(--gold); font-weight: 600; }
+  .macro-item { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+  .macro-item:last-child { border-bottom: none; }
+  .drawdown-bar { height: 6px; border-radius: 3px; background: var(--border); margin-top: 0.25rem; overflow: hidden; }
+  .drawdown-bar .fill { height: 100%; border-radius: 3px; background: var(--red); }
+  .recovery-bar .fill { background: var(--green); }
+  @media (max-width: 640px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .stat .value { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Phân Tích Thị Trường Vàng</h1>
+<p class="subtitle">Cập nhật: 22/03/2026 09:10 (UTC+7) &bull; Nguồn: FreeGoldAPI, Stooq, giavang.org, FRED</p>
+
+<!-- Key Metrics -->
+<div class="grid grid-4">
+  <div class="card stat">
+    <div class="label">XAUUSD</div>
+    <div class="value">$4,494</div>
+    <div class="change down">-17.0% từ đỉnh</div>
+  </div>
+  <div class="card stat">
+    <div class="label">SJC Miếng (bán)</div>
+    <div class="value" style="font-size:1.5rem">171.0 tr</div>
+    <div class="change down">-6.6% tuần</div>
+  </div>
+  <div class="card stat">
+    <div class="label">SJC Nhẫn (bán)</div>
+    <div class="value" style="font-size:1.5rem">170.7 tr</div>
+    <div class="change down">-6.6% tuần</div>
+  </div>
+  <div class="card stat">
+    <div class="label">Premium VN</div>
+    <div class="value" style="color: var(--orange)">+7.1%</div>
+    <div class="change neutral">vs quốc tế</div>
+  </div>
+</div>
+
+<!-- AI Suggestion + Thesis -->
+<div class="grid grid-2">
+  <div class="card">
+    <h2>Khuyến Nghị AI</h2>
+    <div style="text-align:center; margin-bottom:1rem;">
+      <span class="badge badge-wait">CHỜ</span>
+      <div style="margin-top:0.5rem; font-size:0.8rem; color:var(--muted);">Độ tin cậy: Trung bình-Cao &bull; Horizon: 1-4 tuần</div>
+    </div>
+    <div class="thesis">
+      Vàng thế giới đang trong đợt điều chỉnh mạnh <strong>-17%</strong> từ đỉnh $5,415/oz (28/01) xuống $4,494/oz (20/03). SJC Miếng giữ ở 171 triệu VND/lượng, premium 7.1% so với quốc tế. Fed giữ nguyên lãi suất 3.64%, USD mạnh lên và lợi suất thực tăng tạo áp lực giảm ngắn hạn. Đợt drawdown 12% gần nhất (Jan-Feb) phục hồi chỉ trong 33 ngày, cho thấy lực cầu cơ bản vẫn mạnh. <strong>Chờ tín hiệu ổn định trước khi mua.</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Bảng Giá So Sánh (VND/gram)</h2>
+    <table>
+      <thead>
+        <tr><th>Thị trường</th><th>Nguồn</th><th style="text-align:right">VND/g</th><th style="text-align:right">vs Intl</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Quốc tế</td><td>FreeGoldAPI</td>
+          <td style="text-align:right">4,256,265</td>
+          <td style="text-align:right; color:var(--muted)">(base)</td>
+        </tr>
+        <tr>
+          <td>Trung Quốc</td><td>XAUUSD×CNY</td>
+          <td style="text-align:right">4,256,265</td>
+          <td style="text-align:right; color:var(--muted)">0.0%</td>
+        </tr>
+        <tr>
+          <td>Nga</td><td>XAUUSD×RUB</td>
+          <td style="text-align:right">4,256,265</td>
+          <td style="text-align:right; color:var(--muted)">0.0%</td>
+        </tr>
+        <tr>
+          <td>Việt Nam</td><td>SJC Nhẫn</td>
+          <td style="text-align:right; font-weight:600">4,552,000</td>
+          <td style="text-align:right" class="up">+6.9%</td>
+        </tr>
+        <tr>
+          <td>Việt Nam</td><td>SJC Miếng</td>
+          <td style="text-align:right; font-weight:600">4,560,000</td>
+          <td style="text-align:right" class="up">+7.1%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:0.75rem; font-size:0.8rem; color:var(--muted);">
+      Tỷ giá: 1 USD = 26,166.61 VND &bull; 1 CNY = 3,792 VND &bull; 1 RUB = 312.8 VND
+    </div>
+  </div>
+</div>
+
+<!-- SJC Price Chart -->
+<div class="section-title">Biến Động Giá SJC Miếng (VND/lượng) - 30 Ngày Gần Nhất</div>
+<div class="card">
+  <div class="chart-container">
+    <canvas id="sjcChart"></canvas>
+  </div>
+</div>
+
+<!-- XAUUSD Chart -->
+<div class="section-title">Biến Động XAUUSD (USD/oz) - 60 Ngày Gần Nhất</div>
+<div class="card">
+  <div class="chart-container">
+    <canvas id="xauChart"></canvas>
+  </div>
+</div>
+
+<!-- Macro + Reasons -->
+<div class="grid grid-2">
+  <div class="card">
+    <h2>Chỉ Số Vĩ Mô</h2>
+    <div class="macro-item">
+      <span>USD Index (Trade Weighted)</span>
+      <span><strong>120.55</strong> <span class="up">+2.56% (20d)</span></span>
+    </div>
+    <div class="macro-item">
+      <span>Lợi suất thực Mỹ 10Y</span>
+      <span><strong>1.88%</strong> <span class="up">+5.03% (20d)</span></span>
+    </div>
+    <div class="macro-item">
+      <span>US Treasury 10Y</span>
+      <span><strong>4.25%</strong> <span class="up">+4.17% (20d)</span></span>
+    </div>
+    <div class="macro-item">
+      <span>US Treasury 2Y</span>
+      <span><strong>3.79%</strong> <span class="up">+9.22% (20d)</span></span>
+    </div>
+    <div class="macro-item">
+      <span>Fed Funds Rate</span>
+      <span><strong>3.64%</strong> <span class="neutral">0% (20d)</span></span>
+    </div>
+    <div class="macro-item">
+      <span>Breakeven Inflation 10Y</span>
+      <span><strong>2.38%</strong> <span class="up">+4.39% (20d)</span></span>
+    </div>
+    <div class="macro-item">
+      <span>VIX</span>
+      <span><strong>24.06</strong> <span class="up">+18.93% (20d)</span></span>
+    </div>
+    <div style="margin-top:0.75rem; font-size:0.8rem; color:var(--muted);">
+      USD mạnh + lợi suất thực tăng = áp lực giảm giá vàng. VIX cao = thị trường biến động mạnh.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Lý Do Chờ (Bullish / Bearish)</h2>
+    <h3 style="color:var(--green)">Yếu tố hỗ trợ</h3>
+    <ul class="reason-list">
+      <li>Drawdown 12% gần nhất phục hồi chỉ trong 33 ngày - lực cầu cơ bản vẫn mạnh</li>
+      <li>Lạm phát kỳ vọng tăng (breakeven 2.38%, +4.39%) - vàng là hedge lạm phát</li>
+      <li>Premium SJC 7.1% - mức hợp lý, thấp hơn nhiều so với cực đoan trước đó</li>
+      <li>Xung đột Tây Á và rủi ro oil shock tiếp tục hỗ trợ vàng</li>
+    </ul>
+    <h3 style="color:var(--red); margin-top:0.75rem;">Rủi ro</h3>
+    <ul class="risk-list">
+      <li>Đà giảm chưa kết thúc: -3.47% chỉ trong 1 ngày, -10.48% trong 5 ngày</li>
+      <li>USD tiếp tục mạnh - nếu vượt 121, vàng có thể giảm thêm 5-10%</li>
+      <li>VIX 24.06 trên ngưỡng 20, thị trường còn biến động mạnh</li>
+      <li>Rủi ro bắt đáy: drawdown tồi tệ nhất lịch sử -41.3%, kéo dài 2,833 ngày</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Drawdown Analysis -->
+<div class="section-title">Phân Tích Drawdown Lịch Sử (ngưỡng ≥10%)</div>
+<div class="card">
+  <table>
+    <thead>
+      <tr><th>Đỉnh</th><th>Đáy</th><th>Mức giảm</th><th>Ngày đến đáy</th><th>Phục hồi</th><th>Tổng ngày</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>04/10/2012<br><span style="color:var(--muted);font-size:0.8rem">$1,790.55</span></td>
+        <td>17/12/2015<br><span style="color:var(--muted);font-size:0.8rem">$1,051.74</span></td>
+        <td class="down" style="font-weight:700">-41.3%</td>
+        <td>1,169 ngày</td>
+        <td>07/07/2020</td>
+        <td style="font-weight:600">2,833 ngày</td>
+      </tr>
+      <tr>
+        <td>06/08/2020<br><span style="color:var(--muted);font-size:0.8rem">$2,063.81</span></td>
+        <td>26/09/2022<br><span style="color:var(--muted);font-size:0.8rem">$1,621.57</span></td>
+        <td class="down" style="font-weight:700">-21.4%</td>
+        <td>781 ngày</td>
+        <td>01/12/2023</td>
+        <td style="font-weight:600">1,212 ngày</td>
+      </tr>
+      <tr>
+        <td>20/10/2025<br><span style="color:var(--muted);font-size:0.8rem">$4,388.43</span></td>
+        <td>04/11/2025<br><span style="color:var(--muted);font-size:0.8rem">$3,930.56</span></td>
+        <td class="down" style="font-weight:700">-10.4%</td>
+        <td>15 ngày</td>
+        <td>22/12/2025</td>
+        <td style="font-weight:600">63 ngày</td>
+      </tr>
+      <tr>
+        <td>28/01/2026<br><span style="color:var(--muted);font-size:0.8rem">$5,327.18</span></td>
+        <td>02/02/2026<br><span style="color:var(--muted);font-size:0.8rem">$4,687.14</span></td>
+        <td class="down" style="font-weight:700">-12.0%</td>
+        <td>5 ngày</td>
+        <td>02/03/2026</td>
+        <td style="font-weight:600">33 ngày</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top:0.75rem; font-size:0.85rem; color:var(--muted);">
+    Trung bình phục hồi: <strong style="color:var(--text)">1,035 ngày</strong> &bull;
+    Drawdown tồi tệ nhất: <strong class="down">-41.3%</strong> (2012-2015) &bull;
+    Gần nhất: <strong style="color:var(--text)">33 ngày</strong> phục hồi
+  </div>
+</div>
+
+<!-- SJC Vietnam Detail -->
+<div class="section-title">Giá SJC Chi Tiết</div>
+<div class="grid grid-2">
+  <div class="card">
+    <h2>SJC Miếng (VND/lượng)</h2>
+    <div class="price-row">
+      <span class="name">Giá mua vào</span>
+      <span class="price">168,000,000</span>
+    </div>
+    <div class="price-row">
+      <span class="name">Giá bán ra</span>
+      <span class="price" style="color:var(--gold)">171,000,000</span>
+    </div>
+    <div class="price-row">
+      <span class="name">Chênh mua-bán</span>
+      <span class="price">3,000,000 (1.8%)</span>
+    </div>
+    <div class="price-row">
+      <span class="name">So với hôm qua</span>
+      <span class="price neutral">0 (giữ nguyên)</span>
+    </div>
+    <div class="price-row">
+      <span class="name">So với tuần trước (18/03)</span>
+      <span class="price down">-12,000,000 (-6.6%)</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>SJC Nhẫn (VND/lượng)</h2>
+    <div class="price-row">
+      <span class="name">Giá mua vào</span>
+      <span class="price">167,700,000</span>
+    </div>
+    <div class="price-row">
+      <span class="name">Giá bán ra</span>
+      <span class="price" style="color:var(--gold)">170,700,000</span>
+    </div>
+    <div class="price-row">
+      <span class="name">Chênh mua-bán</span>
+      <span class="price">3,000,000 (1.8%)</span>
+    </div>
+    <div class="price-row">
+      <span class="name">So với hôm qua</span>
+      <span class="price neutral">0 (giữ nguyên)</span>
+    </div>
+    <div class="price-row">
+      <span class="name">So với tuần trước (18/03)</span>
+      <span class="price down">-12,000,000 (-6.6%)</span>
+    </div>
+  </div>
+</div>
+
+<!-- Key Insights -->
+<div class="section-title">Tổng Kết & Nhận Định</div>
+<div class="card">
+  <div class="thesis" style="border-left-color: var(--orange);">
+    <strong>Tình hình hiện tại (22/03/2026):</strong> Vàng thế giới đang trong đợt điều chỉnh lớn thứ 2 trong năm 2026. Từ đỉnh $5,415/oz ngày 28/01, giá đã giảm -17% xuống $4,494/oz. Đáng chú ý, đợt giảm gần đây tăng tốc mạnh: -3.47%/ngày, -10.48%/tuần. Đây là tốc độ giảm nhanh nhất kể từ đợt flash crash tháng 1.
+  </div>
+  <div class="thesis" style="border-left-color: var(--blue); margin-top: 0.75rem;">
+    <strong>Yếu tố macro:</strong> USD mạnh lên (Index 120.55, +2.56% trong 20 ngày) cùng lợi suất thực tăng (1.88%) đang tạo áp lực lớn lên vàng. Fed giữ nguyên lãi suất 3.64%, chưa có tín hiệu nới lỏng thêm. Tuy nhiên, lạm phát kỳ vọng cũng tăng (breakeven 2.38%), tạo nền hỗ trợ trung hạn.
+  </div>
+  <div class="thesis" style="border-left-color: var(--green); margin-top: 0.75rem;">
+    <strong>Đánh giá:</strong> Mặc dù đợt điều chỉnh hiện tại khá sâu, xu hướng dài hạn vẫn tích cực (vàng tăng từ $2,611 cuối 2024 lên $5,415 đỉnh 2026, gần gấp đôi). Premium SJC Việt Nam ở mức 7.1% - tương đối hợp lý. Lời khuyên: <strong style="color:var(--gold);">CHỜ</strong> - không nên bắt đáy khi momentum giảm còn mạnh. Theo dõi vùng hỗ trợ $4,300-4,400 và tín hiệu ổn định 2-3 ngày trước khi cân nhắc mua vào.
+  </div>
+</div>
+
+<div class="footer">
+  Dữ liệu được thu thập tự động từ các nguồn công khai. Không phải tư vấn đầu tư.<br>
+  Cập nhật lần cuối: 22/03/2026 09:10 UTC+7 &bull; <a href="https://github.com/nguyenvanduocit/invest" style="color:var(--blue)">GitHub</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+// SJC Chart - 30 days
+const sjcData = [
+  {d:'20/02',v:161500},{d:'21/02',v:163200},{d:'22/02',v:163500},{d:'23/02',v:163500},
+  {d:'24/02',v:167500},{d:'25/02',v:168000},{d:'26/02',v:167500},{d:'27/02',v:169000},
+  {d:'28/02',v:170000},{d:'01/03',v:170000},{d:'02/03',v:172500},{d:'03/03',v:172000},
+  {d:'04/03',v:172000},{d:'05/03',v:173500},{d:'06/03',v:174000},{d:'07/03',v:175000},
+  {d:'08/03',v:175000},{d:'09/03',v:175500},{d:'10/03',v:177000},{d:'11/03',v:178500},
+  {d:'12/03',v:178000},{d:'13/03',v:178000},{d:'14/03',v:179000},{d:'15/03',v:180000},
+  {d:'16/03',v:181500},{d:'17/03',v:182000},{d:'18/03',v:183000},{d:'19/03',v:175500},
+  {d:'20/03',v:176100},{d:'21/03',v:171000},{d:'22/03',v:171000}
+];
+
+new Chart(document.getElementById('sjcChart'), {
+  type: 'line',
+  data: {
+    labels: sjcData.map(d => d.d),
+    datasets: [{
+      label: 'SJC Miếng (nghìn VND/lượng)',
+      data: sjcData.map(d => d.v),
+      borderColor: '#f59e0b',
+      backgroundColor: 'rgba(245,158,11,0.1)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 2,
+      pointHoverRadius: 5,
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => `${(ctx.raw / 1000).toFixed(0)} triệu VND/lượng`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { color: '#2a2d3a' }, ticks: { color: '#9ca3af', maxTicksLimit: 10, font: { size: 11 } } },
+      y: {
+        grid: { color: '#2a2d3a' },
+        ticks: {
+          color: '#9ca3af',
+          font: { size: 11 },
+          callback: v => (v/1000).toFixed(0) + ' tr'
+        }
+      }
+    }
+  }
+});
+
+// XAUUSD Chart - recent from Stooq
+const xauData = [
+  {d:'20/01',v:4763.63},{d:'21/01',v:4832.66},{d:'22/01',v:4936.16},{d:'23/01',v:4981.83},
+  {d:'26/01',v:5010.97},{d:'27/01',v:5178.54},{d:'28/01',v:5415.17},{d:'29/01',v:5378.77},
+  {d:'30/01',v:4847.87},{d:'02/02',v:4661.28},{d:'03/02',v:4947.22},{d:'04/02',v:4965.00},
+  {d:'05/02',v:4779.63},{d:'06/02',v:4952.97},{d:'09/02',v:5058.52},{d:'10/02',v:5025.48},
+  {d:'11/02',v:5084.65},{d:'12/02',v:4921.96},{d:'13/02',v:5032.92},{d:'16/02',v:4992.47},
+  {d:'17/02',v:4877.53},{d:'18/02',v:4977.45},{d:'19/02',v:4996.33},{d:'20/02',v:5097.44},
+  {d:'23/02',v:5227.61},{d:'24/02',v:5143.94},{d:'25/02',v:5165.03},{d:'26/02',v:5185.26},
+  {d:'27/02',v:5263.83},{d:'02/03',v:5322.17},{d:'03/03',v:5088.51},{d:'04/03',v:5141.40},
+  {d:'05/03',v:5081.16},{d:'06/03',v:5153.27},{d:'09/03',v:5133.97},{d:'10/03',v:5191.93},
+  {d:'11/03',v:5181.99},{d:'12/03',v:5078.39},{d:'13/03',v:5019.83},{d:'16/03',v:5010.69},
+  {d:'17/03',v:5003.05},{d:'18/03',v:4836.86},{d:'19/03',v:4655.29},{d:'20/03',v:4493.95}
+];
+
+new Chart(document.getElementById('xauChart'), {
+  type: 'line',
+  data: {
+    labels: xauData.map(d => d.d),
+    datasets: [{
+      label: 'XAUUSD (USD/oz)',
+      data: xauData.map(d => d.v),
+      borderColor: '#3b82f6',
+      backgroundColor: 'rgba(59,130,246,0.1)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 2,
+      pointHoverRadius: 5,
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => `$${ctx.raw.toFixed(2)}/oz`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { color: '#2a2d3a' }, ticks: { color: '#9ca3af', maxTicksLimit: 12, font: { size: 11 } } },
+      y: {
+        grid: { color: '#2a2d3a' },
+        ticks: {
+          color: '#9ca3af',
+          font: { size: 11 },
+          callback: v => '$' + v.toLocaleString()
+        }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
