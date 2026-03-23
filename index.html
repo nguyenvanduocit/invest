@@ -3,474 +3,349 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phân Tích Giá Vàng - 21/03/2026</title>
+<title>Gold Investment Dashboard - 23/03/2026</title>
 <style>
   :root {
     --bg: #0f1117;
     --card: #1a1d28;
     --border: #2a2d3a;
-    --text: #e4e4e7;
-    --muted: #9ca3af;
-    --gold: #f59e0b;
-    --gold-dim: #92400e;
-    --red: #ef4444;
-    --green: #22c55e;
+    --text: #e1e4eb;
+    --muted: #8b8fa3;
+    --gold: #f0b90b;
+    --gold-dim: #f0b90b33;
+    --green: #0ecb81;
+    --red: #f6465d;
     --blue: #3b82f6;
-    --purple: #a855f7;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 1rem;
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+  header { text-align: center; padding: 30px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+  header h1 { font-size: 1.8em; color: var(--gold); margin-bottom: 4px; }
+  header .subtitle { color: var(--muted); font-size: 0.95em; }
+  .grid { display: grid; gap: 16px; margin-bottom: 20px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   }
-  .container { max-width: 1200px; margin: 0 auto; }
-  h1 { color: var(--gold); font-size: 1.5rem; margin-bottom: 0.25rem; }
-  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
-  }
-  .card h2 { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
-  .card h3 { font-size: 0.8rem; color: var(--muted); margin: 1rem 0 0.5rem; }
-  .price-big { font-size: 2rem; font-weight: 700; color: var(--gold); }
-  .price-unit { font-size: 0.8rem; color: var(--muted); }
-  .change-pos { color: var(--green); }
-  .change-neg { color: var(--red); }
-  .badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-  .badge-wait { background: #92400e33; color: #fbbf24; border: 1px solid #92400e; }
-  .badge-buy { background: #16653433; color: #4ade80; border: 1px solid #166534; }
-  .badge-sell { background: #7f1d1d33; color: #f87171; border: 1px solid #7f1d1d; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-  th { text-align: left; color: var(--muted); font-weight: 500; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
-  td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
-  tr:last-child td { border-bottom: none; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .card h2 { font-size: 1.05em; color: var(--gold); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .card h3 { font-size: 0.95em; color: var(--text); margin-bottom: 10px; }
+  .stat { text-align: center; padding: 12px 8px; }
+  .stat .value { font-size: 1.6em; font-weight: 700; color: var(--text); }
+  .stat .label { font-size: 0.8em; color: var(--muted); margin-top: 4px; }
+  .stat .change { font-size: 0.85em; margin-top: 2px; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .neutral { color: var(--gold); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { color: var(--text); }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.82em; font-weight: 600; }
+  .badge-wait { background: #f0b90b22; color: var(--gold); border: 1px solid var(--gold); }
+  .badge-buy { background: #0ecb8122; color: var(--green); border: 1px solid var(--green); }
+  .badge-sell { background: #f6465d22; color: var(--red); border: 1px solid var(--red); }
+  .section-title { font-size: 1.15em; color: var(--text); margin: 28px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
   .reason-list { list-style: none; padding: 0; }
-  .reason-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+  .reason-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9em; line-height: 1.5; }
   .reason-list li:last-child { border-bottom: none; }
-  .reason-list li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 0.5rem; vertical-align: middle; }
-  .reason-list.analysis li::before { background: var(--blue); }
-  .reason-list.risks li::before { background: var(--red); }
-  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
-  .macro-item {
-    background: #1e2130;
-    border-radius: 8px;
-    padding: 0.75rem;
-    text-align: center;
-  }
-  .macro-item .label { font-size: 0.7rem; color: var(--muted); }
-  .macro-item .value { font-size: 1.1rem; font-weight: 600; margin: 0.25rem 0; }
-  .macro-item .change { font-size: 0.75rem; }
-  .full-width { grid-column: 1 / -1; }
-  .chart-container { position: relative; width: 100%; height: 300px; }
-  canvas { width: 100% !important; height: 100% !important; }
-  .news-list { list-style: none; padding: 0; }
-  .news-list li { padding: 0.4rem 0; font-size: 0.8rem; border-bottom: 1px solid var(--border); }
-  .news-list li:last-child { border-bottom: none; }
-  .news-date { color: var(--muted); font-size: 0.7rem; }
-  .thesis-box {
-    background: linear-gradient(135deg, #1e2130, #1a1d28);
-    border-left: 3px solid var(--gold);
-    padding: 1rem 1.25rem;
-    border-radius: 0 8px 8px 0;
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  .drawdown-table { overflow-x: auto; }
-  .footer { text-align: center; color: var(--muted); font-size: 0.75rem; padding: 2rem 0 1rem; }
-  @media (max-width: 640px) {
-    .price-big { font-size: 1.5rem; }
-    .grid { grid-template-columns: 1fr; }
-    .macro-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+  .reason-list li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 10px; vertical-align: middle; }
+  .reason-list.bullish li::before { background: var(--green); }
+  .reason-list.bearish li::before { background: var(--red); }
+  .reason-list.info li::before { background: var(--blue); }
+  .headline-list { list-style: none; padding: 0; }
+  .headline-list li { padding: 6px 0; font-size: 0.85em; color: var(--muted); border-bottom: 1px solid #1f2230; }
+  .headline-list li:last-child { border-bottom: none; }
+  .headline-list .date { color: var(--blue); font-size: 0.82em; }
+  .highlight-box { background: #f0b90b0a; border: 1px solid var(--gold-dim); border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; }
+  .highlight-box p { font-size: 0.95em; line-height: 1.7; }
+  .macro-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.88em; }
+  .macro-row:last-child { border-bottom: none; }
+  .macro-row .name { color: var(--muted); }
+  .macro-row .val { font-weight: 600; }
+  .footer { text-align: center; padding: 30px 0 20px; color: var(--muted); font-size: 0.8em; border-top: 1px solid var(--border); margin-top: 30px; }
+  .premium-bar { height: 8px; border-radius: 4px; background: var(--border); margin-top: 8px; overflow: hidden; }
+  .premium-bar .fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--green), var(--gold), var(--red)); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin-left: 6px; }
+  .tag-inverse { background: #f6465d22; color: var(--red); }
+  .tag-direct { background: #0ecb8122; color: var(--green); }
+  .tag-context { background: #3b82f622; color: var(--blue); }
 </style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
 <div class="container">
-  <h1>Phan Tich Gia Vang</h1>
-  <p class="subtitle">Cap nhat: 21/03/2026 19:03 (UTC+7) &mdash; Du lieu tu FreeGoldAPI, giavang.org, Stooq, FRED</p>
 
-  <!-- Price Cards -->
-  <div class="grid">
-    <div class="card">
-      <h2>SJC Mieng</h2>
-      <div class="price-big">171.0 <span class="price-unit">trieu VND/luong</span></div>
-      <div style="margin-top:0.5rem; font-size:0.85rem;">
-        Mua: 168.0 &nbsp;|&nbsp; Ban: 171.0
-      </div>
-      <div style="margin-top:0.25rem; font-size:0.85rem;">
-        Premium vs quoc te: <span class="change-pos">+7.3%</span>
-      </div>
-    </div>
-    <div class="card">
-      <h2>SJC Nhan</h2>
-      <div class="price-big">170.7 <span class="price-unit">trieu VND/luong</span></div>
-      <div style="margin-top:0.5rem; font-size:0.85rem;">
-        Mua: 167.7 &nbsp;|&nbsp; Ban: 170.7
-      </div>
-      <div style="margin-top:0.25rem; font-size:0.85rem;">
-        Premium vs quoc te: <span class="change-pos">+7.1%</span>
-      </div>
-    </div>
-    <div class="card">
-      <h2>Vang The Gioi (XAUUSD)</h2>
-      <div class="price-big">$4,494 <span class="price-unit">USD/oz</span></div>
-      <div style="margin-top:0.5rem; font-size:0.85rem;">
-        Quy doi: 159.4 trieu VND/luong
-      </div>
-      <div style="margin-top:0.25rem; font-size:0.85rem;">
-        <span class="change-neg">-3.5% (1D)</span> &nbsp;
-        <span class="change-neg">-10.5% (5D)</span> &nbsp;
-        <span class="change-neg">-11.8% (20D)</span>
-      </div>
-    </div>
+<header>
+  <h1>Gold Investment Dashboard</h1>
+  <div class="subtitle">Cap nhat: 23/03/2026 09:05 (UTC+7) &bull; Du lieu tu nhieu nguon quoc te</div>
+</header>
+
+<!-- Signal Box -->
+<div class="highlight-box">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+    <span class="badge badge-wait">CHO - CHUA MUA</span>
+    <span style="color:var(--muted);font-size:0.85em;">Do tin cay: Trung binh-Cao &bull; Tam nhin: 1-4 tuan</span>
   </div>
+  <p>Vang the gioi dang trong dot dieu chinh manh <strong style="color:var(--red)">-17%</strong> tu dinh $5,415/oz (28/01) xuong $4,417/oz. SJC Mieng o muc 169 trieu VND/luong, premium 5.9%. Fed giu nguyen lai suat 3.64%, USD manh len va loi suat thuc tang tao ap luc giam ngan han. Cho tin hieu on dinh truoc khi mua.</p>
+</div>
 
-  <!-- AI Suggestion -->
-  <div class="card" style="margin-bottom:1.5rem;">
-    <h2>Danh Gia & Khuyen Nghi <span class="badge badge-wait">CHO</span></h2>
-    <div class="thesis-box">
-      Vang the gioi dang trong dot dieu chinh manh <strong>-17%</strong> tu dinh $5,415/oz (28/01) xuong $4,494/oz (20/03). SJC Mieng giu o 171 trieu VND/luong, premium 7.3% so voi quoc te. Fed giu nguyen lai suat 3.64%, USD manh len va loi suat thuc tang tao ap luc giam ngan han. Xung dot Tay A va rui ro oil shock ho tro gia vang nhung chua du bu dap ap luc ban. Dot drawdown 12% gan nhat (Jan-Feb) phuc hoi chi trong 33 ngay, cho thay luc cau co ban van manh. <strong>Cho tin hieu on dinh truoc khi mua.</strong>
-    </div>
-    <div class="grid" style="margin-bottom:0;">
-      <div>
-        <h3>Phan Tich</h3>
-        <ul class="reason-list analysis">
-          <li>Dieu chinh manh tu dinh: Vang giam -17% tu $5,415/oz. Trong 5 ngay giam -10.48%, ap luc ban chua dung.</li>
-          <li>Macro bat loi ngan han: USD Index tang +2.56% len 120.55, loi suat thuc My 10Y tang len 1.88%, US Treasury 10Y o 4.25%.</li>
-          <li>Fed & ECB trung tinh: FOMC giu Fed Funds Rate 3.64%. ECB ra quyet dinh chinh sach tien te 19/03. Chua co tin hieu noi long them.</li>
-          <li>Yeu to ho tro: Xung dot Tay A, oil shock va rui ro lam phat (breakeven 10Y tang +4.39% len 2.38%). Drawdown 12% gan nhat phuc hoi chi trong 33 ngay.</li>
-          <li>Premium SJC hop ly: Chenh lech SJC Mieng vs quoc te o muc 7.3%, thap hon nhieu so voi muc cuc doan truoc do.</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Rui Ro</h3>
-        <ul class="reason-list risks">
-          <li>Da giam chua ket thuc: Gia giam -3.47% chi trong 1 ngay gan nhat, momentum tieu cuc manh.</li>
-          <li>USD tiep tuc manh: Neu USD Index vuot 121, gia vang co the giam them 5-10%.</li>
-          <li>VIX van cao: O muc 24.06, thi truong con bien dong manh.</li>
-          <li>Rui ro bat day: Volatility 1.6%/ngay va lich su drawdown toi te nhat -41.26% cho thay rui ro cao khi co bat day som.</li>
-        </ul>
-      </div>
-    </div>
+<!-- Key Prices -->
+<h3 class="section-title">Gia vang hien tai</h3>
+<div class="grid grid-4">
+  <div class="stat card">
+    <div class="label">XAUUSD</div>
+    <div class="value" style="color:var(--gold)">$5,059</div>
+    <div class="label">USD/oz (FreeGoldAPI)</div>
+    <div class="change down">-1.72% (1d) / -11.86% (5d)</div>
   </div>
-
-  <!-- Macro Indicators -->
-  <div class="card" style="margin-bottom:1.5rem;">
-    <h2>Chi So Macro</h2>
-    <div class="macro-grid">
-      <div class="macro-item">
-        <div class="label">USD Index</div>
-        <div class="value">120.55</div>
-        <div class="change change-pos">+2.56% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">Loi Suat Thuc 10Y</div>
-        <div class="value">1.88%</div>
-        <div class="change change-pos">+5.03% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">Breakeven Inflation 10Y</div>
-        <div class="value">2.38%</div>
-        <div class="change change-pos">+4.39% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">Fed Funds Rate</div>
-        <div class="value">3.64%</div>
-        <div class="change" style="color:var(--muted)">0% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">Treasury 10Y</div>
-        <div class="value">4.25%</div>
-        <div class="change change-pos">+4.17% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">Treasury 2Y</div>
-        <div class="value">3.79%</div>
-        <div class="change change-pos">+9.22% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">VIX</div>
-        <div class="value">24.06</div>
-        <div class="change change-pos">+18.93% (20D)</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">Ty Gia USD/VND</div>
-        <div class="value">26,128</div>
-        <div class="change" style="color:var(--muted)">exchangerate-api</div>
-      </div>
-    </div>
+  <div class="stat card">
+    <div class="label">SJC Mieng</div>
+    <div class="value">169.0</div>
+    <div class="label">trieu VND/luong (ban ra)</div>
+    <div class="change"><span style="color:var(--muted)">Mua: 166.0</span></div>
   </div>
-
-  <!-- Gold Price Chart (3 months) -->
-  <div class="card full-width" style="margin-bottom:1.5rem;">
-    <h2>Bien Dong Gia Vang The Gioi (3 thang gan nhat)</h2>
-    <div class="chart-container">
-      <canvas id="goldChart"></canvas>
-    </div>
+  <div class="stat card">
+    <div class="label">SJC Nhan</div>
+    <div class="value">168.7</div>
+    <div class="label">trieu VND/luong (ban ra)</div>
+    <div class="change"><span style="color:var(--muted)">Mua: 165.7</span></div>
   </div>
-
-  <!-- SJC 1 Year Chart -->
-  <div class="card full-width" style="margin-bottom:1.5rem;">
-    <h2>Gia SJC Mieng - 1 Nam (VND/luong)</h2>
-    <div class="chart-container">
-      <canvas id="sjcChart"></canvas>
-    </div>
-  </div>
-
-  <!-- Price Comparison Table -->
-  <div class="card" style="margin-bottom:1.5rem;">
-    <h2>So Sanh Gia Vang Cac Thi Truong</h2>
-    <div style="overflow-x:auto;">
-      <table>
-        <thead>
-          <tr><th>Thi Truong</th><th>Nguon</th><th style="text-align:right">VND/g</th><th style="text-align:right">VND/luong</th><th style="text-align:right">vs Quoc te</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Quoc te</td><td>FreeGoldAPI</td>
-            <td style="text-align:right">4,249,963</td>
-            <td style="text-align:right">159,373,617</td>
-            <td style="text-align:right; color:var(--muted)">(base)</td>
-          </tr>
-          <tr>
-            <td>Trung Quoc</td><td>XAUUSD x USD/CNY</td>
-            <td style="text-align:right">4,249,963</td>
-            <td style="text-align:right">159,373,617</td>
-            <td style="text-align:right; color:var(--muted)">+0.0%</td>
-          </tr>
-          <tr>
-            <td>Nga</td><td>XAUUSD x USD/RUB</td>
-            <td style="text-align:right">4,249,963</td>
-            <td style="text-align:right">159,373,617</td>
-            <td style="text-align:right; color:var(--muted)">+0.0%</td>
-          </tr>
-          <tr>
-            <td>Viet Nam</td><td>SJC Nhan</td>
-            <td style="text-align:right">4,552,000</td>
-            <td style="text-align:right">170,700,000</td>
-            <td style="text-align:right" class="change-pos">+7.1%</td>
-          </tr>
-          <tr>
-            <td>Viet Nam</td><td>SJC Mieng</td>
-            <td style="text-align:right">4,560,000</td>
-            <td style="text-align:right">171,000,000</td>
-            <td style="text-align:right" class="change-pos">+7.3%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- Drawdown Analysis -->
-  <div class="card" style="margin-bottom:1.5rem;">
-    <h2>Phan Tich Drawdown (>= 10%)</h2>
-    <p style="font-size:0.8rem; color:var(--muted); margin-bottom:0.75rem;">Du lieu 2012-2026. Tat ca 4 dot drawdown lon deu da phuc hoi. Drawdown toi te nhat: -41.3%, thoi gian phuc hoi lau nhat: 7 nam 9 thang.</p>
-    <div class="drawdown-table" style="overflow-x:auto;">
-      <table>
-        <thead>
-          <tr><th>Dinh</th><th>Gia Dinh</th><th>Day</th><th>Drawdown</th><th>T/g den day</th><th>Phuc hoi</th><th>T/g phuc hoi</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>04/10/2012</td><td>$1,791</td><td>17/12/2015</td>
-            <td class="change-neg">-41.3%</td><td>3 nam 2 thang</td>
-            <td>07/07/2020</td><td>7 nam 9 thang</td>
-          </tr>
-          <tr>
-            <td>06/08/2020</td><td>$2,064</td><td>26/09/2022</td>
-            <td class="change-neg">-21.4%</td><td>2 nam 1 thang</td>
-            <td>01/12/2023</td><td>3 nam 3 thang</td>
-          </tr>
-          <tr>
-            <td>28/01/2026</td><td>$5,327</td><td>02/02/2026</td>
-            <td class="change-neg">-12.0%</td><td>5 ngay</td>
-            <td>02/03/2026</td><td>33 ngay</td>
-          </tr>
-          <tr>
-            <td>20/10/2025</td><td>$4,388</td><td>04/11/2025</td>
-            <td class="change-neg">-10.4%</td><td>15 ngay</td>
-            <td>22/12/2025</td><td>2 thang 3 ngay</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- News & Events -->
-  <div class="card" style="margin-bottom:1.5rem;">
-    <h2>Tin Tuc & Su Kien Anh Huong</h2>
-    <ul class="news-list">
-      <li><span class="news-date">21/03/2026</span> — Dollar Slides as ECB Out-Hawks Fed Amid Oil Shock and Rising Inflation Risks <span style="color:var(--muted)">(actionforex.com)</span></li>
-      <li><span class="news-date">21/03/2026</span> — Global markets to remain driven by West Asia conflict, Fed neutral guidance reflects uncertainty <span style="color:var(--muted)">(neworleanssun.com)</span></li>
-      <li><span class="news-date">21/03/2026</span> — Physical Gold vs Silver and the ETF Trade Setting Up Right Now <span style="color:var(--muted)">(finance.yahoo.com)</span></li>
-      <li><span class="news-date">19/03/2026</span> — Christine Lagarde, Luis de Guindos: Monetary policy statement (Q&A) <span style="color:var(--muted)">(ECB)</span></li>
-      <li><span class="news-date">18/03/2026</span> — Federal Reserve issues FOMC statement <span style="color:var(--muted)">(Federal Reserve)</span></li>
-      <li><span class="news-date">18/03/2026</span> — Federal Reserve Board releases economic projections from March 17-18 FOMC meeting <span style="color:var(--muted)">(Federal Reserve)</span></li>
-    </ul>
-  </div>
-
-  <!-- Exchange Rates -->
-  <div class="card" style="margin-bottom:1.5rem;">
-    <h2>Ty Gia Hoi Doai (vs USD)</h2>
-    <div class="macro-grid">
-      <div class="macro-item">
-        <div class="label">VND</div>
-        <div class="value">26,128</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">CNY</div>
-        <div class="value">6.90</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">RUB</div>
-        <div class="value">83.65</div>
-      </div>
-      <div class="macro-item">
-        <div class="label">INR</div>
-        <div class="value">93.67</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    Du lieu chi mang tinh tham khao, khong phai khuyen nghi dau tu. Cap nhat luc 21/03/2026.
+  <div class="stat card">
+    <div class="label">Premium SJC</div>
+    <div class="value neutral">+5.9%</div>
+    <div class="label">SJC Mieng vs Quoc te</div>
+    <div class="premium-bar"><div class="fill" style="width:39%"></div></div>
   </div>
 </div>
 
-<script>
-// Gold World Price Chart (3 months from first-principles data)
-const goldData = [
-  {d:'2025-12-26',v:4531.58},{d:'2025-12-29',v:4332.01},{d:'2025-12-30',v:4338.71},{d:'2025-12-31',v:4318.59},
-  {d:'2026-01-02',v:4331.51},{d:'2026-01-05',v:4449.13},{d:'2026-01-06',v:4495.04},{d:'2026-01-07',v:4456.41},
-  {d:'2026-01-08',v:4478.36},{d:'2026-01-09',v:4508.02},{d:'2026-01-12',v:4598.52},{d:'2026-01-13',v:4586.07},
-  {d:'2026-01-14',v:4627.52},{d:'2026-01-15',v:4616.18},{d:'2026-01-16',v:4582.27},{d:'2026-01-19',v:4671.02},
-  {d:'2026-01-20',v:4763.63},{d:'2026-01-21',v:4832.66},{d:'2026-01-22',v:4936.16},{d:'2026-01-23',v:4981.83},
-  {d:'2026-01-26',v:5010.97},{d:'2026-01-27',v:5178.54},{d:'2026-01-28',v:5415.17},{d:'2026-01-29',v:5378.77},
-  {d:'2026-01-30',v:4847.87},{d:'2026-02-02',v:4661.28},{d:'2026-02-03',v:4947.22},{d:'2026-02-04',v:4965.00},
-  {d:'2026-02-05',v:4779.63},{d:'2026-02-06',v:4952.97},{d:'2026-02-09',v:5058.52},{d:'2026-02-10',v:5025.48},
-  {d:'2026-02-11',v:5084.65},{d:'2026-02-12',v:4921.96},{d:'2026-02-13',v:5032.92},{d:'2026-02-16',v:4992.47},
-  {d:'2026-02-17',v:4877.53},{d:'2026-02-18',v:4977.45},{d:'2026-02-19',v:4996.33},{d:'2026-02-20',v:5097.44},
-  {d:'2026-02-23',v:5227.61},{d:'2026-02-24',v:5143.94},{d:'2026-02-25',v:5165.03},{d:'2026-02-26',v:5185.26},
-  {d:'2026-02-27',v:5263.83},{d:'2026-03-02',v:5322.17},{d:'2026-03-03',v:5088.51},{d:'2026-03-04',v:5141.40},
-  {d:'2026-03-05',v:5081.16},{d:'2026-03-06',v:5153.27},{d:'2026-03-09',v:5133.97},{d:'2026-03-10',v:5191.93},
-  {d:'2026-03-11',v:5181.99},{d:'2026-03-12',v:5078.39},{d:'2026-03-13',v:5019.83},{d:'2026-03-16',v:5010.69},
-  {d:'2026-03-17',v:5003.05},{d:'2026-03-18',v:4836.86},{d:'2026-03-19',v:4655.29},{d:'2026-03-20',v:4493.95}
-];
+<!-- Price Comparison Table -->
+<h3 class="section-title">So sanh gia giua cac thi truong (quy doi VND/gram)</h3>
+<div class="card">
+<table>
+  <thead>
+    <tr><th>Quoc gia</th><th>Nguon</th><th>VND/gram</th><th>VND/luong</th><th>vs Quoc te</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Quoc te</td><td>FreeGoldAPI (yahoo)</td>
+      <td>4,256,627</td><td>159,623,524</td>
+      <td style="color:var(--muted)">(co so)</td>
+    </tr>
+    <tr>
+      <td>Trung Quoc</td><td>XAUUSD x USD/CNY</td>
+      <td>4,256,627</td><td>159,623,524</td>
+      <td class="neutral">0.0%</td>
+    </tr>
+    <tr>
+      <td>Nga</td><td>XAUUSD x USD/RUB</td>
+      <td>4,256,627</td><td>159,623,524</td>
+      <td class="neutral">0.0%</td>
+    </tr>
+    <tr>
+      <td>Viet Nam</td><td>SJC Nhan</td>
+      <td>4,498,667</td><td>168,700,000</td>
+      <td class="up">+5.7%</td>
+    </tr>
+    <tr>
+      <td>Viet Nam</td><td>SJC Mieng</td>
+      <td>4,506,667</td><td>169,000,000</td>
+      <td class="up">+5.9%</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
-const ctx1 = document.getElementById('goldChart').getContext('2d');
-new Chart(ctx1, {
-  type: 'line',
-  data: {
-    labels: goldData.map(d => d.d),
-    datasets: [{
-      label: 'XAUUSD (USD/oz)',
-      data: goldData.map(d => d.v),
-      borderColor: '#f59e0b',
-      backgroundColor: 'rgba(245,158,11,0.1)',
-      fill: true,
-      tension: 0.3,
-      pointRadius: 0,
-      pointHoverRadius: 4,
-      borderWidth: 2,
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: ctx => `$${ctx.parsed.y.toLocaleString()} /oz`
-        }
-      }
-    },
-    scales: {
-      x: {
-        ticks: { color: '#9ca3af', maxTicksLimit: 8, font: { size: 11 } },
-        grid: { color: '#2a2d3a' }
-      },
-      y: {
-        ticks: {
-          color: '#9ca3af',
-          font: { size: 11 },
-          callback: v => '$' + v.toLocaleString()
-        },
-        grid: { color: '#2a2d3a' }
-      }
-    },
-    interaction: { intersect: false, mode: 'index' }
-  }
-});
+<!-- Macro Indicators -->
+<h3 class="section-title">Chi so vi mo & Yeu to anh huong</h3>
+<div class="grid grid-2">
+  <div class="card">
+    <h2>Chi so chinh</h2>
+    <div class="macro-row">
+      <span class="name">Gold Spot XAUUSD <span class="tag tag-context">boi canh</span></span>
+      <span class="val">$4,417/oz</span>
+      <span class="down">-1.72% (1d) &bull; -15.51% (20d)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">USD Index <span class="tag tag-inverse">nghich</span></span>
+      <span class="val">120.55</span>
+      <span class="up">+0.61% (1d) &bull; +2.56% (20d)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Loi suat thuc My 10Y <span class="tag tag-inverse">nghich</span></span>
+      <span class="val">1.88%</span>
+      <span class="up">+1.08% (1d) &bull; +5.03% (20d)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Breakeven LP 10Y <span class="tag tag-direct">thuan</span></span>
+      <span class="val">2.38%</span>
+      <span class="up">+0.42% (1d) &bull; +4.39% (20d)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Fed Funds Rate <span class="tag tag-inverse">nghich</span></span>
+      <span class="val">3.64%</span>
+      <span style="color:var(--muted)">Khong doi</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">US Treasury 10Y <span class="tag tag-inverse">nghich</span></span>
+      <span class="val">4.25%</span>
+      <span class="up">+4.17% (20d)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">US Treasury 2Y <span class="tag tag-inverse">nghich</span></span>
+      <span class="val">3.79%</span>
+      <span class="up">+9.22% (20d)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">VIX <span class="tag tag-direct">thuan</span></span>
+      <span class="val">24.06</span>
+      <span class="up">+18.93% (20d)</span>
+    </div>
+  </div>
 
-// SJC 1 Year Chart - sampled monthly
-const sjcData = [
-  {d:'2025-03-22',v:97.7},{d:'2025-04-22',v:114.0},{d:'2025-05-22',v:120.5},
-  {d:'2025-06-22',v:119.7},{d:'2025-07-22',v:121.5},{d:'2025-08-22',v:125.4},
-  {d:'2025-09-21',v:133.0},{d:'2025-10-22',v:154.6},{d:'2025-11-22',v:149.8},
-  {d:'2025-12-21',v:156.6},{d:'2026-01-22',v:169.2},{d:'2026-02-24',v:184.6},
-  {d:'2026-03-22',v:171.0}
-];
+  <div class="card">
+    <h2>Ty gia hoi doai</h2>
+    <div class="macro-row">
+      <span class="name">USD/VND</span>
+      <span class="val">26,169</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">USD/CNY</span>
+      <span class="val">6.91</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">USD/RUB</span>
+      <span class="val">83.33</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">USD/INR</span>
+      <span class="val">93.87</span>
+    </div>
 
-const ctx2 = document.getElementById('sjcChart').getContext('2d');
-new Chart(ctx2, {
-  type: 'line',
-  data: {
-    labels: sjcData.map(d => d.d),
-    datasets: [{
-      label: 'SJC Mieng (trieu VND/luong)',
-      data: sjcData.map(d => d.v),
-      borderColor: '#ef4444',
-      backgroundColor: 'rgba(239,68,68,0.1)',
-      fill: true,
-      tension: 0.3,
-      pointRadius: 3,
-      pointHoverRadius: 5,
-      borderWidth: 2,
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: ctx => ctx.parsed.y.toFixed(1) + ' trieu VND/luong'
-        }
-      }
-    },
-    scales: {
-      x: {
-        ticks: { color: '#9ca3af', maxTicksLimit: 7, font: { size: 11 } },
-        grid: { color: '#2a2d3a' }
-      },
-      y: {
-        ticks: {
-          color: '#9ca3af',
-          font: { size: 11 },
-          callback: v => v + 'M'
-        },
-        grid: { color: '#2a2d3a' }
-      }
-    },
-    interaction: { intersect: false, mode: 'index' }
-  }
-});
-</script>
+    <h2 style="margin-top:18px;">Lich su Drawdown (>10%)</h2>
+    <div class="macro-row">
+      <span class="name">Tong drawdowns</span>
+      <span class="val">4</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Da phuc hoi</span>
+      <span class="val up">4/4</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Drawdown lon nhat</span>
+      <span class="val down">-41.3%</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Phuc hoi TB</span>
+      <span class="val">1,035 ngay</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Drawdown gan nhat</span>
+      <span class="val down">-12.0% (Jan 2026)</span>
+    </div>
+    <div class="macro-row">
+      <span class="name">Phuc hoi gan nhat</span>
+      <span class="val up">33 ngay</span>
+    </div>
+  </div>
+</div>
+
+<!-- Analysis -->
+<h3 class="section-title">Phan tich & Danh gia</h3>
+<div class="grid grid-2">
+  <div class="card">
+    <h2 style="color:var(--green)">Yeu to ho tro (Bullish)</h2>
+    <ul class="reason-list bullish">
+      <li>Xung dot Tay A va rui ro oil shock day gia vang len nhu tai san an toan. Breakeven lam phat 10Y tang +4.39% len 2.38% cho thay ky vong lam phat tang.</li>
+      <li>Drawdown 12% gan nhat (Jan-Feb 2026) phuc hoi chi trong 33 ngay, cho thay luc cau co ban van rat manh.</li>
+      <li>Premium SJC Mieng vs quoc te chi 5.9%, thap hon nhieu so voi muc cuc doan truoc do (>15%), cho thay gia trong nuoc da dieu chinh ve gan gia tri hop ly.</li>
+      <li>Tat ca 4 dot drawdown >10% trong lich su deu da phuc hoi hoan toan.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2 style="color:var(--red)">Yeu to rui ro (Bearish)</h2>
+    <ul class="reason-list bearish">
+      <li>Dieu chinh manh tu dinh: Vang giam -17% tu $5,415/oz. Trong 5 ngay giam -11.86%, 20 ngay giam -15.51%, momentum tieu cuc manh.</li>
+      <li>USD manh len: USD Index tang +2.56% (20d) len 120.55, tao ap luc giam gia vang tinh bang USD.</li>
+      <li>Loi suat thuc tang: Loi suat thuc My 10Y tang len 1.88% (+5.03% trong 20d), lam giam suc hut cua vang (tai san khong sinh loi).</li>
+      <li>VIX van cao o 24.06 (tren nguong 20), thi truong con nhieu bien dong. Volatility 1.6%/ngay cho thay rui ro bat day som.</li>
+      <li>Treasury 2Y tang 9.22% trong 20 ngay cho thay thi truong ky vong Fed giu lai suat cao lau hon.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Headlines -->
+<h3 class="section-title">Tin tuc & Su kien chinh sach</h3>
+<div class="grid grid-2">
+  <div class="card">
+    <h2>Chinh sach tien te</h2>
+    <ul class="headline-list">
+      <li><span class="date">18/03</span> &mdash; Fed phat hanh FOMC statement, giu nguyen lai suat. Du bao kinh te tu cuoc hop 17-18/03.</li>
+      <li><span class="date">19/03</span> &mdash; ECB: Quyet dinh chinh sach tien te. Christine Lagarde & Luis de Guindos hop bao Q&A.</li>
+      <li><span class="date">20/03</span> &mdash; ECB: Cac quyet dinh bo sung cua Hoi dong quan tri (ngoai lai suat).</li>
+      <li><span class="date">21/03</span> &mdash; Piero Cipollone (ECB): Bai noi ve dong euro ky thuat so.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Dia chinh tri & Thi truong</h2>
+    <ul class="headline-list">
+      <li><span class="date">21/03</span> &mdash; Dollar giam khi ECB "hieu ung dieu hau" hon Fed giua Oil Shock va rui ro lam phat tang.</li>
+      <li><span class="date">21/03</span> &mdash; Thi truong toan cau chiu tac dong tu xung dot Tay A, huong dan trung tinh cua Fed phan anh su bat dinh.</li>
+      <li><span class="date">21/03</span> &mdash; Vang vat chat vs Bac va giao dich ETF dang hinh thanh.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Drawdown Details -->
+<h3 class="section-title">Chi tiet cac dot Drawdown lon (>10%)</h3>
+<div class="card">
+<table>
+  <thead>
+    <tr><th>Dinh</th><th>Gia dinh</th><th>Day</th><th>Gia day</th><th>Giam</th><th>Phuc hoi</th><th>So ngay</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>04/10/2012</td><td>$1,791</td><td>17/12/2015</td><td>$1,052</td>
+      <td class="down">-41.3%</td><td>07/07/2020</td><td>2,833</td>
+    </tr>
+    <tr>
+      <td>06/08/2020</td><td>$2,064</td><td>26/09/2022</td><td>$1,622</td>
+      <td class="down">-21.4%</td><td>01/12/2023</td><td>1,212</td>
+    </tr>
+    <tr>
+      <td>20/10/2025</td><td>$4,388</td><td>04/11/2025</td><td>$3,931</td>
+      <td class="down">-10.4%</td><td>22/12/2025</td><td>63</td>
+    </tr>
+    <tr>
+      <td>28/01/2026</td><td>$5,327</td><td>02/02/2026</td><td>$4,687</td>
+      <td class="down">-12.0%</td><td>02/03/2026</td><td>33</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Conclusion -->
+<h3 class="section-title">Ket luan & Khuyen nghi</h3>
+<div class="card">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+    <span class="badge badge-wait" style="font-size:1em;padding:6px 16px;">CHO</span>
+    <span style="font-size:1.05em;font-weight:600;">Chua nen mua vao luc nay</span>
+  </div>
+  <ul class="reason-list info">
+    <li><strong>Ngan han (1-2 tuan):</strong> Ap luc giam van con manh voi momentum tieu cuc (-11.86% trong 5 ngay). USD manh va loi suat thuc tang la rui ro chinh. Cho gia on dinh va kiem tra vung ho tro $4,200-4,400.</li>
+    <li><strong>Trung han (1-3 thang):</strong> Tat ca 4 dot drawdown lon deu phuc hoi. Xung dot Tay A, ky vong lam phat tang (breakeven 2.38%) va luc cau NHTW tiep tuc ho tro gia vang. Muc phuc hoi 33 ngay cua dot drawdown gan nhat rat tich cuc.</li>
+    <li><strong>Voi SJC Mieng:</strong> Premium 5.9% la muc hop ly. Nen mua SJC Nhan (premium thap hon, chenh lech mua-ban nho hon). Chi mua khi gia quoc te cho tin hieu on dinh (VD: 3-5 ngay lien tiep khong tao day moi).</li>
+    <li><strong>Quan sat:</strong> Theo doi USD Index (nguong 121), loi suat thuc My (nguong 2.0%), va VIX (duoi 20 la tin hieu tich cuc). Neu Fed ra tin hieu cat lai suat, day se la catalyst manh cho vang.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p>Du lieu tu: FreeGoldAPI, giavang.org, Stooq, FRED, ECB, Fed &bull; Tu dong cap nhat hang ngay</p>
+  <p>Luu y: Day chi la thong tin tham khao, khong phai khuyen nghi dau tu. Hay tu nghien cuu truoc khi quyet dinh.</p>
+</div>
+
+</div>
 </body>
 </html>

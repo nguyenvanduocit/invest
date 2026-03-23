@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-22T02:15:59.388Z",
+  "checkedAt": "2026-03-23T02:13:16.930Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-22T02:15:59.242Z",
+  "dataFetchedAt": "2026-03-23T02:13:16.843Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -11,7 +11,9 @@
     "requiredFactors": 8,
     "availableFactors": 8,
     "missingFactors": [],
-    "staleFactors": [],
+    "staleFactors": [
+      "US Dollar Trade Weighted Index (2026-03-13)"
+    ],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 0,
@@ -39,6 +41,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
+    "Stale factors: US Dollar Trade Weighted Index (2026-03-13)",
     "Source failures: gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
