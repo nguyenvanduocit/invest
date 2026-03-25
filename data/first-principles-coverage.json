@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-03-23T02:13:16.930Z",
+  "checkedAt": "2026-03-25T02:05:12.633Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-03-23T02:13:16.843Z",
+  "dataFetchedAt": "2026-03-25T02:05:12.556Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -11,9 +11,7 @@
     "requiredFactors": 8,
     "availableFactors": 8,
     "missingFactors": [],
-    "staleFactors": [
-      "US Dollar Trade Weighted Index (2026-03-13)"
-    ],
+    "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 0,
@@ -22,15 +20,15 @@
     "sourceFailures": [
       {
         "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
+        "error": "HTTP 503"
       },
       {
         "id": "gdelt_country_actions",
-        "error": "HTTP 429"
+        "error": "HTTP 503"
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
+        "error": "HTTP 503"
       }
     ],
     "healthy": false
@@ -41,8 +39,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-03-13)",
-    "Source failures: gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gdelt_geopolitics (HTTP 503); gdelt_country_actions (HTTP 503); gdelt_dollar_yields (HTTP 503)"
   ],
   "canProceedToIntegration": false
 }

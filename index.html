@@ -3,349 +3,491 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gold Investment Dashboard - 23/03/2026</title>
+<title>Gold Investment Dashboard - Cập nhật 25/03/2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   :root {
     --bg: #0f1117;
-    --card: #1a1d28;
+    --card: #1a1d27;
     --border: #2a2d3a;
-    --text: #e1e4eb;
+    --text: #e1e4ed;
     --muted: #8b8fa3;
     --gold: #f0b90b;
-    --gold-dim: #f0b90b33;
+    --gold-dim: rgba(240,185,11,0.15);
     --green: #0ecb81;
     --red: #f6465d;
-    --blue: #3b82f6;
+    --blue: #3861fb;
   }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-  header { text-align: center; padding: 30px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
-  header h1 { font-size: 1.8em; color: var(--gold); margin-bottom: 4px; }
-  header .subtitle { color: var(--muted); font-size: 0.95em; }
-  .grid { display: grid; gap: 16px; margin-bottom: 20px; }
-  .grid-2 { grid-template-columns: 1fr 1fr; }
-  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-  .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
-  @media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 0 16px;
   }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
-  .card h2 { font-size: 1.05em; color: var(--gold); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-  .card h3 { font-size: 0.95em; color: var(--text); margin-bottom: 10px; }
-  .stat { text-align: center; padding: 12px 8px; }
-  .stat .value { font-size: 1.6em; font-weight: 700; color: var(--text); }
-  .stat .label { font-size: 0.8em; color: var(--muted); margin-top: 4px; }
-  .stat .change { font-size: 0.85em; margin-top: 2px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px 0; }
+  h1 { font-size: 1.5rem; color: var(--gold); margin-bottom: 4px; }
+  .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .card h2 { font-size: 0.8rem; text-transform: uppercase; color: var(--muted); letter-spacing: 0.5px; margin-bottom: 8px; }
+  .card .value { font-size: 1.8rem; font-weight: 700; }
+  .card .sub { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
   .up { color: var(--green); }
   .down { color: var(--red); }
-  .neutral { color: var(--gold); }
-  table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
-  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
-  th { color: var(--muted); font-weight: 600; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.5px; }
-  td { color: var(--text); }
-  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.82em; font-weight: 600; }
-  .badge-wait { background: #f0b90b22; color: var(--gold); border: 1px solid var(--gold); }
-  .badge-buy { background: #0ecb8122; color: var(--green); border: 1px solid var(--green); }
-  .badge-sell { background: #f6465d22; color: var(--red); border: 1px solid var(--red); }
-  .section-title { font-size: 1.15em; color: var(--text); margin: 28px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-  .reason-list { list-style: none; padding: 0; }
-  .reason-list li { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.9em; line-height: 1.5; }
-  .reason-list li:last-child { border-bottom: none; }
-  .reason-list li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 10px; vertical-align: middle; }
-  .reason-list.bullish li::before { background: var(--green); }
-  .reason-list.bearish li::before { background: var(--red); }
-  .reason-list.info li::before { background: var(--blue); }
-  .headline-list { list-style: none; padding: 0; }
-  .headline-list li { padding: 6px 0; font-size: 0.85em; color: var(--muted); border-bottom: 1px solid #1f2230; }
-  .headline-list li:last-child { border-bottom: none; }
-  .headline-list .date { color: var(--blue); font-size: 0.82em; }
-  .highlight-box { background: #f0b90b0a; border: 1px solid var(--gold-dim); border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; }
-  .highlight-box p { font-size: 0.95em; line-height: 1.7; }
-  .macro-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.88em; }
-  .macro-row:last-child { border-bottom: none; }
-  .macro-row .name { color: var(--muted); }
-  .macro-row .val { font-weight: 600; }
-  .footer { text-align: center; padding: 30px 0 20px; color: var(--muted); font-size: 0.8em; border-top: 1px solid var(--border); margin-top: 30px; }
-  .premium-bar { height: 8px; border-radius: 4px; background: var(--border); margin-top: 8px; overflow: hidden; }
-  .premium-bar .fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--green), var(--gold), var(--red)); }
-  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin-left: 6px; }
-  .tag-inverse { background: #f6465d22; color: var(--red); }
-  .tag-direct { background: #0ecb8122; color: var(--green); }
-  .tag-context { background: #3b82f622; color: var(--blue); }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .badge-wait { background: rgba(240,185,11,0.15); color: var(--gold); }
+  .badge-buy { background: rgba(14,203,129,0.15); color: var(--green); }
+  .badge-sell { background: rgba(246,70,93,0.15); color: var(--red); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; color: var(--muted); font-size: 0.75rem; text-transform: uppercase; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  tr:last-child td { border-bottom: none; }
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .chart-container { position: relative; height: 350px; margin: 16px 0; }
+  .analysis-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .analysis-box h3 { font-size: 0.95rem; margin-bottom: 12px; color: var(--gold); }
+  .analysis-box ul { padding-left: 20px; }
+  .analysis-box li { margin-bottom: 8px; font-size: 0.88rem; color: var(--text); }
+  .risk-item { padding: 8px 0; font-size: 0.88rem; }
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .macro-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .macro-card .label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; }
+  .macro-card .val { font-size: 1.2rem; font-weight: 600; margin: 4px 0; }
+  .macro-card .change { font-size: 0.75rem; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.75rem; padding: 24px 0; border-top: 1px solid var(--border); }
+  .premium-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--border);
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  .premium-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--green), var(--gold), var(--red));
+  }
+  @media (max-width: 600px) {
+    .card .value { font-size: 1.4rem; }
+    .chart-container { height: 260px; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
 
-<header>
-  <h1>Gold Investment Dashboard</h1>
-  <div class="subtitle">Cap nhat: 23/03/2026 09:05 (UTC+7) &bull; Du lieu tu nhieu nguon quoc te</div>
-</header>
+<h1>Gold Investment Dashboard</h1>
+<p class="subtitle">Cập nhật: 25/03/2026 09:04 (UTC+7) &bull; Dữ liệu từ nhiều nguồn, quy đổi VND</p>
 
-<!-- Signal Box -->
-<div class="highlight-box">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-    <span class="badge badge-wait">CHO - CHUA MUA</span>
-    <span style="color:var(--muted);font-size:0.85em;">Do tin cay: Trung binh-Cao &bull; Tam nhin: 1-4 tuan</span>
+<!-- KPI Cards -->
+<div class="grid">
+  <div class="card">
+    <h2>SJC Miếng (Bán)</h2>
+    <div class="value" style="color:var(--gold)">175.0 <span style="font-size:0.7rem">triệu/lượng</span></div>
+    <div class="sub">Mua: 172.0 triệu &bull; Spread: 3.0 triệu</div>
   </div>
-  <p>Vang the gioi dang trong dot dieu chinh manh <strong style="color:var(--red)">-17%</strong> tu dinh $5,415/oz (28/01) xuong $4,417/oz. SJC Mieng o muc 169 trieu VND/luong, premium 5.9%. Fed giu nguyen lai suat 3.64%, USD manh len va loi suat thuc tang tao ap luc giam ngan han. Cho tin hieu on dinh truoc khi mua.</p>
+  <div class="card">
+    <h2>SJC Nhẫn (Bán)</h2>
+    <div class="value" style="color:var(--gold)">174.8 <span style="font-size:0.7rem">triệu/lượng</span></div>
+    <div class="sub">Mua: 171.8 triệu &bull; Spread: 3.0 triệu</div>
+  </div>
+  <div class="card">
+    <h2>Vàng Quốc tế (XAUUSD)</h2>
+    <div class="value">$4,591 <span style="font-size:0.7rem">/oz</span></div>
+    <div class="sub">= 159.8 triệu VND/lượng &bull; <span class="down">-11.1% (20 ngày)</span></div>
+  </div>
+  <div class="card">
+    <h2>Premium SJC vs Quốc tế</h2>
+    <div class="value" style="color:var(--red)">+9.5%</div>
+    <div class="sub">SJC Miếng: 175.0M vs QT: 159.8M VND/lượng</div>
+    <div class="premium-bar"><div class="premium-bar-fill" style="width:47%"></div></div>
+  </div>
 </div>
 
-<!-- Key Prices -->
-<h3 class="section-title">Gia vang hien tai</h3>
-<div class="grid grid-4">
-  <div class="stat card">
-    <div class="label">XAUUSD</div>
-    <div class="value" style="color:var(--gold)">$5,059</div>
-    <div class="label">USD/oz (FreeGoldAPI)</div>
-    <div class="change down">-1.72% (1d) / -11.86% (5d)</div>
+<!-- AI Suggestion -->
+<div class="section">
+  <div class="section-title">Đánh giá & Khuyến nghị</div>
+  <div class="analysis-box">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+      <span class="badge badge-wait">CHỜ</span>
+      <span style="font-size:0.85rem; color:var(--muted)">Độ tin cậy: Trung bình-Cao &bull; Horizon: 1-4 tuần</span>
+    </div>
+    <p style="font-size:0.92rem; margin-bottom:16px;">
+      Vàng thế giới đang trong đợt điều chỉnh mạnh từ đỉnh $5,327/oz (28/01). Giá hiện tại $4,591/oz,
+      giảm khoảng 14% từ đỉnh. SJC Miếng ở mức 175 triệu VND/lượng với premium 9.5% so với giá quốc tế quy đổi.
+      Lợi suất thực Mỹ tăng lên 2.01%, USD Index ở mức 120.3 và VIX cao 26.15 cho thấy thị trường vẫn biến động mạnh.
+      Đợt drawdown 12% gần nhất (Jan-Feb) phục hồi chỉ trong 33 ngày, cho thấy lực cầu cơ bản vẫn mạnh.
+      <strong>Khuyến nghị: Chờ tín hiệu ổn định trước khi mua thêm.</strong>
+    </p>
+
+    <h3>Luận điểm chính</h3>
+    <ul>
+      <li><strong>Điều chỉnh mạnh từ đỉnh:</strong> Vàng thế giới giảm ~14% từ $5,327/oz. Trong 5 ngày giảm -5.09%, 20 ngày giảm -11.12%.</li>
+      <li><strong>Macro bất lợi ngắn hạn:</strong> USD Index 120.3, lợi suất thực 10Y tăng lên 2.01% (+13.56% trong 20 ngày), US Treasury 10Y ở 4.34%.</li>
+      <li><strong>Fed giữ nguyên:</strong> Fed Funds Rate 3.64%, FOMC họp 17-18/03 giữ nguyên. ECB ra quyết định chính sách 19/03.</li>
+      <li><strong>Phục hồi nhanh:</strong> Drawdown 12% (28/01 → 02/02) phục hồi chỉ trong 33 ngày, lực cầu cơ bản vẫn mạnh.</li>
+      <li><strong>Premium SJC giảm đáng kể:</strong> Từ mức 24-25% (19-20/03) xuống còn 9.5% hiện tại, cho thấy áp lực bán trong nước.</li>
+    </ul>
   </div>
-  <div class="stat card">
-    <div class="label">SJC Mieng</div>
-    <div class="value">169.0</div>
-    <div class="label">trieu VND/luong (ban ra)</div>
-    <div class="change"><span style="color:var(--muted)">Mua: 166.0</span></div>
-  </div>
-  <div class="stat card">
-    <div class="label">SJC Nhan</div>
-    <div class="value">168.7</div>
-    <div class="label">trieu VND/luong (ban ra)</div>
-    <div class="change"><span style="color:var(--muted)">Mua: 165.7</span></div>
-  </div>
-  <div class="stat card">
-    <div class="label">Premium SJC</div>
-    <div class="value neutral">+5.9%</div>
-    <div class="label">SJC Mieng vs Quoc te</div>
-    <div class="premium-bar"><div class="fill" style="width:39%"></div></div>
+
+  <div class="grid" style="grid-template-columns: 1fr 1fr;">
+    <div class="analysis-box">
+      <h3 style="color:var(--green)">Yếu tố hỗ trợ</h3>
+      <ul>
+        <li>Xung đột Tây Á và oil shock tạo nhu cầu trú ẩn an toàn</li>
+        <li>Kỳ vọng lạm phát 10Y (breakeven) tăng +3.1% (20 ngày) lên 2.33%</li>
+        <li>Tất cả 4 đợt drawdown lịch sử đều đã phục hồi hoàn toàn</li>
+        <li>SJC premium giảm mạnh từ 25% xuống 9.5% → cơ hội mua nếu giá ổn định</li>
+      </ul>
+    </div>
+    <div class="analysis-box">
+      <h3 style="color:var(--red)">Rủi ro</h3>
+      <ul>
+        <li>Đà giảm chưa kết thúc: Giá giảm -5.09% trong 5 ngày, -11.12% trong 20 ngày</li>
+        <li>USD tiếp tục mạnh: Nếu USD Index vượt 121, vàng có thể giảm thêm 5-10%</li>
+        <li>VIX cao 26.15 (+24.5% trong 20 ngày), thị trường còn biến động</li>
+        <li>Lợi suất thực tăng mạnh +13.56% (20 ngày), áp lực lên giá vàng</li>
+        <li>Lịch sử drawdown xấu nhất: -41.3%, phục hồi mất 7 năm 9 tháng</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <!-- Price Comparison Table -->
-<h3 class="section-title">So sanh gia giua cac thi truong (quy doi VND/gram)</h3>
-<div class="card">
-<table>
-  <thead>
-    <tr><th>Quoc gia</th><th>Nguon</th><th>VND/gram</th><th>VND/luong</th><th>vs Quoc te</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Quoc te</td><td>FreeGoldAPI (yahoo)</td>
-      <td>4,256,627</td><td>159,623,524</td>
-      <td style="color:var(--muted)">(co so)</td>
-    </tr>
-    <tr>
-      <td>Trung Quoc</td><td>XAUUSD x USD/CNY</td>
-      <td>4,256,627</td><td>159,623,524</td>
-      <td class="neutral">0.0%</td>
-    </tr>
-    <tr>
-      <td>Nga</td><td>XAUUSD x USD/RUB</td>
-      <td>4,256,627</td><td>159,623,524</td>
-      <td class="neutral">0.0%</td>
-    </tr>
-    <tr>
-      <td>Viet Nam</td><td>SJC Nhan</td>
-      <td>4,498,667</td><td>168,700,000</td>
-      <td class="up">+5.7%</td>
-    </tr>
-    <tr>
-      <td>Viet Nam</td><td>SJC Mieng</td>
-      <td>4,506,667</td><td>169,000,000</td>
-      <td class="up">+5.9%</td>
-    </tr>
-  </tbody>
-</table>
+<div class="section">
+  <div class="section-title">So sánh giá vàng các thị trường</div>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Thị trường</th>
+          <th>Nguồn</th>
+          <th style="text-align:right">VND/gram</th>
+          <th style="text-align:right">VND/lượng</th>
+          <th style="text-align:right">vs Quốc tế</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Quốc tế</td>
+          <td>FreeGoldAPI</td>
+          <td style="text-align:right">4,262,394</td>
+          <td style="text-align:right">159,839,760</td>
+          <td style="text-align:right; color:var(--muted)">(base)</td>
+        </tr>
+        <tr>
+          <td>Trung Quốc</td>
+          <td>XAUUSD x USD/CNY</td>
+          <td style="text-align:right">4,262,394</td>
+          <td style="text-align:right">159,839,760</td>
+          <td style="text-align:right; color:var(--muted)">0.0%</td>
+        </tr>
+        <tr>
+          <td>Nga</td>
+          <td>XAUUSD x USD/RUB</td>
+          <td style="text-align:right">4,262,394</td>
+          <td style="text-align:right">159,839,760</td>
+          <td style="text-align:right; color:var(--muted)">0.0%</td>
+        </tr>
+        <tr>
+          <td>Việt Nam</td>
+          <td>SJC Nhẫn</td>
+          <td style="text-align:right">4,661,333</td>
+          <td style="text-align:right">174,800,000</td>
+          <td style="text-align:right; color:var(--green)">+9.4%</td>
+        </tr>
+        <tr style="background:rgba(240,185,11,0.05)">
+          <td><strong>Việt Nam</strong></td>
+          <td><strong>SJC Miếng</strong></td>
+          <td style="text-align:right"><strong>4,666,667</strong></td>
+          <td style="text-align:right"><strong>175,000,000</strong></td>
+          <td style="text-align:right; color:var(--green)"><strong>+9.5%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <!-- Macro Indicators -->
-<h3 class="section-title">Chi so vi mo & Yeu to anh huong</h3>
-<div class="grid grid-2">
-  <div class="card">
-    <h2>Chi so chinh</h2>
-    <div class="macro-row">
-      <span class="name">Gold Spot XAUUSD <span class="tag tag-context">boi canh</span></span>
-      <span class="val">$4,417/oz</span>
-      <span class="down">-1.72% (1d) &bull; -15.51% (20d)</span>
+<div class="section">
+  <div class="section-title">Chỉ số Macro</div>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <div class="label">Gold XAUUSD</div>
+      <div class="val">$4,590.9</div>
+      <div class="change"><span class="up">+2.68% (1d)</span> &bull; <span class="down">-11.12% (20d)</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">USD Index <span class="tag tag-inverse">nghich</span></span>
-      <span class="val">120.55</span>
-      <span class="up">+0.61% (1d) &bull; +2.56% (20d)</span>
+    <div class="macro-card">
+      <div class="label">USD Index</div>
+      <div class="val">120.28</div>
+      <div class="change"><span class="up">+0.08% (1d)</span> &bull; <span class="up">+1.94% (20d)</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">Loi suat thuc My 10Y <span class="tag tag-inverse">nghich</span></span>
-      <span class="val">1.88%</span>
-      <span class="up">+1.08% (1d) &bull; +5.03% (20d)</span>
+    <div class="macro-card">
+      <div class="label">Real Yield 10Y</div>
+      <div class="val">2.01%</div>
+      <div class="change"><span class="muted">0% (1d)</span> &bull; <span class="up">+13.56% (20d)</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">Breakeven LP 10Y <span class="tag tag-direct">thuan</span></span>
-      <span class="val">2.38%</span>
-      <span class="up">+0.42% (1d) &bull; +4.39% (20d)</span>
+    <div class="macro-card">
+      <div class="label">Breakeven 10Y</div>
+      <div class="val">2.33%</div>
+      <div class="change"><span class="muted">0% (1d)</span> &bull; <span class="up">+3.1% (20d)</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">Fed Funds Rate <span class="tag tag-inverse">nghich</span></span>
-      <span class="val">3.64%</span>
-      <span style="color:var(--muted)">Khong doi</span>
+    <div class="macro-card">
+      <div class="label">Fed Funds Rate</div>
+      <div class="val">3.64%</div>
+      <div class="change"><span class="muted">Không đổi</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">US Treasury 10Y <span class="tag tag-inverse">nghich</span></span>
-      <span class="val">4.25%</span>
-      <span class="up">+4.17% (20d)</span>
+    <div class="macro-card">
+      <div class="label">US Treasury 10Y</div>
+      <div class="val">4.34%</div>
+      <div class="change"><span class="down">-1.14% (1d)</span> &bull; <span class="up">+7.69% (20d)</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">US Treasury 2Y <span class="tag tag-inverse">nghich</span></span>
-      <span class="val">3.79%</span>
-      <span class="up">+9.22% (20d)</span>
+    <div class="macro-card">
+      <div class="label">US Treasury 2Y</div>
+      <div class="val">3.83%</div>
+      <div class="change"><span class="down">-1.29% (1d)</span> &bull; <span class="up">+11.66% (20d)</span></div>
     </div>
-    <div class="macro-row">
-      <span class="name">VIX <span class="tag tag-direct">thuan</span></span>
-      <span class="val">24.06</span>
-      <span class="up">+18.93% (20d)</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Ty gia hoi doai</h2>
-    <div class="macro-row">
-      <span class="name">USD/VND</span>
-      <span class="val">26,169</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">USD/CNY</span>
-      <span class="val">6.91</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">USD/RUB</span>
-      <span class="val">83.33</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">USD/INR</span>
-      <span class="val">93.87</span>
-    </div>
-
-    <h2 style="margin-top:18px;">Lich su Drawdown (>10%)</h2>
-    <div class="macro-row">
-      <span class="name">Tong drawdowns</span>
-      <span class="val">4</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">Da phuc hoi</span>
-      <span class="val up">4/4</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">Drawdown lon nhat</span>
-      <span class="val down">-41.3%</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">Phuc hoi TB</span>
-      <span class="val">1,035 ngay</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">Drawdown gan nhat</span>
-      <span class="val down">-12.0% (Jan 2026)</span>
-    </div>
-    <div class="macro-row">
-      <span class="name">Phuc hoi gan nhat</span>
-      <span class="val up">33 ngay</span>
+    <div class="macro-card">
+      <div class="label">VIX</div>
+      <div class="val">26.15</div>
+      <div class="change"><span class="down">-2.35% (1d)</span> &bull; <span class="up">+24.46% (20d)</span></div>
     </div>
   </div>
 </div>
 
-<!-- Analysis -->
-<h3 class="section-title">Phan tich & Danh gia</h3>
-<div class="grid grid-2">
-  <div class="card">
-    <h2 style="color:var(--green)">Yeu to ho tro (Bullish)</h2>
-    <ul class="reason-list bullish">
-      <li>Xung dot Tay A va rui ro oil shock day gia vang len nhu tai san an toan. Breakeven lam phat 10Y tang +4.39% len 2.38% cho thay ky vong lam phat tang.</li>
-      <li>Drawdown 12% gan nhat (Jan-Feb 2026) phuc hoi chi trong 33 ngay, cho thay luc cau co ban van rat manh.</li>
-      <li>Premium SJC Mieng vs quoc te chi 5.9%, thap hon nhieu so voi muc cuc doan truoc do (>15%), cho thay gia trong nuoc da dieu chinh ve gan gia tri hop ly.</li>
-      <li>Tat ca 4 dot drawdown >10% trong lich su deu da phuc hoi hoan toan.</li>
-    </ul>
+<!-- Exchange Rates -->
+<div class="section">
+  <div class="section-title">Tỷ giá hối đoái (vs USD)</div>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+    <div class="card" style="text-align:center">
+      <h2>VND</h2>
+      <div class="value" style="font-size:1.3rem">26,204</div>
+    </div>
+    <div class="card" style="text-align:center">
+      <h2>CNY</h2>
+      <div class="value" style="font-size:1.3rem">6.90</div>
+    </div>
+    <div class="card" style="text-align:center">
+      <h2>RUB</h2>
+      <div class="value" style="font-size:1.3rem">80.63</div>
+    </div>
+    <div class="card" style="text-align:center">
+      <h2>INR</h2>
+      <div class="value" style="font-size:1.3rem">94.05</div>
+    </div>
   </div>
+</div>
+
+<!-- Vietnam Premium Chart -->
+<div class="section">
+  <div class="section-title">Biến động Premium SJC vs Quốc tế (10 ngày gần nhất)</div>
   <div class="card">
-    <h2 style="color:var(--red)">Yeu to rui ro (Bearish)</h2>
-    <ul class="reason-list bearish">
-      <li>Dieu chinh manh tu dinh: Vang giam -17% tu $5,415/oz. Trong 5 ngay giam -11.86%, 20 ngay giam -15.51%, momentum tieu cuc manh.</li>
-      <li>USD manh len: USD Index tang +2.56% (20d) len 120.55, tao ap luc giam gia vang tinh bang USD.</li>
-      <li>Loi suat thuc tang: Loi suat thuc My 10Y tang len 1.88% (+5.03% trong 20d), lam giam suc hut cua vang (tai san khong sinh loi).</li>
-      <li>VIX van cao o 24.06 (tren nguong 20), thi truong con nhieu bien dong. Volatility 1.6%/ngay cho thay rui ro bat day som.</li>
-      <li>Treasury 2Y tang 9.22% trong 20 ngay cho thay thi truong ky vong Fed giu lai suat cao lau hon.</li>
-    </ul>
+    <div class="chart-container">
+      <canvas id="premiumChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Vietnam Price Chart -->
+<div class="section">
+  <div class="section-title">Biến động giá SJC Miếng (10 ngày gần nhất)</div>
+  <div class="card">
+    <div class="chart-container">
+      <canvas id="vietnamChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Drawdown Analysis -->
+<div class="section">
+  <div class="section-title">Phân tích Drawdown lịch sử (ngưỡng >= 10%)</div>
+  <div class="card" style="overflow-x:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Đỉnh</th>
+          <th style="text-align:right">Giá đỉnh</th>
+          <th>Đáy</th>
+          <th style="text-align:right">Mức giảm</th>
+          <th style="text-align:right">Thời gian đến đáy</th>
+          <th>Phục hồi</th>
+          <th style="text-align:right">Thời gian phục hồi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>04/10/2012</td>
+          <td style="text-align:right">$1,791</td>
+          <td>17/12/2015</td>
+          <td style="text-align:right; color:var(--red)">-41.3%</td>
+          <td style="text-align:right">3 năm 2 tháng</td>
+          <td>07/07/2020</td>
+          <td style="text-align:right">7 năm 9 tháng</td>
+        </tr>
+        <tr>
+          <td>06/08/2020</td>
+          <td style="text-align:right">$2,064</td>
+          <td>26/09/2022</td>
+          <td style="text-align:right; color:var(--red)">-21.4%</td>
+          <td style="text-align:right">2 năm 1 tháng</td>
+          <td>01/12/2023</td>
+          <td style="text-align:right">3 năm 3 tháng</td>
+        </tr>
+        <tr>
+          <td>20/10/2025</td>
+          <td style="text-align:right">$4,388</td>
+          <td>04/11/2025</td>
+          <td style="text-align:right; color:var(--red)">-10.4%</td>
+          <td style="text-align:right">15 ngày</td>
+          <td>22/12/2025</td>
+          <td style="text-align:right">2 tháng 3 ngày</td>
+        </tr>
+        <tr>
+          <td>28/01/2026</td>
+          <td style="text-align:right">$5,327</td>
+          <td>02/02/2026</td>
+          <td style="text-align:right; color:var(--red)">-12.0%</td>
+          <td style="text-align:right">5 ngày</td>
+          <td>02/03/2026</td>
+          <td style="text-align:right">1 tháng 3 ngày</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:16px; padding:16px; background:rgba(14,203,129,0.08); border-radius:8px; font-size:0.88rem;">
+      <strong>Tổng kết:</strong> 4 đợt drawdown >= 10% trong 14 năm. Tất cả đã phục hồi.
+      Đợt tệ nhất: -41.3% (mất 7 năm 9 tháng phục hồi).
+      Trung bình phục hồi: ~2 năm 10 tháng.
+      Hai đợt gần nhất phục hồi nhanh hơn nhiều (1-2 tháng), cho thấy thị trường đang có lực cầu mạnh.
+    </div>
   </div>
 </div>
 
 <!-- Headlines -->
-<h3 class="section-title">Tin tuc & Su kien chinh sach</h3>
-<div class="grid grid-2">
+<div class="section">
+  <div class="section-title">Tin tức & Sự kiện quan trọng</div>
   <div class="card">
-    <h2>Chinh sach tien te</h2>
-    <ul class="headline-list">
-      <li><span class="date">18/03</span> &mdash; Fed phat hanh FOMC statement, giu nguyen lai suat. Du bao kinh te tu cuoc hop 17-18/03.</li>
-      <li><span class="date">19/03</span> &mdash; ECB: Quyet dinh chinh sach tien te. Christine Lagarde & Luis de Guindos hop bao Q&A.</li>
-      <li><span class="date">20/03</span> &mdash; ECB: Cac quyet dinh bo sung cua Hoi dong quan tri (ngoai lai suat).</li>
-      <li><span class="date">21/03</span> &mdash; Piero Cipollone (ECB): Bai noi ve dong euro ky thuat so.</li>
+    <ul style="padding-left:20px;">
+      <li class="risk-item"><strong>18/03:</strong> FOMC ra tuyên bố giữ nguyên lãi suất. Dự báo kinh tế FOMC tháng 3.</li>
+      <li class="risk-item"><strong>19/03:</strong> ECB: Quyết định chính sách tiền tệ. Lagarde họp báo.</li>
+      <li class="risk-item"><strong>21/03:</strong> USD giảm khi ECB hawkish hơn Fed giữa bối cảnh oil shock và rủi ro lạm phát tăng.</li>
+      <li class="risk-item"><strong>Địa chính trị:</strong> Xung đột Tây Á tiếp tục leo thang, tạo áp lực cầu vàng trú ẩn.</li>
     </ul>
   </div>
-  <div class="card">
-    <h2>Dia chinh tri & Thi truong</h2>
-    <ul class="headline-list">
-      <li><span class="date">21/03</span> &mdash; Dollar giam khi ECB "hieu ung dieu hau" hon Fed giua Oil Shock va rui ro lam phat tang.</li>
-      <li><span class="date">21/03</span> &mdash; Thi truong toan cau chiu tac dong tu xung dot Tay A, huong dan trung tinh cua Fed phan anh su bat dinh.</li>
-      <li><span class="date">21/03</span> &mdash; Vang vat chat vs Bac va giao dich ETF dang hinh thanh.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Drawdown Details -->
-<h3 class="section-title">Chi tiet cac dot Drawdown lon (>10%)</h3>
-<div class="card">
-<table>
-  <thead>
-    <tr><th>Dinh</th><th>Gia dinh</th><th>Day</th><th>Gia day</th><th>Giam</th><th>Phuc hoi</th><th>So ngay</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>04/10/2012</td><td>$1,791</td><td>17/12/2015</td><td>$1,052</td>
-      <td class="down">-41.3%</td><td>07/07/2020</td><td>2,833</td>
-    </tr>
-    <tr>
-      <td>06/08/2020</td><td>$2,064</td><td>26/09/2022</td><td>$1,622</td>
-      <td class="down">-21.4%</td><td>01/12/2023</td><td>1,212</td>
-    </tr>
-    <tr>
-      <td>20/10/2025</td><td>$4,388</td><td>04/11/2025</td><td>$3,931</td>
-      <td class="down">-10.4%</td><td>22/12/2025</td><td>63</td>
-    </tr>
-    <tr>
-      <td>28/01/2026</td><td>$5,327</td><td>02/02/2026</td><td>$4,687</td>
-      <td class="down">-12.0%</td><td>02/03/2026</td><td>33</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<!-- Conclusion -->
-<h3 class="section-title">Ket luan & Khuyen nghi</h3>
-<div class="card">
-  <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
-    <span class="badge badge-wait" style="font-size:1em;padding:6px 16px;">CHO</span>
-    <span style="font-size:1.05em;font-weight:600;">Chua nen mua vao luc nay</span>
-  </div>
-  <ul class="reason-list info">
-    <li><strong>Ngan han (1-2 tuan):</strong> Ap luc giam van con manh voi momentum tieu cuc (-11.86% trong 5 ngay). USD manh va loi suat thuc tang la rui ro chinh. Cho gia on dinh va kiem tra vung ho tro $4,200-4,400.</li>
-    <li><strong>Trung han (1-3 thang):</strong> Tat ca 4 dot drawdown lon deu phuc hoi. Xung dot Tay A, ky vong lam phat tang (breakeven 2.38%) va luc cau NHTW tiep tuc ho tro gia vang. Muc phuc hoi 33 ngay cua dot drawdown gan nhat rat tich cuc.</li>
-    <li><strong>Voi SJC Mieng:</strong> Premium 5.9% la muc hop ly. Nen mua SJC Nhan (premium thap hon, chenh lech mua-ban nho hon). Chi mua khi gia quoc te cho tin hieu on dinh (VD: 3-5 ngay lien tiep khong tao day moi).</li>
-    <li><strong>Quan sat:</strong> Theo doi USD Index (nguong 121), loi suat thuc My (nguong 2.0%), va VIX (duoi 20 la tin hieu tich cuc). Neu Fed ra tin hieu cat lai suat, day se la catalyst manh cho vang.</li>
-  </ul>
 </div>
 
 <div class="footer">
-  <p>Du lieu tu: FreeGoldAPI, giavang.org, Stooq, FRED, ECB, Fed &bull; Tu dong cap nhat hang ngay</p>
-  <p>Luu y: Day chi la thong tin tham khao, khong phai khuyen nghi dau tu. Hay tu nghien cuu truoc khi quyet dinh.</p>
+  Dữ liệu được thu thập tự động từ FreeGoldAPI, giavang.org, Stooq, ExchangeRate API.
+  Khuyến nghị chỉ mang tính tham khảo, không phải tư vấn đầu tư.
+  <br>Cập nhật lần cuối: 25/03/2026 09:04 UTC+7
 </div>
 
 </div>
+
+<script>
+// Premium Chart
+const premiumCtx = document.getElementById('premiumChart').getContext('2d');
+new Chart(premiumCtx, {
+  type: 'line',
+  data: {
+    labels: ['13/03','14/03','15/03','16/03','17/03','18/03','19/03','20/03','21/03','25/03'],
+    datasets: [{
+      label: 'Premium SJC vs Quốc tế (%)',
+      data: [19.2, 18.3, 18.3, 19.4, 19.0, 22.1, 24.1, 25.0, 23.7, 9.5],
+      borderColor: '#f0b90b',
+      backgroundColor: 'rgba(240,185,11,0.1)',
+      fill: true,
+      tension: 0.3,
+      pointRadius: 5,
+      pointBackgroundColor: '#f0b90b'
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { labels: { color: '#8b8fa3' } },
+      tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(1) + '%' } }
+    },
+    scales: {
+      x: { ticks: { color: '#8b8fa3' }, grid: { color: 'rgba(42,45,58,0.5)' } },
+      y: {
+        ticks: { color: '#8b8fa3', callback: v => v + '%' },
+        grid: { color: 'rgba(42,45,58,0.5)' }
+      }
+    }
+  }
+});
+
+// Vietnam Price Chart
+const vnCtx = document.getElementById('vietnamChart').getContext('2d');
+new Chart(vnCtx, {
+  type: 'line',
+  data: {
+    labels: ['13/03','14/03','15/03','16/03','17/03','18/03','19/03','20/03','21/03','25/03'],
+    datasets: [
+      {
+        label: 'SJC Miếng (triệu VND/lượng)',
+        data: [185, 183, 183, 183, 183, 183, 176, 176, 171, 175],
+        borderColor: '#f0b90b',
+        backgroundColor: 'rgba(240,185,11,0.1)',
+        fill: false,
+        tension: 0.3,
+        pointRadius: 5,
+        pointBackgroundColor: '#f0b90b'
+      },
+      {
+        label: 'Quốc tế quy đổi (triệu VND/lượng)',
+        data: [155, 154, 154, 153, 154, 150, 141, 141, 138, 160],
+        borderColor: '#3861fb',
+        backgroundColor: 'rgba(56,97,251,0.1)',
+        fill: false,
+        tension: 0.3,
+        pointRadius: 5,
+        pointBackgroundColor: '#3861fb'
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { labels: { color: '#8b8fa3' } },
+      tooltip: { callbacks: { label: ctx => ctx.parsed.y + ' triệu' } }
+    },
+    scales: {
+      x: { ticks: { color: '#8b8fa3' }, grid: { color: 'rgba(42,45,58,0.5)' } },
+      y: {
+        ticks: { color: '#8b8fa3', callback: v => v + 'M' },
+        grid: { color: 'rgba(42,45,58,0.5)' }
+      }
+    }
+  }
+});
+</script>
 </body>
 </html>
