@@ -18,7 +18,8 @@
     "fetch:first-principles": "bun run src/fetch-first-principles.ts",
     "collect:daily": "bun run src/collect-daily.ts",
     "analyze:drawdowns": "bun run src/analyze-drawdowns.ts",
-"backfill": "bun run src/backfill.ts",
+    "build:dashboard": "bun run scripts/build-dashboard.ts",
+    "backfill": "bun run src/backfill.ts",
     "verify:first-principles": "bun run src/verify-first-principles.ts --strict",
     "test": "bun test",
     "type-check": "tsc --noEmit"
