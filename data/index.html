@@ -3,14 +3,15 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Vàng - Phân tích &amp; Đánh giá</title>
+<title>Vàng - Phân tích &amp; Đánh giá | 22/04/2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-:root{--bg:#0b1020;--panel:#111a33;--ink:#e8edf7;--mute:#8fa0c8;--accent:#f5c544;--green:#22c55e;--red:#ef4444;--blue:#60a5fa;--border:#1c2744;}
+:root{--bg:#0b1020;--panel:#111a33;--ink:#e8edf7;--mute:#8fa0c8;--accent:#f5c544;--green:#22c55e;--red:#ef4444;--blue:#60a5fa;--border:#1c2744;--panel2:#0f1528}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:24px;max-width:1400px;margin:0 auto}
 h1{margin:0 0 4px;font-size:22px}
 h2{font-size:15px;margin:0 0 12px;letter-spacing:.3px;text-transform:uppercase;color:var(--mute)}
+h3{font-size:14px;margin:16px 0 8px;color:var(--accent)}
 .sub{color:var(--mute);margin-bottom:20px}
 .grid{display:grid;gap:16px}
 .cols-4{grid-template-columns:repeat(4,1fr)}
@@ -39,6 +40,18 @@ footer{color:var(--mute);font-size:12px;margin-top:24px;text-align:center}
 a{color:var(--blue)}
 .tight p{margin:6px 0}
 .err{color:#fca5a5}
+.highlight{background:rgba(245,197,68,.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin:8px 0}
+.metric-bar{display:flex;align-items:center;gap:8px;margin:4px 0}
+.metric-bar .bar{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.metric-bar .fill{height:100%;border-radius:3px}
+.prem-timeline{font-size:12px;color:var(--mute);line-height:1.8}
+.prem-timeline .date{color:var(--ink);font-weight:600}
+.prem-timeline .val{font-weight:700}
+.section-title{display:flex;align-items:center;gap:8px;margin-bottom:16px}
+.section-title h2{margin:0}
+.delta{font-size:11px;padding:2px 6px;border-radius:4px;font-weight:600}
+.delta.up{background:rgba(34,197,94,.15);color:var(--green)}
+.delta.down{background:rgba(239,68,68,.15);color:var(--red)}
 </style>
 </head>
 <body>
@@ -48,6 +61,8 @@ a{color:var(--blue)}
 <div class="card" style="margin-bottom:16px" id="rec"></div>
 
 <div class="grid cols-4" id="kpis" style="margin-bottom:16px"></div>
+
+<div class="card" style="margin-bottom:16px" id="premiumAnalysis"></div>
 
 <div class="grid cols-2" style="margin-bottom:16px">
   <div class="card"><h2>XAUUSD (USD/oz) – 5 năm</h2><canvas id="chIntl"></canvas></div>
@@ -85,6 +100,8 @@ a{color:var(--blue)}
   </div>
 </div>
 
+<div class="card" style="margin-bottom:16px" id="macroSummary"></div>
+
 <div class="card" style="margin-bottom:16px">
   <h2>Lịch sử Drawdown (≥10%) – XAUUSD</h2>
   <table id="dd"><thead><tr><th>Peak</th><th class="num">Peak $</th><th>Trough</th><th class="num">Drawdown</th><th class="num">Ngày tới đáy</th><th>Recovery</th><th class="num">Ngày hồi phục</th></tr></thead><tbody></tbody></table>
@@ -95,7 +112,7 @@ a{color:var(--blue)}
   </div>
 </div>
 
-<footer>Nguồn: TwelveData, FreeGoldAPI, giavang.org, webgia.com, FRED. Dashboard sinh từ <code>data/dashboard-data.json</code>.</footer>
+<footer>Nguồn: TwelveData, FreeGoldAPI, giavang.org, webgia.com, FRED, exchangerate-api. Cập nhật 22/04/2026.</footer>
 
 <script>
 (async () => {
@@ -120,6 +137,7 @@ a{color:var(--blue)}
     'Cập nhật giá: ' + new Date(D.latest.timestamp).toLocaleString('vi-VN') +
     ' • Khuyến nghị sinh: ' + new Date(D.suggestion.generatedAt).toLocaleString('vi-VN');
 
+  // Recommendation card
   const statusClass = sug.status.startsWith('MUA') ? 'buy' : (sug.status.startsWith('BÁN') ? 'sell' : 'wait');
   document.getElementById('rec').innerHTML =
     '<div class="row" style="justify-content:space-between">' +
@@ -133,6 +151,8 @@ a{color:var(--blue)}
 
   document.getElementById('thesis').textContent = sug.thesis;
 
+  // KPIs
+  const sjcChg = snap.sjcMiengVndPerTael ? ((snap.sjcMiengVndPerTael - snap.intlVndPerTael) / snap.intlVndPerTael * 100) : null;
   const kpis = [
     { lbl:'SJC Miếng',          val:fmtVND(snap.sjcMiengVndPerTael) + ' ₫', chg:'VND/lượng' },
     { lbl:'SJC Nhẫn',           val:fmtVND(snap.sjcNhanVndPerTael)  + ' ₫', chg:'VND/lượng' },
@@ -143,16 +163,51 @@ a{color:var(--blue)}
     '<div class="card kpi"><div class="lbl">' + k.lbl + '</div><div class="val">' + k.val + '</div><div class="chg ' + (k.cls || 'neu') + '">' + k.chg + '</div></div>'
   ).join('');
 
+  // Premium analysis card
+  const snapS = D.vnSnapshots.filter(s => s.sjc && s.intl);
+  const recentSnaps = snapS.slice(-30);
+  const premValues = recentSnaps.map(s => s.prem).filter(p => p != null);
+  const premMax = Math.max(...premValues);
+  const premMin = Math.min(...premValues);
+  const premCurrent = premValues[premValues.length - 1] || snap.premiumPctCollectDaily;
+  const premPosition = premMax > premMin ? ((premCurrent - premMin) / (premMax - premMin) * 100) : 50;
+
+  let premColor = premCurrent <= 10 ? 'var(--green)' : premCurrent <= 15 ? 'var(--accent)' : 'var(--red)';
+  let premLabel = premCurrent <= 10 ? 'Thấp — Cửa sổ mua tốt' : premCurrent <= 15 ? 'Trung bình' : 'Cao — Cân nhắc chờ';
+
+  const last5Snaps = snapS.slice(-5);
+  let premTimeline = last5Snaps.map(s =>
+    '<span class="date">' + s.d + '</span>: <span class="val" style="color:' + (s.prem <= 10 ? 'var(--green)' : s.prem <= 15 ? 'var(--accent)' : 'var(--red)') + '">' + s.prem.toFixed(1) + '%</span>'
+  ).join(' → ');
+
+  document.getElementById('premiumAnalysis').innerHTML =
+    '<h2>Phân tích Premium SJC</h2>' +
+    '<div class="highlight">' +
+      '<div style="display:flex;justify-content:space-between;align-items:center">' +
+        '<div><strong>Premium hiện tại: ' + fmtPct(premCurrent) + '</strong> — <span style="color:' + premColor + '">' + premLabel + '</span></div>' +
+        '<div class="pill">30d: Min ' + fmtPct(premMin) + ' / Max ' + fmtPct(premMax) + '</div>' +
+      '</div>' +
+      '<div class="metric-bar" style="margin-top:8px">' +
+        '<span style="font-size:11px;color:var(--mute)">' + premMin.toFixed(0) + '%</span>' +
+        '<div class="bar"><div class="fill" style="width:' + premPosition + '%;background:' + premColor + '"></div></div>' +
+        '<span style="font-size:11px;color:var(--mute)">' + premMax.toFixed(0) + '%</span>' +
+      '</div>' +
+    '</div>' +
+    '<div class="prem-timeline" style="margin-top:10px">Xu hướng gần: ' + premTimeline + '</div>';
+
+  // Reasons & Risks
   const ulFill = (id, arr) => document.getElementById(id).innerHTML = arr.map(x => '<li>' + x + '</li>').join('');
   ulFill('reasons', sug.reasons);
   ulFill('risks',   sug.risks);
 
+  // Evidence table
   document.querySelector('#evidence tbody').innerHTML = sug.evidence.map(e =>
     '<tr><td>' + e.key + '</td><td class="num">' +
     (typeof e.value === 'number' ? e.value.toLocaleString('vi-VN') + (e.unit ? ' ' + e.unit : '') : e.value) +
     '</td><td>' + e.source + '</td></tr>'
   ).join('');
 
+  // Prices table
   const intlBase = D.latest.normalized.find(n => n.country === 'International');
   document.querySelector('#prices tbody').innerHTML = D.latest.normalized.map(n => {
     const vs = intlBase ? ((n.vndPerGram - intlBase.vndPerGram) / intlBase.vndPerGram * 100) : null;
@@ -162,6 +217,7 @@ a{color:var(--blue)}
            '<td class="num ' + clsP(vs) + '">' + (vs == null ? '' : fmtPct(vs)) + '</td></tr>';
   }).join('');
 
+  // Macro table
   document.querySelector('#macro tbody').innerHTML = D.fp.factors.map(f =>
     '<tr><td>' + f.name + '</td>' +
     '<td class="num">' + (f.latest ? fmtNum(f.latest.value, 2) + ' ' + f.unit : '—') + '</td>' +
@@ -171,6 +227,38 @@ a{color:var(--blue)}
     '<td>' + f.relationToGold + '</td></tr>'
   ).join('');
 
+  // Macro summary card
+  const factors = D.fp.factors.filter(f => f.latest);
+  const bullishFactors = [];
+  const bearishFactors = [];
+  factors.forEach(f => {
+    if (!f.change20dPct) return;
+    const inv = f.relationToGold === 'inverse';
+    const bullish = inv ? f.change20dPct < 0 : f.change20dPct > 0;
+    if (f.id === 'gold_spot_xauusd') return;
+    const item = f.name + ' ' + fmtPct(f.change20dPct, 1) + '/20d';
+    if (bullish) bullishFactors.push(item);
+    else bearishFactors.push(item);
+  });
+
+  document.getElementById('macroSummary').innerHTML =
+    '<h2>Tổng hợp Vĩ mô — Tác động đến Vàng</h2>' +
+    '<div class="grid cols-2" style="gap:12px">' +
+      '<div>' +
+        '<h3 style="color:var(--green);margin-top:0">Hỗ trợ tăng giá (Bullish)</h3>' +
+        '<ul>' + bullishFactors.map(f => '<li class="pos">' + f + '</li>').join('') + '</ul>' +
+      '</div>' +
+      '<div>' +
+        '<h3 style="color:var(--red);margin-top:0">Gây áp lực giảm (Bearish)</h3>' +
+        '<ul>' + (bearishFactors.length ? bearishFactors.map(f => '<li class="neg">' + f + '</li>').join('') : '<li class="neu">Không có yếu tố bearish rõ rệt</li>') + '</ul>' +
+      '</div>' +
+    '</div>' +
+    '<div class="highlight" style="margin-top:12px">' +
+      '<strong>Kết luận:</strong> ' + bullishFactors.length + '/' + (bullishFactors.length + bearishFactors.length) + ' yếu tố vĩ mô hỗ trợ vàng tăng trong 20 ngày qua. ' +
+      (bullishFactors.length > bearishFactors.length ? 'Bối cảnh vĩ mô nghiêng về phía thuận lợi cho vàng.' : 'Bối cảnh vĩ mô trung tính.') +
+    '</div>';
+
+  // Drawdown table
   document.querySelector('#dd tbody').innerHTML = D.drawdowns.drawdowns.map(d =>
     '<tr><td>' + d.peakDate + '</td>' +
     '<td class="num">$' + d.peakPrice.toFixed(2) + '</td>' +
@@ -185,7 +273,8 @@ a{color:var(--blue)}
   document.getElementById('ddWorst').textContent = 'Tồi tệ nhất: -' + D.drawdowns.summary.worstDrawdownPct.toFixed(1) + '%';
   document.getElementById('ddAvg').textContent   = 'Trung bình hồi: ' + Math.round(D.drawdowns.summary.avgRecoveryDays) + ' ngày';
 
-  const mkChart = (id, labels, datasets) => new Chart(document.getElementById(id), {
+  // Charts
+  const mkChart = (id, labels, datasets, opts) => new Chart(document.getElementById(id), {
     type: 'line',
     data: { labels, datasets },
     options: {
@@ -194,7 +283,7 @@ a{color:var(--blue)}
       plugins: { legend: { labels: { color: '#cbd5e1' } } },
       scales: {
         x: { ticks: { color: '#8fa0c8', maxTicksLimit: 8 }, grid: { color: '#1c2744' } },
-        y: { ticks: { color: '#8fa0c8' }, grid: { color: '#1c2744' } }
+        y: { ticks: { color: '#8fa0c8' }, grid: { color: '#1c2744' }, ...((opts && opts.y) || {}) }
       }
     }
   });
@@ -202,20 +291,20 @@ a{color:var(--blue)}
   mkChart('chIntl', D.intlSeries.map(p => p.d), [{
     label: 'USD/oz', data: D.intlSeries.map(p => p.u),
     borderColor: '#f5c544', backgroundColor: 'rgba(245,197,68,.1)',
-    tension: .2, pointRadius: 0, borderWidth: 2
+    fill: true, tension: .2, pointRadius: 0, borderWidth: 2
   }]);
 
   mkChart('chVn', D.vnSeries.map(p => p.d), [{
     label: 'SJC sell (VND)', data: D.vnSeries.map(p => p.s),
     borderColor: '#60a5fa', backgroundColor: 'rgba(96,165,250,.1)',
-    tension: .2, pointRadius: 0, borderWidth: 2
+    fill: true, tension: .2, pointRadius: 0, borderWidth: 2
   }]);
 
-  const snapS = D.vnSnapshots.filter(s => s.sjc && s.intl);
   mkChart('chCmp', snapS.map(p => p.d), [
     { label: 'SJC Miếng',      data: snapS.map(p => p.sjc),  borderColor: '#f5c544', pointRadius: 0, borderWidth: 2, tension: .2 },
     { label: 'Quốc tế (VND)',  data: snapS.map(p => p.intl), borderColor: '#22c55e', pointRadius: 0, borderWidth: 2, tension: .2 }
   ]);
+
   mkChart('chPrem', snapS.map(p => p.d), [{
     label: 'Premium %', data: snapS.map(p => p.prem),
     borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,.1)',
