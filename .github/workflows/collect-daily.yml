@@ -39,17 +39,6 @@ jobs:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           VNAPPMOB_API_KEY: ${{ secrets.VNAPPMOB_API_KEY }}
 
-      - name: Generate AI suggestion (Claude Code)
-        uses: anthropics/claude-code-base-action@beta
-        with:
-          prompt_file: .github/prompts/ai-suggestion.md
-          allowed_tools: "Read,Write,Glob,Grep"
-          max_turns: "15"
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
-      - name: Build dashboard data
-        run: bun run scripts/build-dashboard.ts
-
       - name: Commit data
         run: |
           git config user.name "github-actions[bot]"
