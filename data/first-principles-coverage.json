@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-05-19T11:06:18.563Z",
+  "checkedAt": "2026-05-19T13:08:24.117Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-05-19T11:06:18.498Z",
+  "dataFetchedAt": "2026-05-19T13:08:24.052Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,22 +16,32 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 5,
-    "countryActionCount": 9,
-    "dollarYieldCount": 5,
+    "geopoliticalCount": 0,
+    "countryActionCount": 0,
+    "dollarYieldCount": 6,
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
         "error": "Malformed Stooq daily CSV payload"
+      },
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD"
+    "Missing required factors: Gold Spot XAUUSD",
+    "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
