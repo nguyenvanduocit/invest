@@ -38,10 +38,17 @@ jobs:
         env:
           TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
           VNAPPMOB_API_KEY: ${{ secrets.VNAPPMOB_API_KEY }}
-          ZAI_API_KEY_1: ${{ secrets.ZAI_API_KEY_1 }}
-          ZAI_API_KEY_2: ${{ secrets.ZAI_API_KEY_2 }}
-          ZAI_BASE_URL: ${{ secrets.ZAI_BASE_URL }}
-          ZAI_MODEL: ${{ secrets.ZAI_MODEL }}
+
+      - name: Generate AI suggestion (Claude Code)
+        uses: anthropics/claude-code-base-action@beta
+        with:
+          prompt_file: .github/prompts/ai-suggestion.md
+          allowed_tools: "Read,Write,Glob,Grep"
+          max_turns: "15"
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+      - name: Build dashboard data
+        run: bun run scripts/build-dashboard.ts
 
       - name: Commit data
         run: |
