@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-20T20:44:58.033Z",
+  "fetchedAt": "2026-05-20T21:36:08.302Z",
   "factors": [
     {
       "id": "gold_spot_xauusd",
@@ -532,17 +532,13 @@
       "unit": "%",
       "relationToGold": "direct",
       "latest": {
-        "date": "2026-05-19",
-        "value": 2.49
+        "date": "2026-05-20",
+        "value": 2.44
       },
-      "change1dPct": 0.4,
-      "change5dPct": 0.81,
-      "change20dPct": 4.62,
+      "change1dPct": -2.01,
+      "change5dPct": -1.21,
+      "change20dPct": 2.52,
       "recent": [
-        {
-          "date": "2026-02-25",
-          "value": 2.28
-        },
         {
           "date": "2026-02-26",
           "value": 2.28
@@ -778,6 +774,10 @@
         {
           "date": "2026-05-19",
           "value": 2.49
+        },
+        {
+          "date": "2026-05-20",
+          "value": 2.44
         }
       ]
     },
@@ -1956,7 +1956,7 @@
       "id": "gold_spot_xauusd",
       "label": "Gold Spot XAUUSD",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.809Z",
       "ok": false,
       "count": 0,
       "error": "Malformed Stooq daily CSV payload"
@@ -1965,7 +1965,7 @@
       "id": "usd_index_trade_weighted",
       "label": "US Dollar Trade Weighted Index",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 5107
     },
@@ -1973,7 +1973,7 @@
       "id": "us_real_yield_10y",
       "label": "US Real Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 5849
     },
@@ -1981,15 +1981,15 @@
       "id": "us_breakeven_10y",
       "label": "US Breakeven Inflation 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
-      "count": 5849
+      "count": 5850
     },
     {
       "id": "us_fed_funds_effective",
       "label": "US Effective Fed Funds Rate",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 26256
     },
@@ -1997,7 +1997,7 @@
       "id": "us_treasury_10y",
       "label": "US Treasury Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 16080
     },
@@ -2005,7 +2005,7 @@
       "id": "us_treasury_2y",
       "label": "US Treasury Yield 2Y",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 12488
     },
@@ -2013,7 +2013,7 @@
       "id": "vix",
       "label": "VIX Volatility Index",
       "kind": "factor",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 9189
     },
@@ -2021,7 +2021,7 @@
       "id": "fed_speeches",
       "label": "Federal Reserve Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 10
     },
@@ -2029,7 +2029,7 @@
       "id": "fed_monetary",
       "label": "Federal Reserve Monetary Policy Press Releases",
       "kind": "policy_feed",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 10
     },
@@ -2037,7 +2037,7 @@
       "id": "ecb_press",
       "label": "ECB Press / Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 10
     },
@@ -2045,7 +2045,7 @@
       "id": "boe_news",
       "label": "Bank of England News",
       "kind": "policy_feed",
-      "fetchedAt": "2026-05-20T20:44:54.837Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": true,
       "count": 10
     },
@@ -2053,7 +2053,7 @@
       "id": "gdelt_geopolitics",
       "label": "Geopolitical stress around gold safe-haven flows",
       "kind": "event_feed",
-      "fetchedAt": "2026-05-20T20:44:54.838Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2062,7 +2062,7 @@
       "id": "gdelt_country_actions",
       "label": "Central bank and sovereign policy actions",
       "kind": "event_feed",
-      "fetchedAt": "2026-05-20T20:44:54.838Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2071,7 +2071,7 @@
       "id": "gdelt_dollar_yields",
       "label": "US dollar and yield narrative around gold",
       "kind": "event_feed",
-      "fetchedAt": "2026-05-20T20:44:54.838Z",
+      "fetchedAt": "2026-05-20T21:35:55.810Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
