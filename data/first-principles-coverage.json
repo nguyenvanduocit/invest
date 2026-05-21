@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-05-20T23:30:08.450Z",
+  "checkedAt": "2026-05-21T00:46:25.749Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-05-20T23:30:08.383Z",
+  "dataFetchedAt": "2026-05-21T00:46:25.685Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,37 +16,22 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
-    "countryActionCount": 0,
-    "dollarYieldCount": 0,
+    "geopoliticalCount": 8,
+    "countryActionCount": 15,
+    "dollarYieldCount": 7,
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
         "error": "Malformed Stooq daily CSV payload"
-      },
-      {
-        "id": "gdelt_geopolitics",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_country_actions",
-        "error": "The operation timed out."
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "The operation timed out."
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD",
-    "Not enough geopolitical events (0/3)",
-    "Not enough country action events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: Gold Spot XAUUSD"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
   ],
   "canProceedToIntegration": false
 }
