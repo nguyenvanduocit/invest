@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-05-23T01:37:55.643Z",
+  "checkedAt": "2026-05-23T03:07:49.197Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-05-23T01:37:55.578Z",
+  "dataFetchedAt": "2026-05-23T03:07:49.132Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -16,9 +16,9 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 5,
-    "countryActionCount": 15,
-    "dollarYieldCount": 8,
+    "geopoliticalCount": 3,
+    "countryActionCount": 13,
+    "dollarYieldCount": 2,
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
@@ -28,7 +28,8 @@
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD"
+    "Missing required factors: Gold Spot XAUUSD",
+    "Not enough dollar/yield events (2/3)"
   ],
   "warnings": [
     "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
