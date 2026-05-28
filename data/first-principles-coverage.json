@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-05-28T21:40:23.043Z",
+  "checkedAt": "2026-05-28T22:34:28.185Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-05-28T21:40:22.973Z",
+  "dataFetchedAt": "2026-05-28T22:34:28.120Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -26,11 +26,11 @@
       },
       {
         "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_country_actions",
-        "error": "HTTP 429"
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
@@ -41,7 +41,7 @@
     "Not enough country action events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
