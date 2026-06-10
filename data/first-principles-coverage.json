@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-06-10T11:17:36.756Z",
+  "checkedAt": "2026-06-10T13:12:53.970Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-06-10T11:17:36.695Z",
+  "dataFetchedAt": "2026-06-10T13:12:53.924Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -23,13 +23,13 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 7,
-    "countryActionCount": 15,
+    "geopoliticalCount": 0,
+    "countryActionCount": 0,
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
-        "error": "Malformed Stooq daily CSV payload"
+        "error": "HTTP 404"
       },
       {
         "id": "usd_index_trade_weighted",
@@ -60,6 +60,14 @@
         "error": "The operation timed out."
       },
       {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "HTTP 429"
+      },
+      {
         "id": "gdelt_dollar_yields",
         "error": "HTTP 429"
       }
@@ -68,10 +76,12 @@
   },
   "hardFailures": [
     "Missing required factors: Gold Spot XAUUSD, US Dollar Trade Weighted Index, US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index",
+    "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gold_spot_xauusd (HTTP 404); usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
