@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-06-14T13:35:20.404Z",
+  "checkedAt": "2026-06-14T14:47:58.172Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-06-14T13:35:20.342Z",
+  "dataFetchedAt": "2026-06-14T14:47:58.107Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -9,10 +9,9 @@
   },
   "coverage": {
     "requiredFactors": 8,
-    "availableFactors": 0,
+    "availableFactors": 1,
     "missingFactors": [
       "Gold Spot XAUUSD",
-      "US Dollar Trade Weighted Index",
       "US Real Yield 10Y",
       "US Breakeven Inflation 10Y",
       "US Effective Fed Funds Rate",
@@ -23,17 +22,13 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 6,
-    "countryActionCount": 15,
-    "dollarYieldCount": 8,
+    "geopoliticalCount": 7,
+    "countryActionCount": 13,
+    "dollarYieldCount": 10,
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
         "error": "Malformed Stooq daily CSV payload"
-      },
-      {
-        "id": "usd_index_trade_weighted",
-        "error": "The operation timed out."
       },
       {
         "id": "us_real_yield_10y",
@@ -63,10 +58,10 @@
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD, US Dollar Trade Weighted Index, US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index"
+    "Missing required factors: Gold Spot XAUUSD, US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); us_real_yield_10y (The operation timed out.); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
