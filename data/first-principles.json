@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-21T23:31:11.087Z",
+  "fetchedAt": "2026-06-22T00:51:48.482Z",
   "factors": [
     {
       "id": "gold_spot_xauusd",
@@ -1956,7 +1956,7 @@
       "id": "gold_spot_xauusd",
       "label": "Gold Spot XAUUSD",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.990Z",
+      "fetchedAt": "2026-06-22T00:51:42.099Z",
       "ok": false,
       "count": 0,
       "error": "Malformed Stooq daily CSV payload"
@@ -1965,7 +1965,7 @@
       "id": "usd_index_trade_weighted",
       "label": "US Dollar Trade Weighted Index",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.099Z",
       "ok": true,
       "count": 5126
     },
@@ -1973,7 +1973,7 @@
       "id": "us_real_yield_10y",
       "label": "US Real Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.099Z",
       "ok": true,
       "count": 5869
     },
@@ -1981,7 +1981,7 @@
       "id": "us_breakeven_10y",
       "label": "US Breakeven Inflation 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 5870
     },
@@ -1989,7 +1989,7 @@
       "id": "us_fed_funds_effective",
       "label": "US Effective Fed Funds Rate",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 26285
     },
@@ -1997,7 +1997,7 @@
       "id": "us_treasury_10y",
       "label": "US Treasury Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 16100
     },
@@ -2005,7 +2005,7 @@
       "id": "us_treasury_2y",
       "label": "US Treasury Yield 2Y",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 12508
     },
@@ -2013,7 +2013,7 @@
       "id": "vix",
       "label": "VIX Volatility Index",
       "kind": "factor",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 9210
     },
@@ -2021,7 +2021,7 @@
       "id": "fed_speeches",
       "label": "Federal Reserve Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 10
     },
@@ -2029,7 +2029,7 @@
       "id": "fed_monetary",
       "label": "Federal Reserve Monetary Policy Press Releases",
       "kind": "policy_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 10
     },
@@ -2037,7 +2037,7 @@
       "id": "ecb_press",
       "label": "ECB Press / Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 10
     },
@@ -2045,7 +2045,7 @@
       "id": "boe_news",
       "label": "Bank of England News",
       "kind": "policy_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": true,
       "count": 10
     },
@@ -2053,7 +2053,7 @@
       "id": "gdelt_geopolitics",
       "label": "Geopolitical stress around gold safe-haven flows",
       "kind": "event_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2062,7 +2062,7 @@
       "id": "gdelt_country_actions",
       "label": "Central bank and sovereign policy actions",
       "kind": "event_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2071,7 +2071,7 @@
       "id": "gdelt_dollar_yields",
       "label": "US dollar and yield narrative around gold",
       "kind": "event_feed",
-      "fetchedAt": "2026-06-21T23:30:59.991Z",
+      "fetchedAt": "2026-06-22T00:51:42.100Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2083,7 +2083,9 @@
     "missingFactors": [
       "Gold Spot XAUUSD"
     ],
-    "staleFactors": [],
+    "staleFactors": [
+      "US Dollar Trade Weighted Index (2026-06-12)"
+    ],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 0,
