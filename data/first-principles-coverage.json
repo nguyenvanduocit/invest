@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-07-31T16:42:44.076Z",
+  "checkedAt": "2026-07-31T18:17:26.108Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-07-31T16:42:44.011Z",
+  "dataFetchedAt": "2026-07-31T18:17:26.038Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -23,8 +23,8 @@
     "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 11,
-    "countryActionCount": 15,
+    "geopoliticalCount": 0,
+    "countryActionCount": 0,
     "dollarYieldCount": 0,
     "sourceFailures": [
       {
@@ -45,11 +45,11 @@
       },
       {
         "id": "us_fed_funds_effective",
-        "error": "HTTP 504"
+        "error": "The operation timed out."
       },
       {
         "id": "us_treasury_10y",
-        "error": "HTTP 504"
+        "error": "The operation timed out."
       },
       {
         "id": "us_treasury_2y",
@@ -57,7 +57,15 @@
       },
       {
         "id": "vix",
-        "error": "HTTP 504"
+        "error": "HTTP 502"
+      },
+      {
+        "id": "gdelt_geopolitics",
+        "error": "HTTP 429"
+      },
+      {
+        "id": "gdelt_country_actions",
+        "error": "HTTP 429"
       },
       {
         "id": "gdelt_dollar_yields",
@@ -68,10 +76,12 @@
   },
   "hardFailures": [
     "Missing required factors: Gold Spot XAUUSD, US Dollar Trade Weighted Index, US Real Yield 10Y, US Breakeven Inflation 10Y, US Effective Fed Funds Rate, US Treasury Yield 10Y, US Treasury Yield 2Y, VIX Volatility Index",
+    "Not enough geopolitical events (0/3)",
+    "Not enough country action events (0/3)",
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (HTTP 504); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (HTTP 504); us_treasury_10y (HTTP 504); us_treasury_2y (The operation timed out.); vix (HTTP 504); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); usd_index_trade_weighted (The operation timed out.); us_real_yield_10y (HTTP 504); us_breakeven_10y (The operation timed out.); us_fed_funds_effective (The operation timed out.); us_treasury_10y (The operation timed out.); us_treasury_2y (The operation timed out.); vix (HTTP 502); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
