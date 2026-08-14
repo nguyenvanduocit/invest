@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-08-14T21:21:32.017Z",
+  "checkedAt": "2026-08-14T22:18:23.793Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-08-14T21:21:31.966Z",
+  "dataFetchedAt": "2026-08-14T22:18:23.740Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -26,7 +26,7 @@
       },
       {
         "id": "gdelt_geopolitics",
-        "error": "The operation timed out."
+        "error": "HTTP 429"
       },
       {
         "id": "gdelt_country_actions",
@@ -46,7 +46,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
