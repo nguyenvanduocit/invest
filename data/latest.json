@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-13T23:39:35.813Z",
+  "timestamp": "2026-08-14T01:40:12.834Z",
   "normalized": [
     {
       "source": "TwelveData",
       "country": "International",
       "originalCurrency": "USD",
-      "originalPricePerGram": 140.2288980339833,
-      "vndPerGram": 3648297.378347675,
-      "vndPerTael": 136811151.6880378
+      "originalPricePerGram": 138.88236339961742,
+      "vndPerGram": 3615616.228742084,
+      "vndPerTael": 135585608.57782814
     },
     {
       "source": "SJC Miếng",
       "country": "Vietnam",
       "originalCurrency": "VND",
-      "originalPricePerGram": 3848000,
-      "vndPerGram": 3848000,
-      "vndPerTael": 144300000
+      "originalPricePerGram": 3821333.3333333335,
+      "vndPerGram": 3821333.3333333335,
+      "vndPerTael": 143300000
     },
     {
       "source": "SJC Nhẫn",
@@ -26,20 +26,28 @@
       "vndPerTael": 143800000
     },
     {
+      "source": "GoldPricez-VN",
+      "country": "Vietnam",
+      "originalCurrency": "VND",
+      "originalPricePerGram": 3620735.53,
+      "vndPerGram": 3620735.53,
+      "vndPerTael": 135777582.375
+    },
+    {
       "source": "Calculated (XAUUSD × USD/CNY)",
       "country": "China",
       "originalCurrency": "CNY",
-      "originalPricePerGram": 947.9473507097271,
-      "vndPerGram": 3648297.378347674,
-      "vndPerTael": 136811151.68803778
+      "originalPricePerGram": 938.8447765814137,
+      "vndPerGram": 3615616.228742084,
+      "vndPerTael": 135585608.57782814
     },
     {
       "source": "Calculated (XAUUSD × USD/RUB)",
       "country": "Russia",
       "originalCurrency": "RUB",
-      "originalPricePerGram": 11602.539023331778,
-      "vndPerGram": 3648297.378347675,
-      "vndPerTael": 136811151.6880378
+      "originalPricePerGram": 11564.734400286141,
+      "vndPerGram": 3615616.228742084,
+      "vndPerTael": 135585608.57782814
     }
   ],
   "raw": {
@@ -48,14 +56,14 @@
         "source": "SJC Miếng",
         "country": "Vietnam",
         "currency": "VND",
-        "pricePerTael": 144300000,
-        "buyPrice": 141300000,
-        "sellPrice": 144300000,
-        "timestamp": "2026-08-13T23:37:20.545Z",
+        "pricePerTael": 143300000,
+        "buyPrice": 140300000,
+        "sellPrice": 143300000,
+        "timestamp": "2026-08-14T01:40:12.207Z",
         "raw": {
           "name": "SJC",
-          "buyText": "141.300",
-          "sellText": "144.300",
+          "buyText": "140.300",
+          "sellText": "143.300",
           "type": "Miếng"
         }
       },
@@ -66,12 +74,23 @@
         "pricePerTael": 143800000,
         "buyPrice": 140800000,
         "sellPrice": 143800000,
-        "timestamp": "2026-08-13T23:37:20.548Z",
+        "timestamp": "2026-08-14T01:40:12.211Z",
         "raw": {
           "name": "SJC",
           "buyText": "140.800",
           "sellText": "143.800",
           "type": "Nhẫn"
+        }
+      },
+      {
+        "source": "GoldPricez-VN",
+        "country": "Vietnam",
+        "currency": "VND",
+        "pricePerGram": 3620735.53,
+        "pricePerTael": 135777582.375,
+        "timestamp": "2026-08-14T01:40:11.589Z",
+        "raw": {
+          "matched": "\n    \n     = 3,620,735.53  \n    \n        \n    \n        VND \n    \n    \n     ?\n     \n"
         }
       }
     ],
@@ -80,15 +99,15 @@
         "source": "TwelveData",
         "country": "International",
         "currency": "USD",
-        "pricePerOunce": 4361.60953,
-        "pricePerGram": 140.2288980339833,
+        "pricePerOunce": 4319.72759,
+        "pricePerGram": 138.88236339961742,
         "timestamp": "2026-08-14T00:00:00.000Z",
         "raw": {
           "datetime": "2026-08-14",
           "open": "4350.64279",
-          "high": "4363.38249",
-          "low": "4348.61358",
-          "close": "4361.60953"
+          "high": "4364.52514",
+          "low": "4313.63743",
+          "close": "4319.72759"
         }
       }
     ],
@@ -97,11 +116,11 @@
         "source": "Calculated (XAUUSD × USD/CNY)",
         "country": "China",
         "currency": "CNY",
-        "pricePerOunce": 29484.480422799996,
-        "pricePerGram": 947.9473507097271,
-        "timestamp": "2026-08-13T00:00:00.000Z",
+        "pricePerOunce": 29201.3585084,
+        "pricePerGram": 938.8447765814137,
+        "timestamp": "2026-08-14T00:00:00.000Z",
         "raw": {
-          "xauusdPrice": 4361.60953,
+          "xauusdPrice": 4319.72759,
           "cnyRate": 6.76
         }
       }
@@ -111,12 +130,12 @@
         "source": "Calculated (XAUUSD × USD/RUB)",
         "country": "Russia",
         "currency": "RUB",
-        "pricePerOunce": 360879.5725121999,
-        "pricePerGram": 11602.539023331778,
-        "timestamp": "2026-08-13T00:00:00.000Z",
+        "pricePerOunce": 359703.7164193,
+        "pricePerGram": 11564.734400286141,
+        "timestamp": "2026-08-14T00:00:00.000Z",
         "raw": {
-          "xauusdPrice": 4361.60953,
-          "rubRate": 82.74
+          "xauusdPrice": 4319.72759,
+          "rubRate": 83.27
         }
       }
     ],
@@ -124,14 +143,14 @@
   },
   "exchangeRates": {
     "USD": 1,
-    "VND": 26016.73,
+    "VND": 26033.66,
     "CNY": 6.76,
-    "RUB": 82.74,
-    "INR": 95.41
+    "RUB": 83.27,
+    "INR": 95.48
   },
   "vietnamPremium": {
-    "premiumPercent": 5.473858102619116,
-    "benchmarkVND": 136811151.6880378,
-    "localPriceVND": 144300000
+    "premiumPercent": 5.689683074102725,
+    "benchmarkVND": 135585608.57782814,
+    "localPriceVND": 143300000
   }
 }
