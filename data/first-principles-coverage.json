@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-08-17T20:22:04.345Z",
+  "checkedAt": "2026-08-17T21:21:52.655Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-08-17T20:22:04.275Z",
+  "dataFetchedAt": "2026-08-17T21:21:52.583Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -13,38 +13,25 @@
     "missingFactors": [
       "Gold Spot XAUUSD"
     ],
-    "staleFactors": [
-      "US Dollar Trade Weighted Index (2026-08-07)"
-    ],
+    "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
-    "geopoliticalCount": 0,
+    "geopoliticalCount": 15,
     "countryActionCount": 15,
-    "dollarYieldCount": 0,
+    "dollarYieldCount": 5,
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
         "error": "Malformed Stooq daily CSV payload"
-      },
-      {
-        "id": "gdelt_geopolitics",
-        "error": "HTTP 429"
-      },
-      {
-        "id": "gdelt_dollar_yields",
-        "error": "HTTP 429"
       }
     ],
     "healthy": false
   },
   "hardFailures": [
-    "Missing required factors: Gold Spot XAUUSD",
-    "Not enough geopolitical events (0/3)",
-    "Not enough dollar/yield events (0/3)"
+    "Missing required factors: Gold Spot XAUUSD"
   ],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-08-07)",
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
   ],
   "canProceedToIntegration": false
 }
