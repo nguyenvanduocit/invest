@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-08-28T20:40:33.569Z",
+  "checkedAt": "2026-08-29T03:03:54.593Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-08-28T20:40:33.518Z",
+  "dataFetchedAt": "2026-08-29T03:03:54.543Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -26,15 +26,15 @@
       },
       {
         "id": "gdelt_geopolitics",
-        "error": "certificate has expired"
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_country_actions",
-        "error": "certificate has expired"
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_dollar_yields",
-        "error": "certificate has expired"
+        "error": "The operation timed out."
       }
     ],
     "healthy": false
@@ -46,7 +46,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (certificate has expired); gdelt_country_actions (certificate has expired); gdelt_dollar_yields (certificate has expired)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
   ],
   "canProceedToIntegration": false
 }
