@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-08-31T17:50:42.342Z",
+  "checkedAt": "2026-08-31T22:23:36.415Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-08-31T17:50:42.291Z",
+  "dataFetchedAt": "2026-08-31T22:23:36.376Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -13,9 +13,7 @@
     "missingFactors": [
       "Gold Spot XAUUSD"
     ],
-    "staleFactors": [
-      "US Dollar Trade Weighted Index (2026-08-21)"
-    ],
+    "staleFactors": [],
     "minNewsRequired": 3,
     "policyCount": 20,
     "geopoliticalCount": 0,
@@ -48,7 +46,6 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Stale factors: US Dollar Trade Weighted Index (2026-08-21)",
     "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (The operation timed out.); gdelt_country_actions (The operation timed out.); gdelt_dollar_yields (The operation timed out.)"
   ],
   "canProceedToIntegration": false
