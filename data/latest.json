@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-09-01T01:36:05.732Z",
+  "timestamp": "2026-09-01T07:11:48.965Z",
   "normalized": [
     {
       "source": "TwelveData",
       "country": "International",
       "originalCurrency": "USD",
-      "originalPricePerGram": 142.64307103702157,
-      "vndPerGram": 3710234.716376974,
-      "vndPerTael": 139133801.86413652
+      "originalPricePerGram": 142.43592746796983,
+      "vndPerGram": 3704846.7837169254,
+      "vndPerTael": 138931754.38938472
     },
     {
       "source": "SJC Miếng",
@@ -29,25 +29,33 @@
       "source": "GoldPricez-VN",
       "country": "Vietnam",
       "originalCurrency": "VND",
-      "originalPricePerGram": 3722890.86,
-      "vndPerGram": 3722890.86,
-      "vndPerTael": 139608407.25
+      "originalPricePerGram": 3714157.55,
+      "vndPerGram": 3714157.55,
+      "vndPerTael": 139280908.125
     },
     {
       "source": "Calculated (XAUUSD × USD/CNY)",
       "country": "China",
       "originalCurrency": "CNY",
-      "originalPricePerGram": 961.4142987895254,
-      "vndPerGram": 3710234.716376974,
-      "vndPerTael": 139133801.86413652
+      "originalPricePerGram": 960.0181511341167,
+      "vndPerGram": 3704846.7837169254,
+      "vndPerTael": 138931754.38938472
     },
     {
       "source": "Calculated (XAUUSD × USD/RUB)",
       "country": "Russia",
       "originalCurrency": "RUB",
-      "originalPricePerGram": 12325.787768309032,
-      "vndPerGram": 3710234.7163769733,
-      "vndPerTael": 139133801.8641365
+      "originalPricePerGram": 12307.888492507274,
+      "vndPerGram": 3704846.783716926,
+      "vndPerTael": 138931754.38938472
+    },
+    {
+      "source": "IBJA-gold 999",
+      "country": "India",
+      "originalCurrency": "INR",
+      "originalPricePerGram": 15479.8,
+      "vndPerGram": 4229403.313823529,
+      "vndPerTael": 158602624.2683823
     }
   ],
   "raw": {
@@ -59,7 +67,7 @@
         "pricePerTael": 148700000,
         "buyPrice": 145700000,
         "sellPrice": 148700000,
-        "timestamp": "2026-09-01T01:36:05.388Z",
+        "timestamp": "2026-09-01T07:11:48.107Z",
         "raw": {
           "name": "SJC",
           "buyText": "145.700",
@@ -74,7 +82,7 @@
         "pricePerTael": 148200000,
         "buyPrice": 145200000,
         "sellPrice": 148200000,
-        "timestamp": "2026-09-01T01:36:05.391Z",
+        "timestamp": "2026-09-01T07:11:48.111Z",
         "raw": {
           "name": "SJC",
           "buyText": "145.200",
@@ -86,11 +94,11 @@
         "source": "GoldPricez-VN",
         "country": "Vietnam",
         "currency": "VND",
-        "pricePerGram": 3722890.86,
-        "pricePerTael": 139608407.25,
-        "timestamp": "2026-09-01T01:36:04.396Z",
+        "pricePerGram": 3714157.55,
+        "pricePerTael": 139280908.125,
+        "timestamp": "2026-09-01T07:11:47.643Z",
         "raw": {
-          "matched": "\n    \n     = 3,722,890.86  \n    \n        \n    \n        VND \n    \n    \n     ?\n     \n"
+          "matched": "\n    \n     = 3,714,157.55  \n    \n        \n    \n        VND \n    \n    \n     ?\n     \n"
         }
       }
     ],
@@ -99,15 +107,15 @@
         "source": "TwelveData",
         "country": "International",
         "currency": "USD",
-        "pricePerOunce": 4436.69876,
-        "pricePerGram": 142.64307103702157,
+        "pricePerOunce": 4430.25587,
+        "pricePerGram": 142.43592746796983,
         "timestamp": "2026-09-01T00:00:00.000Z",
         "raw": {
           "datetime": "2026-09-01",
           "open": "4448.65508",
           "high": "4462.05653",
-          "low": "4436.12131",
-          "close": "4436.69876"
+          "low": "4425.65484",
+          "close": "4430.25587"
         }
       }
     ],
@@ -116,11 +124,11 @@
         "source": "Calculated (XAUUSD × USD/CNY)",
         "country": "China",
         "currency": "CNY",
-        "pricePerOunce": 29903.349642400004,
-        "pricePerGram": 961.4142987895254,
+        "pricePerOunce": 29859.9245638,
+        "pricePerGram": 960.0181511341167,
         "timestamp": "2026-09-01T00:00:00.000Z",
         "raw": {
-          "xauusdPrice": 4436.69876,
+          "xauusdPrice": 4430.25587,
           "cnyRate": 6.74
         }
       }
@@ -130,16 +138,29 @@
         "source": "Calculated (XAUUSD × USD/RUB)",
         "country": "Russia",
         "currency": "RUB",
-        "pricePerOunce": 383375.1398516,
-        "pricePerGram": 12325.787768309032,
+        "pricePerOunce": 382818.4097267,
+        "pricePerGram": 12307.888492507274,
         "timestamp": "2026-09-01T00:00:00.000Z",
         "raw": {
-          "xauusdPrice": 4436.69876,
+          "xauusdPrice": 4430.25587,
           "rubRate": 86.41
         }
       }
     ],
-    "india": []
+    "india": [
+      {
+        "source": "IBJA-gold 999",
+        "country": "India",
+        "currency": "INR",
+        "pricePerGram": 15479.8,
+        "timestamp": "2026-09-01T07:11:48.957Z",
+        "raw": {
+          "label": "gold 999",
+          "priceText": "154798",
+          "note": "Original price per 10g"
+        }
+      }
+    ]
   },
   "exchangeRates": {
     "USD": 1,
@@ -149,8 +170,8 @@
     "INR": 95.2
   },
   "vietnamPremium": {
-    "premiumPercent": 6.87553851594225,
-    "benchmarkVND": 139133801.86413652,
+    "premiumPercent": 7.030966861066027,
+    "benchmarkVND": 138931754.38938472,
     "localPriceVND": 148700000
   }
 }
