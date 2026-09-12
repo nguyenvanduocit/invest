@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-12T16:43:11.600Z",
+  "checkedAt": "2026-09-12T18:55:34.066Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-09-12T16:43:11.549Z",
+  "dataFetchedAt": "2026-09-12T18:55:34.016Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -22,7 +22,7 @@
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
-        "error": "HTTP 503"
+        "error": "Malformed Stooq daily CSV payload"
       },
       {
         "id": "gdelt_geopolitics",
@@ -46,7 +46,7 @@
     "Not enough dollar/yield events (0/3)"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (HTTP 503); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
