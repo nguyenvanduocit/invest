@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-12T06:55:38.403Z",
+  "checkedAt": "2026-10-12T16:27:57.232Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-10-12T06:55:38.348Z",
+  "dataFetchedAt": "2026-10-12T16:27:57.171Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -24,7 +24,7 @@
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
-        "error": "The operation timed out."
+        "error": "Malformed Stooq daily CSV payload"
       },
       {
         "id": "gdelt_geopolitics",
@@ -49,7 +49,7 @@
   ],
   "warnings": [
     "Stale factors: US Dollar Trade Weighted Index (2026-10-02)",
-    "Source failures: gold_spot_xauusd (The operation timed out.); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload); gdelt_geopolitics (HTTP 429); gdelt_country_actions (HTTP 429); gdelt_dollar_yields (HTTP 429)"
   ],
   "canProceedToIntegration": false
 }
