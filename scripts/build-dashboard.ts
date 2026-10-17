@@ -43,6 +43,7 @@ const fpSlim = {
     change5dPct: f.change5dPct,
     change20dPct: f.change20dPct,
   })),
+  coverage: fp.coverage,
 }
 
 const out = {
