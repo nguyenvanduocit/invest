@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-19T09:50:03.092Z",
+  "fetchedAt": "2026-11-19T18:50:03.814Z",
   "factors": [
     {
       "id": "gold_spot_xauusd",
@@ -1556,17 +1556,13 @@
       "unit": "index",
       "relationToGold": "direct",
       "latest": {
-        "date": "2026-11-17",
-        "value": 25.46
+        "date": "2026-11-18",
+        "value": 24.56
       },
-      "change1dPct": 11.13,
-      "change5dPct": 30.83,
-      "change20dPct": 47.08,
+      "change1dPct": -3.53,
+      "change5dPct": 40.42,
+      "change20dPct": 47.24,
       "recent": [
-        {
-          "date": "2026-08-26",
-          "value": 15.21
-        },
         {
           "date": "2026-08-27",
           "value": 14.51
@@ -1802,11 +1798,22 @@
         {
           "date": "2026-11-17",
           "value": 25.46
+        },
+        {
+          "date": "2026-11-18",
+          "value": 24.56
         }
       ]
     }
   ],
   "policyStatements": [
+    {
+      "title": "Jefferson, Monetary Policy amid Frequent and Complex Shocks",
+      "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
+      "publishedAt": "2026-11-19T14:25:00.000Z",
+      "source": "Federal Reserve Speeches",
+      "category": "policy_statement"
+    },
     {
       "title": "Cyber resilience guidance consultation and AI and quantum effective practices",
       "url": "https://www.bankofengland.co.uk/news/2026/november/cyber-resilience-guidance-consultation-and-ai-and-quantum-effective-practices",
@@ -1939,13 +1946,6 @@
       "publishedAt": "2026-11-10T16:45:00.000Z",
       "source": "ECB Press / Speeches",
       "category": "policy_statement"
-    },
-    {
-      "title": "Piero Cipollone: Cash and the digital euro: two sides of the same coin",
-      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261110~9422461bad.en.html",
-      "publishedAt": "2026-11-10T14:00:00.000Z",
-      "source": "ECB Press / Speeches",
-      "category": "policy_statement"
     }
   ],
   "geopoliticalEvents": [],
@@ -1956,16 +1956,16 @@
       "id": "gold_spot_xauusd",
       "label": "Gold Spot XAUUSD",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.418Z",
+      "fetchedAt": "2026-11-19T18:49:43.812Z",
       "ok": false,
       "count": 0,
-      "error": "Malformed Stooq daily CSV payload"
+      "error": "The operation timed out."
     },
     {
       "id": "usd_index_trade_weighted",
       "label": "US Dollar Trade Weighted Index",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.418Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 5231
     },
@@ -1973,7 +1973,7 @@
       "id": "us_real_yield_10y",
       "label": "US Real Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 5973
     },
@@ -1981,7 +1981,7 @@
       "id": "us_breakeven_10y",
       "label": "US Breakeven Inflation 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 5974
     },
@@ -1989,7 +1989,7 @@
       "id": "us_fed_funds_effective",
       "label": "US Effective Fed Funds Rate",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 26438
     },
@@ -1997,7 +1997,7 @@
       "id": "us_treasury_10y",
       "label": "US Treasury Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 16204
     },
@@ -2005,7 +2005,7 @@
       "id": "us_treasury_2y",
       "label": "US Treasury Yield 2Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 12612
     },
@@ -2013,15 +2013,15 @@
       "id": "vix",
       "label": "VIX Volatility Index",
       "kind": "factor",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
-      "count": 9319
+      "count": 9320
     },
     {
       "id": "fed_speeches",
       "label": "Federal Reserve Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 10
     },
@@ -2029,7 +2029,7 @@
       "id": "fed_monetary",
       "label": "Federal Reserve Monetary Policy Press Releases",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 10
     },
@@ -2037,7 +2037,7 @@
       "id": "ecb_press",
       "label": "ECB Press / Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 10
     },
@@ -2045,7 +2045,7 @@
       "id": "boe_news",
       "label": "Bank of England News",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.813Z",
       "ok": true,
       "count": 10
     },
@@ -2053,7 +2053,7 @@
       "id": "gdelt_geopolitics",
       "label": "Geopolitical stress around gold safe-haven flows",
       "kind": "event_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.814Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2062,7 +2062,7 @@
       "id": "gdelt_country_actions",
       "label": "Central bank and sovereign policy actions",
       "kind": "event_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.814Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2071,7 +2071,7 @@
       "id": "gdelt_dollar_yields",
       "label": "US dollar and yield narrative around gold",
       "kind": "event_feed",
-      "fetchedAt": "2026-11-19T09:49:52.419Z",
+      "fetchedAt": "2026-11-19T18:49:43.814Z",
       "ok": false,
       "count": 0,
       "error": "HTTP 429"
@@ -2092,7 +2092,7 @@
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
-        "error": "Malformed Stooq daily CSV payload"
+        "error": "The operation timed out."
       },
       {
         "id": "gdelt_geopolitics",
