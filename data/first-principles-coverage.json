@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-27T11:43:35.170Z",
+  "checkedAt": "2026-11-27T20:38:43.452Z",
   "sourceFile": "data/first-principles.json",
-  "dataFetchedAt": "2026-11-27T11:43:35.114Z",
+  "dataFetchedAt": "2026-11-27T20:38:43.406Z",
   "ageMinutes": 0,
   "thresholds": {
     "maxAgeMinutes": 360,
@@ -22,7 +22,7 @@
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
-        "error": "The operation timed out."
+        "error": "Malformed Stooq daily CSV payload"
       }
     ],
     "healthy": false
@@ -31,7 +31,7 @@
     "Missing required factors: Gold Spot XAUUSD"
   ],
   "warnings": [
-    "Source failures: gold_spot_xauusd (The operation timed out.)"
+    "Source failures: gold_spot_xauusd (Malformed Stooq daily CSV payload)"
   ],
   "canProceedToIntegration": false
 }

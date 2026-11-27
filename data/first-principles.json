@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-27T11:43:35.114Z",
+  "fetchedAt": "2026-11-27T20:38:43.406Z",
   "factors": [
     {
       "id": "gold_spot_xauusd",
@@ -1556,21 +1556,13 @@
       "unit": "index",
       "relationToGold": "direct",
       "latest": {
-        "date": "2026-11-24",
-        "value": 26.36
+        "date": "2026-11-26",
+        "value": 26.8
       },
-      "change1dPct": -0.98,
-      "change5dPct": 3.53,
-      "change20dPct": 50.46,
+      "change1dPct": -5.27,
+      "change5dPct": -5.77,
+      "change20dPct": 55.81,
       "recent": [
-        {
-          "date": "2026-09-02",
-          "value": 15.2
-        },
-        {
-          "date": "2026-09-03",
-          "value": 14.32
-        },
         {
           "date": "2026-09-04",
           "value": 14.53
@@ -1802,11 +1794,26 @@
         {
           "date": "2026-11-24",
           "value": 26.36
+        },
+        {
+          "date": "2026-11-25",
+          "value": 28.29
+        },
+        {
+          "date": "2026-11-26",
+          "value": 26.8
         }
       ]
     }
   ],
   "policyStatements": [
+    {
+      "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
+      "url": "https://www.ecb.europa.eu//press/govcdec/otherdec/2026/html/ecb.gc261127~13ecadc0f2.en.html",
+      "publishedAt": "2026-11-27T14:00:00.000Z",
+      "source": "ECB Press / Speeches",
+      "category": "policy_statement"
+    },
     {
       "title": "ECB Consumer Expectations Survey results – October 2026",
       "url": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261127~2e53af695e.en.html",
@@ -1938,13 +1945,6 @@
       "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
       "publishedAt": "2026-11-19T14:25:00.000Z",
       "source": "Federal Reserve Speeches",
-      "category": "policy_statement"
-    },
-    {
-      "title": "Cyber resilience guidance consultation and AI and quantum effective practices",
-      "url": "https://www.bankofengland.co.uk/news/2026/november/cyber-resilience-guidance-consultation-and-ai-and-quantum-effective-practices",
-      "publishedAt": "2026-11-19T08:00:00.000Z",
-      "source": "Bank of England News",
       "category": "policy_statement"
     }
   ],
@@ -2113,16 +2113,16 @@
       "id": "gold_spot_xauusd",
       "label": "Gold Spot XAUUSD",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.399Z",
       "ok": false,
       "count": 0,
-      "error": "The operation timed out."
+      "error": "Malformed Stooq daily CSV payload"
     },
     {
       "id": "usd_index_trade_weighted",
       "label": "US Dollar Trade Weighted Index",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 5236
     },
@@ -2130,7 +2130,7 @@
       "id": "us_real_yield_10y",
       "label": "US Real Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 5978
     },
@@ -2138,7 +2138,7 @@
       "id": "us_breakeven_10y",
       "label": "US Breakeven Inflation 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 5979
     },
@@ -2146,7 +2146,7 @@
       "id": "us_fed_funds_effective",
       "label": "US Effective Fed Funds Rate",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 26445
     },
@@ -2154,7 +2154,7 @@
       "id": "us_treasury_10y",
       "label": "US Treasury Yield 10Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 16209
     },
@@ -2162,7 +2162,7 @@
       "id": "us_treasury_2y",
       "label": "US Treasury Yield 2Y",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 12617
     },
@@ -2170,15 +2170,15 @@
       "id": "vix",
       "label": "VIX Volatility Index",
       "kind": "factor",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
-      "count": 9324
+      "count": 9326
     },
     {
       "id": "fed_speeches",
       "label": "Federal Reserve Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 10
     },
@@ -2186,7 +2186,7 @@
       "id": "fed_monetary",
       "label": "Federal Reserve Monetary Policy Press Releases",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 10
     },
@@ -2194,7 +2194,7 @@
       "id": "ecb_press",
       "label": "ECB Press / Speeches",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 10
     },
@@ -2202,7 +2202,7 @@
       "id": "boe_news",
       "label": "Bank of England News",
       "kind": "policy_feed",
-      "fetchedAt": "2026-11-27T11:43:15.113Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 10
     },
@@ -2210,7 +2210,7 @@
       "id": "gdelt_geopolitics",
       "label": "Geopolitical stress around gold safe-haven flows",
       "kind": "event_feed",
-      "fetchedAt": "2026-11-27T11:43:15.114Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 4
     },
@@ -2218,7 +2218,7 @@
       "id": "gdelt_country_actions",
       "label": "Central bank and sovereign policy actions",
       "kind": "event_feed",
-      "fetchedAt": "2026-11-27T11:43:15.114Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 13
     },
@@ -2226,7 +2226,7 @@
       "id": "gdelt_dollar_yields",
       "label": "US dollar and yield narrative around gold",
       "kind": "event_feed",
-      "fetchedAt": "2026-11-27T11:43:15.114Z",
+      "fetchedAt": "2026-11-27T20:38:24.400Z",
       "ok": true,
       "count": 5
     }
@@ -2246,7 +2246,7 @@
     "sourceFailures": [
       {
         "id": "gold_spot_xauusd",
-        "error": "The operation timed out."
+        "error": "Malformed Stooq daily CSV payload"
       }
     ],
     "healthy": false
